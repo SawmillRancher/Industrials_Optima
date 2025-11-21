@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "industrials-optima"
 version = "0.1.0"
-description = "News aggregator for industrial sectors: data centers, power, aerospace, defense, and freight"
+description = "News aggregator and hazardous waste analysis for industrial sectors"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
@@ -38,6 +38,7 @@ dev = [
 
 [project.scripts]
 industrials-optima = "industrials_optima.cli:main"
+hazwaste = "industrials_optima.hazwaste.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
