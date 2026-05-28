@@ -1396,6 +1396,151 @@ _NA_COL_START = 7   # G (FY10 total)
 _NA_COL_END = 91    # CM (FY30E)
 
 
+# ---------------------------------------------------------------------------
+# Forecast schedule wiring -- holds ratios flat from FY25 actuals into the
+# FY26E-FY30E forecast period, and fixes a few cells that the source
+# template hardcoded with Moog-specific assumptions or formulas that
+# point at TFI-empty rows (e.g., AP / Inventory referencing COGS row 115
+# which TFI doesn't disclose).
+# ---------------------------------------------------------------------------
+
+def _hold_flat_ratios() -> tuple[tuple[str, str], ...]:
+    """For each ratio/driver row, emit a CI..CM formula pulling the FY25
+    actual from CD column. Holds the ratio flat across forecast."""
+    rows = [
+        268,   # DSO
+        272,   # Accrued compensation % revenue
+        273,   # Contract liabilities % revenue
+        274,   # Other accrued liabilities % revenue
+        275,   # Prepaid & other current assets % revenue
+        278,   # Capex % revenue
+        279,   # PP&E depreciation % revenue
+        281,   # Intangibles amortization % revenue
+        287,   # Deferred income tax (asset) % rev
+        288,   # Other non-current assets % rev
+        289,   # Retirement obligations % rev
+        290,   # Deferred income tax (LT liab) % rev
+        291,   # Other long-term liabilities % rev
+        299,   # Avg cost of debt
+        294,   # LT debt repayment (held flat at FY25 amortization rate)
+        302,   # Scheduled LT debt repayment
+        360,   # Avg share price (used by valuation block)
+    ]
+    out = []
+    for r in rows:
+        for col in ("CI", "CJ", "CK", "CL", "CM"):
+            out.append((f"{col}{r}", f"=CD{r}"))
+    return tuple(out)
+
+
+_FORECAST_SCHEDULE_OVERRIDES: tuple[tuple[str, str | None], ...] = (
+    # --- Inventory (row 228) and AP (row 243): source formulas reference
+    # row 115 (Cost of sales) which TFI doesn't tag. Hold both flat at the
+    # FY25 actual balance level.
+    *((f"{c}228", f"=CD228") for c in ("CI","CJ","CK","CL","CM")),
+    # AP held as historical %-of-revenue (not DPO×COGS).
+    *((f"{c}243", f"=CD243/CD114*{c}114") for c in ("CI","CJ","CK","CL","CM")),
+
+    # --- CF forecast: hold dividends + buybacks flat at FY25 actual
+    # ($M, both negative-signed in our convention).
+    *((f"{c}198", f"=CD198") for c in ("CI","CJ","CK","CL","CM")),
+    *((f"{c}199", f"=CD199") for c in ("CI","CJ","CK","CL","CM")),
+
+    # --- Total equity (row 260) rollforward: source sums rows 255-259 but
+    # the XBRL CompanyFacts doesn't expose those individual equity components
+    # for TFI -- so the SUM evaluates to ~$0 and the BS doesn't balance.
+    # Override with a direct rollforward off row 260 (total equity actual).
+    #   Equity[t] = Equity[t-1] + Net earnings + Dividends + Buybacks
+    # where Dividends and Buybacks are already negative-signed (CF convention).
+    ("CI260", "=CD260+CI133+CI198+CI199"),
+    ("CJ260", "=CI260+CJ133+CJ198+CJ199"),
+    ("CK260", "=CJ260+CK133+CK198+CK199"),
+    ("CL260", "=CK260+CL133+CL198+CL199"),
+    ("CM260", "=CL260+CM133+CM198+CM199"),
+
+    # --- Long-term debt (row 248) rollforward: source = =CD248-CI294 but
+    # CI294 (LT debt repayment) was held flat at $9M/year. Use the source
+    # formula directly; just propagate to later years.
+    ("CJ248", "=CI248-CJ294"),
+    ("CK248", "=CJ248-CK294"),
+    ("CL248", "=CK248-CL294"),
+    ("CM248", "=CL248-CM294"),
+
+    # --- Avg share price (row 360): source hardcoded Moog values cleared
+    # by the builder. Reference the share price set in DCF!C42 (passed
+    # via --share-price at build time) so the valuation multiples compute.
+    ("CD360", "=DCF!C42"),
+
+    # --- Cash plug (row 226): tie BS cash directly to the cash-flow
+    # rollforward end-of-period balance at row 207. The source has this
+    # already, but the linkage was broken when the FY26E IS forecast
+    # changed. Refresh it.
+    *((f"{c}226", f"={c}207") for c in ("CI","CJ","CK","CL","CM")),
+
+    # --- Cash flow end-of-period (row 207): rollforward via CFO + CFI + CFF + FX.
+    # Source had a SUM formula, but TFI's individual CF lines we populate
+    # cover only the key items. Rebuild as: prior cash + Net change (row 205).
+    *((f"{c}207", f"={'CD' if c == 'CI' else dict(CI='CD',CJ='CI',CK='CJ',CL='CK',CM='CL')[c]}207+{c}205") for c in ("CI","CJ","CK","CL","CM")),
+
+    # --- Net change in cash (row 205): CFO (186) + CFI (193) + CFF (202).
+    *((f"{c}205", f"={c}186+{c}193+{c}202") for c in ("CI","CJ","CK","CL","CM")),
+
+    # --- CFO forecast (row 186): Net earnings + D&A + SBC (no WC change).
+    *((f"{c}186", f"={c}175+{c}176+{c}177+{c}178") for c in ("CI","CJ","CK","CL","CM")),
+    # Row 175 (Net earnings in CF) = row 133 (IS net earnings)
+    *((f"{c}175", f"={c}133") for c in ("CI","CJ","CK","CL","CM")),
+    # Row 176/177 (D&A): hold flat at FY25 actual % of revenue.
+    # (row 279 = depreciation %, 281 = amortization %; already held flat)
+    *((f"{c}176", f"={c}114*{c}279") for c in ("CI","CJ","CK","CL","CM")),
+    *((f"{c}177", f"={c}114*{c}281") for c in ("CI","CJ","CK","CL","CM")),
+    # Row 178 (SBC): hold flat at FY25 actual.
+    *((f"{c}178", f"=CD178") for c in ("CI","CJ","CK","CL","CM")),
+
+    # --- CFI forecast (row 193): capex + acquisitions (held flat at FY25).
+    *((f"{c}193", f"={c}189+{c}190") for c in ("CI","CJ","CK","CL","CM")),
+    *((f"{c}189", f"=-{c}114*{c}278") for c in ("CI","CJ","CK","CL","CM")),  # Capex as -ve
+    *((f"{c}190", f"=CD190") for c in ("CI","CJ","CK","CL","CM")),  # Acquisitions held flat
+
+    # --- CFF forecast (row 202): dividends + buybacks + debt repayment.
+    *((f"{c}202", f"={c}198+{c}199-{c}294") for c in ("CI","CJ","CK","CL","CM")),
+
+    # --- Ratio block: source uses rows 150 (Adj OP) and 151 (Adj OP margin)
+    # / 155 / 156 which were the GAAP->Adj bridge that TFI doesn't disclose.
+    # Repoint at GAAP equivalents so ROIC, RONTA, ROE all compute.
+    # Row 326 (Operating earnings used for ROIC): falls back to row 126 already.
+    # Row 333 (Operating margin): override =row151 -> row 126/114.
+    *((f"{c}333", f"={c}126/{c}114") for c in ("BE","BJ","BO","BT","BY","CD","CI","CJ","CK","CL","CM")),
+    # Row 339 (EBIT before special items in RONTA): use row 126 directly.
+    *((f"{c}339", f"={c}126") for c in ("BE","BJ","BO","BT","BY","CD","CI","CJ","CK","CL","CM")),
+    # Row 349 (Net income for ROE): use row 133 (GAAP Net earnings).
+    *((f"{c}349", f"={c}133") for c in ("BE","BJ","BO","BT","BY","CD","CI","CJ","CK","CL","CM")),
+    # Row 371 (P/E adjusted): the adjusted EPS row 156 was cleared. Fall
+    # back to GAAP EPS (row 137) so the adjusted multiple still shows.
+    *((f"{c}371", f"=IFERROR({c}360/{c}137,\"\")") for c in ("BE","BJ","BO","BT","BY","CD","CI","CJ","CK","CL","CM")),
+
+    # --- Hold-flat driver replacements applied via _hold_flat_ratios().
+    *_hold_flat_ratios(),
+)
+
+
+def populate_forecast_schedules(workbook_path: str | Path) -> int:
+    """Apply forecast-schedule overrides: hold ratios flat from FY25 into
+    FY26E-FY30E, fix inventory/AP for TFI's no-COGS reporting, and
+    redirect ratio-block formulas off the cleared Adjusted-bridge rows.
+    Returns cells written.
+    """
+    workbook_path = Path(workbook_path)
+    wb = load_workbook(workbook_path)
+    ws = wb["Model"]
+    for cell, formula in _FORECAST_SCHEDULE_OVERRIDES:
+        if formula is None:
+            ws[cell] = None
+        else:
+            ws[cell] = formula
+    wb.save(workbook_path)
+    return len(_FORECAST_SCHEDULE_OVERRIDES)
+
+
 def silence_non_applicable_rows(workbook_path: str | Path) -> int:
     """Clear cells in rows that don't have a TFI-applicable metric, so the
     workbook doesn't show 0% / #DIV/0! / -100% from formula chains pointing
@@ -1480,6 +1625,7 @@ def populate(
     populate.last_fx_writes = populate_fx_reference(  # type: ignore[attr-defined]
         workbook_path, fx_cache_dir=Path("/tmp/fx"),
     )
+    populate.last_schedule_writes = populate_forecast_schedules(workbook_path)  # type: ignore[attr-defined]
     populate.last_na_cleared = silence_non_applicable_rows(workbook_path)  # type: ignore[attr-defined]
 
     return written
@@ -1551,6 +1697,9 @@ def main(argv: list[str] | None = None) -> int:
     fx_written = getattr(populate, "last_fx_writes", 0)
     if fx_written:
         print(f"FX reference:        {fx_written} cells (BoC CAD/USD annual avgs, FY11-FY25)")
+    sched_written = getattr(populate, "last_schedule_writes", 0)
+    if sched_written:
+        print(f"Forecast schedules:  {sched_written} cells (BS/ratio wiring, hold-flat drivers)")
     na_cleared = getattr(populate, "last_na_cleared", 0)
     if na_cleared:
         print(f"Non-applicable:      {na_cleared} cells cleared (GP/R&D/SG&A/DIO/DPO/Backlog/B:B)")
