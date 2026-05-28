@@ -80,14 +80,30 @@ historicals from the EDGAR IFRS XBRL Company Facts API (CIK 0001588823)
 and the per-filing "Segment Reporting (Details)" rendered R-files, and
 stamps them into the FY20–FY25 columns (BE / BJ / BO / BT / BY / CD):
 
-- Consolidated IS / CF / BS (~47 line items per year)
+- Consolidated IS / CF / BS (~47 line items per year, FY19–FY25; FY19
+  is included so the source template's row 161–164 / row 211 y/y%
+  formulas at FY20 have a populated prior-year cell to divide by)
 - Per-segment Net sales + Operating profit:
-  - **Legacy block** (4 segments, FY20–FY23): Package and Courier,
+  - **Legacy block** (4 segments, FY19–FY23): Package and Courier,
     Less-Than-Truckload, Truckload, Logistics
   - **Current block** (3 segments, FY24–FY25): Less-Than-Truckload,
     Truckload, Logistics — Package and Courier was rolled into LTL in
     the FY24 40-F (confirmed by the FY23 restated comparative, where
     LTL revenue jumped ~$580M = prior-year P&C)
+- Formula completions (y/y%, margins, ratios) wherever the source
+  Moog template left a gap or pointed at a TFI-irrelevant row:
+  - Backfilled legacy block Sales y/y% and Op margin % for FY22/FY23
+  - Cross-block FY24 overrides on the current block (Sales y/y%,
+    EBIT y/y%, Incremental EBIT, Group totals) so the comparison
+    against FY23 references the legacy block, with legacy P&C added
+    back to LTL where applicable
+  - Repointed Adj EBIT % / Incremental OP margin from row 148 (Adj
+    operating profit, unpopulated since TFI doesn't disclose a GAAP→
+    Adj bridge) to row 126 (GAAP EBIT)
+  - Backlog y/y%, book-to-bill, gross margin %, R&D %, SG&A %, DIO,
+    DPO are intentionally left blank — TFI is a logistics business
+    and either the metric isn't reported or the underlying line item
+    isn't in the IFRS taxonomy
 
 Build then populate:
 

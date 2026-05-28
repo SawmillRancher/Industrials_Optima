@@ -454,29 +454,32 @@ def populate_segments(
 
 
 # ---------------------------------------------------------------------------
-# y/y% completion
+# Formula completions
 #
-# The Moog source template carries y/y% formulas only for the year ranges
-# Moog actually used (legacy block FY11-FY21, current block FY22-FY25,
-# group/IS rows all years). For TFI's data shape we need to:
+# The Moog source template carries formulas only for the year ranges Moog
+# itself used (legacy block FY11-FY21/FY22, current block FY22-FY25). For
+# TFI's data shape and reporting history we need to fill the gaps, point
+# cross-block transitions at the legacy block (with P&C add-back for LTL),
+# and repoint a couple of rows whose source formula targets an upstream
+# cell TFI doesn't have data for.
 #
-#   - Backfill legacy block FY22 + FY23 Sales y/y% (rows 14/22/29) because
-#     TFI still reported 4 segments through FY23.
-#   - Extend the legacy Group Total SUM (row 44/45) to include all 4 TFI
-#     segments and reach FY23, then add the FY23 Group Sales y/y% (row 46).
-#   - Override the current block FY24 Sales/EBIT y/y% (BY55/57/66/68/77/79)
-#     so they cross-reference the legacy block instead of empty FY23
-#     current-block cells. LTL adds back legacy P&C since TFI rolled P&C
-#     into LTL in FY24 (the FY23 restated comparative confirms it).
-#   - Repoint the current Group Total FY23 cells (BT98/BT102) at the
-#     consolidated rows so the FY24 group y/y% has a non-zero denominator.
+# Categories below:
+#   1. y/y% completions (covered Sales y/y% and EBIT y/y%)
+#   2. Legacy Group Total SUM extensions (4 segments, through FY23)
+#   3. Cross-block FY24 overrides for the current block (y/y% + Inc EBIT
+#      + Group totals so the FY24 group y/y% has a real denominator)
+#   4. Other derived metrics: legacy Op margin % gap-fill, current-block
+#      cross-block Incremental EBIT, Adj EBIT % / Inc OP margin repointed
+#      to GAAP EBIT (row 126) since TFI has no GAAP->Adj bridge.
 #
-# Backlog y/y% and book-to-bill rows are intentionally left blank: TFI is
-# a logistics business and neither metric is reported.
+# Backlog y/y%, book-to-bill, gross margin / R&D % / SG&A % / DIO / DPO
+# are intentionally untouched -- TFI is a logistics business and either
+# the metric isn't reported (backlog/B:B) or the underlying line item
+# isn't broken out in the IFRS taxonomy (no COGS / R&D / SG&A split).
 # ---------------------------------------------------------------------------
 
-_YOY_UPDATES: tuple[tuple[str, str], ...] = (
-    # Legacy block segment Sales y/y% — FY22 (BO) and FY23 (BT).
+_FORMULA_OVERRIDES: tuple[tuple[str, str], ...] = (
+    # ---- (1) Legacy block segment Sales y/y% (FY22 + FY23 backfill) -------
     ("BO14", '=IFERROR(BO12/BJ12-1,"")'),   # P&C
     ("BT14", '=IFERROR(BT12/BO12-1,"")'),
     ("BO22", '=IFERROR(BO20/BJ20-1,"")'),   # LTL legacy
@@ -484,9 +487,7 @@ _YOY_UPDATES: tuple[tuple[str, str], ...] = (
     ("BO29", '=IFERROR(BO27/BJ27-1,"")'),   # Truckload legacy
     ("BT29", '=IFERROR(BT27/BO27-1,"")'),
 
-    # Legacy Group Total Net sales / Op profit — extend to 4 segments and
-    # to FY23 (BT). Source only summed the first 3 segments and stopped at
-    # FY22 (BO).
+    # ---- (2) Legacy Group Total -- extend SUM to 4 segments and to FY23 ---
     ("BE44", "=BE12+BE20+BE27+BE34"),
     ("BJ44", "=BJ12+BJ20+BJ27+BJ34"),
     ("BO44", "=BO12+BO20+BO27+BO34"),
@@ -495,10 +496,11 @@ _YOY_UPDATES: tuple[tuple[str, str], ...] = (
     ("BJ45", "=BJ13+BJ21+BJ28+BJ35"),
     ("BO45", "=BO13+BO21+BO28+BO35"),
     ("BT45", "=BT13+BT21+BT28+BT35"),
-    ("BT46", '=IFERROR(BT44/BO44-1,"")'),
+    ("BT46", '=IFERROR(BT44/BO44-1,"")'),   # FY23 Group Sales y/y%
 
-    # Current block FY24 cross-block overrides. LTL adds back legacy P&C
-    # (rolled into LTL in TFI's FY24 reporting); TL and Logistics map 1:1.
+    # ---- (3) Current block FY24 cross-block overrides --------------------
+    # Sales y/y% and EBIT y/y%: source refs empty FY23 current-block cells.
+    # LTL adds back legacy P&C since TFI rolled P&C into LTL in FY24.
     ("BY55", '=IFERROR(BY54/(BT20+BT12)-1,"")'),
     ("BY57", '=IFERROR(BY56/(BT21+BT13)-1,"")'),
     ("BY66", '=IFERROR(BY65/BT27-1,"")'),
@@ -506,26 +508,77 @@ _YOY_UPDATES: tuple[tuple[str, str], ...] = (
     ("BY77", '=IFERROR(BY76/BT34-1,"")'),
     ("BY79", '=IFERROR(BY78/BT35-1,"")'),
 
-    # Current Group Total FY23 cells — source sums current-block segments
-    # (all empty for TFI's FY23). Point at the consolidated rows so the
-    # FY24 group y/y% has a real denominator.
-    ("BT98", "=BT114"),
-    ("BT102", "=BT126"),
+    # Current Group totals for FY20-FY23: repoint at the legacy Group Total
+    # (rows 44 = sum of 4-segment Net sales, 45 = sum of 4-segment Op profit).
+    # Source had row 98 = =row114 (consolidated rev incl elims) for FY20-FY22
+    # and segment-sum-of-empties for FY23, and row 102 = None for FY20/FY21
+    # and segment-sum-of-empties from FY22. Repointing both to the legacy
+    # group totals keeps the entire current Group block on a single
+    # "segments only, ex Corporate" basis -- the same basis the current
+    # block uses for FY24-FY25 -- so every downstream y/y% / EBIT % / Inc
+    # EBIT computation stays apples-to-apples across the transition year.
+    ("BE98",  "=BE44"), ("BJ98",  "=BJ44"),
+    ("BO98",  "=BO44"), ("BT98",  "=BT44"),
+    ("BE102", "=BE45"), ("BJ102", "=BJ45"),
+    ("BO102", "=BO45"), ("BT102", "=BT45"),
+
+    # ---- (4) Other derived-metric completions ----------------------------
+    # Legacy block Op margin % FY23 -- source covered FY11-FY22 only.
+    ("BT15", "=BT13/BT12"),                  # P&C
+    ("BT23", "=BT21/BT20"),                  # LTL legacy
+    ("BT30", "=BT28/BT27"),                  # Truckload legacy
+    ("BT47", "=BT45/BT44"),                  # Legacy Group
+
+    # Legacy Logistics Op margin (row 36): source had a buggy y/y-style
+    # formula (=row34/prior_row34-1) labeled as a margin and only through
+    # FY17; rewrite correctly for the populated FY20-FY23 window.
+    ("BE36", "=BE35/BE34"),
+    ("BJ36", "=BJ35/BJ34"),
+    ("BO36", "=BO35/BO34"),
+    ("BT36", "=BT35/BT34"),
+
+    # Current block FY24 Incremental EBIT -- same cross-block pattern as
+    # y/y%, including the P&C add-back for LTL.
+    ("BY59",  '=IFERROR((BY56-(BT21+BT13))/(BY54-(BT20+BT12)),"")'),  # LTL
+    ("BY70",  '=IFERROR((BY67-BT28)/(BY65-BT27),"")'),                 # TL
+    ("BY81",  '=IFERROR((BY78-BT35)/(BY76-BT34),"")'),                 # Logistics
+    ("BY105", '=IFERROR((BY102-BT45)/(BY98-BT44),"")'),                # Group
+
+    # Adj EBIT % (row 168) and Incremental OP margin (row 170): source
+    # references row 148 (Adjusted operating profit). TFI has no
+    # GAAP->Adjusted bridge in the IFRS taxonomy, so repoint at row 126
+    # (GAAP EBIT) -- the labels are now effectively "EBIT %" and
+    # "Incremental EBIT margin", a useful proxy.
+    ("BE168", "=BE126/BE114"), ("BJ168", "=BJ126/BJ114"),
+    ("BO168", "=BO126/BO114"), ("BT168", "=BT126/BT114"),
+    ("BY168", "=BY126/BY114"), ("CD168", "=CD126/CD114"),
+    ("BE170", "=(BE126-AZ126)/(BE114-AZ114)"),
+    ("BJ170", "=(BJ126-BE126)/(BJ114-BE114)"),
+    ("BO170", "=(BO126-BJ126)/(BO114-BJ114)"),
+    ("BT170", "=(BT126-BO126)/(BT114-BO114)"),
+    ("BY170", "=(BY126-BT126)/(BY114-BT114)"),
+    ("CD170", "=(CD126-BY126)/(CD114-BY114)"),
 )
 
 
 def add_yoy_formulas(workbook_path: str | Path) -> int:
-    """Apply the TFI-specific y/y% formula completions to ``workbook_path``.
+    """Apply the TFI-specific formula completions to ``workbook_path``.
+
+    Covers y/y% backfill, legacy Group Total extensions, cross-block FY24
+    overrides for the current block, legacy Op margin gap-fill (including
+    the Logistics row whose source formula was buggy), current-block
+    Incremental EBIT cross-block overrides, and Adj-EBIT-%/Inc-OP-margin
+    repoints to GAAP EBIT (TFI has no GAAP->Adj bridge).
 
     Returns the number of cells written.
     """
     workbook_path = Path(workbook_path)
     wb = load_workbook(workbook_path)
     ws = wb["Model"]
-    for cell_ref, formula in _YOY_UPDATES:
+    for cell_ref, formula in _FORMULA_OVERRIDES:
         ws[cell_ref] = formula
     wb.save(workbook_path)
-    return len(_YOY_UPDATES)
+    return len(_FORMULA_OVERRIDES)
 
 
 # ---------------------------------------------------------------------------
@@ -636,7 +689,7 @@ def main(argv: list[str] | None = None) -> int:
             print(f"  FY{y}: {seg_by_year[y]} cells")
     yoy_written = getattr(populate, "last_yoy_writes", 0)
     if yoy_written:
-        print(f"y/y formulas: {yoy_written} cells (legacy backfill + cross-block FY24 overrides)")
+        print(f"Formula completions: {yoy_written} cells (y/y% + margins + cross-block FY24)")
     return 0
 
 
