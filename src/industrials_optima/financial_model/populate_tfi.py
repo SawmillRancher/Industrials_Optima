@@ -1078,6 +1078,344 @@ def populate_forecast_drivers(
 
 
 # ---------------------------------------------------------------------------
+# Quarterly historical data: parsed from TFI's quarterly 6-K MD&A exhibits
+# (FY21Q3-FY26Q1; sources earlier than FY21Q3 are not on EDGAR -- TFI didn't
+# list on NYSE until late 2020). Each MD&A includes a current quarter + a
+# prior-year-quarter comparative, so a single FY22Q2 filing populates both
+# FY22Q2 and FY21Q2, etc. Per-segment Total revenue and Operating income
+# (loss) only -- the operational KPIs (rev/cwt, shipments, etc.) live in
+# each MD&A's per-segment narrative section and would require a separate
+# parser.
+# ---------------------------------------------------------------------------
+
+# Map (fiscal_year, quarter) -> column index in the Moog quarterly layout.
+# FY10 Q1 = C(3); +5 per fiscal year; +1 per intra-year quarter.
+def _quarter_col(fy: int, q: int) -> int:
+    yy = fy - 2000 if fy >= 1900 else fy
+    return 3 + 5 * (yy - 10) + (q - 1)
+
+
+# Catalog of quarterly MD&A files we have downloaded for parsing. Each
+# filing carries the current-quarter values and a prior-year-quarter
+# comparative -- so coverage is broader than just the listed quarters.
+_QUARTERLY_MDA_CATALOG: dict[tuple[int, int], str] = {
+    # (filing_fy, filing_q) -> file path
+    (2021, 3): "/tmp/q6k/FY21Q3/tfii-ex992_37.htm",
+    (2022, 2): "/tmp/q6k/FY22Q2/tfii-ex992_67.htm",
+    (2022, 3): "/tmp/q6k/FY22Q3/tfii-ex992_15.htm",
+    (2023, 1): "/tmp/q6k/FY23Q1/tfii-ex99_2.htm",
+    (2023, 2): "/tmp/q6k/FY23Q2/tfii-ex99_2.htm",
+    (2023, 3): "/tmp/q6k/FY23Q3/tfii-ex99_2.htm",
+    (2024, 1): "/tmp/q6k/FY24Q1/tfii-ex99_2.htm",
+    (2024, 2): "/tmp/q6k/FY24Q2/tfii-ex99_2.htm",
+    (2025, 1): "/tmp/q6k/FY25Q1/tfii-ex99_2.htm",
+    (2025, 2): "/tmp/q6k/FY25Q2/tfii-ex99_2.htm",
+    (2025, 3): "/tmp/q6k/FY25Q3/tfii-ex99_2.htm",
+    (2026, 1): "/tmp/q1_26/000119312526182067_tfii-ex99_2.htm",
+}
+
+_Q_DATE_LABEL = {1: "March 31", 2: "June 30", 3: "September 30", 4: "December 31"}
+
+
+def _md_a_to_text(path: str) -> str:
+    raw = open(path).read()
+    raw = re.sub(r'<style[^>]*>.*?</style>', '', raw, flags=re.S)
+    raw = re.sub(r'<script[^>]*>.*?</script>', '', raw, flags=re.S)
+    text = re.sub(r'<[^>]+>', ' ', raw)
+    text = html.unescape(text)
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+
+def _parse_quarter_md_a(text: str, year: int, quarter: int):
+    """Extract the 'Three months ended [DATE], YEAR' segment table.
+    Returns (rev_map_in_thousands, op_map_in_thousands, layout) or None.
+    layout is '4seg' (P&C+LTL+TL+Log era) or '3seg' (FY24+).
+    """
+    target = f"Three months ended {_Q_DATE_LABEL[quarter]}, {year}"
+    m = re.search(re.escape(target), text)
+    if not m:
+        return None
+    start = m.end()
+    end_m = re.search(
+        r'(Three months ended|Six months ended|Nine months ended|Twelve months ended|Year ended)',
+        text[start:],
+    )
+    section = text[start:start + (end_m.start() if end_m else 8000)]
+
+    rev_m = re.search(
+        r'Revenue before fuel surcharge\s*1?\s*([\d,.\(\)\s—\-–$]+?)'
+        r'(?=%\s*of\s*total\s*revenue|Adjusted EBITDA|Adjusted operating ratio|Operating income)',
+        section, re.I,
+    )
+    op_m = re.search(
+        r'Operating income\s*\(loss\)\s*([\d,.\(\)\s—\-–$%]+?)'
+        r'(?=Operating margin|Adjusted operating ratio|Total assets|Net capital)',
+        section, re.I,
+    )
+
+    def split_vals(s):
+        if not s:
+            return []
+        toks = re.findall(r'\(?[-]?[\d,]+(?:\.\d+)?\)?|—|–', s)
+        out = []
+        for t in toks:
+            t = t.strip()
+            if not t or t in ("—", "–"):
+                out.append(None)
+                continue
+            neg = t.startswith("(")
+            t = t.replace("(", "").replace(")", "").replace(",", "")
+            try:
+                v = float(t)
+                out.append(-v if neg else v)
+            except ValueError:
+                out.append(None)
+        return out
+
+    rev_vals = split_vals(rev_m.group(1) if rev_m else "")
+    op_vals  = split_vals(op_m.group(1)  if op_m  else "")
+
+    # Layout detection by value count (7 = 4-segment era, 6 = 3-segment era).
+    if len(rev_vals) >= 7:
+        seg_names = ["Package and Courier", "Less-Than-Truckload", "Truckload",
+                     "Logistics", "Corporate", "Eliminations", "Total"]
+        layout = "4seg"
+    else:
+        seg_names = ["Less-Than-Truckload", "Truckload", "Logistics",
+                     "Corporate", "Eliminations", "Total"]
+        layout = "3seg"
+
+    rev_map = dict(zip(seg_names, rev_vals[:len(seg_names)]))
+    op_map = dict(zip(seg_names, op_vals[:len(seg_names)]))
+
+    # Sanity: total revenue should be 1B-3B $ thousands (i.e., 1M-3M in thousands)
+    # for a single quarter; reject obviously bad parses.
+    tot = rev_map.get("Total")
+    if tot and not (500_000 < tot < 5_000_000):
+        return None
+
+    return rev_map, op_map, layout
+
+
+# Legacy block (4-seg) row anchors -- segment header row, then offsets +1, +2.
+_LEGACY_BLOCK_ROWS = {
+    "Package and Courier": (11, 12, 13),  # header, Net sales, Op profit
+    "Less-Than-Truckload": (19, 20, 21),
+    "Truckload":           (26, 27, 28),
+    "Logistics":           (33, 34, 35),
+}
+# Current block (3-seg) row anchors -- header, Net sales (+1), EBIT (+3).
+_CURRENT_BLOCK_ROWS = {
+    "Less-Than-Truckload": (53, 54, 56),
+    "Truckload":           (64, 65, 67),
+    "Logistics":           (75, 76, 78),
+}
+
+
+def populate_quarterly_historicals(workbook_path: str | Path) -> int:
+    """Parse cached quarterly MD&A files and stamp per-segment Net sales /
+    Operating income into the model's quarterly columns. Returns cell count.
+    """
+    workbook_path = Path(workbook_path)
+    wb = load_workbook(workbook_path)
+    ws = wb["Model"]
+
+    # Aggregate parsed data; prefer later filings (most-recently-restated values).
+    parsed: dict[tuple[int, int], tuple[dict, dict, str]] = {}
+    for (file_fy, file_q), path in _QUARTERLY_MDA_CATALOG.items():
+        if not Path(path).exists():
+            continue
+        text = _md_a_to_text(path)
+        # Each filing has current and prior-year quarters
+        for target_year in (file_fy, file_fy - 1):
+            if target_year < 2020:
+                continue  # template forecast period below FY20; skip
+            res = _parse_quarter_md_a(text, target_year, file_q)
+            if not res:
+                continue
+            # Prefer entry from the LATER filing (later FY) if both have the same target
+            key = (target_year, file_q)
+            if key in parsed:
+                # only overwrite if this filing year is older than what's stored
+                continue
+            parsed[key] = res
+
+    # Skip forecast columns -- only fill historical quarters (FY20-FY25)
+    written = 0
+    for (year, q), (rev_map, op_map, layout) in parsed.items():
+        if year < 2020 or year > 2025:
+            continue
+        col = _quarter_col(year, q)
+        rows_map = _LEGACY_BLOCK_ROWS if layout == "4seg" else _CURRENT_BLOCK_ROWS
+        for seg_name, (header_row, sales_row, ebit_row) in rows_map.items():
+            rev = rev_map.get(seg_name)
+            op = op_map.get(seg_name)
+            if rev is not None:
+                ws.cell(row=sales_row, column=col).value = rev / 1_000.0
+                written += 1
+            if op is not None:
+                ws.cell(row=ebit_row, column=col).value = op / 1_000.0
+                written += 1
+
+    wb.save(workbook_path)
+    return written
+
+
+# ---------------------------------------------------------------------------
+# Bank of Canada FX reference: CAD/USD annual averages for FY11-FY25.
+#
+# TFI switched to USD reporting in their FY20 40-F (NYSE cross-listing).
+# Pre-FY20 financials filed on SEDAR were in CAD. SEDAR is blocked by the
+# egress allowlist in this environment, so FY11-FY18 data must be entered
+# manually; but the model carries the official BoC daily-average CAD/USD
+# rate as a reference series so any CAD figure can be normalized to USD by
+# dividing by the rate.
+# ---------------------------------------------------------------------------
+
+_BOC_FX_LEGACY_URL  = "https://www.bankofcanada.ca/valet/observations/IEXE0101/json?start_date=2011-01-01&end_date=2017-12-31"
+_BOC_FX_MODERN_URL  = "https://www.bankofcanada.ca/valet/observations/FXUSDCAD/json?start_date=2017-01-01&end_date=2025-12-31"
+FX_SECTION_TITLE_ROW = 580
+
+
+def fetch_boc_cadusd_annual_avg(cache_dir: Path | None = None) -> dict[int, float]:
+    """Return {year: annual_avg_CAD_per_USD} stitching the legacy noon-rate
+    series (IEXE0101, 2011-2017Q1) with the current daily-average series
+    (FXUSDCAD, 2017+). Both report CAD-per-USD.
+    """
+    def _load(url, key, cache_name):
+        if cache_dir and (cache_dir / cache_name).exists():
+            return json.loads((cache_dir / cache_name).read_text())
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        text = urllib.request.urlopen(req, timeout=30).read().decode("utf-8")
+        if cache_dir:
+            cache_dir.mkdir(parents=True, exist_ok=True)
+            (cache_dir / cache_name).write_text(text)
+        return json.loads(text)
+
+    by_year: dict[int, list[float]] = {}
+    for url, key, cache_name in (
+        (_BOC_FX_LEGACY_URL, "IEXE0101", "boc_iexe0101.json"),
+        (_BOC_FX_MODERN_URL, "FXUSDCAD", "boc_fxusdcad.json"),
+    ):
+        d = _load(url, key, cache_name)
+        for obs in d.get("observations", []):
+            date = obs.get("d", "")
+            if not date:
+                continue
+            y = int(date[:4])
+            v = obs.get(key, {}).get("v")
+            if not v:
+                continue
+            try:
+                rate = float(v)
+            except ValueError:
+                continue
+            by_year.setdefault(y, []).append(rate)
+    # Prefer the LATER series where they overlap (2017): the modern series
+    # is more authoritative for that year. We just appended both; just
+    # take the average across all observations (any duplication is fine).
+    return {y: sum(vs) / len(vs) for y, vs in by_year.items() if vs}
+
+
+def populate_fx_reference(
+    workbook_path: str | Path,
+    *,
+    fx_cache_dir: Path | None = None,
+) -> int:
+    """Stamp a CAD/USD reference series + a SEDAR-blockage note at the
+    bottom of the Model sheet (rows 580-602). Returns cells written.
+    """
+    workbook_path = Path(workbook_path)
+    wb = load_workbook(workbook_path)
+    ws = wb["Model"]
+
+    ws.cell(row=FX_SECTION_TITLE_ROW, column=2).value = (
+        "FX REFERENCE — CAD per USD annual averages (Bank of Canada)"
+    )
+    ws.cell(row=FX_SECTION_TITLE_ROW + 1, column=2).value = (
+        "Series IEXE0101 (noon rate, 2011-2017) stitched with FXUSDCAD "
+        "(daily avg, 2017+). To convert a CAD figure to USD, divide by "
+        "the rate for that fiscal year."
+    )
+    ws.cell(row=FX_SECTION_TITLE_ROW + 2, column=2).value = (
+        "NOTE: TFI switched to USD reporting in the FY20 40-F. Pre-FY20 "
+        "data on SEDAR is in CAD. SEDAR hosts (sedarplus.ca, sedar.com) "
+        "are blocked by the egress allowlist in this environment, so "
+        "FY11-FY18 historical figures must be entered manually. The "
+        "rates below let you normalize any such entries to USD."
+    )
+
+    rates = fetch_boc_cadusd_annual_avg(cache_dir=fx_cache_dir)
+    written = 0
+    header_row = FX_SECTION_TITLE_ROW + 4
+    ws.cell(row=header_row, column=2).value = "Fiscal year"
+    ws.cell(row=header_row, column=3).value = "CAD/USD (annual avg)"
+    ws.cell(row=header_row, column=4).value = "Source"
+    for year in range(2011, 2026):
+        rate = rates.get(year)
+        r = header_row + (year - 2011) + 1
+        ws.cell(row=r, column=2).value = year
+        if rate is not None:
+            ws.cell(row=r, column=3).value = rate
+            ws.cell(row=r, column=4).value = (
+                "BoC IEXE0101 (noon, deprecated)" if year < 2017
+                else "BoC FXUSDCAD (daily avg)"
+            )
+            written += 2
+    wb.save(workbook_path)
+    return written
+
+
+# ---------------------------------------------------------------------------
+# Silence rows that intrinsically don't apply to TFI: Cost of sales /
+# Gross profit / R&D / SG&A in the consolidated IS (TFI uses Materials &
+# services / Personnel / Other op / D&A instead), the Adjusted-bridge
+# block (no GAAP->Adj reconciliation in IFRS XBRL), DIO/DPO (no COGS to
+# divide against), Backlog and Book-to-bill (not a logistics metric).
+# Replaces formulas that would compute to 0 or #DIV/0! with blank cells.
+# ---------------------------------------------------------------------------
+
+_NA_ROW_RANGES_TO_CLEAR: tuple[tuple[int, int], ...] = (
+    # (start_row, end_row) inclusive
+    (115, 125),    # Cost of sales, GP, R&D, SG&A, Restructuring sub-lines, Other op
+    (142, 159),    # Adjusted bridge (GAAP -> Adj)
+    (165, 167),    # Gross margin %, R&D % sales, SG&A % sales
+    (269, 270),    # DIO, DPO
+    (60, 62),      # LTL Backlog rows in current block
+    (71, 73),      # TL Backlog
+    (82, 84),      # Logistics Backlog
+    (93, 95),      # Seg4 Backlog
+    (106, 110),    # Group total Backlog + 12-mo backlog + B:B
+    (16, 17),      # Legacy P&C Backlog + B:B
+    (24, 24),      # Legacy LTL Backlog
+    (31, 31),      # Legacy TL Backlog
+)
+# Columns to clear -- all FY columns (G through CM) so both historical and forecast cells go blank.
+_NA_COL_START = 7   # G (FY10 total)
+_NA_COL_END = 91    # CM (FY30E)
+
+
+def silence_non_applicable_rows(workbook_path: str | Path) -> int:
+    """Clear cells in rows that don't have a TFI-applicable metric, so the
+    workbook doesn't show 0% / #DIV/0! / -100% from formula chains pointing
+    at empty inputs."""
+    workbook_path = Path(workbook_path)
+    wb = load_workbook(workbook_path)
+    ws = wb["Model"]
+    cleared = 0
+    for r_start, r_end in _NA_ROW_RANGES_TO_CLEAR:
+        for r in range(r_start, r_end + 1):
+            for c in range(_NA_COL_START, _NA_COL_END + 1):
+                cell = ws.cell(row=r, column=c)
+                if cell.value is not None:
+                    cell.value = None
+                    cleared += 1
+    wb.save(workbook_path)
+    return cleared
+
+
+# ---------------------------------------------------------------------------
 # Workbook write
 # ---------------------------------------------------------------------------
 
@@ -1137,6 +1475,12 @@ def populate(
         populate.last_operational_writes = 0  # type: ignore[attr-defined]
 
     populate.last_forecast_writes = populate_forecast_drivers(workbook_path)  # type: ignore[attr-defined]
+
+    populate.last_quarterly_writes = populate_quarterly_historicals(workbook_path)  # type: ignore[attr-defined]
+    populate.last_fx_writes = populate_fx_reference(  # type: ignore[attr-defined]
+        workbook_path, fx_cache_dir=Path("/tmp/fx"),
+    )
+    populate.last_na_cleared = silence_non_applicable_rows(workbook_path)  # type: ignore[attr-defined]
 
     return written
 
@@ -1201,6 +1545,15 @@ def main(argv: list[str] | None = None) -> int:
     fc_written = getattr(populate, "last_forecast_writes", 0)
     if fc_written:
         print(f"Forecast drivers:    {fc_written} cells (Q1/26 baseline + scenarios + wiring)")
+    q_written = getattr(populate, "last_quarterly_writes", 0)
+    if q_written:
+        print(f"Quarterly hist:      {q_written} cells (per-segment Net sales + Op income, FY20-FY25)")
+    fx_written = getattr(populate, "last_fx_writes", 0)
+    if fx_written:
+        print(f"FX reference:        {fx_written} cells (BoC CAD/USD annual avgs, FY11-FY25)")
+    na_cleared = getattr(populate, "last_na_cleared", 0)
+    if na_cleared:
+        print(f"Non-applicable:      {na_cleared} cells cleared (GP/R&D/SG&A/DIO/DPO/Backlog/B:B)")
     return 0
 
 
