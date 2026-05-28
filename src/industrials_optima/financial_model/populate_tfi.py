@@ -1441,10 +1441,14 @@ _FORECAST_SCHEDULE_OVERRIDES: tuple[tuple[str, str | None], ...] = (
     # AP held as historical %-of-revenue (not DPO×COGS).
     *((f"{c}243", f"=CD243/CD114*{c}114") for c in ("CI","CJ","CK","CL","CM")),
 
-    # --- CF forecast: hold dividends + buybacks flat at FY25 actual
-    # ($M, both negative-signed in our convention).
-    *((f"{c}198", f"=CD198") for c in ("CI","CJ","CK","CL","CM")),
-    *((f"{c}199", f"=CD199") for c in ("CI","CJ","CK","CL","CM")),
+    # --- CF forecast: dividends and buybacks.
+    # Dividends: scale with diluted shares × growing DPS (row 140 grows 4%/yr).
+    *((f"{c}198", f"=-{c}140*{c}139/1000") for c in ("CI","CJ","CK","CL","CM")),
+    # Buybacks: 30% of FCF (= CFO + capex) returned via repurchases, capped
+    # at the FY25 actual to avoid runaway. TFI's Q1/26 commentary signaled
+    # reduced buyback intensity vs FY24-FY25; this is a more realistic
+    # baseline than holding $226M flat.
+    *((f"{c}199", f"=-MIN(0.30*({c}186+{c}189),ABS(CD199))") for c in ("CI","CJ","CK","CL","CM")),
 
     # --- Total equity (row 260) rollforward: source sums rows 255-259 but
     # the XBRL CompanyFacts doesn't expose those individual equity components

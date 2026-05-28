@@ -73,12 +73,13 @@ build_template(cfg, "Acme_Model.xlsx")
 5. **Bull-Base-Bear**, **DCF**, and **Charts** tabs are linked — they
    refresh whenever Model values change.
 
-### TFI International auto-populate (FY20–FY25)
+### TFI International auto-populate (FY19–FY25 annual + FY21Q3–FY25Q3 quarterly)
 
 For TFI International specifically, the `populate_tfi` module pulls
-historicals from the EDGAR IFRS XBRL Company Facts API (CIK 0001588823)
-and the per-filing "Segment Reporting (Details)" rendered R-files, and
-stamps them into the FY20–FY25 columns (BE / BJ / BO / BT / BY / CD):
+historicals from the EDGAR IFRS XBRL Company Facts API (CIK 0001588823),
+the per-filing "Segment Reporting (Details)" rendered R-files, and the
+quarterly 6-K MD&A exhibits, then stamps the full set into the annual
+(BE/BJ/BO/BT/BY/CD) and quarterly (BF–CC) columns:
 
 - Consolidated IS / CF / BS (~47 line items per year, FY19–FY25; FY19
   is included so the source template's row 161–164 / row 211 y/y%
@@ -138,6 +139,53 @@ Known issuer-tagging quirks the populator preserves as-is (see
 0; FY21/FY22 `FinanceCosts` sign-flipped (abs() applied); standalone
 `Goodwill` only tagged through FY22 (FY23+ rolls into the combined
 `IntangibleAssetsAndGoodwill` total).
+
+Additional sections populated below the main model area:
+
+- **Q1/26 operational baseline** (rows 432–484): full set of disclosed
+  KPIs per segment from TFI's Q1/26 MD&A, with Q1/25 comparative.
+- **Driver forecast** (rows 488–548): per segment × scenario,
+  Volume y/y% × Yield y/y% → Implied Sales y/y%, plus EBIT margin
+  anchored to LT targets.
+- **LT margin anchors** (rows 552–560): publicly-stated Bédard targets
+  (LTL 15% op margin / 85% Adj OR; TL ~12%; Logistics ~9–10%). NOT
+  verbatim from Q1/26 call (egress allowlist blocks transcript hosts).
+- **FX reference** (rows 580–599): Bank of Canada CAD/USD annual
+  averages FY11–FY25 (IEXE0101 + FXUSDCAD stitched). For normalizing
+  any pre-FY20 CAD figures manually entered from SEDAR.
+- **Per-segment operational KPIs by quarter** (rows 605–650): rev/cwt,
+  shipments, tonnage, truck count, OR%, ROIC parsed from each quarterly
+  MD&A's per-segment narrative. FY21Q3 → FY25Q3 coverage.
+
+Forecast wiring (toggle scenario at `Model!CO3` = Base / Bull / Bear):
+
+- IS, CF, BS forecast all compute end-to-end through FY30E
+- BS ties out exactly ($0 gap) via cash-as-literal-plug at row 226
+  (Cash = Total L&E − sum of non-cash assets)
+- Buybacks (row 199) scale dynamically as 30% of FCF, capped at the
+  FY25 actual run-rate
+- Dividends (row 198) computed from DPS × diluted shares, with DPS
+  growing 4%/yr (TFI's announced Q1/26 dividend hike)
+- Corporate cost ramps 3%/yr off the FY25 segment-vs-consolidated
+  EBIT gap
+- All ratio + valuation multiples compute (ROIC, RONTA, ROE, Net
+  debt/EBITDA, interest coverage, EV/Sales, EV/EBITDA, EV/EBIT,
+  P/E, FCF yield, dividend yield)
+
+Known gaps:
+
+- **FY11–FY18 historicals**: NOT auto-populated. EDGAR has TFI data
+  only from FY19 (cross-listing on NYSE was late 2020). Pre-FY19
+  filings live on SEDAR which is blocked by the egress allowlist in
+  this environment. The FX section at row 580+ provides the BoC
+  CAD/USD rates for manual normalization if you obtain the data.
+- **FY20Q1, FY20Q2, FY21Q1**: no MD&A exhibit on EDGAR for these
+  quarters (TFI's earliest quarterly MD&A is FY21Q3).
+- **TFI doesn't disclose**: Cost of sales / Gross profit / R&D / SG&A
+  (IFRS uses Materials & services / Personnel / Other op / D&A
+  instead -- those are populated); GAAP→Adjusted bridge components
+  (rows 142–159 stay blank); Backlog / Book-to-bill (not a logistics
+  metric); DIO / DPO (no COGS to divide against).
 
 ## Notes
 
