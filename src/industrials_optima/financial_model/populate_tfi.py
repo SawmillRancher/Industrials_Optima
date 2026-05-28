@@ -582,6 +582,122 @@ def add_yoy_formulas(workbook_path: str | Path) -> int:
 
 
 # ---------------------------------------------------------------------------
+# Per-segment operational detail
+#
+# TFI's 40-F "Segment Reporting (Details)" note discloses a full operating
+# decomposition per segment (revenue ex/incl fuel, the four expense
+# buckets, gains on dispositions, period-end intangibles / total assets /
+# total liabilities, and capex). The structured XBRL doesn't expose
+# operational KPIs (shipments, OR%, etc.) -- only the financial breakdown.
+#
+# Time range: the 3-segment structure was introduced in the FY24 40-F, so
+# we go back as far as the most recent restated comparative -- FY23 from
+# the FY24 40-F's prior-year column, FY24-FY25 from the FY25 40-F.
+#
+# Layout: a section below the main Model area (row 376+), per-segment
+# blocks with values in the existing FY columns (BT=FY23, BY=FY24,
+# CD=FY25). Doesn't disturb the existing segment-block rows above.
+# ---------------------------------------------------------------------------
+
+OPERATIONAL_SECTION_TITLE_ROW = 376
+OPERATIONAL_FIRST_BLOCK_ROW = 380
+OPERATIONAL_BLOCK_STEP = 16
+
+# Order matters -- it's the on-sheet rendering order under each segment.
+OPERATIONAL_LINE_ITEMS: tuple[tuple[str, str], ...] = (
+    # (template label written in column B, line label as it appears in the R-file)
+    ("  Revenue (ex-fuel)",                          "Revenue"),
+    ("  Fuel surcharge",                             "Fuel surcharge"),
+    ("  Total revenue",                              "Total revenue"),
+    ("  Operating income (loss)",                    "Operating income (loss)"),
+    ("  Materials and services expenses",            "Materials and services expenses"),
+    ("  Personnel expenses",                         "Personnel expenses"),
+    ("  Other operating expenses",                   "Other operating expenses"),
+    ("  Depreciation and amortization",              "Depreciation and amortization"),
+    ("  Gain (loss) on sale of land and buildings",  "Gain (loss) on sale of land and buildings"),
+    ("  Gain on sale of held-for-sale assets",       "Gain, net of impairment, on sale of assets held for sale"),
+    ("  Intangible assets (BS, period-end)",         "Intangible assets"),
+    ("  Total assets (BS, period-end)",              "Total assets"),
+    ("  Total liabilities (BS, period-end)",         "Total liabilities"),
+    ("  Additions to PP&E (capex)",                  "Additions to property and equipment"),
+)
+
+OPERATIONAL_SEGMENTS: tuple[str, ...] = ("Less-Than-Truckload", "Truckload", "Logistics")
+
+# Per fiscal year, the filing whose R-file holds the latest restated values
+# under the NEW 3-segment structure, plus which year-column (after stripping
+# None cells) holds that year's data.
+OPERATIONAL_FY_SOURCES: dict[int, tuple[int, int]] = {
+    2023: (2024, 1),  # FY24 40-F, prior-year column = FY23 restated
+    2024: (2025, 1),  # FY25 40-F, prior-year column
+    2025: (2025, 0),  # FY25 40-F, current-year column
+}
+
+
+def populate_segment_operational_detail(
+    workbook_path: str | Path,
+    *,
+    segment_cache_dir: Path | None = None,
+) -> int:
+    """Stamp the per-segment operational-detail section into Model.
+
+    Returns the number of value cells written (excluding labels).
+    """
+    workbook_path = Path(workbook_path)
+    wb = load_workbook(workbook_path)
+    ws = wb["Model"]
+
+    # Parse the two filings that carry the 3-segment structure.
+    parsed: dict[int, tuple[list[int], dict]] = {}
+    for idx, src_fy in enumerate((2024, 2025)):
+        if idx > 0:
+            time.sleep(0.25)
+        text = fetch_segment_report(src_fy, cache_dir=segment_cache_dir)
+        parsed[src_fy] = parse_segment_html(text)
+
+    # Section header.
+    ws.cell(row=OPERATIONAL_SECTION_TITLE_ROW, column=2).value = (
+        "SEGMENT OPERATIONAL DETAIL — NEW 3-SEGMENT STRUCTURE (FY23 restated, FY24, FY25)"
+    )
+    ws.cell(row=OPERATIONAL_SECTION_TITLE_ROW + 1, column=2).value = (
+        "Per-segment financial decomposition tagged in TFI's 40-F Note "
+        "'Segment Reporting (Details)'. Values in $M (R-files report $ "
+        "thousands). FY23 is the restated comparative from the FY24 40-F; "
+        "FY24-FY25 are from the FY25 40-F. Columns align with BT/BY/CD."
+    )
+
+    written = 0
+    for i, seg_name in enumerate(OPERATIONAL_SEGMENTS):
+        block_start = OPERATIONAL_FIRST_BLOCK_ROW + i * OPERATIONAL_BLOCK_STEP
+
+        # Segment header (column B).
+        ws.cell(row=block_start, column=2).value = (
+            f"{seg_name} — Segment Disclosure"
+        )
+
+        for j, (template_label, rfile_label) in enumerate(OPERATIONAL_LINE_ITEMS):
+            target_row = block_start + 1 + j
+            ws.cell(row=target_row, column=2).value = template_label
+
+            for fy, (src_fy, col_idx) in OPERATIONAL_FY_SOURCES.items():
+                years_in_file, segs = parsed[src_fy]
+                if seg_name not in segs:
+                    continue
+                line_vals = segs[seg_name].get(rfile_label)
+                if not line_vals:
+                    continue
+                filtered = [v for v in line_vals if v is not None]
+                if col_idx >= len(filtered):
+                    continue
+                v_m = filtered[col_idx] / 1_000.0
+                ws.cell(row=target_row, column=fy_total_col(fy)).value = v_m
+                written += 1
+
+    wb.save(workbook_path)
+    return written
+
+
+# ---------------------------------------------------------------------------
 # Workbook write
 # ---------------------------------------------------------------------------
 
@@ -632,6 +748,13 @@ def populate(
         populate.last_segment_writes = {}  # type: ignore[attr-defined]
 
     populate.last_yoy_writes = add_yoy_formulas(workbook_path)  # type: ignore[attr-defined]
+
+    if not skip_segments:
+        populate.last_operational_writes = populate_segment_operational_detail(  # type: ignore[attr-defined]
+            workbook_path, segment_cache_dir=segment_cache_dir,
+        )
+    else:
+        populate.last_operational_writes = 0  # type: ignore[attr-defined]
 
     return written
 
@@ -690,6 +813,9 @@ def main(argv: list[str] | None = None) -> int:
     yoy_written = getattr(populate, "last_yoy_writes", 0)
     if yoy_written:
         print(f"Formula completions: {yoy_written} cells (y/y% + margins + cross-block FY24)")
+    op_written = getattr(populate, "last_operational_writes", 0)
+    if op_written:
+        print(f"Operational detail:  {op_written} cells (3-seg FY23 restated -> FY25)")
     return 0
 
 
