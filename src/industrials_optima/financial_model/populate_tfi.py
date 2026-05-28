@@ -52,10 +52,12 @@ FACTS_URL = f"https://data.sec.gov/api/xbrl/companyfacts/CIK{TFI_CIK}.json"
 USER_AGENT = "industrials-optima/0.1 (payton.liske@gmail.com)"
 
 # Per the Moog template layout: FY10 sits at column G (index 7), each
-# subsequent year occupies five columns (Q1..Q4 + FY total). The FY total
-# column for fiscal year N is therefore at index 7 + 5*(N - 10).
+# subsequent year occupies five columns (Q1..Q4 + FY total), so FYn's
+# total column is at index 7 + 5*(n - 10) where n is the 2-digit year.
+# Accept either 2- or 4-digit input to avoid foot-guns.
 def fy_total_col(fy: int) -> int:
-    return 7 + 5 * (fy - 10)
+    yy = fy - 2000 if fy >= 1900 else fy
+    return 7 + 5 * (yy - 10)
 
 
 # A single mapping entry from a template row to one (or more) ifrs-full tags.
@@ -423,32 +425,118 @@ def populate_segments(
         is_legacy = "Package and Courier" in segs
         seg_rows = LEGACY_SEGMENT_ROWS if is_legacy else CURRENT_SEGMENT_ROWS
         line_offsets = LEGACY_LINE_OFFSETS if is_legacy else CURRENT_LINE_OFFSETS
-        col = fy_total_col(fy)
 
-        for seg_name, seg_row in seg_rows.items():
-            if seg_name not in segs:
-                continue
-            for label, offset in line_offsets.items():
-                line_vals = segs[seg_name].get(label)
-                if not line_vals:
+        # Each filing's current year always gets stamped; the FY20 filing is
+        # also the only EDGAR source for FY19 segment values (its R-file has
+        # FY20 + FY19 + FY18 columns), so harvest the prior-year column there
+        # to unlock the FY20 segment y/y% calculations.
+        target_years = [fy] + ([fy - 1] if fy == 2020 else [])
+
+        for target_fy in target_years:
+            col = fy_total_col(target_fy)
+            for seg_name, seg_row in seg_rows.items():
+                if seg_name not in segs:
                     continue
-                vals_by_yr = _values_by_year(years, line_vals)
-                if fy not in vals_by_yr:
-                    continue
-                # R-files report in $ thousands; template uses $ millions.
-                v = vals_by_yr[fy] / 1_000.0
-                ws.cell(row=seg_row + offset, column=col).value = v
-                written[(fy, seg_row + offset, seg_name)] = v
+                for label, offset in line_offsets.items():
+                    line_vals = segs[seg_name].get(label)
+                    if not line_vals:
+                        continue
+                    vals_by_yr = _values_by_year(years, line_vals)
+                    if target_fy not in vals_by_yr:
+                        continue
+                    # R-files report in $ thousands; template uses $ millions.
+                    v = vals_by_yr[target_fy] / 1_000.0
+                    ws.cell(row=seg_row + offset, column=col).value = v
+                    written[(target_fy, seg_row + offset, seg_name)] = v
 
     wb.save(workbook_path)
     return written
 
 
 # ---------------------------------------------------------------------------
+# y/y% completion
+#
+# The Moog source template carries y/y% formulas only for the year ranges
+# Moog actually used (legacy block FY11-FY21, current block FY22-FY25,
+# group/IS rows all years). For TFI's data shape we need to:
+#
+#   - Backfill legacy block FY22 + FY23 Sales y/y% (rows 14/22/29) because
+#     TFI still reported 4 segments through FY23.
+#   - Extend the legacy Group Total SUM (row 44/45) to include all 4 TFI
+#     segments and reach FY23, then add the FY23 Group Sales y/y% (row 46).
+#   - Override the current block FY24 Sales/EBIT y/y% (BY55/57/66/68/77/79)
+#     so they cross-reference the legacy block instead of empty FY23
+#     current-block cells. LTL adds back legacy P&C since TFI rolled P&C
+#     into LTL in FY24 (the FY23 restated comparative confirms it).
+#   - Repoint the current Group Total FY23 cells (BT98/BT102) at the
+#     consolidated rows so the FY24 group y/y% has a non-zero denominator.
+#
+# Backlog y/y% and book-to-bill rows are intentionally left blank: TFI is
+# a logistics business and neither metric is reported.
+# ---------------------------------------------------------------------------
+
+_YOY_UPDATES: tuple[tuple[str, str], ...] = (
+    # Legacy block segment Sales y/y% — FY22 (BO) and FY23 (BT).
+    ("BO14", '=IFERROR(BO12/BJ12-1,"")'),   # P&C
+    ("BT14", '=IFERROR(BT12/BO12-1,"")'),
+    ("BO22", '=IFERROR(BO20/BJ20-1,"")'),   # LTL legacy
+    ("BT22", '=IFERROR(BT20/BO20-1,"")'),
+    ("BO29", '=IFERROR(BO27/BJ27-1,"")'),   # Truckload legacy
+    ("BT29", '=IFERROR(BT27/BO27-1,"")'),
+
+    # Legacy Group Total Net sales / Op profit — extend to 4 segments and
+    # to FY23 (BT). Source only summed the first 3 segments and stopped at
+    # FY22 (BO).
+    ("BE44", "=BE12+BE20+BE27+BE34"),
+    ("BJ44", "=BJ12+BJ20+BJ27+BJ34"),
+    ("BO44", "=BO12+BO20+BO27+BO34"),
+    ("BT44", "=BT12+BT20+BT27+BT34"),
+    ("BE45", "=BE13+BE21+BE28+BE35"),
+    ("BJ45", "=BJ13+BJ21+BJ28+BJ35"),
+    ("BO45", "=BO13+BO21+BO28+BO35"),
+    ("BT45", "=BT13+BT21+BT28+BT35"),
+    ("BT46", '=IFERROR(BT44/BO44-1,"")'),
+
+    # Current block FY24 cross-block overrides. LTL adds back legacy P&C
+    # (rolled into LTL in TFI's FY24 reporting); TL and Logistics map 1:1.
+    ("BY55", '=IFERROR(BY54/(BT20+BT12)-1,"")'),
+    ("BY57", '=IFERROR(BY56/(BT21+BT13)-1,"")'),
+    ("BY66", '=IFERROR(BY65/BT27-1,"")'),
+    ("BY68", '=IFERROR(BY67/BT28-1,"")'),
+    ("BY77", '=IFERROR(BY76/BT34-1,"")'),
+    ("BY79", '=IFERROR(BY78/BT35-1,"")'),
+
+    # Current Group Total FY23 cells — source sums current-block segments
+    # (all empty for TFI's FY23). Point at the consolidated rows so the
+    # FY24 group y/y% has a real denominator.
+    ("BT98", "=BT114"),
+    ("BT102", "=BT126"),
+)
+
+
+def add_yoy_formulas(workbook_path: str | Path) -> int:
+    """Apply the TFI-specific y/y% formula completions to ``workbook_path``.
+
+    Returns the number of cells written.
+    """
+    workbook_path = Path(workbook_path)
+    wb = load_workbook(workbook_path)
+    ws = wb["Model"]
+    for cell_ref, formula in _YOY_UPDATES:
+        ws[cell_ref] = formula
+    wb.save(workbook_path)
+    return len(_YOY_UPDATES)
+
+
+# ---------------------------------------------------------------------------
 # Workbook write
 # ---------------------------------------------------------------------------
 
-FISCAL_YEARS = range(2020, 2026)
+# Populated consolidated range. FY19 is included so the row 161-164 / 211
+# y/y% formulas (e.g., =BE114/AZ114-1) have a populated prior-year cell to
+# divide against — the alternative would be wrapping every consolidated y/y%
+# formula in the source template with IFERROR.
+FISCAL_YEARS = range(2019, 2026)
 
 
 def populate(
@@ -489,6 +577,8 @@ def populate(
         populate.last_segment_writes = seg_written  # type: ignore[attr-defined]
     else:
         populate.last_segment_writes = {}  # type: ignore[attr-defined]
+
+    populate.last_yoy_writes = add_yoy_formulas(workbook_path)  # type: ignore[attr-defined]
 
     return written
 
@@ -544,6 +634,9 @@ def main(argv: list[str] | None = None) -> int:
             seg_by_year[y] = seg_by_year.get(y, 0) + 1
         for y in sorted(seg_by_year):
             print(f"  FY{y}: {seg_by_year[y]} cells")
+    yoy_written = getattr(populate, "last_yoy_writes", 0)
+    if yoy_written:
+        print(f"y/y formulas: {yoy_written} cells (legacy backfill + cross-block FY24 overrides)")
     return 0
 
 
