@@ -26,6 +26,7 @@ dependencies = [
     "anthropic>=0.18.0",
     "aiohttp>=3.9.0",
     "tenacity>=8.2.0",
+    "openpyxl>=3.1.0",
 ]
 
 [project.optional-dependencies]
@@ -39,6 +40,10 @@ dev = [
 [project.scripts]
 industrials-optima = "industrials_optima.cli:main"
 hazwaste = "industrials_optima.hazwaste.cli:main"
+build-model-template = "industrials_optima.financial_model.cli:main"
+
+[tool.setuptools.package-data]
+"industrials_optima.financial_model" = ["templates/*.xlsx"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
