@@ -73,6 +73,24 @@ build_template(cfg, "Acme_Model.xlsx")
 5. **Bull-Base-Bear**, **DCF**, and **Charts** tabs are linked — they
    refresh whenever Model values change.
 
+### TFI International auto-populate (FY20–FY25)
+
+For TFI International specifically, the `populate_tfi` module pulls
+consolidated IS / CF / BS historicals from the EDGAR IFRS XBRL Company
+Facts API (CIK 0001588823) and stamps them into the FY20–FY25 columns
+(BE / BJ / BO / BT / BY / CD).
+
+```bash
+python -m industrials_optima.financial_model.populate_tfi TFI_Model.xlsx
+```
+
+Per-segment revenue / EBIT are NOT in the standard ifrs-full taxonomy
+and must still be entered manually from Note 25 (Segmented Information)
+of TFI's 40-F. See the populator's docstring for the small set of
+issuer tagging quirks the module preserves as-is (FY24 cash tagged as
+0, FY21/FY22 finance-cost sign flip, post-FY22 goodwill rolled into
+intangibles).
+
 ## Notes
 
 - The Moog file lives at `templates/base_model.xlsx` and is the structural
