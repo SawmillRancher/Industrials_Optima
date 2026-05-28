@@ -1541,6 +1541,186 @@ def populate_forecast_schedules(workbook_path: str | Path) -> int:
     return len(_FORECAST_SCHEDULE_OVERRIDES)
 
 
+# ---------------------------------------------------------------------------
+# Per-segment operational KPIs by quarter (parsed from each quarterly MD&A's
+# per-segment narrative). Stamped into a new section below the FX block so
+# the user can see operational drivers (rev/cwt, shipments, tonnage, truck
+# count, OR%, ROIC) per segment, per quarter, across the full quarterly
+# history available on EDGAR.
+# ---------------------------------------------------------------------------
+
+OP_KPI_SECTION_TITLE_ROW = 605
+
+# Each entry: (template label, list of MD&A label variants). KPIs are
+# parsed in this order; missing rows are skipped.
+LTL_KPI_ROWS: tuple[tuple[str, tuple[str, ...]], ...] = (
+    ("Revenue per cwt (ex-fuel) $",     ("Revenue per hundredweight (excluding fuel)",)),
+    ("Revenue per shipment (ex-fuel) $",("Revenue per shipment (excluding fuel)",)),
+    ("Revenue per cwt (incl fuel) $",   ("Revenue per hundredweight (including fuel)",)),
+    ("Revenue per shipment (incl fuel) $",("Revenue per shipment (including fuel)",)),
+    ("Tonnage (000 tons)",              ("Tonnage (in thousands of tons)",)),
+    ("Shipments (000)",                 ("Shipments (in thousands)",)),
+    ("Avg weight / shipment (lbs)",     ("Average weight per shipment (in lbs)",)),
+    ("Avg length of haul (miles)",      ("Average length of haul (in miles)",)),
+    ("Vehicle count, avg",              ("Vehicle count, average",)),
+    ("Truck age (yrs)",                 ("Truck age",)),
+    ("Adjusted Operating Ratio %",      ("Adjusted Operating Ratio", "Adjusted operating ratio")),
+    ("Return on invested capital %",    ("Return on invested capital",)),
+)
+
+TL_KPI_ROWS: tuple[tuple[str, tuple[str, ...]], ...] = (
+    ("Adjusted operating ratio %",      ("Adjusted operating ratio", "Adjusted Operating Ratio")),
+    ("Trucking revenue ex-fuel ($K)",   ("Revenue (in thousands of U.S. dollars)", "Revenue")),
+    ("Brokerage revenue ($K)",          ("Brokerage revenue (in thousands of U.S. dollars)", "Brokerage revenue")),
+    ("Rev / truck / week ex-fuel $",    ("Revenue per truck per week (excluding fuel)",)),
+    ("Rev / truck / week incl fuel $",  ("Revenue per truck per week (including fuel)",)),
+    ("Truck count, avg",                ("Truck count, average",)),
+    ("Trailer count, avg",              ("Trailer count, average",)),
+    ("Truck age (yrs)",                 ("Truck age",)),
+    ("Trailer age (yrs)",               ("Trailer age",)),
+    ("Owner operators, avg",            ("Number of owner operators, average", "Number of owner operators")),
+    ("Return on invested capital %",    ("Return on invested capital",)),
+)
+
+LOG_KPI_ROWS: tuple[tuple[str, tuple[str, ...]], ...] = (
+    ("Return on invested capital %",    ("Return on invested capital",)),
+)
+
+
+def _parse_op_kpi_section(text: str, segment_anchor_re: str) -> tuple[int, str] | None:
+    """Find the body section header for ``segment_anchor_re`` (after the
+    TOC), then locate the 'Operational data' sub-section within it.
+    Returns (segment_start_pos, op_data_section_text) or None.
+    """
+    seg_positions = [m.start() for m in re.finditer(segment_anchor_re, text)]
+    if not seg_positions:
+        return None
+    # The body header is the FIRST occurrence after position ~10000 (past TOC + intro).
+    seg_start = next((p for p in seg_positions if p > 5000), None)
+    if seg_start is None:
+        return None
+    # Bound the segment by the next major header
+    end_m = re.search(
+        r'(?:Truckload\s*\(unaudited\)|Logistics\s*\(unaudited\)|LIQUIDITY|MANAGEMENT|CASH FLOW)',
+        text[seg_start + 100:],
+    )
+    seg_end = (seg_start + 100 + end_m.start()) if end_m else len(text)
+    section = text[seg_start:seg_end]
+    op_m = re.search(r'Operational data', section)
+    if not op_m:
+        return None
+    op_start = op_m.end()
+    # Limit to end of operational data table -- next is footnotes or next narrative
+    end_m2 = re.search(r'(?:Revenue\s+For the three|Operating expenses|This is a non-IFRS)', section[op_start:])
+    op_text = section[op_start:op_start + (end_m2.start() if end_m2 else 3000)]
+    return seg_start, op_text
+
+
+def _extract_kpi_pair(op_text: str, label_variants: tuple[str, ...]) -> tuple[float | None, float | None]:
+    """Find the row whose first column matches one of label_variants and
+    return (current_quarter_value, prior_year_quarter_value).
+
+    The MD&A operational tables are formatted as:
+        Label [footnote #]  [$]value1 [$]value2 [$]variance variance%
+    Some labels have parenthetical qualifiers (e.g., "excluding fuel"),
+    which is why labels are re.escape'd. Numeric tokens may be
+    comma-formatted, parenthesized for negatives, or have $ / % suffixes.
+    """
+    for label in label_variants:
+        pattern = (
+            re.escape(label)
+            + r'\s*(?:\d\s+)?'                       # optional footnote marker (e.g., "1 ")
+            + r'\$?\s*(\(?-?[\d,.]+\)?)\s*%?'        # value 1
+            + r'\s*\$?\s*(\(?-?[\d,.]+\)?)\s*%?'     # value 2
+        )
+        m = re.search(pattern, op_text)
+        if not m:
+            continue
+        def parse(s):
+            s = s.replace("$", "").replace(",", "").replace("%", "").strip()
+            neg = s.startswith("(") and s.endswith(")")
+            s = s.replace("(", "").replace(")", "").replace("—", "").replace("–", "").strip()
+            if not s or s in ("-",): return None
+            try: v = float(s)
+            except ValueError: return None
+            return -v if neg else v
+        v_cur = parse(m.group(1))
+        v_prior = parse(m.group(2))
+        if v_cur is not None and abs(v_cur) < 50_000_000:
+            return v_cur, v_prior
+    return None, None
+
+
+def populate_segment_operational_kpis(workbook_path: str | Path) -> int:
+    """Parse per-segment Operational data tables from every cached
+    quarterly MD&A and stamp KPI values into a new section at row 605+
+    of Model, by quarter (columns BF-CC, matching the existing layout).
+    Returns cell count written.
+    """
+    workbook_path = Path(workbook_path)
+    wb = load_workbook(workbook_path)
+    ws = wb["Model"]
+    written = 0
+
+    # Section header
+    ws.cell(row=OP_KPI_SECTION_TITLE_ROW, column=2).value = (
+        "PER-SEGMENT OPERATIONAL KPIs (quarterly, parsed from each MD&A's "
+        "'Operational data' subsection)"
+    )
+    ws.cell(row=OP_KPI_SECTION_TITLE_ROW + 1, column=2).value = (
+        "Values stamped into BF-CC quarterly columns where the source MD&A "
+        "discloses the metric. Dollar values per the source; percentages "
+        "shown as decimal fractions."
+    )
+
+    # Segment layout: header row, then KPI rows; spaced apart
+    segments = (
+        ("Less-Than-Truckload", r'Less[\s\-]Than[\s\-]Truckload\s*\(unaudited\)', LTL_KPI_ROWS, 608),
+        ("Truckload",           r'(?<!Than[\s\-])Truckload\s*\(unaudited\)',       TL_KPI_ROWS,  625),
+        ("Logistics",           r'\bLogistics\s*\(unaudited\)',                    LOG_KPI_ROWS, 640),
+    )
+
+    # Write segment labels + KPI labels in column B
+    for seg_name, _re, kpi_rows, start_row in segments:
+        ws.cell(row=start_row - 1, column=2).value = f"{seg_name} — Operational KPIs"
+        for i, (template_label, _variants) in enumerate(kpi_rows):
+            ws.cell(row=start_row + i, column=2).value = f"  {template_label}"
+
+    # Parse each quarterly MD&A
+    for (filing_fy, filing_q), path in _QUARTERLY_MDA_CATALOG.items():
+        if not Path(path).exists():
+            continue
+        text = _md_a_to_text(path)
+
+        for seg_name, seg_re, kpi_rows, start_row in segments:
+            parse_result = _parse_op_kpi_section(text, seg_re)
+            if parse_result is None:
+                continue
+            _seg_start, op_text = parse_result
+            # Each MD&A's table has current and prior-year columns -> two quarters
+            for target_year in (filing_fy, filing_fy - 1):
+                if target_year < 2020:
+                    continue
+                col = _quarter_col(target_year, filing_q)
+                if col > 81:  # past CC (FY25Q4), into forecast space
+                    continue
+                for i, (template_label, label_variants) in enumerate(kpi_rows):
+                    v_cur, v_prior = _extract_kpi_pair(op_text, label_variants)
+                    val = v_cur if target_year == filing_fy else v_prior
+                    if val is None:
+                        continue
+                    # Convert percent strings (already parsed as e.g. 95.3 -> we want 0.953)
+                    if "%" in template_label or "Return on" in template_label or "Adjusted operating ratio" in template_label or "Adjusted Operating Ratio" in template_label:
+                        if abs(val) > 1.5:  # already in percent units
+                            val = val / 100.0
+                    target_row = start_row + i
+                    ws.cell(row=target_row, column=col).value = val
+                    written += 1
+
+    wb.save(workbook_path)
+    return written
+
+
 def silence_non_applicable_rows(workbook_path: str | Path) -> int:
     """Clear cells in rows that don't have a TFI-applicable metric, so the
     workbook doesn't show 0% / #DIV/0! / -100% from formula chains pointing
@@ -1626,6 +1806,7 @@ def populate(
         workbook_path, fx_cache_dir=Path("/tmp/fx"),
     )
     populate.last_schedule_writes = populate_forecast_schedules(workbook_path)  # type: ignore[attr-defined]
+    populate.last_op_kpi_writes = populate_segment_operational_kpis(workbook_path)  # type: ignore[attr-defined]
     populate.last_na_cleared = silence_non_applicable_rows(workbook_path)  # type: ignore[attr-defined]
 
     return written
@@ -1700,6 +1881,9 @@ def main(argv: list[str] | None = None) -> int:
     sched_written = getattr(populate, "last_schedule_writes", 0)
     if sched_written:
         print(f"Forecast schedules:  {sched_written} cells (BS/ratio wiring, hold-flat drivers)")
+    op_kpi_written = getattr(populate, "last_op_kpi_writes", 0)
+    if op_kpi_written:
+        print(f"Per-segment KPIs:    {op_kpi_written} cells (rev/cwt, shipments, truck count, OR%, etc.)")
     na_cleared = getattr(populate, "last_na_cleared", 0)
     if na_cleared:
         print(f"Non-applicable:      {na_cleared} cells cleared (GP/R&D/SG&A/DIO/DPO/Backlog/B:B)")
