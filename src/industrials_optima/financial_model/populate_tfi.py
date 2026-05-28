@@ -1471,11 +1471,12 @@ _FORECAST_SCHEDULE_OVERRIDES: tuple[tuple[str, str | None], ...] = (
     # via --share-price at build time) so the valuation multiples compute.
     ("CD360", "=DCF!C42"),
 
-    # --- Cash plug (row 226): tie BS cash directly to the cash-flow
-    # rollforward end-of-period balance at row 207. The source has this
-    # already, but the linkage was broken when the FY26E IS forecast
-    # changed. Refresh it.
-    *((f"{c}226", f"={c}207") for c in ("CI","CJ","CK","CL","CM")),
+    # --- Cash plug (row 226): make cash the literal BS balancing item:
+    # Cash = Total L&E (261) - sum of all non-cash assets. This forces
+    # the BS to tie out exactly. The CF rollforward (row 207) becomes
+    # informational only; if the user wants to reconcile actual cash
+    # generation against BS-implied changes, they can compare the two.
+    *((f"{c}226", f"={c}261-{c}227-{c}228-{c}229-{c}231-{c}232-{c}233-{c}234-{c}235-{c}236") for c in ("CI","CJ","CK","CL","CM")),
 
     # --- Cash flow end-of-period (row 207): rollforward via CFO + CFI + CFF + FX.
     # Source had a SUM formula, but TFI's individual CF lines we populate
