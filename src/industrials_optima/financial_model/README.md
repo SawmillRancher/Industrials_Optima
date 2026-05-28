@@ -76,20 +76,52 @@ build_template(cfg, "Acme_Model.xlsx")
 ### TFI International auto-populate (FY20–FY25)
 
 For TFI International specifically, the `populate_tfi` module pulls
-consolidated IS / CF / BS historicals from the EDGAR IFRS XBRL Company
-Facts API (CIK 0001588823) and stamps them into the FY20–FY25 columns
-(BE / BJ / BO / BT / BY / CD).
+historicals from the EDGAR IFRS XBRL Company Facts API (CIK 0001588823)
+and the per-filing "Segment Reporting (Details)" rendered R-files, and
+stamps them into the FY20–FY25 columns (BE / BJ / BO / BT / BY / CD):
+
+- Consolidated IS / CF / BS (~47 line items per year)
+- Per-segment Net sales + Operating profit:
+  - **Legacy block** (4 segments, FY20–FY23): Package and Courier,
+    Less-Than-Truckload, Truckload, Logistics
+  - **Current block** (3 segments, FY24–FY25): Less-Than-Truckload,
+    Truckload, Logistics — Package and Courier was rolled into LTL in
+    the FY24 40-F (confirmed by the FY23 restated comparative, where
+    LTL revenue jumped ~$580M = prior-year P&C)
+
+Build then populate:
 
 ```bash
-python -m industrials_optima.financial_model.populate_tfi TFI_Model.xlsx
+python -m industrials_optima.financial_model.cli \
+  --company "TFI International" \
+  --ticker  "TFII" \
+  --segment "Less-Than-Truckload" \
+  --segment "Truckload" \
+  --segment "Logistics" \
+  --legacy-segment "Package and Courier" \
+  --legacy-segment "Less-Than-Truckload" \
+  --legacy-segment "Truckload" \
+  --legacy-segment "Logistics" \
+  --currency-units "millions (USD)" \
+  --basis "IFRS as filed in Form 40-F" \
+  --tax-rate 0.26 \
+  --share-price 150.0 \
+  -o TFI_Model.xlsx
+
+python -m industrials_optima.financial_model.populate_tfi TFI_Model.xlsx \
+  --facts-cache /tmp/tfi_facts.json \
+  --segment-cache /tmp/tfi_segs
 ```
 
-Per-segment revenue / EBIT are NOT in the standard ifrs-full taxonomy
-and must still be entered manually from Note 25 (Segmented Information)
-of TFI's 40-F. See the populator's docstring for the small set of
-issuer tagging quirks the module preserves as-is (FY24 cash tagged as
-0, FY21/FY22 finance-cost sign flip, post-FY22 goodwill rolled into
-intangibles).
+The `--facts-cache` / `--segment-cache` paths memoize EDGAR responses
+so a re-run is offline; sequential R-file fetches are throttled and
+back off on 503.
+
+Known issuer-tagging quirks the populator preserves as-is (see
+`populate_tfi.py` docstring): FY24 `CashAndCashEquivalents` tagged as
+0; FY21/FY22 `FinanceCosts` sign-flipped (abs() applied); standalone
+`Goodwill` only tagged through FY22 (FY23+ rolls into the combined
+`IntangibleAssetsAndGoodwill` total).
 
 ## Notes
 
