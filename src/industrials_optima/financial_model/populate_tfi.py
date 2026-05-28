@@ -45,7 +45,7 @@ from pathlib import Path
 from typing import Iterable
 
 from openpyxl import load_workbook
-from openpyxl.utils import get_column_letter
+from openpyxl.utils import column_index_from_string, get_column_letter
 
 TFI_CIK = "0001588823"
 FACTS_URL = f"https://data.sec.gov/api/xbrl/companyfacts/CIK{TFI_CIK}.json"
@@ -698,6 +698,386 @@ def populate_segment_operational_detail(
 
 
 # ---------------------------------------------------------------------------
+# Forecast wiring: drivers, scenarios, LT margin anchors
+#
+# Layout added below the operational-detail section (row 432+):
+#   - Q1/26 operational baseline   rows 432-484  (factual KPIs from MD&A)
+#   - Operational driver forecast  rows 488-548  (volume * yield per segment)
+#   - LT margin anchor commentary  rows 552-572  (sourcing + caveats)
+# Also re-populates the existing scenario assumption table at CT57:CY85
+# with TFI-specific Sales y/y% and EBIT margin values per scenario, and
+# fixes the source template's forecast wiring (CI54 etc. were
+# =hardcoded_number*(1+CI55) -- replaced with =CD54*(1+CI55) so the
+# forecast bases off populated FY25 actuals, and the FY26E hardcoded
+# y/y% / EBIT% are rewired to reference the scenario table).
+#
+# IMPORTANT CAVEAT: TFI's Q1/26 EDGAR filings (press release + MD&A) do
+# NOT include explicit numeric long-term margin targets per segment.
+# The LT anchors below are management's publicly-stated targets from
+# prior conference calls and investor day materials -- they cannot be
+# verified from the Q1/26-specific call within this environment
+# (egress allowlist blocks transcript hosts). The Q1/26 EDGAR
+# disclosures provide only short-term guidance (Q2/26 adj diluted EPS
+# $1.50-$1.60, FY26 net capex $225-$250M ex real estate). The model
+# is clearly labeled so the user can override with Q1/26-specific
+# verbal guidance if/when validated against the call recording.
+# ---------------------------------------------------------------------------
+
+# Q1/26 operational data from TFI's Q1/26 MD&A (exhibit 99.2 of
+# accession 0001193125-26-182067, filed 2026-04-27). Two columns:
+# Q1/26 actual and Q1/25 comparative.
+Q1_26_OPERATIONAL_BASELINE: dict[str, list[tuple[str, float | None, float | None]]] = {
+    "Less-Than-Truckload": [
+        # (label, Q1/26, Q1/25)
+        ("Revenue per cwt ex-fuel ($)",              19.68,  20.16),
+        ("Revenue per shipment ex-fuel ($)",         303.36, 310.07),
+        ("Revenue per cwt incl fuel ($)",            24.04,  24.24),
+        ("Revenue per shipment incl fuel ($)",       370.64, 373.28),
+        ("Tonnage (thousands of tons)",              1342,   1351),
+        ("Shipments (thousands)",                    1741,   1757),
+        ("Avg weight per shipment (lbs)",            1542,   1538),
+        ("Avg length of haul (miles)",               1064,   1069),
+        ("Packages (thousands, P&C ops)",            15667,  16633),
+        ("Avg weight per package (lbs, P&C)",        15.06,  13.59),
+        ("Cargo claims (% revenue)",                 0.006,  0.006),
+        ("Vehicle count, average",                   5627,   6174),
+        ("Truck age (years)",                        4.3,    4.3),
+        ("Business days",                            63,     63),
+        ("Adjusted Operating Ratio (%)",             0.953,  0.931),
+        ("Return on invested capital (%)",           0.116,  0.144),
+    ],
+    "Truckload": [
+        ("Adjusted operating ratio (%)",             0.927,  0.937),
+        ("Trucking revenue ex-fuel ($ thousands)",   533836, 533372),
+        ("Brokerage revenue ($ thousands)",          138915, 129484),
+        ("Revenue per truck per week ex-fuel ($)",   4390,   4044),
+        ("Revenue per truck per week incl fuel ($)", 5141,   4753),
+        ("Truck count, average",                     6939,   7469),
+        ("Trailer count, average",                   21298,  23261),
+        ("Truck age (years)",                        3.2,    3.2),
+        ("Trailer age (years)",                      11.3,   10.8),
+        ("Number of owner operators, average",       2415,   2661),
+        ("Return on invested capital (%)",           0.060,  0.067),
+    ],
+    "Logistics": [
+        ("Operating margin (%)",                     0.089,  0.081),
+        ("Adjusted EBITDA margin (%)",               0.141,  0.122),
+        ("Return on invested capital (%)",           0.124,  0.170),
+        ("US share of segment revenue (%)",          0.81,   0.83),
+        ("Canada share of segment revenue (%)",      0.19,   0.17),
+    ],
+}
+
+Q1_26_BASELINE_TITLE_ROW = 432
+
+# Long-term operating-margin targets per segment, used as the anchor for
+# the BASE-case end-period margin and the BULL-case ceiling. These are
+# management's publicly-communicated multi-year goals -- NOT verbatim from
+# the Q1/26 call. Override after validating against the call transcript.
+LT_MARGIN_TARGETS: dict[str, tuple[float, str]] = {
+    "Less-Than-Truckload": (
+        0.150,
+        "Bedard's long-term Adj OR 85% goal (= 15% op margin). Q1/26 actual 4.7%.",
+    ),
+    "Truckload": (
+        0.120,
+        "Mid-cycle Adj OR target ~88% (= 12% op margin). Q1/26 actual 8.3%.",
+    ),
+    "Logistics": (
+        0.090,
+        "Asset-light double-digit goal. Q1/26 actual 8.9%, near target.",
+    ),
+}
+
+# Operational driver forecasts per segment, per scenario, per FY (FY26-FY30).
+# Each entry is volume_y_y% then yield_y_y%; the implied total Sales y/y%
+# stamped into the scenario table is (1+vol) * (1+yield) - 1. EBIT margin
+# is set directly (since the absolute margin matters more than the change
+# for the LT-target anchoring).
+DRIVER_FORECAST: dict[str, dict[str, dict[str, tuple[float, ...]]]] = {
+    "Less-Than-Truckload": {
+        "BASE": {
+            "volume":      (-0.010, +0.015, +0.025, +0.025, +0.020),  # shipments y/y
+            "yield":       (-0.010, +0.020, +0.025, +0.025, +0.025),  # rev/shipment y/y
+            "ebit_margin": (+0.060, +0.090, +0.115, +0.135, +0.150),
+        },
+        "BULL": {
+            "volume":      (+0.020, +0.040, +0.040, +0.035, +0.030),
+            "yield":       (+0.010, +0.035, +0.040, +0.035, +0.030),
+            "ebit_margin": (+0.085, +0.115, +0.140, +0.150, +0.155),
+        },
+        "BEAR": {
+            "volume":      (-0.040, -0.010, +0.005, +0.015, +0.020),
+            "yield":       (-0.030, -0.005, +0.010, +0.020, +0.020),
+            "ebit_margin": (+0.040, +0.045, +0.055, +0.070, +0.085),
+        },
+    },
+    "Truckload": {
+        "BASE": {
+            "volume":      (-0.030, +0.000, +0.015, +0.020, +0.020),  # truck count y/y
+            "yield":       (+0.050, +0.035, +0.030, +0.025, +0.025),  # rev/truck/week y/y
+            "ebit_margin": (+0.090, +0.100, +0.110, +0.115, +0.120),
+        },
+        "BULL": {
+            "volume":      (+0.000, +0.020, +0.030, +0.030, +0.025),
+            "yield":       (+0.070, +0.050, +0.040, +0.035, +0.030),
+            "ebit_margin": (+0.110, +0.120, +0.130, +0.130, +0.130),
+        },
+        "BEAR": {
+            "volume":      (-0.050, -0.020, +0.000, +0.010, +0.010),
+            "yield":       (+0.020, +0.010, +0.010, +0.015, +0.020),
+            "ebit_margin": (+0.070, +0.070, +0.080, +0.090, +0.090),
+        },
+    },
+    "Logistics": {
+        # Less granular operational disclosure -- use direct sales y/y growth
+        # (volume placeholder set to "blended growth"; yield set to 0).
+        "BASE": {
+            "volume":      (+0.030, +0.045, +0.050, +0.045, +0.040),
+            "yield":       (+0.000, +0.000, +0.000, +0.000, +0.000),
+            "ebit_margin": (+0.090, +0.095, +0.100, +0.100, +0.100),
+        },
+        "BULL": {
+            "volume":      (+0.050, +0.070, +0.070, +0.060, +0.050),
+            "yield":       (+0.000, +0.000, +0.000, +0.000, +0.000),
+            "ebit_margin": (+0.100, +0.110, +0.120, +0.120, +0.120),
+        },
+        "BEAR": {
+            "volume":      (+0.000, +0.010, +0.020, +0.030, +0.030),
+            "yield":       (+0.000, +0.000, +0.000, +0.000, +0.000),
+            "ebit_margin": (+0.070, +0.075, +0.080, +0.080, +0.080),
+        },
+    },
+}
+
+# Maps segment -> (header row in current segment block, scenario table
+# Sales y/y% row, scenario table EBIT margin row). Per the source layout:
+# Slot 1 (rows 53/55) <-> CT58/CT59 (BASE), CT68/CT69 (BULL), CT78/CT79 (BEAR)
+# Slot 2 (rows 64/66) <-> CT60/CT61, CT70/CT71, CT80/CT81
+# Slot 3 (rows 75/77) <-> CT62/CT63, CT72/CT73, CT82/CT83
+_SEGMENT_SLOT_MAP: dict[str, tuple[int, int]] = {
+    # segment -> (base_sales_row, base_margin_row) -- BULL is +10, BEAR is +20
+    "Less-Than-Truckload": (58, 59),
+    "Truckload":            (60, 61),
+    "Logistics":            (62, 63),
+}
+
+# Forecast-period columns (FY26E .. FY30E) in the scenario table.
+_SCENARIO_FY_COLS = ("CU", "CV", "CW", "CX", "CY")
+
+# Forecast columns in the main forecast period (FY26E .. FY30E)
+_FORECAST_COLS = ("CI", "CJ", "CK", "CL", "CM")
+_PRIOR_FORECAST_COL = "CD"  # FY25 actuals -> base for FY26E
+
+
+def populate_forecast_drivers(
+    workbook_path: str | Path,
+) -> int:
+    """Write the operational baseline, driver forecast, LT margin anchors,
+    scenario assumption table, and fix forecast wiring. Returns total cells
+    written.
+    """
+    workbook_path = Path(workbook_path)
+    wb = load_workbook(workbook_path)
+    ws = wb["Model"]
+    written = 0
+
+    # --- (1) Q1/26 operational baseline section ---------------------------
+    ws.cell(row=Q1_26_BASELINE_TITLE_ROW, column=2).value = (
+        "Q1/26 OPERATIONAL BASELINE — disclosed in Q1/26 MD&A "
+        "(exhibit 99.2 of 6-K filed 2026-04-27)"
+    )
+    ws.cell(row=Q1_26_BASELINE_TITLE_ROW + 1, column=2).value = (
+        "Three months ended March 31, 2026 vs March 31, 2025. Values as "
+        "reported by TFI; not annualized."
+    )
+    row = Q1_26_BASELINE_TITLE_ROW + 3
+    # column header (Q1/26 in BY column, Q1/25 in BT column for visual alignment)
+    ws.cell(row=row, column=2).value = "Metric"
+    ws.cell(row=row, column=72).value = "Q1/25"   # BT
+    ws.cell(row=row, column=77).value = "Q1/26"   # BY
+    row += 1
+    for seg_name in ("Less-Than-Truckload", "Truckload", "Logistics"):
+        ws.cell(row=row, column=2).value = f"{seg_name} — Q1 Operational KPIs"
+        row += 1
+        for label, q1_26, q1_25 in Q1_26_OPERATIONAL_BASELINE[seg_name]:
+            ws.cell(row=row, column=2).value = f"  {label}"
+            if q1_25 is not None:
+                ws.cell(row=row, column=72).value = q1_25  # BT
+                written += 1
+            if q1_26 is not None:
+                ws.cell(row=row, column=77).value = q1_26  # BY
+                written += 1
+            row += 1
+        row += 1  # blank between segments
+
+    # --- (2) Operational driver forecast section -------------------------
+    drv_start = 488
+    ws.cell(row=drv_start, column=2).value = (
+        "OPERATIONAL DRIVER FORECAST (FY26E-FY30E) — volume × yield → Sales y/y%"
+    )
+    ws.cell(row=drv_start + 1, column=2).value = (
+        "Per segment × scenario. Implied Sales y/y% = (1+volume)(1+yield)-1. "
+        "Feeds the scenario assumption table at CT57:CY85, which drives the "
+        "current-block segment forecast at columns CI-CM."
+    )
+    # header row
+    drv_header = drv_start + 3
+    ws.cell(row=drv_header, column=2).value = "Driver"
+    for j, fy_col in enumerate(_SCENARIO_FY_COLS):
+        ws.cell(row=drv_header, column=2 + j + 1).value = f"FY{26+j:02d}E"
+    row = drv_header + 1
+
+    for seg_name in ("Less-Than-Truckload", "Truckload", "Logistics"):
+        ws.cell(row=row, column=2).value = f"{seg_name}"
+        row += 1
+        for scenario in ("BASE", "BULL", "BEAR"):
+            ws.cell(row=row, column=2).value = f"  {scenario.title()} case"
+            row += 1
+            d = DRIVER_FORECAST[seg_name][scenario]
+            # volume row
+            ws.cell(row=row, column=2).value = "    Volume y/y %"
+            for j, v in enumerate(d["volume"]):
+                ws.cell(row=row, column=3 + j).value = v
+                written += 1
+            row += 1
+            # yield row
+            ws.cell(row=row, column=2).value = "    Yield y/y %"
+            for j, v in enumerate(d["yield"]):
+                ws.cell(row=row, column=3 + j).value = v
+                written += 1
+            row += 1
+            # implied sales y/y row (formula = (1+vol)(1+yld)-1)
+            ws.cell(row=row, column=2).value = "    Implied Sales y/y %"
+            for j in range(5):
+                vol_cell = f"{get_column_letter(3+j)}{row-2}"
+                yld_cell = f"{get_column_letter(3+j)}{row-1}"
+                ws.cell(row=row, column=3 + j).value = f"=(1+{vol_cell})*(1+{yld_cell})-1"
+                written += 1
+            row += 1
+            # ebit margin row
+            ws.cell(row=row, column=2).value = "    EBIT margin %"
+            for j, v in enumerate(d["ebit_margin"]):
+                ws.cell(row=row, column=3 + j).value = v
+                written += 1
+            row += 1
+        row += 1  # blank between segments
+
+    # --- (3) LT margin anchor commentary ---------------------------------
+    anchor_start = 552
+    ws.cell(row=anchor_start, column=2).value = (
+        "LT MARGIN ANCHORS — used as BASE-case end-period margin and BULL ceiling"
+    )
+    ws.cell(row=anchor_start + 1, column=2).value = (
+        "CAVEAT: TFI's Q1/26 EDGAR filings (press release + MD&A) do NOT contain "
+        "explicit numeric LT margin targets per segment. Targets below are "
+        "management's publicly-stated multi-year goals from prior calls. They "
+        "should be validated against the Q1/26 call recording / transcript."
+    )
+    row = anchor_start + 3
+    ws.cell(row=row, column=2).value = "Segment"
+    ws.cell(row=row, column=3).value = "LT op margin %"
+    ws.cell(row=row, column=4).value = "Source / caveat"
+    row += 1
+    for seg_name, (target, note) in LT_MARGIN_TARGETS.items():
+        ws.cell(row=row, column=2).value = seg_name
+        ws.cell(row=row, column=3).value = target
+        ws.cell(row=row, column=4).value = note
+        written += 2
+        row += 1
+
+    # --- (4) Populate the scenario assumption table at CT57:CY85 ---------
+    # Section labels
+    ws["CT54"] = "SCENARIO ASSUMPTIONS (TFI 3-segment structure, FY26E-FY30E)"
+    ws["CT55"] = 'Case → toggle at Model!CO3 ("Base" / "Bull" / "Bear")'
+    ws["CT56"] = "Driver"
+    for j, fy in enumerate(_SCENARIO_FY_COLS):
+        ws[f"{fy}56"] = f"FY{26+j:02d}E"
+    ws["CT57"] = "BASE CASE"
+    ws["CT67"] = "BULL CASE"
+    ws["CT77"] = "BEAR CASE"
+
+    scenario_offsets = {"BASE": 0, "BULL": 10, "BEAR": 20}
+    for seg_name, (base_sales_row, base_margin_row) in _SEGMENT_SLOT_MAP.items():
+        for scenario, off in scenario_offsets.items():
+            sales_row = base_sales_row + off
+            margin_row = base_margin_row + off
+            ws.cell(row=sales_row, column=column_index_from_string("CT")).value = (
+                f"  {seg_name} Sales y/y %"
+            )
+            ws.cell(row=margin_row, column=column_index_from_string("CT")).value = (
+                f"  {seg_name} EBIT margin %"
+            )
+            d = DRIVER_FORECAST[seg_name][scenario]
+            for j, fy_col in enumerate(_SCENARIO_FY_COLS):
+                vol = d["volume"][j]
+                yld = d["yield"][j]
+                sales_y_y = (1 + vol) * (1 + yld) - 1
+                ws[f"{fy_col}{sales_row}"] = sales_y_y
+                ws[f"{fy_col}{margin_row}"] = d["ebit_margin"][j]
+                written += 2
+
+    # Slot 4 (Segment 4 placeholder): leave blank for all scenarios.
+
+    # --- (5) Fix forecast formula wiring ---------------------------------
+    # Source bug: CI54 = =888*(1+CI55), where 888 was Moog's hardcoded FY25
+    # Military sales. Replace with =CD54*(1+CI55) so the base is the
+    # populated FY25 segment Net sales cell. Same for TL (row 65), Logistics
+    # (row 76), and Seg4 (row 87). Also wire the FY26E sales y/y% (CI55,
+    # CI66, CI77, CI88) and EBIT% (CI58, CI69, CI80, CI91) from hardcoded
+    # Moog values to the scenario assumption table.
+    forecast_fixes = (
+        # FY26E base = prior-year (CD) * (1 + Sales y/y%)
+        ("CI54", "=CD54*(1+CI55)"),
+        ("CI65", "=CD65*(1+CI66)"),
+        ("CI76", "=CD76*(1+CI77)"),
+        # FY26E Sales y/y% = scenario table CU column
+        ("CI55", '=CHOOSE(MATCH($CO$3,{"Base";"Bull";"Bear"},0),CU58,CU68,CU78)'),
+        ("CI66", '=CHOOSE(MATCH($CO$3,{"Base";"Bull";"Bear"},0),CU60,CU70,CU80)'),
+        ("CI77", '=CHOOSE(MATCH($CO$3,{"Base";"Bull";"Bear"},0),CU62,CU72,CU82)'),
+        # FY26E EBIT % = scenario table CU column
+        ("CI58", '=CHOOSE(MATCH($CO$3,{"Base";"Bull";"Bear"},0),CU59,CU69,CU79)'),
+        ("CI69", '=CHOOSE(MATCH($CO$3,{"Base";"Bull";"Bear"},0),CU61,CU71,CU81)'),
+        ("CI80", '=CHOOSE(MATCH($CO$3,{"Base";"Bull";"Bear"},0),CU63,CU73,CU83)'),
+        # Segment 4 (empty for TFI): null out so the forecast doesn't compute
+        # nonsense from leftover Moog references.
+        ("CI87", None),
+        ("CI88", None),
+        ("CI91", None),
+        # Consolidated IS forecast: source row 126 (EBIT) computes from
+        # GP / R&D / SG&A which TFI doesn't break out. Override every
+        # forecast column to use segment-sum EBIT (row 102) minus a flat
+        # Corporate cost estimate of $60M (mid-range of FY23-FY25 actual
+        # Corporate drag: $46M-$76M).
+        ("CI126", "=CI102-60"),
+        ("CJ126", "=CJ102-60"),
+        ("CK126", "=CK102-60"),
+        ("CL126", "=CL102-60"),
+        ("CM126", "=CM102-60"),
+        # Interest expense: source references the debt-schedule build at row
+        # 305, which we don't populate. Hold flat at FY25 actual ($162M).
+        ("CI127", "=CD127"),
+        ("CJ127", "=CD127"),
+        ("CK127", "=CD127"),
+        ("CL127", "=CD127"),
+        ("CM127", "=CD127"),
+        # Effective tax rate: TFI's Canadian blended rate ~24% (FY20-FY25
+        # average from populated row 132 historicals).
+        ("CI132", 0.24),
+        ("CJ132", 0.24),
+        ("CK132", 0.24),
+        ("CL132", 0.24),
+        ("CM132", 0.24),
+    )
+    for cell, formula in forecast_fixes:
+        ws[cell] = formula
+        written += 1
+
+    wb.save(workbook_path)
+    return written
+
+
+# ---------------------------------------------------------------------------
 # Workbook write
 # ---------------------------------------------------------------------------
 
@@ -755,6 +1135,8 @@ def populate(
         )
     else:
         populate.last_operational_writes = 0  # type: ignore[attr-defined]
+
+    populate.last_forecast_writes = populate_forecast_drivers(workbook_path)  # type: ignore[attr-defined]
 
     return written
 
@@ -816,6 +1198,9 @@ def main(argv: list[str] | None = None) -> int:
     op_written = getattr(populate, "last_operational_writes", 0)
     if op_written:
         print(f"Operational detail:  {op_written} cells (3-seg FY23 restated -> FY25)")
+    fc_written = getattr(populate, "last_forecast_writes", 0)
+    if fc_written:
+        print(f"Forecast drivers:    {fc_written} cells (Q1/26 baseline + scenarios + wiring)")
     return 0
 
 
