@@ -126,16 +126,16 @@ def _rename_segments(ws: Worksheet, config: CompanyConfig) -> None:
     block of P&L line items (Net sales, EBIT, etc.) is defined relative to
     that header row. We overwrite just the header label.
     """
-    current = list(config.segments_current) or [
-        SegmentLine(name=f"[Segment {i + 1}]") for i in range(len(CURRENT_SEGMENT_ROWS))
-    ]
-    legacy = list(config.segments_legacy) or [
-        SegmentLine(name=f"[Legacy Segment {i + 1}]") for i in range(len(LEGACY_SEGMENT_ROWS))
-    ]
-    for row, seg in zip(LEGACY_SEGMENT_ROWS, legacy):
-        ws.cell(row=row, column=MODEL_LABEL_COL).value = seg.name
-    for row, seg in zip(CURRENT_SEGMENT_ROWS, current):
-        ws.cell(row=row, column=MODEL_LABEL_COL).value = seg.name
+    # Every anchor row must be overwritten — otherwise an unmatched slot
+    # would silently keep the Moog source label.
+    current = list(config.segments_current)
+    legacy = list(config.segments_legacy)
+    for i, row in enumerate(LEGACY_SEGMENT_ROWS):
+        name = legacy[i].name if i < len(legacy) else f"[Legacy Segment {i + 1}]"
+        ws.cell(row=row, column=MODEL_LABEL_COL).value = name
+    for i, row in enumerate(CURRENT_SEGMENT_ROWS):
+        name = current[i].name if i < len(current) else f"[Segment {i + 1}]"
+        ws.cell(row=row, column=MODEL_LABEL_COL).value = name
 
 
 def _clear_hardcoded_numerics(ws: Worksheet) -> None:
