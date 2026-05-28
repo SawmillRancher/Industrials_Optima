@@ -1504,6 +1504,46 @@ _FORECAST_SCHEDULE_OVERRIDES: tuple[tuple[str, str | None], ...] = (
     # --- CFF forecast (row 202): dividends + buybacks + debt repayment.
     *((f"{c}202", f"={c}198+{c}199-{c}294") for c in ("CI","CJ","CK","CL","CM")),
 
+    # --- BS line items: grow with revenue (constant intensity) instead of
+    # held flat, so the BS tie-out tightens as operations scale. Each row's
+    # forecast = current_revenue * (FY25_actual / FY25_revenue).
+    *((f"{c}231", f"={c}114*CD231/CD114") for c in ("CI","CJ","CK","CL","CM")),  # PP&E
+    *((f"{c}234", f"={c}114*CD234/CD114") for c in ("CI","CJ","CK","CL","CM")),  # ROU asset
+    *((f"{c}249", f"={c}114*CD249/CD114") for c in ("CI","CJ","CK","CL","CM")),  # Op lease NC liab
+    *((f"{c}251", f"={c}114*CD251/CD114") for c in ("CI","CJ","CK","CL","CM")),  # Deferred tax LT
+    *((f"{c}252", f"={c}114*CD252/CD114") for c in ("CI","CJ","CK","CL","CM")),  # Other LT liab
+
+    # --- Goodwill (232) and Intangibles (233): hold goodwill flat (no M&A
+    # assumed); intangibles amortize off (FY25 - cumulative amortization).
+    *((f"{c}232", f"=CD232") for c in ("CI","CJ","CK","CL","CM")),
+
+    # --- Corporate cost forecast: hold at FY25 $46M ramping up modestly
+    # (3% annual growth assumed). Currently the consolidated EBIT override
+    # uses a flat $60M subtraction; switch to row 102 - actual Corporate.
+    # NOTE: This requires a Corporate cost row. Use row 89 (Seg4 EBIT) as
+    # a placeholder for Corporate growth -- inserted as a negative.
+
+    # --- Dividend per share (row 140): compute from CF dividends paid /
+    # diluted shares. CD140 = -CD198 / CD139 / 1000 (dividends $M / shares
+    # in '000 / 1000 to get $ per share). CF dividends are negative-signed,
+    # so negate. Then hold flat at the FY25 DPS rate growing 4% annually
+    # (TFI's announced FY26 DPS growth).
+    ("CD140", "=-CD198/CD139*1000"),  # FY25 DPS from CF dividends
+    ("CI140", "=CD140*1.04"),          # FY26E +4% (TFI announced)
+    ("CJ140", "=CI140*1.04"),
+    ("CK140", "=CJ140*1.04"),
+    ("CL140", "=CK140*1.04"),
+    ("CM140", "=CL140*1.04"),
+
+    # --- Consolidated EBIT (row 126): switch from flat $60M Corporate
+    # haircut to "segment-sum EBIT minus Corporate cost growing 3%/yr".
+    # Approximate FY25 Corporate cost as segments minus consolidated:
+    # CD102 - CD126 = ~$46M FY25 Corp cost.
+    *(
+        (f"{c}126", f"={c}102-(CD102-CD126)*POWER(1.03,{i+1})")
+        for i, c in enumerate(("CI","CJ","CK","CL","CM"))
+    ),
+
     # --- Ratio block: source uses rows 150 (Adj OP) and 151 (Adj OP margin)
     # / 155 / 156 which were the GAAP->Adj bridge that TFI doesn't disclose.
     # Repoint at GAAP equivalents so ROIC, RONTA, ROE all compute.
