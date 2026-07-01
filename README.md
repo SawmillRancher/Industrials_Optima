@@ -161,6 +161,52 @@ Add to crontab (`crontab -e`):
 
 Edit `src/industrials_optima/config.py` to modify topics, keywords, or add new RSS feeds.
 
+## SEC Financial Model Builder (`secmodel`)
+
+`industrials_optima.secmodel` builds a **DSV-style, formula-driven equity model**
+in Excel, sourced **exclusively from SEC EDGAR filings**. The included builder
+targets **Copart, Inc. (CPRT)**.
+
+```bash
+copart-model --out models/Copart_SEC_Model.xlsx
+# or
+python -m industrials_optima.secmodel.build --out models/Copart_SEC_Model.xlsx
+```
+
+What it produces (`models/Copart_SEC_Model.xlsx`):
+
+- **15 fiscal years** of history (FY2011–FY2025), each with `Q1 · Q2 · 1H · Q3 ·
+  Q4 · FY` columns, plus **FY2026E–FY2030E** driver-based forecast columns.
+- **All reported segments** — United States and International — with revenue,
+  operating income, margins, assets, D&A, CapEx and goodwill by segment.
+- Consolidated income statement, cash flow, balance sheet, ratio analysis
+  (ROE / ROIC / DuPont / net-debt-to-EBITDA) and a valuation block.
+- A `Bull-Base-Bear` scenario summary and an unlevered `DCF` sheet.
+- Formatting/convention mirrors an institutional template: **blue = as-reported
+  SEC input, black = live formula, pale-yellow columns = forecast** driven by an
+  on-sheet Assumptions / scenario table (toggle Bull/Base/Bear).
+
+Data sources (SEC EDGAR only, CIK `0000900075`):
+
+- Consolidated figures — the XBRL *company facts* API (`data.sec.gov`).
+- Segment (US vs International) figures — parsed from the XBRL *instance*
+  documents filed with each 10-K / 10-Q (the company-facts API discards the
+  segment dimension).
+
+How it is organised:
+
+| Module | Purpose |
+| --- | --- |
+| `secmodel/edgar.py` | Cached, throttled EDGAR HTTP client |
+| `secmodel/xbrl.py` | Minimal XBRL instance parser (periods + dimensions) |
+| `secmodel/model.py` | Assembles consolidated + segment time series |
+| `secmodel/workbook.py` | Renders the formatted, formula-driven workbook |
+| `secmodel/build.py` | CLI entry point |
+
+> The model uses only SEC-filed financials. The single manual, non-SEC input is
+> the valuation share price (clearly flagged on the sheet). Per-share figures are
+> as-reported and are **not** retroactively adjusted for stock splits.
+
 ## Development
 
 ```bash
