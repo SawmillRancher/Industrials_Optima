@@ -208,6 +208,7 @@ class CopartModel:
     # segments: metric -> (end, kind) -> bucket -> value
     seg: dict = field(default_factory=lambda: defaultdict(lambda: defaultdict(dict)))
     seg_source: dict = field(default_factory=dict)  # (end,kind)->accession
+    nongaap: object = None  # earnings.NonGaap — 8-K non-GAAP reconciliations
     annual_ends: list = field(default_factory=list)
     quarter_ends: list = field(default_factory=list)
 
@@ -294,6 +295,15 @@ class CopartModel:
             wrote = True
         if wrote:
             self.seg_source[pk] = acc
+
+    def load_nongaap(self) -> None:
+        from .earnings import load_nongaap
+        self.nongaap = load_nongaap(self.client)
+
+    def nongaap_value(self, key: str, end: str, kind: str):
+        if self.nongaap is None:
+            return None
+        return self.nongaap.data.get((end, kind), {}).get(key)
 
     # -- period universe ----------------------------------------------------
     def build_periods(self, first_fy: int) -> None:

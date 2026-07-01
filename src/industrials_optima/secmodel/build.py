@@ -33,6 +33,8 @@ def build_copart_model(
     model.load_consolidated()
     print("• Downloading & parsing filing instances for segment data …")
     model.load_segments()
+    print("• Parsing 8-K earnings releases for non-GAAP reconciliations …")
+    model.load_nongaap()
     model.build_periods(first_fy=first_fy)
     print(
         f"• Assembled {len(model.annual_ends)} fiscal years "

@@ -133,6 +133,25 @@ class EdgarClient:
             f"{SEC_WWW}/Archives/edgar/data/{int(self.cik)}/{acc_nodash}/{chosen}"
         )
 
+    def archive_file(self, accession: str, filename: str) -> str:
+        """Fetch an arbitrary file from a filing's archive folder (cached)."""
+        acc_nodash = accession.replace("-", "")
+        url = f"{SEC_WWW}/Archives/edgar/data/{int(self.cik)}/{acc_nodash}/{filename}"
+        raw = self._get(url, f"file_{acc_nodash}_{filename}")
+        return raw if isinstance(raw, str) else raw.decode("utf-8", "replace")
+
+    def earnings_exhibit(self, accession: str) -> Optional[str]:
+        """Return the text of the Exhibit 99.1 press release for an 8-K, if any."""
+        try:
+            idx = self.filing_index(accession)
+        except Exception:
+            return None
+        for item in idx.get("directory", {}).get("item", []):
+            name = item["name"].lower()
+            if ("ex99" in name or "ex-99" in name) and name.endswith((".htm", ".html")):
+                return self.archive_file(accession, item["name"])
+        return None
+
     def instance_document(self, accession: str) -> Optional[str]:
         url = self.instance_url(accession)
         if not url:

@@ -19,6 +19,7 @@ from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
+from .earnings import DOLLAR_KEYS, EPS_KEYS, RECON_ROWS, SHARE_KEYS
 from .model import CopartModel
 from .periods import fiscal_quarter, fiscal_year
 
@@ -111,13 +112,7 @@ class WorkbookBuilder:
         self.estcol: dict[int, Column] = {}
         idx = FIRST_DATA
         for fy in self.hist_fys:
-            for q in (1, 2):
-                end = self._resolve_q_end(fy, q)
-                c = Column(idx, "Q", fy, q, end, label=f"Q{q} {str(fy)[2:]}")
-                cols.append(c); self.qcol[(fy, q)] = c; idx += 1
-            c = Column(idx, "H", fy, None, None, label=f"1H {str(fy)[2:]}")
-            cols.append(c); self.hcol[fy] = c; idx += 1
-            for q in (3, 4):
+            for q in (1, 2, 3, 4):
                 end = self._resolve_q_end(fy, q)
                 c = Column(idx, "Q", fy, q, end, label=f"Q{q} {str(fy)[2:]}")
                 cols.append(c); self.qcol[(fy, q)] = c; idx += 1
@@ -164,6 +159,7 @@ class WorkbookBuilder:
         r = self._cash_flow(r)
         r = self._balance_sheet(r)
         r = self._ratios(r)
+        r = self._nongaap_reconciliation(r)
         r = self._valuation(r)
         self._column_setup()
         self._cover()
@@ -509,11 +505,20 @@ class WorkbookBuilder:
                               lambda c: f'IFERROR({c.letter}{self.rows["tax"]}/{c.letter}{self.rows["pretax"]},"")',
                               indent=1, fmt=PCT,
                               est_formula=lambda c: self.scen("AS_taxRate", c))
-        r = self._formula_row(r, "net_income", "Net income",
+        r = self._formula_row(r, "net_income", "Net income (incl. noncontrolling interests)",
                               lambda c: f"{c.letter}{self.rows['pretax']}-{c.letter}{self.rows['tax']}",
                               indent=0, bold=True, present_req=["pretax", "tax"],
                               est_formula=lambda c: f"{c.letter}{self.rows['pretax']}-{c.letter}{self.rows['tax']}")
-        self._cagr(self.rows["net_income"])
+        # Net income attributable to Copart (as reported — ties EPS to the 8-K);
+        # noncontrolling interest shown as a memo bridge.
+        r = self._is_line(r, "ni_attrib", "Net income attributable to Copart, Inc.",
+                          lambda c: self._mm(self._flow(["NetIncomeLoss"], c)),
+                          present=present, bold=True,
+                          est_formula=lambda c: f"{c.letter}{self.rows['net_income']}")
+        r = self._formula_row(r, "nci", "  Memo: net income attributable to noncontrolling interests",
+                              lambda c: f'IFERROR({c.letter}{self.rows["net_income"]}-{c.letter}{self.rows["ni_attrib"]},"")',
+                              indent=1, est_formula=lambda c: None)
+        self._cagr(self.rows["ni_attrib"])
         # per share — sh_diluted first (buyback rollforward), sh_basic follows it
         shd_row = r
         self.rows["sh_diluted"] = shd_row
@@ -528,13 +533,13 @@ class WorkbookBuilder:
                           present=present, sum_1h=False,
                           est_formula=lambda c, rr=shd_row: f"{c.letter}{rr}")
         r = self._formula_row(r, "eps_basic", "EPS — basic ($)",
-                              lambda c: f'IFERROR({c.letter}{self.rows["net_income"]}/{c.letter}{self.rows["sh_basic"]},"")',
+                              lambda c: f'IFERROR({c.letter}{self.rows["ni_attrib"]}/{c.letter}{self.rows["sh_basic"]},"")',
                               indent=0, fmt=EPSF, hist_only=False,
-                              est_formula=lambda c: f'IFERROR({c.letter}{self.rows["net_income"]}/{c.letter}{self.rows["sh_basic"]},"")')
+                              est_formula=lambda c: f'IFERROR({c.letter}{self.rows["ni_attrib"]}/{c.letter}{self.rows["sh_basic"]},"")')
         r = self._formula_row(r, "eps_diluted", "EPS — diluted ($)",
-                              lambda c: f'IFERROR({c.letter}{self.rows["net_income"]}/{c.letter}{self.rows["sh_diluted"]},"")',
+                              lambda c: f'IFERROR({c.letter}{self.rows["ni_attrib"]}/{c.letter}{self.rows["sh_diluted"]},"")',
                               indent=0, bold=True, fmt=EPSF,
-                              est_formula=lambda c: f'IFERROR({c.letter}{self.rows["net_income"]}/{c.letter}{self.rows["sh_diluted"]},"")')
+                              est_formula=lambda c: f'IFERROR({c.letter}{self.rows["ni_attrib"]}/{c.letter}{self.rows["sh_diluted"]},"")')
         self._cagr(self.rows["eps_diluted"])
         self._label(r, "Note: EPS and share counts are as-reported each period and are NOT retroactively "
                        "adjusted for Copart's stock splits, so they are not comparable across split dates.",
@@ -584,7 +589,7 @@ class WorkbookBuilder:
     def _growth_margins(self, r):
         r = self._section(r, "GROWTH & MARGINS")
         rev, gp, oi, ni = (self.rows["revenue"], self.rows["gross_profit"],
-                           self.rows["operating_income"], self.rows["net_income"])
+                           self.rows["operating_income"], self.rows["ni_attrib"])
         r = self._yoy_row(r, "gm_revyoy", "Revenue y/y %", rev)
         r = self._yoy_row(r, "gm_oiyoy", "Operating income y/y %", oi)
         r = self._yoy_row(r, "gm_epsyoy", "EPS (diluted) y/y %", self.rows["eps_diluted"])
@@ -737,13 +742,13 @@ class WorkbookBuilder:
             if not prev:
                 continue
             # equity + net income − buybacks (approx via financing not modelled)
-            f = f"={prev.letter}{r}+{c.letter}{self.rows['net_income']}"
+            f = f"={prev.letter}{r}+{c.letter}{self.rows['ni_attrib']}"
             self._put(r, c.idx, f, fmt=NUM, font=F_FXB)
 
     # ------------------------------------------------------------------ #
     def _ratios(self, r):
         r = self._section(r, "RATIO ANALYSIS")
-        ni, eq, ta = self.rows["net_income"], self.rows["bs_eq"], self.rows["bs_ta"]
+        ni, eq, ta = self.rows["ni_attrib"], self.rows["bs_eq"], self.rows["bs_ta"]
         oi, dna = self.rows["operating_income"], self.rows["cf_dna"]
         debt, cash = self.rows["bs_debt"], self.rows["bs_cash"]
         etr = self.rows["etr"]
@@ -773,6 +778,85 @@ class WorkbookBuilder:
         return r + 1
 
     # ------------------------------------------------------------------ #
+    # Non-GAAP reconciliation (as reported in 8-K earnings releases)
+    # ------------------------------------------------------------------ #
+    def _recon_scale(self, key, v):
+        if v is None:
+            return None
+        if key in EPS_KEYS:
+            return v
+        return v / 1e3  # press-release $ thousands / share thousands -> millions
+
+    def _recon_input_row(self, r, key, label, *, bold=False):
+        self._label(r, label, font=F_LBLB if bold else F_LBL, indent=0 if bold else 1)
+        fmt = EPSF if key in EPS_KEYS else NUM
+        for c in self.columns:
+            if c.kind not in ("Q", "FY") or not c.end:
+                continue
+            v = self._recon_scale(key, self.m.nongaap_value(key, c.end, c.kind))
+            if v is not None:
+                self._put(r, c.idx, v, fmt=fmt, font=F_INB if bold else F_IN)
+        self.rows["ng_" + key] = r
+        return r + 1
+
+    def _nongaap_reconciliation(self, r):
+        r = self._section(r, "NON-GAAP RECONCILIATION — AS REPORTED IN 8-K EARNINGS RELEASES")
+        self._label(r, "Copart disclosed non-GAAP net income and non-GAAP diluted EPS in its quarterly earnings "
+                       "press releases (Form 8-K, Item 2.02, Exhibit 99.1) for fiscal 2016–2023 (and a one-off in "
+                       "Q3 FY2014); it reverted to GAAP-only reporting from FY2024. Copart reports no adjusted "
+                       "EBITDA, constant-currency, or non-GAAP free-cash-flow measures.", font=F_NOTE_I, indent=1)
+        r += 1
+        # GAAP net income attributable
+        r = self._recon_input_row(r, "gaap_ni", "GAAP net income attributable to Copart, Inc.", bold=True)
+        first_adj = r
+        adj_keys = [k for k, _ in RECON_ROWS if k.startswith("adj_")]
+        for k in adj_keys:
+            label = dict(RECON_ROWS)[k]
+            r = self._recon_input_row(r, k, label)
+        last_adj = r - 1
+        # Non-GAAP net income = GAAP + sum(adjustments)  [live bridge]
+        self._label(r, "Non-GAAP net income attributable to Copart, Inc.", font=F_LBLB, indent=0,
+                    border=Border(top=Side(style="thin", color="808080")))
+        for c in self.columns:
+            if c.kind not in ("Q", "FY") or not c.end:
+                continue
+            if self.m.nongaap_value("gaap_ni", c.end, c.kind) is None:
+                continue
+            f = f"={c.letter}{self.rows['ng_gaap_ni']}+SUM({c.letter}{first_adj}:{c.letter}{last_adj})"
+            cell = self._put(r, c.idx, f, fmt=NUM, font=F_FXB)
+            cell.border = Border(top=Side(style="thin", color="808080"))
+        self.rows["ng_ng_ni"] = r
+        ng_ni_row = r
+        r += 1
+        # tie-out check vs reported non-GAAP NI (should be ~0)
+        self._label(r, "  Reconciliation check vs. reported (≈ 0)", font=F_LBLG, indent=1)
+        for c in self.columns:
+            if c.kind not in ("Q", "FY") or not c.end:
+                continue
+            rep = self._recon_scale("ng_ni", self.m.nongaap_value("ng_ni", c.end, c.kind))
+            if rep is None:
+                continue
+            self._put(r, c.idx, f"={c.letter}{ng_ni_row}-{rep}", fmt=NUM1, font=F_FX)
+        r += 1
+        # per-share and share counts (as reported)
+        r = self._recon_input_row(r, "gaap_eps", "GAAP diluted EPS ($)")
+        r = self._recon_input_row(r, "ng_eps", "Non-GAAP diluted EPS ($, as reported)", bold=True)
+        r = self._recon_input_row(r, "gaap_sh", "GAAP diluted shares (m)")
+        r = self._recon_input_row(r, "ng_sh", "Non-GAAP diluted shares (m)")
+        # implied non-GAAP EPS from the bridge (cross-check)
+        self._label(r, "  Implied non-GAAP EPS (Non-GAAP NI / Non-GAAP shares)", font=F_LBLG, indent=1)
+        for c in self.columns:
+            if c.kind not in ("Q", "FY") or not c.end:
+                continue
+            if self.m.nongaap_value("ng_sh", c.end, c.kind) is None:
+                continue
+            self._put(r, c.idx,
+                      f'=IFERROR({c.letter}{ng_ni_row}/{c.letter}{self.rows["ng_ng_sh"]},"")',
+                      fmt=EPSF, font=F_FX)
+        r += 1
+        return r + 1
+
+    # ------------------------------------------------------------------ #
     def _valuation(self, r):
         r = self._section(r, "VALUATION  (share price is a manual input — not from SEC filings)")
         # price input row (blue, manual) on FY + EST columns
@@ -782,7 +866,7 @@ class WorkbookBuilder:
                 cell = self._put(r, c.idx, None, fmt=EPSF, font=F_IN)
         self.rows["px"] = r
         r += 1
-        px, sh, ni = self.rows["px"], self.rows["sh_diluted"], self.rows["net_income"]
+        px, sh, ni = self.rows["px"], self.rows["sh_diluted"], self.rows["ni_attrib"]
         r = self._formula_row(r, "mktcap", "Market capitalisation",
                               lambda c: (f'IFERROR({c.letter}{px}*{c.letter}{sh},"")' if c.kind in ("FY",) else None),
                               indent=1, est_formula=lambda c: f'IFERROR({c.letter}{px}*{c.letter}{sh},"")')
@@ -900,7 +984,7 @@ class WorkbookBuilder:
             ("Currency / units", "US$ millions (except per-share and share counts)"),
             ("Data source", "SEC EDGAR — Forms 10-K & 10-Q, XBRL (data.sec.gov). No non-SEC inputs except the manual valuation share price."),
             ("Reported segments", "United States · International"),
-            ("Historical coverage", f"FY{self.hist_fys[0]}–FY{self.hist_fys[-1]} (annual + Q1/Q2/1H/Q3/Q4)"),
+            ("Historical coverage", f"FY{self.hist_fys[0]}–FY{self.hist_fys[-1]} (fiscal-year ends + Q1–Q4)"),
             ("Forecast", f"FY{self.est_fys[0]}E–FY{self.est_fys[-1]}E (driver-based, scenario toggle)"),
         ]
         r = 5
@@ -915,7 +999,7 @@ class WorkbookBuilder:
         ws.cell(row=r, column=3).font = F_SEC
         r += 1
         for name, desc in [
-            ("Model", "Full model — segment P&L, income statement, cash flow, balance sheet, ratios, valuation; historicals (formulas) + FY26E–30E estimates."),
+            ("Model", "Full model — segment P&L, income statement, cash flow, balance sheet, ratios, non-GAAP reconciliation (8-K), valuation; historicals (formulas) + FY26E–30E estimates."),
             ("Bull / Base / Bear", "Scenario P&L summary linked to the Model scenario toggle."),
             ("DCF", "Unlevered DCF built off the model's forecast free cash flow."),
         ]:
@@ -947,7 +1031,7 @@ class WorkbookBuilder:
             cell = ws.cell(row=5, column=3 + i, value=h)
             cell.font = F_SUB; cell.fill = FILL_SUB; cell.alignment = CENTER
         lines = [("Revenue", "revenue", NUM), ("Operating income", "operating_income", NUM),
-                 ("Net income", "net_income", NUM), ("EPS — diluted ($)", "eps_diluted", EPSF),
+                 ("Net income attrib. to Copart", "ni_attrib", NUM), ("EPS — diluted ($)", "eps_diluted", EPSF),
                  ("Free cash flow", "fcf", NUM)]
         r = 6
         for label, key, fmt in lines:

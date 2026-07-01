@@ -175,12 +175,17 @@ python -m industrials_optima.secmodel.build --out models/Copart_SEC_Model.xlsx
 
 What it produces (`models/Copart_SEC_Model.xlsx`):
 
-- **15 fiscal years** of history (FY2011–FY2025), each with `Q1 · Q2 · 1H · Q3 ·
-  Q4 · FY` columns, plus **FY2026E–FY2030E** driver-based forecast columns.
+- **15 fiscal years** of history (FY2011–FY2025), each with `Q1 · Q2 · Q3 · Q4 ·
+  FY` columns, plus **FY2026E–FY2030E** driver-based forecast columns.
 - **All reported segments** — United States and International — with revenue,
   operating income, margins, assets, D&A, CapEx and goodwill by segment.
-- Consolidated income statement, cash flow, balance sheet, ratio analysis
-  (ROE / ROIC / DuPont / net-debt-to-EBITDA) and a valuation block.
+- Consolidated income statement (with the noncontrolling-interest split so net
+  income attributable and EPS tie to the press release), cash flow, balance
+  sheet, ratio analysis (ROE / ROIC / DuPont / net-debt-to-EBITDA) and valuation.
+- **Non-GAAP reconciliation** exactly as Copart reported it in its 8-K earnings
+  releases (Item 2.02, Exhibit 99.1): GAAP net income → itemized adjustments →
+  non-GAAP net income and non-GAAP diluted EPS, per quarter and fiscal year for
+  FY2016–FY2023 (Copart reverted to GAAP-only reporting from FY2024).
 - A `Bull-Base-Bear` scenario summary and an unlevered `DCF` sheet.
 - Formatting/convention mirrors an institutional template: **blue = as-reported
   SEC input, black = live formula, pale-yellow columns = forecast** driven by an
@@ -199,7 +204,8 @@ How it is organised:
 | --- | --- |
 | `secmodel/edgar.py` | Cached, throttled EDGAR HTTP client |
 | `secmodel/xbrl.py` | Minimal XBRL instance parser (periods + dimensions) |
-| `secmodel/model.py` | Assembles consolidated + segment time series |
+| `secmodel/earnings.py` | Parses non-GAAP reconciliation tables from 8-K press releases |
+| `secmodel/model.py` | Assembles consolidated + segment + non-GAAP series |
 | `secmodel/workbook.py` | Renders the formatted, formula-driven workbook |
 | `secmodel/build.py` | CLI entry point |
 
