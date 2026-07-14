@@ -144,6 +144,11 @@ add("data", "br_ambld","  Add: amortization — building and shop equipment", st
     formula="{c}%CSAMORT")
 add("data", "br_ebitda","  = EBITDA", style="subtotal",
     formula="{c}%BREBIT+{c}%GAAMORT+{c}%CSAMORT", bold=True, top=True)
+add("data", "br_ebitdapct","  EBITDA margin %", style="pct",
+    formula="IFERROR({c}%BREBITDA/{c}%REV,0)")
+add("data", "br_ebitdainc","  Incremental EBITDA % (ΔEBITDA / ΔRevenue)", style="pct",
+    formula="IFERROR(({c}%BREBITDA-{p}%BREBITDA)/({c}%REV-{p}%REV),\"\")", cfonly=True,
+    note="Drop-through of incremental revenue to EBITDA; needs a prior year, so FY2021 is n/a.")
 add("data", "br_capex","  Less: capital expenditures (implied)", style="formula",
     formula="{c}%CFCAPEX", cfonly=True,
     note="From the implied cash flow; requires prior-year PP&E, so FY2021 is n/a.")
