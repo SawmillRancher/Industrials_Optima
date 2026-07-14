@@ -39,6 +39,7 @@ MONEY = r'#,##0;(#,##0);\-'
 PCT   = r'0.0%;(0.0%);\-'
 RATIO = r'0.00"x";(0.00"x");\-'
 DAYS  = r'0" days";(0);\-'
+YRS   = r'0.0" yrs";(0.0);\-'
 
 thin = Side(style="thin", color=BLACK)
 dbl  = Side(style="double", color=BLACK)
@@ -128,6 +129,27 @@ add("data", "tax_rate",     "  Effective tax rate", style="pct",
 add("data", "net_income", "Net income for the year", style="keytotal",
     formula="{c}%NIBT-{c}%TAXTOT", bold=True, top=True, cagr=True)
 add("spacer")
+add("subband", label="Net income → EBITDA − capex bridge (bottom-up)")
+add("data", "br_ni",   "  Net income for the year", style="formula",
+    formula="{c}%NI")
+add("data", "br_tax",  "  Add: income taxes", style="formula",
+    formula="{c}%TAXTOT")
+add("data", "br_int",  "  Add: bank charges and interest", style="formula",
+    formula="{c}%GABANK", note="Interest is bundled within bank charges & interest.")
+add("data", "br_ebit", "  = EBIT", style="subtotal",
+    formula="{c}%NI+{c}%TAXTOT+{c}%GABANK", bold=True, top=True)
+add("data", "br_amoff","  Add: amortization — office equipment", style="formula",
+    formula="{c}%GAAMORT")
+add("data", "br_ambld","  Add: amortization — building and shop equipment", style="formula",
+    formula="{c}%CSAMORT")
+add("data", "br_ebitda","  = EBITDA", style="subtotal",
+    formula="{c}%BREBIT+{c}%GAAMORT+{c}%CSAMORT", bold=True, top=True)
+add("data", "br_capex","  Less: capital expenditures (implied)", style="formula",
+    formula="{c}%CFCAPEX", cfonly=True,
+    note="From the implied cash flow; requires prior-year PP&E, so FY2021 is n/a.")
+add("data", "br_final","  = EBITDA − capex", style="keytotal",
+    formula="{c}%BREBITDA+{c}%CFCAPEX", bold=True, top=True, cfonly=True)
+add("spacer")
 add("subband", label="Retained earnings reconciliation")
 add("data", "re_beg", "  Retained earnings, beginning of year", style="re_beg")
 add("data", "re_ni",  "  Net income for the year", style="formula",
@@ -157,6 +179,15 @@ add("data", "cs_mat",     "  Materials, supplies and miscellaneous", style="inpu
 add("data", "cs_sub",     "  Subcontracts", style="input")
 add("data", "cs_direct",  "Total direct costs", style="subtotal",
     formula="SUM({c}%CSD_FIRST:{c}%CSD_LAST)", bold=True, top=True)
+add("subband", label="Direct costs as % of revenue")
+add("data", "csp_wages", "  Direct wages % of revenue", style="pct",
+    formula="IFERROR({c}%CSWAGES/{c}%REV,0)")
+add("data", "csp_mat",   "  Materials, supplies and miscellaneous % of revenue", style="pct",
+    formula="IFERROR({c}%CSMAT/{c}%REV,0)")
+add("data", "csp_sub",   "  Subcontracts % of revenue", style="pct",
+    formula="IFERROR({c}%CSSUB/{c}%REV,0)")
+add("data", "csp_total", "  Total direct costs % of revenue", style="pct",
+    formula="IFERROR({c}%CSDIR/{c}%REV,0)", bold=True)
 add("subband", label="Indirect costs")
 add("data", "cs_benefits","  Employee group benefits", style="input")
 add("data", "cs_wsib",    "  WSIB", style="input")
@@ -240,13 +271,7 @@ add("data", "cf_cfo",   "Net cash from operating activities", style="cf_subtotal
 add("subband", label="Investing activities")
 add("data", "cf_capex", "  Purchase of land, buildings and equipment (implied)", style="cf",
     formula="-(({c}%PPE-{p}%PPE)+{c}%GAAMORT+{c}%CSAMORT)",
-    note="Implied capex = Δ net PP&E + total amortization (office + building/shop).")
-add("data", "cf_dfrg",  "  (Increase) / decrease in due from Related Group of Companies", style="cf",
-    formula="-({c}%DFRG-{p}%DFRG)")
-add("data", "cf_dfd",   "  (Increase) / decrease in due from director", style="cf",
-    formula="-({c}%DFD-{p}%DFD)")
-add("data", "cf_dfkel", "  (Increase) / decrease in due from KEL Tooling", style="cf",
-    formula="-({c}%DFKEL-{p}%DFKEL)")
+    note="Implied capex = Δ net PP&E + total amortization. A positive figure here is a cash inflow (net disposals > additions), as in FY2023.")
 add("data", "cf_cfi",   "Net cash from investing activities", style="cf_subtotal",
     formula="SUM({c}%CFI_FIRST:{c}%CFI_LAST)", bold=True, top=True)
 add("subband", label="Financing activities")
@@ -256,6 +281,12 @@ add("data", "cf_dtd",   "  Increase / (decrease) in due to director", style="cf"
     formula="{c}%DTD-{p}%DTD")
 add("data", "cf_dtkel", "  Increase / (decrease) in due to KEL Tooling", style="cf",
     formula="{c}%DTKEL-{p}%DTKEL")
+add("data", "cf_dfrg",  "  (Increase) / decrease in due from Related Group of Companies", style="cf",
+    formula="-({c}%DFRG-{p}%DFRG)", note="Related-party advances — reclassified to financing.")
+add("data", "cf_dfd",   "  (Increase) / decrease in due from director", style="cf",
+    formula="-({c}%DFD-{p}%DFD)")
+add("data", "cf_dfkel", "  (Increase) / decrease in due from KEL Tooling", style="cf",
+    formula="-({c}%DFKEL-{p}%DFKEL)")
 add("data", "cf_div",   "  Dividends paid", style="cf",
     formula="-{c}%REDIV")
 add("data", "cf_sc",    "  Issuance of share capital", style="cf",
@@ -272,6 +303,44 @@ add("data", "cf_tie",   "Tie-out check (implied ending cash − balance sheet ca
     formula="{c}%CFEND-{c}%CASH")
 add("spacer")
 
+# ---- AMORTIZATION & PP&E SCHEDULE ----
+add("band", label="AMORTIZATION & PP&E SCHEDULE")
+add("subband", label="Amortization (depreciation) by category")
+add("data", "am_off",   "  Amortization — office equipment (G&A)", style="formula",
+    formula="{c}%GAAMORT")
+add("data", "am_bld",   "  Amortization — building and shop equipment (COGS)", style="formula",
+    formula="{c}%CSAMORT")
+add("data", "am_total", "Total amortization (D&A)", style="subtotal",
+    formula="{c}%GAAMORT+{c}%CSAMORT", bold=True, top=True)
+add("subband", label="PP&E rollforward (net book value)")
+add("data", "pp_beg",   "  PP&E, beginning of year", style="formula",
+    formula="{p}%PPE", cfonly=True)
+add("data", "pp_capex", "  Add: capital expenditures (implied)", style="formula",
+    formula="-{c}%CFCAPEX", cfonly=True)
+add("data", "pp_amort", "  Less: total amortization", style="formula",
+    formula="-({c}%GAAMORT+{c}%CSAMORT)", cfonly=True)
+add("data", "pp_end",   "  PP&E, end of year", style="subtotal",
+    formula="{c}%PPBEG+{c}%PPCAPEX+{c}%PPAMORT", bold=True, top=True, cfonly=True)
+add("data", "pp_check", "  Check (rollforward − balance sheet PP&E)", style="check",
+    formula="{c}%PPEND-{c}%PPE", cfonly=True)
+add("subband", label="Implied useful-life analysis")
+add("data", "ul_net",   "  Net PP&E, end of year", style="formula",
+    formula="{c}%PPE")
+add("data", "ul_da",    "  Total amortization (D&A)", style="formula",
+    formula="{c}%AMTOT")
+add("data", "ul_rate",  "  Implied depreciation rate (D&A / beginning net PP&E)", style="pct",
+    formula="IFERROR({c}%AMTOT/{p}%PPE,\"\")", cfonly=True,
+    note="Annual amortization as a % of opening net book value.")
+add("data", "ul_life",  "  Implied remaining useful life (net PP&E / D&A)", style="years",
+    formula="IFERROR({c}%PPE/{c}%AMTOT,\"\")",
+    note="Years of amortization remaining at the current run-rate on the net book value.")
+add("data", "ul_capint","  Capex intensity (implied capex / D&A)", style="ratio",
+    formula="IFERROR(-{c}%CFCAPEX/{c}%AMTOT,\"\")", cfonly=True,
+    note="Reinvestment ratio: >1x grows the asset base, <1x shrinks it.")
+add("data", "ul_caprev","  Capex % of revenue", style="pct",
+    formula="IFERROR(-{c}%CFCAPEX/{c}%REV,\"\")", cfonly=True)
+add("spacer")
+
 # ---- FREE CASH FLOW & RATIO ANALYSIS ----
 add("band", label="RATIO ANALYSIS & FREE CASH FLOW")
 add("subband", label="Cash generation")
@@ -281,29 +350,80 @@ add("data", "fcf_conv", "  FCF conversion (FCF / net income)", style="ratio",
     formula="IFERROR(({c}%CFO+{c}%CFCAPEX)/{c}%NI,\"\")", cfonly=True)
 add("data", "capex_rev","  Capex % of revenue", style="pct",
     formula="IFERROR(-{c}%CFCAPEX/{c}%REV,\"\")", cfonly=True)
-add("subband", label="Profitability & returns (on ending balances)")
-add("data", "r_gm",   "  Gross margin %", style="pct",
-    formula="IFERROR({c}%GROSS/{c}%REV,0)")
-add("data", "r_ebit", "  EBIT (NIBT + bank charges & interest)", style="formula",
-    formula="{c}%NIBT+{c}%GABANK", note="Interest is bundled in bank charges & interest.")
-add("data", "r_opm",  "  Operating margin (EBIT %)", style="pct",
-    formula="IFERROR(({c}%NIBT+{c}%GABANK)/{c}%REV,0)")
-add("data", "r_roa",  "  Return on assets (NI / total assets)", style="pct",
-    formula="IFERROR({c}%NI/{c}%TA,0)")
-add("data", "r_roe",  "  Return on equity (NI / total equity)", style="pct",
-    formula="IFERROR({c}%NI/{c}%TE,0)")
-add("subband", label="Liquidity & leverage")
-add("data", "r_cr",   "  Current ratio (CA / CL)", style="ratio",
-    formula="IFERROR({c}%CA/{c}%CL,\"\")")
-add("data", "r_qr",   "  Quick ratio ((cash + A/R) / CL)", style="ratio",
-    formula="IFERROR(({c}%CASH+{c}%AR)/{c}%CL,\"\")")
-add("data", "r_netdebt","  Net debt (bank loan − cash)", style="formula",
+# --- Returns (mirrors the template's ROIC decomposition) ---
+add("subband", label="Returns")
+add("data", "ret_ebit",   "Operating earnings (EBIT)", style="formula",
+    formula="{c}%NIBT+{c}%GABANK")
+add("data", "ret_taxrate","Normalised tax rate", style="pct",
+    formula="{c}%TAXRATE")
+add("data", "ret_nopat",  "NOPAT = EBIT × (1 − tax rate)", style="formula",
+    formula="{c}%RETEBIT*(1-{c}%RETTAX)")
+add("data", "ret_ic",     "Invested capital (Equity + Net debt)", style="formula",
+    formula="{c}%RETEQ+{c}%RETND")
+add("data", "ret_eq",     "  Total equity", style="formula",
+    formula="{c}%TE")
+add("data", "ret_nd",     "  Net debt (bank loan − cash)", style="formula",
     formula="{c}%LOAN-{c}%CASH")
-add("data", "r_de",   "  Debt / equity (bank loan / equity)", style="ratio",
+add("data", "ret_roic",   "ROIC = NOPAT / Invested capital", style="pct",
+    formula="IFERROR({c}%RETNOPAT/{c}%RETIC,0)", bold=True, top=True)
+add("data", "ret_opm",    "  Operating margin", style="pct",
+    formula="IFERROR({c}%RETEBIT/{c}%REV,0)")
+add("data", "ret_turn",   "  Capital turnover (Sales / IC)", style="ratio",
+    formula="IFERROR({c}%REV/{c}%RETIC,0)")
+add("data", "ret_burden", "  Tax burden (1 − tax rate)", style="pct",
+    formula="1-{c}%RETTAX")
+add("data", "ret_check",  "  Check: Margin × Turnover × Tax burden", style="pct",
+    formula="{c}%RETOPM*{c}%RETTURN*{c}%RETBURDEN")
+# --- RONTA decomposition ---
+add("subband", label="RONTA decomposition")
+add("data", "ron_ebit",  "EBIT before special items", style="formula",
+    formula="{c}%RETEBIT")
+add("data", "ron_nopat", "NOPAT = EBIT × (1 − tax rate)", style="formula",
+    formula="{c}%RONEBIT*(1-{c}%RETTAX)")
+add("data", "ron_lbl",   "Net tangible assets (NTA):", style="label")
+add("data", "ron_ta",    "  Total assets", style="formula",
+    formula="{c}%TA")
+add("data", "ron_intang","  − Intangible assets (none)", style="formula",
+    formula="0")
+add("data", "ron_nibcl", "  − Non-interest-bearing current liabilities", style="formula",
+    formula="-({c}%CL-{c}%LOAN)", note="Current liabilities excluding the interest-bearing bank loan.")
+add("data", "ron_cash",  "  − Cash", style="formula",
+    formula="-{c}%CASH")
+add("data", "ron_nta",   "  = Net tangible assets", style="subtotal",
+    formula="{c}%RONTATA+{c}%RONINTANG+{c}%RONNIBCL+{c}%RONCASH", bold=True, top=True)
+add("data", "ron_ronta", "RONTA = NOPAT / NTA", style="pct",
+    formula="IFERROR({c}%RONNOPAT/{c}%RONNTA,0)", bold=True)
+# --- Return on Equity ---
+add("subband", label="Return on Equity (ROE)")
+add("data", "roe_ni", "Net income (profit for the year)", style="formula",
+    formula="{c}%NI")
+add("data", "roe_eq", "Total equity", style="formula",
+    formula="{c}%TE")
+add("data", "roe",    "ROE = Net income / Equity", style="pct",
+    formula="IFERROR({c}%ROENI/{c}%ROEEQ,0)", bold=True)
+add("data", "roa",    "Return on assets (NI / total assets)", style="pct",
+    formula="IFERROR({c}%NI/{c}%TA,0)")
+# --- Leverage ---
+add("subband", label="Leverage")
+add("data", "lev_nd",     "Net debt (bank loan − cash)", style="formula",
+    formula="{c}%LOAN-{c}%CASH")
+add("data", "lev_ebitda", "EBITDA (Operating earnings + D&A)", style="formula",
+    formula="{c}%RETEBIT+{c}%GAAMORT+{c}%CSAMORT")
+add("data", "lev_nde",    "Net debt / EBITDA  (x)", style="ratio",
+    formula="IFERROR({c}%LEVND/{c}%LEVEBITDA,\"\")")
+add("data", "lev_cov",    "Interest coverage (EBIT / interest expense)", style="ratio",
+    formula="IFERROR({c}%RETEBIT/{c}%GABANK,\"\")")
+add("data", "lev_de",     "Debt / equity (bank loan / equity)", style="ratio",
     formula="IFERROR({c}%LOAN/{c}%TE,0)")
-add("data", "r_dso",  "  DSO (A/R / revenue × 365)", style="days",
+# --- Liquidity & working capital ---
+add("subband", label="Liquidity & working capital")
+add("data", "r_cr",   "Current ratio (CA / CL)", style="ratio",
+    formula="IFERROR({c}%CA/{c}%CL,\"\")")
+add("data", "r_qr",   "Quick ratio ((cash + A/R) / CL)", style="ratio",
+    formula="IFERROR(({c}%CASH+{c}%AR)/{c}%CL,\"\")")
+add("data", "r_dso",  "DSO (A/R / revenue × 365)", style="days",
     formula="IFERROR({c}%AR/{c}%REV*365,\"\")")
-add("data", "r_dpo",  "  DPO (A/P / cost of sales × 365)", style="days",
+add("data", "r_dpo",  "DPO (A/P / cost of sales × 365)", style="days",
     formula="IFERROR({c}%AP/{c}%COGS*365,\"\")")
 
 # ----------------------------------------------------------------------------
@@ -323,7 +443,7 @@ R["CSI_FIRST"], R["CSI_LAST"] = R["cs_benefits"], R["cs_amort"]
 R["CA_FIRST"], R["CA_LAST"] = R["bs_cash"], R["bs_dfkel"]
 R["CL_FIRST"], R["CL_LAST"] = R["bs_loan"], R["bs_dtd"]
 R["CFO_FIRST"], R["CFO_LAST"] = R["cf_ni"], R["cf_taxpay"]
-R["CFI_FIRST"], R["CFI_LAST"] = R["cf_capex"], R["cf_dfkel"]
+R["CFI_FIRST"], R["CFI_LAST"] = R["cf_capex"], R["cf_capex"]
 R["CFF_FIRST"], R["CFF_LAST"] = R["cf_loan"], R["cf_sc"]
 
 # token -> row key mapping used inside formula templates ({c}%TOKEN)
@@ -342,6 +462,22 @@ TOK = {
     "DTD": "bs_dtd", "DTKEL": "bs_dtkel", "LOAN": "bs_loan", "CASH": "bs_cash",
     "CFO": "cf_cfo", "CFI": "cf_cfi", "CFF": "cf_cff", "CFNET": "cf_netchg",
     "CFBEG": "cf_beg", "CFEND": "cf_end", "CFCAPEX": "cf_capex",
+    # income-statement bridge
+    "BREBIT": "br_ebit", "BREBITDA": "br_ebitda",
+    # cost-of-sales % of revenue
+    "CSWAGES": "cs_wages", "CSMAT": "cs_mat", "CSSUB": "cs_sub",
+    # amortization & PP&E schedule
+    "AMTOT": "am_total", "PPBEG": "pp_beg", "PPCAPEX": "pp_capex",
+    "PPAMORT": "pp_amort", "PPEND": "pp_end",
+    # returns / RONTA / ROE / leverage
+    "TAXRATE": "tax_rate",
+    "RETEBIT": "ret_ebit", "RETTAX": "ret_taxrate", "RETNOPAT": "ret_nopat",
+    "RETIC": "ret_ic", "RETEQ": "ret_eq", "RETND": "ret_nd",
+    "RETOPM": "ret_opm", "RETTURN": "ret_turn", "RETBURDEN": "ret_burden",
+    "RONEBIT": "ron_ebit", "RONNOPAT": "ron_nopat", "RONTATA": "ron_ta",
+    "RONINTANG": "ron_intang", "RONNIBCL": "ron_nibcl", "RONCASH": "ron_cash",
+    "RONNTA": "ron_nta", "ROENI": "roe_ni", "ROEEQ": "roe_eq",
+    "LEVND": "lev_nd", "LEVEBITDA": "lev_ebitda",
     # SUM block anchors
     "GA_FIRST": "GA_FIRST", "GA_LAST": "GA_LAST",
     "CSD_FIRST": "CSD_FIRST", "CSD_LAST": "CSD_LAST",
@@ -503,15 +639,22 @@ for e in layout:
     dbl = opts.get("dbl", False)
     border = TOP_DBL if dbl else (TOP if top else None)
 
+    # plain label-only row (e.g. "Net tangible assets (NTA):")
+    if style == "label":
+        set_cell(f"B{row}", e["label"], font_color=BLACK, bold=True, sz=12)
+        continue
+
     is_pct = style in ("pct",)
     is_ratio = style == "ratio"
     is_days = style == "days"
-    numfmt = PCT if is_pct else (RATIO if is_ratio else (DAYS if is_days else MONEY))
+    is_years = style == "years"
+    numfmt = (PCT if is_pct else RATIO if is_ratio else DAYS if is_days
+              else YRS if is_years else MONEY)
 
     # label styling
     lbl = e["label"]
     lbl_indented = lbl.startswith("  ")
-    lbl_color = GRAY_LBL if (lbl_indented and style in ("pct", "ratio", "days")) else BLACK
+    lbl_color = GRAY_LBL if (lbl_indented and style in ("pct", "ratio", "days", "years")) else BLACK
     highlight = SAGE if style == "keytotal" else None
     if style == "keytotal":
         # label cell shares the sage fill & money format like template EBIT/Total rows
