@@ -719,7 +719,293 @@ for e in layout:
 # freeze panes below header, right of labels
 ws.freeze_panes = "C7"
 
+# ============================================================================
+# LBO / IRR TAB
+# ============================================================================
+# A fully-live leveraged-buyout model. Cash, debt (leverage), interest, fees,
+# multiples and exit are user toggles; the operating case (revenue growth,
+# EBITDA margin, capex) is driven by a Base/Bull/Bear scenario selector whose
+# defaults are anchored to the FY2021-FY2025 history on the Model tab. Owner
+# earnings are projected 5 years, run through a debt paydown schedule, and
+# equity returns (IRR & MOIC) are computed at exit, with entry×exit multiple
+# sensitivity grids.
+# ----------------------------------------------------------------------------
+lb = wb.create_sheet("LBO")
+lb.sheet_view.showGridLines = False
+TOGGLE = "FFFFF2CC"   # soft gold fill flags a user toggle input
+
+# Model row anchors (resolved from the two-pass build)
+M_REV, M_EBITDA, M_DA = R["revenue"], R["br_ebitda"], R["am_total"]
+M_CAPEX, M_TAXRATE, M_CASH, M_DEBT = R["cf_capex"], R["tax_rate"], R["bs_cash"], R["bs_loan"]
+
+# column widths
+lb.column_dimensions["A"].width = 1.4
+lb.column_dimensions["B"].width = 46
+for col in ["C", "D", "E", "F", "G", "H", "I", "J", "K", "L"]:
+    lb.column_dimensions[col].width = 12.5
+lb.column_dimensions["D"].width = 12.5
+
+def LS(coord, value=None, *, num=None, bold=False, color=BLACK, fill=None,
+       align="right", sz=11, italic=False, border=None, wrap=False, toggle=False):
+    c = lb[coord]
+    c.value = value
+    c.font = Font(name="Calibri", size=sz, bold=bold, italic=italic, color=color)
+    if toggle:
+        fill = TOGGLE
+    if fill:
+        c.fill = PatternFill("solid", fgColor=fill)
+    if num:
+        c.number_format = num
+    c.alignment = Alignment(horizontal=align, vertical="center", wrap_text=wrap)
+    if border:
+        c.border = border
+
+def band(rownum, label, span="L", sz=12, fillc=SLATE):
+    from openpyxl.utils import column_index_from_string as _ci
+    for ci in range(1, _ci(span) + 1):
+        cc = lb.cell(rownum, ci)
+        cc.fill = PatternFill("solid", fgColor=fillc)
+        cc.font = Font(name="Calibri", size=sz, bold=True, color=WHITE)
+    lb.cell(rownum, 2).value = label
+    lb.cell(rownum, 2).alignment = Alignment(horizontal="left", vertical="center")
+
+def subband(rownum, label, span="L"):
+    band(rownum, label, span=span, sz=11, fillc=GREEN)
+
+# ---- header ----
+LS("B2", "R. & Y. Tool and Die Co. Limited — LBO / IRR Model", color=NAVY, bold=True, sz=16, align="left")
+LS("B3", "Owner-earnings LBO built off the FY2021–FY2025 financials (Model tab). Canadian dollars, whole $. Gold cells are toggles.",
+   color=GRAY, sz=10, align="left")
+LS("B4", "Interest accrues on beginning-of-year debt (no circularity). Excess free cash sweeps to debt paydown; no interim distributions, so equity is entry-in / exit-out. Base-case operating assumptions default to FY21–25 history.",
+   color=GRAY, sz=10, align="left")
+LS("B5", "SCENARIO  (Base / Bull / Bear):", color=BLACK, bold=True, align="left")
+LS("C5", "Base", color=BLUE, bold=True, align="center", toggle=True)
+
+# ---- scenario table (top-right) ----
+LS("H5", "SCENARIO INPUTS", color=BLACK, bold=True, align="center")
+LS("J5", "Bear", color=WHITE, bold=True, align="center", fill=GREEN)
+LS("K5", "Base", color=WHITE, bold=True, align="center", fill=GREEN)
+LS("L5", "Bull", color=WHITE, bold=True, align="center", fill=GREEN)
+scen_rows = [
+    ("H6", "Revenue growth (%/yr)", "J6", [0.04, 0.10, 0.14], PCT),
+    ("H7", "EBITDA margin (%)",     "J7", [0.12, 0.16, 0.19], PCT),
+    ("H8", "Capex (% of revenue)",  "J8", [0.06, 0.04, 0.03], PCT),
+]
+for lblcell, lbl, firstval, vals, fmt in scen_rows:
+    LS(lblcell, lbl, color=BLACK, align="left")
+    for j, col in enumerate(["J", "K", "L"]):
+        rr = lblcell[1:]
+        LS(f"{col}{rr}", vals[j], color=BLUE, num=fmt, align="center", toggle=True)
+LS("H9", "Historical FY21–25 anchor:", color=GRAY, sz=9, align="left", italic=True)
+LS("H10", "rev CAGR ~10% · avg EBITDA margin ~17% · avg capex ~3–4%", color=GRAY, sz=9, align="left", italic=True)
+
+MATCH = 'MATCH($C$5,$J$5:$L$5,0)'
+
+# ============================ ASSUMPTIONS & TOGGLES ==========================
+band(7, "ENTRY, FINANCING & OPERATING ASSUMPTIONS")
+def arow(rn, label, val, num=MONEY, toggle=False, link=False, note=None, color=None, bold=False):
+    LS(f"B{rn}", label, color=BLACK, align="left", bold=bold)
+    if isinstance(val, str) and val.startswith("="):
+        LS(f"C{rn}", val, color=(color or BLACK), num=num, align="right", toggle=toggle, bold=bold)
+    else:
+        LS(f"C{rn}", val, color=(color or (BLUE if toggle else BLACK)), num=num, align="right", toggle=toggle, bold=bold)
+    if note:
+        LS(f"D{rn}", note, color=GRAY, sz=9, align="left", wrap=True)
+
+subband(8, "Entry (base year = FY2025)")
+arow(9,  "Entry LTM EBITDA (FY2025)",        f"='Model'!G{M_EBITDA}", link=True, note="Linked from Model — EBITDA bridge.")
+arow(10, "Entry LTM revenue (FY2025)",       f"='Model'!G{M_REV}",    link=True)
+arow(11, "Entry EV / EBITDA multiple  (x)",  6.0, num=RATIO, toggle=True, note="Purchase multiple.")
+arow(12, "Enterprise value at entry",        "=C9*C11")
+subband(13, "Financing (toggles)")
+arow(14, "Entry leverage — Debt / EBITDA (x)", 2.5, num=RATIO, toggle=True, note="DEBT toggle — turns of EBITDA financed with debt.")
+arow(15, "New debt raised at entry",           "=C14*C9", note="= leverage × entry EBITDA.")
+arow(16, "Interest rate on debt  (%)",         0.10, num=PCT, toggle=True, note="INTEREST toggle — accrues on opening debt.")
+arow(17, "Mandatory amortization (% opening debt/yr)", 0.05, num=PCT, toggle=True)
+arow(18, "Cash sweep (% of FCF after mandatory)",     0.75, num=PCT, toggle=True)
+arow(19, "Minimum / opening cash on balance sheet",    50000, toggle=True, note="CASH toggle — cash funded onto the B/S at close and held as a floor.")
+arow(20, "Transaction & financing fees (% of EV)",     0.02, num=PCT, toggle=True)
+subband(21, "Operating (scenario-driven; base = FY21–25 history)")
+arow(22, "Revenue growth  (%/yr)",   f"=INDEX($J6:$L6,{MATCH})", num=PCT, note="Driven by the scenario selector (C5).")
+arow(23, "EBITDA margin  (%)",       f"=INDEX($J7:$L7,{MATCH})", num=PCT)
+arow(24, "Capex  (% of revenue)",    f"=INDEX($J8:$L8,{MATCH})", num=PCT)
+arow(25, "D&A  (% of revenue)",      0.04, num=PCT, toggle=True, note="Roughly the FY25 run-rate; drives the tax shield.")
+arow(26, "Cash tax rate  (%)",       0.15, num=PCT, toggle=True, note="≈ FY25 effective rate / CDN small-business rate.")
+arow(27, "Δ Net working capital (% of Δrevenue)", 0.05, num=PCT, toggle=True)
+arow(28, "Exit year  (1–5)",         5, num='0', toggle=True)
+arow(29, "Exit EV / EBITDA multiple  (x)", 6.0, num=RATIO, toggle=True, note="Default = entry multiple (no multiple expansion).")
+
+# ============================ SOURCES & USES ================================
+band(31, "SOURCES & USES OF FUNDS")
+subband(32, "Uses")
+arow(33, "Purchase of enterprise value", "=C12")
+arow(34, "Cash funded to balance sheet", "=C19")
+arow(35, "Transaction & financing fees", "=C20*C12")
+arow(36, "Total uses", "=SUM(C33:C35)", bold=True)
+lb["C36"].border = TOP
+subband(37, "Sources")
+arow(38, "New debt raised", "=C15")
+arow(39, "Sponsor equity (plug)", "=C36-C38", bold=True)
+arow(40, "Total sources", "=C38+C39", bold=True)
+lb["C40"].border = TOP
+arow(41, "Check (sources − uses)", "=C40-C36", note="Must be 0.")
+arow(42, "Entry net debt (debt − opening cash)", "=C38-C34")
+
+# ============================ PROJECTION & DEBT SCHEDULE =====================
+band(45, "OWNER-EARNINGS PROJECTION, DEBT SCHEDULE & FREE CASH FLOW")
+HIST = ["C", "D", "E", "F", "G"]           # FY2021..FY2025
+FCST = ["H", "I", "J", "K", "L"]           # FY2026..FY2030
+PREV = {"D": "C", "E": "D", "F": "E", "G": "F",
+        "H": "G", "I": "H", "J": "I", "K": "J", "L": "K"}
+FYLAB = {"C": "FY2021", "D": "FY2022", "E": "FY2023", "F": "FY2024",
+         "G": "FY2025", "H": "FY2026E", "I": "FY2027E", "J": "FY2028E",
+         "K": "FY2029E", "L": "FY2030E"}
+# header
+LS("B46", "($)", color=WHITE, bold=True, sz=11, fill=SLATE, align="left")
+lb.cell(46, 1).fill = PatternFill("solid", fgColor=SLATE)
+for col in HIST + FCST:
+    lab = FYLAB[col] + ("  (entry)" if col == "G" else "")
+    LS(f"{col}46", lab, color=WHITE, bold=True, sz=11, fill=SLATE, align="center")
+LS("B47", "Hold year (0 = entry)", color=GRAY, align="left", italic=True, sz=10)
+for col in ["G", "H", "I", "J", "K", "L"]:
+    LS(f"{col}47", {"G": 0, "H": 1, "I": 2, "J": 3, "K": 4, "L": 5}[col],
+       color=GRAY, align="center", italic=True, sz=10, num='0')
+
+def prow(rn, label, hist_fml=None, fcst_fml=None, cols=None, num=MONEY,
+         bold=False, top=False, color=BLACK, indent=False, note=None):
+    LS(f"B{rn}", ("   " if indent else "") + label, color=BLACK, align="left", bold=bold)
+    b = TOP if top else None
+    use_cols = cols if cols else (HIST + FCST)
+    for col in use_cols:
+        if col in HIST and hist_fml is not None:
+            f = hist_fml.replace("{c}", col).replace("{M}", col).replace("{p}", PREV.get(col, col))
+        elif col in FCST and fcst_fml is not None:
+            f = fcst_fml.replace("{c}", col).replace("{p}", PREV[col])
+        elif hist_fml == "SAME" or fcst_fml == "SAME":
+            f = None
+        else:
+            f = None
+        if f is None:
+            # allow a single-formula row that spans all cols
+            if hist_fml == fcst_fml and hist_fml is not None:
+                f = hist_fml.replace("{c}", col).replace("{p}", PREV.get(col, col))
+            else:
+                continue
+        LS(f"{col}{rn}", f, color=color, num=num, align="right", bold=bold, border=b)
+    if note:
+        # place note in col N
+        LS(f"N{rn}", note, color=GRAY, sz=9, align="left")
+
+# Revenue (all cols): hist = link Model; fcst = grow
+prow(48, "Revenue", hist_fml=f"='Model'!{{c}}{M_REV}", fcst_fml="={p}48*(1+$C$22)", bold=True)
+prow(49, "Revenue growth %", fcst_fml="=IFERROR({c}48/{p}48-1,\"\")",
+     hist_fml="=IFERROR({c}48/{p}48-1,\"\")", cols=["D","E","F","G","H","I","J","K","L"],
+     num=PCT, color=GRAY_LBL, indent=True)
+# EBITDA: hist link; fcst = revenue*margin
+prow(50, "EBITDA", hist_fml=f"='Model'!{{c}}{M_EBITDA}", fcst_fml="={c}48*$C$23", bold=True, top=True)
+prow(51, "EBITDA margin %", hist_fml="=IFERROR({c}50/{c}48,\"\")", fcst_fml="=IFERROR({c}50/{c}48,\"\")",
+     num=PCT, color=GRAY_LBL, indent=True)
+# D&A: hist link; fcst = revenue*DA%
+prow(52, "Depreciation & amortization", hist_fml=f"='Model'!{{c}}{M_DA}", fcst_fml="={c}48*$C$25")
+prow(53, "EBIT", hist_fml="={c}50-{c}52", fcst_fml="={c}50-{c}52", bold=True, top=True)
+# Interest (forecast only) = rate * beginning debt (row 64)
+prow(54, "Interest expense (on opening debt)", fcst_fml="=$C$16*{c}64", cols=FCST, color=BLACK)
+prow(55, "Pre-tax profit (EBT)", fcst_fml="={c}53-{c}54", cols=FCST, bold=True, top=True)
+prow(56, "Cash taxes", fcst_fml="=-MAX({c}55*$C$26,0)", cols=FCST)
+prow(57, "Net profit after tax", fcst_fml="={c}55+{c}56", cols=FCST, bold=True, top=True)
+prow(58, "(+) D&A", fcst_fml="={c}52", cols=FCST, indent=True)
+prow(59, "(−) Capex", fcst_fml="=-{c}48*$C$24", cols=FCST, indent=True)
+prow(60, "(−) Δ Net working capital", fcst_fml="=-({c}48-{p}48)*$C$27", cols=FCST, indent=True)
+prow(61, "Levered free cash flow (owner earnings)", fcst_fml="={c}57+{c}58+{c}59+{c}60",
+     cols=FCST, bold=True, top=True)
+
+subband(63, "Debt schedule")
+# Ending debt at entry (year 0) = new debt
+LS("G67", "=$C$15", color=BLACK, num=MONEY, align="right")
+prow(64, "Beginning debt", fcst_fml="={p}67", cols=FCST)
+prow(65, "(−) Mandatory amortization", fcst_fml="=-MIN({c}64,$C$17*$C$15)", cols=FCST, indent=True)
+prow(66, "(−) Cash sweep", fcst_fml="=-MIN(MAX({c}61+{c}65,0)*$C$18,{c}64+{c}65)", cols=FCST, indent=True)
+prow(67, "Ending debt", fcst_fml="={c}64+{c}65+{c}66", cols=FCST, bold=True, top=True)
+lb["B67"].value = "Ending debt"
+LS("B67", "Ending debt", color=BLACK, align="left", bold=True)
+
+subband(69, "Cash & leverage")
+LS("G72", "=$C$19", color=BLACK, num=MONEY, align="right")   # ending cash year0 = opening cash
+prow(70, "Beginning cash", fcst_fml="={p}72", cols=FCST)
+prow(71, "(+) FCF after debt paydown", fcst_fml="={c}61+{c}65+{c}66", cols=FCST, indent=True)
+prow(72, "Ending cash", fcst_fml="={c}70+{c}71", cols=FCST, bold=True, top=True)
+LS("B72", "Ending cash", color=BLACK, align="left", bold=True)
+prow(73, "Net debt (debt − cash)", hist_fml=None,
+     fcst_fml="={c}67-{c}72", cols=["G"] + FCST)
+LS("G73", "=G67-G72", color=BLACK, num=MONEY, align="right")
+prow(74, "Net debt / EBITDA  (x)", fcst_fml="=IFERROR({c}73/{c}50,\"\")", cols=["G"] + FCST,
+     num=RATIO, color=GRAY_LBL, indent=True)
+LS("G74", "=IFERROR(G73/G50,\"\")", color=GRAY_LBL, num=RATIO, align="right")
+
+# ============================ RETURNS =======================================
+band(76, "RETURNS — EXIT & IRR")
+arow(77, "Hold period (years)", "=C28", num='0')
+arow(78, "Exit-year EBITDA", "=INDEX($G50:$L50,1,$C$28+1)")
+arow(79, "Exit EV / EBITDA multiple  (x)", "=C29", num=RATIO)
+arow(80, "Exit enterprise value", "=C78*C79")
+arow(81, "(−) Net debt at exit", "=INDEX($G73:$L73,1,$C$28+1)")
+arow(82, "Exit equity value", "=C80-C81", bold=True)
+lb["C82"].border = TOP
+arow(83, "Entry sponsor equity", "=C39")
+arow(84, "MOIC  (x)", "=IFERROR(C82/C83,\"\")", num=RATIO, bold=True, color=BLACK)
+lb["C84"].fill = PatternFill("solid", fgColor=SAGE)
+arow(85, "IRR  (equity, closed form)", "=IFERROR((C82/C83)^(1/C77)-1,\"\")", num=PCT, bold=True)
+lb["C85"].fill = PatternFill("solid", fgColor=SAGE)
+
+subband(87, "Equity cash flows (Year 0 → exit)   —   live =IRR()")
+LS("B88", "Sponsor equity cash flow", color=BLACK, align="left")
+LS("G88", "=-C39", color=BLACK, num=MONEY, align="right")
+for col in FCST:
+    yr = {"H": 1, "I": 2, "J": 3, "K": 4, "L": 5}[col]
+    LS(f"{col}88", f"=IF($C$28={yr},$C$82,0)", color=BLACK, num=MONEY, align="right")
+LS("B89", "IRR  =IRR(equity cash flows)", color=BLACK, align="left", bold=True)
+LS("C89", "=IFERROR(IRR(G88:L88),\"\")", color=BLACK, num=PCT, align="right", bold=True)
+lb["C89"].fill = PatternFill("solid", fgColor=SAGE)
+LS("D89", "Matches the closed-form IRR above; add interim dividends to G88:L88 to extend.",
+   color=GRAY, sz=9, align="left")
+
+# ============================ SENSITIVITY ===================================
+band(92, "IRR SENSITIVITY — ENTRY (down) × EXIT (across) EV/EBITDA MULTIPLE")
+LS("B93", "Holds the current operating scenario, leverage, interest and cash fixed; only the multiples vary. Live case is highlighted by your C11 / C29 inputs.",
+   color=GRAY, sz=9, align="left")
+exit_mults = [5.0, 5.5, 6.0, 6.5, 7.0]
+entry_mults = [5.0, 5.5, 6.0, 6.5, 7.0]
+LS("C94", "Entry ↓ / Exit →", color=BLACK, bold=True, align="center", sz=9)
+scol = ["D", "E", "F", "G", "H", "I"]
+for j, em in enumerate(exit_mults):
+    LS(f"{scol[j]}94", em, color=BLACK, bold=True, num=RATIO, align="center", fill=GREEN)
+    lb[f"{scol[j]}94"].font = Font(name="Calibri", size=11, bold=True, color=WHITE)
+for i, en in enumerate(entry_mults):
+    rr = 95 + i
+    LS(f"C{rr}", en, color=WHITE, bold=True, num=RATIO, align="center", fill=GREEN)
+    for j, em in enumerate(exit_mults):
+        cc = scol[j]
+        # ExitEquity = exitMult*ExitEBITDA - ExitNetDebt ; EntryEquity = entryMult*EBITDA0*(1+fees)+minCash-debt
+        f = (f"=IFERROR((({cc}$94*$C$78-$C$81)/"
+             f"($C{rr}*$C$9*(1+$C$20)+$C$19-$C$15))^(1/$C$28)-1,\"\")")
+        LS(f"{cc}{rr}", f, color=BLACK, num=PCT, align="center")
+
+band(102, "MOIC SENSITIVITY — ENTRY (down) × EXIT (across) EV/EBITDA MULTIPLE")
+LS("C103", "Entry ↓ / Exit →", color=BLACK, bold=True, align="center", sz=9)
+for j, em in enumerate(exit_mults):
+    LS(f"{scol[j]}103", em, color=WHITE, bold=True, num=RATIO, align="center", fill=GREEN)
+for i, en in enumerate(entry_mults):
+    rr = 104 + i
+    LS(f"C{rr}", en, color=WHITE, bold=True, num=RATIO, align="center", fill=GREEN)
+    for j, em in enumerate(exit_mults):
+        cc = scol[j]
+        f = (f"=IFERROR(({cc}$103*$C$78-$C$81)/"
+             f"($C{rr}*$C$9*(1+$C$20)+$C$19-$C$15),\"\")")
+        LS(f"{cc}{rr}", f, color=BLACK, num=RATIO, align="center")
+
+lb.freeze_panes = "C7"
+
 out = "/home/user/Industrials_Optima/models/RY_Tool_3_Statement_Model.xlsx"
 wb.save(out)
 print("saved", out)
-print("rows used:", r)
+print("Model rows used:", r)
