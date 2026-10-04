@@ -87,9 +87,10 @@ SCENARIOS = {
     "mg": {
         "di": {"base": (0.245, 0.250, 0.255, 0.260), "d": (0.010, -0.020),
                "note": "FY25 non-GAAP margin 22.6%; 1H/26 ~24% (mix, tariff refunds)."},
-        "inst": {"base": (0.290, 0.293, 0.296, 0.300), "d": (0.010, -0.020), "note": "FY25 28.4%."},
+        "inst": {"base": (0.270, 0.275, 0.280, 0.285), "d": (0.010, -0.020),
+                 "note": "FY25 28.4%; 1H/26 26.3% (unfavourable mix) — recovery assumed gradual."},
         "ade": {"base": (0.280, 0.283, 0.286, 0.290), "d": (0.010, -0.020), "note": "FY25 27.3% (incl. Excelitas A&D)."},
-        "es": {"base": (0.120, 0.120, 0.125, 0.125), "d": (0.010, -0.020), "note": "FY25 10.7%; program-mix driven."},
+        "es": {"base": (0.115, 0.120, 0.120, 0.125), "d": (0.010, -0.020), "note": "FY25 10.7%; program-mix driven."},
     },
     "ma": {"base": (750.0, 1000.0, 1000.0, 1000.0), "d": (750.0, -500.0),
            "note": "Acquisition spend ($m). Teledyne 2017–25 ex FLIR averaged ~$0.4bn p.a.; balance-sheet capacity "

@@ -202,7 +202,7 @@ def write_dcf(wb, cols, rowmap):
     hdr("B2", "DCF VALUATION — TELEDYNE TECHNOLOGIES (TDY)", DARK, 14)
     hdr("B4", "1. WACC BUILD")
     inputs = [(5, "Risk-free rate (US 10Y govt)", 0.0425, "0.00%", "Assumption (~US 10Y Treasury yield); update to market"),
-              (6, "Equity risk premium", 0.055, "0.00%", "Damodaran-style US ERP estimate"),
+              (6, "Equity risk premium", 0.050, "0.00%", "US implied ERP ~4.5–5.5% (Damodaran)"),
               (7, "Levered beta", 1.00, "0.00", "Diversified instrumentation / A&D electronics peers (AME, KEYS, LHX) ~0.9–1.1; "
                                                "~25% US Government sales dampen cyclicality"),
               (8, "Cost of equity", "=C5+C7*C6", "0.00%", None),
@@ -255,6 +255,8 @@ def write_dcf(wb, cols, rowmap):
     ws["B24"] = "− Δ Working capital (CF statement)"
     ws["B25"] = "Unlevered FCF"
     ws["B26"] = "Terminal Value (Gordon Growth)"
+    ws["B27"] = "   memo: PP&E capex only (fade years carry no new acquisitions)"
+    ws["B27"].font = font(10, color=GREYF)
     ws["B29"] = "Fade-period growth (2031E–35E)"
     ws["B30"] = "Terminal growth rate"
     for i, (L, y) in enumerate(zip(colL, yrs)):
@@ -262,14 +264,16 @@ def write_dcf(wb, cols, rowmap):
         ws[f"{L}20"].number_format = "0.0%"
         ws[f"{L}21"] = f"=({L}18+{L}19)*{L}20"
         if y <= 2030:
-            ws[f"{L}23"] = f"={M('cf_capex', y)}" + (f"+{M('cf_acq', y)}" if y >= 2027 else "")
+            ws[f"{L}27"] = f"={M('cf_capex', y)}"
+            ws[f"{L}23"] = f"={L}27" + (f"+{M('cf_acq', y)}" if y >= 2027 else "")
             ws[f"{L}24"] = f"={M('cf_wc', y)}"
-            ws[f"{L}23"].font = ws[f"{L}24"].font = font(12, color=GREEN)
+            ws[f"{L}23"].font = ws[f"{L}24"].font = ws[f"{L}27"].font = font(12, color=GREEN)
         else:
-            ws[f"{L}23"] = f"={colL[i - 1]}23*(1+{L}$29)"
+            ws[f"{L}27"] = f"={colL[i - 1]}27*(1+{L}$29)"
+            ws[f"{L}23"] = f"={L}27"
             ws[f"{L}24"] = f"={colL[i - 1]}24*(1+{L}$29)"
         ws[f"{L}25"] = f"={L}21+{L}22+{L}23+{L}24"
-        for r in (21, 23, 24, 25):
+        for r in (21, 23, 24, 25, 27):
             ws[f"{L}{r}"].number_format = FMT_NUM
         ws[f"{L}25"].font, ws[f"{L}25"].fill = font(12, True), fill(LIGHT)
     ws["B25"].font, ws["B25"].fill = font(12, True), fill(LIGHT)
@@ -297,7 +301,8 @@ def write_dcf(wb, cols, rowmap):
     ws["N32"].number_format, ws["N33"].number_format, ws["N34"].number_format = "0.00", "0.000", FMT_NUM
     ws["D35"] = ("Teledyne's non-GAAP operating income already expenses stock-based compensation (only acquired-"
                  "intangible amortization and acquisition items are excluded). Acquisition spend from the M&A lever is "
-                 "deducted so that acquired sales / profit in the Model are paid for. Operating-lease costs sit inside "
+                 "deducted in 2027E–30E so that acquired sales / profit in the Model are paid for; the fade period and terminal "
+                 "value assume no new acquisitions. Operating-lease costs sit inside "
                  "operating income (lease liabilities not deducted as debt).")
     ws["D35"].font = font(10, color=GREYF)
     hdr("B37", "3. VALUATION SUMMARY")
@@ -349,13 +354,13 @@ def write_dcf(wb, cols, rowmap):
     hdr("C68", "Value")
     hdr("D68", "Rationale (Teledyne characteristics)")
     mi = [(69, "r  (Cost of capital / WACC)", "=$C$13", "Linked from Section 1 WACC build"),
-          (70, "g  (NOPAT growth, Stage 1)", 0.07, "Model non-GAAP OI CAGR 2025–30E: mid-single-digit organic growth "
+          (70, "g  (NOPAT growth, Stage 1)", 0.08, "Model non-GAAP OI CAGR 2025–30E: mid-single-digit organic growth "
                                                  "+ margin expansion + bolt-on M&A"),
-          (71, "ROIIC  (Return on incremental invested capital)", 0.12, "Organic growth is capital-light (capex ~2% "
+          (71, "ROIIC  (Return on incremental invested capital)", 0.15, "Organic growth is capital-light (capex ~2% "
                                                                      "of sales); acquired growth earns ~8–10% after-tax "
                                                                      "on purchase price (FLIR goodwill-heavy base: ROIC "
                                                                      "~7–9%)"),
-          (72, "N  (Years of value creation / CAP)", 12, "Niche leadership in IR imaging, marine instruments and "
+          (72, "N  (Years of value creation / CAP)", 15, "Niche leadership in IR imaging, marine instruments and "
                                                          "space-qualified sensors; decentralised serial-acquirer model "
                                                          "with disciplined capital allocation")]
     for r, lab, v, note in mi:

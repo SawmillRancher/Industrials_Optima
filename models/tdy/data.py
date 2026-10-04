@@ -24,6 +24,8 @@ CATS = [
     ("SBC", "Stock option expense (excluded in 2005–06 'pro forma' EPS)", True, True),
     ("DEBT", "Debt extinguishment / acquisition financing costs", True, True),
     ("OTHER", "Other adjusting items (company-defined — see cell comments)", True, True),
+    ("ROUND", "Per-share rounding (company reconciled in per-share amounts only; $m = EPS × diluted shares)", False,
+     True),
     ("BASIS", "Basis difference: company bridge starts from OI as originally reported (pre-ASU 2017-07 recast)", True,
      False),
 ]
@@ -44,6 +46,7 @@ def flatten(files, raw):
     P = defaultdict(dict)
     item_labels = defaultdict(lambda: defaultdict(list))
     notes, supp, outlook, conflicts = [], {}, {}, []
+    pending, pending_pub = [], []
     for f, d in zip(files, raw):
         base = os.path.basename(f)
         notes += [f"[{base}] {n}" for n in d.get("notes", []) if isinstance(n, str)]
@@ -80,7 +83,7 @@ def flatten(files, raw):
                     if k in a:
                         put(f"{pre}.{k}", a[k])
                 sums = defaultdict(float)
-                shd = (v.get("is") or {}).get("shares_diluted")
+                shd = None          # per-share items are converted after all files are loaded
                 per_share = False
                 for it in a.get("items", []) or []:
                     if not isinstance(it, dict):
@@ -88,23 +91,18 @@ def flatten(files, raw):
                     cat = it.get("cat", "OTHER")
                     cat = cat if cat in {c[0] for c in CATS} | set(POST_CATS) else "OTHER"
                     val = it.get("value")
-                    if not _num(val) and _num(it.get("value_eps")) and _num(shd):
-                        # per-share-only reconciliation (2006–07): convert at weighted diluted shares
-                        val = round(it["value_eps"] * shd, 4)
-                        per_share = True
                     if not _num(val):
+                        eps = it.get("value_eps") if _num(it.get("value_eps")) else (
+                            it.get("memo_eps") if cat == "TAX" and _num(it.get("memo_eps")) else None)
+                        if eps is not None:
+                            pending.append((per, pre, cat, eps, f"{it.get('label')}: ${eps:.2f}/sh"))
                         continue
                     sums[cat] += val
                     item_labels[per][f"{pre}.{cat}"].append(f"{it.get('label')}: {val:,.1f}")
                 for cat, val in sums.items():
                     tgt[f"{pre}.{cat}"] = round(val, 4)
-                if pre == "adjN" and tgt.get("adjN.adj_ni_published") is None and _num(a.get("adj_eps_published")) \
-                        and _num(shd):
-                    tgt["adjN.adj_ni_published"] = round(a["adj_eps_published"] * shd, 4)
-                    per_share = True
-                if per_share:
-                    tgt[f"{pre}._per_share"] = 1
-                    item_labels[per][f"{pre}._per_share"].append("per-share reconciliation × diluted shares")
+                if pre == "adjN" and a.get("adj_ni_published") is None and _num(a.get("adj_eps_published")):
+                    pending_pub.append((per, a["adj_eps_published"]))
                 if a.get("base"):
                     tgt[f"{pre}._base"] = a["base"]
     # historical acquired-intangible amortization by year (latest 10-K presenting each year) — annual periods
@@ -113,7 +111,41 @@ def flatten(files, raw):
         for y, val in hist_am.items():
             if _num(val) and str(y) in P:
                 P[str(y)]["is.amort_intangibles"] = val
+    # per-share-only reconciliations (2006–07, Q4/16–2017): convert at weighted diluted shares
+    ps_periods = set()
+    for per, pre, cat, eps, lab in pending:
+        shd = P[per].get("is.shares_diluted")
+        if _num(shd):
+            k = f"{pre}.{cat}"
+            P[per][k] = round(P[per].get(k, 0.0) + eps * shd, 4)
+            item_labels[per][k].append(lab + f" × {shd:.1f}m diluted shares")
+            ps_periods.add(per)
+    for per, eps in pending_pub:
+        shd = P[per].get("is.shares_diluted")
+        if _num(shd):
+            P[per]["adjN.adj_ni_published"] = round(eps * shd, 4)
+            item_labels[per]["adjN._per_share"].append(f"Published non-GAAP EPS ${eps:.2f} × {shd:.1f}m diluted "
+                                                      f"shares (no $m figure published)")
+            ps_periods.add(per)
+    for per in ps_periods:
+        t = P[per]
+        ni = t.get("is.ni_teledyne")
+        if not _num(ni) or not _num(t.get("adjN.adj_ni_published")):
+            continue
+        items = sum(v for k, v in t.items() if k.startswith("adjN.") and k[5:] not in
+                    ("adj_ni_published", "adj_eps_published", "_base") and _num(v))
+        resid = t["adjN.adj_ni_published"] - ni - items
+        if abs(resid) > 0.05:
+            t["adjN.ROUND"] = round(resid, 4)
+            item_labels[per]["adjN.ROUND"].append(f"Per-share rounding residual {resid:,.1f}")
     for per, t in P.items():
+        # gain (loss) on debt extinguishment shown as a separate non-operating line in 2021–23 → other income
+        g = t.get("is.gain_debt_ext")
+        if _num(g) and all(_num(t.get(k)) for k in ("is.op_income", "is.interest_exp_net", "is.pretax")):
+            base = (t["is.op_income"] - t["is.interest_exp_net"] + t.get("is.non_service_pension", 0)
+                    + t.get("is.other_income", 0))
+            if abs(base - t["is.pretax"]) > 0.05 and abs(base + g - t["is.pretax"]) < 0.06:
+                t["is.other_income"] = round(t.get("is.other_income", 0) + g, 4)
         # non-GAAP corporate expense: positive = expense (files differ in sign convention)
         if _num(t.get("seg.adj_corp")):
             t["seg.adj_corp"] = abs(t["seg.adj_corp"])
@@ -145,7 +177,7 @@ def flatten(files, raw):
             vals = [t[p] for p in parts if _num(t.get(p))]
             if vals:
                 t[newk] = round(sum(vals), 4)
-        combo("bs.oca_plus", ["bs.prepaid_other_ca", "bs.held_for_sale"])
+        combo("bs.oca_plus", ["bs.prepaid_other_ca", "bs.held_for_sale", "bs.dta_current"])
         combo("bs.onca_plus", ["bs.other_assets", "bs.prepaid_pension", "bs.dta"])
         combo("bs.ocl_plus", ["bs.held_for_sale_liab"])
         combo("bs.oncl_plus", ["bs.other_ncl", "bs.redeemable_nci_liab"])

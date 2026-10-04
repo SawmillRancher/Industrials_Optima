@@ -73,9 +73,9 @@ def build_rows(info):
         nm = SEG_NAMES[s]
         add(Row(f"blk_{s}", SEG_DESC[s], style="block", note=f"{nm.upper()} — modelling logic"))
         add(Row(f"sales_{s}", "  Net sales", style="sub", src=f"seg.sales_{s}", cagr="cagr",
-                qe=lambda x, s=s: f"={x.py('sales_' + s)}*{x.h('sales_' + s, 2026)}/{x.h('sales_' + s, 2025)}",
+                qe=lambda x, s=s: f"={x.py('sales_' + s)}*{x.at('sales_' + s, 'Q2/26')}/{x.at('sales_' + s, 'Q2/25')}",
                 e=lambda x, s=s: f"={x.pp('sales_' + s)}*(1+{x.a('gr_' + s)})",
-                note="Q3/26E–Q4/26E: prior-year quarter × 1H/26 y/y growth of the segment. 2027E+: prior year × (1 + "
+                note="Q3/26E–Q4/26E: prior-year quarter × Q2/26 y/y growth of the segment (after the Excelitas A&D anniversary). 2027E+: prior year × (1 + "
                      "scenario organic growth).",
                 comment="Source: earnings releases (Form 8-K Ex. 99.1) segment tables; 10-K segment note for FY. "
                         "FY2008–09 as recast into the current four segments in the FY2010 10-K."
@@ -110,10 +110,10 @@ def build_rows(info):
         add(Row(f"mg_{s}", "  Non-GAAP segment operating margin %", style="pct", fmt=FMT_PCT, cagr="avg",
                 hist=lambda x, s=s: f'=IFERROR({x.a("adj_" + s)}/{x.a("sales_" + s)},"")',
                 qe=lambda x, s=s: (f"={x.py('mg_' + s)}+{x.abs_at('mg_' + s, '1H/26')}"
-                                   f"-{x.abs_at('mg_' + s, '1H/25')}"),
+                                   f"-{x.abs_at('mg_' + s, '1H/25')}+{x.a('mg_cal')}"),
                 e26=ratio(f"adj_{s}", f"sales_{s}"),
                 e=lambda x, s=s: "=" + x.scn(srow(S_MG[s], x.c.year)),
-                note="Q3/Q4-26E: prior-year quarter margin + 1H/26 vs 1H/25 change. 2027E+: scenario lever "
+                note="Q3/Q4-26E: prior-year quarter margin + 1H/26 vs 1H/25 change + outlook calibration Δ. 2027E+: scenario lever "
                      f"({s.upper()}_margin)."))
         add(Row(f"goi_{s}", "  Segment operating income (GAAP) y/y %", style="growth", fmt=FMT_PCT,
                 hist=yoy(f"oi_{s}"), fc=yoy(f"oi_{s}")))
@@ -156,19 +156,26 @@ def build_rows(info):
             note="Acquisition transaction / integration costs recorded at corporate (input)."))
     add(Row("adj_corp", "  Non-GAAP corporate expense", style="sub",
             hist=lambda x: f'=IF(ISNUMBER({x.a("corp")}),{x.a("corp")}-N({x.a("corp_it")}),"")',
-            qe=lambda x: (f"={x.a('sales_di')}*{x.a('mg_di')}+{x.a('sales_inst')}*{x.a('mg_inst')}"
-                          f"+{x.a('sales_ade')}*{x.a('mg_ade')}+{x.a('sales_es')}*{x.a('mg_es')}+{x.a('other_seg')}"
-                          f"-({x.a('ng_target')}+{x.a('nci')})/(1-{x.base(S_TAX)})-{x.a('interest_exp_net')}"
-                          f"+{x.a('non_service_pension')}+{x.a('other_income')}"),
+            qe=lambda x: f"={x.h('adj_corp')}/2",
             e=lambda x: f"={x.a('net_sales')}*{x.a('corp_pct')}",
-            note="Q3/Q4-26E: balancing line — set so that non-GAAP net income equals the FY26 / Q3 non-GAAP EPS "
-                 "outlook (scenario: high / mid / low) × diluted shares. 2027E+: % of sales input."))
+            note="Q3/Q4-26E at the 1H/26 run-rate; 2027E+: % of sales input."))
     add(Row("corp_pct", "  Non-GAAP corporate expense % of sales", style="pct", fmt=FMT_PCT,
             hist=ratio("adj_corp", "net_sales"), qe=ratio("adj_corp", "net_sales"), e26=ratio("adj_corp", "net_sales"),
             e=lambda x: A["corp_pct"][x.c.year], input_fc=True))
     add(Row("other_seg", "  Other reconciling items to operating income (signed)", src="seg.other_seg", fc=0,
             comment="Any line between total segment operating income and consolidated operating income other than "
                     "corporate expense (e.g. unallocated pension in some years) — see data notes."))
+    seg_sales = lambda x: "+".join(x.a("sales_" + k) for k in SEGS)  # noqa: E731
+    base_oi = lambda x: "+".join(  # noqa: E731
+        f"{x.a('sales_' + k)}*({x.py('mg_' + k)}+{x.abs_at('mg_' + k, '1H/26')}-{x.abs_at('mg_' + k, '1H/25')})"
+        for k in SEGS)
+    add(Row("mg_cal", "  Outlook calibration: Δ non-GAAP margin applied to all segments (Q3/Q4-26E)", style="pct",
+            fmt=FMT_PCT,
+            qe=lambda x: (f"=(({x.a('ng_target')}+{x.a('nci')})/(1-{x.base(S_TAX)})+{x.a('interest_exp_net')}"
+                          f"-{x.a('non_service_pension')}-{x.a('other_income')}+{x.a('adj_corp')}-{x.a('other_seg')}"
+                          f"-({base_oi(x)}))/({seg_sales(x)})"),
+            note="Solves the margin shift (vs prior-year quarter + 1H/26 drift) so that non-GAAP net income equals the "
+                 "FY26 / Q3 non-GAAP EPS outlook (scenario: high / mid / low) × diluted shares."))
     add(Row("ng_target", "  Memo: non-GAAP net income target (FY26 outlook × diluted shares)", style="memo",
             qe=lambda x: (f"={x.scn(S_EPS_Q3)}*{x.a('sh_dil')}" if x.c.q == 3 else
                           f"={x.scn(S_EPS_FY)}*{x.at('sh_dil', '2026E')}-{x.at('b_adj', '1H/26')}"
@@ -336,7 +343,8 @@ def build_rows(info):
             qe=lambda x: f"={x.at('non_service_pension', 'Q2/26')}",
             e=lambda x: A["pension"][x.c.year], input_fc=True,
             note="ASU 2017-07 (2018; 2017 recast): non-service pension cost presented below operating income."))
-    add(Row("other_income", "Other income (expense), net", src="is.other_income", fc=0))
+    add(Row("other_income", "Other income (expense), net (incl. gain / loss on debt extinguishment)", src="is.other_income",
+            fc=0))
     add(Row("pretax", "Income before income taxes", style="total", cagr="cagr",
             hist=lambda x: (f"={x.a('op_income')}-{x.a('interest_exp_net')}+N({x.a('non_service_pension')})"
                             f"+N({x.a('other_income')})"),
