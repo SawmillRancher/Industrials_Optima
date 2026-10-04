@@ -1,0 +1,161 @@
+{
+ "period": "Q2-20",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000110465920089950/tm2026469d1_ex99-1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000139600920000040/vmc-20200630x10q.htm"
+ },
+ "seg": {
+  "agg_rev": 1070.6,
+  "agg_interseg": -73.5,
+  "agg_fa_rev": 814.7,
+  "agg_freight_rev": 240.9,
+  "agg_other_rev": 15.0,
+  "agg_tons": 56.195,
+  "agg_price": 14.5,
+  "agg_gp": 351.2,
+  "agg_dda": 80.7,
+  "agg_cgp": 431.9,
+  "asph_rev": 222.9,
+  "asph_interseg": null,
+  "asph_tons": 3.403,
+  "asph_price": 57.46,
+  "asph_gp": 30.5,
+  "asph_dda": 8.7,
+  "asph_cgp": null,
+  "conc_rev": 100.7,
+  "conc_interseg": null,
+  "conc_cy": 0.786,
+  "conc_price": 127.35,
+  "conc_gp": 14.2,
+  "conc_dda": 4.0,
+  "conc_cgp": null,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": 1.9,
+  "calc_gp": 0.7,
+  "calc_dda": 0.0,
+  "calc_tons": 0.071,
+  "calc_price": 26.55,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 1396.1,
+  "interseg_total": -73.5,
+  "delivery_rev": null,
+  "other_dda": 6.0,
+  "total_dda": 99.5,
+  "gp_total": 396.5,
+  "notes": "Four reportable segments (Aggregates, Asphalt, Concrete, Calcium); Calcium still separate in 2020-21. Segment revenues incl. freight & delivery (post-2018 basis); intersegment eliminations are all Aggregates sales. Tons/cubic yards converted from thousands to millions (3 dp). calc_tons/calc_price are extra fields (Calcium tons m, $/ton). Freight-adjusted revenues, freight & delivery and other revenues from Appendix 1 reconciliation; Aggregates cash gross profit as published."
+ },
+ "is": {
+  "total_rev": 1322.6,
+  "net_sales": null,
+  "delivery_rev": null,
+  "cost_of_rev": 926.1,
+  "gp": 396.5,
+  "sag": 91.2,
+  "gain_sale": -0.3,
+  "other_op_lines": [
+   [
+    "Other operating expense, net",
+    -6.2
+   ]
+  ],
+  "other_op": -6.2,
+  "op_earnings": 298.9,
+  "nonop": 7.4,
+  "interest": 34.0,
+  "ebt": 272.3,
+  "tax": 61.4,
+  "cont_ops": 211.0,
+  "disc_ops": -1.0,
+  "net_earnings": 209.9,
+  "nci": 0.0,
+  "ni_vulcan": 209.9,
+  "shares_basic": 132.552,
+  "shares_diluted": 133.115,
+  "eps_cont_dil": 1.58,
+  "eps_dil": 1.58,
+  "eps_basic": 1.58,
+  "dps": 0.34,
+  "notes": "dps from 10-Q statement of equity (cash dividends on common stock, per share)."
+ },
+ "ngaap": {
+  "ebitda_pub": 405.7,
+  "adj_ebitda_pub": 407.8,
+  "ebitda_bridge_tax": 61.4,
+  "ebitda_bridge_disc_ops": 1.0,
+  "ebitda_bridge_start": [
+   "2020",
+   2.0
+  ],
+  "ebitda_bridge_lines": [
+   [
+    "Gain on sale of businesses",
+    0.0
+   ],
+   [
+    "Property donation",
+    0.0
+   ],
+   [
+    "Business interruption claims recovery",
+    0.0
+   ],
+   [
+    "Charges associated with divested operations",
+    0.8
+   ],
+   [
+    "Business development",
+    -3.5
+   ],
+   [
+    "COVID-19 direct incremental costs",
+    4.4
+   ],
+   [
+    "Restructuring charges",
+    0.5
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": null,
+   "gain_sale": 0.0,
+   "impairment": 0.0,
+   "divested_ops": 0.8,
+   "acquisition": -3.5,
+   "restructuring": 0.5,
+   "legal_env": 0.0,
+   "pension": 0.0,
+   "other": 4.4,
+   "other_label": "COVID-19 direct incremental costs"
+  },
+  "adj_eps_pub": 1.6,
+  "eps_bridge_lines": [
+   [
+    "Diluted EPS from continuing operations",
+    1.58
+   ],
+   [
+    "Items included in Adjusted EBITDA above",
+    0.02
+   ],
+   [
+    "Adjusted Diluted EPS",
+    1.6
+   ]
+  ],
+  "eps_bridge_start_ps": 1.58,
+  "eps_items_after_tax_ps": 0.02,
+  "eps_discrete_tax_ps": 0,
+  "agg_cgp_per_ton_pub": 7.69,
+  "roic_pub": 14.2,
+  "notes": "Vulcan's EBITDA bridge starts at net earnings (2021 Q3+: net earnings attributable to Vulcan) and adds back income tax, interest expense and the loss (earnings) on discontinued operations NET OF TAX before DDA&A, so published EBITDA is continuing-ops EBITDA; the schema check ni_vulcan+ebitda_bridge_tax+interest+total_dda=ebitda_pub therefore differs by ebitda_bridge_disc_ops (extra field, value as added); including it the check ties. adj_items.disc_ops is null (disc ops is not an EBITDA->Adjusted EBITDA item). Adjusted EPS bridge: 'Items included in Adjusted EBITDA above' is the after-tax per-share effect of all EBITDA adjustments. Business development = non-routine acquisition charges incl. purchase-accounting inventory step-up -> adj_items.acquisition; COVID-19 direct incremental costs -> adj_items.other. Q2-20: Business development was a net gain (-3.5) in the quarter. COVID-19 direct incremental costs 4.4. ROIC is TTM (14.2%)."
+ },
+ "checks": [
+  "ebitda (schema formula, excl disc-ops add-back): FAIL 404.8 vs 405.7"
+ ]
+}

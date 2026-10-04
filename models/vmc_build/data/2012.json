@@ -1,0 +1,519 @@
+{
+ "period": "2012",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114420413008762/v335138_ex99-1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000119312513084128/d451546d10k.htm"
+ },
+ "seg": {
+  "agg_rev": 1729.4,
+  "agg_interseg": -148.2,
+  "agg_fa_rev": null,
+  "agg_freight_rev": null,
+  "agg_other_rev": null,
+  "agg_tons": 141.0,
+  "agg_price": 10.44,
+  "agg_gp": 352.1,
+  "agg_dda": 240.7,
+  "agg_cgp": 592.8,
+  "asph_rev": 378.1,
+  "asph_interseg": 0.0,
+  "asph_tons": 6.7,
+  "asph_price": 55.33,
+  "asph_gp": 23.0,
+  "asph_dda": 8.7,
+  "asph_cgp": null,
+  "conc_rev": 406.4,
+  "conc_interseg": 0.0,
+  "conc_cy": 4.2,
+  "conc_price": 92.19,
+  "conc_gp": -38.2,
+  "conc_dda": 41.3,
+  "conc_cgp": null,
+  "cem_rev": 84.6,
+  "cem_interseg": -39.0,
+  "cem_gp": -2.8,
+  "cem_dda": 18.1,
+  "cem_tons": 0.94,
+  "cem_price": 77.77,
+  "calc_rev": null,
+  "calc_gp": null,
+  "calc_dda": null,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 2598.5,
+  "interseg_total": -187.2,
+  "delivery_rev": 156.1,
+  "other_dda": 23.2,
+  "total_dda": 332.0,
+  "gp_total": 334.0,
+  "notes": "Basis: Q4 earnings release Table D twelve-month column (cross-checked to 10-K segment note). Segments Aggregates, Concrete, Asphalt mix, Cement (Cement includes calcium products; calc_* null). agg_tons = total incl. internal tons. agg_price = freight-adjusted ASP incl. internal sales. Intersegment '-' shown as 0.0. seg_sales_total / interseg_total computed as sums of published segment lines. Total revenues = net sales + delivery revenues. cem_tons/cem_price are extra fields. From FY2012 the 'Other' DDA line includes DDA of temporarily idled assets excluded from segment gross profit (prior years recast). Aggregates customer tons 130.5m + internal 10.4m."
+ },
+ "is": {
+  "total_rev": 2567.3,
+  "net_sales": 2411.2,
+  "delivery_rev": 156.1,
+  "cost_of_rev": 2233.3,
+  "gp": 334.0,
+  "sag": 259.1,
+  "gain_sale": 68.5,
+  "other_op_lines": [
+   [
+    "Restructuring charges",
+    -9.6
+   ],
+   [
+    "Exchange offer costs",
+    -43.4
+   ],
+   [
+    "Other operating income (expense), net",
+    -5.6
+   ]
+  ],
+  "other_op": -58.6,
+  "op_earnings": 84.8,
+  "nonop": 6.7,
+  "interest": 211.9,
+  "ebt": -120.4,
+  "tax": -66.5,
+  "cont_ops": -53.9,
+  "disc_ops": 1.3,
+  "net_earnings": -52.6,
+  "nci": 0.0,
+  "ni_vulcan": -52.6,
+  "shares_basic": 129.7,
+  "shares_diluted": 129.7,
+  "eps_cont_dil": -0.42,
+  "eps_dil": -0.41,
+  "eps_basic": -0.41,
+  "dps": 0.04
+ },
+ "ngaap": {
+  "ebitda_pub": 423.5,
+  "adj_ebitda_pub": 411.3,
+  "ebitda_bridge_tax": -66.5,
+  "ebitda_bridge_disc_ops": -1.3,
+  "ebitda_bridge_lines": [
+   [
+    "Recovery from legal settlement",
+    0.0
+   ],
+   [
+    "Gain on sale of real estate and businesses",
+    -65.1
+   ],
+   [
+    "Restructuring charges",
+    9.6
+   ],
+   [
+    "Exchange offer costs",
+    43.4
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": null,
+   "gain_sale": -65.1,
+   "impairment": null,
+   "divested_ops": null,
+   "acquisition": null,
+   "restructuring": 9.6,
+   "legal_env": 0.0,
+   "pension": null,
+   "other": 43.4,
+   "other_label": "Exchange offer costs (Martin Marietta unsolicited exchange offer, Dec-2011 to 2012)"
+  },
+  "adj_eps_pub": null,
+  "eps_bridge_lines": [],
+  "eps_items_after_tax_ps": null,
+  "eps_discrete_tax_ps": null,
+  "eps_bridge_start_ps": null,
+  "agg_cgp_per_ton_pub": null,
+  "roic_pub": null,
+  "notes": "Vulcan's EBITDA reconciliation starts from net earnings, adds income taxes (continuing ops), interest expense net, and REMOVES (earnings) loss on discontinued operations net of tax (shown in ebitda_bridge_disc_ops, signed as added), then adds DDA&A. Hence ni_vulcan + ebitda_bridge_tax + interest + total_dda differs from ebitda_pub by exactly ebitda_bridge_disc_ops; the check passes once that line is included. Adjusted EBITDA (FY2012 release) = EBITDA excluding recovery from legal settlement (none in 2012), gain on sale of real estate and businesses (-65.1; note IS gain line is 68.5 - only real estate/business gains are adjusted), restructuring charges (+9.6) and exchange offer costs (+43.4, defense against Martin Marietta's hostile exchange offer, withdrawn 2012). Release says cash gross profit per ton increased 5% but no $ value -> null. No adjusted EPS published. VPP: Dec-2012 sale of future production (volumetric production payment) net proceeds $73.6m recorded as deferred revenue."
+ },
+ "cf": {
+  "net_earnings": -52.6,
+  "dda": 332.0,
+  "gain_sale": -78.7,
+  "pension_contrib": -4.5,
+  "sbc": 17.5,
+  "deferred_tax": -69.8,
+  "wc_change": 20.4,
+  "other_op": 74.2,
+  "cfo": 238.5,
+  "capex": -93.4,
+  "proceeds_ppe": 80.8,
+  "proceeds_bus": 21.2,
+  "acquisitions": 0.0,
+  "other_inv": 1.8,
+  "cfi": 10.4,
+  "debt_proceeds": 0.0,
+  "debt_repay": -134.8,
+  "buyback": 0.0,
+  "dividends": -5.2,
+  "stock_proceeds": 10.5,
+  "other_fin": 0.3,
+  "cff": -129.2,
+  "net_change": 119.6,
+  "cash_begin": 155.8,
+  "cash_end": 275.5,
+  "noncash_lease": null,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net earnings (loss)",
+    -52.6
+   ],
+   [
+    "Depreciation, depletion, accretion and amortization",
+    332.0
+   ],
+   [
+    "Net gain on sale of property, plant & equipment and businesses",
+    -78.7
+   ],
+   [
+    "Contributions to pension plans",
+    -4.5
+   ],
+   [
+    "Share-based compensation",
+    17.5
+   ],
+   [
+    "Excess tax benefits from share-based compensation",
+    -0.3
+   ],
+   [
+    "Deferred tax provision",
+    -69.8
+   ],
+   [
+    "Cost of debt purchase",
+    0.0
+   ],
+   [
+    "Accounts and notes receivable",
+    17.4
+   ],
+   [
+    "Inventories",
+    -9.0
+   ],
+   [
+    "Prepaid expenses",
+    -0.1
+   ],
+   [
+    "Other assets",
+    -29.0
+   ],
+   [
+    "Accrued interest and income taxes",
+    -15.7
+   ],
+   [
+    "Trade payables and other accruals",
+    27.1
+   ],
+   [
+    "Proceeds from sale of future production, net of transaction costs",
+    73.6
+   ],
+   [
+    "Other noncurrent liabilities",
+    29.8
+   ],
+   [
+    "Other, net",
+    0.9
+   ],
+   [
+    "Net cash provided by operating activities",
+    238.5
+   ],
+   [
+    "Purchases of property, plant & equipment",
+    -93.4
+   ],
+   [
+    "Proceeds from sale of property, plant & equipment",
+    80.8
+   ],
+   [
+    "Proceeds from sale of businesses, net of transaction costs",
+    21.2
+   ],
+   [
+    "Payment for businesses acquired, net of acquired cash",
+    0.0
+   ],
+   [
+    "Other, net",
+    1.8
+   ],
+   [
+    "Net cash provided by (used for) investing activities",
+    10.4
+   ],
+   [
+    "Net short-term borrowings (payments)",
+    0.0
+   ],
+   [
+    "Payment of current maturities and long-term debt",
+    -134.8
+   ],
+   [
+    "Proceeds from issuance of common stock",
+    0.0
+   ],
+   [
+    "Dividends paid",
+    -5.2
+   ],
+   [
+    "Proceeds from exercise of stock options",
+    10.5
+   ],
+   [
+    "Excess tax benefits from share-based compensation",
+    0.3
+   ],
+   [
+    "Other, net",
+    -0.0
+   ],
+   [
+    "Net cash used for financing activities",
+    -129.2
+   ],
+   [
+    "Net increase in cash and cash equivalents",
+    119.6
+   ],
+   [
+    "Cash and cash equivalents at beginning of year",
+    155.8
+   ],
+   [
+    "Cash and cash equivalents at end of year",
+    275.5
+   ]
+  ],
+  "notes": "Source: FY2012 10-K (matches Q4-12 release). wc_change = sum of seven changes-in-assets/liabilities lines (= release 20.4), excluding the VPP line. other_op = excess tax benefits -0.3 + proceeds from sale of future production (VPP, deferred revenue) +73.6 + other 0.9. other_fin = excess tax 0.3 + other -0.0."
+ },
+ "bs": {
+  "cash": 275.5,
+  "restricted_cash": 0.0,
+  "ar_net": 297.0,
+  "inventories": 335.0,
+  "other_current": 62.4,
+  "assets_held_for_sale": 15.1,
+  "total_current_assets": 985.0,
+  "invest_lt_rec": 42.1,
+  "ppe_net": 3159.2,
+  "rou_assets": null,
+  "goodwill": 3086.7,
+  "intangibles": 692.5,
+  "other_noncurrent": 161.1,
+  "total_assets": 8126.6,
+  "current_maturities": 150.6,
+  "short_term_debt": 0.0,
+  "payables": 113.3,
+  "other_current_liab": 171.7,
+  "liab_held_for_sale": 0.8,
+  "total_current_liab": 436.4,
+  "ltd": 2526.4,
+  "deferred_tax": 657.4,
+  "deferred_revenue": 73.6,
+  "lt_lease": null,
+  "other_noncurrent_liab": 671.8,
+  "total_liabilities": 4365.5,
+  "common_stock": 129.7,
+  "capital_excess": 2580.2,
+  "retained_earnings": 1276.6,
+  "aoci": -225.5,
+  "total_vulcan_equity": 3761.1,
+  "nci": 0.0,
+  "total_equity": 3761.1,
+  "total_liab_equity": 8126.6,
+  "shares_outstanding_end": 129.7,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    275.5
+   ],
+   [
+    "Restricted cash",
+    0.0
+   ],
+   [
+    "Accounts and notes receivable: Customers, net",
+    277.5
+   ],
+   [
+    "Accounts and notes receivable: Other",
+    19.4
+   ],
+   [
+    "Inventories",
+    335.0
+   ],
+   [
+    "Current deferred income taxes",
+    40.7
+   ],
+   [
+    "Prepaid expenses",
+    21.7
+   ],
+   [
+    "Assets held for sale",
+    15.1
+   ],
+   [
+    "Total current assets",
+    985.0
+   ],
+   [
+    "Investments and long-term receivables",
+    42.1
+   ],
+   [
+    "Property, plant & equipment, net",
+    3159.2
+   ],
+   [
+    "Goodwill",
+    3086.7
+   ],
+   [
+    "Other intangible assets, net",
+    692.5
+   ],
+   [
+    "Other noncurrent assets",
+    161.1
+   ],
+   [
+    "Total assets",
+    8126.6
+   ],
+   [
+    "Current maturities of long-term debt",
+    150.6
+   ],
+   [
+    "Trade payables and accruals",
+    113.3
+   ],
+   [
+    "Accrued salaries, wages and management incentives",
+    62.7
+   ],
+   [
+    "Accrued interest",
+    11.4
+   ],
+   [
+    "Other accrued liabilities",
+    97.6
+   ],
+   [
+    "Liabilities of assets held for sale",
+    0.8
+   ],
+   [
+    "Total current liabilities",
+    436.4
+   ],
+   [
+    "Long-term debt",
+    2526.4
+   ],
+   [
+    "Noncurrent deferred income taxes",
+    657.4
+   ],
+   [
+    "Deferred management incentive and other compensation",
+    21.8
+   ],
+   [
+    "Pension benefits",
+    303.0
+   ],
+   [
+    "Other postretirement benefits",
+    103.1
+   ],
+   [
+    "Asset retirement obligations",
+    150.1
+   ],
+   [
+    "Deferred revenue",
+    73.6
+   ],
+   [
+    "Other noncurrent liabilities",
+    93.8
+   ],
+   [
+    "Total liabilities",
+    4365.5
+   ],
+   [
+    "Common stock, $1 par value",
+    129.7
+   ],
+   [
+    "Capital in excess of par value",
+    2580.2
+   ],
+   [
+    "Retained earnings",
+    1276.6
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -225.5
+   ],
+   [
+    "Total equity",
+    3761.1
+   ],
+   [
+    "Total liabilities and equity",
+    8126.6
+   ]
+  ],
+  "notes": "FY2012 10-K balance sheet (matches Q4-12 release). other_current = current deferred taxes 40.7 + prepaid 21.7. other_current_liab = accrued salaries 62.7 + accrued interest 11.4 + other accrued 97.6. other_noncurrent_liab = deferred mgmt comp 21.8 + pension 303.0 + OPEB 103.1 + ARO 150.1 + other 93.8. deferred_revenue = VPP (Dec-2012). No NCI. shares_outstanding_end = shares issued 129.721m."
+ },
+ "extra": {
+  "reserves_bn_tons": 15.0,
+  "dps_declared": 0.04,
+  "capex_by_segment": {
+   "aggregates": 77.0,
+   "asphalt": 7.2,
+   "concrete": 9.2,
+   "cement": 1.2,
+   "calcium": null,
+   "corporate": 1.2
+  },
+  "seg_dda_annual": {
+   "aggregates": 240.7,
+   "asphalt": 8.7,
+   "concrete": 41.3,
+   "cement": 18.1,
+   "calcium": null,
+   "other": 23.2
+  },
+  "employees": 7028,
+  "acquisition_revenue_contribution": null,
+  "notes": "10-K FY2012. Employees 7,028 = 6,727 U.S. + 300 Mexico + 1 Bahamas as of 1-Jan-2013. Segment capex total $95.8m (accrual) vs cash $93.4m. Release: gross cash proceeds of $174m from asset sales in 2012; $135m debt retired as scheduled."
+ }
+}

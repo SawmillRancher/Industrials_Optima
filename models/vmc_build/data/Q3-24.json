@@ -1,0 +1,152 @@
+{
+ "period": "Q3-24",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114036124044579/ef20037837_ex99-1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000139600924000023/vmc-20240930.htm"
+ },
+ "seg": {
+  "agg_rev": 1572.4,
+  "agg_interseg": -124.0,
+  "agg_fa_rev": 1228.0,
+  "agg_freight_rev": 320.5,
+  "agg_other_rev": 23.9,
+  "agg_tons": 57.7,
+  "agg_price": 21.27,
+  "agg_gp": 498.5,
+  "agg_dda": 130.3,
+  "agg_cgp": 628.8,
+  "asph_rev": 381.1,
+  "asph_interseg": null,
+  "asph_tons": 4.1,
+  "asph_price": 80.88,
+  "asph_gp": 60.2,
+  "asph_dda": 12.0,
+  "asph_cgp": 72.2,
+  "conc_rev": 174.4,
+  "conc_interseg": null,
+  "conc_cy": 0.9,
+  "conc_price": 185.61,
+  "conc_gp": 6.5,
+  "conc_dda": 10.9,
+  "conc_cgp": 17.4,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": null,
+  "calc_gp": null,
+  "calc_dda": null,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 2127.9,
+  "interseg_total": -124.0,
+  "delivery_rev": null,
+  "other_dda": 7.5,
+  "total_dda": 160.7,
+  "gp_total": 565.2,
+  "notes": "Table D of release (segment revenues include intersegment; aggregates revenue incl. freight & delivery and service revenues). Only aggregates has intersegment sales. Freight/other revenues from Appendix 1 freight-adjusted revenue reconciliation; cash gross profit from Appendix 1."
+ },
+ "is": {
+  "total_rev": 2003.9,
+  "net_sales": null,
+  "delivery_rev": null,
+  "cost_of_rev": 1438.7,
+  "gp": 565.2,
+  "sag": 129.1,
+  "gain_sale": 0.2,
+  "other_op_lines": [
+   [
+    "Loss on impairments",
+    -86.6
+   ],
+   [
+    "Other operating expense, net",
+    -12.6
+   ]
+  ],
+  "other_op": -99.2,
+  "op_earnings": 337.1,
+  "nonop": -3.8,
+  "interest": 38.4,
+  "ebt": 294.9,
+  "tax": 85.2,
+  "cont_ops": 209.7,
+  "disc_ops": -1.3,
+  "net_earnings": 208.4,
+  "nci": 0.8,
+  "ni_vulcan": 207.6,
+  "shares_basic": 132.2,
+  "shares_diluted": 133.0,
+  "eps_cont_dil": 1.57,
+  "eps_dil": 1.56,
+  "eps_basic": 1.57,
+  "dps": 0.46
+ },
+ "ngaap": {
+  "ebitda_pub": 491.3,
+  "adj_ebitda_pub": 580.6,
+  "ebitda_bridge_tax": 84.7,
+  "ebitda_bridge_lines": [
+   [
+    "Loss on discontinued operations",
+    1.8
+   ],
+   [
+    "Gain (loss) on sale of real estate and businesses, net",
+    0.0
+   ],
+   [
+    "Charges associated with divested operations",
+    0.0
+   ],
+   [
+    "Acquisition related charges",
+    0.8
+   ],
+   [
+    "Loss on impairments",
+    86.6
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": 1.8,
+   "gain_sale": 0.0,
+   "impairment": 86.6,
+   "divested_ops": 0.0,
+   "acquisition": 0.8,
+   "restructuring": 0.0,
+   "legal_env": 0.0,
+   "pension": 0.0,
+   "other": 0.0,
+   "other_label": null
+  },
+  "adj_eps_pub": 2.22,
+  "eps_bridge_lines": [
+   [
+    "Net earnings attributable to Vulcan",
+    1.56
+   ],
+   [
+    "Items included in Adjusted EBITDA above, net of tax",
+    0.65
+   ],
+   [
+    "NOL carryforward valuation allowance",
+    0.01
+   ],
+   [
+    "Adjusted diluted EPS attributable to Vulcan from continuing operations",
+    2.22
+   ]
+  ],
+  "eps_items_after_tax_ps": 0.65,
+  "eps_discrete_tax_ps": 0.01,
+  "eps_bridge_start_ps": 1.56,
+  "agg_cgp_per_ton_pub": 10.89,
+  "roic_pub": 16.1,
+  "notes": "Vulcan EBITDA = net earnings attributable to Vulcan + income tax (incl. discontinued ops) + interest expense, net + DDA&A; Adjusted EBITDA excludes (gain) loss on discontinued ops (pre-tax), gains on sale of real estate and businesses, impairments, charges associated with divested operations, acquisition related charges (deals requiring antitrust clearance; 2024 incl. Wake Stone inventory step-up $6.4m) and, from Q1-26, CEO transition and reorganization charges. Adjusted EPS = diluted EPS (net earnings, incl. disc ops) + items included in Adjusted EBITDA net of tax + NOL carryforward valuation allowance. roic_pub = TTM ROIC (Adj. EBITDA / avg invested capital, 5-quarter average)."
+ },
+ "notes": null,
+ "checks_failed": []
+}

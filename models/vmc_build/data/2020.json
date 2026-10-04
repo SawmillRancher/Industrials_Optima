@@ -1,0 +1,552 @@
+{
+ "period": "2020",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000110465921022897/tm216811d1_ex99-1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000139600921000009/vmc-20201231x10k.htm"
+ },
+ "seg": {
+  "agg_rev": 3944.3,
+  "agg_interseg": -271.4,
+  "agg_fa_rev": 3007.6,
+  "agg_freight_rev": 877.0,
+  "agg_other_rev": 59.6,
+  "agg_tons": 208.295,
+  "agg_price": 14.44,
+  "agg_gp": 1159.2,
+  "agg_dda": 321.1,
+  "agg_cgp": 1480.3,
+  "asph_rev": 792.6,
+  "asph_interseg": null,
+  "asph_tons": 11.835,
+  "asph_price": 57.97,
+  "asph_gp": 75.2,
+  "asph_dda": 35.0,
+  "asph_cgp": null,
+  "conc_rev": 383.6,
+  "conc_interseg": null,
+  "conc_cy": 2.951,
+  "conc_price": 128.93,
+  "conc_gp": 44.2,
+  "conc_dda": 16.0,
+  "conc_cgp": null,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": 7.7,
+  "calc_gp": 2.9,
+  "calc_dda": 0.2,
+  "calc_tons": 0.282,
+  "calc_price": 27.32,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 5128.2,
+  "interseg_total": -271.4,
+  "delivery_rev": null,
+  "other_dda": 24.5,
+  "total_dda": 396.8,
+  "gp_total": 1281.5,
+  "notes": "Four reportable segments (Aggregates, Asphalt, Concrete, Calcium); Calcium still separate in 2020-21. Segment revenues incl. freight & delivery (post-2018 basis); intersegment eliminations are all Aggregates sales. Tons/cubic yards converted from thousands to millions (3 dp). calc_tons/calc_price are extra fields (Calcium tons m, $/ton). Freight-adjusted revenues, freight & delivery and other revenues from Appendix 1 reconciliation; Aggregates cash gross profit as published. Q4/FY columns taken directly from the Q4 release (three- and twelve-month columns); no derivation."
+ },
+ "is": {
+  "total_rev": 4856.8,
+  "net_sales": null,
+  "delivery_rev": null,
+  "cost_of_rev": 3575.3,
+  "gp": 1281.5,
+  "sag": 359.8,
+  "gain_sale": 4.0,
+  "other_op_lines": [
+   [
+    "Other operating expense, net",
+    -30.0
+   ]
+  ],
+  "other_op": -30.0,
+  "op_earnings": 895.7,
+  "nonop": -17.5,
+  "interest": 134.4,
+  "ebt": 743.8,
+  "tax": 155.8,
+  "cont_ops": 588.0,
+  "disc_ops": -3.5,
+  "net_earnings": 584.5,
+  "nci": 0.0,
+  "ni_vulcan": 584.5,
+  "shares_basic": 132.578,
+  "shares_diluted": 133.245,
+  "eps_cont_dil": 4.41,
+  "eps_dil": 4.39,
+  "eps_basic": 4.41,
+  "dps": 1.36,
+  "notes": "dps = 'Cash dividends per share' 1.36 (10-K equity note)."
+ },
+ "ngaap": {
+  "ebitda_pub": 1275.0,
+  "adj_ebitda_pub": 1323.5,
+  "ebitda_bridge_tax": 155.8,
+  "ebitda_bridge_disc_ops": 3.5,
+  "ebitda_bridge_start": [
+   "2020",
+   2.0
+  ],
+  "ebitda_bridge_lines": [
+   [
+    "Gain on sale of businesses",
+    0.0
+   ],
+   [
+    "Property donation",
+    0.0
+   ],
+   [
+    "Charges associated with divested operations",
+    6.9
+   ],
+   [
+    "Business development",
+    7.3
+   ],
+   [
+    "COVID-19 direct incremental costs",
+    10.2
+   ],
+   [
+    "Pension settlement charge",
+    22.7
+   ],
+   [
+    "Restructuring charges",
+    1.3
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": null,
+   "gain_sale": 0.0,
+   "impairment": 0.0,
+   "divested_ops": 6.9,
+   "acquisition": 7.3,
+   "restructuring": 1.3,
+   "legal_env": 0.0,
+   "pension": 22.7,
+   "other": 10.2,
+   "other_label": "COVID-19 direct incremental costs"
+  },
+  "adj_eps_pub": 4.68,
+  "eps_bridge_lines": [
+   [
+    "Diluted EPS from continuing operations",
+    4.41
+   ],
+   [
+    "Items included in Adjusted EBITDA above",
+    0.27
+   ],
+   [
+    "Adjusted Diluted EPS",
+    4.68
+   ]
+  ],
+  "eps_bridge_start_ps": 4.41,
+  "eps_items_after_tax_ps": 0.27,
+  "eps_discrete_tax_ps": 0,
+  "agg_cgp_per_ton_pub": 7.11,
+  "roic_pub": 14.3,
+  "notes": "Vulcan's EBITDA bridge starts at net earnings (2021 Q3+: net earnings attributable to Vulcan) and adds back income tax, interest expense and the loss (earnings) on discontinued operations NET OF TAX before DDA&A, so published EBITDA is continuing-ops EBITDA; the schema check ni_vulcan+ebitda_bridge_tax+interest+total_dda=ebitda_pub therefore differs by ebitda_bridge_disc_ops (extra field, value as added); including it the check ties. adj_items.disc_ops is null (disc ops is not an EBITDA->Adjusted EBITDA item). Adjusted EPS bridge: 'Items included in Adjusted EBITDA above' is the after-tax per-share effect of all EBITDA adjustments. Business development = non-routine acquisition charges incl. purchase-accounting inventory step-up -> adj_items.acquisition; COVID-19 direct incremental costs -> adj_items.other. FY2020 ROIC 14.3% (published). Twelve-month columns of Q4-20 release."
+ },
+ "cf": {
+  "net_earnings": 584.5,
+  "dda": 396.8,
+  "noncash_lease": 38.3,
+  "gain_sale": -4.0,
+  "pension_contrib": -8.8,
+  "sbc": 33.0,
+  "deferred_tax": 62.0,
+  "wc_change": -39.7,
+  "other_op": 8.3,
+  "cfo": 1070.4,
+  "capex": -362.2,
+  "proceeds_ppe": 11.5,
+  "proceeds_bus": 1.0,
+  "acquisitions": -43.2,
+  "other_inv": 11.5,
+  "cfi": -381.5,
+  "debt_proceeds": 750.0,
+  "debt_repay": -250.0,
+  "buyback": -26.1,
+  "dividends": -180.2,
+  "stock_proceeds": null,
+  "other_fin": -59.0,
+  "cff": 234.7,
+  "net_change": 923.5,
+  "cash_begin": 274.5,
+  "cash_end": 1198.0,
+  "cash_basis": "cash+restricted",
+  "lines_raw": [
+   [
+    "Net earnings",
+    584.48
+   ],
+   [
+    "Depreciation, depletion, accretion and amortization",
+    396.806
+   ],
+   [
+    "Noncash operating lease expense",
+    38.272
+   ],
+   [
+    "Net gain on sale of property, plant & equipment and businesses",
+    -3.997
+   ],
+   [
+    "Contributions to pension plans",
+    -8.819
+   ],
+   [
+    "Share-based compensation expense",
+    32.991
+   ],
+   [
+    "Deferred tax expense",
+    62.018
+   ],
+   [
+    "Cost of debt purchase",
+    0.0
+   ],
+   [
+    "Accounts and notes receivable",
+    13.413
+   ],
+   [
+    "Inventories",
+    9.801
+   ],
+   [
+    "Prepaid expenses",
+    2.585
+   ],
+   [
+    "Other assets",
+    -14.43
+   ],
+   [
+    "Accrued interest and income taxes",
+    0.775
+   ],
+   [
+    "Trade payables and other accruals",
+    -6.942
+   ],
+   [
+    "Other noncurrent liabilities",
+    -44.912
+   ],
+   [
+    "Other, net (operating)",
+    8.318
+   ],
+   [
+    "Net cash provided by operating activities",
+    1070.359
+   ],
+   [
+    "Purchases of property, plant & equipment",
+    -362.194
+   ],
+   [
+    "Proceeds from sale of property, plant & equipment",
+    11.461
+   ],
+   [
+    "Proceeds from sale of businesses",
+    0.968
+   ],
+   [
+    "Payment for businesses acquired, net of acquired cash",
+    -43.223
+   ],
+   [
+    "Other, net (investing)",
+    11.474
+   ],
+   [
+    "Net cash used for investing activities",
+    -381.514
+   ],
+   [
+    "Proceeds from short-term debt",
+    0.0
+   ],
+   [
+    "Payment of short-term debt",
+    0.0
+   ],
+   [
+    "Payment of current maturities and long-term debt",
+    -250.025
+   ],
+   [
+    "Proceeds from issuance of long-term debt",
+    750.0
+   ],
+   [
+    "Debt issuance and exchange costs",
+    -15.394
+   ],
+   [
+    "Settlements of interest rate derivatives",
+    -19.863
+   ],
+   [
+    "Purchases of common stock",
+    -26.132
+   ],
+   [
+    "Dividends paid",
+    -180.216
+   ],
+   [
+    "Share-based compensation, shares withheld for taxes",
+    -22.144
+   ],
+   [
+    "Other, net (financing)",
+    -1.564
+   ],
+   [
+    "Net cash provided by (used for) financing activities",
+    234.662
+   ],
+   [
+    "Net increase in cash and cash equivalents and restricted cash",
+    923.507
+   ],
+   [
+    "Cash and cash equivalents and restricted cash at beginning of year",
+    274.506
+   ],
+   [
+    "Cash and cash equivalents and restricted cash at end of year",
+    1198.013
+   ]
+  ],
+  "notes": "FY2020 10-K / Q4-20 release (USD thousands /1000). wc_change = 'Changes in assets and liabilities before initial effects of business acquisitions and dispositions' (-39,710; sum of 10-K detail lines). other_fin = debt issuance & exchange costs (-15.4) + settlement of interest rate derivatives (-19.9) + shares withheld for taxes (-22.1) + other, net (-1.6; includes finance lease payments, later reclassified to 'Payment of finance leases' in the 2021 10-K). No stock option proceeds line presented (stock_proceeds null)."
+ },
+ "bs": {
+  "cash": 1197.1,
+  "restricted_cash": 0.9,
+  "ar_net": 556.3,
+  "inventories": 448.6,
+  "other_current": 74.3,
+  "assets_held_for_sale": null,
+  "total_current_assets": 2277.2,
+  "invest_lt_rec": 34.3,
+  "ppe_net": 4426.0,
+  "rou_assets": 423.1,
+  "goodwill": 3172.1,
+  "intangibles": 1123.5,
+  "other_noncurrent": 230.7,
+  "total_assets": 11686.9,
+  "current_maturities": 515.4,
+  "short_term_debt": 0.0,
+  "payables": 273.1,
+  "other_current_liab": 259.4,
+  "liab_held_for_sale": null,
+  "total_current_liab": 1047.9,
+  "ltd": 2772.2,
+  "deferred_tax": 706.1,
+  "deferred_revenue": 174.0,
+  "lt_lease": 399.6,
+  "other_noncurrent_liab": 559.8,
+  "total_liabilities": 5659.6,
+  "common_stock": 132.5,
+  "capital_excess": 2802.0,
+  "retained_earnings": 3274.1,
+  "aoci": -181.3,
+  "total_vulcan_equity": 6027.3,
+  "nci": 0.0,
+  "total_equity": 6027.3,
+  "total_liab_equity": 11686.9,
+  "shares_outstanding_end": 132.516,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    1197.068
+   ],
+   [
+    "Restricted cash",
+    0.945
+   ],
+   [
+    "Accounts and notes receivable, gross",
+    558.848
+   ],
+   [
+    "Allowance for doubtful accounts",
+    -2.551
+   ],
+   [
+    "Accounts and notes receivable, net",
+    556.297
+   ],
+   [
+    "Finished products",
+    378.389
+   ],
+   [
+    "Raw materials",
+    33.78
+   ],
+   [
+    "Products in process",
+    4.555
+   ],
+   [
+    "Operating supplies and other",
+    31.861
+   ],
+   [
+    "Inventories",
+    448.585
+   ],
+   [
+    "Other current assets",
+    74.27
+   ],
+   [
+    "Total current assets",
+    2277.165
+   ],
+   [
+    "Investments and long-term receivables",
+    34.301
+   ],
+   [
+    "Property, plant & equipment, cost",
+    9102.086
+   ],
+   [
+    "Allowances for depreciation, depletion & amortization",
+    -4676.087
+   ],
+   [
+    "Property, plant & equipment, net",
+    4425.999
+   ],
+   [
+    "Operating lease right-of-use assets, net",
+    423.128
+   ],
+   [
+    "Goodwill",
+    3172.112
+   ],
+   [
+    "Other intangible assets, net",
+    1123.544
+   ],
+   [
+    "Other noncurrent assets",
+    230.656
+   ],
+   [
+    "Total assets",
+    11686.905
+   ],
+   [
+    "Current maturities of long-term debt",
+    515.435
+   ],
+   [
+    "Trade payables and accruals",
+    273.08
+   ],
+   [
+    "Other current liabilities",
+    259.368
+   ],
+   [
+    "Total current liabilities",
+    1047.883
+   ],
+   [
+    "Long-term debt",
+    2772.24
+   ],
+   [
+    "Deferred income taxes, net",
+    706.05
+   ],
+   [
+    "Deferred revenue",
+    174.045
+   ],
+   [
+    "Operating lease liabilities",
+    399.582
+   ],
+   [
+    "Other noncurrent liabilities",
+    559.775
+   ],
+   [
+    "Total liabilities",
+    5659.575
+   ],
+   [
+    "Common stock, $1 par value",
+    132.516
+   ],
+   [
+    "Capital in excess of par value",
+    2802.012
+   ],
+   [
+    "Retained earnings",
+    3274.107
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -181.305
+   ],
+   [
+    "Total equity",
+    6027.33
+   ],
+   [
+    "Total liabilities and equity",
+    11686.905
+   ]
+  ],
+  "notes": "Q4-20 release Table B / 2020 10-K (thousands/1000). short_term_debt 0 per 10-K debt note (no line on face of BS). shares_outstanding_end = common stock $1 par (132,516k)."
+ },
+ "extra": {
+  "reserves_bn_tons": 15.9,
+  "dps_declared": 1.36,
+  "capex_by_segment": {
+   "aggregates": 331.9,
+   "asphalt": 19.8,
+   "concrete": 11.7,
+   "cement": null,
+   "calcium": 0.0,
+   "corporate": 0.0
+  },
+  "seg_dda_annual": {
+   "aggregates": 321.1,
+   "asphalt": 35.0,
+   "concrete": 16.0,
+   "cement": null,
+   "calcium": 0.2,
+   "other": 24.5
+  },
+  "employees": 8431,
+  "acquisition_revenue_contribution": null,
+  "notes": "10-K 2020: 15.9bn tons proven & probable reserves; 8,431 employees in the U.S. as of 1-Jan-2021. Segment capex total 363.4 (accrual basis, differs from CF capex 362.2). dps_declared = 'Cash dividends per share' 1.36 (4 x 0.34). 2020 acquisitions (Texas asphalt, 43.2 cash) \u2013 revenue contribution not disclosed."
+ },
+ "checks": [
+  "ebitda (schema formula, excl disc-ops add-back): FAIL 1271.5 vs 1275.0"
+ ]
+}

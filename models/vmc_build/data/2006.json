@@ -1,0 +1,573 @@
+{
+ "period": "2006",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/103973/000115752307000853/a5323283ex99_1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/103973/000095014407001601/g05561e10vk.htm",
+  "10k_ex13_annual_report": "https://www.sec.gov/Archives/edgar/data/103973/000095014407001601/g05561exv13.htm",
+  "price_source_fy07_release": "https://www.sec.gov/Archives/edgar/data/1396009/000115752308001380/a5610709ex99_1.htm",
+  "seg_recast_fy08_10k": "https://www.sec.gov/Archives/edgar/data/1396009/000095014409001772/g17356e10vk.htm",
+  "seg_recast_fy07_10k_ex13": "https://www.sec.gov/Archives/edgar/data/1396009/000095014408001522/g11999exv13.htm"
+ },
+ "seg": {
+  "agg_rev": 2131.9,
+  "agg_interseg": null,
+  "agg_fa_rev": 1991.3,
+  "agg_freight_rev": 140.6,
+  "agg_other_rev": null,
+  "agg_tons": 255.4,
+  "agg_price": 8.3,
+  "agg_gp": null,
+  "agg_dda": null,
+  "agg_cgp": null,
+  "asph_rev": 500.2,
+  "asph_interseg": null,
+  "asph_tons": 11.6,
+  "asph_price": 43.12,
+  "asph_gp": null,
+  "asph_dda": null,
+  "asph_cgp": null,
+  "conc_rev": 260.7,
+  "conc_interseg": null,
+  "conc_cy": 2.9,
+  "conc_price": 90.37,
+  "conc_gp": null,
+  "conc_dda": null,
+  "conc_cgp": null,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": null,
+  "calc_gp": null,
+  "calc_dda": null,
+  "other_seg_label": "Other products (product line)",
+  "other_seg_rev": 148.3,
+  "other_seg_gp": null,
+  "seg_sales_total": 3041.1,
+  "interseg_total": null,
+  "delivery_rev": 301.4,
+  "other_dda": null,
+  "total_dda": 224.7,
+  "gp_total": 932.0,
+  "notes": "As originally reported, Vulcan had ONE reportable segment (Construction Materials) in FY2006; only net sales by product line (customer sales, excl. internal/intersegment) were disclosed (Q4-06 release Table D / 10-K Note 15): Aggregates 2,131.9 incl. freight to remote distribution sites 140.6 (aggregates excl. that freight = 1,991.3, put in agg_fa_rev), Asphalt mix 500.2, Concrete 260.7, Other products 148.3. No product-line gross profit or DDA published -> agg_gp/asph_gp/conc_gp/dda null; gp_total = consolidated gross profit. agg_tons = total shipments incl. 12.9m internal tons (customer tons 242.5). The FY2006 release published no $/ton; agg_price 8.30 (freight-adjusted, incl. internal sales), asph_price 43.12 and conc_price 90.37 are the 2006 comparatives first published in the Q4-07 release. Segment checks: revenue check passes (3,041.1 + 301.4 delivery = 3,342.5); segment GP and segment DDA checks not applicable (not disclosed). total_dda = 224.7 from release (continuing ops); CF shows 224.7 incl. disc. ops. See seg_recast for the 3-segment recast."
+ },
+ "seg_recast": {
+  "agg_rev": 2405.5,
+  "agg_interseg": null,
+  "agg_fa_rev": null,
+  "agg_freight_rev": null,
+  "agg_other_rev": null,
+  "agg_tons": 255.4,
+  "agg_price": 8.3,
+  "agg_gp": 819.0,
+  "agg_dda": 210.3,
+  "agg_cgp": null,
+  "asph_rev": null,
+  "asph_interseg": null,
+  "asph_tons": 11.6,
+  "asph_price": 43.12,
+  "asph_gp": null,
+  "asph_dda": null,
+  "asph_cgp": null,
+  "conc_rev": null,
+  "conc_interseg": null,
+  "conc_cy": 2.9,
+  "conc_price": 90.37,
+  "conc_gp": null,
+  "conc_dda": null,
+  "conc_cgp": null,
+  "cem_rev": 0.0,
+  "cem_interseg": null,
+  "cem_gp": 0.0,
+  "cem_dda": 0.0,
+  "calc_rev": null,
+  "calc_gp": null,
+  "calc_dda": null,
+  "other_seg_label": "Asphalt mix and Concrete (combined reporting segment)",
+  "other_seg_rev": 760.9,
+  "other_seg_gp": 112.9,
+  "seg_sales_total": 3166.4,
+  "interseg_total": -125.3,
+  "delivery_rev": 301.4,
+  "other_dda": 2.0,
+  "total_dda": 226.4,
+  "gp_total": 931.9,
+  "notes": "Recast from FY2008 10-K Note 15 / Item 1 segment table (three reportable segments: Aggregates; Asphalt mix and Concrete; Cement). The FY2008 10-K does NOT split Asphalt mix and Concrete (they are combined into one reporting segment), so the combined segment is in other_seg_* (other_seg_dda=14.1 added key) and asph_*/conc_* revenue/GP are null. Segment revenues include intersegment sales; per-segment intersegment split not disclosed for 2006 (total -125.3). The FY2007 10-K Ex.13 shows 2006 on a net-of-intersegment basis: Aggregates 2,280.2, Asphalt mix and Concrete 760.9 (same GP/DDA). DDA 226.4 and GP 931.9 reflect the FY2007 retrospective FSP AUG AIR-1 restatement (original: DDA 224.7, GP 932.0). Capex by segment (FY2007/08 10-K): Aggregates 425.5, Asphalt mix & Concrete 30.6, Corporate 2.8.",
+  "other_seg_dda": 14.1,
+  "other_seg_interseg": null
+ },
+ "is": {
+  "total_rev": 3342.5,
+  "net_sales": 3041.1,
+  "delivery_rev": 301.4,
+  "cost_of_rev": 2410.5,
+  "gp": 932.0,
+  "sag": 264.4,
+  "gain_sale": 5.6,
+  "other_op_lines": [
+   [
+    "Other operating (income) expense, net",
+    21.9
+   ]
+  ],
+  "other_op": 21.9,
+  "op_earnings": 695.1,
+  "nonop": 28.5,
+  "interest": 20.1,
+  "ebt": 703.5,
+  "tax": 226.0,
+  "cont_ops": 477.5,
+  "disc_ops": -10.0,
+  "net_earnings": 467.5,
+  "nci": 0.0,
+  "ni_vulcan": 467.5,
+  "shares_basic": 97.6,
+  "shares_diluted": 99.8,
+  "eps_cont_dil": 4.79,
+  "eps_dil": 4.69,
+  "eps_basic": 4.79,
+  "dps": 1.48,
+  "notes": "Q4-06 release / FY2006 10-K as originally reported (identical). interest = interest expense 26.3 - interest income 6.2. Other income, net 28.5 includes a 28.7 gain from the ECU earn-out carrying-value increase. Other operating income includes the 24.8 Bellwood contractual-rights gain. Later restated in the FY2007 10-K (FSP AUG AIR-1): GP 931.9, op earnings 695.1, EBT 703.5, tax 223.3, cont ops 480.2, net earnings 470.2, diluted EPS 4.71."
+ },
+ "ngaap": {
+  "ebitda_pub": null,
+  "adj_ebitda_pub": null,
+  "ebitda_bridge_tax": null,
+  "ebitda_bridge_lines": [],
+  "adj_items": {
+   "disc_ops": null,
+   "gain_sale": null,
+   "impairment": null,
+   "divested_ops": null,
+   "acquisition": null,
+   "restructuring": null,
+   "legal_env": null,
+   "pension": null,
+   "other": null,
+   "other_label": null
+  },
+  "adj_eps_pub": 4.47,
+  "eps_bridge_lines": [
+   [
+    "GAAP Diluted earnings per share from continuing operations",
+    4.79
+   ],
+   [
+    "After-tax gain per diluted share resulting from the sale of contractual rights",
+    -0.15
+   ],
+   [
+    "After-tax gain per diluted share resulting from the adjustment in the carrying value of the ECU earn-out",
+    -0.17
+   ],
+   [
+    "Earnings per share from continuing operations, excluding gains on sale of contractual rights and adjustment in the carrying value of the ECU earn-out, net of tax",
+    4.47
+   ]
+  ],
+  "eps_items_after_tax_ps": -0.32,
+  "eps_discrete_tax_ps": null,
+  "eps_bridge_start_ps": 4.79,
+  "agg_cgp_per_ton_pub": null,
+  "roic_pub": null,
+  "ebt_bridge_lines": [
+   [
+    "GAAP Earnings from continuing operations before income taxes",
+    703.5
+   ],
+   [
+    "Gain on sale of contractual rights",
+    -24.8
+   ],
+   [
+    "Gain from adjustment in the carrying value of the ECU earn-out",
+    -28.7
+   ],
+   [
+    "Earnings from continuing operations before income taxes, excluding gains on sale of contractual rights and adjustment in the carrying value of the ECU earn-out",
+    649.9
+   ]
+  ],
+  "notes": "No EBITDA published in the FY2006 release/10-K (null). The Q4-07 release later published 2006 EBITDA of 950.0 on the restated basis (EBIT 723.6 + DDA 226.4). 'Adjusted' = earnings from continuing ops excluding the Bellwood contractual-rights gain (pre-tax 24.8, after-tax 14.8) and the ECU earn-out carrying-value gain (pre-tax 28.7, after-tax 17.2); adjusted after-tax cont. earnings 445.4. Pre-tax EBT reconciliation in ebt_bridge_lines (added key). adj_items left null because there is no EBITDA->Adjusted EBITDA bridge; ngaap EBITDA checks not applicable."
+ },
+ "cf": {
+  "net_earnings": 467.5,
+  "dda": 224.7,
+  "noncash_lease": null,
+  "gain_sale": -30.4,
+  "pension_contrib": -1.4,
+  "sbc": 14.4,
+  "deferred_tax": 12.0,
+  "wc_change": -118.3,
+  "other_op": 10.9,
+  "cfo": 579.3,
+  "capex": -435.2,
+  "proceeds_ppe": 7.9,
+  "proceeds_bus": 141.9,
+  "acquisitions": -20.5,
+  "other_inv": 200.9,
+  "cfi": -105.0,
+  "debt_proceeds": 198.9,
+  "debt_repay": -272.5,
+  "buyback": -522.8,
+  "dividends": -144.1,
+  "stock_proceeds": 28.9,
+  "other_fin": 17.4,
+  "cff": -694.2,
+  "net_change": -219.9,
+  "cash_begin": 275.1,
+  "cash_end": 55.2,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net earnings",
+    467.5
+   ],
+   [
+    "Depreciation, depletion, accretion and amortization",
+    224.7
+   ],
+   [
+    "Net gain on sale of property, plant and equipment",
+    -5.6
+   ],
+   [
+    "Net gain on sale of contractual rights",
+    -24.8
+   ],
+   [
+    "Contributions to pension plans",
+    -1.4
+   ],
+   [
+    "Share-based compensation",
+    14.4
+   ],
+   [
+    "Accounts and notes receivable",
+    -56.6
+   ],
+   [
+    "Inventories",
+    -28.6
+   ],
+   [
+    "Deferred income taxes (assets)",
+    -2.6
+   ],
+   [
+    "Prepaid expenses",
+    1.8
+   ],
+   [
+    "Customer long-term receivables",
+    0.0
+   ],
+   [
+    "Other assets",
+    13.7
+   ],
+   [
+    "Accrued interest and income taxes",
+    -35.8
+   ],
+   [
+    "Trade payables and other accruals",
+    0.9
+   ],
+   [
+    "Deferred income taxes (liabilities)",
+    14.5
+   ],
+   [
+    "Other noncurrent liabilities",
+    -1.6
+   ],
+   [
+    "Other, net (operating)",
+    -1.2
+   ],
+   [
+    "Net cash provided by operating activities",
+    579.3
+   ],
+   [
+    "Purchases of property, plant and equipment",
+    -435.2
+   ],
+   [
+    "Proceeds from sale of property, plant and equipment",
+    7.9
+   ],
+   [
+    "Proceeds from sale of contractual rights, net of cash transaction fees",
+    24.8
+   ],
+   [
+    "Proceeds from sale of Chemicals business, net of cash transaction fees",
+    141.9
+   ],
+   [
+    "Payment for businesses acquired, net of acquired cash",
+    -20.5
+   ],
+   [
+    "Proceeds from sales and maturities of medium-term investments",
+    175.1
+   ],
+   [
+    "Change in investments and long-term receivables",
+    0.3
+   ],
+   [
+    "Other, net (investing)",
+    0.6
+   ],
+   [
+    "Net cash used for investing activities",
+    -105.0
+   ],
+   [
+    "Net short-term borrowings (payments)",
+    198.9
+   ],
+   [
+    "Payment of short-term debt and current maturities",
+    -272.5
+   ],
+   [
+    "Purchases of common stock",
+    -522.8
+   ],
+   [
+    "Dividends paid",
+    -144.1
+   ],
+   [
+    "Proceeds from exercise of stock options",
+    28.9
+   ],
+   [
+    "Excess tax benefits from exercise of stock options",
+    17.4
+   ],
+   [
+    "Net cash used for financing activities",
+    -694.2
+   ],
+   [
+    "Net (decrease) increase in cash and cash equivalents",
+    -219.9
+   ]
+  ],
+  "notes": "FY2006 10-K (Ex.13) cash flow statement as originally reported. gain_sale combines net gain on sale of PP&E (-5.6) and net gain on sale of Bellwood contractual rights (-24.8). deferred_tax = deferred-tax lines in assets (-2.6) and liabilities (+14.5). wc_change = receivables, inventories, prepaids, accrued interest & income taxes, trade payables. proceeds_bus = Chemicals divestiture proceeds (earn-out receipts); other_inv includes contractual-rights proceeds 24.8 and medium-term investment maturities 175.1. Line labels '(assets)/(liabilities)/(operating)/(investing)' suffixes added for disambiguation."
+ },
+ "bs": {
+  "cash": 55.2,
+  "restricted_cash": null,
+  "ar_net": 391.5,
+  "inventories": 243.5,
+  "other_current": 41.2,
+  "assets_held_for_sale": null,
+  "total_current_assets": 731.4,
+  "invest_lt_rec": 6.7,
+  "ppe_net": 1869.1,
+  "rou_assets": null,
+  "goodwill": 620.2,
+  "intangibles": null,
+  "other_noncurrent": 196.9,
+  "total_assets": 3424.2,
+  "current_maturities": 0.6,
+  "short_term_debt": 198.9,
+  "payables": 154.2,
+  "other_current_liab": 139.9,
+  "liab_held_for_sale": null,
+  "total_current_liab": 493.7,
+  "ltd": 322.1,
+  "deferred_tax": 287.9,
+  "deferred_revenue": null,
+  "lt_lease": null,
+  "other_noncurrent_liab": 319.5,
+  "total_liabilities": 1423.1,
+  "common_stock": 139.7,
+  "capital_excess": 191.7,
+  "retained_earnings": 2972.7,
+  "aoci": -5.0,
+  "treasury_stock": -1298.1,
+  "total_vulcan_equity": 2001.1,
+  "nci": null,
+  "total_equity": 2001.1,
+  "total_liab_equity": 3424.2,
+  "shares_outstanding_end": 94.6,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    55.2
+   ],
+   [
+    "Medium-term investments",
+    0.0
+   ],
+   [
+    "Accounts and notes receivable - customers, net",
+    344.1
+   ],
+   [
+    "Accounts and notes receivable - other",
+    47.3
+   ],
+   [
+    "Inventories",
+    243.5
+   ],
+   [
+    "Deferred income taxes (current)",
+    25.8
+   ],
+   [
+    "Prepaid expenses",
+    15.4
+   ],
+   [
+    "Total current assets",
+    731.4
+   ],
+   [
+    "Investments and long-term receivables",
+    6.7
+   ],
+   [
+    "Property, plant and equipment, net",
+    1869.1
+   ],
+   [
+    "Goodwill",
+    620.2
+   ],
+   [
+    "Other assets",
+    196.9
+   ],
+   [
+    "Total assets",
+    3424.2
+   ],
+   [
+    "Current maturities of long-term debt",
+    0.6
+   ],
+   [
+    "Short-term borrowings",
+    198.9
+   ],
+   [
+    "Trade payables and accruals",
+    154.2
+   ],
+   [
+    "Accrued salaries, wages and management incentives",
+    74.1
+   ],
+   [
+    "Accrued interest",
+    4.7
+   ],
+   [
+    "Current portion of income taxes",
+    12.0
+   ],
+   [
+    "Other accrued liabilities",
+    49.2
+   ],
+   [
+    "Total current liabilities",
+    493.7
+   ],
+   [
+    "Long-term debt",
+    322.1
+   ],
+   [
+    "Deferred income taxes",
+    287.9
+   ],
+   [
+    "Deferred management incentive and other compensation",
+    70.0
+   ],
+   [
+    "Other postretirement benefits",
+    85.3
+   ],
+   [
+    "Asset retirement obligations",
+    114.8
+   ],
+   [
+    "Noncurrent self-insurance reserve",
+    33.5
+   ],
+   [
+    "Other noncurrent liabilities",
+    15.8
+   ],
+   [
+    "Total liabilities",
+    1423.1
+   ],
+   [
+    "Common stock, $1 par value",
+    139.7
+   ],
+   [
+    "Capital in excess of par value",
+    191.7
+   ],
+   [
+    "Retained earnings",
+    2972.7
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -5.0
+   ],
+   [
+    "Treasury stock at cost",
+    -1298.1
+   ],
+   [
+    "Total shareholders' equity",
+    2001.1
+   ],
+   [
+    "Total liabilities and shareholders' equity",
+    3424.2
+   ]
+  ],
+  "notes": "FY2006 10-K (Ex.13) balance sheet as originally reported (audited; differs slightly from the condensed Q4 release, which showed current deferred taxes 20.1, total current assets 725.7, total assets 3,418.6 and LT deferred taxes 282.2). ar_net = customer (344.1) + other (47.3) receivables. other_current = current deferred taxes + prepaids. Intangibles were included in other assets (not split until the FY2008 10-K, which shows 2006 other intangibles 70.3). treasury_stock (-1,298.1) is an added key; total_vulcan_equity includes it. Shares outstanding = 139,705k issued - 45,099k treasury. Later restated (FSP AUG AIR-1, FY2007 10-K): retained earnings 2,982.5, total assets 3,427.8."
+ },
+ "extra": {
+  "reserves_bn_tons": 11.4,
+  "dps_declared": 1.48,
+  "capex_by_segment": {
+   "aggregates": 425.5,
+   "asphalt": 30.6,
+   "concrete": null,
+   "cement": 0.0,
+   "calcium": null,
+   "corporate": 2.8
+  },
+  "seg_dda_annual": {
+   "aggregates": 210.3,
+   "asphalt": 14.1,
+   "concrete": null,
+   "cement": 0.0,
+   "calcium": null,
+   "other": 2.0
+  },
+  "employees": 7983,
+  "acquisition_revenue_contribution": null,
+  "notes": "Reserves: 11.4bn tons zoned & permitted (FY2006 10-K). Employees = 2006 average (7,983). Capex by segment and segment DDA are from the recast in the FY2007/FY2008 10-Ks (not in the FY2006 10-K); 'asphalt' holds the combined Asphalt mix and Concrete segment. Total capex per 10-K incl. accrued = 458.9 (cash purchases of PP&E 435.2). Acquisitions 2006 total purchase price 20.5 (no revenue contribution disclosed). Share repurchases: 6,757,361 shares for ~522.8."
+ }
+}

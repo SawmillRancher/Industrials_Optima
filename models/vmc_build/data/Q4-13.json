@@ -1,0 +1,131 @@
+{
+ "period": "Q4-13",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114420414006484/v367519_ex99-1.htm"
+ },
+ "seg": {
+  "agg_rev": 470.4,
+  "agg_interseg": -50.8,
+  "agg_fa_rev": null,
+  "agg_freight_rev": null,
+  "agg_other_rev": null,
+  "agg_tons": 35.7,
+  "agg_price": 10.82,
+  "agg_gp": 111.6,
+  "agg_dda": 53.6,
+  "agg_cgp": 165.2,
+  "asph_rev": 98.3,
+  "asph_interseg": 0.0,
+  "asph_tons": 1.7,
+  "asph_price": 54.93,
+  "asph_gp": 7.9,
+  "asph_dda": 2.3,
+  "asph_cgp": null,
+  "conc_rev": 121.8,
+  "conc_interseg": 0.0,
+  "conc_cy": 1.2,
+  "conc_price": 93.12,
+  "conc_gp": -5.0,
+  "conc_dda": 8.5,
+  "conc_cgp": null,
+  "cem_rev": 25.7,
+  "cem_interseg": -12.4,
+  "cem_gp": 2.8,
+  "cem_dda": 4.3,
+  "cem_tons": 0.28,
+  "cem_price": 84.73,
+  "calc_rev": null,
+  "calc_gp": null,
+  "calc_dda": null,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 716.1,
+  "interseg_total": -63.2,
+  "delivery_rev": 27.4,
+  "other_dda": 5.6,
+  "total_dda": 74.2,
+  "gp_total": 117.3,
+  "notes": "Basis: that quarter's earnings release Table D, three-month column, as originally reported. Segments: Aggregates, Concrete, Asphalt Mix, Cement (Cement includes calcium products; calc_* null). agg_tons = total aggregates tons incl. internal tons (customer tons include tons sold on behalf of the VPP purchaser). agg_price = freight-adjusted ASP incl. internal sales, excl. third-party VPP tons. Intersegment '-' shown as 0.0. seg_sales_total and interseg_total are computed sums of the published segment lines (no total line published). Pre-2018 presentation: total revenues = net sales + delivery revenues (seg.delivery_rev). cem_tons/cem_price are extra fields (cement tons incl. internal, $/ton). agg_cgp = published Aggregates segment cash gross profit. Q4 taken directly from the Q4-13 release three-month column (not derived)."
+ },
+ "is": {
+  "total_rev": 680.2,
+  "net_sales": 652.9,
+  "delivery_rev": 27.4,
+  "cost_of_rev": 562.9,
+  "gp": 117.3,
+  "sag": 64.0,
+  "gain_sale": 2.4,
+  "other_op_lines": [
+   [
+    "Restructuring charges",
+    0.0
+   ],
+   [
+    "Exchange offer costs",
+    0.0
+   ],
+   [
+    "Other operating expense, net",
+    -1.9
+   ]
+  ],
+  "other_op": -1.9,
+  "op_earnings": 53.8,
+  "nonop": 2.6,
+  "interest": 48.9,
+  "ebt": 7.5,
+  "tax": -2.6,
+  "cont_ops": 10.1,
+  "disc_ops": -1.0,
+  "net_earnings": 9.1,
+  "nci": 0.0,
+  "ni_vulcan": 9.1,
+  "shares_basic": 130.4,
+  "shares_diluted": 131.7,
+  "eps_cont_dil": 0.08,
+  "eps_dil": 0.07,
+  "eps_basic": 0.07,
+  "dps": 0.01
+ },
+ "ngaap": {
+  "ebitda_pub": 130.6,
+  "adj_ebitda_pub": 129.3,
+  "ebitda_bridge_tax": -2.6,
+  "ebitda_bridge_disc_ops": 1.0,
+  "ebitda_bridge_lines": [
+   [
+    "Gain on sale of real estate and businesses",
+    -1.4
+   ],
+   [
+    "Restructuring charges",
+    0.0
+   ],
+   [
+    "Exchange offer costs",
+    0.0
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": null,
+   "gain_sale": -1.4,
+   "impairment": null,
+   "divested_ops": null,
+   "acquisition": null,
+   "restructuring": 0.0,
+   "legal_env": null,
+   "pension": null,
+   "other": 0.0,
+   "other_label": "Exchange offer costs (Martin Marietta unsolicited exchange offer, Dec-2011 to 2012)"
+  },
+  "adj_eps_pub": null,
+  "eps_bridge_lines": [],
+  "eps_items_after_tax_ps": null,
+  "eps_discrete_tax_ps": null,
+  "eps_bridge_start_ps": null,
+  "agg_cgp_per_ton_pub": 4.62,
+  "roic_pub": null,
+  "notes": "Vulcan's EBITDA reconciliation starts from net earnings, adds income taxes (continuing ops), interest expense net, and REMOVES (earnings) loss on discontinued operations net of tax (shown in ebitda_bridge_disc_ops, signed as added), then adds DDA&A. Hence ni_vulcan + ebitda_bridge_tax + interest + total_dda differs from ebitda_pub by exactly ebitda_bridge_disc_ops; the check passes once that line is included. Adjusted EBITDA = EBITDA excluding gain on sale of real estate and businesses, restructuring charges and exchange offer costs (Martin Marietta unsolicited exchange offer; zero in 2013). No adjusted EPS published (null). VPP: Sept-2013 Vulcan sold a percentage of future production from aggregates reserves (volumetric production payment) for $154.0m gross / $153.1m net, recorded as deferred revenue (not revenue, not gain) and amortized to revenue on unit-of-sales basis; an earlier VPP closed Dec-2012 ($73.6m net). Cash gross profit per ton $4.62 from release narrative."
+ }
+}

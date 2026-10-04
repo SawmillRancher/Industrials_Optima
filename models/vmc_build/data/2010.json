@@ -1,0 +1,510 @@
+{
+ "period": "2010",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114420411005577/v209828_ex99-1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000095012311019699/g24488e10vk.htm"
+ },
+ "seg": {
+  "agg_rev": 1766.9,
+  "agg_interseg": -154.1,
+  "agg_fa_rev": null,
+  "agg_freight_rev": null,
+  "agg_other_rev": null,
+  "agg_tons": 147.6,
+  "agg_price": 10.13,
+  "agg_gp": 320.2,
+  "agg_dda": 293.0,
+  "agg_cgp": null,
+  "asph_rev": 369.9,
+  "asph_interseg": 0.0,
+  "asph_tons": 7.2,
+  "asph_price": 50.58,
+  "asph_gp": 29.3,
+  "asph_dda": 8.7,
+  "asph_cgp": null,
+  "conc_rev": 383.2,
+  "conc_interseg": -0.0,
+  "conc_cy": 4.1,
+  "conc_price": 86.95,
+  "conc_gp": -45.0,
+  "conc_dda": 53.6,
+  "conc_cgp": null,
+  "cem_rev": 80.2,
+  "cem_interseg": -40.2,
+  "cem_gp": -3.9,
+  "cem_dda": 20.9,
+  "cem_tons": 0.83,
+  "cem_price": 79.27,
+  "calc_rev": null,
+  "calc_gp": null,
+  "calc_dda": null,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 2600.2,
+  "interseg_total": -194.3,
+  "delivery_rev": 152.9,
+  "other_dda": 5.9,
+  "total_dda": 382.1,
+  "gp_total": 300.7,
+  "notes": "Basis: Q4 earnings release Table D twelve-month column (cross-checked to 10-K segment note). Segments Aggregates, Concrete, Asphalt mix, Cement (Cement includes calcium products; calc_* null). agg_tons = total incl. internal tons. agg_price = freight-adjusted ASP incl. internal sales. Intersegment '-' shown as 0.0. seg_sales_total / interseg_total computed as sums of published segment lines. Total revenues = net sales + delivery revenues. cem_tons/cem_price are extra fields. Concrete intersegment sales were $6 thousand (shows as -0.0). Aggregates cash gross profit not published in the FY2010 release (null). Other DDA = 'Corporate and other unallocated'. FY2010 was the first year Asphalt mix and Concrete were reported as separate segments."
+ },
+ "is": {
+  "total_rev": 2558.9,
+  "net_sales": 2405.9,
+  "delivery_rev": 152.9,
+  "cost_of_rev": 2258.1,
+  "gp": 300.7,
+  "sag": 327.5,
+  "gain_sale": 59.3,
+  "other_op_lines": [
+   [
+    "Charge for legal settlement",
+    -40.0
+   ],
+   [
+    "Other operating income (expense), net",
+    -7.0
+   ]
+  ],
+  "other_op": -47.0,
+  "op_earnings": -14.5,
+  "nonop": 3.1,
+  "interest": 180.7,
+  "ebt": -192.2,
+  "tax": -89.7,
+  "cont_ops": -102.5,
+  "disc_ops": 6.1,
+  "net_earnings": -96.5,
+  "nci": 0.0,
+  "ni_vulcan": -96.5,
+  "shares_basic": 128.1,
+  "shares_diluted": 128.1,
+  "eps_cont_dil": -0.8,
+  "eps_dil": -0.75,
+  "eps_basic": -0.75,
+  "dps": 1.0
+ },
+ "ngaap": {
+  "ebitda_pub": 370.6,
+  "adj_ebitda_pub": null,
+  "ebitda_bridge_tax": -89.7,
+  "ebitda_bridge_disc_ops": -6.1,
+  "ebitda_bridge_lines": [],
+  "adj_items": {
+   "disc_ops": null,
+   "gain_sale": null,
+   "impairment": null,
+   "divested_ops": null,
+   "acquisition": null,
+   "restructuring": null,
+   "legal_env": null,
+   "pension": null,
+   "other": null,
+   "other_label": null
+  },
+  "adj_eps_pub": null,
+  "eps_bridge_lines": [],
+  "eps_items_after_tax_ps": null,
+  "eps_discrete_tax_ps": null,
+  "eps_bridge_start_ps": null,
+  "agg_cgp_per_ton_pub": null,
+  "roic_pub": null,
+  "notes": "Vulcan's EBITDA reconciliation starts from net earnings, adds income taxes (continuing ops), interest expense net, and REMOVES (earnings) loss on discontinued operations net of tax (shown in ebitda_bridge_disc_ops, signed as added), then adds DDA&A. Hence ni_vulcan + ebitda_bridge_tax + interest + total_dda differs from ebitda_pub by exactly ebitda_bridge_disc_ops; the check passes once that line is included. FY2010 release published EBITDA ($370.6m) and cash earnings ($227.7m) only; no Adjusted EBITDA (adj_ebitda_pub and adj_items null). Release narrative: results include a net pretax expense of $22m (Illinois DOT/Lower Illinois lawsuit settlement charge $40.0m, gain on sale of non-strategic rural Virginia assets, and other Q4 adjustments/charges incl. ~$10m impairment of non-core assets and settlement of prior obligations; SAG included ~$24m of donated real estate, severance and legal items). The FY2011 release later showed 2010 Adjusted EBITDA = EBITDA = $370.6m. No adjusted EPS published."
+ },
+ "cf": {
+  "net_earnings": -96.5,
+  "dda": 382.1,
+  "gain_sale": -68.1,
+  "pension_contrib": -24.5,
+  "sbc": 20.6,
+  "deferred_tax": -51.7,
+  "wc_change": 19.9,
+  "other_op": 20.8,
+  "cfo": 202.7,
+  "capex": -86.3,
+  "proceeds_ppe": 13.6,
+  "proceeds_bus": 51.0,
+  "acquisitions": -70.5,
+  "other_inv": 3.9,
+  "cfi": -88.4,
+  "debt_proceeds": 499.0,
+  "debt_repay": -519.2,
+  "buyback": 0.0,
+  "dividends": -127.8,
+  "stock_proceeds": 62.2,
+  "other_fin": -3.3,
+  "cff": -89.1,
+  "net_change": 25.3,
+  "cash_begin": 22.3,
+  "cash_end": 47.5,
+  "noncash_lease": null,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net earnings (loss)",
+    -96.5
+   ],
+   [
+    "Depreciation, depletion, accretion and amortization",
+    382.1
+   ],
+   [
+    "Net gain on sale of property, plant & equipment and businesses",
+    -68.1
+   ],
+   [
+    "Contributions to pension plans",
+    -24.5
+   ],
+   [
+    "Share-based compensation",
+    20.6
+   ],
+   [
+    "Excess tax benefits from share-based compensation",
+    -0.8
+   ],
+   [
+    "Deferred tax provision",
+    -51.7
+   ],
+   [
+    "Accounts and notes receivable",
+    -49.7
+   ],
+   [
+    "Inventories",
+    6.7
+   ],
+   [
+    "Prepaid expenses",
+    22.9
+   ],
+   [
+    "Other assets",
+    -58.2
+   ],
+   [
+    "Accrued interest and income taxes",
+    12.7
+   ],
+   [
+    "Trade payables and other accruals",
+    44.6
+   ],
+   [
+    "Other noncurrent liabilities",
+    41.0
+   ],
+   [
+    "Other, net",
+    21.6
+   ],
+   [
+    "Net cash provided by operating activities",
+    202.7
+   ],
+   [
+    "Purchases of property, plant & equipment",
+    -86.3
+   ],
+   [
+    "Proceeds from sale of property, plant & equipment",
+    13.6
+   ],
+   [
+    "Proceeds from sale of businesses, net of transaction costs",
+    51.0
+   ],
+   [
+    "Payment for businesses acquired, net of acquired cash",
+    -70.5
+   ],
+   [
+    "Reclassification of cash equivalents (to) from medium-term investments",
+    3.6
+   ],
+   [
+    "Redemption of medium-term investments",
+    0.0
+   ],
+   [
+    "Other, net",
+    0.3
+   ],
+   [
+    "Net cash used for investing activities",
+    -88.4
+   ],
+   [
+    "Net short-term borrowings (payments)",
+    49.0
+   ],
+   [
+    "Payment of current maturities and long-term debt",
+    -519.2
+   ],
+   [
+    "Proceeds from issuance of long-term debt, net of discounts",
+    450.0
+   ],
+   [
+    "Debt issuance costs",
+    -3.1
+   ],
+   [
+    "Proceeds from issuance of common stock",
+    41.7
+   ],
+   [
+    "Dividends paid",
+    -127.8
+   ],
+   [
+    "Proceeds from exercise of stock options",
+    20.5
+   ],
+   [
+    "Excess tax benefits from share-based compensation",
+    0.8
+   ],
+   [
+    "Other, net",
+    -1.0
+   ],
+   [
+    "Net cash used for financing activities",
+    -89.1
+   ],
+   [
+    "Net increase (decrease) in cash and cash equivalents",
+    25.3
+   ],
+   [
+    "Cash and cash equivalents at beginning of year",
+    22.3
+   ],
+   [
+    "Cash and cash equivalents at end of year",
+    47.5
+   ]
+  ],
+  "notes": "Source: FY2010 10-K cash flow statement. wc_change = sum of the seven changes-in-assets/liabilities lines (= release line 'Changes in assets and liabilities before initial effects of business acquisitions and dispositions' 19.9). other_op = excess tax benefits (-0.8) + other, net (21.6). other_inv = reclassification from medium-term investments 3.6 + redemption 0.0 + other 0.3. debt_proceeds = net short-term borrowings 49.0 + LT debt issued 450.0. stock_proceeds = common stock issued to 401(k) trustee 41.7 + option exercises 20.5. other_fin = debt issuance costs -3.1 + excess tax benefits 0.8 + other -1.0. Noncash: $53.9m stock contributed to pension plan."
+ },
+ "bs": {
+  "cash": 47.5,
+  "restricted_cash": 0.5,
+  "ar_net": 317.8,
+  "inventories": 319.8,
+  "other_current": 73.2,
+  "assets_held_for_sale": 13.2,
+  "total_current_assets": 772.1,
+  "invest_lt_rec": 37.4,
+  "ppe_net": 3632.9,
+  "rou_assets": null,
+  "goodwill": 3097.0,
+  "intangibles": 691.7,
+  "other_noncurrent": 106.8,
+  "total_assets": 8337.9,
+  "current_maturities": 5.2,
+  "short_term_debt": 285.5,
+  "payables": 102.3,
+  "other_current_liab": 172.5,
+  "liab_held_for_sale": 0.1,
+  "total_current_liab": 565.7,
+  "ltd": 2427.5,
+  "deferred_tax": 849.4,
+  "deferred_revenue": null,
+  "lt_lease": null,
+  "other_noncurrent_liab": 530.3,
+  "total_liabilities": 4372.9,
+  "common_stock": 128.6,
+  "capital_excess": 2500.9,
+  "retained_earnings": 1512.9,
+  "aoci": -177.3,
+  "total_vulcan_equity": 3965.0,
+  "nci": 0.0,
+  "total_equity": 3965.0,
+  "total_liab_equity": 8337.9,
+  "shares_outstanding_end": 128.6,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    47.5
+   ],
+   [
+    "Restricted cash",
+    0.5
+   ],
+   [
+    "Medium-term investments",
+    0.0
+   ],
+   [
+    "Accounts and notes receivable: Customers, net",
+    260.8
+   ],
+   [
+    "Accounts and notes receivable: Other",
+    57.0
+   ],
+   [
+    "Inventories",
+    319.8
+   ],
+   [
+    "Deferred income taxes",
+    53.8
+   ],
+   [
+    "Prepaid expenses",
+    19.4
+   ],
+   [
+    "Assets held for sale",
+    13.2
+   ],
+   [
+    "Total current assets",
+    772.1
+   ],
+   [
+    "Investments and long-term receivables",
+    37.4
+   ],
+   [
+    "Property, plant & equipment, net",
+    3632.9
+   ],
+   [
+    "Goodwill",
+    3097.0
+   ],
+   [
+    "Other intangible assets, net",
+    691.7
+   ],
+   [
+    "Other noncurrent assets",
+    106.8
+   ],
+   [
+    "Total assets",
+    8337.9
+   ],
+   [
+    "Current maturities of long-term debt",
+    5.2
+   ],
+   [
+    "Short-term borrowings",
+    285.5
+   ],
+   [
+    "Trade payables and accruals",
+    102.3
+   ],
+   [
+    "Accrued salaries, wages and management incentives",
+    48.8
+   ],
+   [
+    "Accrued interest",
+    11.2
+   ],
+   [
+    "Other accrued liabilities",
+    112.4
+   ],
+   [
+    "Liabilities of assets held for sale",
+    0.1
+   ],
+   [
+    "Total current liabilities",
+    565.7
+   ],
+   [
+    "Long-term debt",
+    2427.5
+   ],
+   [
+    "Deferred income taxes",
+    849.4
+   ],
+   [
+    "Deferred management incentive and other compensation",
+    32.4
+   ],
+   [
+    "Pension benefits",
+    127.1
+   ],
+   [
+    "Other postretirement benefits",
+    124.6
+   ],
+   [
+    "Asset retirement obligations",
+    162.7
+   ],
+   [
+    "Other noncurrent liabilities",
+    83.4
+   ],
+   [
+    "Total liabilities",
+    4372.9
+   ],
+   [
+    "Common stock, $1 par value",
+    128.6
+   ],
+   [
+    "Capital in excess of par value",
+    2500.9
+   ],
+   [
+    "Retained earnings",
+    1512.9
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -177.3
+   ],
+   [
+    "Total shareholders' equity",
+    3965.0
+   ],
+   [
+    "Total liabilities and shareholders' equity",
+    8337.9
+   ]
+  ],
+  "notes": "FY2010 10-K balance sheet as originally reported (matches Q4-10 release). Later restated in the FY2011 10-K for correction of current/deferred income tax errors: total assets 8,339.5, deferred taxes 843.6, other current liab 189.2 (release basis), retained earnings 1,503.7, equity 3,955.8. other_current = current deferred income taxes 53.8 + prepaid 19.4 (+ medium-term investments 0). other_current_liab = accrued salaries 48.8 + accrued interest 11.2 + other accrued 112.4. other_noncurrent_liab = deferred mgmt incentive 32.4 + pension 127.1 + OPEB 124.6 + ARO 162.7 + other 83.4. No noncontrolling interest. shares_outstanding_end = common shares issued (128.570m; par value line)."
+ },
+ "extra": {
+  "reserves_bn_tons": 14.7,
+  "dps_declared": 1.0,
+  "capex_by_segment": {
+   "aggregates": 60.6,
+   "asphalt": 4.5,
+   "concrete": 3.7,
+   "cement": 7.3,
+   "calcium": null,
+   "corporate": 3.3
+  },
+  "seg_dda_annual": {
+   "aggregates": 293.0,
+   "asphalt": 8.7,
+   "concrete": 53.6,
+   "cement": 20.9,
+   "calcium": null,
+   "other": 5.9
+  },
+  "employees": 7749,
+  "acquisition_revenue_contribution": null,
+  "notes": "10-K FY2010. Segment capex total $79.4m (accrual basis) vs cash capex $86.3m. Employees: 7,749 in the U.S. as of 1-Jan-2011 (plus 245 union hourly employees in Mexico; total Mexico headcount not disclosed). Reserves 14.7bn tons proven/probable."
+ }
+}

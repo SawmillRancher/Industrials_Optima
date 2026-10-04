@@ -1,0 +1,148 @@
+{
+ "period": "Q2-24",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114036124035798/ef20033639_ex99-1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000139600924000017/vmc-20240630.htm"
+ },
+ "seg": {
+  "agg_rev": 1613.5,
+  "agg_interseg": -117.6,
+  "agg_fa_rev": 1262.6,
+  "agg_freight_rev": 324.5,
+  "agg_other_rev": 26.4,
+  "agg_tons": 60.1,
+  "agg_price": 21.0,
+  "agg_gp": 528.5,
+  "agg_dda": 128.0,
+  "agg_cgp": 656.5,
+  "asph_rev": 351.2,
+  "asph_interseg": null,
+  "asph_tons": 4.0,
+  "asph_price": 78.8,
+  "asph_gp": 59.0,
+  "asph_dda": 11.0,
+  "asph_cgp": 70.0,
+  "conc_rev": 167.3,
+  "conc_interseg": null,
+  "conc_cy": 0.9,
+  "conc_price": 180.24,
+  "conc_gp": 4.7,
+  "conc_dda": 11.9,
+  "conc_cgp": 16.6,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": null,
+  "calc_gp": null,
+  "calc_dda": null,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 2132.0,
+  "interseg_total": -117.6,
+  "delivery_rev": null,
+  "other_dda": 5.9,
+  "total_dda": 156.8,
+  "gp_total": 592.2,
+  "notes": "Table D of release (segment revenues include intersegment; aggregates revenue incl. freight & delivery and service revenues). Only aggregates has intersegment sales. Freight/other revenues from Appendix 1 freight-adjusted revenue reconciliation; cash gross profit from Appendix 1."
+ },
+ "is": {
+  "total_rev": 2014.4,
+  "net_sales": null,
+  "delivery_rev": null,
+  "cost_of_rev": 1422.2,
+  "gp": 592.2,
+  "sag": 134.1,
+  "gain_sale": 3.8,
+  "other_op_lines": [
+   [
+    "Other operating expense, net",
+    -8.3
+   ]
+  ],
+  "other_op": -8.3,
+  "op_earnings": 453.6,
+  "nonop": -8.7,
+  "interest": 40.2,
+  "ebt": 404.7,
+  "tax": 94.4,
+  "cont_ops": 310.3,
+  "disc_ops": -2.0,
+  "net_earnings": 308.3,
+  "nci": 0.3,
+  "ni_vulcan": 308.0,
+  "shares_basic": 132.4,
+  "shares_diluted": 133.1,
+  "eps_cont_dil": 2.33,
+  "eps_dil": 2.31,
+  "eps_basic": 2.33,
+  "dps": 0.46
+ },
+ "ngaap": {
+  "ebitda_pub": 598.7,
+  "adj_ebitda_pub": 603.1,
+  "ebitda_bridge_tax": 93.7,
+  "ebitda_bridge_lines": [
+   [
+    "Loss on discontinued operations",
+    2.7
+   ],
+   [
+    "Gain on sale of real estate and businesses, net",
+    0.0
+   ],
+   [
+    "Charges associated with divested operations",
+    1.0
+   ],
+   [
+    "Acquisition related charges",
+    0.8
+   ],
+   [
+    "Loss on impairments",
+    0.0
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": 2.7,
+   "gain_sale": 0.0,
+   "impairment": 0.0,
+   "divested_ops": 1.0,
+   "acquisition": 0.8,
+   "restructuring": 0.0,
+   "legal_env": 0.0,
+   "pension": 0.0,
+   "other": 0.0,
+   "other_label": null
+  },
+  "adj_eps_pub": 2.35,
+  "eps_bridge_lines": [
+   [
+    "Net earnings attributable to Vulcan",
+    2.31
+   ],
+   [
+    "Items included in Adjusted EBITDA above, net of tax",
+    0.03
+   ],
+   [
+    "NOL carryforward valuation allowance",
+    0.01
+   ],
+   [
+    "Adjusted diluted EPS attributable to Vulcan from continuing operations",
+    2.35
+   ]
+  ],
+  "eps_items_after_tax_ps": 0.03,
+  "eps_discrete_tax_ps": 0.01,
+  "eps_bridge_start_ps": 2.31,
+  "agg_cgp_per_ton_pub": 10.92,
+  "roic_pub": 16.3,
+  "notes": "Vulcan EBITDA = net earnings attributable to Vulcan + income tax (incl. discontinued ops) + interest expense, net + DDA&A; Adjusted EBITDA excludes (gain) loss on discontinued ops (pre-tax), gains on sale of real estate and businesses, impairments, charges associated with divested operations, acquisition related charges (deals requiring antitrust clearance; 2024 incl. Wake Stone inventory step-up $6.4m) and, from Q1-26, CEO transition and reorganization charges. Adjusted EPS = diluted EPS (net earnings, incl. disc ops) + items included in Adjusted EBITDA net of tax + NOL carryforward valuation allowance. roic_pub = TTM ROIC (Adj. EBITDA / avg invested capital, 5-quarter average)."
+ },
+ "notes": null,
+ "checks_failed": []
+}

@@ -1,0 +1,170 @@
+# Vulcan Materials (VMC) data extraction — schema & rules
+
+Working dir: /tmp/claude-0/-home-user-Industrials-Optima/b286ab19-75c4-5cc9-9d34-04cb1e53f4b7/scratchpad
+
+## Sources (SEC EDGAR only — the Vulcan IR website is blocked; its releases are the 8-K Ex. 99.1 exhibits)
+- `filings.csv` lists every 10-K, 10-Q and earnings 8-K (Item 2.02) since 2006 with its EDGAR folder URL.
+  Pre-Nov-2007 filings are under the legacy Vulcan CIK 103973; later under CIK 1396009.
+- List a folder's documents: `curl -sS -H "User-Agent: $UA" <folder_url>index.json` (JSON `directory.item[].name`).
+  The earnings release is the exhibit named like `*ex99*`, `*ex99-1*`, `*991*`, `exhibit99*`, or a `.txt`; open it.
+- ALWAYS send header `User-Agent: Industrials Optima research research@industrialsoptima.dev` (SEC requires a UA;
+  do NOT use any other email). Keep to <= 5 requests/second (add `sleep 0.3` between curls).
+- Convert HTML to compact text (one table row per line, cells joined by ` | `):
+  `python3 h2t.py file.htm > file.txt`  — then read/grep the text. Save raw files under `src/<period>/`.
+- Optional cross-check: `vmc_facts.json` is the XBRL companyfacts dump (2009+), useful to verify GAAP totals.
+
+## Basis rules
+- Quarterly periods (Q1..Q4): use that quarter's earnings release ("Three Months Ended" columns), AS ORIGINALLY REPORTED.
+  Q4 = the Q4 release's three-months column (do NOT derive Q4 = FY − 9M unless the release lacks a Q4 column; if derived, say so in `notes`).
+- Annual periods (FY): use the Q4 earnings release twelve-month columns where available, plus the 10-K for anything the
+  release lacks (cash-flow detail, balance-sheet detail, dividends per share, reserves, segment D&A, etc.).
+  For FY2006–FY2012 (annual only) use that year's own 10-K (as originally reported) and its Q4 release.
+- Units: USD millions to 1 decimal exactly as published (thousands → divide by 1,000 and keep 1 decimal);
+  tons / cubic yards in millions; prices and per-ton figures in $ (2 dp); shares in millions; per-share in $.
+- Signs: give costs/expenses as POSITIVE numbers where the field says "(positive)"; "signed" fields keep the sign of their
+  effect on earnings / cash (income or inflow positive, expense or outflow negative).
+- Use `null` when a figure is not published in the source for that period. Never estimate, never back-solve silently.
+  If you compute a value (e.g. a sum of sub-lines), add a short note in `notes`.
+- Every record must carry the source URLs used.
+
+## Output
+One JSON file per period in `data/` named `<period_key>.json`, period_key like `2013`, `Q1-13`, `Q4-25`, `Q2-26`.
+Quarter records need sections `seg`, `is`, `ngaap`. Annual records need `seg`, `is`, `ngaap`, `cf`, `bs`, `extra`.
+Also the `Q2-26` record gets `cf` and `bs` (six-months cash flow; balance sheet at 30-Jun-26).
+
+```json
+{
+  "period": "Q2-26",
+  "sources": {"release": "https://...", "10k_or_10q": "https://..."},
+  "seg": {
+    "agg_rev": "Aggregates segment total revenues / net sales incl. intersegment, as reported (post-2018: incl. freight & delivery)",
+    "agg_interseg": "Aggregates intersegment sales (negative)",
+    "agg_fa_rev": "Aggregates freight-adjusted revenues (published reconciliation), else null",
+    "agg_freight_rev": "Freight & delivery revenues inside the Aggregates segment (positive), else null",
+    "agg_other_rev": "Other (service) revenues inside Aggregates (positive), else null",
+    "agg_tons": "Aggregates shipments, million tons",
+    "agg_price": "Aggregates freight-adjusted average sales price $/ton as published",
+    "agg_gp": "Aggregates segment gross profit",
+    "agg_dda": "Aggregates segment depreciation, depletion, accretion & amortization",
+    "agg_cgp": "Aggregates cash gross profit as published (else null)",
+    "asph_rev": "Asphalt (mix) segment revenues incl. intersegment", "asph_interseg": "negative or null",
+    "asph_tons": "asphalt mix tons (m)", "asph_price": "asphalt mix $/ton",
+    "asph_gp": "...", "asph_dda": "...", "asph_cgp": "published or null",
+    "conc_rev": "Concrete segment revenues incl. intersegment", "conc_interseg": "negative or null",
+    "conc_cy": "ready-mixed concrete cubic yards (m)", "conc_price": "$/cubic yard",
+    "conc_gp": "...", "conc_dda": "...", "conc_cgp": "published or null",
+    "cem_rev": "Cement segment revenues (legacy, ~2008–Q1/14)", "cem_interseg": "negative", "cem_gp": "...", "cem_dda": "...",
+    "calc_rev": "Calcium segment revenues (legacy)", "calc_gp": "...", "calc_dda": "...",
+    "other_seg_label": "name of any other segment / product line not covered above, else null",
+    "other_seg_rev": null, "other_seg_gp": null,
+    "seg_sales_total": "Total segment sales (before intersegment eliminations) as published",
+    "interseg_total": "Total intersegment eliminations (negative) as published",
+    "delivery_rev": "Delivery revenues shown separately in total revenues (pre-2018 presentation), else null",
+    "other_dda": "DDA&A 'Other' / corporate (not in segments)",
+    "total_dda": "Total DDA&A",
+    "gp_total": "Total gross profit per segment table",
+    "notes": "free text: basis, recasts, anything unusual"
+  },
+  "is": {
+    "total_rev": "Total revenues", "net_sales": "Net sales line if presented separately (pre-2018), else null",
+    "delivery_rev": "Delivery revenues line if presented (pre-2018), else null",
+    "cost_of_rev": "Cost of revenues (positive; incl. cost of delivery pre-2018)",
+    "gp": "Gross profit",
+    "sag": "Selling, administrative and general (positive)",
+    "gain_sale": "Gain (loss) on sale of PP&E and businesses (signed)",
+    "other_op_lines": [["exact label", "signed value"], ["Other operating expense, net", -17.4]],
+    "other_op": "sum of other_op_lines (signed)",
+    "op_earnings": "Operating earnings",
+    "nonop": "Other nonoperating income (expense), net (signed)",
+    "interest": "Interest expense, net (positive)",
+    "ebt": "Earnings from continuing operations before income taxes",
+    "tax": "Income tax expense (positive; benefit negative)",
+    "cont_ops": "Earnings from continuing operations",
+    "disc_ops": "Earnings (loss) on discontinued operations, net of tax (signed)",
+    "net_earnings": "Net earnings (incl. NCI)",
+    "nci": "Earnings attributable to noncontrolling interest (positive = deducted)",
+    "ni_vulcan": "Net earnings attributable to Vulcan",
+    "shares_basic": "...", "shares_diluted": "...",
+    "eps_cont_dil": "diluted EPS continuing ops", "eps_dil": "diluted EPS net earnings", "eps_basic": "basic EPS net earnings",
+    "dps": "dividends declared per share in the period (from release or 10-K), else null"
+  },
+  "ngaap": {
+    "ebitda_pub": "EBITDA as published (else null)",
+    "adj_ebitda_pub": "Adjusted EBITDA as published (else null)",
+    "ebitda_bridge_tax": "Income tax expense line used in the EBITDA reconciliation (often 'including discontinued operations')",
+    "ebitda_bridge_lines": [["exact label from the EBITDA→Adjusted EBITDA reconciliation", "signed value as added"]],
+    "adj_items": {
+      "disc_ops": "(gain) loss on discontinued operations, pre-tax, as added in bridge",
+      "gain_sale": "(gain) loss on sale of real estate and businesses",
+      "impairment": "loss on impairments / asset write-downs",
+      "divested_ops": "charges associated with divested operations",
+      "acquisition": "acquisition / business-development related charges incl. inventory step-up",
+      "restructuring": "restructuring, reorganization, CEO transition, severance",
+      "legal_env": "legal / environmental settlements, recoveries (signed)",
+      "pension": "pension settlement / curtailment",
+      "other": "everything else (COVID, property donation, debt refinancing in EBITDA, etc.)",
+      "other_label": "what 'other' contains"
+    },
+    "adj_eps_pub": "Adjusted diluted EPS from continuing operations as published (else null)",
+    "eps_bridge_lines": [["exact label from the Adjusted EPS reconciliation", "per-share value"]],
+    "eps_items_after_tax_ps": "per-share sum of the adjusting items net of tax (incl. discontinued ops line if presented)",
+    "eps_discrete_tax_ps": "per-share discrete tax items (NOL valuation allowance, tax reform, etc.)",
+    "eps_bridge_start_ps": "the starting EPS in the Adjusted EPS bridge (e.g. diluted EPS net earnings)",
+    "agg_cgp_per_ton_pub": "published aggregates cash gross profit per ton, else null",
+    "roic_pub": "company-published ROIC (TTM / FY), else null",
+    "notes": "how Vulcan defined 'Adjusted' in this period if different; anything unusual"
+  },
+  "cf": {
+    "net_earnings": null, "dda": null, "noncash_lease": null, "gain_sale": "signed as in CF (gain negative)",
+    "pension_contrib": "negative", "sbc": null, "deferred_tax": "signed", "wc_change": "signed",
+    "other_op": "signed — ALL remaining operating lines combined so the section sums to cfo",
+    "cfo": null,
+    "capex": "negative", "proceeds_ppe": null, "proceeds_bus": null, "acquisitions": "negative",
+    "other_inv": "signed — remaining investing lines so the section sums to cfi", "cfi": null,
+    "debt_proceeds": "positive — all borrowings (short-term + long-term issuance, net ST borrowings if positive)",
+    "debt_repay": "negative — all repayments incl. short-term, current maturities, finance leases, net ST if negative",
+    "buyback": "negative", "dividends": "negative", "stock_proceeds": "positive (option exercises / stock issued)",
+    "other_fin": "signed — remaining financing lines (shares withheld for taxes, NCI, debt costs, etc.) so section sums to cff",
+    "cff": null, "net_change": null, "cash_begin": null, "cash_end": null,
+    "cash_basis": "'cash' or 'cash+restricted' (ASU 2016-18 from 2018)",
+    "lines_raw": [["exact label", "value"]]
+  },
+  "bs": {
+    "cash": null, "restricted_cash": "current restricted cash or null", "ar_net": null, "inventories": null,
+    "other_current": "all remaining current assets (prepaids, current taxes, current deferred taxes, other)",
+    "assets_held_for_sale": null, "total_current_assets": null,
+    "invest_lt_rec": "investments and long-term receivables", "ppe_net": null, "rou_assets": "operating lease ROU (2019+)",
+    "goodwill": null, "intangibles": "other intangible assets, net",
+    "other_noncurrent": "remaining noncurrent assets", "total_assets": null,
+    "current_maturities": "current maturities of long-term debt", "short_term_debt": "short-term debt / borrowings",
+    "payables": "trade payables and accruals", "other_current_liab": "all remaining current liabilities",
+    "liab_held_for_sale": null, "total_current_liab": null,
+    "ltd": "long-term debt", "deferred_tax": "deferred income taxes, net", "deferred_revenue": null,
+    "lt_lease": "noncurrent operating lease liabilities", "other_noncurrent_liab": "all remaining noncurrent liabilities",
+    "total_liabilities": "as published or sum (note if summed)",
+    "common_stock": null, "capital_excess": null, "retained_earnings": null, "aoci": "signed",
+    "total_vulcan_equity": null, "nci": null, "total_equity": null, "total_liab_equity": null,
+    "shares_outstanding_end": "common shares outstanding at period end (m) — from BS par value / 10-K cover / equity note",
+    "lines_raw": [["exact label", "value"]]
+  },
+  "extra": {
+    "reserves_bn_tons": "total aggregates reserves, billion tons (10-K), else null",
+    "dps_declared": "annual dividends declared per share",
+    "capex_by_segment": {"aggregates": null, "asphalt": null, "concrete": null, "cement": null, "calcium": null, "corporate": null},
+    "seg_dda_annual": {"aggregates": null, "asphalt": null, "concrete": null, "cement": null, "calcium": null, "other": null},
+    "employees": null,
+    "acquisition_revenue_contribution": "any disclosed revenue from acquisitions in the year, else null",
+    "notes": null
+  }
+}
+```
+
+## Self-checks before you finish each period (fix extraction errors, re-read the source)
+- seg: Σ segment revenues + interseg_total (+ delivery_rev if separate) = is.total_rev (±0.2)
+- seg: Σ segment GP = is.gp (±0.2);  Σ segment DDA + other_dda = total_dda (±0.2)
+- is: gp − sag + gain_sale + other_op = op_earnings; op_earnings + nonop − interest = ebt; ebt − tax = cont_ops;
+  cont_ops + disc_ops = net_earnings; net_earnings − nci = ni_vulcan  (±0.2 each)
+- ngaap: ni_vulcan + ebitda_bridge_tax + interest + total_dda = ebitda_pub; ebitda_pub + Σ adj_items = adj_ebitda_pub (±0.3)
+- cf sections sum to cfo / cfi / cff; cfo + cfi + cff = net_change; cash_begin + net_change = cash_end
+- bs: total assets = total liabilities + total equity; components sum to subtotals
+Report any check you could not make pass (with the reason) in `notes`.

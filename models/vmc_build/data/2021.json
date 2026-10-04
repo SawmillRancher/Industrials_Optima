@@ -1,0 +1,564 @@
+{
+ "period": "2021",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000110465922024089/tm226860d1_ex99-1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000139600922000010/vmc-20211231x10k.htm"
+ },
+ "seg": {
+  "agg_rev": 4345.0,
+  "agg_interseg": -344.3,
+  "agg_fa_rev": 3313.9,
+  "agg_freight_rev": 952.1,
+  "agg_other_rev": 79.0,
+  "agg_tons": 222.863,
+  "agg_price": 14.87,
+  "agg_gp": 1295.7,
+  "agg_dda": 360.4,
+  "agg_cgp": 1656.1,
+  "asph_rev": 777.8,
+  "asph_interseg": null,
+  "asph_tons": 11.392,
+  "asph_price": 58.83,
+  "asph_gp": 21.2,
+  "asph_dda": 36.0,
+  "asph_cgp": null,
+  "conc_rev": 766.8,
+  "conc_interseg": null,
+  "conc_cy": 5.616,
+  "conc_price": 135.79,
+  "conc_gp": 54.3,
+  "conc_dda": 41.5,
+  "conc_cgp": null,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": 6.9,
+  "calc_gp": 2.2,
+  "calc_dda": 0.2,
+  "calc_tons": 0.246,
+  "calc_price": 28.16,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 5896.5,
+  "interseg_total": -344.3,
+  "delivery_rev": null,
+  "other_dda": 24.9,
+  "total_dda": 463.0,
+  "gp_total": 1373.4,
+  "notes": "Four reportable segments (Aggregates, Asphalt, Concrete, Calcium); Calcium still separate in 2020-21. Segment revenues incl. freight & delivery (post-2018 basis); intersegment eliminations are all Aggregates sales. Tons/cubic yards converted from thousands to millions (3 dp). calc_tons/calc_price are extra fields (Calcium tons m, $/ton). Freight-adjusted revenues, freight & delivery and other revenues from Appendix 1 reconciliation; Aggregates cash gross profit as published. Q4/FY columns taken directly from the Q4 release (three- and twelve-month columns); no derivation."
+ },
+ "is": {
+  "total_rev": 5552.2,
+  "net_sales": null,
+  "delivery_rev": null,
+  "cost_of_rev": 4178.8,
+  "gp": 1373.4,
+  "sag": 417.6,
+  "gain_sale": 120.1,
+  "other_op_lines": [
+   [
+    "Other operating expense, net",
+    -65.1
+   ]
+  ],
+  "other_op": -65.1,
+  "op_earnings": 1010.8,
+  "nonop": 10.7,
+  "interest": 147.7,
+  "ebt": 873.8,
+  "tax": 200.1,
+  "cont_ops": 673.7,
+  "disc_ops": -3.3,
+  "net_earnings": 670.4,
+  "nci": -0.4,
+  "ni_vulcan": 670.8,
+  "shares_basic": 132.8,
+  "shares_diluted": 133.5,
+  "eps_cont_dil": 5.05,
+  "eps_dil": 5.02,
+  "eps_basic": 5.05,
+  "dps": 1.48,
+  "notes": "Loss attributable to NCI 0.4 -> nci = -0.4. dps = 'Cash dividends per share' 1.48 (10-K equity note). Shares in millions (1 dp) as published in the release."
+ },
+ "ngaap": {
+  "ebitda_pub": 1484.9,
+  "adj_ebitda_pub": 1451.3,
+  "ebitda_bridge_tax": 200.1,
+  "ebitda_bridge_disc_ops": 3.3,
+  "ebitda_bridge_start": [
+   "2021",
+   2020.0
+  ],
+  "ebitda_bridge_lines": [
+   [
+    "Gain on sale of real estate and businesses, net",
+    -114.7
+   ],
+   [
+    "Charges associated with divested operations",
+    1.5
+   ],
+   [
+    "Business development",
+    39.0
+   ],
+   [
+    "COVID-19 direct incremental costs",
+    13.4
+   ],
+   [
+    "Pension settlement charge",
+    12.1
+   ],
+   [
+    "Restructuring charges",
+    15.0
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": null,
+   "gain_sale": -114.7,
+   "impairment": 0.0,
+   "divested_ops": 1.5,
+   "acquisition": 39.0,
+   "restructuring": 15.0,
+   "legal_env": 0.0,
+   "pension": 12.1,
+   "other": 13.4,
+   "other_label": "COVID-19 direct incremental costs"
+  },
+  "adj_eps_pub": 5.04,
+  "eps_bridge_lines": [
+   [
+    "Diluted EPS attributable to Vulcan from continuing operations",
+    5.05
+   ],
+   [
+    "Items included in Adjusted EBITDA above",
+    -0.16
+   ],
+   [
+    "NOL carryforward valuation allowance",
+    0.1
+   ],
+   [
+    "Acquisition financing interest costs",
+    0.05
+   ],
+   [
+    "Adjusted diluted EPS",
+    5.04
+   ]
+  ],
+  "eps_bridge_start_ps": 5.05,
+  "eps_items_after_tax_ps": -0.11,
+  "eps_discrete_tax_ps": 0.1,
+  "agg_cgp_per_ton_pub": 7.43,
+  "roic_pub": 14.2,
+  "notes": "Vulcan's EBITDA bridge starts at net earnings (2021 Q3+: net earnings attributable to Vulcan) and adds back income tax, interest expense and the loss (earnings) on discontinued operations NET OF TAX before DDA&A, so published EBITDA is continuing-ops EBITDA; the schema check ni_vulcan+ebitda_bridge_tax+interest+total_dda=ebitda_pub therefore differs by ebitda_bridge_disc_ops (extra field, value as added); including it the check ties. adj_items.disc_ops is null (disc ops is not an EBITDA->Adjusted EBITDA item). Adjusted EPS bridge: 'Items included in Adjusted EBITDA above' is the after-tax per-share effect of all EBITDA adjustments. Business development = non-routine acquisition charges incl. purchase-accounting inventory step-up -> adj_items.acquisition; COVID-19 direct incremental costs -> adj_items.other. FY2021: gain on sale of real estate 114.7; NOL valuation allowance +0.10 (discrete tax); acquisition financing interest +0.05 (in eps_items_after_tax_ps). Business development 39.0 incl. USCR acquisition related expenses 22.0 and inventory step-up 10.7. ROIC 14.2%. Same-store Aggregates (ex-USCR) cash GP/ton 7.48."
+ },
+ "cf": {
+  "net_earnings": 670.4,
+  "dda": 463.0,
+  "noncash_lease": 49.0,
+  "gain_sale": -120.1,
+  "pension_contrib": -8.0,
+  "sbc": 34.7,
+  "deferred_tax": 66.8,
+  "wc_change": -180.3,
+  "other_op": 36.4,
+  "cfo": 1011.9,
+  "capex": -451.3,
+  "proceeds_ppe": 216.5,
+  "proceeds_bus": 0.0,
+  "acquisitions": -1639.4,
+  "other_inv": 0.1,
+  "cfi": -1874.1,
+  "debt_proceeds": 1600.0,
+  "debt_repay": -1465.2,
+  "buyback": 0.0,
+  "dividends": -196.4,
+  "stock_proceeds": null,
+  "other_fin": -32.7,
+  "cff": -94.3,
+  "net_change": -956.5,
+  "cash_begin": 1198.0,
+  "cash_end": 241.5,
+  "cash_basis": "cash+restricted",
+  "lines_raw": [
+   [
+    "Net earnings",
+    670.4
+   ],
+   [
+    "Depreciation, depletion, accretion and amortization",
+    463.0
+   ],
+   [
+    "Noncash operating lease expense",
+    49.0
+   ],
+   [
+    "Net gain on sale of property, plant & equipment and businesses",
+    -120.1
+   ],
+   [
+    "Contributions to pension plans",
+    -8.0
+   ],
+   [
+    "Share-based compensation expense",
+    34.7
+   ],
+   [
+    "Deferred tax expense",
+    66.8
+   ],
+   [
+    "Accounts and notes receivable",
+    -42.0
+   ],
+   [
+    "Inventories",
+    8.3
+   ],
+   [
+    "Prepaid expenses",
+    -14.2
+   ],
+   [
+    "Other assets",
+    -29.8
+   ],
+   [
+    "Accrued interest and income taxes",
+    -0.4
+   ],
+   [
+    "Trade payables and other accruals",
+    -23.3
+   ],
+   [
+    "Other noncurrent liabilities",
+    -78.9
+   ],
+   [
+    "Other, net (operating)",
+    36.4
+   ],
+   [
+    "Net cash provided by operating activities",
+    1011.9
+   ],
+   [
+    "Purchases of property, plant & equipment",
+    -451.3
+   ],
+   [
+    "Proceeds from sale of property, plant & equipment",
+    216.5
+   ],
+   [
+    "Proceeds from sale of businesses",
+    0.0
+   ],
+   [
+    "Payment for businesses acquired, net of acquired cash",
+    -1639.4
+   ],
+   [
+    "Other, net (investing)",
+    0.1
+   ],
+   [
+    "Net cash used for investing activities",
+    -1874.1
+   ],
+   [
+    "Proceeds from short-term debt",
+    0.0
+   ],
+   [
+    "Payment of short-term debt",
+    0.0
+   ],
+   [
+    "Payment of current maturities and long-term debt",
+    -1451.7
+   ],
+   [
+    "Proceeds from issuance of long-term debt",
+    1600.0
+   ],
+   [
+    "Debt issuance and exchange costs",
+    -13.3
+   ],
+   [
+    "Payment of finance leases",
+    -13.5
+   ],
+   [
+    "Settlements of interest rate derivatives",
+    0.0
+   ],
+   [
+    "Purchases of common stock",
+    0.0
+   ],
+   [
+    "Dividends paid",
+    -196.4
+   ],
+   [
+    "Share-based compensation, shares withheld for taxes",
+    -19.1
+   ],
+   [
+    "Other, net (financing)",
+    -0.3
+   ],
+   [
+    "Net cash provided by (used for) financing activities",
+    -94.3
+   ],
+   [
+    "Net increase (decrease) in cash and cash equivalents and restricted cash",
+    -956.5
+   ],
+   [
+    "Cash and cash equivalents and restricted cash at beginning of year",
+    1198.0
+   ],
+   [
+    "Cash and cash equivalents and restricted cash at end of year",
+    241.5
+   ]
+  ],
+  "notes": "FY2021 10-K (USD millions). The Q4-21 release Table C prints 'Net cash used for investing activities | 1,874.1' without parentheses (typo); 10-K shows (1,874.1). debt_repay = payment of current maturities and LTD (-1,451.7) + payment of finance leases (-13.5). other_fin = debt issuance costs (-13.3) + shares withheld for taxes (-19.1) + other (-0.3). acquisitions -1,639.4 is mainly U.S. Concrete (consideration 1,634.5 net of cash acquired)."
+ },
+ "bs": {
+  "cash": 235.0,
+  "restricted_cash": 6.5,
+  "ar_net": 833.3,
+  "inventories": 521.3,
+  "other_current": 95.0,
+  "assets_held_for_sale": null,
+  "total_current_assets": 1691.1,
+  "invest_lt_rec": 34.1,
+  "ppe_net": 5546.8,
+  "rou_assets": 691.4,
+  "goodwill": 3696.7,
+  "intangibles": 1749.0,
+  "other_noncurrent": 273.5,
+  "total_assets": 13682.6,
+  "current_maturities": 5.2,
+  "short_term_debt": 0.0,
+  "payables": 365.5,
+  "other_current_liab": 398.6,
+  "liab_held_for_sale": null,
+  "total_current_liab": 769.3,
+  "ltd": 3874.8,
+  "deferred_tax": 1005.9,
+  "deferred_revenue": 167.1,
+  "lt_lease": 642.5,
+  "other_noncurrent_liab": 655.3,
+  "total_liabilities": 7114.9,
+  "common_stock": 132.7,
+  "capital_excess": 2816.5,
+  "retained_earnings": 3748.5,
+  "aoci": -152.7,
+  "total_vulcan_equity": 6545.0,
+  "nci": 22.7,
+  "total_equity": 6567.7,
+  "total_liab_equity": 13682.6,
+  "shares_outstanding_end": 132.7,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    235.0
+   ],
+   [
+    "Restricted cash",
+    6.5
+   ],
+   [
+    "Accounts and notes receivable, gross",
+    843.6
+   ],
+   [
+    "Allowance for credit losses",
+    -10.3
+   ],
+   [
+    "Accounts and notes receivable, net",
+    833.3
+   ],
+   [
+    "Finished products",
+    418.0
+   ],
+   [
+    "Raw materials",
+    59.9
+   ],
+   [
+    "Products in process",
+    4.2
+   ],
+   [
+    "Operating supplies and other",
+    39.2
+   ],
+   [
+    "Inventories",
+    521.3
+   ],
+   [
+    "Other current assets",
+    95.0
+   ],
+   [
+    "Total current assets",
+    1691.1
+   ],
+   [
+    "Investments and long-term receivables",
+    34.1
+   ],
+   [
+    "Property, plant & equipment, cost",
+    10444.4
+   ],
+   [
+    "Allowances for depreciation, depletion & amortization",
+    -4897.6
+   ],
+   [
+    "Property, plant & equipment, net",
+    5546.8
+   ],
+   [
+    "Operating lease right-of-use assets, net",
+    691.4
+   ],
+   [
+    "Goodwill",
+    3696.7
+   ],
+   [
+    "Other intangible assets, net",
+    1749.0
+   ],
+   [
+    "Other noncurrent assets",
+    273.5
+   ],
+   [
+    "Total assets",
+    13682.6
+   ],
+   [
+    "Current maturities of long-term debt",
+    5.2
+   ],
+   [
+    "Trade payables and accruals",
+    365.5
+   ],
+   [
+    "Other current liabilities",
+    398.6
+   ],
+   [
+    "Total current liabilities",
+    769.3
+   ],
+   [
+    "Long-term debt",
+    3874.8
+   ],
+   [
+    "Deferred income taxes, net",
+    1005.9
+   ],
+   [
+    "Deferred revenue",
+    167.1
+   ],
+   [
+    "Noncurrent operating lease liabilities",
+    642.5
+   ],
+   [
+    "Other noncurrent liabilities",
+    655.3
+   ],
+   [
+    "Total liabilities",
+    7114.9
+   ],
+   [
+    "Common stock, $1 par value",
+    132.7
+   ],
+   [
+    "Capital in excess of par value",
+    2816.5
+   ],
+   [
+    "Retained earnings",
+    3748.5
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -152.7
+   ],
+   [
+    "Total shareholders' equity",
+    6545.0
+   ],
+   [
+    "Noncontrolling interest",
+    22.7
+   ],
+   [
+    "Total equity",
+    6567.7
+   ],
+   [
+    "Total liabilities and equity",
+    13682.6
+   ]
+  ],
+  "notes": "Q4-21 release Table B / 2021 10-K ($ millions). NCI 22.7 arises from U.S. Concrete acquisition. shares_outstanding_end = common stock $1 par (132.7m; 10-K cover: 132,792,275 at 15-Feb-2022)."
+ },
+ "extra": {
+  "reserves_bn_tons": 15.6,
+  "dps_declared": 1.48,
+  "capex_by_segment": {
+   "aggregates": 423.1,
+   "asphalt": 9.3,
+   "concrete": 18.1,
+   "cement": null,
+   "calcium": 0.0,
+   "corporate": 0.0
+  },
+  "seg_dda_annual": {
+   "aggregates": 360.4,
+   "asphalt": 36.0,
+   "concrete": 41.5,
+   "cement": null,
+   "calcium": 0.2,
+   "other": 24.9
+  },
+  "employees": 11437,
+  "acquisition_revenue_contribution": 466.3,
+  "notes": "10-K 2021: 15.6bn tons reserves; 11,437 U.S. employees at 1-Jan-2022. U.S. Concrete (closed 26-Aug-2021, consideration 1,634.5 net of cash) contributed total revenues 466.3 and net loss attributable to Vulcan (19.7) in 2021; pro forma 2021 revenues 6,361.5. Segment capex total 450.5 (vs CF 451.3). dps = cash dividends per share 1.48 (4 x 0.37)."
+ },
+ "checks": [
+  "ebitda (schema formula, excl disc-ops add-back): FAIL 1481.6 vs 1484.9"
+ ]
+}
