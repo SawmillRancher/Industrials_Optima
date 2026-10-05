@@ -1,0 +1,463 @@
+{
+ "period": "Q1-13",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/943452/000119312513168893/d526304dex991.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/943452/000095012313003288/wab-10q_20130331.htm"
+ },
+ "seg": {
+  "frt_rev": 305.9,
+  "frt_op": 75.4,
+  "frt_gp": null,
+  "frt_adj_gp": null,
+  "frt_adj_op": null,
+  "trn_rev": 309.6,
+  "trn_op": 43.6,
+  "trn_gp": null,
+  "trn_adj_gp": null,
+  "trn_adj_op": null,
+  "corp_op": -15.3,
+  "seg_rev_note": "Two segments: Freight Group and Transit Group. Segment sales = sales to external customers as published. Note: Wabtec later reclassified some businesses between segments (e.g., Q1-14 10-Q shows Q1-13 Freight $313.7m / Transit $301.8m vs. originally reported $305.9m / $309.6m); figures here are as originally reported.",
+  "frt_pl": {
+   "services": null,
+   "equipment": null,
+   "components": null,
+   "digital": null,
+   "other": null,
+   "labels": null
+  },
+  "trn_pl": {
+   "oe": null,
+   "aftermarket": null
+  },
+  "legacy_pl": [
+   [
+    "Specialty Products & Electronics",
+    231.4
+   ],
+   [
+    "Brake Products",
+    141.3
+   ],
+   [
+    "Remanufacturing, Overhaul & Build",
+    163.6
+   ],
+   [
+    "Other Transit Products",
+    58.9
+   ],
+   [
+    "Other",
+    20.3
+   ]
+  ],
+  "backlog_total": null,
+  "backlog_12m": null,
+  "frt_backlog_total": null,
+  "frt_backlog_12m": null,
+  "trn_backlog_total": null,
+  "trn_backlog_12m": null,
+  "bridge": {
+   "frt": {
+    "acq": 2.1,
+    "divest": null,
+    "fx": -1.6,
+    "organic": null
+   },
+   "trn": {
+    "acq": 39.3,
+    "divest": null,
+    "fx": -2.1,
+    "organic": null
+   },
+   "total": {
+    "acq": 41.4,
+    "divest": null,
+    "fx": -3.7,
+    "organic": null
+   }
+  },
+  "loco_deliveries": null,
+  "notes": "Segment income from operations (and Corporate Activities & Elimination) from the 10-Q segment note; the release does not publish segment operating income. legacy_pl = three-month 'Sales by product' table from the 10-Q segment note (as originally reported). Bridge from Q1-13 10-Q MD&A narrative (release gives none): acquisitions +$41.4m (Freight $2.1m, Transit $39.3m); FX reduced sales $3.7m (Freight $1.6m, Transit $2.1m). Organic not stated."
+ },
+ "is": {
+  "net_sales": 615.5,
+  "cost_of_sales": 432.6,
+  "gp": 182.9,
+  "sga": 64.3,
+  "eng": 11.3,
+  "amort": 3.6,
+  "other_op_lines": [],
+  "total_opex": 79.2,
+  "op_income": 103.7,
+  "interest": 3.6,
+  "other_inc": -0.6,
+  "ebt": 99.5,
+  "tax": 29.9,
+  "cont_ops": 69.6,
+  "disc_ops": 0.0,
+  "net_income": 69.6,
+  "nci": 0.0,
+  "ni_wab": 69.6,
+  "shares_basic": 47.51,
+  "shares_diluted": 48.29,
+  "eps_basic": 1.46,
+  "eps_dil": 1.44,
+  "eps_cont_dil": null,
+  "dps": 0.05,
+  "per_share_basis": "pre_split"
+ },
+ "ngaap": {
+  "adj_table": [],
+  "adj_eps_pub": null,
+  "adj_op_pub": null,
+  "adj_gp_pub": null,
+  "adj_ni_pub": null,
+  "adj_dil_shares": null,
+  "eps_bridge_lines": [],
+  "eps_bridge_start_ps": null,
+  "ebitda_lines": [],
+  "ebitda_op": null,
+  "ebitda_other": null,
+  "ebitda_dda": null,
+  "ebitda_pub": null,
+  "ebitda_adj_items": null,
+  "adj_ebitda_pub": null,
+  "items": {
+   "restructuring": null,
+   "transaction": null,
+   "inventory_pa": null,
+   "amortization": null,
+   "contract": null,
+   "litigation": null,
+   "other_op": null,
+   "nonop": null,
+   "tax_effect": null,
+   "discrete_tax": null,
+   "other_label": null
+  },
+  "guidance": "Affirmed 2013 guidance for EPS of about $5.85 (pre-split basis), with revenues expected to be up about 8-10 percent for the year.",
+  "notes": "No adjusted results published; GAAP EPS only."
+ },
+ "cf": {
+  "ytd_months": 3,
+  "net_income": 69.6,
+  "dda": 11.2,
+  "sbc": 5.6,
+  "deferred_tax": 0.0,
+  "gain_loss": 0.0,
+  "wc_change": -53.0,
+  "other_op": -1.3,
+  "cfo": 32.0,
+  "capex": -6.4,
+  "acquisitions": -115.1,
+  "proceeds_disp": 0.7,
+  "other_inv": 0.0,
+  "cfi": -120.8,
+  "debt_proceeds": 203.9,
+  "debt_repay": -104.2,
+  "buyback": 0.0,
+  "dividends": -2.4,
+  "stock_proceeds": 1.6,
+  "other_fin": 1.3,
+  "cff": 100.2,
+  "fx": -1.8,
+  "net_change": 9.6,
+  "cash_begin": 215.8,
+  "cash_end": 225.3,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net income attributable to Wabtec shareholders",
+    69.6
+   ],
+   [
+    "Depreciation and amortization",
+    11.2
+   ],
+   [
+    "Stock-based compensation expense",
+    5.6
+   ],
+   [
+    "Loss on disposal of property, plant and equipment",
+    0.0
+   ],
+   [
+    "Excess income tax benefits from exercise of stock options",
+    -1.3
+   ],
+   [
+    "Accounts receivable",
+    -42.5
+   ],
+   [
+    "Inventories",
+    -13.2
+   ],
+   [
+    "Accounts payable",
+    15.0
+   ],
+   [
+    "Accrued income taxes",
+    9.6
+   ],
+   [
+    "Accrued liabilities and customer deposits",
+    -15.0
+   ],
+   [
+    "Other assets and liabilities",
+    -6.8
+   ],
+   [
+    "Net cash provided by operating activities",
+    32.0
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -6.4
+   ],
+   [
+    "Proceeds from disposal of property, plant and equipment",
+    0.7
+   ],
+   [
+    "Acquisitions of business, net of cash acquired",
+    -115.1
+   ],
+   [
+    "Net cash used for investing activities",
+    -120.8
+   ],
+   [
+    "Proceeds from debt",
+    203.9
+   ],
+   [
+    "Payments of debt",
+    -104.2
+   ],
+   [
+    "Proceeds from exercise of stock options and other benefit plans",
+    1.6
+   ],
+   [
+    "Excess income tax benefits from exercise of stock options",
+    1.3
+   ],
+   [
+    "Cash dividends ($ 0.05 and $ 0.03 per share for the three months ended March 31, 2013 and 2012, respectively)",
+    -2.4
+   ],
+   [
+    "Net cash provided by (used for) financing activities",
+    100.2
+   ],
+   [
+    "Effect of changes in currency exchange rates",
+    -1.8
+   ],
+   [
+    "Increase (decrease) in cash",
+    9.6
+   ],
+   [
+    "Cash, beginning of year",
+    215.8
+   ],
+   [
+    "Cash, end of period",
+    225.3
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 225.3,
+  "restricted_cash": null,
+  "receivables": 432.8,
+  "unbilled": null,
+  "inventories": 428.6,
+  "other_current": 82.3,
+  "total_current_assets": 1169.0,
+  "ppe": 242.7,
+  "goodwill": 728.0,
+  "intangibles": 325.3,
+  "other_noncurrent": 41.2,
+  "total_assets": 2506.2,
+  "ap": 267.4,
+  "customer_deposits": 84.5,
+  "accrued_comp": 45.1,
+  "accrued_warranty": 41.4,
+  "current_debt": 0.0,
+  "other_current_liab": 122.5,
+  "total_current_liab": 561.0,
+  "ltd": 417.5,
+  "pension": 63.6,
+  "deferred_tax": 89.6,
+  "lt_lease": null,
+  "other_ncl": 43.2,
+  "total_liabilities": 1174.9,
+  "common_apic": 382.7,
+  "treasury": -342.0,
+  "retained": 1365.0,
+  "aoci": -79.3,
+  "wab_equity": 1326.4,
+  "nci": 4.9,
+  "total_equity": 1331.3,
+  "total_le": 2506.2,
+  "shares_outstanding_end": 48.1,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    225.3
+   ],
+   [
+    "Accounts receivable",
+    432.8
+   ],
+   [
+    "Inventories",
+    428.6
+   ],
+   [
+    "Deferred income taxes",
+    60.9
+   ],
+   [
+    "Other",
+    21.4
+   ],
+   [
+    "Total current assets",
+    1169.0
+   ],
+   [
+    "Property, plant and equipment",
+    563.5
+   ],
+   [
+    "Accumulated depreciation",
+    -320.8
+   ],
+   [
+    "Property, plant and equipment, net",
+    242.7
+   ],
+   [
+    "Goodwill",
+    728.0
+   ],
+   [
+    "Other intangibles, net",
+    325.3
+   ],
+   [
+    "Other noncurrent assets",
+    41.2
+   ],
+   [
+    "Total other assets",
+    1094.5
+   ],
+   [
+    "Total Assets",
+    2506.2
+   ],
+   [
+    "Accounts payable",
+    267.4
+   ],
+   [
+    "Customer deposits",
+    84.5
+   ],
+   [
+    "Accrued compensation",
+    45.1
+   ],
+   [
+    "Accrued warranty",
+    41.4
+   ],
+   [
+    "Current portion of long-term debt",
+    0.0
+   ],
+   [
+    "Other accrued liabilities",
+    122.5
+   ],
+   [
+    "Total current liabilities",
+    561.0
+   ],
+   [
+    "Long-term debt",
+    417.5
+   ],
+   [
+    "Accrued postretirement and pension benefits",
+    63.6
+   ],
+   [
+    "Deferred income taxes",
+    89.6
+   ],
+   [
+    "Accrued warranty",
+    17.9
+   ],
+   [
+    "Other long-term liabilities",
+    25.3
+   ],
+   [
+    "Total liabilities",
+    1174.9
+   ],
+   [
+    "Preferred stock, 1,000,000 shares authorized, no shares issued",
+    0.0
+   ],
+   [
+    "Common stock, $ .01 par value; 100,000,000 shares authorized: 66,174,767 shares issued and 48,093,949 and 47,703,684 outstanding at March 31, 2013 and December 31, 2012, respectively",
+    0.7
+   ],
+   [
+    "Additional paid-in capital",
+    382.0
+   ],
+   [
+    "Treasury stock, at cost, 18,080,818 and 18,471,083 shares, at March 31, 2013 and December 31, 2012, respectively",
+    -342.0
+   ],
+   [
+    "Retained earnings",
+    1365.0
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -79.3
+   ],
+   [
+    "Total Westinghouse Air Brake Technologies Corporation shareholders’ equity",
+    1326.4
+   ],
+   [
+    "Non-controlling interest",
+    4.9
+   ],
+   [
+    "Total shareholders’ equity",
+    1331.3
+   ],
+   [
+    "Total Liabilities and Shareholders’ Equity",
+    2506.2
+   ]
+  ]
+ },
+ "notes": "Income statement presents only 'Net income attributable to Wabtec shareholders' (no separate NCI line); cont_ops/net_income set equal to it and nci=0.0 (not separately presented). Q1-13 per-share data are PRE-split (2-for-1 split effective 2013); dps $0.05 per Q1-13 10-Q cash-flow caption (pre-split; = $0.025 post-split per 10-K). Shares outstanding on BS cover (48.09m) are pre-split. cf: CFO starts from 'Net income attributable to Wabtec shareholders'; other_op = excess income tax benefits from stock options; wc_change = sum of 'Changes in operating assets and liabilities' lines (incl. accrued income taxes); other_fin = excess tax benefits from stock options. bs: other_current = current deferred income taxes + other; other_noncurrent = other noncurrent assets (+ noncurrent deferred tax assets where shown); other_current_liab = other accrued liabilities (+ current commitments & contingencies where shown); other_ncl = noncurrent accrued warranty + other long-term liabilities (+ noncurrent commitments & contingencies where shown). shares_outstanding_end from BS common-stock caption. Self-checks: all pass."
+}
