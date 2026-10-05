@@ -1,0 +1,402 @@
+{
+ "period": "2021",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/878927/000156459022003471/odfl-ex991_6.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/878927/000156459022006303/odfl-10k_20211231.htm"
+ },
+ "notes": [],
+ "is": {
+  "revenue": 5256.328,
+  "ltl_rev": 5177.497,
+  "other_rev": 78.831,
+  "swb": 2467.985,
+  "ops": 567.615,
+  "gen": 136.059,
+  "taxlic": 133.452,
+  "ins": 53.549,
+  "comm": 34.149,
+  "dda": 259.883,
+  "pt": 185.785,
+  "rents": null,
+  "misc": 26.249,
+  "total_opex": 3864.726,
+  "op_income": 1391.602,
+  "int_exp": 1.727,
+  "int_inc": -0.786,
+  "int_net": 0.941,
+  "other_exp": 2.238,
+  "ebt": 1388.423,
+  "tax": 354.048,
+  "cum_eff": null,
+  "net_income": 1034.375,
+  "sh_basic": 231.302,
+  "sh_dil": 232.82,
+  "eps_basic": 4.47,
+  "eps_dil": 4.445,
+  "dps": null,
+  "eps_dil_pub": 8.89,
+  "split_factor": 2.0,
+  "_filed": "2022-02-02"
+ },
+ "stats": {
+  "work_days": 252.0,
+  "or_pub": 0.735,
+  "miles": 707611.0,
+  "ltl_tons": 10119.0,
+  "tons_day": 40153.0,
+  "total_tons": null,
+  "ltl_ship": 12880.0,
+  "ship_day": 51111.0,
+  "total_ship": null,
+  "rev_mile": null,
+  "rev_cwt": 25.59,
+  "rev_cwt_xf": 21.99,
+  "rev_shp": 402.01,
+  "rev_shp_xf": 345.54,
+  "wps": 1571.0,
+  "loh": 935.0,
+  "emp_avg": 22098.0
+ },
+ "labels": {
+  "swb": "Salaries, wages & benefits",
+  "ops": "Operating supplies & expenses",
+  "gen": "General supplies & expenses",
+  "taxlic": "Operating taxes & licenses",
+  "ins": "Insurance & claims",
+  "comm": "Communications & utilities",
+  "dda": "Depreciation & amortization",
+  "pt": "Purchased transportation",
+  "misc": "Miscellaneous expenses, net",
+  "total_opex": "Total operating expenses",
+  "op_income": "Operating income",
+  "int_exp": "Interest expense",
+  "int_inc": "Interest income",
+  "other_exp": "Other expense, net",
+  "ebt": "Income before income taxes",
+  "tax": "Provision for income taxes",
+  "net_income": "Net income",
+  "work_days": "Work days",
+  "miles": "LTL intercity miles (1)",
+  "ltl_tons": "LTL tons (1)",
+  "tons_day": "LTL tonnage per day",
+  "ltl_ship": "LTL shipments (1)",
+  "ship_day": "LTL shipments per day",
+  "rev_cwt": "LTL revenue per hundredweight",
+  "rev_cwt_xf": "LTL revenue per hundredweight, excluding fuel surcharges",
+  "rev_shp": "LTL revenue per shipment",
+  "rev_shp_xf": "LTL revenue per shipment, excluding fuel surcharges",
+  "wps": "LTL weight per shipment (lbs.)",
+  "loh": "Average length of haul (miles)",
+  "emp_avg": "Average active full-time employees"
+ },
+ "bs": {
+  "cash": 462.564,
+  "sti": 254.433,
+  "receivables": 567.474,
+  "other_rec": 12.41,
+  "total_current_assets": 1383.787,
+  "ppe_rev_equip": 2146.205,
+  "ppe_land": 2463.949,
+  "ppe_other": 512.34,
+  "ppe_lease": 13.131,
+  "ppe_gross": 5135.625,
+  "ppe": 3215.686,
+  "total_assets": 4821.544,
+  "ap": 82.519,
+  "accrued_comp": 257.905,
+  "claims_cur": 61.822,
+  "total_current_liab": 464.234,
+  "ltd": 99.947,
+  "deferred_tax": 248.718,
+  "total_ncl": 677.503,
+  "total_liabilities": 1141.737,
+  "common": 11.501,
+  "apic": 174.445,
+  "retained": 3493.861,
+  "total_equity": 3679.807,
+  "total_le": 4821.544,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    462.564
+   ],
+   [
+    "Short-term investments",
+    254.433
+   ],
+   [
+    "Customer receivables, less allowances of $ 9,855 and $ 8,979 , respectively",
+    567.474
+   ],
+   [
+    "Income taxes receivable",
+    19.218
+   ],
+   [
+    "Other receivables",
+    12.41
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    67.688
+   ],
+   [
+    "Total current assets",
+    1383.787
+   ],
+   [
+    "Revenue equipment",
+    2146.205
+   ],
+   [
+    "Land and structures",
+    2463.949
+   ],
+   [
+    "Other fixed assets",
+    512.34
+   ],
+   [
+    "Leasehold improvements",
+    13.131
+   ],
+   [
+    "Total property and equipment",
+    5135.625
+   ],
+   [
+    "Less: Accumulated depreciation",
+    -1919.939
+   ],
+   [
+    "Net property and equipment",
+    3215.686
+   ],
+   [
+    "Other assets",
+    222.071
+   ],
+   [
+    "Total assets",
+    4821.544
+   ],
+   [
+    "Accounts payable",
+    82.519
+   ],
+   [
+    "Compensation and benefits",
+    257.905
+   ],
+   [
+    "Claims and insurance accruals",
+    61.822
+   ],
+   [
+    "Other accrued liabilities",
+    61.988
+   ],
+   [
+    "Income taxes payable",
+    0.0
+   ],
+   [
+    "Total current liabilities",
+    464.234
+   ],
+   [
+    "Long-term debt",
+    99.947
+   ],
+   [
+    "Other non-current liabilities",
+    328.838
+   ],
+   [
+    "Deferred income taxes",
+    248.718
+   ],
+   [
+    "Total long-term liabilities",
+    677.503
+   ],
+   [
+    "Total liabilities",
+    1141.737
+   ],
+   [
+    "Common stock - $ 0.10 par value, 280,000,000 shares authorized, 115,011,172 and 117,057,696 shares outstanding at December 31, 2021 and December 31, 2020, respectively.",
+    11.501
+   ],
+   [
+    "Capital in excess of par value",
+    174.445
+   ],
+   [
+    "Retained earnings",
+    3493.861
+   ],
+   [
+    "Total shareholders\u2019 equity",
+    3679.807
+   ],
+   [
+    "Total liabilities and shareholders\u2019 equity",
+    4821.544
+   ]
+  ],
+  "shares_outstanding_end": 230.0223
+ },
+ "cf": {
+  "net_income": 1034.375,
+  "dda": 259.899,
+  "gain_loss": -0.563,
+  "deferred_tax": 30.165,
+  "sbc": 15.039,
+  "cfo": 1212.606,
+  "capex": -550.077,
+  "proceeds_disp": 19.548,
+  "cfi": -455.288,
+  "dividends": -92.366,
+  "buyback": -598.965,
+  "cff": -696.184,
+  "net_change": 61.134,
+  "cash_begin": 401.43,
+  "cash_end": 462.564,
+  "wc_change": -141.199,
+  "debt_proceeds": 0.0,
+  "debt_repay": 0.0,
+  "sti_net": 75.741,
+  "lines_raw": [
+   [
+    "Net income",
+    1034.375
+   ],
+   [
+    "Depreciation and amortization",
+    259.899
+   ],
+   [
+    "Noncash lease expense",
+    14.89
+   ],
+   [
+    "(Gain) loss on disposal of property and equipment",
+    -0.563
+   ],
+   [
+    "Deferred income taxes",
+    30.165
+   ],
+   [
+    "Share-based compensation",
+    15.039
+   ],
+   [
+    "Customer and other receivables, net",
+    -125.562
+   ],
+   [
+    "Prepaid expenses and other assets",
+    -38.387
+   ],
+   [
+    "Accounts payable",
+    14.008
+   ],
+   [
+    "Compensation, benefits and other accrued liabilities",
+    32.437
+   ],
+   [
+    "Claims and insurance accruals",
+    10.963
+   ],
+   [
+    "Income taxes, net",
+    -27.929
+   ],
+   [
+    "Other liabilities",
+    -6.729
+   ],
+   [
+    "Net cash provided by operating activities",
+    1212.606
+   ],
+   [
+    "Purchase of property and equipment",
+    -550.077
+   ],
+   [
+    "Proceeds from sale of property and equipment",
+    19.548
+   ],
+   [
+    "Purchase of short-term investments",
+    -359.389
+   ],
+   [
+    "Proceeds from maturities of short-term investments",
+    435.13
+   ],
+   [
+    "Other investing activities, net",
+    -0.5
+   ],
+   [
+    "Net cash used in investing activities",
+    -455.288
+   ],
+   [
+    "Proceeds from issuance of long-term debt",
+    0.0
+   ],
+   [
+    "Principal payments under debt agreements",
+    0.0
+   ],
+   [
+    "Dividends paid",
+    -92.366
+   ],
+   [
+    "Payments for share repurchases",
+    -536.465
+   ],
+   [
+    "Forward contract for accelerated share repurchases",
+    -62.5
+   ],
+   [
+    "Other financing activities, net",
+    -4.853
+   ],
+   [
+    "Net cash used in financing activities",
+    -696.184
+   ],
+   [
+    "Increase (decrease) in cash and cash equivalents",
+    61.134
+   ],
+   [
+    "Cash and cash equivalents at beginning of year",
+    401.43
+   ],
+   [
+    "Cash and cash equivalents at end of year",
+    462.564
+   ]
+  ],
+  "ytd_months": 12
+ },
+ "extra": {
+  "service_centers": 251,
+  "tractors": 10403,
+  "trailers_lh": 27917,
+  "trailers_pd": null,
+  "employees": 23663
+ },
+ "_filing_filed": "2022-02-23"
+}
