@@ -1,0 +1,175 @@
+# Danaher (DHR) data extraction — schema & rules
+
+## Sources (SEC EDGAR only — the Danaher IR website is blocked; its releases are the 8-K Ex. 99.1 exhibits)
+- Text versions of every document are in $DHR_SRC/txt (one table row per line, cells joined by ` | `).
+  DHR_SRC=/tmp/claude-0/-home-user-Industrials-Optima/02384087-e4da-5e3d-bb00-3762059a75d7/scratchpad/dhr_src
+- `$DHR_SRC/period_index.json` maps each period key to: `release` (earnings release text), `filing` (10-Q, or 10-K for
+  annual and Q4 periods), `next_release` / `next_filing` (the same documents one year later). File names embed the
+  filing date, form and accession: `<date>_<form>_<accession>_<doc>.txt`. EDGAR URL of a document =
+  https://www.sec.gov/Archives/edgar/data/313616/<accession without dashes>/<doc>.htm (older ones may be .htm/.txt —
+  check `$DHR_SRC/filings.json` `primary` / `files`). Record those URLs in `sources`.
+- Read the text with grep / sed / python. Files are large (10-K up to ~1 MB) — grep for the statement headings
+  ("CONSOLIDATED STATEMENTS OF EARNINGS", "CONSOLIDATED BALANCE SHEETS", "CONSOLIDATED STATEMENTS OF CASH FLOWS",
+  "SEGMENT", "Core sales", "Adjusted Diluted Net Earnings", "Free cash flow") and read the surrounding lines.
+- TEXT QUIRK: the converter drops cells that are only ")" so negative numbers may appear as "(25,433" with no closing
+  parenthesis. An opening parenthesis means negative. Em-dash "—" means zero.
+- Optional cross-check: `$DHR_SRC/dhr_facts.json` is the XBRL companyfacts dump (2009+): us-gaap Revenues /
+  SalesRevenueNet, OperatingIncomeLoss, NetIncomeLoss, Assets, NetCashProvidedByUsedInOperatingActivities…
+
+## Basis rules
+- Quarter records (Q1..Q4, 2013 onward): income statement, adjusted EPS bridge, core growth and FCF from that quarter's
+  earnings release ("Three-Month Period Ended" columns), AS ORIGINALLY REPORTED. Q4 = the Q4 release's three-month
+  column (only if the release lacks one, derive Q4 = FY − 9M from the 10-K and Q3 10-Q, and say so in `notes`).
+  Segment sales / operating profit: from the release if it has a segment table, otherwise the 10-Q segment note
+  (three-month columns); for Q4 derive FY (10-K) − 9M (Q3 10-Q) if not published and say so.
+  Balance sheet = that quarter end (10-Q; Q4 = 10-K). Cash flow = YEAR-TO-DATE statement (10-Q; Q4 = 10-K full year);
+  set `cf.ytd_months` to 3, 6, 9 or 12.
+- Annual records (2006–2025): Q4 release twelve-month columns + that year's 10-K (as originally reported) for the full
+  IS, BS, CF, segment note (sales, operating profit, D&A, capex, identifiable assets), debt note, employees.
+- Prior-year comparatives (`py` section): ALSO extract the prior-year comparative column as presented in THIS period's
+  documents (quarter: same quarter a year earlier, three-month column; annual: prior fiscal year) for the income
+  statement, segment sales / operating profit and adjusted EPS. These are used to put the periods just before each
+  spin-off (Fortive Jul-2016, Envista Dec-2019, Veralto Sep-2023) and other discontinued operations on the recast
+  continuing-operations basis. Set `py.restated` = true if the comparative differs from what was originally reported
+  for that period because of discontinued operations / segment recasts (say why in `py.notes`), else false.
+- Units: USD millions to 1 decimal exactly as published (thousands → divide by 1,000, round to 1 decimal); shares in
+  millions (thousands → /1,000, 3 dp); per-share in $ as published; percentages as numbers in percent (e.g. 3.5).
+- Stock split: Danaher had a 2-for-1 split in June 2010. Record shares / EPS / DPS EXACTLY as published in the source and
+  set `is.per_share_basis` to "pre_split" or "post_split". Do not adjust yourself.
+- Signs: fields marked (positive) are positive numbers for costs; "signed" fields keep the sign of their effect on
+  earnings / cash (income or inflow positive, expense or outflow negative).
+- Use null when a figure is not published for that period. Never estimate. If you compute a value (sum / difference /
+  FY − 9M), say so in `notes`. Every record must carry its source URLs.
+
+## Output
+One JSON file per period in /home/user/Industrials_Optima/models/dhr_build/data/<period_key>.json — period_key like
+`2008`, `Q1-13`, `Q4-25`, `Q2-26`. Write valid JSON (no comments, no trailing commas). Annual records also carry `extra`.
+
+```json
+{
+  "period": "Q2-26",
+  "period_end": "2026-06-26",
+  "sources": {"release": "https://...", "filing": "https://..."},
+  "is": {
+    "sales": null, "cogs": "cost of sales (positive)", "gp": null,
+    "sga": "selling, general & administrative (positive)", "rnd": "research & development (positive)",
+    "other_op_lines": [["exact label of any other line inside operating profit (e.g. 'Other operating (income) expense', 'Gain on sale of business', impairment)", "positive = expense, negative = income"]],
+    "op_profit": "operating profit",
+    "nonop_lines": [["exact label of every line between operating profit and pretax earnings, e.g. 'Other income (expense), net', 'Loss on early extinguishment of borrowings', 'Gain on sale of investments'", "signed: income positive"]],
+    "interest_exp": "interest expense (positive)", "interest_inc": "interest income (positive)",
+    "ebt": "earnings from continuing operations before income taxes", "tax": "income taxes (positive = expense)",
+    "cont_ops": "net earnings from continuing operations", "disc_ops": "earnings (loss) from discontinued operations, net of tax (signed; 0 if none)",
+    "net_income": "net earnings", "nci": "net earnings attributable to noncontrolling interests (positive = deducted) or null",
+    "pref_div": "mandatory convertible preferred stock dividends (positive) or null",
+    "ni_common": "net earnings attributable to common stockholders (= net earnings − preferred dividends) or null if same as net earnings",
+    "shares_basic": null, "shares_diluted": null,
+    "eps_basic_cont": null, "eps_dil_cont": "diluted EPS from continuing operations", "eps_dil": "diluted EPS total (net earnings per common share)",
+    "dps": "dividends declared per common share in the period (release / 10-Q / 10-K equity note), else null",
+    "per_share_basis": "pre_split | post_split"
+  },
+  "seg": {
+    "segments": [{"name": "exact segment name", "sales": null, "op_profit": "GAAP operating profit", "amort": "segment amortization of intangibles if published",
+                  "dep": "segment depreciation if published", "adj_op": "segment adjusted operating profit if published",
+                  "other_adj": "segment other operating profit adjustments if published",
+                  "growth_total": "total sales growth % (GAAP)", "growth_acq": "impact of acquisitions/divestitures % (signed as shown)",
+                  "growth_fx": "impact of currency % (signed as shown)", "growth_core": "core sales growth % (non-GAAP)"}],
+    "other_op_profit": "Other / corporate operating profit (signed, normally negative)",
+    "total_growth": {"total": "total company sales growth %", "acq": "acquisitions/divestitures impact % (signed as shown in the table, i.e. the deduction to get core)",
+                     "fx": "currency impact % (signed as shown)", "core": "core sales growth %", "other": "any other line (e.g. discontinued / tariffs) %", "other_label": null},
+    "respiratory_sales": "Cepheid respiratory testing revenue $m if stated (approx values as numbers)",
+    "core_ex_resp": "core growth excl. respiratory % if stated",
+    "recurring_pct": "recurring revenue % of sales if stated",
+    "seg_note": "segment structure in force / recasts / moves"
+  },
+  "ngaap": {
+    "adj_eps_pub": "adjusted diluted net EPS (non-GAAP) as published (continuing ops), else null",
+    "eps_bridge_start": "the GAAP diluted EPS figure the bridge starts from", "eps_bridge_start_label": "its exact label",
+    "eps_bridge": [["exact line label", "per-share value signed as added"]],
+    "item_amounts": [["exact item label (matching the bridge line or note)", "pretax $m (signed as added back) or null", "after-tax $m or null", "where it sits: 'op' (inside operating profit) | 'nonop' (other income / interest) | 'tax'"]],
+    "amort_pretax": "pretax amortization of acquisition-related intangibles added back $m (else null)",
+    "adj_op_pub": "adjusted operating profit total $m if published (else null)",
+    "adj_op_margin_pub": "adjusted operating profit margin % if published",
+    "fcf_pub": "free cash flow as published $m (for the period, not YTD) else null", "capex_pub": "capex used in FCF (negative)", "capex_disposals_pub": "proceeds from PP&E sales used in FCF",
+    "cfo_pub_period": "operating cash flow for the period (three-month or annual) from the release FCF table",
+    "guidance": "verbatim-ish forward guidance from the release (core growth ranges, adj EPS range, adj op margin, tax rate, interest, shares, amortization, FX, corporate expense)",
+    "notes": "definition of adjusted EPS in this period (e.g. whether amortization is added back), anything unusual"
+  },
+  "cf": {
+    "ytd_months": 12,
+    "net_income": "net earnings (total, first line)", "disc_ops_ni": "less earnings from discontinued operations (positive number if deducted) or null",
+    "dep": "depreciation", "amort": "amortization of intangible assets", "sbc": "stock-based compensation",
+    "deferred_tax": "change in deferred income taxes (signed)", "impair": "impairment charges (signed) or null",
+    "gains": "(gains) losses on sales / investments signed as in CF or null",
+    "wc_change": "signed — sum of all 'Change in ...' operating asset & liability lines",
+    "cfo_cont": "operating cash flows from continuing operations", "cfo_disc": "from discontinued operations (signed) or null", "cfo": "net cash from operating activities (total)",
+    "capex": "negative", "capex_disposals": "proceeds from PP&E sales (positive)", "acquisitions": "cash paid for acquisitions (negative)",
+    "divest": "proceeds from sale of businesses / product lines (positive)", "invest_purch": "purchases of investments (negative)", "invest_sales": "proceeds from investments (positive)",
+    "cfi_disc": "investing cash flows of discontinued operations (signed) or null", "cfi": "total investing",
+    "stock_iss": "proceeds from issuance of common stock (incl. stock-comp) (positive)", "pref_iss": "proceeds from preferred stock issuance (positive) or null",
+    "dividends": "payment of dividends (negative; common + preferred)", "buyback": "repurchase of common stock (negative)",
+    "debt_net_short": "net borrowings/(repayments) maturities ≤90 days incl. commercial paper (signed)",
+    "debt_proceeds": "borrowings > 90 days (positive)", "debt_repay": "repayments > 90 days (negative)",
+    "spin_cash": "cash distributed from / to spun-off entity (e.g. Fortive / Envista / Veralto distribution received) signed, or null",
+    "cff_disc": "financing cash flows of discontinued operations (signed) or null", "cff": "total financing",
+    "fx": "effect of exchange rates (signed)", "net_change": null, "cash_begin": null, "cash_end": null,
+    "cash_basis": "'cash' or 'cash+restricted' or 'cash incl. held for sale'",
+    "lines_raw": [["exact label", "value (signed as shown)"]]
+  },
+  "bs": {
+    "cash": null, "ar": "trade accounts receivable, net", "inventories": null, "prepaid_other": "prepaid expenses & other current assets",
+    "ca_disc": "current assets of discontinued operations / held for sale or null", "tca": "total current assets",
+    "ppe": "property, plant & equipment, net", "other_lta": "other long-term assets (incl. ROU, investments)", "nca_disc": "noncurrent assets of discontinued ops or null",
+    "goodwill": null, "intangibles": "other intangible assets, net", "ta": "total assets",
+    "st_debt": "notes payable & current portion of long-term debt", "ap": "trade accounts payable", "accrued": "accrued expenses & other liabilities",
+    "cl_disc": "current liabilities of discontinued ops or null", "tcl": "total current liabilities",
+    "other_ltl": "other long-term liabilities", "ncl_disc": "noncurrent liabilities of discontinued ops or null", "ltd": "long-term debt",
+    "pref": "preferred stock (MCPS) carrying value or null", "common": "common stock par", "apic": "additional paid-in capital", "treasury": "treasury stock (negative) or null",
+    "retained": null, "aoci": "signed", "dhr_equity": "total Danaher stockholders' equity", "nci": "noncontrolling interests or null", "te": "total stockholders' equity",
+    "tle": "total liabilities & equity", "shares_out": "common shares outstanding at period end (m) from the BS parenthetical / cover",
+    "lines_raw": [["exact label", "value"]]
+  },
+  "py": {
+    "restated": false, "notes": null,
+    "is": {"sales": null, "cogs": null, "sga": null, "rnd": null, "other_op": "sum of other_op_lines (positive = expense)", "op_profit": null, "nonop": "sum of nonop lines (signed)",
+           "interest_exp": null, "interest_inc": null, "ebt": null, "tax": null, "cont_ops": null, "disc_ops": null, "net_income": null, "pref_div": null,
+           "shares_basic": null, "shares_diluted": null, "eps_dil_cont": null, "eps_dil": null},
+    "segments": [{"name": null, "sales": null, "op_profit": null}], "other_op_profit": null,
+    "adj_eps_pub": null, "amort_pretax": null
+  },
+  "extra": {
+    "employees": null, "dep": "depreciation expense", "amort": "amortization of intangibles",
+    "seg_extra": [{"name": null, "dep_amort": null, "capex": null, "assets": null}],
+    "acquisitions": [["business name", "closing date", "consideration $m", "segment"]],
+    "divestitures": [["business / spin-off", "date", "notes"]],
+    "debt_maturities": [["year", "amount $m"]], "amort_schedule": [["year", "expected amortization $m"]],
+    "notes": null
+  },
+  "notes": "free text: computed values, any self-check that would not pass and why"
+}
+```
+
+## Clarifications (from the pilot)
+- Null vs zero: a line that exists and shows "—" = 0.0; a line that is not presented at all = null. An absent row in a
+  growth table (e.g. no acquisitions row for a segment) = 0.0.
+- Annual records: when the release and the 10-K differ in labels or amounts, the 10-K wins.
+- Spin-off / IPO cash: put separation-related financing lines that are not in the continuing financing subtotal
+  (e.g. Envista IPO proceeds, "cash distributions to/from Envista/Fortive/Veralto, net") in `cf.spin_cash` (signed);
+  use `cf.cff_disc` only for lines explicitly labelled discontinued operations.
+- `cf.stock_iss`: proceeds from stock-based-compensation issuance only (may be a net negative). Public equity offerings
+  (common or preferred) go in `cf.equity_offering` (positive; add the field) — preferred offerings may use `pref_iss`.
+- Other non-cash operating lines not in the named fields (inventory step-up amortization, make-whole premiums, pension,
+  etc.) stay in `lines_raw`; the model derives the remainder.
+- `ngaap.item_amounts` location may also be "below_ni" (e.g. MCPS dividends / if-converted adjustments) or
+  "discops".
+- `seg.recurring_pct`: may be computed from a revenue note (say so). Add per-segment `core_ex_resp` if stated.
+- `is.dps`: dividends declared per common share for the period (10-Q / 10-K equity note or release); say the source in notes.
+- Fill segment `amort` / `dep` for quarters too whenever the 10-Q / release presents them.
+
+## Self-checks before writing each period (re-read the source if they fail)
+- is: gp − sga − rnd − Σ other_op_lines = op_profit; op_profit + Σ nonop − interest_exp + interest_inc = ebt;
+  ebt − tax = cont_ops; cont_ops + disc_ops = net_income (±0.6; old releases in thousands round to 0.1).
+- seg: Σ segment sales = is.sales; Σ segment op_profit + other_op_profit = is.op_profit (±1).
+- ngaap: eps_bridge_start + Σ eps_bridge = adj_eps_pub (±0.01).
+- cf sections: cfo + cfi + cff + fx = net_change; cash_begin + net_change = cash_end (±0.6).
+- bs: ta = tle; components sum to subtotals (±1).
+Report any check that does not pass (with the reason) in `notes`.

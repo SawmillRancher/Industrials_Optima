@@ -1,0 +1,558 @@
+{
+ "period": "Q3-19",
+ "period_end": "2019-09-27",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/313616/000031361619000150/dhr-20191024xex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/313616/000031361619000148/dhr-2019927x10q.htm"
+ },
+ "is": {
+  "sales": 5037.3,
+  "cogs": 2228.9,
+  "gp": 2808.4,
+  "sga": 1654.7,
+  "rnd": 318.9,
+  "other_op_lines": [],
+  "op_profit": 834.8,
+  "nonop_lines": [
+   [
+    "Other income, net",
+    4.4
+   ]
+  ],
+  "interest_exp": 26.3,
+  "interest_inc": 30.1,
+  "ebt": 843.0,
+  "tax": 169.1,
+  "cont_ops": 673.9,
+  "disc_ops": 0.0,
+  "net_income": 673.9,
+  "nci": 5.9,
+  "pref_div": 19.6,
+  "ni_common": 648.4,
+  "shares_basic": 718.8,
+  "shares_diluted": 729.3,
+  "eps_basic_cont": 0.9,
+  "eps_dil_cont": 0.89,
+  "eps_dil": 0.89,
+  "dps": 0.17,
+  "per_share_basis": "post_split"
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Life Sciences",
+    "sales": 1695.6,
+    "op_profit": 342.5,
+    "amort": 89.0,
+    "dep": 31.7,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 6.0,
+    "growth_acq": -1.0,
+    "growth_fx": 1.5,
+    "growth_core": 6.5
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 1601.9,
+    "op_profit": 266.0,
+    "amort": 51.3,
+    "dep": 94.3,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 6.5,
+    "growth_acq": 0.0,
+    "growth_fx": 1.5,
+    "growth_core": 8.0
+   },
+   {
+    "name": "Dental / Envista",
+    "sales": 659.3,
+    "op_profit": 78.7,
+    "amort": 22.3,
+    "dep": 10.0,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": -3.0,
+    "growth_acq": 0.0,
+    "growth_fx": 1.5,
+    "growth_core": -1.5
+   },
+   {
+    "name": "Environmental & Applied Solutions",
+    "sales": 1080.5,
+    "op_profit": 256.5,
+    "amort": 15.3,
+    "dep": 11.6,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 0.5,
+    "growth_acq": 0.0,
+    "growth_fx": 1.5,
+    "growth_core": 2.0
+   }
+  ],
+  "other_op_profit": -108.9,
+  "total_growth": {
+   "total": 4.0,
+   "acq": -0.5,
+   "fx": 1.5,
+   "core": 5.0,
+   "other": 1.0,
+   "other_label": "Less the impact of Envista on Danaher's core revenue growth (adjusted core revenue growth excl. Envista = 6.0%)"
+  },
+  "respiratory_sales": null,
+  "core_ex_resp": null,
+  "recurring_pct": 69.5,
+  "seg_note": "Four segments: Life Sciences, Diagnostics, Dental / Envista (renamed after the Sep-2019 Envista IPO; ~19.4% sold, Danaher retained 80.6% and consolidated it with a noncontrolling interest), Environmental & Applied Solutions (+ Other = unallocated corporate, -108.9). Release has no segment table; segment sales / OP from 10-Q segment note, depreciation / amortization and growth tables from 10-Q MD&A (three-month). Diagnostics and Dental growth tables have no acquisitions line (0.0); EAS acquisitions shown as '—'. Release presents 'Adjusted core revenue growth' excluding Envista: 6.0% (Envista impact 1.0pt) - recorded in total_growth.other. recurring_pct computed = recurring revenue 3,502.1 / sales 5,037.3 (10-Q revenue note)."
+ },
+ "ngaap": {
+  "adj_eps_pub": 1.16,
+  "eps_bridge_start": 0.89,
+  "eps_bridge_start_label": "Diluted Net Earnings Per Share (GAAP)",
+  "eps_bridge": [
+   [
+    "Pretax amortization of acquisition-related intangible assets",
+    0.24
+   ],
+   [
+    "Pretax Envista separation costs and costs related to establishing a new separate company infrastructure in connection with the Envista initial public offering, primarily related to incremental salaries, benefits and rent expense",
+    0.03
+   ],
+   [
+    "Pretax transaction costs deemed significant and integration preparation costs related to the anticipated GE Biopharma acquisition",
+    0.04
+   ],
+   [
+    "First quarter 2019 costs and estimated liabilities related to a legal contingency",
+    0.0
+   ],
+   [
+    "Pretax acquisition-related transaction costs deemed significant and fair value adjustments to inventory, in each case related to the acquisition of IDT and incurred in the second quarter of 2018",
+    0.0
+   ],
+   [
+    "Pretax gain on resolution of acquisition-related matters recognized in the second quarter of 2018",
+    0.0
+   ],
+   [
+    "Tax effect of all adjustments reflected above",
+    -0.05
+   ],
+   [
+    "Discrete tax adjustments and other tax-related adjustments",
+    0.0
+   ],
+   [
+    "Declared dividends on the MCPS assuming “if-converted” method",
+    0.01
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Pretax amortization of acquisition-related intangible assets",
+    177.9,
+    143.2,
+    "op"
+   ],
+   [
+    "Pretax Envista separation costs and costs related to establishing a new separate company infrastructure",
+    25.0,
+    22.0,
+    "op"
+   ],
+   [
+    "Pretax transaction costs deemed significant and integration preparation costs related to the anticipated GE Biopharma acquisition",
+    30.0,
+    28.0,
+    "op"
+   ],
+   [
+    "Declared dividends on the MCPS assuming “if-converted” method",
+    null,
+    19.6,
+    "below_ni"
+   ]
+  ],
+  "amort_pretax": 177.9,
+  "adj_op_pub": null,
+  "adj_op_margin_pub": null,
+  "fcf_pub": null,
+  "capex_pub": null,
+  "capex_disposals_pub": null,
+  "cfo_pub_period": null,
+  "guidance": "Q4-19: GAAP diluted EPS $1.06-$1.09; adjusted diluted EPS $1.32-$1.35 (pretax amortization $173.7m / $0.23, reduced by $4.3m allocated to Envista NCI; GE Biopharma costs $0.06; early extinguishment of debt $0.01 (make-whole on 2020 notes, $7m pretax); tax effect ($0.05); MCPS dividends $0.01; adjusted diluted shares 742.6m incl. 12.0m converted). FY2019: GAAP diluted EPS $3.38-$3.41 (prior $3.38-$3.43); adjusted diluted EPS $4.74-$4.77 (prior $4.75-$4.80), both including dilution from the 19.4% Envista noncontrolling interest; pretax amortization $710.3m ($0.96); Envista separation $0.06; GE Biopharma $0.15; legal $0.05; LOEE $0.01; tax effect ($0.22); discrete tax $0.31; MCPS dividends $0.04; adjusted diluted shares 736.5m incl. 10.0m converted. Envista split-off exchange offer and GE Biopharma close (expected Q1-20) pending.",
+  "notes": "Adjusted diluted EPS adds back pretax amortization of acquisition-related intangibles, Envista separation/IPO costs, significant GE Biopharma transaction costs, discrete tax items (excess stock-comp benefit above ~$7m/quarter excluded) and MCPS dividends under the if-converted method (adjusted diluted shares 740.9m = 729.3m + 11.6m converted). MCPS item amount = income-statement MCPS dividends 19.6. GAAP EPS is on net earnings attributable to common stockholders after Envista NCI (5.9). Release has no free cash flow table this quarter (fcf fields null)."
+ },
+ "cf": {
+  "ytd_months": 9,
+  "net_income": 1739.0,
+  "disc_ops_ni": null,
+  "dep": 450.3,
+  "amort": 536.6,
+  "sbc": 130.0,
+  "deferred_tax": null,
+  "impair": null,
+  "gains": null,
+  "wc_change": -15.5,
+  "cfo_cont": null,
+  "cfo_disc": null,
+  "cfo": 2840.4,
+  "capex": -518.4,
+  "capex_disposals": 14.1,
+  "acquisitions": -331.1,
+  "divest": null,
+  "invest_purch": -165.5,
+  "invest_sales": 0.0,
+  "cfi_disc": null,
+  "cfi": -972.0,
+  "stock_iss": 115.0,
+  "pref_iss": 1599.6,
+  "dividends": -385.0,
+  "buyback": null,
+  "debt_net_short": 744.1,
+  "debt_proceeds": 8137.1,
+  "debt_repay": -680.9,
+  "spin_cash": 643.4,
+  "cff_disc": null,
+  "cff": 11610.5,
+  "fx": -14.6,
+  "net_change": 13464.3,
+  "cash_begin": 787.8,
+  "cash_end": 14252.1,
+  "cash_basis": "cash",
+  "equity_offering": 1443.2,
+  "lines_raw": [
+   [
+    "Net earnings",
+    1739.0
+   ],
+   [
+    "Depreciation",
+    450.3
+   ],
+   [
+    "Amortization",
+    536.6
+   ],
+   [
+    "Stock-based compensation expense",
+    130.0
+   ],
+   [
+    "Change in trade accounts receivable, net",
+    -26.3
+   ],
+   [
+    "Change in inventories",
+    -169.4
+   ],
+   [
+    "Change in trade accounts payable",
+    -81.5
+   ],
+   [
+    "Change in prepaid expenses and other assets",
+    225.4
+   ],
+   [
+    "Change in accrued expenses and other liabilities",
+    36.3
+   ],
+   [
+    "Net operating cash provided by operating activities",
+    2840.4
+   ],
+   [
+    "Cash paid for acquisitions",
+    -331.1
+   ],
+   [
+    "Payments for additions to property, plant and equipment",
+    -518.4
+   ],
+   [
+    "Proceeds from sales of property, plant and equipment",
+    14.1
+   ],
+   [
+    "Payments for purchases of investments",
+    -165.5
+   ],
+   [
+    "Proceeds from sale of investments",
+    0.0
+   ],
+   [
+    "All other investing activities",
+    28.9
+   ],
+   [
+    "Net operating cash used in investing activities",
+    -972.0
+   ],
+   [
+    "Proceeds from the issuance of common stock in connection with stock-based compensation",
+    115.0
+   ],
+   [
+    "Proceeds from the sale of common stock, net of issuance costs",
+    1443.2
+   ],
+   [
+    "Proceeds from the sale of preferred stock, net of issuance costs",
+    1599.6
+   ],
+   [
+    "Proceeds from the sale of Envista Holdings Corporation Common Stock, net of issuance costs",
+    643.4
+   ],
+   [
+    "Payment of dividends",
+    -385.0
+   ],
+   [
+    "Net proceeds from borrowings (maturities of 90 days or less)",
+    744.1
+   ],
+   [
+    "Proceeds from borrowings (maturities longer than 90 days)",
+    8137.1
+   ],
+   [
+    "Net repayments of borrowings (maturities longer than 90 days)",
+    -680.9
+   ],
+   [
+    "All other financing activities",
+    -6.0
+   ],
+   [
+    "Net operating cash provided by financing activities",
+    11610.5
+   ],
+   [
+    "Effect of exchange rate changes on cash and equivalents",
+    -14.6
+   ],
+   [
+    "Net change in cash and equivalents",
+    13464.3
+   ],
+   [
+    "Beginning balance of cash and equivalents",
+    787.8
+   ],
+   [
+    "Ending balance of cash and equivalents",
+    14252.1
+   ],
+   [
+    "Cash interest payments",
+    112.9
+   ],
+   [
+    "Cash income tax payments",
+    494.8
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 14252.1,
+  "ar": 3467.1,
+  "inventories": 2023.7,
+  "prepaid_other": 610.8,
+  "ca_disc": null,
+  "tca": 20353.7,
+  "ppe": 2519.6,
+  "other_lta": 1787.1,
+  "nca_disc": null,
+  "goodwill": 25724.8,
+  "intangibles": 11145.9,
+  "ta": 61531.1,
+  "st_debt": 1068.6,
+  "ap": 1606.8,
+  "accrued": 3258.6,
+  "cl_disc": null,
+  "tcl": 5934.0,
+  "other_ltl": 5865.3,
+  "ncl_disc": null,
+  "ltd": 16536.2,
+  "pref": 1599.6,
+  "common": 8.3,
+  "apic": 7501.5,
+  "treasury": null,
+  "retained": 26481.2,
+  "aoci": -3088.3,
+  "dhr_equity": 32502.3,
+  "nci": 693.3,
+  "te": 33195.6,
+  "tle": 61531.1,
+  "shares_out": 718.2,
+  "lines_raw": [
+   [
+    "Cash and equivalents",
+    14252.1
+   ],
+   [
+    "Trade accounts receivable, net",
+    3467.1
+   ],
+   [
+    "Finished goods",
+    1085.2
+   ],
+   [
+    "Work in process",
+    335.0
+   ],
+   [
+    "Raw materials",
+    603.5
+   ],
+   [
+    "Total inventories",
+    2023.7
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    610.8
+   ],
+   [
+    "Total current assets",
+    20353.7
+   ],
+   [
+    "Property, plant and equipment, net of accumulated depreciation of $3,023.3 and $2,828.3, respectively",
+    2519.6
+   ],
+   [
+    "Other long-term assets",
+    1787.1
+   ],
+   [
+    "Goodwill",
+    25724.8
+   ],
+   [
+    "Other intangible assets, net",
+    11145.9
+   ],
+   [
+    "Total assets",
+    61531.1
+   ],
+   [
+    "Notes payable and current portion of long-term debt",
+    1068.6
+   ],
+   [
+    "Trade accounts payable",
+    1606.8
+   ],
+   [
+    "Accrued expenses and other liabilities",
+    3258.6
+   ],
+   [
+    "Total current liabilities",
+    5934.0
+   ],
+   [
+    "Other long-term liabilities",
+    5865.3
+   ],
+   [
+    "Long-term debt",
+    16536.2
+   ],
+   [
+    "Preferred stock, without par value, 15.0 million shares authorized; 1.65 million shares of 4.75% Mandatory Convertible Preferred Stock, Series A, issued and outstanding at September 27, 2019; no shares issued or outstanding at December 31, 2018",
+    1599.6
+   ],
+   [
+    "Com mon stock - $ 0.01 par value, 2.0 billion shares authorized; 835.0 million issued and 718.2 million outstanding at September 27, 2019; 817.9 million issued and 701.5 million outstanding at December 31, 2018",
+    8.3
+   ],
+   [
+    "Additional paid-in capital",
+    7501.5
+   ],
+   [
+    "Retained earnings",
+    26481.2
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    -3088.3
+   ],
+   [
+    "Total Danaher stockholders’ equity",
+    32502.3
+   ],
+   [
+    "Noncontrolling interests",
+    693.3
+   ],
+   [
+    "Total stockholders’ equity",
+    33195.6
+   ],
+   [
+    "Total liabilities and stockholders’ equity",
+    61531.1
+   ]
+  ]
+ },
+ "py": {
+  "restated": false,
+  "notes": "Q3-18 three-month comparative as presented in the Q3-19 release / 10-Q, same basis as originally reported (Dental renamed 'Dental / Envista'; no discontinued operations).",
+  "is": {
+   "sales": 4853.1,
+   "cogs": 2162.6,
+   "sga": 1558.6,
+   "rnd": 301.2,
+   "other_op": 0.0,
+   "op_profit": 830.7,
+   "nonop": 9.1,
+   "interest_exp": 41.3,
+   "interest_inc": 2.8,
+   "ebt": 801.3,
+   "tax": 137.6,
+   "cont_ops": 663.7,
+   "disc_ops": 0.0,
+   "net_income": 663.7,
+   "pref_div": null,
+   "shares_basic": 701.4,
+   "shares_diluted": 710.6,
+   "eps_dil_cont": 0.93,
+   "eps_dil": 0.93
+  },
+  "segments": [
+   {
+    "name": "Life Sciences",
+    "sales": 1596.7,
+    "op_profit": 312.8
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 1502.5,
+    "op_profit": 235.1
+   },
+   {
+    "name": "Dental / Envista",
+    "sales": 679.5,
+    "op_profit": 86.1
+   },
+   {
+    "name": "Environmental & Applied Solutions",
+    "sales": 1074.4,
+    "op_profit": 254.3
+   }
+  ],
+  "other_op_profit": -57.6,
+  "adj_eps_pub": 1.1,
+  "amort_pretax": 174.1
+ },
+ "notes": "Release income statement identical to 10-Q. Cash flow is nine-month YTD. Computed: cf.wc_change = sum of five 'Change in ...' lines; recurring_pct. Envista IPO (Sep-2019): net proceeds from sale of Envista common stock 643.4 in cf.spin_cash; common offering 1,443.2 in cf.equity_offering; MCPS 1,599.6 in pref_iss; cf.debt_repay = 'Net repayments of borrowings (maturities longer than 90 days)'. NCI: is.nci 5.9 (Envista minority, from IPO date); bs.nci 693.3. Cash 14,252.1 reflects pre-funding of GE Biopharma (new euro/USD notes 8,137.1). DPS 0.17 = quarterly dividend declared in Q3-19 (10-Q MD&A). Shares outstanding 718.2m per BS parenthetical (718,281,174 at 18-Oct-2019 per cover). All self-checks pass."
+}

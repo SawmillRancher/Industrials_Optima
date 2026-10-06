@@ -1,0 +1,533 @@
+{
+ "period": "Q1-17",
+ "period_end": "2017-03-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/313616/000031361617000125/dhr-2017420xex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/313616/000031361617000124/dhr-2017331x10q.htm"
+ },
+ "is": {
+  "sales": 4205.7,
+  "cogs": 1871.4,
+  "gp": 2334.3,
+  "sga": 1443.0,
+  "rnd": 267.4,
+  "other_op_lines": [],
+  "op_profit": 623.9,
+  "nonop_lines": [
+   [
+    "Other income",
+    0.0
+   ]
+  ],
+  "interest_exp": 40.3,
+  "interest_inc": 1.6,
+  "ebt": 585.2,
+  "tax": 101.4,
+  "cont_ops": 483.8,
+  "disc_ops": 22.3,
+  "net_income": 506.1,
+  "nci": null,
+  "pref_div": null,
+  "ni_common": null,
+  "shares_basic": 694.3,
+  "shares_diluted": 705.7,
+  "eps_basic_cont": 0.7,
+  "eps_dil_cont": 0.69,
+  "eps_dil": 0.72,
+  "dps": 0.14,
+  "per_share_basis": "post_split"
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Life Sciences",
+    "sales": 1308.1,
+    "op_profit": 211.6,
+    "amort": 76.6,
+    "dep": 30.1,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 4.0,
+    "growth_acq": -2.5,
+    "growth_fx": 1.5,
+    "growth_core": 3.0
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 1327.3,
+    "op_profit": 154.6,
+    "amort": 56.1,
+    "dep": 87.6,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 17.0,
+    "growth_acq": -15.5,
+    "growth_fx": 1.0,
+    "growth_core": 2.5
+   },
+   {
+    "name": "Dental",
+    "sales": 655.5,
+    "op_profit": 89.4,
+    "amort": 20.0,
+    "dep": 10.2,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 0.0,
+    "growth_acq": 0.0,
+    "growth_fx": 0.0,
+    "growth_core": 0.0
+   },
+   {
+    "name": "Environmental & Applied Solutions",
+    "sales": 914.8,
+    "op_profit": 208.0,
+    "amort": 13.4,
+    "dep": 9.9,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 4.5,
+    "growth_acq": -1.5,
+    "growth_fx": 1.5,
+    "growth_core": 4.5
+   }
+  ],
+  "other_op_profit": -39.7,
+  "total_growth": {
+   "total": 7.0,
+   "acq": -6.0,
+   "fx": 1.5,
+   "core": 2.5,
+   "other": null,
+   "other_label": null
+  },
+  "respiratory_sales": null,
+  "core_ex_resp": null,
+  "recurring_pct": null,
+  "seg_note": "Four segments: Life Sciences, Diagnostics, Dental, Environmental & Applied Solutions (+ Other = unallocated corporate). Releases in this period carry no segment table; segment sales/OP from the 10-Q segment note and depreciation, amortization and growth from the 10-Q MD&A segment sections (three-month columns). Total/segment growth tables in this period are presented as components that sum to total growth (core + acquisitions + currency = total); acq and fx are stored with the sign flipped to the 'less the impact of' convention used from Q3-17 onward (core = total + acq + fx). Release labels: 'Core (non-GAAP)' 2.5, 'Acquisitions (non-GAAP)' 6.0, 'Impact of currency translation (non-GAAP)' (1.5); 10-Q MD&A: 'Existing businesses', 'Acquisitions and other', 'Currency exchange rates'. Dental growth table all '—' (0.0). A product line was transferred from Life Sciences to Environmental & Applied Solutions in Q1-17 (growth effect in 'Acquisitions and other'). Recurring revenue % not disclosed (pre-ASC 606)."
+ },
+ "ngaap": {
+  "adj_eps_pub": 0.85,
+  "eps_bridge_start": 0.69,
+  "eps_bridge_start_label": "Diluted Net Earnings Per Share from Continuing Operations (GAAP)",
+  "eps_bridge": [
+   [
+    "Pretax gain on sale of investments",
+    0.0
+   ],
+   [
+    "Pretax amortization of acquisition-related intangible assets",
+    0.24
+   ],
+   [
+    "Tax effect of all adjustments reflected above",
+    -0.05
+   ],
+   [
+    "Discrete and other tax-related adjustments",
+    -0.03
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Pretax amortization of acquisition-related intangible assets",
+    166.1,
+    132.0,
+    "op"
+   ],
+   [
+    "Discrete and other tax-related adjustments (equity compensation excess tax benefits above the anticipated $10m: realized $26m, $16m excluded)",
+    null,
+    -16.0,
+    "tax"
+   ]
+  ],
+  "amort_pretax": 166.1,
+  "adj_op_pub": null,
+  "adj_op_margin_pub": null,
+  "fcf_pub": null,
+  "capex_pub": null,
+  "capex_disposals_pub": null,
+  "cfo_pub_period": null,
+  "guidance": "Q2-17: GAAP diluted EPS (cont. ops) $0.77-$0.80; adjusted diluted EPS $0.95-$0.98 (pretax amortization $0.23 / $166.0m pretax, $132.0m after-tax; tax effect ($0.05)). FY2017: GAAP diluted EPS $3.13-$3.23; adjusted diluted EPS maintained at $3.85-$3.95 (pretax amortization $0.94 / $664.0m pretax, $527.9m after-tax; tax effect ($0.19); Q1 discrete tax ($0.03)); ~$40m of equity-comp excess tax benefits anticipated for the rest of 2017. 10-Q: if 31-Mar-2017 FX rates prevail, currency would reduce FY2017 sales by ~1.5%.",
+  "notes": "Adjusted diluted EPS from continuing ops (non-GAAP) adds back pretax amortization of acquisition-related intangibles (tax-effected in the aggregate 'Tax effect' line) plus gains/charges deemed non-recurring (sale of investments, restructuring plans fundamentally different from ongoing DBS productivity, acquisition-related items, early extinguishment of debt) and discrete tax items. From 2017 (ASU 2016-09) equity-compensation excess tax benefits above ~$10m/quarter anticipated are excluded. No adjusted operating profit or margin is published. Item after-tax amounts are from the release footnotes. Q1-17 is the first quarter under ASU 2016-09; $16m of the $26m realized excess tax benefit excluded. No free cash flow table in the release."
+ },
+ "cf": {
+  "ytd_months": 3,
+  "net_income": 506.1,
+  "disc_ops_ni": 22.3,
+  "dep": 139.5,
+  "amort": 166.1,
+  "sbc": 33.6,
+  "deferred_tax": null,
+  "impair": null,
+  "gains": 0.0,
+  "wc_change": -262.8,
+  "cfo_cont": 560.2,
+  "cfo_disc": 0.0,
+  "cfo": 560.2,
+  "capex": -158.6,
+  "capex_disposals": null,
+  "acquisitions": 0.0,
+  "divest": null,
+  "invest_purch": null,
+  "invest_sales": 0.0,
+  "cfi_disc": 0.0,
+  "cfi": -163.7,
+  "stock_iss": 20.5,
+  "pref_iss": null,
+  "dividends": -86.6,
+  "buyback": null,
+  "debt_net_short": -434.9,
+  "debt_proceeds": 0.0,
+  "debt_repay": 0.0,
+  "spin_cash": null,
+  "cff_disc": null,
+  "cff": -590.7,
+  "fx": 34.4,
+  "net_change": -159.8,
+  "cash_begin": 963.7,
+  "cash_end": 803.9,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net earnings",
+    506.1
+   ],
+   [
+    "Less: earnings from discontinued operations, net of income taxes",
+    22.3
+   ],
+   [
+    "Net earnings from continuing operations",
+    483.8
+   ],
+   [
+    "Depreciation",
+    139.5
+   ],
+   [
+    "Amortization",
+    166.1
+   ],
+   [
+    "Stock-based compensation expense",
+    33.6
+   ],
+   [
+    "Pretax gain on sale of investments",
+    0.0
+   ],
+   [
+    "Change in trade accounts receivable, net",
+    168.3
+   ],
+   [
+    "Change in inventories",
+    -56.9
+   ],
+   [
+    "Change in trade accounts payable",
+    -90.9
+   ],
+   [
+    "Change in prepaid expenses and other assets",
+    59.4
+   ],
+   [
+    "Change in accrued expenses and other liabilities",
+    -342.7
+   ],
+   [
+    "Total operating cash provided by continuing operations",
+    560.2
+   ],
+   [
+    "Total operating cash provided by discontinued operations",
+    0.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    560.2
+   ],
+   [
+    "Cash paid for acquisitions",
+    0.0
+   ],
+   [
+    "Payments for additions to property, plant and equipment",
+    -158.6
+   ],
+   [
+    "Proceeds from sale of investments",
+    0.0
+   ],
+   [
+    "All other investing activities",
+    -5.1
+   ],
+   [
+    "Total investing cash used in (provided by) continuing operations",
+    -163.7
+   ],
+   [
+    "Total investing cash used in discontinued operations",
+    0.0
+   ],
+   [
+    "Net cash (used in) provided by investing activities",
+    -163.7
+   ],
+   [
+    "Proceeds from the issuance of common stock",
+    20.5
+   ],
+   [
+    "Payment of dividends",
+    -86.6
+   ],
+   [
+    "Payment for purchase of noncontrolling interests",
+    -64.4
+   ],
+   [
+    "Net repayments of borrowings (maturities of 90 days or less)",
+    -434.9
+   ],
+   [
+    "Proceeds from borrowings (maturities longer than 90 days)",
+    0.0
+   ],
+   [
+    "Repayments of borrowings (maturities longer than 90 days)",
+    0.0
+   ],
+   [
+    "All other financing activities",
+    -25.3
+   ],
+   [
+    "Net cash used in financing activities",
+    -590.7
+   ],
+   [
+    "Effect of exchange rate changes on cash and equivalents",
+    34.4
+   ],
+   [
+    "Net change in cash and equivalents",
+    -159.8
+   ],
+   [
+    "Beginning balance of cash and equivalents",
+    963.7
+   ],
+   [
+    "Ending balance of cash and equivalents",
+    803.9
+   ],
+   [
+    "Supplemental: Cash interest payments",
+    48.2
+   ],
+   [
+    "Supplemental: Cash income tax payments",
+    142.3
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 803.9,
+  "ar": 3034.9,
+  "inventories": 1764.9,
+  "prepaid_other": 715.2,
+  "ca_disc": null,
+  "tca": 6318.9,
+  "ppe": 2408.7,
+  "other_lta": 685.7,
+  "nca_disc": null,
+  "goodwill": 24015.0,
+  "intangibles": 11816.8,
+  "ta": 45245.1,
+  "st_debt": 2221.0,
+  "ap": 1402.2,
+  "accrued": 2379.9,
+  "cl_disc": null,
+  "tcl": 6003.1,
+  "other_ltl": 5721.6,
+  "ncl_disc": null,
+  "ltd": 9729.3,
+  "pref": null,
+  "common": 8.1,
+  "apic": 5370.5,
+  "treasury": null,
+  "retained": 21112.4,
+  "aoci": -2705.2,
+  "dhr_equity": 23785.8,
+  "nci": 5.3,
+  "te": 23791.1,
+  "tle": 45245.1,
+  "shares_out": 694.1,
+  "lines_raw": [
+   [
+    "Cash and equivalents",
+    803.9
+   ],
+   [
+    "Trade accounts receivable, net",
+    3034.9
+   ],
+   [
+    "Finished goods",
+    937.8
+   ],
+   [
+    "Work in process",
+    293.5
+   ],
+   [
+    "Raw materials",
+    533.6
+   ],
+   [
+    "Total inventories",
+    1764.9
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    715.2
+   ],
+   [
+    "Total current assets",
+    6318.9
+   ],
+   [
+    "Property, plant and equipment, net of accumulated depreciation of $2,089.9 and $1,963.3, respectively",
+    2408.7
+   ],
+   [
+    "Other long-term assets",
+    685.7
+   ],
+   [
+    "Goodwill",
+    24015.0
+   ],
+   [
+    "Other intangible assets, net",
+    11816.8
+   ],
+   [
+    "Total assets",
+    45245.1
+   ],
+   [
+    "Notes payable and current portion of long-term debt",
+    2221.0
+   ],
+   [
+    "Trade accounts payable",
+    1402.2
+   ],
+   [
+    "Accrued expenses and other liabilities",
+    2379.9
+   ],
+   [
+    "Total current liabilities",
+    6003.1
+   ],
+   [
+    "Other long-term liabilities",
+    5721.6
+   ],
+   [
+    "Long-term debt",
+    9729.3
+   ],
+   [
+    "Common stock - $0.01 par value, 2.0 billion shares authorized; 809.8 and 807.7 issued; 694.1 and 692.2 outstanding, respectively",
+    8.1
+   ],
+   [
+    "Additional paid-in capital",
+    5370.5
+   ],
+   [
+    "Retained earnings",
+    21112.4
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    -2705.2
+   ],
+   [
+    "Total Danaher stockholders’ equity",
+    23785.8
+   ],
+   [
+    "Noncontrolling interests",
+    5.3
+   ],
+   [
+    "Total stockholders’ equity",
+    23791.1
+   ],
+   [
+    "Total liabilities and stockholders’ equity",
+    45245.1
+   ]
+  ]
+ },
+ "py": {
+  "restated": true,
+  "notes": "Q1-16 comparative recast for the Fortive separation (spun off 2-Jul-2016, presented as discontinued operations). As originally reported in the Q1-16 release (incl. Fortive): sales 5,387.2, operating profit 882.1, net earnings from continuing ops 758.4, diluted EPS 1.09, adjusted diluted EPS 1.08. Recast: 3,924.1 / 613.1 / 585.8 / 0.84 / 0.79. Q1-16 included a $223.4m pretax gain on sale of investments (other income).",
+  "is": {
+   "sales": 3924.1,
+   "cogs": 1756.8,
+   "sga": 1328.1,
+   "rnd": 226.1,
+   "other_op": 0.0,
+   "op_profit": 613.1,
+   "nonop": 223.4,
+   "interest_exp": 52.9,
+   "interest_inc": 0.0,
+   "ebt": 783.6,
+   "tax": 197.8,
+   "cont_ops": 585.8,
+   "disc_ops": 172.6,
+   "net_income": 758.4,
+   "pref_div": null,
+   "shares_basic": 688.6,
+   "shares_diluted": 697.1,
+   "eps_dil_cont": 0.84,
+   "eps_dil": 1.09
+  },
+  "segments": [
+   {
+    "name": "Life Sciences",
+    "sales": 1258.1,
+    "op_profit": 177.2
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 1136.2,
+    "op_profit": 180.2
+   },
+   {
+    "name": "Dental",
+    "sales": 655.9,
+    "op_profit": 95.1
+   },
+   {
+    "name": "Environmental & Applied Solutions",
+    "sales": 873.9,
+    "op_profit": 198.4
+   }
+  ],
+  "other_op_profit": -37.8,
+  "adj_eps_pub": 0.79,
+  "amort_pretax": 139.2
+ },
+ "notes": "Income statement and EPS bridge from the release (identical to the 10-Q); segments, BS and 3-month CF from the 10-Q. Computed: cf.wc_change = sum of five 'Change in ...' lines. cf.gains = 'Pretax gain on sale of investments' (—). No 'Change in deferred income taxes', 'Restructuring and impairment charges' or PP&E-disposal lines in the Q1-17 10-Q cash flow (deferred_tax / impair / capex_disposals null). 'Payment for purchase of noncontrolling interests' (64.4) and 'All other' lines only in lines_raw. Earnings from discontinued operations 22.3 relate to Fortive/prior dispositions (no cash flow). Shares outstanding 694.1m per BS parenthetical (694,120,308 at 14-Apr-2017 per cover). DPS 0.14 = quarterly dividend declared in Q1-17 (10-Q MD&A; dividend raised from $0.125). All self-checks pass."
+}

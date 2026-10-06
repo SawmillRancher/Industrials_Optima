@@ -1,0 +1,556 @@
+{
+ "period": "Q2-19",
+ "period_end": "2019-06-28",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/313616/000031361619000129/dhr-2019718xex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/313616/000031361619000127/dhr-2019628x10q.htm"
+ },
+ "is": {
+  "sales": 5156.6,
+  "cogs": 2279.2,
+  "gp": 2877.4,
+  "sga": 1671.8,
+  "rnd": 321.8,
+  "other_op_lines": [],
+  "op_profit": 883.8,
+  "nonop_lines": [
+   [
+    "Other income, net",
+    6.3
+   ]
+  ],
+  "interest_exp": 20.6,
+  "interest_inc": 26.2,
+  "ebt": 895.7,
+  "tax": 164.4,
+  "cont_ops": 731.3,
+  "disc_ops": 0.0,
+  "net_income": 731.3,
+  "nci": null,
+  "pref_div": 22.7,
+  "ni_common": 708.6,
+  "shares_basic": 717.6,
+  "shares_diluted": 727.9,
+  "eps_basic_cont": 0.99,
+  "eps_dil_cont": 0.97,
+  "eps_dil": 0.97,
+  "dps": 0.17,
+  "per_share_basis": "post_split"
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Life Sciences",
+    "sales": 1712.6,
+    "op_profit": 344.0,
+    "amort": 89.1,
+    "dep": 32.8,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 6.5,
+    "growth_acq": -2.0,
+    "growth_fx": 3.0,
+    "growth_core": 7.5
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 1618.3,
+    "op_profit": 282.9,
+    "amort": 51.8,
+    "dep": 94.2,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 4.5,
+    "growth_acq": 0.0,
+    "growth_fx": 3.0,
+    "growth_core": 7.5
+   },
+   {
+    "name": "Dental",
+    "sales": 712.1,
+    "op_profit": 79.5,
+    "amort": 22.5,
+    "dep": 10.0,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": -3.0,
+    "growth_acq": 0.0,
+    "growth_fx": 2.5,
+    "growth_core": -0.5
+   },
+   {
+    "name": "Environmental & Applied Solutions",
+    "sales": 1113.6,
+    "op_profit": 260.2,
+    "amort": 15.4,
+    "dep": 12.6,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 2.0,
+    "growth_acq": -0.5,
+    "growth_fx": 2.5,
+    "growth_core": 4.0
+   }
+  ],
+  "other_op_profit": -82.8,
+  "total_growth": {
+   "total": 3.5,
+   "acq": -1.0,
+   "fx": 3.0,
+   "core": 5.5,
+   "other": null,
+   "other_label": null
+  },
+  "respiratory_sales": null,
+  "core_ex_resp": null,
+  "recurring_pct": 70.0,
+  "seg_note": "Four segments: Life Sciences, Diagnostics, Dental, Environmental & Applied Solutions (+ Other = unallocated corporate, -82.8). Release has no segment table; segment sales / OP from 10-Q segment note, segment depreciation / amortization and growth tables from 10-Q MD&A (three-month columns). Diagnostics and Dental growth tables have no acquisitions line (0.0). Currency line shown as positive 'Less the impact of' deduction (FX headwind). recurring_pct computed = recurring revenue 3,607.4 / sales 5,156.6 (10-Q revenue note). Dental (Envista) still continuing this quarter."
+ },
+ "ngaap": {
+  "adj_eps_pub": 1.19,
+  "eps_bridge_start": 0.97,
+  "eps_bridge_start_label": "Diluted Net Earnings Per Share (GAAP)",
+  "eps_bridge": [
+   [
+    "Pretax amortization of acquisition-related intangible assets",
+    0.24
+   ],
+   [
+    "First half of 2019 pretax Dental business separation costs and costs related to establishing new separate company infrastructure in connection with the Dental business initial public offering, primarily related to incremental salaries, benefits and rent expense",
+    0.01
+   ],
+   [
+    "Pretax transaction costs deemed significant and integration preparation costs related to the anticipated GE Biopharma acquisition",
+    0.03
+   ],
+   [
+    "First quarter 2019 costs and estimated liabilities related to a legal contingency",
+    0.0
+   ],
+   [
+    "Pretax acquisition-related transaction costs deemed significant and fair value adjustments to inventory, in each case related to the acquisition of IDT and incurred in the second quarter of 2018",
+    0.0
+   ],
+   [
+    "Pretax gain on resolution of acquisition-related matters recognized in the second quarter of 2018",
+    0.0
+   ],
+   [
+    "Tax effect of all adjustments reflected above",
+    -0.05
+   ],
+   [
+    "Discrete tax adjustments and other tax-related adjustments",
+    -0.02
+   ],
+   [
+    "Declared dividends on the MCPS assuming “if-converted” method",
+    0.01
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Pretax amortization of acquisition-related intangible assets",
+    178.8,
+    143.4,
+    "op"
+   ],
+   [
+    "Pretax Dental business separation costs and costs related to establishing new separate company infrastructure",
+    11.0,
+    9.0,
+    "op"
+   ],
+   [
+    "Pretax transaction costs deemed significant and integration preparation costs related to the anticipated GE Biopharma acquisition",
+    18.0,
+    16.0,
+    "op"
+   ],
+   [
+    "Discrete tax adjustments and other tax-related adjustments (net discrete tax gains)",
+    null,
+    -15.0,
+    "tax"
+   ],
+   [
+    "Declared dividends on the MCPS assuming “if-converted” method",
+    null,
+    22.7,
+    "below_ni"
+   ]
+  ],
+  "amort_pretax": 178.8,
+  "adj_op_pub": null,
+  "adj_op_margin_pub": null,
+  "fcf_pub": 1002.0,
+  "capex_pub": -180.8,
+  "capex_disposals_pub": 11.3,
+  "cfo_pub_period": 1171.5,
+  "guidance": "Q3-19: GAAP diluted EPS $0.86-$0.89; adjusted diluted EPS $1.12-$1.15 (pretax amortization $179.2m / $0.24; Dental separation costs $0.03; GE Biopharma costs $0.03; tax effect ($0.05); MCPS dividends $0.01; adjusted diluted shares 741.9m incl. 11.9m converted). FY2019: GAAP diluted EPS $3.38-$3.43 (prior $3.34-$3.42); adjusted diluted EPS raised to $4.75-$4.80 (prior $4.72-$4.80); pretax amortization $717.1m ($0.97); Dental separation $0.09; GE Biopharma costs $0.14; legal contingency $0.05; tax effect ($0.23); discrete tax $0.31; MCPS dividends $0.04; adjusted diluted shares 737.1m incl. 10.0m converted.",
+  "notes": "Adjusted diluted EPS adds back pretax amortization of acquisition-related intangibles, Dental separation/IPO costs, significant GE Biopharma transaction costs, discrete tax items (excess stock-comp tax benefit above ~$7m/quarter excluded) and, under the MCPS if-converted method, adds back declared MCPS dividends ($0.01) with adjusted diluted shares 739.8m (727.9m + 11.9m converted shares). MCPS dividend item amount = income-statement MCPS dividends 22.7 (release gives per-share only). After-tax item amounts from release footnotes."
+ },
+ "cf": {
+  "ytd_months": 6,
+  "net_income": 1065.1,
+  "disc_ops_ni": null,
+  "dep": 300.5,
+  "amort": 358.7,
+  "sbc": 85.4,
+  "deferred_tax": null,
+  "impair": null,
+  "gains": null,
+  "wc_change": 65.1,
+  "cfo_cont": null,
+  "cfo_disc": null,
+  "cfo": 1874.8,
+  "capex": -336.5,
+  "capex_disposals": 12.1,
+  "acquisitions": -326.6,
+  "divest": null,
+  "invest_purch": -92.3,
+  "invest_sales": 0.0,
+  "cfi_disc": null,
+  "cfi": -727.4,
+  "stock_iss": 83.0,
+  "pref_iss": 1599.6,
+  "dividends": -233.9,
+  "buyback": null,
+  "debt_net_short": 599.6,
+  "debt_proceeds": null,
+  "debt_repay": -3.9,
+  "spin_cash": null,
+  "cff_disc": null,
+  "cff": 3482.8,
+  "fx": 15.6,
+  "net_change": 4645.8,
+  "cash_begin": 787.8,
+  "cash_end": 5433.6,
+  "cash_basis": "cash",
+  "equity_offering": 1443.2,
+  "lines_raw": [
+   [
+    "Net earnings",
+    1065.1
+   ],
+   [
+    "Depreciation",
+    300.5
+   ],
+   [
+    "Amortization",
+    358.7
+   ],
+   [
+    "Stock-based compensation expense",
+    85.4
+   ],
+   [
+    "Change in trade accounts receivable, net",
+    7.4
+   ],
+   [
+    "Change in inventories",
+    -171.5
+   ],
+   [
+    "Change in trade accounts payable",
+    -47.0
+   ],
+   [
+    "Change in prepaid expenses and other assets",
+    211.9
+   ],
+   [
+    "Change in accrued expenses and other liabilities",
+    64.3
+   ],
+   [
+    "Net operating cash provided by operating activities",
+    1874.8
+   ],
+   [
+    "Cash paid for acquisitions",
+    -326.6
+   ],
+   [
+    "Payments for additions to property, plant and equipment",
+    -336.5
+   ],
+   [
+    "Proceeds from sales of property, plant and equipment",
+    12.1
+   ],
+   [
+    "Payments for purchases of investments",
+    -92.3
+   ],
+   [
+    "Proceeds from sale of investments",
+    0.0
+   ],
+   [
+    "All other investing activities",
+    15.9
+   ],
+   [
+    "Net operating cash used in investing activities",
+    -727.4
+   ],
+   [
+    "Proceeds from the issuance of common stock in connection with stock-based compensation",
+    83.0
+   ],
+   [
+    "Proceeds from the public offering of common stock, net of issuance costs",
+    1443.2
+   ],
+   [
+    "Proceeds from the public offering of preferred stock, net of issuance costs",
+    1599.6
+   ],
+   [
+    "Payment of dividends",
+    -233.9
+   ],
+   [
+    "Net proceeds from borrowings (maturities of 90 days or less)",
+    599.6
+   ],
+   [
+    "Net repayments of borrowings (maturities longer than 90 days)",
+    -3.9
+   ],
+   [
+    "All other financing activities",
+    -4.8
+   ],
+   [
+    "Net operating cash provided by financing activities",
+    3482.8
+   ],
+   [
+    "Effect of exchange rate changes on cash and equivalents",
+    15.6
+   ],
+   [
+    "Net change in cash and equivalents",
+    4645.8
+   ],
+   [
+    "Beginning balance of cash and equivalents",
+    787.8
+   ],
+   [
+    "Ending balance of cash and equivalents",
+    5433.6
+   ],
+   [
+    "Cash interest payments",
+    49.2
+   ],
+   [
+    "Cash income tax payments",
+    196.1
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 5433.6,
+  "ar": 3481.6,
+  "inventories": 2055.9,
+  "prepaid_other": 632.6,
+  "ca_disc": null,
+  "tca": 11603.7,
+  "ppe": 2541.6,
+  "other_lta": 1678.1,
+  "nca_disc": null,
+  "goodwill": 26074.5,
+  "intangibles": 11424.1,
+  "ta": 53322.0,
+  "st_debt": 153.7,
+  "ap": 1664.1,
+  "accrued": 3190.2,
+  "cl_disc": null,
+  "tcl": 5008.0,
+  "other_ltl": 5956.4,
+  "ncl_disc": null,
+  "ltd": 10144.4,
+  "pref": 1599.6,
+  "common": 8.3,
+  "apic": 7482.6,
+  "treasury": null,
+  "retained": 25955.0,
+  "aoci": -2844.3,
+  "dhr_equity": 32201.2,
+  "nci": 12.0,
+  "te": 32213.2,
+  "tle": 53322.0,
+  "shares_out": 717.3,
+  "lines_raw": [
+   [
+    "Cash and equivalents",
+    5433.6
+   ],
+   [
+    "Trade accounts receivable, net",
+    3481.6
+   ],
+   [
+    "Finished goods",
+    1099.2
+   ],
+   [
+    "Work in process",
+    332.4
+   ],
+   [
+    "Raw materials",
+    624.3
+   ],
+   [
+    "Total inventories",
+    2055.9
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    632.6
+   ],
+   [
+    "Total current assets",
+    11603.7
+   ],
+   [
+    "Property, plant and equipment, net of accumulated depreciation of $2,999.2 and $2,828.3, respectively",
+    2541.6
+   ],
+   [
+    "Other long-term assets",
+    1678.1
+   ],
+   [
+    "Goodwill",
+    26074.5
+   ],
+   [
+    "Other intangible assets, net",
+    11424.1
+   ],
+   [
+    "Total assets",
+    53322.0
+   ],
+   [
+    "Notes payable and current portion of long-term debt",
+    153.7
+   ],
+   [
+    "Trade accounts payable",
+    1664.1
+   ],
+   [
+    "Accrued expenses and other liabilities",
+    3190.2
+   ],
+   [
+    "Total current liabilities",
+    5008.0
+   ],
+   [
+    "Other long-term liabilities",
+    5956.4
+   ],
+   [
+    "Long-term debt",
+    10144.4
+   ],
+   [
+    "Preferred stock, without par value, 15.0 million shares authorized; 1.65 million shares of 4.75% Mandatory Convertible Preferred Stock, Series A, issued and outstanding at June 28, 2019; no shares issued or outstanding at December 31, 2018",
+    1599.6
+   ],
+   [
+    "Com mon stock - $0.01 par value, 2.0 billion shares authorized; 834.0 million issued and 717.3 million outstanding at June 28, 2019; 817.9 million issued and 701.5 million outstanding at December 31, 2018",
+    8.3
+   ],
+   [
+    "Additional paid-in capital",
+    7482.6
+   ],
+   [
+    "Retained earnings",
+    25955.0
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    -2844.3
+   ],
+   [
+    "Total Danaher stockholders’ equity",
+    32201.2
+   ],
+   [
+    "Noncontrolling interests",
+    12.0
+   ],
+   [
+    "Total stockholders’ equity",
+    32213.2
+   ],
+   [
+    "Total liabilities and stockholders’ equity",
+    53322.0
+   ]
+  ]
+ },
+ "py": {
+  "restated": false,
+  "notes": "Q2-18 three-month comparative as presented in the Q2-19 release / 10-Q, same basis as originally reported (four segments incl. Dental; no discontinued operations).",
+  "is": {
+   "sales": 4981.0,
+   "cogs": 2163.9,
+   "sga": 1637.9,
+   "rnd": 311.7,
+   "other_op": 0.0,
+   "op_profit": 867.5,
+   "nonop": 8.3,
+   "interest_exp": 43.2,
+   "interest_inc": 2.5,
+   "ebt": 835.1,
+   "tax": 161.3,
+   "cont_ops": 673.8,
+   "disc_ops": 0.0,
+   "net_income": 673.8,
+   "pref_div": null,
+   "shares_basic": 700.2,
+   "shares_diluted": 709.5,
+   "eps_dil_cont": 0.95,
+   "eps_dil": 0.95
+  },
+  "segments": [
+   {
+    "name": "Life Sciences",
+    "sales": 1605.2,
+    "op_profit": 291.5
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 1550.9,
+    "op_profit": 274.3
+   },
+   {
+    "name": "Dental",
+    "sales": 733.4,
+    "op_profit": 104.8
+   },
+   {
+    "name": "Environmental & Applied Solutions",
+    "sales": 1091.5,
+    "op_profit": 251.0
+   }
+  ],
+  "other_op_profit": -54.1,
+  "adj_eps_pub": 1.15,
+  "amort_pretax": 181.1
+ },
+ "notes": "Release income statement identical to 10-Q. Cash flow is six-month YTD; three-month CFO 1,171.5 / FCF 1,002.0 from release. Computed: cf.wc_change = sum of five 'Change in ...' lines; recurring_pct. cf.debt_repay = 'Net repayments of borrowings (maturities longer than 90 days)' (-3.9; net line, no separate proceeds line so debt_proceeds null). cf.stock_iss = stock-comp proceeds only; common offering 1,443.2 in cf.equity_offering; MCPS 1,599.6 in pref_iss. DPS 0.17 = quarterly dividend declared in Q2-19 (10-Q MD&A). Shares outstanding 717.3m per BS parenthetical (717,367,599 at 12-Jul-2019 per cover). All self-checks pass."
+}

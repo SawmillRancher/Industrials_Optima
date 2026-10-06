@@ -1,0 +1,30 @@
+{
+  "_note": "Manual items used by normalize.py. Every value cites its source; estimates are labelled as such.",
+  "period_overrides": {
+    "_note": "Segment 'other operating profit adjustments' by quarter (company definition, Q4-25 release footnote 4: impairments, acquisition-related items, contingencies; booked in SG&A). Danaher published them by segment only for Q4-24, FY24, Q4-25 and FY25; other quarters allocated from the adjusted-EPS footnotes, which name the segment. Quarterly allocations sum to the published FY24 (LS 247, Dx 99) and FY25 (Biotech 101, LS 446, Dx 5) segment figures.",
+    "Q1-24": {"sg_bio_other_adj": 0.0, "sg_ls_other_adj": 25.0, "sg_dx_other_adj": 0.0, "_src": "Q1-24 release note: Abcam inventory fair-value step-up ($25m) — Life Sciences (Abcam)"},
+    "Q2-24": {"sg_bio_other_adj": 0.0, "sg_ls_other_adj": 0.0, "sg_dx_other_adj": 0.0},
+    "Q3-24": {"sg_bio_other_adj": 0.0, "sg_ls_other_adj": 222.0, "sg_dx_other_adj": 0.0, "_src": "Q3-24 release note: trade-name impairment, Life Sciences ($222m)"},
+    "Q1-25": {"sg_bio_other_adj": 15.0, "sg_ls_other_adj": 0.0, "sg_dx_other_adj": 0.0, "_src": "Q1-25 release note: facility impairment, Biotechnology ($15m)"},
+    "Q2-25": {"sg_bio_other_adj": 0.0, "sg_ls_other_adj": 432.0, "sg_dx_other_adj": 0.0, "_src": "Q2-25 release note: trade-name impairment, Life Sciences ($432m)"},
+    "Q3-25": {"sg_bio_other_adj": 86.0, "sg_ls_other_adj": 0.0, "sg_dx_other_adj": 15.0, "_src": "Q3-25 release note: technology / other intangibles & facility impairments, Biotechnology ($86m); trade name, Diagnostics ($15m)"},
+    "Q1-26": {"sg_bio_other_adj": 0.0, "sg_ls_other_adj": 0.0, "sg_dx_other_adj": 17.0, "_src": "Q1-26 release note: Masimo transaction costs ($17m); Other (corporate) operating profit unchanged at ~$(89)m, so allocated to Diagnostics"},
+    "Q2-26": {"sg_bio_other_adj": 0.0, "sg_ls_other_adj": 0.0, "sg_dx_other_adj": 108.0, "_src": "Q2-26 release note C: Masimo inventory step-up, transaction costs, pre-acquisition share-based & change-in-control payments ($108m); Diagnostics operating profit"}
+  },
+  "masimo": {
+    "_src": "Q2-26 10-Q Note 2 (Acquisitions); Q2-26 release; Feb-2026 deal release (8-K Ex. 99.1). See data/deals.json.",
+    "days_q2": 16,
+    "sales_q2": 92.0,
+    "_sales_q2_note": "Estimate: not disclosed in dollars. Diagnostics acquisitions impact 4.0% of Q2-25 Diagnostics sales ($2,309m) = $92m (total company 1.5% × $5,936m = $89m).",
+    "adj_margin_q2": 0.22,
+    "_adj_margin_note": "Estimate for the 16-day stub: Masimo standalone FY25 GAAP operating margin 20.3% (MASI 10-K) plus its own amortization.",
+    "amort_q2": 10.6,
+    "_amort_note": "Intangibles $4,844m ÷ 20-year weighted life (implied by guidance) × 16/365.",
+    "items_q2": 108.0,
+    "items_in_dx_q2": 108.0,
+    "cp_q2": 4703.0,
+    "_cp_note": "Euro commercial paper €4.1bn ($4,703m) outstanding at 26-Jun-2026 (Q2-26 10-Q debt note).",
+    "ppa": {"cons": 9843.0, "stock": 45.0, "ar": 232.0, "inv": 667.0, "ppe": 355.0, "int": 4844.0, "gw": 4960.0,
+            "ap": -77.0, "dtl": -1088.0, "oth": -5.0, "life": 20}
+  }
+}

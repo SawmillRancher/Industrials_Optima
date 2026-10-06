@@ -1,0 +1,557 @@
+{
+ "period": "Q3-22",
+ "period_end": "2022-09-30",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/313616/000031361622000227/dhr-20221020xex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/313616/000031361622000223/dhr-20220930.htm"
+ },
+ "is": {
+  "sales": 7663.0,
+  "cogs": 3079.0,
+  "gp": 4584.0,
+  "sga": 2149.0,
+  "rnd": 420.0,
+  "other_op_lines": [
+   [
+    "Other operating expenses",
+    0.0
+   ]
+  ],
+  "op_profit": 2015.0,
+  "nonop_lines": [
+   [
+    "Other income (expense), net",
+    -51.0
+   ]
+  ],
+  "interest_exp": 42.0,
+  "interest_inc": 9.0,
+  "ebt": 1931.0,
+  "tax": 359.0,
+  "cont_ops": 1572.0,
+  "disc_ops": 0.0,
+  "net_income": 1572.0,
+  "nci": null,
+  "pref_div": 21.0,
+  "ni_common": 1551.0,
+  "shares_basic": 728.5,
+  "shares_diluted": 737.4,
+  "eps_basic_cont": 2.13,
+  "eps_dil_cont": 2.1,
+  "eps_dil": 2.1,
+  "dps": 0.25,
+  "per_share_basis": "post_split"
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Life Sciences",
+    "sales": 3776.0,
+    "op_profit": 1045.0,
+    "amort": 300.0,
+    "dep": 69.0,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 4.0,
+    "growth_acq": -2.5,
+    "growth_fx": 6.5,
+    "growth_core": 8.0
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 2679.0,
+    "op_profit": 761.0,
+    "amort": 50.0,
+    "dep": 98.0,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 9.5,
+    "growth_acq": -0.5,
+    "growth_fx": 4.5,
+    "growth_core": 13.5
+   },
+   {
+    "name": "Environmental & Applied Solutions",
+    "sales": 1208.0,
+    "op_profit": 286.0,
+    "amort": 11.0,
+    "dep": 10.0,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 5.0,
+    "growth_acq": 0.0,
+    "growth_fx": 5.5,
+    "growth_core": 10.5
+   }
+  ],
+  "other_op_profit": -77.0,
+  "total_growth": {
+   "total": 6.0,
+   "acq": -1.5,
+   "fx": 5.5,
+   "core": 10.0,
+   "other": -1.5,
+   "other_label": "Impact of COVID-19 related testing (core -> base business core; base_core = base business core sales growth, non-GAAP)",
+   "base_core": 8.5
+  },
+  "respiratory_sales": null,
+  "core_ex_resp": null,
+  "recurring_pct": 76.0,
+  "seg_note": "Three segments: Life Sciences, Diagnostics, Environmental & Applied Solutions (+ Other = unallocated corporate). Release has no segment table: segment sales / OP from 10-Q segment note (three-month), segment depreciation, amortization and growth from 10-Q MD&A. Base business core sales growth 8.5% (COVID testing impact (1.5)pt). Q3-21 Diagnostics OP (145) included the $547m contract settlement expense. recurring_pct computed = 5,825 / 7,663 (10-Q revenue note)."
+ },
+ "ngaap": {
+  "adj_eps_pub": 2.56,
+  "eps_bridge_start": 2.1,
+  "eps_bridge_start_label": "Diluted Net Earnings Per Common Share From Continuing Operations (GAAP)",
+  "eps_bridge": [
+   [
+    "Amortization of acquisition-related intangible assets",
+    0.48
+   ],
+   [
+    "Fair value net (gains) losses on investments",
+    0.09
+   ],
+   [
+    "Impairments and other charges",
+    0.0
+   ],
+   [
+    "Loss on partial settlement of a defined benefit plan",
+    0.0
+   ],
+   [
+    "Acquisition-related items",
+    0.0
+   ],
+   [
+    "Gain on disposition of certain product lines",
+    0.0
+   ],
+   [
+    "Contract settlement expense",
+    0.0
+   ],
+   [
+    "Tax effect of the above adjustments",
+    -0.11
+   ],
+   [
+    "Discrete tax adjustments",
+    0.0
+   ],
+   [
+    "MCPS \"as if converted\"",
+    0.0
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Amortization of acquisition-related intangible assets",
+    361.0,
+    293.0,
+    "op"
+   ],
+   [
+    "Fair value net (gains) losses on investments",
+    64.0,
+    48.0,
+    "nonop"
+   ],
+   [
+    "Discrete tax adjustments (net discrete tax benefits)",
+    null,
+    -3.0,
+    "tax"
+   ],
+   [
+    "MCPS \"as if converted\"",
+    null,
+    0.0,
+    "below_ni"
+   ]
+  ],
+  "amort_pretax": 361.0,
+  "adj_op_pub": null,
+  "adj_op_margin_pub": null,
+  "fcf_pub": 1733.0,
+  "capex_pub": -277.0,
+  "capex_disposals_pub": 0.0,
+  "cfo_pub_period": 2010.0,
+  "guidance": "Q4-22: core sales flat to (low-single digit); COVID-19 testing impact +high-single to low-double digit; base business core growth +high-single digit. FY2022: core growth raised to +high-single digit; COVID testing impact —; base business core growth +high-single digit. No EPS guidance.",
+  "notes": "Adjusted diluted EPS adds back pretax amortization of acquisition-related intangibles, fair value (gains) losses on equity and limited partnership investments, impairments and other charges, pension settlement losses, acquisition-related items, product-line disposition gains and contract settlement expense, then deducts the aggregate tax effect and removes discrete tax items. MCPS: per-share adjustments assume all MCPS converted ('if-converted' regardless of dilution); adjusted diluted shares = GAAP diluted shares + converted shares of anti-dilutive MCPS, and the related MCPS dividends are added back. Adjusted diluted shares 746.0m (737.4m + 8.6m MCPS B converted shares). IS shows 'Other operating expenses' line (— in Q3-22; 547 contract settlement in Q3-21). Item amounts from release footnotes. Release FCF table three-month only."
+ },
+ "cf": {
+  "ytd_months": 9,
+  "net_income": 4977.0,
+  "disc_ops_ni": 0.0,
+  "dep": 537.0,
+  "amort": 1120.0,
+  "sbc": 270.0,
+  "deferred_tax": null,
+  "impair": null,
+  "gains": 186.0,
+  "wc_change": -1112.0,
+  "cfo_cont": 5978.0,
+  "cfo_disc": null,
+  "cfo": 5978.0,
+  "capex": -823.0,
+  "capex_disposals": 9.0,
+  "acquisitions": -304.0,
+  "divest": 0.0,
+  "invest_purch": -354.0,
+  "invest_sales": 18.0,
+  "cfi_disc": null,
+  "cfi": -1418.0,
+  "stock_iss": 15.0,
+  "pref_iss": null,
+  "dividends": -615.0,
+  "buyback": null,
+  "debt_net_short": -719.0,
+  "debt_proceeds": null,
+  "debt_repay": -265.0,
+  "spin_cash": null,
+  "cff_disc": null,
+  "cff": -1664.0,
+  "fx": -332.0,
+  "net_change": 2564.0,
+  "cash_begin": 2586.0,
+  "cash_end": 5150.0,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net earnings",
+    4977.0
+   ],
+   [
+    "Less: earnings from discontinued operations, net of income taxes",
+    0.0
+   ],
+   [
+    "Net earnings from continuing operations",
+    4977.0
+   ],
+   [
+    "Depreciation",
+    537.0
+   ],
+   [
+    "Amortization of intangible assets",
+    1120.0
+   ],
+   [
+    "Amortization of acquisition-related inventory fair value step-up",
+    0.0
+   ],
+   [
+    "Stock-based compensation expense",
+    270.0
+   ],
+   [
+    "Contract settlement expense",
+    0.0
+   ],
+   [
+    "Pretax gain on sale of product lines and investment (gains) losses",
+    186.0
+   ],
+   [
+    "Change in trade accounts receivable, net",
+    -134.0
+   ],
+   [
+    "Change in inventories",
+    -729.0
+   ],
+   [
+    "Change in trade accounts payable",
+    -180.0
+   ],
+   [
+    "Change in prepaid expenses and other assets",
+    -104.0
+   ],
+   [
+    "Change in accrued expenses and other liabilities",
+    35.0
+   ],
+   [
+    "Net cash provided by operating activities from continuing operations",
+    5978.0
+   ],
+   [
+    "Cash paid for acquisitions",
+    -304.0
+   ],
+   [
+    "Payments for additions to property, plant and equipment",
+    -823.0
+   ],
+   [
+    "Proceeds from sales of property, plant and equipment",
+    9.0
+   ],
+   [
+    "Payments for purchases of investments",
+    -354.0
+   ],
+   [
+    "Proceeds from sales of investments",
+    18.0
+   ],
+   [
+    "Proceeds from sale of product lines",
+    0.0
+   ],
+   [
+    "All other investing activities",
+    36.0
+   ],
+   [
+    "Total cash used in investing activities for continuing operations",
+    -1418.0
+   ],
+   [
+    "Proceeds from the issuance of common stock in connection with stock-based compensation, net",
+    15.0
+   ],
+   [
+    "Payment of dividends",
+    -615.0
+   ],
+   [
+    "Net (repayments of) proceeds from borrowings (maturities of 90 days or less)",
+    -719.0
+   ],
+   [
+    "Net repayments of borrowings (maturities longer than 90 days)",
+    -265.0
+   ],
+   [
+    "All other financing activities",
+    -80.0
+   ],
+   [
+    "Total cash (used in) provided by financing activities for continuing operations",
+    -1664.0
+   ],
+   [
+    "Effect of exchange rate changes on cash and equivalents",
+    -332.0
+   ],
+   [
+    "Net change in cash and equivalents",
+    2564.0
+   ],
+   [
+    "Beginning balance of cash and equivalents",
+    2586.0
+   ],
+   [
+    "Ending balance of cash and equivalents",
+    5150.0
+   ],
+   [
+    "Supplemental: Cash interest payments",
+    250.0
+   ],
+   [
+    "Supplemental: Cash income tax payments",
+    1094.0
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 5150.0,
+  "ar": 4409.0,
+  "inventories": 3236.0,
+  "prepaid_other": 1455.0,
+  "ca_disc": null,
+  "tca": 14250.0,
+  "ppe": 3719.0,
+  "other_lta": 4846.0,
+  "nca_disc": null,
+  "goodwill": 38251.0,
+  "intangibles": 19964.0,
+  "ta": 81030.0,
+  "st_debt": 705.0,
+  "ap": 2191.0,
+  "accrued": 5106.0,
+  "cl_disc": null,
+  "tcl": 8002.0,
+  "other_ltl": 7493.0,
+  "ncl_disc": null,
+  "ltd": 18542.0,
+  "pref": 1668.0,
+  "common": 9.0,
+  "apic": 11985.0,
+  "treasury": null,
+  "retained": 37177.0,
+  "aoci": -3854.0,
+  "dhr_equity": 46985.0,
+  "nci": 8.0,
+  "te": 46993.0,
+  "tle": 81030.0,
+  "shares_out": 727.9,
+  "lines_raw": [
+   [
+    "Cash and equivalents",
+    5150.0
+   ],
+   [
+    "Trade accounts receivable, less allowance for doubtful accounts",
+    4409.0
+   ],
+   [
+    "Finished goods",
+    1578.0
+   ],
+   [
+    "Work in process",
+    519.0
+   ],
+   [
+    "Raw materials",
+    1139.0
+   ],
+   [
+    "Total inventories",
+    3236.0
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    1455.0
+   ],
+   [
+    "Total current assets",
+    14250.0
+   ],
+   [
+    "Property, plant and equipment, net of accumulated depreciation",
+    3719.0
+   ],
+   [
+    "Other long-term assets",
+    4846.0
+   ],
+   [
+    "Goodwill",
+    38251.0
+   ],
+   [
+    "Other intangible assets, net",
+    19964.0
+   ],
+   [
+    "Total assets",
+    81030.0
+   ],
+   [
+    "Notes payable and current portion of long-term debt",
+    705.0
+   ],
+   [
+    "Trade accounts payable",
+    2191.0
+   ],
+   [
+    "Accrued expenses and other liabilities",
+    5106.0
+   ],
+   [
+    "Total current liabilities",
+    8002.0
+   ],
+   [
+    "Other long-term liabilities",
+    7493.0
+   ],
+   [
+    "Long-term debt",
+    18542.0
+   ],
+   [
+    "Preferred stock (Mandatory Convertible Preferred Stock)",
+    1668.0
+   ],
+   [
+    "Common stock - $0.01 par value",
+    9.0
+   ],
+   [
+    "Additional paid-in capital",
+    11985.0
+   ],
+   [
+    "Retained earnings",
+    37177.0
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    -3854.0
+   ],
+   [
+    "Total Danaher stockholders' equity",
+    46985.0
+   ],
+   [
+    "Noncontrolling interests",
+    8.0
+   ],
+   [
+    "Total stockholders' equity",
+    46993.0
+   ],
+   [
+    "Total liabilities and stockholders' equity",
+    81030.0
+   ]
+  ]
+ },
+ "py": {
+  "restated": false,
+  "notes": "Q3-21 comparative equals Q3-21 as originally reported (OP 1,309 after 547 'Other operating expenses' contract settlement; net earnings 1,158 per Q3-21 10-Q XBRL); same three segments.",
+  "is": {
+   "sales": 7229.0,
+   "cogs": 2870.0,
+   "sga": 2062.0,
+   "rnd": 441.0,
+   "other_op": 547.0,
+   "op_profit": 1309.0,
+   "nonop": 137.0,
+   "interest_exp": 62.0,
+   "interest_inc": 3.0,
+   "ebt": 1387.0,
+   "tax": 229.0,
+   "cont_ops": 1158.0,
+   "disc_ops": 0.0,
+   "net_income": 1158.0,
+   "pref_div": 41.0,
+   "shares_basic": 715.1,
+   "shares_diluted": 727.0,
+   "eps_dil_cont": 1.54,
+   "eps_dil": 1.54
+  },
+  "segments": [
+   {
+    "name": "Life Sciences",
+    "sales": 3632.0,
+    "op_profit": 975.0
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 2449.0,
+    "op_profit": 145.0
+   },
+   {
+    "name": "Environmental & Applied Solutions",
+    "sales": 1148.0,
+    "op_profit": 256.0
+   }
+  ],
+  "other_op_profit": -67.0,
+  "adj_eps_pub": 2.39,
+  "amort_pretax": 365.0
+ },
+ "notes": "IS, EPS bridge, growth and FCF from the Q3-22 release; BS / CF (nine-month YTD) and segment data from the 10-Q. Three-month CFO 2,010 / FCF 1,733 from release. Computed: cf.wc_change = sum of five 'Change in ...' lines (-1,112); recurring_pct. cf.debt_repay = net line (-265), debt_proceeds null. DPS 0.25 declared in Q3-22 (10-Q). All self-checks pass."
+}
