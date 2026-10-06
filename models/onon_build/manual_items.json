@@ -1,0 +1,164 @@
+{
+ "_note": "Items not machine-read from the quarterly releases: FY2019-20 from the IPO prospectus (424B4, 16-Sep-2021; CHF thousands converted to millions; share data x1,250 for the 2021 share capital reorganization), annual sales splits FY2019-23 from the prospectus / Forms 20-F, guidance, Investor Day targets and market inputs.",
+ "sources": {
+  "2019": "424B4 prospectus 16-Sep-2021 (FY2019 audited statements, Adjusted EBITDA / Adjusted Net Income reconciliations, net sales by channel / geography / product)",
+  "2020": "424B4 prospectus 16-Sep-2021 (adjusted net income, sales splits); FY2021 release (6-K 18-Mar-2022) comparatives for statements",
+  "2021": "Form 20-F FY2021 (sales splits, former regions); Form 20-F FY2023 (FY2021 on the EMEA / Americas / APAC basis)",
+  "2022": "Form 20-F FY2022 (sales splits, former regions); Form 20-F FY2023 (FY2022 on the EMEA / Americas / APAC basis)",
+  "2023": "Form 20-F FY2023 (net sales by channel / geography / product)"
+ },
+ "periods": {
+  "2019": {
+   "is": {
+    "rev": 267.12,
+    "cogs": -124.003,
+    "gp": 143.117,
+    "sga": -137.428,
+    "op": 5.689,
+    "fin_inc": 0.047,
+    "fin_exp": -0.697,
+    "fx": -1.893,
+    "ebt": 3.147,
+    "tax": -4.62,
+    "ni": -1.473,
+    "eps_a": -0.006296,
+    "eps_dil_a": -0.006296
+   },
+   "ng": {
+    "dna": 5.342,
+    "sbc": 18.838,
+    "etc": 0.0,
+    "adj_ebitda": 29.869
+   },
+   "ani_A": {
+    "ni": -1.473,
+    "sbc": 18.838,
+    "etc": 0.0,
+    "tax_eff": -0.594,
+    "adj_ni": 16.771,
+    "wsh": 233957500,
+    "wsh_dil": 237732500,
+    "adj_eps": 0.07168,
+    "adj_eps_dil": 0.070544
+   },
+   "ch": {
+    "whs": 200.716,
+    "dtc": 66.404,
+    "total": 267.12
+   },
+   "rg": {
+    "eu": 128.344,
+    "na": 111.761,
+    "apac_o": 17.867,
+    "row": 9.148,
+    "total": 267.12
+   },
+   "pr": {
+    "shoes": 255.612,
+    "apparel": 9.57,
+    "acc": 1.938,
+    "total": 267.12
+   },
+   "bs": {
+    "cash": 11.929,
+    "ta": 143.628,
+    "teq": 64.414
+   }
+  },
+  "2020": {
+   "ani_A": {
+    "ni": -27.524,
+    "sbc": 54.765,
+    "etc": 0.0,
+    "tax_eff": -4.413,
+    "adj_ni": 22.828,
+    "wsh": 265685000,
+    "wsh_dil": 274448750,
+    "adj_eps": 0.08592,
+    "adj_eps_dil": 0.083176
+   },
+   "ch": {
+    "whs": 264.819,
+    "dtc": 160.476,
+    "total": 425.295
+   },
+   "rg": {
+    "eu": 187.51,
+    "na": 208.089,
+    "apac_o": 22.999,
+    "row": 6.697,
+    "total": 425.295
+   },
+   "pr": {
+    "shoes": 406.39,
+    "apparel": 15.75,
+    "acc": 3.155,
+    "total": 425.295
+   }
+  },
+  "2021": {
+   "ch": {
+    "whs": 448.778,
+    "total": 724.591
+   },
+   "rg": {
+    "eu": 260.357,
+    "na": 409.53,
+    "apac_o": 42.73,
+    "emea": 264.3,
+    "am": 417.6,
+    "apac": 42.7,
+    "total": 724.591
+   },
+   "pr": {
+    "shoes": 683.288,
+    "apparel": 36.343,
+    "acc": 4.96,
+    "total": 724.591
+   }
+  },
+  "2022": {
+   "ch": {
+    "whs": 777.0
+   },
+   "rg": {
+    "eu": 354.3,
+    "na": 738.5,
+    "apac_o": 80.2,
+    "emea": 378.1,
+    "am": 763.8,
+    "apac": 80.2
+   },
+   "pr": {
+    "shoes": 1167.5,
+    "apparel": 47.3,
+    "acc": 7.4
+   }
+  },
+  "2023": {
+   "ch": {
+    "whs": 1120.3
+   },
+   "rg": {
+    "emea": 488.7,
+    "am": 1162.2,
+    "apac": 141.1
+   },
+   "pr": {
+    "shoes": 1711.4,
+    "apparel": 68.9,
+    "acc": 11.8
+   }
+  }
+ },
+ "overrides": {
+  "Q4-21": {
+   "op": -177.451,
+   "_note": "FY2021 release (6-K 18-Mar-2022) prints a Q4-21 operating result of (354,901) thousand; gross profit 111,818 - SG&A 289,269 = (177,451), which also equals FY (141,089) - 9M 36,361 and reconciles to the published income before taxes (191,027) and Adjusted EBITDA 11,198. Typo corrected."
+  }
+ },
+ "overdraft": {
+  "Q1-22": 25.843,
+  "_note": "Q1-22 release footnote: net cash and cash equivalents in the cash-flow statement are net of bank overdrafts of CHF 25,843 thousand at 31-Mar-2022 (in other current financial liabilities)."
+ }
+}

@@ -1,0 +1,28 @@
+"""Build the ONON SEC filings index (filings.json / filings.csv) from EDGAR submissions; set ONON_SRC for the download folder."""
+import json, subprocess, os, time, csv
+CIK = '1858985'
+S = os.environ.get('ONON_SRC', '/tmp/onon_src'); os.makedirs(os.path.join(S, 'docs'), exist_ok=True)
+UA = os.environ.get('SEC_UA', 'Industrials Optima research admin@industrialsoptima.com')
+sub = os.path.join(S, 'sub.json')
+if not os.path.exists(sub):
+    subprocess.run(['curl', '-sS', '-A', UA, f'https://data.sec.gov/submissions/CIK000{CIK}.json', '-o', sub], check=True)
+r = json.load(open(sub))['filings']['recent']
+out = []
+for i in range(len(r['form'])):
+    f = r['form'][i]
+    if f not in ('20-F', '6-K', '6-K/A', 'F-1', '424B4'): continue
+    acc = r['accessionNumber'][i]; n = acc.replace('-', '')
+    p = os.path.join(S, 'docs', acc + '.idx.json')
+    if not os.path.exists(p):
+        subprocess.run(['curl', '-sS', '-A', UA, f'https://www.sec.gov/Archives/edgar/data/{CIK}/{n}/index.json', '-o', p]); time.sleep(0.15)
+    items = [x['name'] for x in json.load(open(p))['directory']['item']]
+    out.append(dict(date=r['filingDate'][i], form=f, acc=acc, primary=r['primaryDocument'][i], desc=r['primaryDocDescription'][i],
+                    files=[x for x in items if x.endswith('.htm') and not x.startswith('R') and 'index' not in x]))
+json.dump(out, open(os.path.join(S, 'filings.json'), 'w'), indent=1)
+here = os.path.dirname(os.path.abspath(__file__))
+with open(os.path.join(here, 'filings.csv'), 'w', newline='') as fh:
+    w = csv.writer(fh); w.writerow(['filing_date', 'form', 'accession', 'description', 'documents', 'url'])
+    for o in out:
+        w.writerow([o['date'], o['form'], o['acc'], o['desc'], ';'.join(o['files']),
+                    f"https://www.sec.gov/Archives/edgar/data/{CIK}/{o['acc'].replace('-', '')}/{o['primary']}"])
+print(len(out), 'filings')
