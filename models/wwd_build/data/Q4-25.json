@@ -1,0 +1,328 @@
+{
+ "period": "Q4-25",
+ "fy": 2025,
+ "q": 4,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/108312/000117184325007540/exh_991.htm",
+  "release_date": "2025-11-24",
+  "filing": "https://www.sec.gov/Archives/edgar/data/108312/000119312525296204/wwd-20250930.htm"
+ },
+ "notes": [
+  "Sales by primary market: Q4 = fiscal year (10-K) less nine months (Q3 10-Q)."
+ ],
+ "is": {
+  "rev": 995.264,
+  "cogs": 717.864,
+  "sga": 87.582,
+  "rd": 39.043,
+  "int_exp": 10.225,
+  "int_inc": -0.953,
+  "oth": -18.255,
+  "tot_costs": 835.506,
+  "ebt": 159.758,
+  "tax": 22.135,
+  "ni_tot": 137.623,
+  "eps_b": 2.3,
+  "eps_d": 2.23,
+  "sh_b": 59.921,
+  "sh_d": 61.72,
+  "dps": 0.28,
+  "ni": 137.623,
+  "other_lines": []
+ },
+ "seg": {
+  "sales_aero": 661.205,
+  "sales_ind": 334.059,
+  "ind_name": "Industrial",
+  "sales_tot": 995.264,
+  "earn_aero": 161.532,
+  "earn_ind": 48.738,
+  "earn_tot": 210.27,
+  "nonseg": -41.24,
+  "ebit": 169.03,
+  "int_net": -9.272,
+  "capex": 52.391,
+  "dep": 21.816
+ },
+ "ngaap": {
+  "ebit_pub": 169.03,
+  "adj_ebit_pub": 175.566,
+  "ebitda_pub": 198.212,
+  "adj_ebitda_pub": 204.748,
+  "dep": 21.816,
+  "amort": 7.366,
+  "ebitda_adj_tot": 6.536,
+  "ebit_adj_tot": 6.536,
+  "fcf_pub": 180.927,
+  "adj_tax_pub": 37.145,
+  "adj": {
+   "fmt": "b",
+   "items": [
+    {
+     "label": "Specific charge for excess and obsolete inventory a",
+     "pre": 6.536,
+     "net": null,
+     "ps": 0.11,
+     "cat": "OTHER"
+    },
+    {
+     "label": "Non-recurring charge related to a previous acquisition b",
+     "pre": 0.0,
+     "net": null,
+     "ps": 0.0,
+     "cat": "ACQ"
+    },
+    {
+     "label": "Tax Effect of Non-U.S. GAAP Net Earnings Adjustments",
+     "pre": 0.0,
+     "net": -1.618,
+     "ps": -0.03,
+     "cat": "TAX"
+    },
+    {
+     "label": "German corporate tax rate reduction impact c",
+     "pre": 0.0,
+     "net": -13.392,
+     "ps": -0.22,
+     "cat": "TAXD"
+    }
+   ],
+   "gaap_ni": 137.623,
+   "gaap_eps": 2.23,
+   "total": {
+    "pre": null,
+    "net": 4.918,
+    "ps": 0.08
+   },
+   "adj_ni": 129.149,
+   "adj_eps": 2.09
+  }
+ },
+ "cf": {
+  "ytd_months": 12,
+  "cfo": 471.294,
+  "capex": -130.928,
+  "divest": 50.068,
+  "cfi": -119.553,
+  "div": -64.975,
+  "stock_iss": 104.578,
+  "bb": -172.857,
+  "cff": -313.926,
+  "fx": 7.346,
+  "net": 45.161,
+  "beg": 282.27,
+  "end": 327.431,
+  "lines_raw": [
+   [
+    "Net cash provided by operating activities",
+    471.294
+   ],
+   [
+    "Payments for purchase of property, plant, and equipment",
+    -130.928
+   ],
+   [
+    "Proceeds from sale of assets",
+    0.042
+   ],
+   [
+    "Proceeds from business divestitures",
+    50.068
+   ],
+   [
+    "Payments for business acquisition, net of cash acquired",
+    -41.678
+   ],
+   [
+    "Proceeds from sales of short-term investments",
+    2.943
+   ],
+   [
+    "Payments for short-term investments",
+    0.0
+   ],
+   [
+    "Net cash used in investing activities",
+    -119.553
+   ],
+   [
+    "Cash dividends paid",
+    -64.975
+   ],
+   [
+    "Proceeds from sales of treasury stock",
+    104.578
+   ],
+   [
+    "Payments for repurchases of common stock",
+    -172.857
+   ],
+   [
+    "Borrowings on revolving lines of credit and short-term borrowings",
+    2285.9
+   ],
+   [
+    "Payments on revolving lines of credit and short-term borrowings",
+    -2380.6
+   ],
+   [
+    "Payments of long-term debt and finance lease obligations",
+    -85.972
+   ],
+   [
+    "Net cash used in financing activities",
+    -313.926
+   ],
+   [
+    "Effect of exchange rate changes on cash and cash equivalents",
+    7.346
+   ],
+   [
+    "Net change in cash and cash equivalents",
+    45.161
+   ],
+   [
+    "Cash and cash equivalents at beginning of year",
+    282.27
+   ],
+   [
+    "Cash and cash equivalents at end of period",
+    327.431
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 327.431,
+  "ar": 831.116,
+  "inv": 654.608,
+  "tca": 1884.414,
+  "ppe": 986.623,
+  "gw": 832.288,
+  "intang": 428.08,
+  "ta": 4630.143,
+  "std": 122.3,
+  "cltd": 122.934,
+  "ap": 289.417,
+  "tcl": 907.389,
+  "ltd": 456.968,
+  "tl": 2063.753,
+  "eq": 2566.39,
+  "tle": 4630.143,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    327.431
+   ],
+   [
+    "Accounts receivable",
+    831.116
+   ],
+   [
+    "Inventories",
+    654.608
+   ],
+   [
+    "Income taxes receivable",
+    1.553
+   ],
+   [
+    "Other current assets",
+    69.706
+   ],
+   [
+    "Total current assets",
+    1884.414
+   ],
+   [
+    "Property, plant, and equipment, net",
+    986.623
+   ],
+   [
+    "Goodwill",
+    832.288
+   ],
+   [
+    "Intangible assets, net",
+    428.08
+   ],
+   [
+    "Deferred income tax assets",
+    118.711
+   ],
+   [
+    "Other assets",
+    380.027
+   ],
+   [
+    "Total assets",
+    4630.143
+   ],
+   [
+    "Short-term debt",
+    122.3
+   ],
+   [
+    "Current portion of long-term debt",
+    122.934
+   ],
+   [
+    "Accounts payable",
+    289.417
+   ],
+   [
+    "Income taxes payable",
+    59.655
+   ],
+   [
+    "Accrued liabilities",
+    313.083
+   ],
+   [
+    "Total current liabilities",
+    907.389
+   ],
+   [
+    "Long-term debt, less current portion",
+    456.968
+   ],
+   [
+    "Deferred income tax liabilities",
+    107.669
+   ],
+   [
+    "Other liabilities",
+    591.727
+   ],
+   [
+    "Total liabilities",
+    2063.753
+   ],
+   [
+    "Stockholders\u2019 equity",
+    2566.39
+   ],
+   [
+    "Total liabilities and stockholders\u2019 equity",
+    4630.143
+   ]
+  ]
+ },
+ "em": {
+  "com_oem": 194.199,
+  "com_aft": 242.385,
+  "def_oem": 160.22,
+  "def_aft": 64.401,
+  "aero_tot": 661.205,
+  "pg": 163.333,
+  "trans": 105.384,
+  "og": 65.342,
+  "ind_tot": 334.059
+ },
+ "x": {
+  "sbc_ytd": 31.674,
+  "deftax_ytd": -52.358,
+  "dda_ytd": 113.278,
+  "sh_issued": 72.96,
+  "sh_treasury": 13.06
+ }
+}
