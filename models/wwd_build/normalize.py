@@ -177,6 +177,7 @@ def do_bs(p):
     x = r.get('x') or {}
     if x.get('sh_issued') is not None and x.get('sh_treasury') is not None: put(p, 'bs_shares', x['sh_issued'] - x['sh_treasury'])
     put(p, 'debt_tot', std + N(b.get('ltd')))
+    put(p, 'debt_st', N(b.get('std'))); put(p, 'debt_lt', N(b.get('cltd')) + N(b.get('ltd')))
 
 def run():
     load()
