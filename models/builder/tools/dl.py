@@ -12,7 +12,7 @@ def get(url):
         except Exception as e: time.sleep(2+k*2)
     raise RuntimeError(url)
 for x in idx:
-    d=os.path.join(base,f"{x['date']}_{x['form']}_{x['acc']}")
+    d=os.path.join(base,f"{x['date']}_{x['form'].replace('/','')}_{x['acc']}")
     if os.path.exists(os.path.join(d,'.done')): continue
     os.makedirs(d,exist_ok=True)
     acc=x['acc'].replace('-','')
@@ -20,7 +20,7 @@ for x in idx:
     for it in j['directory']['item']:
         n=it['name']; nl=n.lower()
         want = nl.endswith(('.htm','.html','.txt')) and not nl.startswith(acc[:10]) and 'index' not in nl
-        if x['form']!='8-K':
+        if not x['form'].startswith('8-K'):
             want = (n==x['doc']) or (nl.endswith('.htm') and ('ex13' in nl or 'ex-13' in nl or 'exhibit13' in nl))
         if want:
             r=get(f"https://www.sec.gov/Archives/edgar/data/{int(cik)}/{acc}/{n}")

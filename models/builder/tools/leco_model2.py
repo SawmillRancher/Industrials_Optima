@@ -188,7 +188,7 @@ def build_rest(M):
     M.add('cf_oinv', 'Other investing activities, net (derived)', 'line', 'num', hist=H('cf_oinv'), afc=lambda c: '=' + H1('cf_oinv') if c.year == 2026 else 0)
     M.add('cfi', 'Net cash used by investing activities', 'sub', 'num', hist=H('cf_cfi'), afc='=[capex]+[cf_acq]+[cf_proc]+[cf_oinv]')
     M.add('cf_std', 'Short-term borrowings, net (revolver / amounts due banks)', 'line', 'num', hist=H('cf_st_borrowings_net'),
-          afc=lambda c: ('=' + H1('cf_std') + '+([dsch_fac]-[dsch_fac@$Q2/26])') if c.year == 2026 else '=[dsch_fac]-[dsch_fac@py]',
+          afc=lambda c: ('=' + H1('cf_std') + f'+([dsch_fac]-{D["fac_q2_26"]})') if c.year == 2026 else '=[dsch_fac]-[dsch_fac@py]',
           note='Forecast = change in prepayable facilities per the debt schedule.')
     M.add('cf_ltb', 'Proceeds from long-term borrowings', 'line', 'num', hist=H('cf_lt_borrowings'),
           afc=lambda c: '=' + H1('cf_ltb') if c.year == 2026 else '=[dsch_refi]')
