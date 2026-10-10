@@ -1,0 +1,2729 @@
+{
+ "company": "RB Global / Ritchie Bros. Auctioneers (CIK 0001046102)",
+ "coverage": "Q1/15-Q4/18 and FY2015-FY2018",
+ "periods": {
+  "Q1/15": {
+   "is": {
+    "comm_rev": 93.14,
+    "fee_rev": 22.478,
+    "total_rev": 115.618,
+    "cost_services": 11.609,
+    "sga": 63.756,
+    "da": 10.616,
+    "gain_disp_ppe": 0.175,
+    "fx": 3.207,
+    "op_income": 33.019,
+    "interest_income": 0.847,
+    "interest_exp": 1.269,
+    "other_income": 0.946,
+    "memo_equity_income": 0.233,
+    "memo_other_net": 0.713,
+    "pretax": 33.543,
+    "tax": 9.433,
+    "net_income": 24.11,
+    "nci": 0.333,
+    "ni_controlling": 23.777,
+    "ni_common": 23.777,
+    "shares_basic": 107.484944,
+    "shares_diluted": 107.807948,
+    "eps_basic": 0.22,
+    "eps_diluted": 0.22,
+    "dps_declared": 0.14
+   },
+   "is_basis": "legacy (pre-ASC 606) US GAAP: revenues = commissions + fees (net agency basis)",
+   "ops": {
+    "gtv": 955.561,
+    "gtv_label": "GTV (reported as \"Gross Auction Proceeds\"/GAP when first released; relabelled GTV from the Q3/17 release)",
+    "lots_total": 72.5,
+    "consignments_k": 8.9,
+    "bidder_registrations_k": 106.5,
+    "buyers_k": 25.2,
+    "revenue_rate_consolidated": 0.121
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 24.11,
+    "ebitda_calc": 44.581,
+    "adj_ebitda_derived": 44.581,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "ebitda_published_oi_basis": 43.635,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 10.616
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.847
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 1.269
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 9.433
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916003405/v439048_10q.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004109/v446035_10q.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004661/v452443_10q.htm"
+    ],
+    "note": "Quarterly adjusted EBITDA on the net-income basis not published for Q1/15; derived as 9M2015 (158,957, Q3/16 10-Q) - Q2/15 (74,655, Q2/16 10-Q) - Q3/15 (39,721, Q3/16 10-Q); equals NI-based build. Q1/16 10-Q published Q1/15 \"EBITDA\" on the older operating-income basis = OI 33,019 + D&A 10,616 = 43,635 (no adjusting items)."
+   },
+   "adj_ni": {
+    "adj_ni_published": 23.777,
+    "adj_eps_published": 0.22,
+    "base": "Net income attributable to stockholders",
+    "base_value": 23.777,
+    "shares_diluted": 107.807948,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916003404/v439045_ex99-1.htm"
+    ],
+    "note": "Q1/16 release: no adjusting items in Q1/15."
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 33.019,
+    "base": "Operating income",
+    "base_value": 33.019,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916003404/v439045_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916003404/v439045_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916003405/v439048_10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916002774/v432508_ex99-2.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004109/v446035_10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004661/v452443_10q.htm"
+   ]
+  },
+  "Q2/15": {
+   "is": {
+    "comm_rev": 124.592,
+    "fee_rev": 30.885,
+    "total_rev": 155.477,
+    "cost_services": 17.027,
+    "sga": 65.239,
+    "da": 10.769,
+    "gain_disp_ppe": 0.791,
+    "fx": -0.438,
+    "op_income": 62.795,
+    "interest_income": 0.68,
+    "interest_exp": 1.308,
+    "other_income": 1.091,
+    "memo_equity_income": 0.173,
+    "memo_other_net": 0.918,
+    "pretax": 63.258,
+    "tax": 17.412,
+    "net_income": 45.846,
+    "nci": 0.763,
+    "ni_controlling": 45.083,
+    "ni_common": 45.083,
+    "shares_basic": 106.506916,
+    "shares_diluted": 106.978061,
+    "eps_basic": 0.42,
+    "eps_diluted": 0.42,
+    "dps_declared": 0.14
+   },
+   "is_basis": "legacy (pre-ASC 606) US GAAP: revenues = commissions + fees (net agency basis)",
+   "ops": {
+    "gtv": 1262.168,
+    "gtv_label": "GTV (reported as \"Gross Auction Proceeds\"/GAP when first released; relabelled GTV from the Q3/17 release)",
+    "lots_total": 96.0,
+    "consignments_k": 13.6,
+    "bidder_registrations_k": 143.5,
+    "buyers_k": 34.45,
+    "revenue_rate_consolidated": 0.1232
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 45.846,
+    "ebitda_calc": 74.655,
+    "adj_ebitda_published": 74.655,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 10.769
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.68
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 1.308
+     },
+     {
+      "label": "Add: current income tax expense",
+      "cat": "TAXEXP",
+      "value": 19.365
+     },
+     {
+      "label": "Less: deferred income tax recovery",
+      "cat": "TAXEXP",
+      "value": -1.953
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004109/v446035_10q.htm"
+    ],
+    "note": "Q2/16 10-Q labels this \"EBITDA\" (NI basis; no adjusting items in Q2/15, so EBITDA = adjusted EBITDA)."
+   },
+   "adj_ni": {
+    "adj_ni_derived": 45.083,
+    "adj_eps_derived": 0.42,
+    "base": "Net income attributable to stockholders",
+    "base_value": 45.083,
+    "shares_diluted": 106.978061,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004107/v446238_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004660/v452662_ex99-1.htm"
+    ],
+    "note": "No adjusted figures shown for Q2/15 in any US GAAP release (Q2/16 release has no non-GAAP reconciliation); 9M2015 adjusted NI = NI (89,685) per Q3/16 release and Q1/Q3 had no items, so Q2/15 adjusted NI = GAAP NI."
+   },
+   "adj_op_income": {
+    "adj_op_income_derived": 62.795,
+    "base": "Operating income",
+    "base_value": 62.795,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004660/v452662_ex99-1.htm"
+    ],
+    "note": "Implied: 9M2015 adjusted OI = OI (124,416) per Q3/16 release."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004107/v446238_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004109/v446035_10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916002774/v432508_ex99-3.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004660/v452662_ex99-1.htm"
+   ]
+  },
+  "Q3/15": {
+   "is": {
+    "comm_rev": 83.648,
+    "fee_rev": 25.67,
+    "total_rev": 109.318,
+    "cost_services": 12.045,
+    "sga": 58.17,
+    "da": 10.017,
+    "gain_disp_ppe": 0.234,
+    "fx": -0.718,
+    "op_income": 28.602,
+    "interest_income": 0.548,
+    "interest_exp": 1.239,
+    "other_income": 1.102,
+    "memo_equity_income": 0.363,
+    "memo_other_net": 0.739,
+    "pretax": 29.013,
+    "tax": 7.766,
+    "net_income": 21.247,
+    "nci": 0.422,
+    "ni_controlling": 20.825,
+    "ni_common": 20.825,
+    "shares_basic": 107.137417,
+    "shares_diluted": 107.517888,
+    "eps_basic": 0.19,
+    "eps_diluted": 0.19,
+    "dps_declared": 0.16
+   },
+   "is_basis": "legacy (pre-ASC 606) US GAAP: revenues = commissions + fees (net agency basis)",
+   "ops": {
+    "gtv": 894.509,
+    "gtv_label": "GTV (reported as \"Gross Auction Proceeds\"/GAP when first released; relabelled GTV from the Q3/17 release)",
+    "lots_total": 85.0,
+    "consignments_k": 10.95,
+    "bidder_registrations_k": 104.5,
+    "buyers_k": 26.65,
+    "revenue_rate_consolidated": 0.1222
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 21.247,
+    "ebitda_calc": 39.721,
+    "adj_ebitda_published": 39.721,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 10.017
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.548
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 1.239
+     },
+     {
+      "label": "Add: current income tax expense",
+      "cat": "TAXEXP",
+      "value": 8.7
+     },
+     {
+      "label": "Less: deferred income tax recovery",
+      "cat": "TAXEXP",
+      "value": -0.934
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004661/v452443_10q.htm"
+    ]
+   },
+   "adj_ni": {
+    "adj_ni_published": 20.825,
+    "adj_eps_published": 0.19,
+    "base": "Net income attributable to stockholders",
+    "base_value": 20.825,
+    "shares_diluted": 107.517888,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004660/v452662_ex99-1.htm"
+    ]
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 28.602,
+    "base": "Operating income",
+    "base_value": 28.602,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004660/v452662_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004660/v452662_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004661/v452443_10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916002774/v432508_ex99-4.htm"
+   ]
+  },
+  "Q4/15": {
+   "is": {
+    "comm_rev": 103.929,
+    "fee_rev": 31.533,
+    "total_rev": 135.462,
+    "cost_services": 15.345,
+    "sga": 67.224,
+    "acq_costs": 0.601,
+    "da": 10.63,
+    "gain_disp_ppe": 8.491,
+    "fx": 0.271,
+    "op_income": 50.424,
+    "interest_income": 0.585,
+    "interest_exp": 1.146,
+    "other_income": 0.759,
+    "memo_equity_income": 0.147,
+    "memo_other_net": 0.612,
+    "pretax": 50.622,
+    "tax": 3.25,
+    "net_income": 47.372,
+    "nci": 0.843,
+    "ni_controlling": 46.529,
+    "ni_common": 46.529,
+    "shares_basic": 107.176813,
+    "shares_diluted": 107.428709,
+    "eps_basic": 0.43,
+    "eps_diluted": 0.43,
+    "dps_declared": 0.16
+   },
+   "is_basis": "legacy (pre-ASC 606) US GAAP: revenues = commissions + fees (net agency basis)",
+   "ops": {
+    "gtv": 1135.397,
+    "gtv_label": "GTV (reported as \"Gross Auction Proceeds\"/GAP when first released; relabelled GTV from the Q3/17 release)",
+    "lots_total": 101.0,
+    "consignments_k": 14.15,
+    "bidder_registrations_k": 153.0,
+    "buyers_k": 37.4,
+    "revenue_rate_consolidated": 0.1193
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 47.372,
+    "ebitda_calc": 61.813,
+    "adj_ebitda_derived": 53.429,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 10.63
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.585
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 1.146
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 3.25
+     },
+     {
+      "label": "Gain on sale of excess property",
+      "cat": "DISP",
+      "value": -8.384
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000342/tv486592_10k.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004661/v452443_10q.htm"
+    ],
+    "note": "Q4 not published; derived FY2015 (212,386 per FY2016/FY2017 10-K) - 9M2015 (158,957 per Q3/16 10-Q). Build ties."
+   },
+   "adj_ni": {
+    "adj_ni_published": 31.373,
+    "adj_eps_published": 0.29,
+    "base": "Net income attributable to stockholders",
+    "base_value": 46.529,
+    "shares_diluted": 107.428709,
+    "items": [
+     {
+      "label": "Gain on sale of excess property",
+      "cat": "DISP",
+      "value": -8.384
+     },
+     {
+      "label": "Current income tax effect: gain on sale of excess property",
+      "cat": "TAX",
+      "value": 1.09
+     },
+     {
+      "label": "Deferred tax adjusting item: tax loss utilization",
+      "cat": "TAXD",
+      "value": -7.862
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000271/v460034_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916002774/v432508_ex99-1.htm"
+    ]
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 42.04,
+    "base": "Operating income",
+    "base_value": 50.424,
+    "items": [
+     {
+      "label": "Gain on sale of excess property",
+      "cat": "DISP",
+      "value": -8.384
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000271/v460034_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000271/v460034_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916002774/v432508_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916002775/v432024_10k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004661/v452443_10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000342/tv486592_10k.htm"
+   ]
+  },
+  "2015": {
+   "is": {
+    "comm_rev": 405.308,
+    "fee_rev": 110.567,
+    "total_rev": 515.875,
+    "cost_services": 56.026,
+    "sga": 254.389,
+    "acq_costs": 0.601,
+    "da": 42.032,
+    "gain_disp_ppe": 9.691,
+    "impairment": 0.0,
+    "fx": 2.322,
+    "op_income": 174.84,
+    "interest_income": 2.66,
+    "interest_exp": 4.962,
+    "other_income": 3.898,
+    "memo_equity_income": 0.916,
+    "memo_other_net": 2.982,
+    "other_nonop": 0.0,
+    "pretax": 176.436,
+    "tax": 37.861,
+    "net_income": 138.575,
+    "nci": 2.361,
+    "ni_controlling": 136.214,
+    "ni_common": 136.214,
+    "shares_basic": 107.075845,
+    "shares_diluted": 107.432474,
+    "eps_basic": 1.27,
+    "eps_diluted": 1.27,
+    "dps_declared": 0.6
+   },
+   "is_basis": "legacy (pre-ASC 606) US GAAP: revenues = commissions + fees (net agency basis)",
+   "ops": {
+    "gtv": 4247.635,
+    "gtv_label": "GTV (reported as \"Gross Auction Proceeds\"/GAP when first released; relabelled GTV from the Q3/17 release)",
+    "lots_total": 354.5,
+    "consignments_k": 47.6,
+    "bidder_registrations_k": 507.5,
+    "buyers_k": 123.7,
+    "revenue_rate_consolidated": 0.1214,
+    "am_revenue_legacy": 505.865,
+    "am_revenue_rate_legacy": 0.1191,
+    "ancillary_logistical_expense_grossup": 52.732
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 138.575,
+    "ebitda_calc": 220.77,
+    "adj_ebitda_published": 212.386,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "ebitda_published_oi_basis": 216.872,
+    "adj_ebitda_published_oi_basis": 208.6,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 42.032
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -2.66
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 4.962
+     },
+     {
+      "label": "Add: current income tax expense",
+      "cat": "TAXEXP",
+      "value": 42.42
+     },
+     {
+      "label": "Less: deferred income tax recovery",
+      "cat": "TAXEXP",
+      "value": -4.559
+     },
+     {
+      "label": "Gain on sale of excess property",
+      "cat": "DISP",
+      "value": -8.384
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000342/tv486592_10k.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000272/v460013_10k.htm"
+    ],
+    "note": "Latest (NI-based) definition per FY2016/FY2017 10-K. Originally published in FY2015 10-K/Q4/15 release on the old operating-income basis: EBITDA = OI + D&A = 216,872; Adjusted EBITDA (Debt/Adj. EBITDA) = adjusted OI 166.5 + D&A 42.1 = 208.6."
+   },
+   "adj_ni": {
+    "adj_ni_published": 121.058,
+    "adj_eps_published": 1.13,
+    "base": "Net income attributable to stockholders",
+    "base_value": 136.214,
+    "shares_diluted": 107.432474,
+    "items": [
+     {
+      "label": "Gain on sale of excess property",
+      "cat": "DISP",
+      "value": -8.384
+     },
+     {
+      "label": "Current income tax effect: gain on sale of excess property",
+      "cat": "TAX",
+      "value": 1.09
+     },
+     {
+      "label": "Deferred tax adjusting item: tax loss utilization",
+      "cat": "TAXD",
+      "value": -7.862
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000271/v460034_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916002774/v432508_ex99-1.htm"
+    ]
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 166.456,
+    "base": "Operating income",
+    "base_value": 174.84,
+    "items": [
+     {
+      "label": "Gain on sale of excess property",
+      "cat": "DISP",
+      "value": -8.384
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000271/v460034_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000271/v460034_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916002775/v432024_10k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000272/v460013_10k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000342/tv486592_10k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916002774/v432508_ex99-1.htm"
+   ]
+  },
+  "Q1/16": {
+   "is": {
+    "comm_rev": 99.793,
+    "fee_rev": 32.152,
+    "total_rev": 131.945,
+    "cost_services": 15.313,
+    "sga": 67.11,
+    "acq_costs": 1.197,
+    "da": 10.08,
+    "gain_disp_ppe": 0.246,
+    "fx": 0.683,
+    "op_income": 39.174,
+    "interest_income": 0.498,
+    "interest_exp": 1.363,
+    "other_income": 1.217,
+    "memo_equity_income": 0.519,
+    "memo_other_net": 0.698,
+    "pretax": 39.526,
+    "tax": 9.532,
+    "net_income": 29.994,
+    "nci": 0.588,
+    "ni_controlling": 29.406,
+    "ni_common": 29.406,
+    "shares_basic": 106.91728,
+    "shares_diluted": 107.15901,
+    "eps_basic": 0.28,
+    "eps_diluted": 0.27,
+    "dps_declared": 0.16
+   },
+   "is_basis": "legacy (pre-ASC 606) US GAAP: revenues = commissions + fees (net agency basis)",
+   "ops": {
+    "gtv": 1019.922,
+    "gtv_label": "GTV (reported as \"Gross Auction Proceeds\"/GAP when first released; relabelled GTV from the Q3/17 release)",
+    "lots_total": 93.0,
+    "consignments_k": 11.3,
+    "bidder_registrations_k": 125.5,
+    "buyers_k": 31.75,
+    "revenue_rate_consolidated": 0.1294,
+    "am_revenue_legacy": 125.659
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 29.994,
+    "ebitda_calc": 50.471,
+    "adj_ebitda_published": 50.471,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "ebitda_published_oi_basis": 49.254,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 10.08
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.498
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 1.363
+     },
+     {
+      "label": "Add: current income tax expense",
+      "cat": "TAXEXP",
+      "value": 10.009
+     },
+     {
+      "label": "Less: deferred income tax recovery",
+      "cat": "TAXEXP",
+      "value": -0.477
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000919/v465899_10q.htm"
+    ],
+    "note": "Q1/16 10-Q originally published \"EBITDA\" on operating-income basis = 49,254 (OI 39,174 + D&A 10,080); restated to NI basis (50,471) in Q1/17 10-Q."
+   },
+   "adj_ni": {
+    "adj_ni_published": 29.406,
+    "adj_eps_published": 0.27,
+    "base": "Net income attributable to stockholders",
+    "base_value": 29.406,
+    "shares_diluted": 107.15901,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000917/v465900_ex99-1.htm"
+    ]
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 39.174,
+    "base": "Operating income",
+    "base_value": 39.174,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916003404/v439045_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000917/v465900_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916003405/v439048_10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000919/v465899_10q.htm"
+   ]
+  },
+  "Q2/16": {
+   "is": {
+    "comm_rev": 118.18,
+    "fee_rev": 40.625,
+    "total_rev": 158.805,
+    "cost_services": 19.758,
+    "sga": 73.992,
+    "acq_costs": 0.603,
+    "da": 10.284,
+    "gain_disp_ppe": 0.201,
+    "fx": -0.734,
+    "op_income": 53.635,
+    "interest_income": 0.487,
+    "interest_exp": 1.06,
+    "other_income": 0.746,
+    "memo_equity_income": 0.477,
+    "memo_other_net": 0.269,
+    "pretax": 53.808,
+    "tax": 13.217,
+    "net_income": 40.591,
+    "nci": 0.881,
+    "ni_controlling": 39.71,
+    "ni_common": 39.71,
+    "shares_basic": 106.245307,
+    "shares_diluted": 106.97981,
+    "eps_basic": 0.37,
+    "eps_diluted": 0.37,
+    "dps_declared": 0.16
+   },
+   "is_basis": "legacy (pre-ASC 606) US GAAP: revenues = commissions + fees (net agency basis)",
+   "ops": {
+    "gtv": 1275.682,
+    "gtv_label": "GTV (reported as \"Gross Auction Proceeds\"/GAP when first released; relabelled GTV from the Q3/17 release)",
+    "lots_total": 110.5,
+    "consignments_k": 15.05,
+    "bidder_registrations_k": 150.5,
+    "buyers_k": 38.4,
+    "revenue_rate_consolidated": 0.1245,
+    "am_revenue_legacy": 148.458
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 40.591,
+    "ebitda_calc": 64.665,
+    "adj_ebitda_published": 64.665,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 10.284
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.487
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 1.06
+     },
+     {
+      "label": "Add: current income tax expense",
+      "cat": "TAXEXP",
+      "value": 16.106
+     },
+     {
+      "label": "Less: deferred income tax recovery",
+      "cat": "TAXEXP",
+      "value": -2.889
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917001603/v472534_10q.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004109/v446035_10q.htm"
+    ]
+   },
+   "adj_ni": {
+    "adj_ni_published": 39.71,
+    "adj_eps_published": 0.37,
+    "base": "Net income attributable to stockholders",
+    "base_value": 39.71,
+    "shares_diluted": 106.97981,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917001602/v472595_ex99-1.htm"
+    ],
+    "note": "Q2/16 release itself presented no non-GAAP measures; Q2/17 release shows Q2/16 adjusted NI = GAAP."
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 53.635,
+    "base": "Operating income",
+    "base_value": 53.635,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917001602/v472595_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917001602/v472595_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004109/v446035_10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917001603/v472534_10q.htm"
+   ]
+  },
+  "Q3/16": {
+   "is": {
+    "comm_rev": 96.11,
+    "fee_rev": 32.766,
+    "total_rev": 128.876,
+    "cost_services": 14.75,
+    "sga": 68.293,
+    "acq_costs": 5.398,
+    "da": 10.196,
+    "gain_disp_ppe": 0.57,
+    "impairment": 28.243,
+    "fx": -0.281,
+    "op_income": 2.285,
+    "interest_income": 0.369,
+    "interest_exp": 0.934,
+    "other_income": 0.46,
+    "memo_equity_income": 0.213,
+    "memo_other_net": 0.247,
+    "pretax": 2.18,
+    "tax": 7.18,
+    "net_income": -5.0,
+    "nci": 0.137,
+    "ni_controlling": -5.137,
+    "ni_common": -5.137,
+    "shares_basic": 106.622376,
+    "shares_diluted": 107.525051,
+    "eps_basic": -0.05,
+    "eps_diluted": -0.05,
+    "dps_declared": 0.17
+   },
+   "is_basis": "legacy (pre-ASC 606) US GAAP: revenues = commissions + fees (net agency basis)",
+   "ops": {
+    "gtv": 998.859,
+    "gtv_label": "GTV (reported as \"Gross Auction Proceeds\"/GAP when first released; relabelled GTV from the Q3/17 release)",
+    "lots_total": 90.5,
+    "consignments_k": 12.9,
+    "bidder_registrations_k": 119.5,
+    "buyers_k": 30.85,
+    "revenue_rate_consolidated": 0.129,
+    "am_revenue_legacy": 121.111,
+    "am_revenue_rate_legacy": 0.1212
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": -5.0,
+    "ebitda_calc": 12.941,
+    "adj_ebitda_published": 41.184,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 10.196
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.369
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 0.934
+     },
+     {
+      "label": "Add: current income tax expense",
+      "cat": "TAXEXP",
+      "value": 9.652
+     },
+     {
+      "label": "Less: deferred income tax recovery",
+      "cat": "TAXEXP",
+      "value": -2.472
+     },
+     {
+      "label": "Impairment loss",
+      "cat": "IMPAIR",
+      "value": 28.243
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917002157/tv478965_10q.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004661/v452443_10q.htm"
+    ]
+   },
+   "adj_ni": {
+    "adj_ni_published": 21.308,
+    "adj_eps_published": 0.2,
+    "base": "Net income attributable to stockholders",
+    "base_value": -5.137,
+    "shares_diluted": 107.525051,
+    "items": [
+     {
+      "label": "Impairment loss (EquipmentOne goodwill & customer relationships)",
+      "cat": "IMPAIR",
+      "value": 28.243
+     },
+     {
+      "label": "Deferred income tax effect: impairment loss",
+      "cat": "TAX",
+      "value": -1.798
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917002155/tv479062_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004660/v452662_ex99-1.htm"
+    ]
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 30.528,
+    "base": "Operating income",
+    "base_value": 2.285,
+    "items": [
+     {
+      "label": "Impairment loss",
+      "cat": "IMPAIR",
+      "value": 28.243
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917002155/tv479062_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917002155/tv479062_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004661/v452443_10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917002157/tv478965_10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956916004660/v452662_ex99-1.htm"
+   ]
+  },
+  "Q4/16": {
+   "is": {
+    "comm_rev": 110.044,
+    "fee_rev": 36.725,
+    "total_rev": 146.769,
+    "cost_services": 16.241,
+    "sga": 74.134,
+    "acq_costs": 4.631,
+    "da": 10.301,
+    "gain_disp_ppe": 0.265,
+    "impairment": 0.0,
+    "fx": -1.099,
+    "op_income": 40.628,
+    "interest_income": 0.509,
+    "interest_exp": 2.207,
+    "other_income": 2.837,
+    "memo_equity_income": -0.181,
+    "memo_other_net": 3.018,
+    "other_nonop": -6.787,
+    "memo_debt_extinguishment": 6.787,
+    "pretax": 34.98,
+    "tax": 7.053,
+    "net_income": 27.927,
+    "nci": 0.074,
+    "ni_controlling": 27.853,
+    "ni_common": 27.853,
+    "shares_basic": 106.735262,
+    "shares_diluted": 108.166241,
+    "eps_basic": 0.26,
+    "eps_diluted": 0.26,
+    "dps_declared": 0.17
+   },
+   "is_basis": "legacy (pre-ASC 606) US GAAP: revenues = commissions + fees (net agency basis)",
+   "ops": {
+    "gtv": 1040.352,
+    "gtv_label": "GTV (reported as \"Gross Auction Proceeds\"/GAP when first released; relabelled GTV from the Q3/17 release)",
+    "lots_total": 104.5,
+    "consignments_k": 14.2,
+    "bidder_registrations_k": 153.5,
+    "buyers_k": 37.4,
+    "revenue_rate_consolidated": 0.1411,
+    "am_revenue_legacy": 136.598,
+    "am_revenue_rate_legacy": 0.1313
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 27.927,
+    "ebitda_calc": 46.979,
+    "adj_ebitda_derived": 53.766,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 10.301
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.509
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 2.207
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 7.053
+     },
+     {
+      "label": "Debt extinguishment costs",
+      "cat": "DEBT",
+      "value": 6.787
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000342/tv486592_10k.htm"
+    ],
+    "note": "Q4 not published; derived FY2016 (210,086) - 9M2016 (156,320, Q3/16 10-Q). Build ties."
+   },
+   "adj_ni": {
+    "adj_ni_published": 32.853,
+    "adj_eps_published": 0.3,
+    "base": "Net income attributable to stockholders",
+    "base_value": 27.853,
+    "shares_diluted": 108.166241,
+    "items": [
+     {
+      "label": "Debt extinguishment costs",
+      "cat": "DEBT",
+      "value": 6.787
+     },
+     {
+      "label": "Current income tax effect: debt extinguishment costs",
+      "cat": "TAX",
+      "value": -1.787
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000341/tv487075_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000271/v460034_ex99-1.htm"
+    ]
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 40.628,
+    "base": "Operating income",
+    "base_value": 40.628,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000341/tv487075_ex99-1.htm"
+    ],
+    "note": "Q4/16 release text says adjusted OI \"decreased 27% ... to $30.5 million\" - a drafting error; its tables show 40,628."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000341/tv487075_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000271/v460034_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000272/v460013_10k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000342/tv486592_10k.htm"
+   ]
+  },
+  "2016": {
+   "is": {
+    "comm_rev": 424.128,
+    "fee_rev": 142.267,
+    "total_rev": 566.395,
+    "cost_services": 66.062,
+    "sga": 283.529,
+    "acq_costs": 11.829,
+    "da": 40.861,
+    "gain_disp_ppe": 1.282,
+    "impairment": 28.243,
+    "fx": -1.431,
+    "op_income": 135.722,
+    "interest_income": 1.863,
+    "interest_exp": 5.564,
+    "other_income": 5.26,
+    "memo_equity_income": 1.028,
+    "memo_other_net": 4.232,
+    "other_nonop": -6.787,
+    "memo_debt_extinguishment": 6.787,
+    "pretax": 130.494,
+    "tax": 36.982,
+    "net_income": 93.512,
+    "nci": 1.68,
+    "ni_controlling": 91.832,
+    "ni_common": 91.832,
+    "shares_basic": 106.630323,
+    "shares_diluted": 107.457794,
+    "eps_basic": 0.86,
+    "eps_diluted": 0.85,
+    "dps_declared": 0.66
+   },
+   "is_basis": "legacy (pre-ASC 606) US GAAP: revenues = commissions + fees (net agency basis)",
+   "ops": {
+    "gtv": 4334.815,
+    "gtv_label": "GTV (reported as \"Gross Auction Proceeds\"/GAP when first released; relabelled GTV from the Q3/17 release)",
+    "lots_total": 398.5,
+    "consignments_k": 53.45,
+    "bidder_registrations_k": 549.0,
+    "buyers_k": 138.4,
+    "revenue_rate_consolidated": 0.1307,
+    "am_revenue_legacy": 531.826,
+    "am_revenue_rate_legacy": 0.1227,
+    "ancillary_logistical_expense_grossup": 47.234
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 93.512,
+    "ebitda_calc": 175.056,
+    "adj_ebitda_published": 210.086,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 40.861
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -1.863
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 5.564
+     },
+     {
+      "label": "Add: current income tax expense",
+      "cat": "TAXEXP",
+      "value": 40.341
+     },
+     {
+      "label": "Less: deferred income tax recovery",
+      "cat": "TAXEXP",
+      "value": -3.359
+     },
+     {
+      "label": "Debt extinguishment costs",
+      "cat": "DEBT",
+      "value": 6.787
+     },
+     {
+      "label": "Impairment loss",
+      "cat": "IMPAIR",
+      "value": 28.243
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000456/tv514716_10k.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000342/tv486592_10k.htm"
+    ],
+    "note": "FY2018 10-K shows FY2016 adjusted EBITDA 210,086 with total tax 36,982 but omits the debt extinguishment costs (6,787) line from the displayed bridge (total unchanged); items here follow the FY2016/FY2017 10-K bridge."
+   },
+   "adj_ni": {
+    "adj_ni_published": 123.277,
+    "adj_eps_published": 1.15,
+    "base": "Net income attributable to stockholders",
+    "base_value": 91.832,
+    "shares_diluted": 107.457794,
+    "items": [
+     {
+      "label": "Debt extinguishment costs",
+      "cat": "DEBT",
+      "value": 6.787
+     },
+     {
+      "label": "Impairment loss",
+      "cat": "IMPAIR",
+      "value": 28.243
+     },
+     {
+      "label": "Current income tax effect: debt extinguishment costs",
+      "cat": "TAX",
+      "value": -1.787
+     },
+     {
+      "label": "Deferred income tax effect: impairment loss",
+      "cat": "TAX",
+      "value": -1.798
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000341/tv487075_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000271/v460034_ex99-1.htm"
+    ]
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 163.965,
+    "base": "Operating income",
+    "base_value": 135.722,
+    "items": [
+     {
+      "label": "Impairment loss",
+      "cat": "IMPAIR",
+      "value": 28.243
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000341/tv487075_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000341/tv487075_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000272/v460013_10k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000456/tv514716_10k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000342/tv486592_10k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000271/v460034_ex99-1.htm"
+   ]
+  },
+  "Q1/17": {
+   "is": {
+    "comm_rev": 91.944,
+    "fee_rev": 32.555,
+    "total_rev": 124.499,
+    "cost_services": 12.813,
+    "sga": 70.575,
+    "acq_costs": 8.627,
+    "da": 10.338,
+    "gain_disp_ppe": 0.721,
+    "fx": 0.73,
+    "op_income": 23.597,
+    "interest_income": 0.955,
+    "interest_exp": 8.133,
+    "other_income": 1.329,
+    "memo_equity_income": -0.053,
+    "memo_other_net": 1.382,
+    "pretax": 17.748,
+    "tax": 7.315,
+    "net_income": 10.433,
+    "nci": 0.056,
+    "ni_controlling": 10.377,
+    "ni_common": 10.377,
+    "shares_basic": 106.851595,
+    "shares_diluted": 107.788949,
+    "eps_basic": 0.1,
+    "eps_diluted": 0.1,
+    "dps_declared": 0.17
+   },
+   "is_basis": "legacy (pre-ASC 606) US GAAP: revenues = commissions + fees (net agency basis)",
+   "is_asc606": {
+    "comm_rev": 79.297,
+    "fee_rev": 44.082,
+    "service_rev": 123.379,
+    "inv_sales_rev": 76.048,
+    "total_rev": 199.427,
+    "cost_services": 24.34,
+    "cost_inventory": 63.401,
+    "sga": 70.575,
+    "acq_costs": 8.627,
+    "da": 10.338,
+    "gain_disp_ppe": 0.721,
+    "fx": 0.73,
+    "op_income": 23.597,
+    "interest_exp": 8.133,
+    "other_income": 2.284,
+    "pretax": 17.748,
+    "tax": 7.315,
+    "net_income": 10.433,
+    "nci": 0.056,
+    "ni_controlling": 10.377,
+    "ni_common": 10.377,
+    "shares_basic": 106.851595,
+    "shares_diluted": 107.788949,
+    "eps_basic": 0.1,
+    "eps_diluted": 0.1
+   },
+   "is_asc606_note": "Company full-retrospective ASC 606 recast, as presented in the 2018 earnings releases / 10-Qs / FY2018 10-K. other_income here = \"Other income, net\" (includes interest income and equity income).",
+   "ops": {
+    "gtv": 899.41,
+    "gtv_label": "GTV (reported as \"Gross Auction Proceeds\"/GAP when first released; relabelled GTV from the Q3/17 release)",
+    "lots_total": 84.0,
+    "consignments_k": 11.35,
+    "bidder_registrations_k": 114.5,
+    "buyers_k": 29.15,
+    "revenue_rate_consolidated": 0.1384,
+    "am_revenue_legacy": 115.677,
+    "agency_proceeds": 124.499,
+    "am_agency_proceeds": 115.677,
+    "am_revenue_asc606": 179.078,
+    "am_revenue_rate_asc606": 0.199,
+    "am_agency_proceeds_rate": 0.129,
+    "ancillary_logistical_expense_grossup": 11.527
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 10.433,
+    "ebitda_calc": 35.264,
+    "adj_ebitda_published": 35.264,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 10.338
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 8.133
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.955
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 7.315
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001022/tv493371_10q.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000919/v465899_10q.htm"
+    ],
+    "note": "Acquisition-related costs of 8,627 (IronPlanet) were NOT treated as adjusting items in Q1/17. Q1/17 10-Q split tax as current 7,488 / deferred recovery (173)."
+   },
+   "adj_ni": {
+    "adj_ni_published": 12.667,
+    "adj_eps_published": 0.12,
+    "base": "Net income attributable to stockholders",
+    "base_value": 10.377,
+    "effect_of_dilutive_securities": 0.027,
+    "shares_diluted": 107.788949,
+    "items": [
+     {
+      "label": "Current income tax adjusting item: change in uncertain tax provision",
+      "cat": "TAXD",
+      "value": 2.29
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001021/tv493463_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000917/v465900_ex99-1.htm"
+    ],
+    "note": "Q1/18 release shows \"effect of dilutive securities\" of +27 for Q1/17 (not shown in Q1/17 release). Acquisition-related costs (8,627) not adjusted."
+   },
+   "adj_op_income": {
+    "adj_op_income_derived": 23.597,
+    "base": "Operating income",
+    "base_value": 23.597,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917001602/v472595_ex99-1.htm"
+    ],
+    "note": "Implied: 6M2017 adjusted OI 74,658 - Q2/17 51,061 (Q2/17 release)."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000917/v465900_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917000919/v465899_10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001021/tv493463_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001022/tv493371_10q.htm"
+   ]
+  },
+  "Q2/17": {
+   "is": {
+    "comm_rev": 120.38,
+    "fee_rev": 45.806,
+    "total_rev": 166.186,
+    "cost_services": 21.591,
+    "sga": 74.377,
+    "acq_costs": 22.948,
+    "da": 11.872,
+    "gain_disp_ppe": 0.308,
+    "impairment": 8.911,
+    "fx": 0.093,
+    "op_income": 26.888,
+    "interest_income": 0.987,
+    "interest_exp": 8.62,
+    "other_income": 2.483,
+    "memo_equity_income": 0.004,
+    "memo_other_net": 2.479,
+    "pretax": 21.738,
+    "tax": 4.025,
+    "net_income": 17.713,
+    "nci": 0.078,
+    "ni_controlling": 17.635,
+    "ni_common": 17.635,
+    "shares_basic": 107.004902,
+    "shares_diluted": 108.23866,
+    "eps_basic": 0.16,
+    "eps_diluted": 0.16,
+    "dps_declared": 0.17
+   },
+   "is_basis": "legacy (pre-ASC 606) US GAAP: revenues = commissions + fees (net agency basis)",
+   "is_asc606": {
+    "comm_rev": 112.242,
+    "fee_rev": 60.507,
+    "service_rev": 172.749,
+    "inv_sales_rev": 79.864,
+    "total_rev": 252.613,
+    "cost_services": 36.292,
+    "cost_inventory": 71.726,
+    "sga": 74.377,
+    "acq_costs": 22.948,
+    "da": 11.872,
+    "gain_disp_ppe": 0.308,
+    "impairment": 8.911,
+    "fx": 0.093,
+    "op_income": 26.888,
+    "interest_exp": 8.62,
+    "other_income": 3.47,
+    "pretax": 21.738,
+    "tax": 4.025,
+    "net_income": 17.713,
+    "nci": 0.078,
+    "ni_controlling": 17.635,
+    "ni_common": 17.635,
+    "shares_basic": 107.004902,
+    "shares_diluted": 108.23866,
+    "eps_basic": 0.16,
+    "eps_diluted": 0.16
+   },
+   "is_asc606_note": "Company full-retrospective ASC 606 recast, as presented in the 2018 earnings releases / 10-Qs / FY2018 10-K. other_income here = \"Other income, net\" (includes interest income and equity income).",
+   "ops": {
+    "gtv": 1254.318,
+    "gtv_label": "GTV (reported as \"Gross Auction Proceeds\"/GAP when first released; relabelled GTV from the Q3/17 release)",
+    "lots_total": 108.0,
+    "consignments_k": 16.7,
+    "bidder_registrations_k": 163.5,
+    "buyers_k": 40.4,
+    "revenue_rate_consolidated": 0.1322,
+    "am_revenue_legacy": 154.646,
+    "agency_proceeds": 166.186,
+    "am_agency_proceeds": 154.647,
+    "am_revenue_asc606": 226.373,
+    "am_revenue_rate_asc606": 0.18,
+    "am_agency_proceeds_rate": 0.123,
+    "ancillary_logistical_expense_grossup": 14.701,
+    "acq_revenue_contribution": 10.9,
+    "ironplanet_gmv_in_gtv": 76.8,
+    "appraisal_gtv_excluded": 3.1
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 17.713,
+    "ebitda_calc": 41.243,
+    "adj_ebitda_published": 65.416,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 11.872
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 8.62
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.987
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 4.025
+     },
+     {
+      "label": "Accelerated vesting of assumed options",
+      "cat": "ACQ",
+      "value": 4.752
+     },
+     {
+      "label": "Acquisition and finance structure advisory",
+      "cat": "ACQ",
+      "value": 9.063
+     },
+     {
+      "label": "Severance and retention",
+      "cat": "RESTR",
+      "value": 1.447
+     },
+     {
+      "label": "Impairment loss",
+      "cat": "IMPAIR",
+      "value": 8.911
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001670/tv500147_10q.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917001603/v472534_10q.htm"
+    ]
+   },
+   "adj_ni": {
+    "adj_ni_published": 36.436,
+    "adj_eps_published": 0.33,
+    "base": "Net income attributable to stockholders",
+    "base_value": 17.635,
+    "effect_of_dilutive_securities": -0.545,
+    "shares_diluted": 108.23866,
+    "items": [
+     {
+      "label": "Accelerated vesting of assumed options",
+      "cat": "ACQ",
+      "value": 4.752
+     },
+     {
+      "label": "Acquisition and finance structure advisory",
+      "cat": "ACQ",
+      "value": 9.063
+     },
+     {
+      "label": "Severance and retention",
+      "cat": "RESTR",
+      "value": 1.447
+     },
+     {
+      "label": "Impairment loss",
+      "cat": "IMPAIR",
+      "value": 8.911
+     },
+     {
+      "label": "Current income tax effect: acquisition and finance structure advisory",
+      "cat": "TAX",
+      "value": -2.447
+     },
+     {
+      "label": "Current income tax effect: severance and retention",
+      "cat": "TAX",
+      "value": -0.564
+     },
+     {
+      "label": "Income tax effect: impairment loss",
+      "cat": "TAX",
+      "value": -2.361
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001669/tv500170_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917001602/v472595_ex99-1.htm"
+    ],
+    "note": "Impairment tax effect labelled \"deferred\" in Q2/17 release and \"current\" in Q2/18 release."
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 51.061,
+    "base": "Operating income",
+    "base_value": 26.888,
+    "items": [
+     {
+      "label": "Accelerated vesting of assumed options",
+      "cat": "ACQ",
+      "value": 4.752
+     },
+     {
+      "label": "Acquisition and finance structure advisory",
+      "cat": "ACQ",
+      "value": 9.063
+     },
+     {
+      "label": "Severance and retention",
+      "cat": "RESTR",
+      "value": 1.447
+     },
+     {
+      "label": "Impairment loss",
+      "cat": "IMPAIR",
+      "value": 8.911
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001669/tv500170_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917001602/v472595_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917001603/v472534_10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001669/tv500170_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001670/tv500147_10q.htm"
+   ]
+  },
+  "Q3/17": {
+   "is": {
+    "comm_rev": 97.683,
+    "fee_rev": 43.364,
+    "total_rev": 141.047,
+    "cost_services": 19.583,
+    "sga": 85.335,
+    "acq_costs": 3.587,
+    "da": 14.837,
+    "gain_disp_ppe": 0.042,
+    "impairment": 0.0,
+    "fx": -0.816,
+    "op_income": 16.931,
+    "interest_income": 0.517,
+    "interest_exp": 10.558,
+    "other_income": 0.075,
+    "memo_equity_income": -0.109,
+    "memo_other_net": 0.184,
+    "pretax": 6.965,
+    "tax": -3.358,
+    "net_income": 10.323,
+    "nci": 0.062,
+    "ni_controlling": 10.261,
+    "ni_common": 10.261,
+    "shares_basic": 107.120618,
+    "shares_diluted": 108.178303,
+    "eps_basic": 0.1,
+    "eps_diluted": 0.09,
+    "dps_declared": 0.17
+   },
+   "is_basis": "legacy (pre-ASC 606) US GAAP: revenues = commissions + fees (net agency basis)",
+   "is_asc606": {
+    "comm_rev": 88.696,
+    "fee_rev": 57.242,
+    "service_rev": 145.938,
+    "inv_sales_rev": 81.463,
+    "total_rev": 227.401,
+    "cost_services": 33.461,
+    "cost_inventory": 72.476,
+    "sga": 85.335,
+    "acq_costs": 3.587,
+    "da": 14.837,
+    "gain_disp_ppe": 0.042,
+    "impairment": 0.0,
+    "fx": -0.816,
+    "op_income": 16.931,
+    "interest_exp": 10.558,
+    "other_income": 0.592,
+    "pretax": 6.965,
+    "tax": -3.358,
+    "net_income": 10.323,
+    "nci": 0.062,
+    "ni_controlling": 10.261,
+    "ni_common": 10.261,
+    "shares_basic": 107.120618,
+    "shares_diluted": 108.178303,
+    "eps_basic": 0.1,
+    "eps_diluted": 0.09
+   },
+   "is_asc606_note": "Company full-retrospective ASC 606 recast, as presented in the 2018 earnings releases / 10-Qs / FY2018 10-K. other_income here = \"Other income, net\" (includes interest income and equity income).",
+   "ops": {
+    "gtv": 1019.322,
+    "gtv_label": "GTV",
+    "lots_total": 84.0,
+    "consignments_k": 13.9,
+    "bidder_registrations_k": 126.0,
+    "buyers_k": 31.1,
+    "am_revenue_legacy": 130.242,
+    "am_revenue_rate_legacy": 0.1278,
+    "agency_proceeds": 141.047,
+    "am_agency_proceeds": 130.242,
+    "am_revenue_asc606": 202.718,
+    "am_revenue_rate_asc606": 0.199,
+    "am_agency_proceeds_rate": 0.128,
+    "ancillary_logistical_expense_grossup": 13.878,
+    "appraisal_gtv_excluded": 8.0
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 10.323,
+    "ebitda_calc": 31.843,
+    "adj_ebitda_published": 31.843,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 14.837
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 10.558
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.517
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": -3.358
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918002250/tv506251_10q.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917002157/tv478965_10q.htm"
+    ]
+   },
+   "adj_ni": {
+    "adj_ni_published": 10.261,
+    "adj_eps_published": 0.09,
+    "base": "Net income attributable to stockholders",
+    "base_value": 10.261,
+    "shares_diluted": 108.178303,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918002248/tv506507_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956917002155/tv479062_ex99-1.htm"
+    ]
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 16.931,
+    "base": "Operating income",
+    "base_value": 16.931,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918002248/tv506507_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917002155/tv479062_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956917002157/tv478965_10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918002248/tv506507_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918002250/tv506251_10q.htm"
+   ]
+  },
+  "Q4/17": {
+   "is": {
+    "comm_rev": 124.665,
+    "fee_rev": 54.12,
+    "total_rev": 178.785,
+    "cost_services": 25.026,
+    "sga": 92.983,
+    "acq_costs": 3.11,
+    "da": 15.647,
+    "gain_disp_ppe": 0.585,
+    "fx": -2.566,
+    "op_income": 40.038,
+    "interest_income": 0.735,
+    "interest_exp": 10.98,
+    "other_income": 1.15,
+    "memo_equity_income": 0.132,
+    "memo_other_net": 1.018,
+    "other_nonop": 0.0,
+    "pretax": 30.943,
+    "tax": -5.894,
+    "net_income": 36.837,
+    "nci": 0.083,
+    "ni_controlling": 36.754,
+    "ni_common": 36.754,
+    "shares_basic": 107.198875,
+    "shares_diluted": 108.245291,
+    "eps_basic": 0.34,
+    "eps_diluted": 0.34,
+    "dps_declared": 0.17
+   },
+   "is_basis": "legacy (pre-ASC 606) US GAAP: revenues = commissions + fees (net agency basis)",
+   "is_asc606": {
+    "comm_rev": 114.162,
+    "fee_rev": 68.189,
+    "service_rev": 182.351,
+    "inv_sales_rev": 109.399,
+    "total_rev": 291.75,
+    "cost_services": 39.096,
+    "cost_inventory": 98.895,
+    "sga": 92.983,
+    "acq_costs": 3.11,
+    "da": 15.647,
+    "gain_disp_ppe": 0.585,
+    "fx": -2.566,
+    "op_income": 40.038,
+    "interest_exp": 10.98,
+    "other_income": 1.885,
+    "pretax": 30.943,
+    "tax": -5.894,
+    "net_income": 36.837,
+    "nci": 0.083,
+    "ni_controlling": 36.754,
+    "ni_common": 36.754,
+    "shares_basic": 107.198875,
+    "shares_diluted": 108.245291,
+    "eps_basic": 0.34,
+    "eps_diluted": 0.34
+   },
+   "is_asc606_note": "Company full-retrospective ASC 606 recast, as presented in the 2018 earnings releases / 10-Qs / FY2018 10-K. other_income here = \"Other income, net\" (includes interest income and equity income).",
+   "ops": {
+    "gtv": 1294.932,
+    "gtv_label": "GTV",
+    "lots_total": 106.5,
+    "consignments_k": 14.9,
+    "bidder_registrations_k": 171.5,
+    "buyers_k": 39.25,
+    "am_revenue_legacy": 163.733,
+    "am_revenue_rate_legacy": 0.1264,
+    "agency_proceeds": 178.785,
+    "am_agency_proceeds": 163.733,
+    "am_revenue_asc606": 262.628,
+    "am_revenue_rate_asc606": 0.203,
+    "am_agency_proceeds_rate": 0.126,
+    "ancillary_logistical_expense_grossup": 14.07
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 36.837,
+    "ebitda_calc": 56.835,
+    "adj_ebitda_derived": 59.001,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 15.647
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 10.98
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.735
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": -5.894
+     },
+     {
+      "label": "Severance and retention",
+      "cat": "RESTR",
+      "value": 2.166
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000456/tv514716_10k.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918002250/tv506251_10q.htm"
+    ],
+    "note": "Q4 not published; derived FY2017 (191,524) - 9M2017 (132,523). Build ties."
+   },
+   "adj_ni": {
+    "adj_ni_published": 28.298,
+    "adj_eps_published": 0.26,
+    "base": "Net income attributable to stockholders",
+    "base_value": 36.754,
+    "effect_of_dilutive_securities": -0.475,
+    "shares_diluted": 108.245291,
+    "items": [
+     {
+      "label": "Severance and retention",
+      "cat": "RESTR",
+      "value": 2.166
+     },
+     {
+      "label": "Current income tax effect: severance and retention",
+      "cat": "TAX",
+      "value": -0.184
+     },
+     {
+      "label": "Deferred income tax effect: severance and retention",
+      "cat": "TAX",
+      "value": -0.368
+     },
+     {
+      "label": "Deferred tax adjusting item: remeasurement of deferred taxes (US tax reform)",
+      "cat": "TAXD",
+      "value": -10.07
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000455/tv514715_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000341/tv487075_ex99-1.htm"
+    ]
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 42.204,
+    "base": "Operating income",
+    "base_value": 40.038,
+    "items": [
+     {
+      "label": "Severance and retention",
+      "cat": "RESTR",
+      "value": 2.166
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000455/tv514715_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000341/tv487075_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000342/tv486592_10k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000455/tv514715_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000456/tv514716_10k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918002250/tv506251_10q.htm"
+   ]
+  },
+  "2017": {
+   "is": {
+    "comm_rev": 434.672,
+    "fee_rev": 175.845,
+    "total_rev": 610.517,
+    "cost_services": 79.013,
+    "sga": 323.27,
+    "acq_costs": 38.272,
+    "da": 52.694,
+    "gain_disp_ppe": 1.656,
+    "impairment": 8.911,
+    "fx": -2.559,
+    "op_income": 107.454,
+    "interest_income": 3.194,
+    "interest_exp": 38.291,
+    "other_income": 5.037,
+    "memo_equity_income": -0.026,
+    "memo_other_net": 5.063,
+    "other_nonop": 0.0,
+    "pretax": 77.394,
+    "tax": 2.088,
+    "net_income": 75.306,
+    "nci": 0.279,
+    "ni_controlling": 75.027,
+    "ni_common": 75.027,
+    "shares_basic": 107.044348,
+    "shares_diluted": 108.113151,
+    "eps_basic": 0.7,
+    "eps_diluted": 0.69,
+    "dps_declared": 0.68
+   },
+   "is_basis": "legacy (pre-ASC 606) US GAAP: revenues = commissions + fees (net agency basis)",
+   "is_asc606": {
+    "comm_rev": 394.397,
+    "fee_rev": 230.02,
+    "service_rev": 624.417,
+    "inv_sales_rev": 346.774,
+    "total_rev": 971.191,
+    "cost_services": 133.189,
+    "cost_inventory": 306.498,
+    "sga": 323.27,
+    "acq_costs": 38.272,
+    "da": 52.694,
+    "gain_disp_ppe": 1.656,
+    "impairment": 8.911,
+    "fx": -2.559,
+    "op_income": 107.454,
+    "interest_exp": 38.291,
+    "other_income": 8.231,
+    "pretax": 77.394,
+    "tax": 2.088,
+    "net_income": 75.306,
+    "nci": 0.279,
+    "ni_controlling": 75.027,
+    "ni_common": 75.027,
+    "shares_basic": 107.044348,
+    "shares_diluted": 108.113151,
+    "eps_basic": 0.7,
+    "eps_diluted": 0.69
+   },
+   "is_asc606_note": "Company full-retrospective ASC 606 recast, as presented in the 2018 earnings releases / 10-Qs / FY2018 10-K. other_income here = \"Other income, net\" (includes interest income and equity income).",
+   "ops": {
+    "gtv": 4467.982,
+    "gtv_label": "GTV",
+    "lots_total": 382.5,
+    "consignments_k": 56.85,
+    "bidder_registrations_k": 575.5,
+    "buyers_k": 139.9,
+    "am_revenue_legacy": 564.298,
+    "am_revenue_rate_legacy": 0.1263,
+    "agency_proceeds": 610.517,
+    "am_agency_proceeds": 564.299,
+    "am_revenue_asc606": 870.797,
+    "am_revenue_rate_asc606": 0.195,
+    "am_agency_proceeds_rate": 0.126,
+    "ancillary_logistical_expense_grossup": 54.176
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 75.306,
+    "ebitda_calc": 165.185,
+    "adj_ebitda_published": 191.524,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 52.694
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 38.291
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -3.194
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 2.088
+     },
+     {
+      "label": "Accelerated vesting of assumed options",
+      "cat": "ACQ",
+      "value": 4.752
+     },
+     {
+      "label": "Acquisition and finance structure advisory",
+      "cat": "ACQ",
+      "value": 9.063
+     },
+     {
+      "label": "Severance and retention",
+      "cat": "RESTR",
+      "value": 3.613
+     },
+     {
+      "label": "Impairment loss",
+      "cat": "IMPAIR",
+      "value": 8.911
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000456/tv514716_10k.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000342/tv486592_10k.htm"
+    ]
+   },
+   "adj_ni": {
+    "adj_ni_published": 87.662,
+    "adj_eps_published": 0.81,
+    "base": "Net income attributable to stockholders",
+    "base_value": 75.027,
+    "effect_of_dilutive_securities": -0.152,
+    "shares_diluted": 108.113151,
+    "items": [
+     {
+      "label": "Accelerated vesting of assumed options",
+      "cat": "ACQ",
+      "value": 4.752
+     },
+     {
+      "label": "Acquisition and finance structure advisory",
+      "cat": "ACQ",
+      "value": 9.063
+     },
+     {
+      "label": "Severance and retention",
+      "cat": "RESTR",
+      "value": 3.613
+     },
+     {
+      "label": "Impairment loss",
+      "cat": "IMPAIR",
+      "value": 8.911
+     },
+     {
+      "label": "Current income tax effect: acquisition and finance structure advisory",
+      "cat": "TAX",
+      "value": -2.447
+     },
+     {
+      "label": "Current income tax effect: severance and retention",
+      "cat": "TAX",
+      "value": -0.748
+     },
+     {
+      "label": "Deferred income tax effect: impairment loss",
+      "cat": "TAX",
+      "value": -2.361
+     },
+     {
+      "label": "Deferred income tax effect: severance and retention",
+      "cat": "TAX",
+      "value": -0.368
+     },
+     {
+      "label": "Current income tax adjusting item: change in uncertain tax provision",
+      "cat": "TAXD",
+      "value": 2.29
+     },
+     {
+      "label": "Deferred tax adjusting item: remeasurement of deferred taxes",
+      "cat": "TAXD",
+      "value": -10.07
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000455/tv514715_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000341/tv487075_ex99-1.htm"
+    ]
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 133.793,
+    "base": "Operating income",
+    "base_value": 107.454,
+    "items": [
+     {
+      "label": "Accelerated vesting of assumed options",
+      "cat": "ACQ",
+      "value": 4.752
+     },
+     {
+      "label": "Acquisition and finance structure advisory",
+      "cat": "ACQ",
+      "value": 9.063
+     },
+     {
+      "label": "Severance and retention",
+      "cat": "RESTR",
+      "value": 3.613
+     },
+     {
+      "label": "Impairment loss",
+      "cat": "IMPAIR",
+      "value": 8.911
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000455/tv514715_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000341/tv487075_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918000342/tv486592_10k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000455/tv514715_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000456/tv514716_10k.htm"
+   ]
+  },
+  "Q1/18": {
+   "is": {
+    "comm_rev": 101.294,
+    "fee_rev": 74.722,
+    "service_rev": 176.016,
+    "inv_sales_rev": 84.162,
+    "total_rev": 260.178,
+    "cost_services": 36.657,
+    "cost_inventory": 75.791,
+    "sga": 97.47,
+    "acq_costs": 1.633,
+    "da": 16.191,
+    "gain_disp_ppe": 0.345,
+    "fx": 0.092,
+    "op_income": 32.873,
+    "interest_exp": 11.31,
+    "other_income": 0.913,
+    "pretax": 22.476,
+    "tax": 5.269,
+    "net_income": 17.207,
+    "nci": 0.069,
+    "ni_controlling": 17.138,
+    "ni_common": 17.138,
+    "shares_basic": 107.355381,
+    "shares_diluted": 108.643897,
+    "eps_basic": 0.16,
+    "eps_diluted": 0.16,
+    "dps_declared": 0.17
+   },
+   "is_basis": "ASC 606 (adopted 1 Jan 2018): service revenues (commissions + fees) + inventory sales revenue; other_income = \"Other income, net\" incl. interest income",
+   "ops": {
+    "gtv": 1160.712,
+    "gtv_label": "GTV",
+    "lots_total": 81.0,
+    "consignments_k": 10.75,
+    "bidder_registrations_k": 119.0,
+    "buyers_k": 29.0,
+    "agency_proceeds": 169.807,
+    "am_agency_proceeds": 156.776,
+    "am_revenue_asc606": 232.567,
+    "am_revenue_rate_asc606": 0.2,
+    "am_agency_proceeds_rate": 0.135,
+    "ancillary_logistical_expense_grossup": 14.58,
+    "service_take_rate": 0.152,
+    "inventory_sales_mix_of_gtv": 0.073,
+    "am_service_rev_rate": 0.128
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 17.207,
+    "ebitda_calc": 49.585,
+    "adj_ebitda_published": 49.585,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 16.191
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 11.31
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.392
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 5.269
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919001130/tv520680_10q.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001022/tv493371_10q.htm"
+    ]
+   },
+   "adj_ni": {
+    "adj_ni_published": 17.138,
+    "adj_eps_published": 0.16,
+    "base": "Net income attributable to stockholders",
+    "base_value": 17.138,
+    "shares_diluted": 108.643897,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919001128/tv520679_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001021/tv493463_ex99-1.htm"
+    ]
+   },
+   "adj_op_income": {
+    "adj_op_income_derived": 32.873,
+    "base": "Operating income",
+    "base_value": 32.873,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001669/tv500170_ex99-1.htm"
+    ],
+    "note": "Not shown in Q1/18 release; implied 6M2018 adjusted OI 97,668 = OI."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956919001128/tv520679_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001021/tv493463_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001022/tv493371_10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956919001130/tv520680_10q.htm"
+   ]
+  },
+  "Q2/18": {
+   "is": {
+    "comm_rev": 124.697,
+    "fee_rev": 89.649,
+    "service_rev": 214.346,
+    "inv_sales_rev": 94.184,
+    "total_rev": 308.53,
+    "cost_services": 43.033,
+    "cost_inventory": 81.702,
+    "sga": 101.259,
+    "acq_costs": 1.399,
+    "da": 16.537,
+    "gain_disp_ppe": 0.271,
+    "impairment": 0.0,
+    "fx": -0.076,
+    "op_income": 64.795,
+    "interest_exp": 10.937,
+    "other_income": 0.9,
+    "pretax": 54.758,
+    "tax": 9.031,
+    "net_income": 45.727,
+    "nci": 0.01,
+    "ni_controlling": 45.717,
+    "ni_common": 45.717,
+    "shares_basic": 107.86403,
+    "shares_diluted": 109.019708,
+    "eps_basic": 0.42,
+    "eps_diluted": 0.42,
+    "dps_declared": 0.17
+   },
+   "is_basis": "ASC 606 (adopted 1 Jan 2018): service revenues (commissions + fees) + inventory sales revenue; other_income = \"Other income, net\" incl. interest income",
+   "ops": {
+    "gtv": 1426.412,
+    "gtv_label": "GTV",
+    "lots_total": 103.5,
+    "consignments_k": 14.7,
+    "bidder_registrations_k": 141.5,
+    "buyers_k": 36.35,
+    "agency_proceeds": 206.848,
+    "am_agency_proceeds": 192.549,
+    "am_revenue_asc606": 274.251,
+    "am_revenue_rate_asc606": 0.192,
+    "am_agency_proceeds_rate": 0.135,
+    "ancillary_logistical_expense_grossup": 19.98,
+    "service_take_rate": 0.15,
+    "inventory_sales_mix_of_gtv": 0.066,
+    "am_service_rev_rate": 0.126
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 45.727,
+    "ebitda_calc": 81.395,
+    "adj_ebitda_published": 81.395,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 16.537
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 10.937
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.837
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 9.031
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919001715/rba-20190630x10q.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001670/tv500147_10q.htm"
+    ]
+   },
+   "adj_ni": {
+    "adj_ni_published": 45.717,
+    "adj_eps_published": 0.42,
+    "base": "Net income attributable to stockholders",
+    "base_value": 45.717,
+    "shares_diluted": 109.019708,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919001714/tv526707_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001669/tv500170_ex99-1.htm"
+    ]
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 64.795,
+    "base": "Operating income",
+    "base_value": 64.795,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001669/tv500170_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956919001714/tv526707_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001669/tv500170_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918001670/tv500147_10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956919001715/rba-20190630x10q.htm"
+   ]
+  },
+  "Q3/18": {
+   "is": {
+    "comm_rev": 87.548,
+    "fee_rev": 73.826,
+    "service_rev": 161.374,
+    "inv_sales_rev": 83.972,
+    "total_rev": 245.346,
+    "cost_services": 33.053,
+    "cost_inventory": 74.341,
+    "sga": 88.323,
+    "acq_costs": 2.007,
+    "da": 16.723,
+    "gain_disp_ppe": 0.342,
+    "impairment": 0.0,
+    "fx": -0.047,
+    "op_income": 31.194,
+    "interest_exp": 10.473,
+    "other_income": 7.182,
+    "pretax": 27.903,
+    "tax": 4.791,
+    "net_income": 23.112,
+    "nci": -0.026,
+    "ni_controlling": 23.138,
+    "ni_common": 23.138,
+    "shares_basic": 108.365427,
+    "shares_diluted": 109.887194,
+    "eps_basic": 0.21,
+    "eps_diluted": 0.21,
+    "dps_declared": 0.18
+   },
+   "is_basis": "ASC 606 (adopted 1 Jan 2018): service revenues (commissions + fees) + inventory sales revenue; other_income = \"Other income, net\" incl. interest income",
+   "ops": {
+    "gtv": 1039.427,
+    "gtv_label": "GTV",
+    "lots_total": 89.0,
+    "consignments_k": 13.6,
+    "bidder_registrations_k": 123.0,
+    "buyers_k": 31.4,
+    "agency_proceeds": 159.323,
+    "am_agency_proceeds": 144.235,
+    "am_revenue_asc606": 218.576,
+    "am_revenue_rate_asc606": 0.21,
+    "am_agency_proceeds_rate": 0.139,
+    "ancillary_logistical_expense_grossup": 11.682,
+    "service_take_rate": 0.155,
+    "inventory_sales_mix_of_gtv": 0.081,
+    "am_service_rev_rate": 0.129
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 23.112,
+    "ebitda_calc": 54.319,
+    "adj_ebitda_published": 50.885,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 16.723
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 10.473
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.78
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 4.791
+     },
+     {
+      "label": "Severance and retention",
+      "cat": "RESTR",
+      "value": 1.501
+     },
+     {
+      "label": "Gain on sale of equity accounted for investment",
+      "cat": "DIVEST",
+      "value": -4.935
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000110465919061201/rba-20190930x10qd5cac6.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918002250/tv506251_10q.htm"
+    ]
+   },
+   "adj_ni": {
+    "adj_ni_published": 19.328,
+    "adj_eps_published": 0.18,
+    "base": "Net income attributable to stockholders",
+    "base_value": 23.138,
+    "shares_diluted": 109.887194,
+    "items": [
+     {
+      "label": "Severance and retention",
+      "cat": "RESTR",
+      "value": 1.501
+     },
+     {
+      "label": "Gain on sale of equity accounted for investment",
+      "cat": "DIVEST",
+      "value": -4.935
+     },
+     {
+      "label": "Current income tax effect: severance and retention",
+      "cat": "TAX",
+      "value": -0.376
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000110465919061198/tm19178853_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918002248/tv506507_ex99-1.htm"
+    ],
+    "note": "No tax effect recorded on the equity-investment gain."
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 32.695,
+    "base": "Operating income",
+    "base_value": 31.194,
+    "items": [
+     {
+      "label": "Severance and retention",
+      "cat": "RESTR",
+      "value": 1.501
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918002248/tv506507_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000110465919061198/tm19178853_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918002248/tv506507_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918002250/tv506251_10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000110465919061201/rba-20190930x10qd5cac6.htm"
+   ]
+  },
+  "Q4/18": {
+   "is": {
+    "comm_rev": 106.621,
+    "fee_rev": 91.158,
+    "service_rev": 197.779,
+    "inv_sales_rev": 158.193,
+    "total_rev": 355.972,
+    "cost_services": 46.315,
+    "cost_inventory": 142.505,
+    "sga": 95.624,
+    "acq_costs": 0.054,
+    "da": 17.163,
+    "gain_disp_ppe": 1.773,
+    "fx": 0.243,
+    "op_income": 56.327,
+    "interest_exp": 11.807,
+    "other_income": 2.855,
+    "pretax": 47.375,
+    "tax": 11.915,
+    "net_income": 35.46,
+    "nci": -0.026,
+    "ni_controlling": 35.486,
+    "ni_common": 35.486,
+    "shares_basic": 108.649637,
+    "shares_diluted": 109.983224,
+    "eps_basic": 0.33,
+    "eps_diluted": 0.32,
+    "dps_declared": 0.18
+   },
+   "is_basis": "ASC 606 (adopted 1 Jan 2018): service revenues (commissions + fees) + inventory sales revenue; other_income = \"Other income, net\" incl. interest income",
+   "ops": {
+    "gtv": 1337.614,
+    "gtv_label": "GTV",
+    "lots_total": 103.5,
+    "consignments_k": 14.9,
+    "bidder_registrations_k": 171.5,
+    "buyers_k": 38.5,
+    "agency_proceeds": 193.133,
+    "am_agency_proceeds": 178.619,
+    "am_revenue_asc606": 321.124,
+    "am_revenue_rate_asc606": 0.24,
+    "am_agency_proceeds_rate": 0.134,
+    "ancillary_logistical_expense_grossup": 20.334,
+    "service_take_rate": 0.148,
+    "inventory_sales_mix_of_gtv": 0.118,
+    "am_service_rev_rate": 0.123
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 35.46,
+    "ebitda_calc": 75.466,
+    "adj_ebitda_derived": 75.466,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 17.163
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 11.807
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.879
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 11.915
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000456/tv514716_10k.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956918002250/tv506251_10q.htm"
+    ],
+    "note": "Q4 not published; derived FY2018 (257,331) - 9M2018 (181,865). Q4 interest income 879 = FY 2,888 - 9M 2,009."
+   },
+   "adj_ni": {
+    "adj_ni_published": 35.486,
+    "adj_eps_published": 0.32,
+    "base": "Net income attributable to stockholders",
+    "base_value": 35.486,
+    "shares_diluted": 109.983224,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000110465920026280/tm209505d1_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000455/tv514715_ex99-1.htm"
+    ]
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 56.327,
+    "base": "Operating income",
+    "base_value": 56.327,
+    "items": [],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000455/tv514715_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000110465920026280/tm209505d1_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000455/tv514715_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000456/tv514716_10k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956918002250/tv506251_10q.htm"
+   ]
+  },
+  "2018": {
+   "is": {
+    "comm_rev": 420.16,
+    "fee_rev": 329.355,
+    "service_rev": 749.515,
+    "inv_sales_rev": 420.511,
+    "total_rev": 1170.026,
+    "cost_services": 159.058,
+    "cost_inventory": 374.339,
+    "sga": 382.676,
+    "acq_costs": 5.093,
+    "da": 66.614,
+    "gain_disp_ppe": 2.731,
+    "impairment": 0.0,
+    "fx": 0.212,
+    "op_income": 185.189,
+    "interest_exp": 44.527,
+    "other_income": 11.85,
+    "pretax": 152.512,
+    "tax": 31.006,
+    "net_income": 121.506,
+    "nci": 0.027,
+    "ni_controlling": 121.479,
+    "ni_common": 121.479,
+    "shares_basic": 108.063349,
+    "shares_diluted": 109.388236,
+    "eps_basic": 1.12,
+    "eps_diluted": 1.11,
+    "dps_declared": 0.7
+   },
+   "is_basis": "ASC 606 (adopted 1 Jan 2018): service revenues (commissions + fees) + inventory sales revenue; other_income = \"Other income, net\" incl. interest income",
+   "ops": {
+    "gtv": 4964.165,
+    "gtv_label": "GTV",
+    "lots_total": 377.0,
+    "consignments_k": 53.95,
+    "bidder_registrations_k": 555.0,
+    "buyers_k": 135.25,
+    "agency_proceeds": 729.111,
+    "am_agency_proceeds": 672.179,
+    "am_revenue_asc606": 1046.518,
+    "am_revenue_rate_asc606": 0.211,
+    "am_agency_proceeds_rate": 0.135,
+    "ancillary_logistical_expense_grossup": 66.576,
+    "service_take_rate": 0.151,
+    "inventory_sales_mix_of_gtv": 0.085,
+    "am_service_rev_rate": 0.126
+   },
+   "adj_ebitda": {
+    "base": "Net income (incl. NCI)",
+    "base_value": 121.506,
+    "ebitda_calc": 260.765,
+    "adj_ebitda_published": 257.331,
+    "def": "NI + D&A + interest expense - interest income + income tax expense (current + deferred) + pre-tax adjusting items",
+    "items": [
+     {
+      "label": "Add: depreciation and amortization expenses",
+      "cat": "D&A",
+      "value": 66.614
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 44.527
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -2.888
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 31.006
+     },
+     {
+      "label": "Severance and retention",
+      "cat": "RESTR",
+      "value": 1.501
+     },
+     {
+      "label": "Gain on sale of equity accounted for investment",
+      "cat": "DIVEST",
+      "value": -4.935
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000456/tv514716_10k.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000110465920026280/tm209505d1_ex99-1.htm"
+    ],
+    "note": "Also published as 257.3 ($m) in the Q4/19 release TTM table (first year adjusted EBITDA appeared in earnings releases, from Q1/19)."
+   },
+   "adj_ni": {
+    "adj_ni_published": 117.669,
+    "adj_eps_published": 1.08,
+    "base": "Net income attributable to stockholders",
+    "base_value": 121.479,
+    "shares_diluted": 109.388236,
+    "items": [
+     {
+      "label": "Severance and retention",
+      "cat": "RESTR",
+      "value": 1.501
+     },
+     {
+      "label": "Gain on sale of equity accounted for investment",
+      "cat": "DIVEST",
+      "value": -4.935
+     },
+     {
+      "label": "Current income tax effect: severance and retention",
+      "cat": "TAX",
+      "value": -0.376
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000110465920026280/tm209505d1_ex99-1.htm",
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000455/tv514715_ex99-1.htm"
+    ]
+   },
+   "adj_op_income": {
+    "adj_op_income_published": 186.69,
+    "base": "Operating income",
+    "base_value": 185.189,
+    "items": [
+     {
+      "label": "Severance and retention",
+      "cat": "RESTR",
+      "value": 1.501
+     }
+    ],
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000455/tv514715_ex99-1.htm"
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000110465920026280/tm209505d1_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000455/tv514715_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956919000456/tv514716_10k.htm"
+   ]
+  }
+ },
+ "notes": [
+  "UNITS: USD millions (3 dp, converted from $000s); shares in millions; per-share USD; lots/consignments/bidder registrations/buyers in thousands (industrial auctions only). Rates are fractions.",
+  "SOURCES/BASIS 2015: Q1-Q3/15 were originally released on IFRS in Form 6-K news releases (e.g. Q1/15 https://www.sec.gov/Archives/edgar/data/1046102/000127956915000940/v409604_ex99-1.htm; 'earnings from operations', 'finance income/costs', NI to equity holders 23.588 vs US GAAP 23.777). RBA switched to US GAAP with its first 10-K (FY2015, filed 2016-02-25); the 8-K of 2016-02-25 (Ex 99.2-99.4) refiled Q1-Q3/15 interim statements under US GAAP. Per the 'latest presentation' rule all 2015 quarters use the US GAAP comparatives in the Q1-Q3/16 releases (https://www.sec.gov/Archives/edgar/data/1046102/000127956916003404/v439045_ex99-1.htm, https://www.sec.gov/Archives/edgar/data/1046102/000127956916004107/v446238_ex99-1.htm, https://www.sec.gov/Archives/edgar/data/1046102/000127956916004660/v452662_ex99-1.htm) and Q4/15 + FY2015 from the Q4/16 release (https://www.sec.gov/Archives/edgar/data/1046102/000127956917000271/v460034_ex99-1.htm). US GAAP moved FX gains/losses and gain on disposition of PP&E inside operating income.",
+  "SOURCES/BASIS 2016: each 2016 quarter is taken from the comparative column of the corresponding 2017 release (latest). The 2017 releases reclassified acquisition-related costs out of SG&A into a separate line (e.g. Q2/16 SG&A 74,595 in Q2/16 release -> 73,992 + acq costs 603; Q1/16 68,307 -> 67,110 + 1,197; Q3/16 69,000/4,691 -> 68,293/5,398; Q4/15 SG&A 67,825 (Q4/15 release) -> 67,224 + 601 (Q4/16 release)).",
+  "ASC 606 / 2017 BASIS (IMPORTANT): RBA adopted ASC 606 on 1 Jan 2018 using the FULL RETROSPECTIVE method, so the 2018 releases (and FY2018 10-K) DO recast 2017 quarters and FY2017 (and the FY2018 10-K also recasts FY2016: total revenues 1,126.977, service 555.843 = commissions 366.342 + fees 189.501, inventory sales 571.134, cost of inventory sold 513.348, ancillary 47.234). Per instruction, 2017 and earlier are kept on the LEGACY basis in 'is' (legacy 2017 figures from the 2017 releases/10-Qs/FY2017 10-K); the company's own ASC 606 recast of 2017 is provided separately under 'is_asc606' (not restated by us). Recast mechanics (Q2/18-Q4/18 release tables): ASC 606 total revenues = legacy revenues + cost of inventory sold (inventory contracts grossed up) + ancillary & logistical service expenses (grossed up into costs of services). FY2017: 610.517 + 306.498 + 54.176 = 971.191; costs of services 79.013 + 54.176 = 133.189. Operating income, NI and EPS are unchanged by the recast. FY2016 recast was not carried into 'is' (2016 kept legacy; quarterly 2016 recast never published).",
+  "2018 IS presentation: interest income, equity income and other are collapsed into 'Other income, net' on the face of the IS (incl. the Q3/18 4.935 gain on sale of equity-accounted investment), so 2018 'is' has no interest_income key and other_income includes interest income; 2018 interest income (Q1 0.392, Q2 0.837, Q3 0.780, Q4 0.879 derived, FY 2.888) is given in the adj_ebitda INTINC lines (10-Q/10-K MD&A). Commissions/fees split of service revenue for 2018 from the 2019 releases/10-Qs and FY2018 10-K; Q4 commissions/fees in every year = FY - 9M (all other Q4 IS lines are direct from the Q4 release).",
+  "IS conventions: fx and gain_disp_ppe are INSIDE operating income for RBA (US GAAP presentation), signed by income effect. other_income (legacy) = equity income + 'Other, net' (memo_equity_income / memo_other_net shown). other_nonop = debt extinguishment costs (-6.787 in Q4/16, separate non-operating line). nci = net income attributable to non-controlling interests as reported (positive = income to NCI). No preferred stock in this period, ni_common = ni_controlling. acq_costs omitted for Q1-Q3/15 (no line; FY2015 acquisition costs 0.601 were all Q4/15 - Xcira). dps_declared = dividends declared during the calendar quarter (by declaration date, e.g. Q1/15 = 0.14 declared Jan 12 2015 for Q4/14), ties to 'dividends declared per common share' in the 10-K selected data (FY2015 0.60, 2016 0.66, 2017 0.68, 2018 0.70).",
+  "GTV LABEL: 2015-Q2/17 releases call the metric 'Gross Auction Proceeds (GAP)' (= total proceeds of all items sold at auctions and online marketplaces; incl. EquipmentOne GTV, which included a buyer's premium, and from June 2017 IronPlanet 'GMV'). From the Q3/17 release the metric is 'Gross Transaction Value (GTV)'; 'effective August 1, 2017, no longer includes EquipmentOne buyer's premiums' and GTV was retrospectively restated to exclude Asset Appraisal Services GTV (Q2/17 3.1m: GAP 1,257.430 -> GTV 1,254.318; Q3/17 8.0m excluded). 2015-2016 values were not changed. The label 'GMV' was used in this period only for IronPlanet's own volume (Q2/17: 76.8m of IronPlanet GMV included in GAP). The Q4/19 release mis-states A&M Q4/18 GTV as 1,327,614 (consolidated 1,337,614 used).",
+  "REVENUE RATE definitions: 2015-Q2/17 'Revenue Rate' = consolidated revenues / GAP. From Q3/17: 'Auctions and Marketplaces segment Revenue Rate' = A&M segment revenues / GTV (legacy basis; FY2015 11.91%, FY2016 12.27%, FY2017 12.63%). From Q1/18 (ASC 606): 'A&M revenue rate' = A&M total revenues (incl. inventory sales) / GTV and 'A&M agency proceeds rate' = (A&M total revenues - cost of inventory sold)/GTV. From Q1/19: 'Service revenue as a % of total GTV - Rate' (service_take_rate) and 'Inventory sales revenue as a % of GTV - Mix' (given here for 2018 periods from the 2019 releases).",
+  "ACQUISITIONS: IronPlanet acquired May 31 2017; contributed 10.9m consolidated revenue (June 2017) and 76.8m GMV in Q2/17 (Q2/17 release). No later quarterly IronPlanet revenue contribution disclosed in releases. Other 2016 acquisitions (Mascus Feb 2016, Petrowsky, Kramer) - no revenue contribution quantified in releases. Geographic revenue is NOT in the earnings releases (only in 10-Q/10-K MD&A, and on shifting bases: consolidated US/Canada/Europe/Other 2015-16, A&M segment US/Canada/International 2017+, consolidated by geography in segment note) - not captured.",
+  "ADJUSTED EBITDA - where published: never quarterly in 2015-2018 earnings releases; it is published in the 10-Q/10-K MD&A. Definitions and changes: (1) 2015 (IFRS 6-K releases Q1-Q3/15 and FY2015 10-K/Q4/15 release; Q1/16 release & 10-Q): 'Adjusted EBITDA' only as the trailing-12-month denominator of Debt/Adjusted EBITDA = adjusted operating income ('earnings from operations' under IFRS) + D&A (FY2015: 166.5 + 42.1 = 208.6); FY2015 10-K and Q1/16 10-Q also showed 'EBITDA' = operating income + D&A (FY2015 216.872; Q1/16 49.254; Q1/15 43.635). (2) CHANGE in the Q2/16 10-Q: 'EBITDA is calculated by adding back depreciation and amortization expenses, interest expense, and current income tax expense, and subtracting interest income and deferred income tax recovery from net income' (net-income basis), TTM adjusted EBITDA = that + pre-tax adjusting items. (3) Q3/16 10-Q: first quarterly 'Adjusted EBITDA' (and adjusted EBITDA margin = adj. EBITDA / revenues) = same NI-based formula excluding pre-tax adjusting items; prior periods re-presented (FY2015 restated to 212.386 from 208.6). (4) From the Q1/18 10-Q the bridge shows a single 'income tax expense' line (economically identical); 'agency proceeds adjusted EBITDA rate' (= adj. EBITDA / agency proceeds) introduced. (5) From the Q1/19 release adjusted EBITDA appears in the earnings release (TTM table) with wording 'adding back D&A, interest expense, and income tax expense, and subtracting interest income from net income excluding the pre-tax effects of adjusting items' (FY2018 257.3). Q4 quarters (and Q1/15) are not published and are derived as FY - 9M (flagged adj_ebitda_derived); all builds tie to the NI + D&A + INT - INTINC + TAX + items formula. ebitda_calc = build before adjusting items (not a published figure).",
+  "ADJUSTING ITEMS / ADJUSTED NI & EPS definitions: 2015 IFRS releases: 'Adjusted Operating Income' = earnings from operations excluding pre-tax effects of significant non-recurring items (severance, management reorganization, excess property sales, impairment losses, certain other items); EPS not adjusted in Q1-Q3/15 (no items). Q4/15 release (first US GAAP release) introduced 'Adjusted Net Income attributable to stockholders' = NI attributable to stockholders excluding the after-tax effects of adjusting items, and 'Diluted Adjusted EPS attributable to stockholders' = ANI / weighted average diluted shares (items Q4/15: gain on sale of excess property, tax loss utilization). Q2/16 release: no non-GAAP measures (no items). Q3/16: impairment (EquipmentOne) with deferred tax effect. Q4/16: first BELOW-operating-income item - debt extinguishment costs 6.787 (adjusted in ANI and adjusted EBITDA but not adjusted OI); acquisition-related costs (11.8m FY2016, 8.6m Q1/17) explicitly NOT adjusted ('included in both GAAP and adjusted results'). Q1/17: 'change in uncertain tax provision' (current tax adjusting item). CHANGE Q2/17 (IronPlanet close): adjusted OI definition now lists 'acquisition-related costs ... severance, retention' among adjusting items; specific IronPlanet items adjusted (accelerated vesting of assumed options 4.752 - categorised ACQ here although it is stock-option expense booked in acquisition-related costs; acquisition and finance structure advisory 9.063; severance and retention 1.447) while ordinary acquisition-related/integration costs (e.g. Q3/17 3.587, 2018 5.093) remain unadjusted; and Diluted adjusted EPS = (ANI net of the 'effect of dilutive securities') / diluted shares (effect: Q2/17 -0.545, Q4/17 -0.475, FY2017 -0.152, Q1/17 +0.027 shown retroactively). Q4/17: 'remeasurement of deferred taxes' (US tax reform, -10.070). Q3/18: gain on sale of equity-accounted investment (-4.935; no tax effect) and severance & retention 1.501. Q4/19 (outside range): share-based payment expense recovery.",
+  "ADJUSTED OPERATING INCOME (extra block adj_op_income): published 2015-Q4/17 and Q2/18+; not shown in Q1/17 and Q1/18 releases (implied values flagged *_derived). Q2/18+ also 'agency proceeds adjusted operating income rate'.",
+  "OTHER NON-GAAP introduced in 2018: 'Agency proceeds' = total revenues - cost of inventory sold - ancillary and logistical service expenses (equals legacy revenues; 2017 agency proceeds = 2017 legacy revenues); 'A&M agency proceeds' = A&M total revenues - cost of inventory sold.",
+  "DATA QUIRKS: Q3/16 release 9M2016 'number of industrial auctions' 109 (should be 162 per Q3/17 release) - not used. Q4/16 release narrative says adjusted OI fell to $30.5m (table 40.6). Q2/15 and Q1/15 6-K releases were IFRS (not used for values). FY2016 10-K equity income/other split and 10-K 2018 adj. EBITDA bridge for 2016 omits the 6.787 debt extinguishment line though the total includes it. Quarterly stats (lots, consignments, bidder registrations, buyers) for Q2-Q4 of 2015-2016 are derived from YTD figures (6M, 9M, FY); 2017-2018 quarters are given directly in 2018/2019 releases and tie."
+ ],
+ "validation_errors": []
+}

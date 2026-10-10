@@ -1,0 +1,2961 @@
+{
+ "periods": {
+  "Q1/19": {
+   "is": {
+    "service_rev": 172.372,
+    "comm_rev": 92.28,
+    "fee_rev": 80.092,
+    "inv_sales_rev": 131.057,
+    "total_rev": 303.429,
+    "cost_services": 36.069,
+    "cost_inventory": 120.475,
+    "sga": 95.184,
+    "acq_costs": 0.669,
+    "da": 17.115,
+    "gain_disp_ppe": 0.149,
+    "fx": -0.478,
+    "op_income": 33.588,
+    "interest_exp": 10.816,
+    "interest_income": 0.855,
+    "other_income": 1.184,
+    "pretax": 24.811,
+    "tax": 6.639,
+    "net_income": 18.172,
+    "nci": 0.008,
+    "ni_controlling": 18.164,
+    "ni_common": 18.164,
+    "shares_basic": 108.7655,
+    "shares_diluted": 110.0442,
+    "eps_basic": 0.17,
+    "eps_diluted": 0.17,
+    "dps_declared": 0.18
+   },
+   "ops": {
+    "gtv": 1174.681,
+    "service_take_rate": 0.147,
+    "service_take_rate_calc": 0.14674,
+    "am_service_take_rate": 0.122,
+    "inventory_return": 10.582,
+    "inventory_rate": 0.0807,
+    "lots_industrial_auctions": 86.25,
+    "num_auctions": 35,
+    "bidder_registrations": 143000,
+    "consignors": 11550,
+    "buyers": 30750
+   },
+   "adj_ebitda": {
+    "adj_ebitda_derived": 51.887,
+    "base": "Net income (incl. NCI)",
+    "base_value": 18.172,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 17.115
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 10.816
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.855
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 6.639
+     }
+    ],
+    "definition": "legacy (pre-Q3 2021)"
+   },
+   "adj_ni": {
+    "adj_ni_implied": 18.164,
+    "adj_eps_published": 0.17,
+    "base": "Net income attributable to stockholders",
+    "base_value": 18.164,
+    "items": [],
+    "definition": "legacy (pre-Q3 2021)"
+   },
+   "adj_legacy_def": {
+    "adj_eps": 0.17,
+    "note": "No adjusting items in Q1 2019 (Q1 2019 & Q1 2020 releases); adj EPS = GAAP EPS. Quarterly adj EBITDA not published (only TTM)."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000110465920058171/tm2018688d1_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956919001128/tv520679_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837020009713/rba-20200806xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837020012934/rba-20201105xex99d1.htm"
+   ]
+  },
+  "Q2/19": {
+   "is": {
+    "service_rev": 234.606,
+    "comm_rev": 134.466,
+    "fee_rev": 100.14,
+    "inv_sales_rev": 158.616,
+    "total_rev": 393.222,
+    "cost_services": 50.268,
+    "cost_inventory": 149.818,
+    "sga": 97.714,
+    "acq_costs": 0.038,
+    "da": 17.112,
+    "gain_disp_ppe": 0.101,
+    "fx": -0.403,
+    "op_income": 77.97,
+    "interest_exp": 10.117,
+    "interest_income": 1.063,
+    "other_income": 0.616,
+    "pretax": 69.532,
+    "tax": 15.401,
+    "net_income": 54.131,
+    "nci": 0.095,
+    "ni_controlling": 54.036,
+    "ni_common": 54.036,
+    "shares_basic": 108.7077,
+    "shares_diluted": 109.9428,
+    "eps_basic": 0.5,
+    "eps_diluted": 0.49,
+    "dps_declared": 0.18
+   },
+   "ops": {
+    "gtv": 1497.757,
+    "service_take_rate": 0.157,
+    "service_take_rate_calc": 0.15664,
+    "am_service_take_rate": 0.134,
+    "inventory_return": 8.798,
+    "inventory_rate": 0.0555,
+    "lots_industrial_auctions": 120.5,
+    "num_auctions": 59,
+    "bidder_registrations": 200250,
+    "consignors": 17450,
+    "buyers": 43500
+   },
+   "adj_ebitda": {
+    "adj_ebitda_published": 95.698,
+    "base": "Net income (incl. NCI)",
+    "base_value": 54.131,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 17.112
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 10.117
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -1.063
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 15.401
+     }
+    ],
+    "definition": "legacy (pre-Q3 2021)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 54.036,
+    "adj_eps_published": 0.49,
+    "base": "Net income attributable to stockholders",
+    "base_value": 54.036,
+    "items": [],
+    "definition": "legacy (pre-Q3 2021)"
+   },
+   "adj_legacy_def": {
+    "adj_ni": 54.036,
+    "adj_eps": 0.49,
+    "adj_ebitda": 95.698,
+    "note": "Q2 2019 release (adj EPS) and Q2 2020 release comparatives (adj NI, adj EBITDA); no adjusting items."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837020009713/rba-20200806xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000127956919001714/tv526707_ex99-1.htm"
+   ]
+  },
+  "Q3/19": {
+   "is": {
+    "service_rev": 178.577,
+    "comm_rev": 90.928,
+    "fee_rev": 87.649,
+    "inv_sales_rev": 111.219,
+    "total_rev": 289.796,
+    "cost_services": 36.382,
+    "cost_inventory": 102.41,
+    "sga": 93.691,
+    "acq_costs": 0.045,
+    "da": 17.692,
+    "gain_disp_ppe": 0.821,
+    "fx": -0.237,
+    "op_income": 40.16,
+    "interest_exp": 10.09,
+    "interest_income": 0.517,
+    "other_income": 1.445,
+    "pretax": 32.032,
+    "tax": 6.76,
+    "net_income": 25.272,
+    "nci": 0.006,
+    "ni_controlling": 25.266,
+    "ni_common": 25.266,
+    "shares_basic": 108.0034,
+    "shares_diluted": 109.3812,
+    "eps_basic": 0.23,
+    "eps_diluted": 0.23,
+    "dps_declared": 0.2
+   },
+   "ops": {
+    "gtv": 1084.241,
+    "service_take_rate": 0.165,
+    "service_take_rate_calc": 0.1647,
+    "am_service_take_rate": 0.138,
+    "inventory_return": 8.809,
+    "inventory_rate": 0.0792,
+    "lots_industrial_auctions": 98.4,
+    "num_auctions": 46,
+    "bidder_registrations": 165500,
+    "consignors": 14000,
+    "buyers": 34800
+   },
+   "adj_ebitda": {
+    "ebitda_published": 59.297,
+    "adj_ebitda_published": 64.181,
+    "base": "Net income (incl. NCI)",
+    "base_value": 25.272,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 17.692
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 10.09
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.517
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 6.76
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 5.66
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 0.045
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -0.821
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 32.399,
+    "adj_eps_published": 0.3,
+    "base": "Net income attributable to stockholders",
+    "base_value": 25.266,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 5.66
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 0.045
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 5.548
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -0.821
+     },
+     {
+      "label": "Severance",
+      "cat": "RESTR",
+      "value": 0.0
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -3.299
+     },
+     {
+      "label": "Change in uncertain tax provision - tax effect",
+      "cat": "TAXD",
+      "value": 0.0
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_legacy_def": {
+    "adj_ni": 25.266,
+    "adj_eps": 0.23,
+    "adj_ebitda": 59.297,
+    "note": "Q3 2019/Q3 2020 releases; no adjusting items."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837020012934/rba-20201105xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837021014659/rba-20211104xex99d1.htm"
+   ]
+  },
+  "Q4/19": {
+   "is": {
+    "service_rev": 218.469,
+    "comm_rev": 114.107,
+    "fee_rev": 104.362,
+    "inv_sales_rev": 113.725,
+    "total_rev": 332.194,
+    "cost_services": 42.258,
+    "cost_inventory": 108.136,
+    "sga": 95.8,
+    "acq_costs": 0.025,
+    "da": 18.582,
+    "gain_disp_ppe": 0.036,
+    "fx": 4.055,
+    "op_income": 71.484,
+    "interest_exp": 10.254,
+    "interest_income": 1.367,
+    "other_income": 1.791,
+    "pretax": 64.388,
+    "tax": 12.823,
+    "net_income": 51.565,
+    "nci": -0.008,
+    "ni_controlling": 51.573,
+    "ni_common": 51.573,
+    "shares_basic": 108.6095,
+    "shares_diluted": 110.1946,
+    "eps_basic": 0.47,
+    "eps_diluted": 0.47,
+    "dps_declared": 0.2
+   },
+   "ops": {
+    "gtv": 1383.908,
+    "service_take_rate": 0.158,
+    "service_take_rate_calc": 0.15786,
+    "am_service_take_rate": 0.133,
+    "inventory_return": 5.589,
+    "inventory_rate": 0.0491,
+    "lots_industrial_auctions": 117.65,
+    "num_auctions": 54,
+    "bidder_registrations": 223800,
+    "consignors": 15850,
+    "buyers": 44350
+   },
+   "adj_ebitda": {
+    "ebitda_published": 91.857,
+    "adj_ebitda_published": 92.123,
+    "base": "Net income (incl. NCI)",
+    "base_value": 51.565,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 18.582
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 10.254
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -1.367
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 12.823
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 0.277
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 0.025
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -0.036
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 54.541,
+    "adj_eps_published": 0.5,
+    "base": "Net income attributable to stockholders",
+    "base_value": 51.573,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 0.277
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 0.025
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 5.548
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -0.036
+     },
+     {
+      "label": "Severance",
+      "cat": "RESTR",
+      "value": 0.0
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -2.846
+     },
+     {
+      "label": "Change in uncertain tax provision - tax effect",
+      "cat": "TAXD",
+      "value": 0.0
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_legacy_def": {
+    "adj_ni": 48.183,
+    "adj_eps": 0.44,
+    "adj_ebitda": 87.779,
+    "adj_op_income": 67.406,
+    "note": "Q4 2019/Q4 2020 releases; single adjusting item = $4.078m share-based payment expense recovery on former CEO departure (+$0.688m deferred tax effect)."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837021001225/rba-20210218xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837021014659/rba-20211104xex99d1.htm"
+   ]
+  },
+  "2019": {
+   "is": {
+    "service_rev": 804.024,
+    "comm_rev": 431.781,
+    "fee_rev": 372.243,
+    "inv_sales_rev": 514.617,
+    "total_rev": 1318.641,
+    "cost_services": 164.977,
+    "cost_inventory": 480.839,
+    "sga": 382.389,
+    "acq_costs": 0.777,
+    "da": 70.501,
+    "gain_disp_ppe": 1.107,
+    "fx": 2.937,
+    "op_income": 223.202,
+    "interest_exp": 41.277,
+    "interest_income": 3.802,
+    "other_income": 5.036,
+    "pretax": 190.763,
+    "tax": 41.623,
+    "net_income": 149.14,
+    "nci": 0.101,
+    "ni_controlling": 149.039,
+    "ni_common": 149.039,
+    "shares_basic": 108.5197,
+    "shares_diluted": 109.7591,
+    "eps_basic": 1.37,
+    "eps_diluted": 1.36,
+    "dps_declared": 0.76
+   },
+   "ops": {
+    "gtv": 5140.587,
+    "service_take_rate": 0.156,
+    "service_take_rate_calc": 0.15641,
+    "am_service_take_rate": 0.132,
+    "inventory_return": 33.778,
+    "inventory_rate": 0.0656,
+    "lots_industrial_auctions": 422.8,
+    "gtv_us": 3027.459,
+    "gtv_canada": 1254.857,
+    "gtv_international": 858.271,
+    "rev_us": 743.793,
+    "rev_canada": 247.737,
+    "rev_europe": 173.054,
+    "rev_australia": 98.365,
+    "rev_other_geo": 55.692,
+    "num_auctions": 194,
+    "bidder_registrations": 732550,
+    "consignors": 58850,
+    "buyers": 153400
+   },
+   "adj_ebitda": {
+    "ebitda_published": 298.739,
+    "adj_ebitda_published": 314.814,
+    "base": "Net income (incl. NCI)",
+    "base_value": 149.14,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 70.501
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 41.277
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -3.802
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 41.623
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 16.405
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 0.777
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -1.107
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 0.0
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 173.969,
+    "adj_eps_published": 1.59,
+    "base": "Net income attributable to stockholders",
+    "base_value": 149.039,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 16.405
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 0.777
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 20.638
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -1.107
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 0.0
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 0.0
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -11.783
+     },
+     {
+      "label": "Change in uncertain tax provision - tax effect",
+      "cat": "TAXD",
+      "value": 0.0
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_legacy_def": {
+    "adj_ni": 145.649,
+    "adj_eps": 1.33,
+    "adj_ebitda": 294.661,
+    "adj_op_income": 219.124,
+    "note": "Q4 2019/Q4 2020 releases."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837021001225/rba-20210218xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837022001365/rba-20211231x10k.htm"
+   ]
+  },
+  "Q1/20": {
+   "is": {
+    "service_rev": 183.123,
+    "comm_rev": 93.484,
+    "fee_rev": 89.639,
+    "inv_sales_rev": 90.132,
+    "total_rev": 273.255,
+    "cost_services": 39.355,
+    "cost_inventory": 81.585,
+    "sga": 98.385,
+    "acq_costs": 0.0,
+    "da": 19.293,
+    "gain_disp_ppe": 0.047,
+    "fx": -0.602,
+    "op_income": 34.082,
+    "interest_exp": 9.182,
+    "interest_income": 0.872,
+    "other_income": 2.705,
+    "pretax": 28.477,
+    "tax": 5.648,
+    "net_income": 22.829,
+    "nci": 0.02,
+    "ni_controlling": 22.809,
+    "ni_common": 22.809,
+    "shares_basic": 109.2489,
+    "shares_diluted": 110.4828,
+    "eps_basic": 0.21,
+    "eps_diluted": 0.21,
+    "dps_declared": 0.2
+   },
+   "ops": {
+    "gtv": 1147.025,
+    "service_take_rate": 0.16,
+    "service_take_rate_calc": 0.15965,
+    "am_service_take_rate": 0.135,
+    "inventory_return": 8.547,
+    "inventory_rate": 0.0948,
+    "lots_total": 100.805,
+    "lots_industrial_auctions": 82.4,
+    "gtv_us": 862.442,
+    "gtv_canada": 149.311,
+    "gtv_international": 135.272,
+    "num_auctions": 30,
+    "bidder_registrations": 161050,
+    "consignors": 10950,
+    "buyers": 29900
+   },
+   "adj_ebitda": {
+    "ebitda_published": 56.08,
+    "adj_ebitda_published": 58.439,
+    "base": "Net income (incl. NCI)",
+    "base_value": 22.829,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 19.293
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 9.182
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.872
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 5.648
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 2.406
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 0.0
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -0.047
+     },
+     {
+      "label": "Severance",
+      "cat": "RESTR",
+      "value": 0.0
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 28.394,
+    "adj_eps_published": 0.26,
+    "base": "Net income attributable to stockholders",
+    "base_value": 22.809,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 2.406
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 0.0
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 5.548
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -0.047
+     },
+     {
+      "label": "Severance",
+      "cat": "RESTR",
+      "value": 0.0
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -2.322
+     },
+     {
+      "label": "Change in uncertain tax provision - tax effect",
+      "cat": "TAXD",
+      "value": 0.0
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_legacy_def": {
+    "adj_ebitda": 56.079,
+    "note": "Q1 2021 release comparative (old definition; no adjusting items). Q1 2020 release itself gave only TTM adj EBITDA and no adj NI/EPS."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837021006715/rba-20210510xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837021014659/rba-20211104xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837021006718/rba-20210331x10q.htm"
+   ]
+  },
+  "Q2/20": {
+   "is": {
+    "service_rev": 234.139,
+    "comm_rev": 125.465,
+    "fee_rev": 108.674,
+    "inv_sales_rev": 154.911,
+    "total_rev": 389.05,
+    "cost_services": 39.448,
+    "cost_inventory": 143.134,
+    "sga": 100.632,
+    "acq_costs": 0.0,
+    "da": 17.857,
+    "gain_disp_ppe": 1.213,
+    "fx": -0.392,
+    "op_income": 88.8,
+    "interest_exp": 8.882,
+    "interest_income": 0.393,
+    "other_income": 0.464,
+    "pretax": 80.775,
+    "tax": 27.656,
+    "net_income": 53.119,
+    "nci": 0.076,
+    "ni_controlling": 53.043,
+    "ni_common": 53.043,
+    "shares_basic": 108.3875,
+    "shares_diluted": 109.3233,
+    "eps_basic": 0.49,
+    "eps_diluted": 0.49,
+    "dps_declared": 0.2
+   },
+   "ops": {
+    "gtv": 1493.982,
+    "service_take_rate": 0.157,
+    "service_take_rate_calc": 0.15672,
+    "am_service_take_rate": 0.134,
+    "inventory_return": 11.777,
+    "inventory_rate": 0.076,
+    "lots_total": 148.957,
+    "lots_industrial_auctions": 114.7,
+    "gtv_us": 792.45,
+    "gtv_canada": 529.432,
+    "gtv_international": 172.1,
+    "num_auctions": 51,
+    "bidder_registrations": 284550,
+    "consignors": 14400,
+    "buyers": 44350
+   },
+   "adj_ebitda": {
+    "ebitda_published": 107.121,
+    "adj_ebitda_published": 112.263,
+    "base": "Net income (incl. NCI)",
+    "base_value": 53.119,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 17.857
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 8.882
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.393
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 27.656
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 6.355
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 0.0
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -1.213
+     },
+     {
+      "label": "Severance",
+      "cat": "RESTR",
+      "value": 0.0
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 65.28,
+    "adj_eps_published": 0.6,
+    "base": "Net income attributable to stockholders",
+    "base_value": 53.043,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 6.355
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 0.0
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 4.935
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -1.213
+     },
+     {
+      "label": "Severance",
+      "cat": "RESTR",
+      "value": 0.0
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -4.068
+     },
+     {
+      "label": "Change in uncertain tax provision - tax effect",
+      "cat": "TAXD",
+      "value": 6.228
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_legacy_def": {
+    "adj_ni": 59.271,
+    "adj_eps": 0.54,
+    "adj_ebitda": 107.121,
+    "note": "Q2 2020 / Q2 2021 releases; only adjusting item = change in uncertain tax provision ($0.766m current + $5.462m deferred)."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837021010613/rba-20210805xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837021014659/rba-20211104xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837021010616/rba-20210630x10q.htm"
+   ]
+  },
+  "Q3/20": {
+   "is": {
+    "service_rev": 222.679,
+    "comm_rev": 112.762,
+    "fee_rev": 109.917,
+    "inv_sales_rev": 108.863,
+    "total_rev": 331.542,
+    "cost_services": 39.223,
+    "cost_inventory": 96.253,
+    "sga": 110.186,
+    "acq_costs": 0.0,
+    "da": 18.436,
+    "gain_disp_ppe": 0.276,
+    "fx": -0.336,
+    "op_income": 67.384,
+    "interest_exp": 8.737,
+    "interest_income": 0.51,
+    "other_income": 1.77,
+    "pretax": 60.927,
+    "tax": 15.437,
+    "net_income": 45.49,
+    "nci": 0.103,
+    "ni_controlling": 45.387,
+    "ni_common": 45.387,
+    "shares_basic": 109.0185,
+    "shares_diluted": 110.3697,
+    "eps_basic": 0.42,
+    "eps_diluted": 0.41,
+    "dps_declared": 0.22
+   },
+   "ops": {
+    "gtv": 1321.379,
+    "service_take_rate": 0.169,
+    "service_take_rate_calc": 0.16852,
+    "am_service_take_rate": 0.143,
+    "inventory_return": 12.61,
+    "inventory_rate": 0.1158,
+    "lots_total": 142.472,
+    "lots_industrial_auctions": 115.35,
+    "gtv_us": 796.111,
+    "gtv_canada": 281.639,
+    "gtv_international": 243.629,
+    "num_auctions": 42,
+    "bidder_registrations": 231500,
+    "consignors": 15100,
+    "buyers": 40000
+   },
+   "adj_ebitda": {
+    "ebitda_published": 87.59,
+    "adj_ebitda_published": 99.801,
+    "base": "Net income (incl. NCI)",
+    "base_value": 45.49,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 18.436
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 8.737
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.51
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 15.437
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 8.568
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 0.0
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -0.276
+     },
+     {
+      "label": "Severance",
+      "cat": "RESTR",
+      "value": 3.919
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 54.592,
+    "adj_eps_published": 0.49,
+    "base": "Net income attributable to stockholders",
+    "base_value": 45.387,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 8.568
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 0.0
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 4.993
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -0.276
+     },
+     {
+      "label": "Severance",
+      "cat": "RESTR",
+      "value": 3.919
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -7.999
+     },
+     {
+      "label": "Change in uncertain tax provision - tax effect",
+      "cat": "TAXD",
+      "value": 0.0
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_legacy_def": {
+    "adj_ni": 48.605,
+    "adj_eps": 0.44,
+    "adj_ebitda": 91.873,
+    "note": "Q3 2020 release; adjusting item = $4.283m severance (-$1.065m tax)."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837021014659/rba-20211104xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837021014664/rba-20210930x10q.htm"
+   ]
+  },
+  "Q4/20": {
+   "is": {
+    "service_rev": 231.655,
+    "comm_rev": 121.17,
+    "fee_rev": 110.485,
+    "inv_sales_rev": 151.758,
+    "total_rev": 383.413,
+    "cost_services": 39.27,
+    "cost_inventory": 137.322,
+    "sga": 108.318,
+    "acq_costs": 6.014,
+    "da": 19.337,
+    "gain_disp_ppe": 0.022,
+    "fx": -0.282,
+    "op_income": 72.892,
+    "interest_exp": 8.767,
+    "interest_income": 0.563,
+    "other_nonop": 0.0,
+    "other_income": 1.02,
+    "pretax": 65.708,
+    "tax": 16.789,
+    "net_income": 48.919,
+    "nci": 0.063,
+    "ni_controlling": 48.856,
+    "ni_common": 48.856,
+    "shares_basic": 109.5533,
+    "shares_diluted": 111.0582,
+    "eps_basic": 0.45,
+    "eps_diluted": 0.44,
+    "dps_declared": 0.22
+   },
+   "ops": {
+    "gtv": 1448.832,
+    "service_take_rate": 0.16,
+    "service_take_rate_calc": 0.15989,
+    "am_service_take_rate": 0.136,
+    "inventory_return": 14.436,
+    "inventory_rate": 0.0951,
+    "lots_total": 151.108,
+    "lots_industrial_auctions": 116.95,
+    "gtv_us": 784.545,
+    "gtv_canada": 431.867,
+    "gtv_international": 232.42,
+    "num_auctions": 45,
+    "bidder_registrations": 279950,
+    "consignors": 14950,
+    "buyers": 43000
+   },
+   "adj_ebitda": {
+    "ebitda_published": 93.248,
+    "adj_ebitda_published": 103.792,
+    "base": "Net income (incl. NCI)",
+    "base_value": 48.92,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 19.335
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 8.767
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.563
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 16.789
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 4.553
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 6.014
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -0.023
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 0.0
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 0.0
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 60.395,
+    "adj_eps_published": 0.54,
+    "base": "Net income attributable to stockholders",
+    "base_value": 48.856,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 4.553
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 6.014
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 5.622
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -0.022
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 0.0
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 0.0
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -6.155
+     },
+     {
+      "label": "Change in uncertain tax provision - tax effect",
+      "cat": "TAXD",
+      "value": 1.527
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_legacy_def": {
+    "adj_ni": 54.268,
+    "adj_eps": 0.49,
+    "adj_ebitda": 98.463,
+    "adj_op_income": 78.105,
+    "note": "Q4 2020 release; adjusting items = $5.213m (portion of) acquisition-related costs (Rouse), -$1.329m tax, +$1.527m uncertain tax provision."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837022001355/rba-20220217xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837023001652/rba-20221231x10k.htm"
+   ]
+  },
+  "2020": {
+   "is": {
+    "service_rev": 871.596,
+    "comm_rev": 452.882,
+    "fee_rev": 418.714,
+    "inv_sales_rev": 505.664,
+    "total_rev": 1377.26,
+    "cost_services": 164.528,
+    "cost_inventory": 458.293,
+    "sga": 410.291,
+    "acq_costs": 6.014,
+    "da": 74.921,
+    "gain_disp_ppe": 1.559,
+    "fx": -1.612,
+    "op_income": 263.16,
+    "interest_exp": 35.568,
+    "interest_income": 2.337,
+    "other_nonop": 0.0,
+    "other_income": 5.959,
+    "pretax": 235.888,
+    "tax": 65.53,
+    "net_income": 170.358,
+    "nci": 0.263,
+    "ni_controlling": 170.095,
+    "ni_common": 170.095,
+    "shares_basic": 109.0545,
+    "shares_diluted": 110.311,
+    "eps_basic": 1.56,
+    "eps_diluted": 1.54,
+    "dps_declared": 0.84
+   },
+   "ops": {
+    "gtv": 5411.218,
+    "service_take_rate": 0.161,
+    "service_take_rate_calc": 0.16107,
+    "am_service_take_rate": 0.137,
+    "inventory_return": 47.371,
+    "inventory_rate": 0.0937,
+    "lots_total": 543.342,
+    "lots_industrial_auctions": 429.4,
+    "gtv_us": 3235.548,
+    "gtv_canada": 1392.249,
+    "gtv_international": 783.421,
+    "rev_us": 754.815,
+    "rev_canada": 305.236,
+    "rev_europe": 158.999,
+    "rev_australia": 119.49,
+    "rev_other_geo": 38.72,
+    "num_auctions": 168,
+    "bidder_registrations": 957050,
+    "consignors": 55400,
+    "buyers": 157250
+   },
+   "adj_ebitda": {
+    "ebitda_published": 344.039,
+    "adj_ebitda_published": 374.295,
+    "base": "Net income (incl. NCI)",
+    "base_value": 170.358,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 74.921
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 35.568
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -2.338
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 65.53
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 21.882
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 6.014
+     },
+     {
+      "label": "Loss (gain) on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": -1.559
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 0.0
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs (2020: severance from leadership realignment)",
+      "cat": "RESTR",
+      "value": 3.919
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 208.66,
+    "adj_eps_published": 1.89,
+    "base": "Net income attributable to stockholders",
+    "base_value": 170.095,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 21.882
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 6.014
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 21.098
+     },
+     {
+      "label": "Loss (gain) on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": -1.559
+     },
+     {
+      "label": "Loss on redemption of the 2021 Notes and certain related interest expense",
+      "cat": "DEBT",
+      "value": 0.0
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 0.0
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs (2020: severance from leadership realignment)",
+      "cat": "RESTR",
+      "value": 3.919
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -20.544
+     },
+     {
+      "label": "Change in uncertain tax provision - tax effect",
+      "cat": "TAXD",
+      "value": 7.755
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_legacy_def": {
+    "adj_ni": 184.952,
+    "adj_eps": 1.68,
+    "adj_ebitda": 353.535,
+    "adj_op_income": 272.656,
+    "note": "Q4 2020 release."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837023001652/rba-20221231x10k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837022001355/rba-20220217xex99d1.htm"
+   ]
+  },
+  "Q1/21": {
+   "is": {
+    "service_rev": 206.03,
+    "comm_rev": 103.975,
+    "fee_rev": 102.055,
+    "inv_sales_rev": 125.525,
+    "total_rev": 331.555,
+    "cost_services": 37.866,
+    "cost_inventory": 110.747,
+    "sga": 114.239,
+    "acq_costs": 2.922,
+    "da": 21.07,
+    "gain_disp_ppe": 0.068,
+    "fx": -0.277,
+    "op_income": 44.502,
+    "interest_exp": 8.946,
+    "interest_income": 0.303,
+    "other_nonop": 0.0,
+    "other_income": 0.699,
+    "pretax": 36.558,
+    "tax": 8.419,
+    "net_income": 28.139,
+    "nci": -0.049,
+    "ni_controlling": 28.188,
+    "ni_common": 28.188,
+    "shares_basic": 109.973,
+    "shares_diluted": 111.2674,
+    "eps_basic": 0.26,
+    "eps_diluted": 0.25,
+    "dps_declared": 0.22
+   },
+   "ops": {
+    "gtv": 1274.539,
+    "service_take_rate": 0.162,
+    "service_take_rate_calc": 0.16165,
+    "am_service_take_rate": 0.135,
+    "inventory_return": 14.778,
+    "inventory_rate": 0.1177,
+    "lots_total": 116.259,
+    "gtv_us": 881.653,
+    "gtv_canada": 210.611,
+    "gtv_international": 182.275,
+    "acq_revenue_contribution": 5.6,
+    "acq_rev_rouse": 5.6
+   },
+   "adj_ebitda": {
+    "ebitda_published": 66.271,
+    "adj_ebitda_published": 72.903,
+    "base": "Net income (incl. NCI)",
+    "base_value": 28.139,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 21.07
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 8.946
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.303
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 8.419
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 3.778
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 2.922
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -0.068
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 0.0
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 0.0
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 35.995,
+    "adj_eps_published": 0.32,
+    "base": "Net income attributable to stockholders",
+    "base_value": 28.188,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 3.778
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 2.922
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 6.641
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -0.068
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 0.0
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 0.0
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -5.466
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_legacy_def": {
+    "adj_ebitda": 66.271,
+    "note": "Q1 2021 release (old definition; no adjusting items, no adj NI table)."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837022007873/rba-20220509xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837021006718/rba-20210331x10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837022007884/rba-20220331x10q.htm"
+   ]
+  },
+  "Q2/21": {
+   "is": {
+    "service_rev": 252.748,
+    "comm_rev": 129.334,
+    "fee_rev": 123.414,
+    "inv_sales_rev": 143.613,
+    "total_rev": 396.361,
+    "cost_services": 41.301,
+    "cost_inventory": 131.023,
+    "sga": 109.56,
+    "acq_costs": 3.049,
+    "da": 21.935,
+    "gain_disp_ppe": 0.175,
+    "fx": -0.151,
+    "op_income": 89.517,
+    "interest_exp": 8.867,
+    "interest_income": 0.332,
+    "other_nonop": 0.0,
+    "other_income": 0.864,
+    "pretax": 81.846,
+    "tax": 21.065,
+    "net_income": 60.781,
+    "nci": 0.032,
+    "ni_controlling": 60.749,
+    "ni_common": 60.749,
+    "shares_basic": 110.3116,
+    "shares_diluted": 111.3342,
+    "eps_basic": 0.55,
+    "eps_diluted": 0.55,
+    "dps_declared": 0.22
+   },
+   "ops": {
+    "gtv": 1527.642,
+    "service_take_rate": 0.165,
+    "service_take_rate_calc": 0.16545,
+    "am_service_take_rate": 0.139,
+    "inventory_return": 12.59,
+    "inventory_rate": 0.0877,
+    "lots_total": 148.206,
+    "gtv_us": 740.826,
+    "gtv_canada": 551.075,
+    "gtv_international": 235.741,
+    "acq_revenue_contribution": 6.2,
+    "acq_rev_rouse": 6.2
+   },
+   "adj_ebitda": {
+    "ebitda_published": 112.316,
+    "adj_ebitda_published": 122.97,
+    "base": "Net income (incl. NCI)",
+    "base_value": 60.781,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 21.935
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 8.867
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.332
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 21.065
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 7.54
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 3.049
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": -0.175
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 0.0
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 0.24
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 74.545,
+    "adj_eps_published": 0.67,
+    "base": "Net income attributable to stockholders",
+    "base_value": 60.749,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 7.54
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 3.049
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 6.802
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": -0.175
+     },
+     {
+      "label": "Loss on redemption of the 2021 Notes and certain related interest expense",
+      "cat": "DEBT",
+      "value": 0.0
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 0.0
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 0.24
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -3.66
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_legacy_def": {
+    "adj_ni": 60.749,
+    "adj_eps": 0.55,
+    "adj_ebitda": 112.316,
+    "note": "Q2 2021 release (old definition; no adjusting items)."
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837022012283/rba-20220804xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837021010616/rba-20210630x10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837022012287/rba-20220630x10q.htm"
+   ]
+  },
+  "Q3/21": {
+   "is": {
+    "service_rev": 214.193,
+    "comm_rev": 110.275,
+    "fee_rev": 103.918,
+    "inv_sales_rev": 115.489,
+    "total_rev": 329.682,
+    "cost_services": 35.108,
+    "cost_inventory": 102.993,
+    "sga": 106.508,
+    "acq_costs": 10.255,
+    "da": 21.907,
+    "gain_disp_ppe": 1.068,
+    "fx": -0.36,
+    "op_income": 53.619,
+    "interest_exp": 8.807,
+    "interest_income": 0.375,
+    "other_nonop": 0.0,
+    "other_income": 0.227,
+    "pretax": 45.414,
+    "tax": 13.057,
+    "net_income": 32.357,
+    "nci": 0.021,
+    "ni_controlling": 32.336,
+    "ni_common": 32.336,
+    "shares_basic": 110.4102,
+    "shares_diluted": 111.3914,
+    "eps_basic": 0.29,
+    "eps_diluted": 0.29,
+    "dps_declared": 0.25
+   },
+   "ops": {
+    "gtv": 1270.258,
+    "service_take_rate": 0.169,
+    "service_take_rate_calc": 0.16862,
+    "am_service_take_rate": 0.141,
+    "inventory_return": 12.496,
+    "inventory_rate": 0.1082,
+    "lots_total": 107.825,
+    "gtv_us": 798.725,
+    "gtv_canada": 266.574,
+    "gtv_international": 204.959,
+    "acq_revenue_contribution": 6.5,
+    "acq_rev_rouse": 6.5
+   },
+   "adj_ebitda": {
+    "ebitda_published": 75.753,
+    "adj_ebitda_published": 91.247,
+    "base": "Net income (incl. NCI)",
+    "base_value": 32.357,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 21.907
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 8.807
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.375
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 13.057
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 5.627
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 10.255
+     },
+     {
+      "label": "Loss (Gain) on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": -1.068
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 0.68
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 49.78,
+    "adj_eps_published": 0.45,
+    "base": "Net income attributable to stockholders",
+    "base_value": 32.336,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 5.627
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 10.255
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 6.622
+     },
+     {
+      "label": "Loss (Gain) on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": -1.068
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 0.68
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -4.672
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837022016510/rba-20221107xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837021014664/rba-20210930x10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837022016513/rba-20220930x10q.htm"
+   ]
+  },
+  "Q4/21": {
+   "is": {
+    "service_rev": 244.788,
+    "comm_rev": 126.135,
+    "fee_rev": 118.653,
+    "inv_sales_rev": 114.585,
+    "total_rev": 359.373,
+    "cost_services": 40.984,
+    "cost_inventory": 103.159,
+    "sga": 125.896,
+    "acq_costs": 13.971,
+    "da": 22.977,
+    "gain_disp_ppe": 0.125,
+    "fx": -0.004,
+    "op_income": 52.507,
+    "interest_exp": 10.373,
+    "interest_income": 0.393,
+    "other_nonop": -1.248,
+    "other_income": 0.134,
+    "pretax": 41.413,
+    "tax": 10.837,
+    "net_income": 30.576,
+    "nci": -0.019,
+    "ni_controlling": 30.595,
+    "ni_common": 30.595,
+    "shares_basic": 110.5589,
+    "shares_diluted": 111.6203,
+    "eps_basic": 0.28,
+    "eps_diluted": 0.27,
+    "dps_declared": 0.25
+   },
+   "ops": {
+    "gtv": 1461.492,
+    "service_take_rate": 0.167,
+    "service_take_rate_calc": 0.16749,
+    "am_service_take_rate": 0.137,
+    "inventory_return": 11.426,
+    "inventory_rate": 0.0997,
+    "lots_total": 121.081,
+    "gtv_us": 809.504,
+    "gtv_canada": 413.669,
+    "gtv_international": 238.319,
+    "acq_revenue_contribution": 10.9,
+    "acq_rev_rouse": 8.0,
+    "acq_rev_smartequip": 2.9
+   },
+   "adj_ebitda": {
+    "ebitda_published": 74.371,
+    "adj_ebitda_published": 98.202,
+    "base": "Net income (incl. NCI)",
+    "base_value": 30.576,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 22.977
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 10.373
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.392
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 10.837
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 6.16
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 13.971
+     },
+     {
+      "label": "Loss (gain) on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": -0.125
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 1.248
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 2.577
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 55.785,
+    "adj_eps_published": 0.5,
+    "base": "Net income attributable to stockholders",
+    "base_value": 30.595,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 6.16
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 13.971
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 7.895
+     },
+     {
+      "label": "Loss (gain) on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": -0.125
+     },
+     {
+      "label": "Loss on redemption of the 2021 Notes and certain related interest expense",
+      "cat": "DEBT",
+      "value": 0.0
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 1.248
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 2.577
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -6.536
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837023001648/rba-20230221xex99d1.htm"
+   ]
+  },
+  "2021": {
+   "is": {
+    "service_rev": 917.759,
+    "comm_rev": 469.718,
+    "fee_rev": 448.041,
+    "inv_sales_rev": 499.212,
+    "total_rev": 1416.971,
+    "cost_services": 155.258,
+    "cost_inventory": 447.921,
+    "sga": 456.203,
+    "acq_costs": 30.197,
+    "da": 87.889,
+    "gain_disp_ppe": 1.436,
+    "fx": -0.792,
+    "op_income": 240.147,
+    "interest_exp": 36.993,
+    "interest_income": 1.402,
+    "other_nonop": -1.248,
+    "other_income": 1.924,
+    "pretax": 205.232,
+    "tax": 53.378,
+    "net_income": 151.854,
+    "nci": -0.014,
+    "ni_controlling": 151.868,
+    "ni_common": 151.868,
+    "shares_basic": 110.3158,
+    "shares_diluted": 111.4068,
+    "eps_basic": 1.38,
+    "eps_diluted": 1.36,
+    "dps_declared": 0.94
+   },
+   "ops": {
+    "gtv": 5533.931,
+    "service_take_rate": 0.166,
+    "service_take_rate_calc": 0.16584,
+    "am_service_take_rate": 0.138,
+    "inventory_return": 51.291,
+    "inventory_rate": 0.1027,
+    "lots_total": 493.371,
+    "gtv_us": 3230.708,
+    "gtv_canada": 1441.929,
+    "gtv_international": 861.294,
+    "rev_us": 748.73,
+    "rev_canada": 281.105,
+    "rev_europe": 183.004,
+    "rev_australia": 149.551,
+    "rev_other_geo": 54.581,
+    "acq_revenue_contribution": 29.3,
+    "acq_rev_rouse": 26.4,
+    "acq_rev_smartequip": 2.9
+   },
+   "adj_ebitda": {
+    "ebitda_published": 328.712,
+    "adj_ebitda_published": 385.324,
+    "base": "Net income (incl. NCI)",
+    "base_value": 151.854,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 87.889
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 36.993
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -1.402
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 53.378
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 23.106
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 30.197
+     },
+     {
+      "label": "Loss (gain) on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": -1.436
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 1.248
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 3.497
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 216.106,
+    "adj_eps_published": 1.94,
+    "base": "Net income attributable to stockholders",
+    "base_value": 151.868,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 23.106
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 30.197
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 27.96
+     },
+     {
+      "label": "Loss (gain) on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": -1.436
+     },
+     {
+      "label": "Loss on redemption of the 2021 Notes and certain related interest expense",
+      "cat": "DEBT",
+      "value": 0.0
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 1.248
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 3.497
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -20.334
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837023001648/rba-20230221xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837023001652/rba-20221231x10k.htm"
+   ]
+  },
+  "Q1/22": {
+   "is": {
+    "service_rev": 244.861,
+    "comm_rev": 116.375,
+    "fee_rev": 128.486,
+    "inv_sales_rev": 149.06,
+    "total_rev": 393.921,
+    "cost_services": 39.015,
+    "cost_inventory": 131.582,
+    "sga": 126.606,
+    "acq_costs": 9.637,
+    "da": 24.225,
+    "gain_disp_ppe": 169.82,
+    "fx": 0.164,
+    "op_income": 232.84,
+    "interest_exp": 20.686,
+    "interest_income": 0.544,
+    "other_nonop": 1.263,
+    "other_income": 0.376,
+    "pretax": 214.337,
+    "tax": 36.236,
+    "net_income": 178.101,
+    "nci": 0.007,
+    "ni_controlling": 178.094,
+    "ni_common": 178.094,
+    "shares_basic": 110.6477,
+    "shares_diluted": 111.6559,
+    "eps_basic": 1.61,
+    "eps_diluted": 1.6,
+    "dps_declared": 0.25
+   },
+   "ops": {
+    "gtv": 1439.105,
+    "service_take_rate": 0.17,
+    "service_take_rate_calc": 0.17015,
+    "am_service_take_rate": 0.14,
+    "inventory_return": 17.478,
+    "inventory_rate": 0.1173,
+    "lots_total": 105.767,
+    "gtv_us": 919.852,
+    "gtv_canada": 309.768,
+    "gtv_international": 209.485,
+    "acq_revenue_contribution": 4.7,
+    "acq_rev_smartequip": 4.7
+   },
+   "adj_ebitda": {
+    "ebitda_published": 258.704,
+    "adj_ebitda_published": 104.929,
+    "base": "Net income (incl. NCI)",
+    "base_value": 178.101,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 24.225
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 20.686
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.544
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 36.236
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 5.386
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 9.637
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -169.82
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": -1.263
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 2.285
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 50.963,
+    "adj_eps_published": 0.46,
+    "base": "Net income attributable to stockholders",
+    "base_value": 178.094,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 5.386
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 9.637
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 8.532
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment",
+      "cat": "DISP",
+      "value": -169.82
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": -1.263
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 2.285
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": 18.112
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837022007873/rba-20220509xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837022007884/rba-20220331x10q.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837023009088/rba-20230510xex99d1.htm"
+   ]
+  },
+  "Q2/22": {
+   "is": {
+    "service_rev": 286.502,
+    "comm_rev": 136.403,
+    "fee_rev": 150.099,
+    "inv_sales_rev": 198.044,
+    "total_rev": 484.546,
+    "cost_services": 45.039,
+    "cost_inventory": 176.171,
+    "sga": 144.277,
+    "acq_costs": 3.399,
+    "da": 24.298,
+    "gain_disp_ppe": 0.347,
+    "fx": 0.158,
+    "op_income": 91.867,
+    "interest_exp": 18.463,
+    "interest_income": 0.871,
+    "other_nonop": 0.0,
+    "other_income": 0.768,
+    "pretax": 75.043,
+    "tax": 21.632,
+    "net_income": 53.411,
+    "nci": 0.046,
+    "ni_controlling": 53.365,
+    "ni_common": 53.365,
+    "shares_basic": 110.7603,
+    "shares_diluted": 111.7051,
+    "eps_basic": 0.48,
+    "eps_diluted": 0.48,
+    "dps_declared": 0.25,
+    "memo_debt_extinguishment": 5.464
+   },
+   "ops": {
+    "gtv": 1684.276,
+    "service_take_rate": 0.17,
+    "service_take_rate_calc": 0.1701,
+    "am_service_take_rate": 0.14,
+    "inventory_return": 21.873,
+    "inventory_rate": 0.1104,
+    "lots_total": 144.167,
+    "gtv_us": 803.604,
+    "gtv_canada": 626.389,
+    "gtv_international": 254.283,
+    "acq_revenue_contribution": 5.0,
+    "acq_rev_smartequip": 5.0
+   },
+   "adj_ebitda": {
+    "ebitda_published": 116.933,
+    "adj_ebitda_published": 136.219,
+    "base": "Net income (incl. NCI)",
+    "base_value": 53.411,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 24.298
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 18.463
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -0.871
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 21.632
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 13.64
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 3.399
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": 1.153
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 0.0
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 1.094
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 83.072,
+    "adj_eps_published": 0.74,
+    "base": "Net income attributable to stockholders",
+    "base_value": 53.365,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 13.64
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 3.399
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 8.426
+     },
+     {
+      "label": "Gain on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": 1.153
+     },
+     {
+      "label": "Loss on redemption of the 2021 Notes and certain related interest expense",
+      "cat": "DEBT",
+      "value": 9.664
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 0.0
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 1.094
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -7.669
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837022012283/rba-20220804xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837022012287/rba-20220630x10q.htm"
+   ]
+  },
+  "Q3/22": {
+   "is": {
+    "service_rev": 246.696,
+    "comm_rev": 108.238,
+    "fee_rev": 138.458,
+    "inv_sales_rev": 164.783,
+    "total_rev": 411.479,
+    "cost_services": 41.521,
+    "cost_inventory": 147.253,
+    "sga": 133.193,
+    "acq_costs": 2.031,
+    "da": 24.29,
+    "gain_disp_ppe": 0.333,
+    "fx": 0.43,
+    "op_income": 63.954,
+    "interest_exp": 9.199,
+    "interest_income": 1.827,
+    "other_nonop": 0.0,
+    "other_income": 1.039,
+    "pretax": 57.621,
+    "tax": 14.697,
+    "net_income": 42.924,
+    "nci": 0.015,
+    "ni_controlling": 42.909,
+    "ni_common": 42.909,
+    "shares_basic": 110.8382,
+    "shares_diluted": 112.2095,
+    "eps_basic": 0.39,
+    "eps_diluted": 0.38,
+    "dps_declared": 0.27
+   },
+   "ops": {
+    "gtv": 1358.242,
+    "service_take_rate": 0.182,
+    "service_take_rate_calc": 0.18163,
+    "am_service_take_rate": 0.143,
+    "inventory_return": 17.53,
+    "inventory_rate": 0.1064,
+    "lots_total": 125.661,
+    "gtv_us": 855.491,
+    "gtv_canada": 314.872,
+    "gtv_international": 187.879,
+    "acq_revenue_contribution": 5.2,
+    "acq_rev_smartequip": 5.2
+   },
+   "adj_ebitda": {
+    "ebitda_published": 89.283,
+    "adj_ebitda_published": 102.544,
+    "base": "Net income (incl. NCI)",
+    "base_value": 42.924,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 24.29
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 9.199
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -1.827
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 14.697
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 8.806
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 2.031
+     },
+     {
+      "label": "Loss (Gain) on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": 0.93
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 1.494
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 59.853,
+    "adj_eps_published": 0.53,
+    "base": "Net income attributable to stockholders",
+    "base_value": 42.909,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 8.806
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 2.031
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 8.227
+     },
+     {
+      "label": "Loss (Gain) on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": 0.93
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 1.494
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -4.544
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837022016510/rba-20221107xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837022016513/rba-20220930x10q.htm"
+   ]
+  },
+  "Q4/22": {
+   "is": {
+    "service_rev": 272.523,
+    "comm_rev": 124.898,
+    "fee_rev": 147.625,
+    "inv_sales_rev": 171.338,
+    "total_rev": 443.861,
+    "cost_services": 42.553,
+    "cost_inventory": 153.567,
+    "sga": 135.856,
+    "acq_costs": 22.194,
+    "da": 24.342,
+    "gain_disp_ppe": 0.333,
+    "fx": 0.202,
+    "op_income": 65.884,
+    "interest_exp": 9.532,
+    "interest_income": 3.73,
+    "other_nonop": 0.0,
+    "other_income": -1.094,
+    "pretax": 58.988,
+    "tax": 13.666,
+    "net_income": 45.322,
+    "nci": 0.032,
+    "ni_controlling": 45.29,
+    "ni_common": 45.29,
+    "shares_basic": 110.874,
+    "shares_diluted": 111.9688,
+    "eps_basic": 0.41,
+    "eps_diluted": 0.4,
+    "dps_declared": 0.27
+   },
+   "ops": {
+    "gtv": 1544.267,
+    "service_take_rate": 0.176,
+    "service_take_rate_calc": 0.17647,
+    "am_service_take_rate": 0.144,
+    "inventory_return": 17.771,
+    "inventory_rate": 0.1037,
+    "lots_total": 145.364,
+    "gtv_us": 853.42,
+    "gtv_canada": 456.043,
+    "gtv_international": 234.804
+   },
+   "adj_ebitda": {
+    "ebitda_published": 89.132,
+    "adj_ebitda_published": 121.522,
+    "base": "Net income (incl. NCI)",
+    "base_value": 45.322,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 24.342
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 9.532
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -3.73
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 13.666
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 9.128
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 22.194
+     },
+     {
+      "label": "Loss (gain) on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": 0.88
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 0.0
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 0.188
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 76.031,
+    "adj_eps_published": 0.68,
+    "base": "Net income attributable to stockholders",
+    "base_value": 45.29,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 9.128
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 22.194
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 8.202
+     },
+     {
+      "label": "Loss (gain) on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": 0.88
+     },
+     {
+      "label": "Loss on redemption of the 2021 Notes and certain related interest expense",
+      "cat": "DEBT",
+      "value": 0.0
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": 0.0
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 0.188
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -9.851
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837023001648/rba-20230221xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837023001652/rba-20221231x10k.htm"
+   ]
+  },
+  "2022": {
+   "is": {
+    "service_rev": 1050.583,
+    "comm_rev": 485.916,
+    "fee_rev": 564.667,
+    "inv_sales_rev": 683.225,
+    "total_rev": 1733.808,
+    "cost_services": 168.127,
+    "cost_inventory": 608.574,
+    "sga": 539.933,
+    "acq_costs": 37.261,
+    "da": 97.155,
+    "gain_disp_ppe": 170.833,
+    "fx": 0.954,
+    "op_income": 454.545,
+    "interest_exp": 57.88,
+    "interest_income": 6.971,
+    "other_nonop": 1.263,
+    "other_income": 1.089,
+    "pretax": 405.988,
+    "tax": 86.23,
+    "net_income": 319.758,
+    "nci": 0.101,
+    "ni_controlling": 319.657,
+    "ni_common": 319.657,
+    "shares_basic": 110.7813,
+    "shares_diluted": 111.886,
+    "eps_basic": 2.89,
+    "eps_diluted": 2.86,
+    "dps_declared": 1.04,
+    "memo_debt_extinguishment": 5.464
+   },
+   "ops": {
+    "gtv": 6025.889,
+    "service_take_rate": 0.174,
+    "service_take_rate_calc": 0.17434,
+    "am_service_take_rate": 0.141,
+    "inventory_return": 74.651,
+    "inventory_rate": 0.1093,
+    "lots_total": 520.959,
+    "gtv_us": 3432.366,
+    "gtv_canada": 1707.072,
+    "gtv_international": 886.451,
+    "rev_us": 970.848,
+    "rev_canada": 375.67,
+    "rev_europe": 143.232,
+    "rev_australia": 181.339,
+    "rev_other_geo": 62.719
+   },
+   "adj_ebitda": {
+    "ebitda_published": 554.052,
+    "adj_ebitda_published": 465.215,
+    "base": "Net income (incl. NCI)",
+    "base_value": 319.758,
+    "items": [
+     {
+      "label": "Add: depreciation and amortization",
+      "cat": "D&A",
+      "value": 97.155
+     },
+     {
+      "label": "Add: interest expense",
+      "cat": "INT",
+      "value": 57.88
+     },
+     {
+      "label": "Less: interest income",
+      "cat": "INTINC",
+      "value": -6.971
+     },
+     {
+      "label": "Add: income tax expense",
+      "cat": "TAXEXP",
+      "value": 86.23
+     },
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 36.961
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 37.261
+     },
+     {
+      "label": "Loss (gain) on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": -166.857
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": -1.263
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 5.061
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "adj_ni": {
+    "adj_ni_published": 269.919,
+    "adj_eps_published": 2.41,
+    "base": "Net income attributable to stockholders",
+    "base_value": 319.657,
+    "items": [
+     {
+      "label": "Share-based payments expense",
+      "cat": "SBC",
+      "value": 36.961
+     },
+     {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "value": 37.261
+     },
+     {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "value": 33.387
+     },
+     {
+      "label": "Loss (gain) on disposition of property, plant and equipment and related costs",
+      "cat": "DISP",
+      "value": -166.857
+     },
+     {
+      "label": "Loss on redemption of the 2021 Notes and certain related interest expense",
+      "cat": "DEBT",
+      "value": 9.664
+     },
+     {
+      "label": "Change in fair value of derivatives",
+      "cat": "FV",
+      "value": -1.263
+     },
+     {
+      "label": "Non-recurring advisory, legal and restructuring costs",
+      "cat": "LEGAL",
+      "value": 5.061
+     },
+     {
+      "label": "Related tax effects of the above",
+      "cat": "TAX",
+      "value": -3.952
+     },
+     {
+      "label": "Change in uncertain tax provision - tax effect",
+      "cat": "TAXD",
+      "value": 0.0
+     }
+    ],
+    "definition": "Q3 2021+ (retrospective)"
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837023001648/rba-20230221xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1046102/000155837023001652/rba-20221231x10k.htm"
+   ]
+  }
+ },
+ "notes": [
+  "SCOPE/BASIS: RB Global (then Ritchie Bros. Auctioneers), Q1/19-Q4/22 + FY2019-FY2022, USD millions (converted from $000s; 3 dp), shares millions. Each period uses the LATEST presentation within the 2019-2022 era: 2019 quarters from 2020 earnings-release comparatives (adjusted measures from the Q3 2021 release recast table / FY2021 10-K), 2020 quarters from 2021 release comparatives (FY2020 from the FY2022 10-K), 2021 quarters from 2022 release comparatives, 2022 from the 2022 releases. Q4 figures are the three-month columns of the Q4 releases (no FY-9M derivation for IS). 2023-era recasts (post-IAA, in $m, new lot basis, FX moved below operating income) were NOT applied.",
+  "Q4/FY2022 RELEASE: used the 8-K filed 2023-02-21 (EX-99.1, https://www.sec.gov/Archives/edgar/data/1046102/000155837023001648/rba-20230221xex99d1.htm). The 8-K of 2023-01-23 (items 1.01/2.02/8.01) is the amended IAA merger agreement announcement (cash/stock mix change, $1.08 special dividend, Starboard investment, EBITDA-synergy investor presentation) - not an earnings release. The 8-K of 2023-02-13 (item 2.02) gave PRELIMINARY unaudited Q4/FY2022 ranges (FY: GTV ~$6.0bn, revenue ~$1.7bn, NI $317-320m, adj EBITDA $461-465m, debt ~$610m, net debt ~$116m; Q4: GTV ~$1.5bn, revenue ~$444m, NI $42-45m, adj EBITDA $118-122m) - superseded by the 2023-02-21 release (Q4 NI 45.3, adj EBITDA 121.5; FY NI 319.8, adj EBITDA 465.2), all within the preliminary ranges.",
+  "GTV LABEL: all 2019-2022 releases use 'Gross transaction value (GTV)' = total proceeds from all items sold at the Company's auctions and online marketplaces (not revenue). No GMV/GAP labels in this era. Service GTV = GTV - inventory sales revenue ('Inventory GTV').",
+  "IS PRESENTATION: In all 2019-2022 presentations foreign exchange (gain) loss sits INSIDE operating expenses, so op_income includes fx (fx key is signed by income effect: gain +). Gain on disposition of PP&E was shown as a negative operating expense through the 2021 releases and as a separate line after total operating expenses from Q1 2022; both are inside operating income. Validation: total_rev - cost_services - cost_inventory - sga - acq_costs - da + gain_disp_ppe + fx = op_income; op_income - interest_exp + interest_income + other_nonop + other_income = pretax; pretax - tax = net_income; ni_controlling + nci = net_income - all periods tie within $2k.",
+  "INTEREST INCOME SPLIT: interest income is a separate IS line only in the Q4 2022 release / FY2022 10-K (Q4/21, FY2021, Q4/22, FY2022, and FY2020 via the FY2022 10-K: 2.337 interest income + 5.959 other income). For all other periods the IS line 'Other income, net' (2019: 'Other, net') INCLUDED interest income; we split it out using the interest income shown in the company's adjusted-EBITDA reconciliation (latest version) and set other_income = reported other income, net - interest income. Q1/19 interest income 0.855 is derived (9M19 2.435 per Q3'20 release - Q3/19 0.517 - Q2/19 1.063). Quarterly 2020 split sums exactly to the FY2022 10-K FY2020 split (2.338/5.959 vs 2.337/5.959). Q4/21 IS interest income 0.393 vs 0.392 in the EBITDA reconciliation.",
+  "RECLASSIFICATION (costs of services vs SG&A): starting with the Q1 2022 release (and FY2022 10-K note 2(a)) certain employee costs for equipment inspections were reclassified from SG&A to costs of services. 2021 quarters are on the recast basis (from 2022 release comparatives): costs of services Q1/21 37.866 (orig 36.027), Q2/21 41.301 (39.042), Q3/21 35.108 (33.038), Q4/21 40.984 (38.756), FY21 155.258 (146.862); SG&A moves by the same amounts. FY2020 was recast in the FY2022 10-K (costs of services 164.528 vs 157.296; SG&A 410.291 vs 417.523) but 2020 QUARTERS were never recast, so 2020 quarterly cost_services/sga do NOT sum to FY2020 (gap 7.232 each, offsetting). 2019 was never recast. Op income unaffected.",
+  "OTHER NON-OP: other_nonop = 'Change in fair value of derivatives, net' (FX derivatives on the proposed Euro Auctions purchase consideration): Q4/21 -1.248, Q1/22 +1.263 (0 / '-' elsewhere where shown).",
+  "DEBT EXTINGUISHMENT memo: Q2/22 and FY2022 memo_debt_extinguishment 5.464 = the $9.664m adjusting item 'Loss on redemption of the 2021 Notes and certain related interest expense' less its ~$4.2m non-recurring interest component; i.e. $4.792m loss on redemption of the 2021 Notes (CF statement) + ~$0.7m write-off of deferred costs on the expired undrawn $205m DDTL facility, both embedded in interest expense. The 2021 Notes were redeemed after the Euro Auctions acquisition was discontinued (April 2022).",
+  "NCI/COMMON: no preferred shares or redeemable NCI in this era; ni_common = ni_controlling ('Net income attributable to stockholders'). nci = 'Non-controlling interests' as reported (signed).",
+  "DPS: dps_declared = quarterly dividend DECLARED during the period (declaration dates per releases): 2019 Jan 25 $0.18, May 8 $0.18, Aug 7 $0.20, Nov 7 $0.20 (FY 0.76); 2020 Jan 24 $0.20, May 6 $0.20, Aug 5 $0.22, Nov 4 $0.22 (FY 0.84); 2021 Jan 22 $0.22, May 7 $0.22, Aug 4 $0.25, Nov 3 $0.25 (FY 0.94); 2022 Jan 13 $0.25, May 6 $0.25, Aug 3 $0.27, Nov 2 $0.27 (FY 1.04; quarterly 2022 values match XBRL CommonStockDividendsPerShareDeclared).",
+  "OPS - take rates: service_take_rate = published 'Service revenue as a % of total GTV - Rate' (latest release, 1 dp); service_take_rate_calc = unrounded service_rev/gtv. am_service_take_rate = published A&M segment service revenue as % of GTV (latest presentation; Q4/21 and FY21 appear as 13.7%/13.8% in the Q4'22 release vs 13.6%/13.7% originally, reflecting reallocation of fees between A&M and Other segments in 2022 comparatives; Q1-Q3/21 likewise recast).",
+  "OPS - inventory: inventory_return = inventory sales revenue - cost of inventory sold and inventory_rate = return / inventory sales revenue (company definitions). Published as KPIs only from the Q3 2022 release (Q3/21 12.5, Q3/22 17.5, Q4/21 11.4, Q4/22 17.8, FY21 51.3, FY22 74.7 - all match); for earlier periods the values are computed from IS lines using the same definition.",
+  "OPS - lots: lots_total (thousands) = 'Total lots sold' (all channels, EXCLUDES GovPlanet), first reported in the Q1 2021 release with 2020 comparatives -> available Q1/20 onward. Q3/22 from the Q3 2022 10-Q (125,661; 9M 375,595); FY22 520,959 from the FY2022 10-K; Q4/22 = 145.364 DERIVED (FY - 9M) since the Q3/Q4 2022 releases dropped the lot table. lots_industrial_auctions = lots at industrial live on-site auctions (2019-2020 releases' 'Selected data'; discontinued in 2021); num_auctions, bidder_registrations, consignors, buyers are on the same industrial-auction basis (2019-2020 only). 2023 releases restate 2022 lots on a broader basis (e.g. Q1/22 127.3k vs 105.8k; Q2/22 168.7k vs 144.2k) - not used. 2021-22 releases also give bids per lot sold and auction sales days (not captured).",
+  "OPS - geography: gtv_us/gtv_canada/gtv_international (extra keys) = Total GTV by geography from 10-Qs (Q1-Q3 2021 and 2022), Q3'22/Q4'22 releases and 10-Ks; FY2019 from the FY2021 10-K; Q4/20 DERIVED = FY2020 (FY2022 10-K) - 9M2020 (Q3 2021 10-Q comparatives). 2019 quarterly GTV geography not collected (gap). rev_us/rev_canada/rev_europe/rev_australia/rev_other_geo are ANNUAL only, from the 10-K segment geographic note (FY2019 from FY2021 10-K; FY2020-22 from FY2022 10-K); earnings releases do not give revenue by geography and quarterly revenue geography (10-Q notes) was not collected.",
+  "OPS - acquisitions: acq_revenue_contribution = revenue disclosed for acquired businesses in their first year: Rouse Services (acquired Dec 8, 2020) Q1/21 5.6, Q2/21 6.2, Q3/21 6.5, Q4/21 8.0, FY21 26.4 (Q4/20 stub not quantified - only 'incremental revenue of Rouse'); SmartEquip (acquired Nov 2, 2021) Q4/21 2.9 (two months), Q1/22 4.7, Q2/22 5.0, Q3/22 5.2 (Q4/22 not quantified; Q3/22 release: service revenue +15% YoY, +13% excl. SmartEquip). Euro Auctions (proposed Aug 2021, terminated 2022) never contributed revenue; its costs flow through acquisition-related costs, the derivative FV line and the 2021 Notes redemption. IAA (announced Nov 2022) drives Q4/22 acquisition-related costs of 22.2.",
+  "ADJUSTED MEASURES - item sign convention: value = amount added in the company's reconciliation. adj_ebitda.items include the EBITDA build lines (D&A, INT, INTINC as negative, TAXEXP) followed by the adjusting items; base_value + sum(items) = adj EBITDA (checked, all periods). adj_ni.items start from net income attributable to stockholders; base_value + sum(items) = adj NI (checked). Items shown with value 0 are rows the company printed with '-' for that period. Category mapping: 'Non-recurring advisory, legal and restructuring costs' -> LEGAL (2020's 3.919 severance -> RESTR), 'Severance' -> RESTR, '(Gain) loss on disposition of PP&E [and related costs]' -> DISP, 'Change in uncertain tax provision - tax effect' -> TAXD, 'Related tax effects of the above' -> TAX, 'Loss on redemption of 2021 Notes...' -> DEBT.",
+  "DEFINITION TIMELINE (1) LEGACY, used in releases through Q2 2021: adjusted measures removed only discrete 'adjusting items' the company did not consider part of normal operations (examples in era: Q4'19 $4.078m share-based payment expense recovery on the former CEO's departure; Q2'20 change in uncertain tax provision $0.766m current + $5.462m deferred; Q3'20 $4.283m severance; Q4'20 $5.213m of Rouse acquisition-related costs and $1.527m uncertain tax provision; earlier: severance/retention, gain on sale of equity investment, impairment). Legacy adj EBITDA = NI + D&A + interest expense - interest income + income tax expense, excluding the pre-tax effects of adjusting items. In the 2019 and Q1 2020 releases adj EBITDA was published ONLY on a trailing-12-month basis (adjusted net debt/adj EBITDA table); the first quarterly adj EBITDA reconciliation was in the Q2 2020 release (Aug 6, 2020). Adj EPS was shown in Q1/Q2 2019 releases (no items, = GAAP EPS); full adj NI reconciliations from the Q3 2019 release; the Q1 2020 and Q1 2021 releases show no adj NI (no items). Adjusted operating income (with 'agency proceeds') appeared in the Q4 2018 release, was dropped in 2019, and reinstated in the Q4 2020 release. Legacy values are kept per period under 'adj_legacy_def'.",
+  "DEFINITION TIMELINE (2) Q3 2021 release (8-K Nov 4, 2021): 'Beginning in the third quarter of 2021' adjusted EBITDA, adjusted operating income and adjusted NI/diluted adjusted EPS were redefined to add back ALL share-based payments expense, ALL acquisition-related costs (including share-based continuing employment costs recognized in acquisition-related costs), amortization of acquired intangible assets (adj NI and adj operating income only - EBITDA already adds back all D&A), and gain or loss on disposition of PP&E; applied retrospectively, with a recast table for Q3/19-Q3/21 and FY2018-FY2020. In the recast, the Q3'20 severance became 3.919 (0.364 moved into SBC) and the Q4'19 CEO SBC recovery is inside the SBC line (0.277 net).",
+  "DEFINITION TIMELINE (3) Q4 2021 release (8-K Feb 17, 2022): added 'Non-recurring advisory, legal and restructuring costs' (terminated/ongoing M&A transaction and legal costs, SOX remediation, cybersecurity-incident advisory, IT restructuring severance/retention; the 2020 severance was reclassified into it; SOX remediation of 0.240 for Q2'21 and 0.680 for Q3'21 applied retrospectively, which is why Q2/21 and Q3/21 adj EBITDA here are 122.970 / 91.247 vs 122.730 / 90.567 in the Q3 2021 release) and 'Change in fair value of derivatives'. (4) Q2 2022 release (8-K Aug 4, 2022): adj NI adds 'Loss on redemption of the 2021 Notes and certain related interest expense'; the PP&E item became '(Gain) loss on disposition of PP&E and related costs' (includes ~$1.3m/quarter non-cash Q2-Q4'22 adjustments to the Bolton sale proceeds; the Q1'22 Bolton gain was $169.1m of the $169.8m). (5) Q3 2022 release dropped the 'Non-GAAP' prefix and added inventory return/rate and GTV by geography. Q4 2022 stated definition: 'Adjusted EBITDA is calculated by adding back depreciation and amortization, interest expense, income tax expense, and subtracting interest income from net income, as well as adding back share-based payments expense, acquisition-related costs, loss (gain) on disposition of property, plant and equipment, change in fair value of derivatives, non-recurring advisory, legal and restructuring costs which includes terminated and ongoing transaction costs, and excluding the effects of any non-recurring or unusual adjusting items.' Adjusted NI = NI attributable to stockholders excluding adjusting items (with related tax effects); diluted adjusted EPS = adjusted NI, net of the effect of dilutive securities, / weighted average dilutive shares.",
+  "GAPS on the new definition: Q1/19 and Q2/19 were never published on the Q3-2021 definition (recast table starts Q3/19). Those two quarters carry LEGACY values: Q2/19 adj EBITDA 95.698 and adj NI 54.036 / adj EPS 0.49 (published, Q2 2020 release; no adjusting items); Q1/19 adj EBITDA 51.887 is DERIVED (6M19 147.585 per Q2 2020 release - Q2/19 95.698; equals the EBITDA build from the IS with no adjusting items) and stored as adj_ebitda_derived; Q1/19 adj NI 18.164 is implied (= GAAP; release states no adjusting items) with published adj EPS 0.17. Implied H1 2019 on the new definition: adj EBITDA 158.510 (=314.814-64.181-92.123), adj NI 87.029 (=173.969-32.399-54.541) - not split by quarter. FY2019 and Q3/Q4 2019 adjusted figures are on the new definition, so FY2019 adj measures do not equal the sum of the stored quarters.",
+  "PUBLISHED ODDITIES: (a) Q3 2021 recast table computed Q4/19 adj EPS (0.50) and Q4/20 adj EPS (0.55) with FULL-YEAR diluted share counts; the Q4 2021 release corrects Q4/20 to 0.54 (used). Q4/19 kept at the published 0.50 (54.541 / 110.195m Q4 diluted shares = 0.495). (b) Q4/20 EBITDA reconciliation uses NI 48.920 and D&A 19.335 vs IS 48.919 / 19.337; PP&E gain -0.023 in adj EBITDA vs -0.022 in adj NI. (c) Q2 2022 release highlights table shows 6M22 adj EBITDA 192.624 (and 6M21 195.874), inconsistent with its own reconciliation (6M22 241.147) - apparent typo; quarterly values used are from the reconciliations. (d) Q4 2021 release showed FY21 adj NI 216.107 and diluted shares 111.406m; the Q4 2022 release/10-Ks show 216.106 and 111.407m (used). (e) Q4/22 SG&A 135.856 on IS vs 135.857 in segment table.",
+  "SOURCES: earnings-release EX-99.1 exhibits located via each filing's index.json; 10-K FY2021 https://www.sec.gov/Archives/edgar/data/1046102/000155837022001365/rba-20211231x10k.htm (FY2019 adj measures, FY2019 geography); 10-K FY2022 https://www.sec.gov/Archives/edgar/data/1046102/000155837023001652/rba-20221231x10k.htm (FY2020 recast IS, FY lots, geography); 10-Qs Q1-Q3 2021 and Q1-Q3 2022 for quarterly GTV geography and Q3/22 lots; Q1 2023 release for nothing but cross-check of Q1/22 geography/inventory return. Raw files: scratchpad/rba/raw/a4/."
+ ]
+}
