@@ -8,7 +8,8 @@ Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
 - **Fill-in docs:** [`templates/NEW_MODEL_README_TEMPLATE.md`](templates/NEW_MODEL_README_TEMPLATE.md) and [`templates/EXTRACTION_SCHEMA_TEMPLATE.md`](templates/EXTRACTION_SCHEMA_TEMPLATE.md).
 - **QA tools:** [`tools/inspect_model.py`](tools/inspect_model.py) (formula errors and non-zero check rows) and [`tools/cyc.py`](tools/cyc.py) (circular references).
-- **Reference builds** (on their branches): STE (`models/ste_build`), DHR (`models/dhr_build`), ONON (`models/onon_build`) and LOAR (`models/loar_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
+- **Per-model lessons:** [`MODEL_LESSONS.md`](MODEL_LESSONS.md) records each model's specific nuances (basis, bridges, data quirks, deals, calibration, valuation) and reusable rules. Read the entries for the most similar companies before you start.
+- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`) and WWD (`wwd_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
 
 ---
 
@@ -219,7 +220,8 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 - [ ] Output `models/<TICKER>_Model.xlsx`.
 - [ ] Build kit `models/<ticker>_build/`: scripts, `filings.csv`, `data/*.json` (committed), `manual_items.json`, the template copy, and `README.md` from `templates/NEW_MODEL_README_TEMPLATE.md` (columns, basis, structure, bridges, sources, rebuild, validate, files).
 - [ ] Don't commit raw filings (~200 MB), scratch Bull/Bear files or caches. Check `.gitignore`.
-- [ ] Add a row to `models/README.md` (company, file, source documents, CIK).
+- [ ] Add a row to `models/README.md` (ticker, company, template, workbook, build kit and rebuild command).
+- [ ] Add the model's entry to `models/MODEL_LESSONS.md` in the standard format (coverage and basis, operating build, bridges, data quirks, deals, calibration, BS / cash / capital, valuation, reusable lessons). Promote any general lesson to this playbook.
 - [ ] Commit message: `Add <Company> (<TICKER>) 3-statement model built on the MLM template`, with a body covering the build, bridges and checks, history and sources, calibration and scenarios, deal blocks, and the share price and date.
 - [ ] Push to the working branch. Open a PR only if asked.
 
