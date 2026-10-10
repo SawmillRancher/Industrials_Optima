@@ -1,0 +1,476 @@
+{
+ "period": "Q2-17",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/943452/000119312517234425/d415042dex991.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/943452/000162828017007925/wab-20170630x10q.htm"
+ },
+ "seg": {
+  "frt_rev": 344.8,
+  "trn_rev": 587.4,
+  "frt_op": 63.3,
+  "trn_op": 59.2,
+  "corp_op": -8.9,
+  "frt_gp": null,
+  "frt_adj_gp": null,
+  "frt_adj_op": null,
+  "trn_gp": null,
+  "trn_adj_gp": null,
+  "trn_adj_op": null,
+  "seg_rev_note": "Two segments (Freight, Transit) as originally reported; pre-2019 segmentation.",
+  "frt_pl": {
+   "services": null,
+   "equipment": null,
+   "components": null,
+   "digital": null,
+   "other": null,
+   "labels": null
+  },
+  "trn_pl": {
+   "oe": null,
+   "aftermarket": null
+  },
+  "legacy_pl": [
+   [
+    "Specialty Products & Electronics",
+    324.8
+   ],
+   [
+    "Transit Products",
+    253.8
+   ],
+   [
+    "Brake Products",
+    192.6
+   ],
+   [
+    "Remanufacturing, Overhaul & Build",
+    126.6
+   ],
+   [
+    "Other",
+    34.6
+   ]
+  ],
+  "backlog_total": 4454.2,
+  "backlog_12m": 2142.4,
+  "frt_backlog_total": 611.2,
+  "frt_backlog_12m": 413.2,
+  "trn_backlog_total": 3843.0,
+  "trn_backlog_12m": 1729.2,
+  "bridge": {
+   "frt": {
+    "acq": 43.7,
+    "divest": null,
+    "fx": -3.5,
+    "organic": -92.5
+   },
+   "trn": {
+    "acq": 283.0,
+    "divest": null,
+    "fx": -11.2,
+    "organic": -10.9
+   },
+   "total": {
+    "acq": 326.7,
+    "divest": null,
+    "fx": -14.7,
+    "organic": -103.3
+   }
+  },
+  "loco_deliveries": null,
+  "notes": "Freight/Transit income from operations from 10-Q segment note (release only shows segment sales). Bridge from 10-Q MD&A table (organic = sum of product-line change rows, computed); 10-Q table shows Q2-17 Freight 344,827 / Transit 587,426 (vs release 344,828 / 587,425). Backlog at Jun-30-2017 taken from the Q3-17 release comparative column (Q2 release only states total multi-year backlog of a record $4.5bn)."
+ },
+ "is": {
+  "net_sales": 932.3,
+  "cost_of_sales": 658.3,
+  "gp": 274.0,
+  "sga": 127.6,
+  "eng": 23.3,
+  "amort": 9.4,
+  "other_op_lines": [],
+  "total_opex": 160.3,
+  "op_income": 113.7,
+  "interest": 15.4,
+  "other_inc": -1.6,
+  "ebt": 96.7,
+  "tax": 24.6,
+  "cont_ops": 72.2,
+  "disc_ops": 0.0,
+  "net_income": 72.2,
+  "nci": 0.1,
+  "ni_wab": 72.0,
+  "shares_basic": 95.64,
+  "shares_diluted": 96.28,
+  "eps_basic": 0.75,
+  "eps_dil": 0.75,
+  "eps_cont_dil": 0.75,
+  "dps": 0.1,
+  "per_share_basis": "post_split"
+ },
+ "ngaap": {
+  "adj_table": [],
+  "adj_eps_pub": null,
+  "adj_op_pub": null,
+  "adj_gp_pub": null,
+  "adj_ni_pub": null,
+  "adj_dil_shares": null,
+  "eps_bridge_lines": [
+   [
+    "Net effect of restructuring and transaction expenses and the interest expense benefit",
+    0.05
+   ]
+  ],
+  "eps_bridge_start_ps": 0.75,
+  "ebitda_lines": [],
+  "ebitda_op": null,
+  "ebitda_other": null,
+  "ebitda_dda": null,
+  "ebitda_pub": null,
+  "ebitda_adj_items": null,
+  "adj_ebitda_pub": null,
+  "items": {
+   "restructuring": 9.0,
+   "transaction": null,
+   "inventory_pa": null,
+   "amortization": null,
+   "contract": null,
+   "litigation": null,
+   "other_op": null,
+   "nonop": -2.0,
+   "tax_effect": null,
+   "discrete_tax": null,
+   "other_label": "restructuring = \"restructuring and transaction expenses of $9 million related to the Faiveley integration and ongoing cost-reduction activities\"; nonop = -$2m benefit in net interest expense from prepayment of Faiveley-assumed debt (removed)"
+  },
+  "guidance": "2017 (updated): sales about $3.85 billion; adjusted EPS $3.55-$3.70 excluding expected restructuring and transaction expenses and Faiveley NCI; Q3 modest improvement, stronger Q4 with adjusted operating margin target about 15% in Q4.",
+  "notes": "Adjusted = GAAP excluding items in the release reconciliation (restructuring/integration, transaction, contract adjustments, discrete tax items, NCI adj.). No reconciliation table in the Q2-17 release; narrative only. Adjusted operating margin 13.2% excluding $9m restructuring/transaction expenses. Net EPS effect -5 cents (implied adjusted EPS ~0.80, not published as a figure). The Q3-17 YTD table shows H1 items split: inventory step-up $3.4m (GP), integration & restructuring $14.5m (opex), -$2.2m interest benefit."
+ },
+ "cf": {
+  "ytd_months": 6,
+  "net_income": 144.2,
+  "dda": 51.1,
+  "sbc": 11.9,
+  "deferred_tax": null,
+  "gain_loss": 0.5,
+  "wc_change": -221.3,
+  "other_op": 0.0,
+  "cfo": -13.7,
+  "capex": -38.4,
+  "acquisitions": -114.2,
+  "proceeds_disp": 0.5,
+  "other_inv": 23.5,
+  "cfi": -128.6,
+  "debt_proceeds": 745.0,
+  "debt_repay": -680.1,
+  "buyback": 0.0,
+  "dividends": -19.2,
+  "stock_proceeds": 2.7,
+  "other_fin": -6.8,
+  "cff": 41.6,
+  "fx": 30.7,
+  "net_change": -70.0,
+  "cash_begin": 398.5,
+  "cash_end": 328.5,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net income",
+    144.2
+   ],
+   [
+    "Depreciation and amortization",
+    51.1
+   ],
+   [
+    "Stock-based compensation expense",
+    11.9
+   ],
+   [
+    "Loss on disposal of property, plant and equipment",
+    0.5
+   ],
+   [
+    "Accounts receivable and unbilled accounts receivable",
+    -66.5
+   ],
+   [
+    "Inventories",
+    -48.4
+   ],
+   [
+    "Accounts payable",
+    -75.8
+   ],
+   [
+    "Accrued income taxes",
+    -23.0
+   ],
+   [
+    "Accrued liabilities and customer deposits",
+    86.9
+   ],
+   [
+    "Other assets and liabilities",
+    -94.5
+   ],
+   [
+    "Net cash (used for) provided by operating activities",
+    -13.7
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -38.4
+   ],
+   [
+    "Proceeds from disposal of property, plant and equipment",
+    0.5
+   ],
+   [
+    "Acquisitions of businesses, net of cash acquired",
+    -114.2
+   ],
+   [
+    "Release of deposit in escrow",
+    23.5
+   ],
+   [
+    "Net cash used for investing activities",
+    -128.6
+   ],
+   [
+    "Proceeds from debt",
+    745.0
+   ],
+   [
+    "Payments of debt",
+    -680.1
+   ],
+   [
+    "Purchase of treasury stock",
+    0.0
+   ],
+   [
+    "Proceeds from exercise of stock options and other benefit plans",
+    2.7
+   ],
+   [
+    "Payment of income tax withholding on share-based compensation",
+    -6.8
+   ],
+   [
+    "Cash dividends ($0.20 and $0.16 per share for the six months ended June 30, 2017 and 2016, respectively)",
+    -19.2
+   ],
+   [
+    "Net cash provided by (used for) financing activities",
+    41.6
+   ],
+   [
+    "Effect of changes in currency exchange rates",
+    30.7
+   ],
+   [
+    "(Decrease) Increase in cash",
+    -70.0
+   ],
+   [
+    "Cash, beginning of period",
+    398.5
+   ],
+   [
+    "Cash, end of period",
+    328.5
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 328.5,
+  "restricted_cash": null,
+  "receivables": 812.7,
+  "unbilled": 316.3,
+  "inventories": 746.2,
+  "other_current": 141.1,
+  "total_current_assets": 2344.8,
+  "ppe": 547.8,
+  "goodwill": 2343.6,
+  "intangibles": 1129.4,
+  "other_noncurrent": 73.1,
+  "total_assets": 6438.7,
+  "ap": 548.2,
+  "customer_deposits": 373.4,
+  "accrued_comp": 146.5,
+  "accrued_warranty": 130.8,
+  "current_debt": 50.7,
+  "other_current_liab": 232.6,
+  "total_current_liab": 1482.1,
+  "ltd": 1934.6,
+  "pension": 112.9,
+  "deferred_tax": 287.4,
+  "lt_lease": null,
+  "other_ncl": 37.4,
+  "total_liabilities": 3854.4,
+  "common_apic": 899.8,
+  "treasury": -828.4,
+  "retained": 2680.0,
+  "aoci": -184.6,
+  "wab_equity": 2566.9,
+  "nci": 17.5,
+  "total_equity": 2584.4,
+  "total_le": 6438.7,
+  "shares_outstanding_end": 95.98,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    328.5
+   ],
+   [
+    "Accounts receivable",
+    812.7
+   ],
+   [
+    "Unbilled accounts receivable",
+    316.3
+   ],
+   [
+    "Inventories",
+    746.2
+   ],
+   [
+    "Deposit in escrow",
+    0.0
+   ],
+   [
+    "Other current assets",
+    141.1
+   ],
+   [
+    "Total current assets",
+    2344.8
+   ],
+   [
+    "Property, plant and equipment",
+    975.6
+   ],
+   [
+    "Accumulated depreciation",
+    -427.8
+   ],
+   [
+    "Property, plant and equipment, net",
+    547.8
+   ],
+   [
+    "Goodwill",
+    2343.6
+   ],
+   [
+    "Other intangibles, net",
+    1129.4
+   ],
+   [
+    "Other noncurrent assets",
+    73.1
+   ],
+   [
+    "Total other assets",
+    3546.1
+   ],
+   [
+    "Total Assets",
+    6438.7
+   ],
+   [
+    "Accounts payable",
+    548.2
+   ],
+   [
+    "Customer deposits",
+    373.4
+   ],
+   [
+    "Accrued compensation",
+    146.5
+   ],
+   [
+    "Accrued warranty",
+    130.8
+   ],
+   [
+    "Current portion of long-term debt",
+    50.7
+   ],
+   [
+    "Other accrued liabilities",
+    232.6
+   ],
+   [
+    "Total current liabilities",
+    1482.1
+   ],
+   [
+    "Long-term debt",
+    1934.6
+   ],
+   [
+    "Accrued postretirement and pension benefits",
+    112.9
+   ],
+   [
+    "Deferred income taxes",
+    287.4
+   ],
+   [
+    "Accrued warranty",
+    14.0
+   ],
+   [
+    "Other long-term liabilities",
+    23.4
+   ],
+   [
+    "Total liabilities",
+    3854.4
+   ],
+   [
+    "Preferred stock, 1,000,000 shares authorized, no shares issued",
+    0.0
+   ],
+   [
+    "Common stock",
+    1.3
+   ],
+   [
+    "Additional paid-in capital",
+    898.5
+   ],
+   [
+    "Treasury stock, at cost",
+    -828.4
+   ],
+   [
+    "Retained earnings",
+    2680.0
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -184.6
+   ],
+   [
+    "Total Westinghouse Air Brake Technologies Corporation shareholders' equity",
+    2566.9
+   ],
+   [
+    "Noncontrolling interest",
+    17.5
+   ],
+   [
+    "Total equity",
+    2584.4
+   ],
+   [
+    "Total Liabilities and Equity",
+    6438.7
+   ]
+  ]
+ },
+ "notes": "Source units: thousands converted to $m (1 dp); shares thousands -> millions (2 dp). IS/segment/backlog from the earnings release (three-month column). IS nci: release shows \"Less: Net (gain) loss attributable to noncontrolling interest\"; stored with schema sign (positive = deducted), so a NCI loss is negative. BS other_current / other_noncurrent / other_current_liab / other_ncl are residuals vs published subtotals (computed). CF wc_change = sum of all \"Changes in operating assets and liabilities\" lines incl. accrued income taxes; other_* are residuals. dps = dividends declared per share in the quarter (from 10-Q cash-dividend caption / YTD difference). All self-checks pass."
+}

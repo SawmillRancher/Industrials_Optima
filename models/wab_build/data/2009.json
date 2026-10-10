@@ -1,0 +1,527 @@
+{
+ "period": "2009",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/943452/000119312510040726/dex991.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/943452/000119312510038499/d10k.htm"
+ },
+ "seg": {
+  "frt_rev": 588.4,
+  "frt_op": 74.1,
+  "frt_gp": null,
+  "frt_adj_gp": null,
+  "frt_adj_op": null,
+  "trn_rev": 813.2,
+  "trn_op": 128.8,
+  "trn_gp": null,
+  "trn_adj_gp": null,
+  "trn_adj_op": null,
+  "corp_op": -22.9,
+  "seg_rev_note": "Segment sales = sales to external customers (release 'Sales by Segment' and 10-K segment note agree); 10-K also shows intersegment sales (Freight 26.0, Transit 2.4, eliminated in Corporate). Segment income from operations and corporate from 10-K segment note (Q4 release has segment sales only).",
+  "frt_pl": {
+   "services": null,
+   "equipment": null,
+   "components": null,
+   "digital": null,
+   "other": null,
+   "labels": null
+  },
+  "trn_pl": {
+   "oe": null,
+   "aftermarket": null
+  },
+  "legacy_pl": [
+   [
+    "Brake Products",
+    465.1
+   ],
+   [
+    "Freight Electronics & Specialty Products",
+    333.8
+   ],
+   [
+    "Remanufacturing, Overhaul & Build",
+    285.5
+   ],
+   [
+    "Other Transit Products",
+    247.5
+   ],
+   [
+    "Other",
+    69.8
+   ]
+  ],
+  "backlog_total": 950.7,
+  "backlog_12m": 551.7,
+  "frt_backlog_total": 211.3,
+  "frt_backlog_12m": 126.2,
+  "trn_backlog_total": 739.3,
+  "trn_backlog_12m": 425.5,
+  "bridge": {
+   "frt": {
+    "acq": 103.1,
+    "divest": null,
+    "fx": null,
+    "organic": null
+   },
+   "trn": {
+    "acq": 11.8,
+    "divest": null,
+    "fx": -30.9,
+    "organic": null
+   },
+   "total": {
+    "acq": 114.9,
+    "divest": null,
+    "fx": -35.1,
+    "organic": null
+   }
+  },
+  "loco_deliveries": null,
+  "notes": "Bridge from 10-K MD&A narrative: total sales from acquisitions $114.9m, FX -$35.1m; Freight acquisitions $103.1m (Freight FX not stated); Transit acquisitions $11.8m, FX -$30.9m. Organic not published. Backlog from 10-K Item 1 table (12m = expected delivery 2010). Release gives no backlog for FY2009. "
+ },
+ "is": {
+  "net_sales": 1401.6,
+  "cost_of_sales": 1008.3,
+  "gp": 393.3,
+  "sga": 161.0,
+  "eng": 42.4,
+  "amort": 9.8,
+  "other_op_lines": [],
+  "total_opex": 213.3,
+  "op_income": 180.0,
+  "interest": 16.7,
+  "other_inc": 0.0,
+  "ebt": 163.4,
+  "tax": 48.3,
+  "cont_ops": 115.1,
+  "disc_ops": 0.0,
+  "net_income": 115.1,
+  "nci": 0.0,
+  "ni_wab": 115.1,
+  "shares_basic": 47.5,
+  "shares_diluted": 47.98,
+  "eps_basic": 2.41,
+  "eps_dil": 2.39,
+  "eps_cont_dil": 2.39,
+  "dps": 0.04,
+  "per_share_basis": "pre_split",
+  "notes": "10-K income statement (as originally filed); Q4 release FY column agrees. No NCI line is presented on the income statement (bottom line labelled 'Net income attributable to Wabtec shareholders'); NCI immaterial, nci set to 0.0. dps = dividends declared per share per 10-K Item 5 quarterly table (0.04)."
+ },
+ "ngaap": {
+  "adj_table": [],
+  "adj_eps_pub": null,
+  "adj_op_pub": null,
+  "adj_gp_pub": null,
+  "adj_ni_pub": null,
+  "adj_dil_shares": null,
+  "eps_bridge_lines": [],
+  "eps_bridge_start_ps": null,
+  "ebitda_lines": [],
+  "ebitda_op": null,
+  "ebitda_other": null,
+  "ebitda_dda": null,
+  "ebitda_pub": null,
+  "ebitda_adj_items": null,
+  "adj_ebitda_pub": null,
+  "items": {
+   "restructuring": null,
+   "transaction": null,
+   "inventory_pa": null,
+   "amortization": null,
+   "contract": null,
+   "litigation": null,
+   "other_op": null,
+   "nonop": null,
+   "tax_effect": null,
+   "discrete_tax": null,
+   "other_label": null
+  },
+  "guidance": "2010 guidance affirmed: EPS (diluted) $2.35-$2.50; revenues flat to slightly up.",
+  "notes": "No full-year adjusted EPS published for FY2009. The Q4-09 release reconciles only Q4 EPS: GAAP 50 cents + 6 cents arbitration ruling charge = 56 cents (Q4 only). The 10-K notes the $3.9m royalty charge (in SG&A) for the Faiveley Transport Malmo AB arbitration Final Award. FY adj fields left null."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "net_income": 115.1,
+  "dda": 35.5,
+  "sbc": 3.6,
+  "deferred_tax": 7.4,
+  "gain_loss": -2.9,
+  "wc_change": 3.8,
+  "other_op": -2.0,
+  "cfo": 160.5,
+  "capex": -18.3,
+  "acquisitions": -96.3,
+  "proceeds_disp": 4.1,
+  "other_inv": -4.7,
+  "cfi": -115.2,
+  "debt_proceeds": 197.5,
+  "debt_repay": -193.3,
+  "buyback": -19.7,
+  "dividends": -1.9,
+  "stock_proceeds": 2.5,
+  "other_fin": 1.9,
+  "cff": -13.0,
+  "fx": 14.5,
+  "net_change": 46.9,
+  "cash_begin": 141.8,
+  "cash_end": 188.7,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net income attributable to Wabtec shareholders",
+    115.1
+   ],
+   [
+    "Depreciation and amortization",
+    35.5
+   ],
+   [
+    "Stock-based compensation expense",
+    3.6
+   ],
+   [
+    "Deferred income taxes",
+    7.4
+   ],
+   [
+    "(Gain) loss on disposal of property, plant and equipment",
+    -2.9
+   ],
+   [
+    "Excess income tax benefits from exercise of stock options",
+    -1.9
+   ],
+   [
+    "Discontinued operations",
+    0.0
+   ],
+   [
+    "Accounts receivable",
+    80.5
+   ],
+   [
+    "Inventories",
+    33.4
+   ],
+   [
+    "Accounts payable",
+    -48.2
+   ],
+   [
+    "Accrued income taxes",
+    0.8
+   ],
+   [
+    "Accrued liabilities and customer deposits",
+    -56.2
+   ],
+   [
+    "Other assets and liabilities",
+    -6.5
+   ],
+   [
+    "Net cash provided by operating activities",
+    160.5
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -18.3
+   ],
+   [
+    "Proceeds from disposal of property, plant and equipment",
+    4.1
+   ],
+   [
+    "Acquisitions of businesses, net of cash acquired",
+    -96.3
+   ],
+   [
+    "Acquisition purchase price adjustments",
+    -4.7
+   ],
+   [
+    "Discontinued operations",
+    0.0
+   ],
+   [
+    "Net cash used for investing activities",
+    -115.2
+   ],
+   [
+    "Proceeds from debt",
+    197.5
+   ],
+   [
+    "Payments of debt",
+    -193.3
+   ],
+   [
+    "Debt financing costs",
+    0.0
+   ],
+   [
+    "Stock repurchase",
+    -19.7
+   ],
+   [
+    "Proceeds from exercise of stock options and other benefit plans",
+    2.5
+   ],
+   [
+    "Excess income tax benefits from exercise of stock options",
+    1.9
+   ],
+   [
+    "Cash dividends ($0.04 per share for the year ended December 31, 2009, 2008 and 2007)",
+    -1.9
+   ],
+   [
+    "Net cash (used for) provided by financing activities",
+    -13.0
+   ],
+   [
+    "Effect of changes in currency exchange rates",
+    14.5
+   ],
+   [
+    "Increase/(decrease) in cash",
+    46.9
+   ],
+   [
+    "Cash, beginning of year",
+    141.8
+   ],
+   [
+    "Cash, end of year",
+    188.7
+   ]
+  ],
+  "notes": "10-K cash flow statement as originally filed (USD thousands /1,000). wc_change = sum of all 'Changes in operating assets and liabilities' lines (AR, inventories, AP, accrued income taxes, accrued liabilities & customer deposits, other assets & liabilities). other_op = excess tax benefits from stock options + discontinued ops (computed as cfo less named lines). other_fin = excess tax benefits from stock options + debt financing costs. other_inv = 'Acquisition purchase price adjustments' (computed cfi less named lines). As originally reported in the FY2009 10-K: CFO 160.5 (release: '$161 million'). The FY2010 10-K (and XBRL) re-presented 2009 CFO as 162.3 (other assets & liabilities -4,767 vs -6,546) with FX effect 12.7 vs 14.5; original figures kept here."
+ },
+ "bs": {
+  "cash": 188.7,
+  "restricted_cash": null,
+  "receivables": 208.3,
+  "unbilled": null,
+  "inventories": 239.3,
+  "other_current": 53.2,
+  "total_current_assets": 689.5,
+  "ppe": 201.7,
+  "goodwill": 483.0,
+  "intangibles": 187.6,
+  "other_noncurrent": 24.0,
+  "total_assets": 1585.8,
+  "ap": 119.9,
+  "customer_deposits": 44.3,
+  "accrued_comp": 30.4,
+  "accrued_warranty": 20.0,
+  "current_debt": 32.7,
+  "other_current_liab": 58.0,
+  "total_current_liab": 305.3,
+  "ltd": 359.0,
+  "pension": 64.1,
+  "deferred_tax": 52.2,
+  "lt_lease": null,
+  "other_ncl": 26.3,
+  "total_liabilities": 806.9,
+  "common_apic": 330.4,
+  "treasury": -289.1,
+  "retained": 766.2,
+  "aoci": -30.5,
+  "wab_equity": 776.9,
+  "nci": 2.0,
+  "total_equity": 778.9,
+  "total_le": 1585.8,
+  "shares_outstanding_end": 47.69,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    188.7
+   ],
+   [
+    "Accounts receivable",
+    208.3
+   ],
+   [
+    "Inventories",
+    239.3
+   ],
+   [
+    "Deferred income taxes",
+    40.5
+   ],
+   [
+    "Other",
+    12.7
+   ],
+   [
+    "Total current assets",
+    689.5
+   ],
+   [
+    "Property, plant and equipment",
+    452.0
+   ],
+   [
+    "Accumulated depreciation",
+    -250.3
+   ],
+   [
+    "Property, plant and equipment, net",
+    201.7
+   ],
+   [
+    "Goodwill",
+    483.0
+   ],
+   [
+    "Other intangibles, net",
+    187.6
+   ],
+   [
+    "Deferred income taxes",
+    5.0
+   ],
+   [
+    "Other noncurrent assets",
+    19.0
+   ],
+   [
+    "Total other assets",
+    694.6
+   ],
+   [
+    "Total Assets",
+    1585.8
+   ],
+   [
+    "Accounts payable",
+    119.9
+   ],
+   [
+    "Customer deposits",
+    44.3
+   ],
+   [
+    "Accrued compensation",
+    30.4
+   ],
+   [
+    "Accrued warranty",
+    20.0
+   ],
+   [
+    "Current portion of long-term debt",
+    32.7
+   ],
+   [
+    "Commitments and contingencies",
+    0.4
+   ],
+   [
+    "Other accrued liabilities",
+    57.6
+   ],
+   [
+    "Total current liabilities",
+    305.3
+   ],
+   [
+    "Long-term debt",
+    359.0
+   ],
+   [
+    "Reserve for postretirement and pension benefits",
+    64.1
+   ],
+   [
+    "Deferred income taxes",
+    52.2
+   ],
+   [
+    "Commitments and contingencies",
+    1.1
+   ],
+   [
+    "Accrued warranty",
+    9.2
+   ],
+   [
+    "Other long-term liabilities",
+    16.0
+   ],
+   [
+    "Total liabilities",
+    806.9
+   ],
+   [
+    "Preferred stock, 1,000,000 shares authorized, no shares issued",
+    0.0
+   ],
+   [
+    "Common stock, $.01 par value; 100,000,000 shares authorized: 66,174,767 shares issued and 47,688,695 and 47,907,357 outstanding at December 31, 2009 and 2008, respectively",
+    0.7
+   ],
+   [
+    "Additional paid-in capital",
+    329.7
+   ],
+   [
+    "Treasury stock, at cost, 18,486,072 and 18,267,410 shares, at December 31, 2009 and 2008, respectively",
+    -289.1
+   ],
+   [
+    "Retained earnings",
+    766.2
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -30.5
+   ],
+   [
+    "Total Westinghouse Air Brake Technologies Corporation shareholders’ equity",
+    776.9
+   ],
+   [
+    "Non-controlling interest",
+    2.0
+   ],
+   [
+    "Total shareholders’ equity",
+    778.9
+   ],
+   [
+    "Total Liabilities and Shareholders’ Equity",
+    1585.8
+   ]
+  ],
+  "notes": "10-K balance sheet. other_current = current deferred income taxes + Other; other_noncurrent = noncurrent deferred income taxes + other noncurrent assets; other_current_liab = current commitments and contingencies + other accrued liabilities; other_ncl = noncurrent commitments and contingencies + noncurrent accrued warranty + other long-term liabilities (all computed as subtotal less named lines). Total liabilities as published. shares_outstanding_end from BS parenthetical."
+ },
+ "extra": {
+  "employees": 5812,
+  "dps_declared": 0.04,
+  "seg_dda": {
+   "freight": 22.1,
+   "transit": 12.9,
+   "corporate": 0.5
+  },
+  "seg_capex": {
+   "freight": 9.2,
+   "transit": 7.8,
+   "corporate": 1.3
+  },
+  "depreciation": 25.7,
+  "amortization": 9.8,
+  "acquisitions": [
+   [
+    "Unifin International LP and affiliate Cardinal Pumps and Exchangers, Inc. (cooling systems for power generation/transmission)",
+    "2009-10-01",
+    92.9,
+    "Freight"
+   ]
+  ],
+  "notes": "Acquisition purchase price is net of cash received; Unifin segment inferred (power generation/industrial cooling reported in Freight Group). Also in 2009: $4.7m Poli working-capital settlement and $3.4m for other assets; shares repurchased 669,700 for $20m. Depreciation $25.7m per 10-K PP&E note; amortization = IS amortization expense $9.8m."
+ },
+ "checks_failed": []
+}

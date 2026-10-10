@@ -1,0 +1,581 @@
+{
+ "period": "Q4-18",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/943452/000114036119003727/s002675x2_ex99-1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/943452/000162828019002095/wab1231201810k.htm"
+ },
+ "seg": {
+  "frt_rev": 380.9,
+  "trn_rev": 737.0,
+  "frt_op": 71.4,
+  "trn_op": 41.1,
+  "corp_op": -19.1,
+  "frt_gp": null,
+  "frt_adj_gp": null,
+  "frt_adj_op": null,
+  "trn_gp": null,
+  "trn_adj_gp": null,
+  "trn_adj_op": 74.0,
+  "seg_rev_note": "Two segments (Freight, Transit) as originally reported; pre-2019 segmentation.",
+  "frt_pl": {
+   "services": null,
+   "equipment": null,
+   "components": null,
+   "digital": null,
+   "other": null,
+   "labels": null
+  },
+  "trn_pl": {
+   "oe": null,
+   "aftermarket": null
+  },
+  "legacy_pl": [
+   [
+    "Specialty Products & Electronics",
+    402.2
+   ],
+   [
+    "Transit Products",
+    296.7
+   ],
+   [
+    "Brake Products",
+    230.1
+   ],
+   [
+    "Remanufacturing, Overhaul & Build",
+    139.5
+   ],
+   [
+    "Other",
+    49.3
+   ]
+  ],
+  "backlog_total": 4481.6,
+  "backlog_12m": 2458.1,
+  "frt_backlog_total": 664.7,
+  "frt_backlog_12m": 503.5,
+  "trn_backlog_total": 3816.9,
+  "trn_backlog_12m": 1954.6,
+  "bridge": {
+   "frt": {
+    "acq": 6.0,
+    "divest": null,
+    "fx": -5.0,
+    "organic": 16.0
+   },
+   "trn": {
+    "acq": 22.0,
+    "divest": null,
+    "fx": -27.0,
+    "organic": 30.0
+   },
+   "total": {
+    "acq": 28.0,
+    "divest": null,
+    "fx": -33.0,
+    "organic": 47.0
+   }
+  },
+  "loco_deliveries": null,
+  "notes": "Q4 bridge from release narrative ($m, rounded). Release: Transit adjusted op income $74m (10% of sales) excl. $32m restructuring; Freight op income $71m. legacy_pl for Q4 derived = FY2018 10-K product sales minus 9M-2018 (Q3-18 10-Q) - computed."
+ },
+ "is": {
+  "net_sales": 1117.9,
+  "cost_of_sales": 820.9,
+  "gp": 297.0,
+  "sga": 168.0,
+  "eng": 25.9,
+  "amort": 9.6,
+  "other_op_lines": [],
+  "total_opex": 203.6,
+  "op_income": 93.5,
+  "interest": 36.3,
+  "other_inc": 0.4,
+  "ebt": 57.6,
+  "tax": 22.7,
+  "cont_ops": 34.9,
+  "disc_ops": 0.0,
+  "net_income": 34.9,
+  "nci": 0.5,
+  "ni_wab": 34.4,
+  "shares_basic": 96.32,
+  "shares_diluted": 96.67,
+  "eps_basic": 0.36,
+  "eps_dil": 0.36,
+  "eps_cont_dil": 0.36,
+  "dps": 0.12,
+  "per_share_basis": "post_split"
+ },
+ "ngaap": {
+  "adj_table": [
+   [
+    "Reported Results",
+    {
+     "sales": null,
+     "gp": 297.0,
+     "opex": -203.6,
+     "op": 93.5,
+     "int_other": -35.9,
+     "tax": -22.7,
+     "ni": 34.9,
+     "nci": -0.5,
+     "ni_wab": 34.4,
+     "eps": 0.36
+    }
+   ],
+   [
+    "Restructuring Costs",
+    {
+     "sales": null,
+     "gp": 15.9,
+     "opex": 15.2,
+     "op": 31.1,
+     "int_other": 0.0,
+     "tax": 2.2,
+     "ni": 33.3,
+     "nci": 0.0,
+     "ni_wab": 33.3,
+     "eps": 0.35
+    }
+   ],
+   [
+    "GE Transaction Related Costs",
+    {
+     "sales": null,
+     "gp": 0.0,
+     "opex": 6.9,
+     "op": 6.9,
+     "int_other": 14.5,
+     "tax": -4.5,
+     "ni": 16.9,
+     "nci": 0.0,
+     "ni_wab": 16.9,
+     "eps": 0.17
+    }
+   ],
+   [
+    "India GST Costs",
+    {
+     "sales": null,
+     "gp": 0.0,
+     "opex": 2.4,
+     "op": 2.4,
+     "int_other": 0.0,
+     "tax": -0.5,
+     "ni": 1.9,
+     "nci": 0.0,
+     "ni_wab": 1.9,
+     "eps": 0.02
+    }
+   ],
+   [
+    "Litigation Settlement",
+    {
+     "sales": null,
+     "gp": 0.0,
+     "opex": 6.7,
+     "op": 6.7,
+     "int_other": 0.0,
+     "tax": -1.4,
+     "ni": 5.3,
+     "nci": 0.0,
+     "ni_wab": 5.3,
+     "eps": 0.05
+    }
+   ],
+   [
+    "UK Pension Settlement",
+    {
+     "sales": null,
+     "gp": 0.0,
+     "opex": 0.0,
+     "op": 0.0,
+     "int_other": 2.9,
+     "tax": -0.5,
+     "ni": 2.4,
+     "nci": 0.0,
+     "ni_wab": 2.4,
+     "eps": 0.02
+    }
+   ],
+   [
+    "Adjusted Results",
+    {
+     "sales": null,
+     "gp": 312.9,
+     "opex": -172.4,
+     "op": 140.6,
+     "int_other": -18.5,
+     "tax": -27.4,
+     "ni": 94.7,
+     "nci": -0.5,
+     "ni_wab": 94.2,
+     "eps": 0.97
+    }
+   ]
+  ],
+  "adj_eps_pub": 0.97,
+  "adj_op_pub": 140.6,
+  "adj_gp_pub": 312.9,
+  "adj_ni_pub": 94.2,
+  "adj_dil_shares": 96.7,
+  "eps_bridge_lines": [],
+  "eps_bridge_start_ps": null,
+  "ebitda_lines": [],
+  "ebitda_op": null,
+  "ebitda_other": null,
+  "ebitda_dda": null,
+  "ebitda_pub": null,
+  "ebitda_adj_items": null,
+  "adj_ebitda_pub": null,
+  "items": {
+   "restructuring": 31.1,
+   "transaction": 6.9,
+   "inventory_pa": null,
+   "amortization": null,
+   "contract": null,
+   "litigation": 6.7,
+   "other_op": 2.4,
+   "nonop": 17.4,
+   "tax_effect": -4.7,
+   "discrete_tax": null,
+   "other_label": "other_op = India GST costs; nonop = GE transaction financing costs in interest 14.5 + UK pension settlement 2.9 (other income); tax_effect sums the tax column incl. +2.2 on restructuring as published"
+  },
+  "guidance": "2019 GAAP: sales about $8.4bn, income from operations about $900m, EPS $3.00-$3.20, EBITDA about $1.3bn (D&A ~$0.4bn); net income $530-565m. 2019 adjusted: sales about $8.4bn, adjusted EBITDA about $1.6bn, adjusted income from operations about $1.2bn, adjusted EPS $4.00-$4.20 (excl. GE Transportation one-time transaction costs, one-time PPA, non-cash accounting harmonization); adjusted op margin about 14%; ETR about 24%; adjusted CFO to exceed adjusted net income; adjusted net income $710-740m. Pro forma full-year with GE Transportation: sales about $9.2bn, adj. EBITDA about $1.7bn, adj. op income about $1.4bn.",
+  "notes": "Adjusted = GAAP excluding items in the release reconciliation (restructuring/integration, transaction, contract adjustments, discrete tax items, NCI adj.). Q4 release dated 25-Feb-2019, same day GE Transportation merger closed. FX hurt Q4 EPS by 3 cents (not adjusted). Adjusted op margin 12.6%. EBITDA only appears in 2019 guidance reconciliation (not for 2018 actuals)."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "net_income": 291.7,
+  "dda": 109.3,
+  "sbc": 25.3,
+  "deferred_tax": -5.3,
+  "gain_loss": 0.9,
+  "wc_change": -107.2,
+  "other_op": 0.0,
+  "cfo": 314.7,
+  "capex": -93.3,
+  "acquisitions": -51.2,
+  "proceeds_disp": 11.3,
+  "other_inv": -14.1,
+  "cfi": -147.3,
+  "debt_proceeds": 3480.7,
+  "debt_repay": -1454.0,
+  "buyback": 0.0,
+  "dividends": -46.3,
+  "stock_proceeds": 10.0,
+  "other_fin": -12.3,
+  "cff": 1978.1,
+  "fx": -36.5,
+  "net_change": 2109.0,
+  "cash_begin": 233.4,
+  "cash_end": 2342.4,
+  "cash_basis": "cash+restricted",
+  "lines_raw": [
+   [
+    "Net income",
+    291.7
+   ],
+   [
+    "Depreciation and amortization",
+    109.3
+   ],
+   [
+    "Stock-based compensation expense",
+    25.3
+   ],
+   [
+    "Deferred income taxes",
+    -5.3
+   ],
+   [
+    "Loss on disposal of property, plant and equipment",
+    0.9
+   ],
+   [
+    "Accounts receivable and unbilled accounts receivable",
+    -54.6
+   ],
+   [
+    "Inventories",
+    -108.9
+   ],
+   [
+    "Accounts payable",
+    48.8
+   ],
+   [
+    "Accrued income taxes",
+    7.9
+   ],
+   [
+    "Accrued liabilities and customer deposits",
+    31.7
+   ],
+   [
+    "Other assets and liabilities",
+    -32.1
+   ],
+   [
+    "Net cash provided by operating activities",
+    314.7
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -93.3
+   ],
+   [
+    "Proceeds from disposal of property, plant and equipment",
+    11.3
+   ],
+   [
+    "Acquisitions of business, net of cash acquired",
+    -51.2
+   ],
+   [
+    "Other",
+    -14.1
+   ],
+   [
+    "Net cash used for investing activities",
+    -147.3
+   ],
+   [
+    "Proceeds from debt, net of issuance costs",
+    3480.7
+   ],
+   [
+    "Payments of debt",
+    -1454.0
+   ],
+   [
+    "Stock re-purchase",
+    0.0
+   ],
+   [
+    "Proceeds from exercise of stock options and other benefit plans",
+    10.0
+   ],
+   [
+    "Payment of income tax withholding on share-based compensation",
+    -12.3
+   ],
+   [
+    "Cash dividends ($0.48, $0.44 and $0.36 per share for the years ended December 31, 2018, 2017 and 2016)",
+    -46.3
+   ],
+   [
+    "Net cash provided by (used for) financing activities",
+    1978.1
+   ],
+   [
+    "Effect of changes in currency exchange rates",
+    -36.5
+   ],
+   [
+    "Increase (decrease) in cash",
+    2109.0
+   ],
+   [
+    "Cash, cash equivalents and restricted cash, beginning of year",
+    233.4
+   ],
+   [
+    "Cash, cash equivalents and restricted cash, end of year",
+    2342.4
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 580.9,
+  "restricted_cash": 1761.4,
+  "receivables": 801.2,
+  "unbilled": 345.6,
+  "inventories": 844.9,
+  "other_current": 115.6,
+  "total_current_assets": 4449.7,
+  "ppe": 563.7,
+  "goodwill": 2396.5,
+  "intangibles": 1129.9,
+  "other_noncurrent": 109.4,
+  "total_assets": 8649.2,
+  "ap": 589.4,
+  "customer_deposits": 373.5,
+  "accrued_comp": 173.2,
+  "accrued_warranty": 135.6,
+  "current_debt": 64.1,
+  "other_current_liab": 310.8,
+  "total_current_liab": 1646.7,
+  "ltd": 3792.8,
+  "pension": 95.4,
+  "deferred_tax": 198.3,
+  "lt_lease": null,
+  "other_ncl": 47.0,
+  "total_liabilities": 5780.2,
+  "common_apic": 915.9,
+  "treasury": -816.1,
+  "retained": 3022.0,
+  "aoci": -256.6,
+  "wab_equity": 2865.1,
+  "nci": 3.9,
+  "total_equity": 2869.1,
+  "total_le": 8649.2,
+  "shares_outstanding_end": 96.61,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    580.9
+   ],
+   [
+    "Restricted cash",
+    1761.4
+   ],
+   [
+    "Accounts receivable",
+    801.2
+   ],
+   [
+    "Unbilled accounts receivable",
+    345.6
+   ],
+   [
+    "Inventories",
+    844.9
+   ],
+   [
+    "Other assets",
+    115.6
+   ],
+   [
+    "Total current assets",
+    4449.7
+   ],
+   [
+    "Property, plant and equipment",
+    1036.6
+   ],
+   [
+    "Accumulated depreciation",
+    -472.8
+   ],
+   [
+    "Property, plant and equipment, net",
+    563.7
+   ],
+   [
+    "Goodwill",
+    2396.5
+   ],
+   [
+    "Other intangibles, net",
+    1129.9
+   ],
+   [
+    "Other noncurrent assets",
+    109.4
+   ],
+   [
+    "Total other assets",
+    3635.8
+   ],
+   [
+    "Total Assets",
+    8649.2
+   ],
+   [
+    "Accounts payable",
+    589.4
+   ],
+   [
+    "Customer deposits",
+    373.5
+   ],
+   [
+    "Accrued compensation",
+    173.2
+   ],
+   [
+    "Accrued warranty",
+    135.6
+   ],
+   [
+    "Current portion of long-term debt",
+    64.1
+   ],
+   [
+    "Other accrued liabilities",
+    310.8
+   ],
+   [
+    "Total current liabilities",
+    1646.7
+   ],
+   [
+    "Long-term debt",
+    3792.8
+   ],
+   [
+    "Accrued postretirement and pension benefits",
+    95.4
+   ],
+   [
+    "Deferred income taxes",
+    198.3
+   ],
+   [
+    "Accrued warranty",
+    18.1
+   ],
+   [
+    "Other long-term liabilities",
+    28.9
+   ],
+   [
+    "Total liabilities",
+    5780.2
+   ],
+   [
+    "Preferred stock, 1,000,000 shares authorized, no shares issued",
+    0.0
+   ],
+   [
+    "Common stock",
+    1.3
+   ],
+   [
+    "Additional paid-in capital",
+    914.6
+   ],
+   [
+    "Treasury stock, at cost",
+    -816.1
+   ],
+   [
+    "Retained earnings",
+    3022.0
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -256.6
+   ],
+   [
+    "Total Westinghouse Air Brake Technologies Corporation shareholders' equity",
+    2865.1
+   ],
+   [
+    "Noncontrolling interest",
+    3.9
+   ],
+   [
+    "Total equity",
+    2869.1
+   ],
+   [
+    "Total Liabilities and Equity",
+    8649.2
+   ]
+  ]
+ },
+ "notes": "Source units: thousands converted to $m (1 dp); shares thousands -> millions (2 dp). IS/segment/backlog from the earnings release (three-month column). IS nci: release shows \"Less: Net (gain) loss attributable to noncontrolling interest\"; stored with schema sign (positive = deducted), so a NCI loss is negative. BS other_current / other_noncurrent / other_current_liab / other_ncl are residuals vs published subtotals (computed). CF wc_change = sum of all \"Changes in operating assets and liabilities\" lines incl. accrued income taxes; other_* are residuals. cf/bs = full-year 10-K (ytd_months 12). dps = Q4 dividend (FY declared 0.48 less 9M). 2018 cash flow presented under ASU 2016-18 (cash, cash equivalents and restricted cash). All self-checks pass."
+}

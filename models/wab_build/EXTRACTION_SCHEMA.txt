@@ -1,0 +1,179 @@
+# Wabtec (WAB) data extraction — schema & rules
+
+Working dir: /tmp/claude-0/-home-user-Industrials-Optima/19c2befd-117e-5e15-af76-6ec8f9b5689a/scratchpad/wab
+
+## Sources (SEC EDGAR only — the Wabtec IR website is blocked; its releases are the 8-K Ex. 99.1 exhibits)
+- `filings.csv` lists every 10-K, 10-Q and earnings 8-K (Item 2.02) since 2006 with its EDGAR folder URL. CIK 943452.
+- List a folder's documents: `curl -sS -H "User-Agent: $UA" <folder_url>index.json` (JSON `directory.item[].name`).
+  The earnings release is the exhibit named like `*ex991*`, `*ex99-1*`, `*pressrelease*`, `*991*`. Ignore .jpg slides unless told.
+  Some quarters have TWO Item 2.02 8-Ks (e.g. a preliminary results / tax-reform note, then the full results release a few
+  weeks later). ALWAYS use the full final results release that has the complete financial statements.
+- UA: ALWAYS send header `User-Agent: Industrials Optima research research@industrialsoptima.dev` (SEC requires a UA;
+  do NOT use any other email). Keep to <= 5 requests/second (add `sleep 0.3` between curls).
+- Convert HTML to compact text (one table row per line, cells joined by ` | `):
+  `python3 h2t.py file.htm > file.txt` — then read/grep the text. Save raw files under `src/<period>/`.
+- Optional cross-check: `wab_facts.json` is the XBRL companyfacts dump (2009+), useful to verify GAAP totals
+  (e.g. us-gaap:Revenues / SalesRevenueNet, NetIncomeLoss, Assets, NetCashProvidedByUsedInOperatingActivities).
+
+## Basis rules
+- Quarterly periods (Q1..Q4): IS / segment / non-GAAP from that quarter's earnings release ("Three Months Ended" /
+  "Fourth Quarter" columns), AS ORIGINALLY REPORTED. Q4 = the Q4 release's three-month column (do NOT derive Q4 = FY − 9M
+  unless the release lacks a Q4 column; if derived, say so in `notes`).
+- Quarter records ALSO need `cf` (year-to-date cash flow as of that quarter end, from that quarter's 10-Q; for Q4 use the 10-K
+  full-year) and `bs` (balance sheet at that quarter end, from that 10-Q / 10-K). Set `cf.ytd_months` to 3, 6, 9 or 12.
+- Annual periods (FY): Q4 release twelve-month columns plus the 10-K for everything else (full cash flow, full balance sheet,
+  segment D&A / capex, product-line sales, employees, dividends). FY2006–FY2012 use that year's 10-K (as originally reported)
+  and its Q4 release.
+- Units: USD millions to 1 decimal exactly as published (thousands → divide by 1,000 and round to 1 decimal); backlog in USD m;
+  shares in millions (thousands → /1,000, 2 dp); per-share in $ as published.
+- Stock split: Wabtec did a 2-for-1 split in June 2013. Record shares / EPS / DPS EXACTLY as published in the source and set
+  `is.per_share_basis` to "pre_split" or "post_split". Do not adjust yourself.
+- Signs: costs/expenses as POSITIVE numbers where the field says "(positive)"; "signed" fields keep the sign of their effect on
+  earnings / cash (income or inflow positive, expense or outflow negative).
+- Use `null` when a figure is not published in the source for that period. Never estimate, never back-solve silently.
+  If you compute a value (e.g. a sum of sub-lines or a difference), add a short note in `notes`.
+- Every record must carry the source URLs used.
+
+## Output
+One JSON file per period in `data/` named `<period_key>.json`, period_key like `2012`, `Q1-13`, `Q4-25`, `Q2-26`.
+Quarter records: sections `seg`, `is`, `ngaap`, `cf`, `bs`. Annual records: `seg`, `is`, `ngaap`, `cf`, `bs`, `extra`.
+
+```json
+{
+  "period": "Q2-26",
+  "sources": {"release": "https://...", "10k_or_10q": "https://..."},
+  "seg": {
+    "frt_rev": "Freight segment (Freight Group) net sales",
+    "frt_op": "Freight segment income from operations (GAAP), else null",
+    "frt_gp": "Freight segment gross profit (GAAP) if published, else null",
+    "frt_adj_gp": "Freight adjusted gross profit if published, else null",
+    "frt_adj_op": "Freight adjusted income from operations if published, else null",
+    "trn_rev": "Transit segment (Transit Group) net sales", "trn_op": "...", "trn_gp": "...", "trn_adj_gp": "...", "trn_adj_op": "...",
+    "corp_op": "Corporate activities & elimination income (loss) from operations (signed). If not published compute total op income − segments and note it",
+    "seg_rev_note": "anything about segment recasts (e.g. 2019 re-segmentation, segment moves)",
+    "frt_pl": {"services": null, "equipment": null, "components": null, "digital": "Digital Electronics / Digital Intelligence", "other": null,
+               "labels": "exact labels used, e.g. 'Digital Electronics'"},
+    "trn_pl": {"oe": "Original Equipment Manufacturer", "aftermarket": null},
+    "legacy_pl": [["exact label of pre-2019 product-line sales (10-K / release, e.g. 'Specialty Products & Electronics', 'Brake Products', 'Remanufacturing, Overhaul & Build', 'Transit Products', 'Other')", 123.4]],
+    "backlog_total": "total (multi-year) backlog at period end", "backlog_12m": "12-month backlog",
+    "frt_backlog_total": null, "frt_backlog_12m": null, "trn_backlog_total": null, "trn_backlog_12m": null,
+    "bridge": {"frt": {"acq": null, "divest": null, "fx": null, "organic": null},
+               "trn": {"acq": null, "divest": null, "fx": null, "organic": null},
+               "total": {"acq": "sales from acquisitions (y/y change attribution, as published)", "divest": "portfolio optimization / divestitures (signed)",
+                         "fx": "foreign exchange (signed)", "organic": "organic (signed)"}},
+    "loco_deliveries": "locomotives delivered in the period if stated in the release, else null",
+    "notes": "free text"
+  },
+  "is": {
+    "net_sales": "Net sales",
+    "cost_of_sales": "Cost of sales (positive)",
+    "gp": "Gross profit",
+    "sga": "Selling, general and administrative expenses (positive)",
+    "eng": "Engineering expenses (positive)",
+    "amort": "Amortization expense (positive)",
+    "other_op_lines": [["exact label of any other operating line (e.g. impairment, pension settlement in opex)", "positive = expense"]],
+    "total_opex": "Total operating expenses (positive)",
+    "op_income": "Income from operations",
+    "interest": "Interest expense, net (positive = net expense)",
+    "other_inc": "Other income (expense), net (signed: income positive)",
+    "ebt": "Income before income taxes (continuing operations)",
+    "tax": "Income tax expense (positive; benefit negative)",
+    "cont_ops": "Income from continuing operations (incl. NCI)",
+    "disc_ops": "Income (loss) from discontinued operations, net of tax (signed), else 0/null",
+    "net_income": "Net income (incl. NCI)",
+    "nci": "Net income attributable to noncontrolling interest (positive = deducted)",
+    "ni_wab": "Net income attributable to Wabtec shareholders",
+    "shares_basic": "weighted average basic (m)", "shares_diluted": "weighted average diluted (m)",
+    "eps_basic": "basic EPS attributable", "eps_dil": "diluted EPS attributable", "eps_cont_dil": "diluted EPS continuing ops (if different)",
+    "dps": "dividends declared per share in the period (release / 10-Q / 10-K), else null",
+    "per_share_basis": "pre_split | post_split"
+  },
+  "ngaap": {
+    "adj_table": [["exact row label of the 'Reconciliation of Reported Results to Adjusted Results' table (incl. 'Reported Results' and 'Adjusted Results' rows)",
+                   {"sales": null, "gp": null, "opex": "signed as shown (expenses negative)", "op": null, "int_other": "signed", "tax": "signed",
+                    "ni": null, "nci": "signed", "ni_wab": null, "eps": null}]],
+    "adj_eps_pub": "Adjusted diluted EPS as published (else null)",
+    "adj_op_pub": "Adjusted income from operations as published (else null)",
+    "adj_gp_pub": "Adjusted gross profit as published (else null)",
+    "adj_ni_pub": "Adjusted net income attributable to Wabtec as published (else null)",
+    "adj_dil_shares": "diluted shares used in the adjusted table",
+    "eps_bridge_lines": [["exact label of a narrative / per-share-only Adjusted EPS bridge (older releases)", "per-share value, signed as added"]],
+    "eps_bridge_start_ps": "starting GAAP diluted EPS in that bridge",
+    "ebitda_lines": [["exact label from the EBITDA reconciliation", "value"]],
+    "ebitda_op": "Income from operations used in the EBITDA recon", "ebitda_other": "Other income (expense) used (signed)",
+    "ebitda_dda": "Depreciation & amortization used in the EBITDA recon",
+    "ebitda_pub": "EBITDA as published (else null)",
+    "ebitda_adj_items": "items added to get Adjusted EBITDA (e.g. restructuring & transaction costs), else null",
+    "adj_ebitda_pub": "Adjusted EBITDA as published (else null)",
+    "items": {"restructuring": "restructuring / portfolio optimization / integration costs, pre-tax, op-income level (positive = added back)",
+              "transaction": "transaction / acquisition costs pre-tax at op-income level",
+              "inventory_pa": "inventory purchase-accounting (step-up) charge pre-tax",
+              "amortization": "non-cash amortization expense added back pre-tax",
+              "contract": "contract adjustments / loss provisions pre-tax",
+              "litigation": "litigation / legal / settlement items pre-tax (signed)",
+              "other_op": "any other op-income-level items pre-tax (signed), with other_label",
+              "nonop": "items below op income added back pre-tax (interest/other, e.g. deal financing costs, FX on deal) signed",
+              "tax_effect": "total tax effect of items (signed as in the table: negative = tax on add-backs)",
+              "discrete_tax": "discrete tax items (tax reform, etc.) signed as added",
+              "other_label": "describe other_op / nonop / discrete_tax"},
+    "guidance": "for releases: any forward guidance stated (revenue range, adj EPS range, GAAP EPS, op margin, cash conversion, capex, tax rate) verbatim-ish text",
+    "notes": "how Wabtec defined 'adjusted' in this period; anything unusual"
+  },
+  "cf": {
+    "ytd_months": 12,
+    "net_income": null, "dda": "depreciation and amortization", "sbc": "stock-based compensation",
+    "deferred_tax": "signed", "gain_loss": "(gain) loss on sale / disposals / impairments signed as in CF",
+    "wc_change": "signed — sum of all changes in operating assets & liabilities (receivables, inventories, payables, accrued, deposits etc.)",
+    "other_op": "signed — ALL remaining operating lines so the section sums to cfo",
+    "cfo": null,
+    "capex": "negative (purchase of property, plant and equipment)", "acquisitions": "negative (net of cash acquired)",
+    "proceeds_disp": "proceeds from disposal of assets / businesses (positive)",
+    "other_inv": "signed — remaining investing lines so the section sums to cfi", "cfi": null,
+    "debt_proceeds": "positive — all borrowings (incl. revolver/credit agreement, CP, notes issued)",
+    "debt_repay": "negative — all repayments (incl. revolver, CP, notes)",
+    "buyback": "negative (stock repurchase)", "dividends": "negative (cash dividends)",
+    "stock_proceeds": "positive (stock options exercised / ESPP)",
+    "other_fin": "signed — remaining financing lines (debt issuance costs, NCI dividends, tax withholding, etc.) so section sums to cff",
+    "cff": null, "fx": "effect of exchange rates on cash (signed)", "net_change": null, "cash_begin": null, "cash_end": null,
+    "cash_basis": "'cash' or 'cash+restricted' (ASU 2016-18)",
+    "lines_raw": [["exact label", "value"]]
+  },
+  "bs": {
+    "cash": "cash and cash equivalents", "restricted_cash": "restricted cash (separately shown) or null",
+    "receivables": "accounts receivable, net", "unbilled": "unbilled accounts receivable (if separate) or null",
+    "inventories": null, "other_current": "all remaining current assets", "total_current_assets": null,
+    "ppe": "property, plant and equipment, net", "goodwill": null, "intangibles": "other intangible assets, net",
+    "other_noncurrent": "all remaining noncurrent assets (incl. ROU, deferred tax assets, investments)", "total_assets": null,
+    "ap": "accounts payable", "customer_deposits": "customer deposits / contract liabilities current",
+    "accrued_comp": "accrued compensation", "accrued_warranty": "accrued warranty (current)",
+    "current_debt": "current portion of long-term debt + short-term borrowings / commercial paper",
+    "other_current_liab": "all remaining current liabilities", "total_current_liab": null,
+    "ltd": "long-term debt (non-current)", "pension": "accrued postretirement and pension benefits",
+    "deferred_tax": "deferred income taxes (liability)", "lt_lease": "long-term operating lease liabilities (2019+)",
+    "other_ncl": "all remaining noncurrent liabilities", "total_liabilities": "as published or sum (note if summed)",
+    "common_apic": "common stock + additional paid-in capital", "treasury": "treasury stock (negative)",
+    "retained": "retained earnings", "aoci": "signed", "wab_equity": "total Wabtec shareholders' equity",
+    "nci": "noncontrolling interest", "total_equity": null, "total_le": null,
+    "shares_outstanding_end": "common shares outstanding at period end (m) — BS parenthetical / cover page",
+    "lines_raw": [["exact label", "value"]]
+  },
+  "extra": {
+    "employees": null, "dps_declared": "annual dividends declared per share",
+    "seg_dda": {"freight": null, "transit": null, "corporate": null},
+    "seg_capex": {"freight": null, "transit": null, "corporate": null},
+    "depreciation": "depreciation expense (10-K note) if separately stated", "amortization": "intangible amortization",
+    "acquisitions": [["name", "closing date", "purchase price $m", "segment"]],
+    "notes": null
+  }
+}
+```
+
+## Self-checks before you finish each period (fix extraction errors, re-read the source)
+- seg: frt_rev + trn_rev = is.net_sales (±0.5); frt_op + trn_op + corp_op = is.op_income (±0.5);
+  Σ frt_pl = frt_rev and Σ trn_pl = trn_rev where published (±1)
+- is: gp − sga − eng − amort − Σother_op_lines = op_income; op_income − interest + other_inc = ebt; ebt − tax = cont_ops;
+  cont_ops + disc_ops = net_income; net_income − nci = ni_wab (±0.5 each; releases round to $m from 2019)
+- ngaap: Reported row + Σ item rows = Adjusted row in each column (±1); ebitda_op + ebitda_other + ebitda_dda = ebitda_pub (±1)
+- cf sections sum to cfo / cfi / cff; cfo + cfi + cff + fx = net_change; cash_begin + net_change = cash_end
+- bs: total assets = total liabilities + total equity (± any mezzanine / redeemable NCI — note it); components sum to subtotals
+Report any check you could not make pass (with the reason) in `notes`.

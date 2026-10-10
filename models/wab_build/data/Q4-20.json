@@ -1,0 +1,562 @@
+{
+ "period": "Q4-20",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/943452/000119312521047063/d145292dex991.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/943452/000162828021002557/wab-20201231.htm"
+ },
+ "seg": {
+  "frt_rev": 1339.3,
+  "frt_op": 120.5,
+  "frt_gp": null,
+  "frt_adj_gp": null,
+  "frt_adj_op": 218.4,
+  "trn_rev": 684.4,
+  "trn_op": 56.8,
+  "trn_gp": null,
+  "trn_adj_gp": null,
+  "trn_adj_op": 77.1,
+  "corp_op": -16.2,
+  "seg_rev_note": "Segments on the post-Q4-19 composition.",
+  "frt_pl": {
+   "services": 547.5,
+   "equipment": 433.3,
+   "components": 194.6,
+   "digital": 163.9,
+   "other": null,
+   "labels": "Freight: Equipment, Components, Digital Electronics, Services; Transit: Original Equipment Manufacturer, Aftermarket"
+  },
+  "trn_pl": {
+   "oe": 321.2,
+   "aftermarket": 363.2
+  },
+  "legacy_pl": [],
+  "backlog_total": 21591.3,
+  "backlog_12m": 5520.7,
+  "frt_backlog_total": 17887.1,
+  "frt_backlog_12m": 3586.3,
+  "trn_backlog_total": 3704.2,
+  "trn_backlog_12m": 1934.4,
+  "bridge": {
+   "frt": {
+    "acq": 10.0,
+    "divest": null,
+    "fx": -11.0,
+    "organic": -327.0
+   },
+   "trn": {
+    "acq": null,
+    "divest": null,
+    "fx": 37.0,
+    "organic": -54.0
+   },
+   "total": {
+    "acq": 10.0,
+    "divest": null,
+    "fx": 26.0,
+    "organic": -381.0
+   }
+  },
+  "loco_deliveries": null,
+  "notes": "Bridge from release text (Freight: organic -$327m, FX -$11m, acquisitions $10m; Transit: organic -$54m, FX +$37m; no Transit acquisitions mentioned -> null); totals summed (computed). Adjusted segment op income from release Appendix G: Freight 120.5 + restructuring & transaction 32.4 + amortization 65.5 = 218.4 (16.3%); Transit 56.8 + 15.0 + 5.3 = 77.1 (11.3%). corp_op computed as total op income - segments. Segment gross profit not published."
+ },
+ "is": {
+  "net_sales": 2023.7,
+  "cost_of_sales": 1518.2,
+  "gp": 505.5,
+  "sga": 235.2,
+  "eng": 38.4,
+  "amort": 70.8,
+  "other_op_lines": [],
+  "total_opex": 344.4,
+  "op_income": 161.1,
+  "interest": 48.6,
+  "other_inc": 5.8,
+  "ebt": 118.3,
+  "tax": 31.5,
+  "cont_ops": 86.8,
+  "disc_ops": 0.0,
+  "net_income": 86.8,
+  "nci": -1.1,
+  "ni_wab": 87.9,
+  "shares_basic": 189.2,
+  "shares_diluted": 189.7,
+  "eps_basic": 0.46,
+  "eps_dil": 0.46,
+  "eps_cont_dil": 0.46,
+  "dps": 0.12,
+  "per_share_basis": "post_split"
+ },
+ "ngaap": {
+  "adj_table": [
+   [
+    "Reported Results",
+    {
+     "sales": 2023.7,
+     "gp": 505.5,
+     "opex": -344.4,
+     "op": 161.1,
+     "int_other": -42.8,
+     "tax": -31.5,
+     "ni": 86.8,
+     "nci": 1.1,
+     "ni_wab": 87.9,
+     "eps": 0.46
+    }
+   ],
+   [
+    "Restructuring & Transaction costs",
+    {
+     "sales": 0.0,
+     "gp": 21.1,
+     "opex": 30.3,
+     "op": 51.4,
+     "int_other": 0.0,
+     "tax": -12.4,
+     "ni": 39.0,
+     "nci": 0.0,
+     "ni_wab": 39.0,
+     "eps": 0.2
+    }
+   ],
+   [
+    "Non-cash Amortization expense",
+    {
+     "sales": 0.0,
+     "gp": 0.0,
+     "opex": 70.8,
+     "op": 70.8,
+     "int_other": 0.0,
+     "tax": -16.2,
+     "ni": 54.6,
+     "nci": 0.0,
+     "ni_wab": 54.6,
+     "eps": 0.29
+    }
+   ],
+   [
+    "Foreign Currency Loss",
+    {
+     "sales": 0.0,
+     "gp": 0.0,
+     "opex": 0.0,
+     "op": 0.0,
+     "int_other": 0.5,
+     "tax": -0.2,
+     "ni": 0.3,
+     "nci": 0.0,
+     "ni_wab": 0.3,
+     "eps": 0.0
+    }
+   ],
+   [
+    "Tax on Transaction Costs",
+    {
+     "sales": 0.0,
+     "gp": 0.0,
+     "opex": 0.0,
+     "op": 0.0,
+     "int_other": 0.0,
+     "tax": 5.7,
+     "ni": 5.7,
+     "nci": 0.0,
+     "ni_wab": 5.7,
+     "eps": 0.03
+    }
+   ],
+   [
+    "Adjusted Results",
+    {
+     "sales": 2023.7,
+     "gp": 526.6,
+     "opex": -243.3,
+     "op": 283.3,
+     "int_other": -42.3,
+     "tax": -54.6,
+     "ni": 186.4,
+     "nci": 1.1,
+     "ni_wab": 187.5,
+     "eps": 0.98
+    }
+   ]
+  ],
+  "adj_eps_pub": 0.98,
+  "adj_op_pub": 283.3,
+  "adj_gp_pub": 526.6,
+  "adj_ni_pub": 187.5,
+  "adj_dil_shares": 189.7,
+  "eps_bridge_lines": [],
+  "eps_bridge_start_ps": null,
+  "ebitda_lines": [
+   [
+    "Reported Income from Operations",
+    161.1
+   ],
+   [
+    "Other Income (Expense)",
+    5.8
+   ],
+   [
+    "Depreciation & Amortization",
+    118.3
+   ],
+   [
+    "EBITDA",
+    285.2
+   ],
+   [
+    "Restructuring & Transaction Costs",
+    51.4
+   ],
+   [
+    "Adjusted EBITDA",
+    336.6
+   ]
+  ],
+  "ebitda_op": 161.1,
+  "ebitda_other": 5.8,
+  "ebitda_dda": 118.3,
+  "ebitda_pub": 285.2,
+  "ebitda_adj_items": 51.4,
+  "adj_ebitda_pub": 336.6,
+  "items": {
+   "restructuring": 51.4,
+   "transaction": null,
+   "inventory_pa": null,
+   "amortization": 70.8,
+   "contract": null,
+   "litigation": null,
+   "other_op": null,
+   "nonop": 0.5,
+   "tax_effect": -28.8,
+   "discrete_tax": 5.7,
+   "other_label": "restructuring = combined 'Restructuring & Transaction costs' row (incl. cost-of-sales portion) as published (transaction=null); amortization = 'Non-cash Amortization expense'; nonop = foreign exchange (and interest) loss/gain row in 'Interest & Other Exp'; discrete_tax = 'Tax on Transaction Costs' where present."
+  },
+  "guidance": "2021 guidance (Feb-18-2021): sales $7.6-$7.9bn; GAAP diluted EPS $2.65-$3.05; adjusted EPS $3.90-$4.30 (excl. restructuring and amortization); run-rate synergies $250m in 2021; operating cash flow conversion >90%; share buyback authorization renewed up to $500m.",
+  "notes": "2020 'adjusted' definition: excludes restructuring & transaction costs (incl. cost-of-sales portion), all non-cash intangible amortization expense, foreign exchange (and in Q3 interest) gains/losses in other income, and tax on transaction costs; all tax-effected. EBITDA (2020 definition) = income from operations + other income (expense) + depreciation & amortization; Adjusted EBITDA adds back restructuring & transaction costs. Q4-20 adjusted ETR 22.6% vs reported 26.6%."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "net_income": 412.3,
+  "dda": 473.3,
+  "sbc": 19.5,
+  "deferred_tax": 29.4,
+  "gain_loss": 9.6,
+  "wc_change": -72.2,
+  "other_op": -88.2,
+  "cfo": 783.7,
+  "capex": -136.4,
+  "acquisitions": -40.3,
+  "proceeds_disp": 21.3,
+  "other_inv": 0.0,
+  "cfi": -155.4,
+  "debt_proceeds": 3878.0,
+  "debt_repay": -4077.3,
+  "buyback": -207.2,
+  "dividends": -92.5,
+  "stock_proceeds": null,
+  "other_fin": -120.0,
+  "cff": -619.0,
+  "fx": -14.8,
+  "net_change": -5.5,
+  "cash_begin": 604.2,
+  "cash_end": 598.7,
+  "cash_basis": "cash+restricted",
+  "lines_raw": [
+   [
+    "Net income",
+    412.3
+   ],
+   [
+    "Depreciation and amortization",
+    473.3
+   ],
+   [
+    "Stock-based compensation expense",
+    19.5
+   ],
+   [
+    "Below market intangible amortization",
+    -88.2
+   ],
+   [
+    "Deferred income taxes",
+    29.4
+   ],
+   [
+    "Loss on disposal of property, plant and equipment",
+    9.6
+   ],
+   [
+    "Accounts receivable and unbilled accounts receivable",
+    315.0
+   ],
+   [
+    "Inventories",
+    180.8
+   ],
+   [
+    "Accounts payable",
+    -269.0
+   ],
+   [
+    "Accrued income taxes",
+    56.9
+   ],
+   [
+    "Accrued liabilities and customer deposits",
+    -91.4
+   ],
+   [
+    "Other assets and liabilities",
+    -264.5
+   ],
+   [
+    "Net cash provided by operating activities",
+    783.7
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -136.4
+   ],
+   [
+    "Proceeds from disposal of property, plant and equipment",
+    21.3
+   ],
+   [
+    "Acquisitions of business, net of cash acquired",
+    -40.3
+   ],
+   [
+    "Other",
+    0.0
+   ],
+   [
+    "Net cash used for investing activities",
+    -155.4
+   ],
+   [
+    "Proceeds from debt, net of issuance costs",
+    3878.0
+   ],
+   [
+    "Payments of debt",
+    -4077.3
+   ],
+   [
+    "Repurchase of stock",
+    -207.2
+   ],
+   [
+    "Payment of contingent consideration on acquisitions",
+    -115.4
+   ],
+   [
+    "Cash dividends",
+    -92.5
+   ],
+   [
+    "Other financing activities",
+    -4.6
+   ],
+   [
+    "Net cash (used for) provided by financing activities",
+    -619.0
+   ],
+   [
+    "Effect of changes in currency exchange rates",
+    -14.8
+   ],
+   [
+    "(Decrease) increase in cash",
+    -5.5
+   ],
+   [
+    "Cash, cash equivalents and restricted cash, beginning of year",
+    604.2
+   ],
+   [
+    "Cash, cash equivalents and restricted cash, end of year",
+    598.7
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 598.7,
+  "restricted_cash": null,
+  "receivables": 969.3,
+  "unbilled": 443.2,
+  "inventories": 1642.1,
+  "other_current": 226.5,
+  "total_current_assets": 3879.8,
+  "ppe": 1601.6,
+  "goodwill": 8485.2,
+  "intangibles": 3869.2,
+  "other_noncurrent": 618.7,
+  "total_assets": 18454.5,
+  "ap": 909.4,
+  "customer_deposits": 642.7,
+  "accrued_comp": 242.3,
+  "accrued_warranty": 240.1,
+  "current_debt": 447.2,
+  "other_current_liab": 744.6,
+  "total_current_liab": 3226.3,
+  "ltd": 3792.2,
+  "pension": 113.5,
+  "deferred_tax": 168.4,
+  "lt_lease": null,
+  "other_ncl": 1001.4,
+  "total_liabilities": 8301.8,
+  "common_apic": 7882.6,
+  "treasury": -1010.1,
+  "retained": 3588.9,
+  "aoci": -339.1,
+  "wab_equity": 10122.3,
+  "nci": 30.4,
+  "total_equity": 10152.7,
+  "total_le": 18454.5,
+  "shares_outstanding_end": 188.9,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    598.7
+   ],
+   [
+    "Accounts receivable",
+    969.3
+   ],
+   [
+    "Unbilled accounts receivables",
+    443.2
+   ],
+   [
+    "Inventories",
+    1642.1
+   ],
+   [
+    "Other current assets",
+    226.5
+   ],
+   [
+    "Total current assets",
+    3879.8
+   ],
+   [
+    "Property, plant and equipment, net",
+    1601.6
+   ],
+   [
+    "Goodwill",
+    8485.2
+   ],
+   [
+    "Other intangibles, net",
+    3869.2
+   ],
+   [
+    "Other noncurrent assets",
+    618.7
+   ],
+   [
+    "Total other assets",
+    12973.1
+   ],
+   [
+    "Total Assets",
+    18454.5
+   ],
+   [
+    "Accounts payable",
+    909.4
+   ],
+   [
+    "Customer deposits",
+    642.7
+   ],
+   [
+    "Accrued compensation",
+    242.3
+   ],
+   [
+    "Accrued warranty",
+    240.1
+   ],
+   [
+    "Current portion of long-term debt",
+    447.2
+   ],
+   [
+    "Other accrued liabilities",
+    744.6
+   ],
+   [
+    "Total current liabilities",
+    3226.3
+   ],
+   [
+    "Long-term debt",
+    3792.2
+   ],
+   [
+    "Accrued postretirement and pension benefits",
+    113.5
+   ],
+   [
+    "Deferred income taxes",
+    168.4
+   ],
+   [
+    "Contingent consideration",
+    218.1
+   ],
+   [
+    "Other long term liabilities",
+    783.3
+   ],
+   [
+    "Total Liabilities",
+    8301.8
+   ],
+   [
+    "Convertible preferred stock, $ .01 par value; 1.0 shares authorized, no shares issued and outstanding, at December 31, 2020 and 2019",
+    0.0
+   ],
+   [
+    "Common stock, $ .01 par value; 500.0 shares authorized: 226.9 and 226.9 shares issued and 188.9 and 191.7 outstanding at December 31, 2020 and 2019, respectively",
+    2.0
+   ],
+   [
+    "Additional paid-in capital",
+    7880.6
+   ],
+   [
+    "Treasury stock, at cost, 38.0 and 35.2 shares, at December 31, 2020 and 2019, respectively",
+    -1010.1
+   ],
+   [
+    "Retained earnings",
+    3588.9
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -339.1
+   ],
+   [
+    "Total Westinghouse Air Brake Technologies Corporation shareholders\u2019 equity",
+    10122.3
+   ],
+   [
+    "Noncontrolling interest",
+    30.4
+   ],
+   [
+    "Total Equity",
+    10152.7
+   ],
+   [
+    "Total Liabilities and Equity",
+    18454.5
+   ]
+  ],
+  "notes": "10-K balance sheet. other_ncl = Contingent consideration 218.1, Other long term liabilities 783.3. Operating lease liabilities PV 294.8 (current+noncurrent) within other accrued / other long-term liabilities; lt_lease = null. cf other_fin = Payment of contingent consideration on acquisitions, Other financing activities (incl. $115.4m contingent consideration paid to GE)."
+ }
+}
