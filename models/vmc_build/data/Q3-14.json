@@ -1,0 +1,146 @@
+{
+ "period": "Q3-14",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114420414064912/v393100_ex99-1.htm",
+  "10k_or_10q": null,
+  "adj_eps_source": "https://www.sec.gov/Archives/edgar/data/1396009/000114420415062361/v423472_ex99-1.htm"
+ },
+ "seg": {
+  "agg_rev": 688.9,
+  "agg_interseg": -53.0,
+  "agg_fa_rev": 531.6,
+  "agg_freight_rev": 130.6,
+  "agg_other_rev": 26.7,
+  "agg_tons": 47.825,
+  "agg_price": 11.12,
+  "agg_gp": 188.0,
+  "agg_dda": 58.5,
+  "agg_cgp": 246.5,
+  "asph_rev": 136.4,
+  "asph_interseg": null,
+  "asph_tons": 2.24,
+  "asph_price": 55.08,
+  "asph_gp": 14.6,
+  "asph_dda": 2.6,
+  "asph_cgp": null,
+  "conc_rev": 98.9,
+  "conc_interseg": null,
+  "conc_cy": 0.978,
+  "conc_price": 101.2,
+  "conc_gp": 5.5,
+  "conc_dda": 5.0,
+  "conc_cgp": null,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": 2.3,
+  "calc_gp": 1.0,
+  "calc_dda": 0.2,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 926.6,
+  "interseg_total": -53.0,
+  "delivery_rev": null,
+  "other_dda": 4.9,
+  "total_dda": 71.2,
+  "gp_total": 209.0,
+  "notes": "NEW presentation from Q3-14: net sales / delivery revenues split eliminated; segment sales include freight & delivery revenues. agg_freight_rev = freight & delivery revenues 73.8 + transportation to remote distribution sites 56.9 (summed; release shows them separately; Q4-14 onward combines them as 'freight, delivery and transportation'). agg_other_rev 26.7 as published (Q4-14 onward 'other revenues' is defined narrower). Consolidated freight and delivery revenues (non-GAAP appendix) 78.5. Segment still labelled 'Cement' in this release (calcium products only) - recorded in calc_*. New freight-adjusted price definition (freight-adjusted revenues / tons)."
+ },
+ "is": {
+  "total_rev": 873.6,
+  "net_sales": 795.1,
+  "delivery_rev": 78.5,
+  "cost_of_rev": 664.5,
+  "gp": 209.0,
+  "sag": 66.1,
+  "gain_sale": 1.0,
+  "other_op_lines": [
+   [
+    "Restructuring charges",
+    -0.8
+   ],
+   [
+    "Other operating expense, net",
+    -2.9
+   ]
+  ],
+  "other_op": -3.7,
+  "op_earnings": 140.3,
+  "nonop": -0.6,
+  "interest": 40.9,
+  "ebt": 98.8,
+  "tax": 31.1,
+  "cont_ops": 67.8,
+  "disc_ops": -0.8,
+  "net_earnings": 66.9,
+  "nci": 0.0,
+  "ni_vulcan": 66.9,
+  "shares_basic": 131.797,
+  "shares_diluted": 133.369,
+  "eps_cont_dil": 0.51,
+  "eps_dil": 0.5,
+  "eps_basic": 0.51,
+  "dps": 0.06,
+  "notes": "From Q3-14 the income statement shows only Total revenues (net sales / delivery revenues split eliminated). net_sales = published 'Total revenues excluding freight and delivery revenues' and delivery_rev = published consolidated 'Freight and delivery revenues' (non-GAAP gross-margin appendix; from Q4-14 the figure includes freight to remote distribution sites, so it is not comparable with the pre-Q3-14 'Delivery revenues' line). Q3-14 as originally reported 78.5 (restated to 135.3 incl. remote-site freight in the Q3-15 release)."
+ },
+ "ngaap": {
+  "ebitda_pub": 210.9,
+  "adj_ebitda_pub": 215.4,
+  "ebitda_bridge_tax": 31.1,
+  "ebitda_bridge_disc_ops": 0.8,
+  "ebitda_bridge_lines": [
+   [
+    "(Gain) loss on sale of real estate and businesses",
+    1.2
+   ],
+   [
+    "Charges associated with acquisitions and divestitures",
+    4.0
+   ],
+   [
+    "Amortization of deferred revenue",
+    -1.4
+   ],
+   [
+    "Restructuring charges",
+    0.8
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": 0.0,
+   "gain_sale": 1.2,
+   "impairment": 0.0,
+   "divested_ops": 0.0,
+   "acquisition": 4.0,
+   "restructuring": 0.8,
+   "legal_env": 0.0,
+   "pension": 0.0,
+   "other": -1.4,
+   "other_label": "Amortization of deferred revenue"
+  },
+  "adj_eps_pub": 0.54,
+  "eps_bridge_lines": [
+   [
+    "Diluted EPS - continuing operations, as reported",
+    0.51
+   ],
+   [
+    "Expenses related to business development activities (charges associated with acquisitions, divestitures and restructuring)",
+    0.03
+   ],
+   [
+    "Adjusted diluted EPS - continuing operations (per Q3-15 release)",
+    0.54
+   ]
+  ],
+  "eps_items_after_tax_ps": 0.03,
+  "eps_discrete_tax_ps": 0.0,
+  "eps_bridge_start_ps": 0.51,
+  "agg_cgp_per_ton_pub": 5.15,
+  "roic_pub": null,
+  "notes": "Q3-14 release stated EPS $0.51 'including $0.03 per diluted share in expenses related to business development'; the adjusted $0.54 is stated explicitly in the Q3-15 release prior-year comparison. 'Charges associated with acquisitions and divestitures' mapped to acquisition. Vulcan's EBITDA reconciliation = net earnings + provision for income taxes (continuing ops) + interest expense, net + (earnings) loss on discontinued operations net of tax (extra field ebitda_bridge_disc_ops, signed as added) + DDA&A (EBITDA excludes discontinued operations). Hence self-check ni_vulcan + ebitda_bridge_tax + interest + total_dda = ebitda_pub differs by the after-tax discontinued-operations add-back (0.8); not an extraction error."
+ },
+ "check_notes": "Self-check results: EBITDA check (ni+tax+interest+dda) is off by the discontinued-ops add-back 0.8; passes once ebitda_bridge_disc_ops is included (Vulcan definition, see ngaap.notes). All other checks pass."
+}

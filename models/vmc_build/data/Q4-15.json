@@ -1,0 +1,145 @@
+{
+ "period": "Q4-15",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114420416078932/v430493_ex99-1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000139600916000044/vmc-20151231x10k.htm"
+ },
+ "seg": {
+  "agg_rev": 710.1,
+  "agg_interseg": -47.6,
+  "agg_fa_rev": 545.1,
+  "agg_freight_rev": 160.3,
+  "agg_other_rev": 4.7,
+  "agg_tons": 44.708,
+  "agg_price": 12.19,
+  "agg_gp": 229.9,
+  "agg_dda": 58.2,
+  "agg_cgp": 288.1,
+  "asph_rev": 119.8,
+  "asph_interseg": null,
+  "asph_tons": 2.159,
+  "asph_price": 54.59,
+  "asph_gp": 18.3,
+  "asph_dda": 4.2,
+  "asph_cgp": null,
+  "conc_rev": 72.9,
+  "conc_interseg": null,
+  "conc_cy": 0.681,
+  "conc_price": 106.96,
+  "conc_gp": 4.9,
+  "conc_dda": 2.9,
+  "conc_cgp": null,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": 2.1,
+  "calc_gp": 1.0,
+  "calc_dda": 0.2,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 904.8,
+  "interseg_total": -47.6,
+  "delivery_rev": null,
+  "other_dda": 4.5,
+  "total_dda": 70.1,
+  "gp_total": 253.9,
+  "notes": "Q4 three-month column from Q4-15 release (not derived). Calcium tons 0.083m at $25.90. Consolidated freight and delivery revenues 134.6."
+ },
+ "is": {
+  "total_rev": 857.3,
+  "net_sales": 722.7,
+  "delivery_rev": 134.6,
+  "cost_of_rev": 603.4,
+  "gp": 253.9,
+  "sag": 79.5,
+  "gain_sale": 2.5,
+  "other_op_lines": [
+   [
+    "Restructuring charges",
+    -0.4
+   ],
+   [
+    "Other operating expense, net",
+    -3.5
+   ]
+  ],
+  "other_op": -3.9,
+  "op_earnings": 173.0,
+  "nonop": 0.6,
+  "interest": 36.3,
+  "ebt": 137.3,
+  "tax": 43.8,
+  "cont_ops": 93.6,
+  "disc_ops": -4.7,
+  "net_earnings": 88.9,
+  "nci": 0.0,
+  "ni_vulcan": 88.9,
+  "shares_basic": 133.592,
+  "shares_diluted": 135.711,
+  "eps_cont_dil": 0.69,
+  "eps_dil": 0.65,
+  "eps_basic": 0.67,
+  "dps": 0.1,
+  "notes": "From Q3-14 the income statement shows only Total revenues (net sales / delivery revenues split eliminated). net_sales = published 'Total revenues excluding freight and delivery revenues' and delivery_rev = published consolidated 'Freight and delivery revenues' (non-GAAP gross-margin appendix; from Q4-14 the figure includes freight to remote distribution sites, so it is not comparable with the pre-Q3-14 'Delivery revenues' line). Q3-14 as originally reported 78.5 (restated to 135.3 incl. remote-site freight in the Q3-15 release)."
+ },
+ "ngaap": {
+  "ebitda_pub": 243.7,
+  "adj_ebitda_pub": 244.0,
+  "ebitda_bridge_tax": 43.8,
+  "ebitda_bridge_disc_ops": 4.7,
+  "ebitda_bridge_lines": [
+   [
+    "Gain on sale of real estate and businesses",
+    -0.4
+   ],
+   [
+    "Charges associated with acquisitions and divestitures",
+    0.3
+   ],
+   [
+    "Asset impairment",
+    0.0
+   ],
+   [
+    "Restructuring charges",
+    0.4
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": 0.0,
+   "gain_sale": -0.4,
+   "impairment": 0.0,
+   "divested_ops": 0.0,
+   "acquisition": 0.3,
+   "restructuring": 0.4,
+   "legal_env": 0.0,
+   "pension": 0.0,
+   "other": 0.0,
+   "other_label": null
+  },
+  "adj_eps_pub": 0.74,
+  "eps_bridge_lines": [
+   [
+    "Diluted EPS - continuing operations, as reported",
+    0.69
+   ],
+   [
+    "Charge referable to a revised estimate of recoverable foreign tax credits",
+    0.05
+   ],
+   [
+    "Adjusted diluted EPS - continuing operations",
+    0.74
+   ]
+  ],
+  "eps_items_after_tax_ps": 0.0,
+  "eps_discrete_tax_ps": 0.05,
+  "eps_bridge_start_ps": 0.69,
+  "agg_cgp_per_ton_pub": null,
+  "roic_pub": null,
+  "notes": "Definition change in Q4-15 release: amortization of deferred revenue no longer deducted in Adjusted EBITDA (prior year restated: Q4-14 173.1, FY14 604.7), so Q1-Q3 2015 Adjusted EBITDA (as originally reported) do not sum to FY15. Adjusted EBIT 173.9 also published. Only TTM cash GP/ton published ($5.52). Vulcan's EBITDA reconciliation = net earnings + provision for income taxes (continuing ops) + interest expense, net + (earnings) loss on discontinued operations net of tax (extra field ebitda_bridge_disc_ops, signed as added) + DDA&A (EBITDA excludes discontinued operations). Hence self-check ni_vulcan + ebitda_bridge_tax + interest + total_dda = ebitda_pub differs by the after-tax discontinued-operations add-back (4.7); not an extraction error."
+ },
+ "check_notes": "Self-check results: EBITDA check (ni+tax+interest+dda) is off by the discontinued-ops add-back 4.7; passes once ebitda_bridge_disc_ops is included (Vulcan definition, see ngaap.notes). All other checks pass."
+}

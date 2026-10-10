@@ -1,0 +1,160 @@
+{
+ "period": "Q2-16",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114420416115638/v445528_ex99-1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000139600916000071/vmc-20160630x10q.htm"
+ },
+ "seg": {
+  "agg_rev": 791.5,
+  "agg_interseg": -60.4,
+  "agg_fa_rev": 614.8,
+  "agg_freight_rev": 173.4,
+  "agg_other_rev": 3.3,
+  "agg_tons": 48.766,
+  "agg_price": 12.61,
+  "agg_gp": 254.0,
+  "agg_dda": 59.4,
+  "agg_cgp": 313.4,
+  "asph_rev": 142.1,
+  "asph_interseg": null,
+  "asph_tons": 2.515,
+  "asph_price": 54.1,
+  "asph_gp": 30.9,
+  "asph_dda": 4.1,
+  "asph_cgp": null,
+  "conc_rev": 81.2,
+  "conc_interseg": null,
+  "conc_cy": 0.752,
+  "conc_price": 108.06,
+  "conc_gp": 6.1,
+  "conc_dda": 3.1,
+  "conc_cgp": null,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": 2.4,
+  "calc_gp": 1.1,
+  "calc_dda": 0.2,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 1017.2,
+  "interseg_total": -60.4,
+  "delivery_rev": null,
+  "other_dda": 5.1,
+  "total_dda": 71.9,
+  "gp_total": 292.2,
+  "notes": "Segment revenues include freight, delivery & transportation revenues (Aggregates footnote), so seg.delivery_rev is null (not shown separately in the segment table; consolidated freight & delivery revenues are in is.delivery_rev). Only Aggregates has intersegment sales. Calcium segment = calcium products (Florida). Asphalt/Concrete cash GP not published in release (null). "
+ },
+ "is": {
+  "total_rev": 956.8,
+  "net_sales": 814.5,
+  "delivery_rev": 142.3,
+  "cost_of_rev": 664.6,
+  "gp": 292.2,
+  "sag": 82.7,
+  "gain_sale": 0.4,
+  "other_op_lines": [
+   [
+    "Business interuption claims recovery",
+    11.0
+   ],
+   [
+    "Impairment of long-lived assets",
+    -0.9
+   ],
+   [
+    "Restructuring charges",
+    0.0
+   ],
+   [
+    "Other operating expense, net",
+    -6.2
+   ]
+  ],
+  "other_op": 3.9,
+  "op_earnings": 213.8,
+  "nonop": 0.0,
+  "interest": 33.3,
+  "ebt": 180.5,
+  "tax": 54.2,
+  "cont_ops": 126.3,
+  "disc_ops": -2.5,
+  "net_earnings": 123.8,
+  "nci": 0.0,
+  "ni_vulcan": 123.8,
+  "shares_basic": 133.419,
+  "shares_diluted": 135.395,
+  "eps_cont_dil": 0.93,
+  "eps_dil": 0.91,
+  "eps_basic": 0.93,
+  "dps": 0.2,
+  "notes": "Pre-2018 presentation: income statement shows only 'Total revenues' (freight & delivery revenues included). is.delivery_rev = 'Freight and delivery revenues' and is.net_sales = 'Total revenues excluding freight and delivery revenues' from the release's non-GAAP gross-margin reconciliation (published figures, not computed). No noncontrolling interest (nci = 0). dps = cash dividends per share as shown in the release/10-Q statement of earnings. ASU 2016-09 (excess tax benefits of share-based comp through income tax) was early adopted in Q4-16 retroactive to 1-Jan-2016; this quarter is AS ORIGINALLY REPORTED (pre-adoption). Later filings recast it (tax lower, net earnings higher), so Q1+Q2+Q3+Q4 tax/net earnings do not sum to FY2016."
+ },
+ "ngaap": {
+  "ebitda_pub": 285.7,
+  "adj_ebitda_pub": 279.8,
+  "ebitda_bridge_tax": 54.2,
+  "ebitda_bridge_disc_ops_addback": 2.5,
+  "ebitda_bridge_lines": [
+   [
+    "Gain on sale of real estate and businesses",
+    0.0
+   ],
+   [
+    "Recovery from legal settlement",
+    -11.0
+   ],
+   [
+    "Charges associated with acquisitions and divestitures",
+    4.2
+   ],
+   [
+    "Asset impairment",
+    0.9
+   ],
+   [
+    "Restructuring charges",
+    0.0
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": null,
+   "gain_sale": 0.0,
+   "impairment": 0.9,
+   "divested_ops": 4.2,
+   "acquisition": null,
+   "restructuring": 0.0,
+   "legal_env": -11.0,
+   "pension": null,
+   "other": null,
+   "other_label": null
+  },
+  "adj_eps_pub": 0.9,
+  "eps_bridge_lines": [
+   [
+    "Diluted EPS from continuing operations (as reported)",
+    0.93
+   ],
+   [
+    "Income from business interruption claims",
+    -0.05
+   ],
+   [
+    "Charges associated with legacy businesses previously divested",
+    0.02
+   ],
+   [
+    "Adjusted diluted EPS from continuing operations",
+    0.9
+   ]
+  ],
+  "eps_items_after_tax_ps": -0.03,
+  "eps_discrete_tax_ps": 0.0,
+  "eps_bridge_start_ps": 0.93,
+  "agg_cgp_per_ton_pub": 6.43,
+  "roic_pub": null,
+  "notes": "EBITDA (Vulcan definition) excludes discontinued operations: the Net earnings->EBITDA reconciliation adds back income tax (continuing ops), interest expense, net, and '(Earnings) loss on discontinued operations, net of tax' (captured in extra field ebitda_bridge_disc_ops_addback), then DDA&A. Hence the schema check ni_vulcan + tax + interest + total_dda = ebitda_pub only holds after adding ebitda_bridge_disc_ops_addback; adj_items.disc_ops is null (not an EBITDA->Adjusted EBITDA item). ebitda_bridge_lines = EBITDA->Adjusted EBITDA lines (zero lines kept as published). Adjusted EPS bridge from release text (no table in Q2-16 release). 'Recovery from legal settlement' = business interruption claims recovery (2010 Gulf Coast oil spill); mapped to legal_env."
+ }
+}
