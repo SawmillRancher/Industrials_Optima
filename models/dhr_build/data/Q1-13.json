@@ -1,0 +1,561 @@
+{
+ "period": "Q1-13",
+ "period_end": "2013-03-29",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/313616/000119312513159064/d523339dex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/313616/000031361613000048/dhr-2013329x10q.htm"
+ },
+ "is": {
+  "sales": 4444.7,
+  "cogs": 2119.0,
+  "gp": 2325.7,
+  "sga": 1298.4,
+  "rnd": 296.4,
+  "other_op_lines": [
+   [
+    "Earnings from unconsolidated joint venture",
+    0.0
+   ]
+  ],
+  "op_profit": 730.9,
+  "nonop_lines": [
+   [
+    "Gain on sale of unconsolidated joint venture",
+    229.8
+   ]
+  ],
+  "interest_exp": 39.2,
+  "interest_inc": 0.9,
+  "ebt": 922.4,
+  "tax": 230.5,
+  "cont_ops": 691.9,
+  "disc_ops": 0.0,
+  "net_income": 691.9,
+  "nci": null,
+  "pref_div": null,
+  "ni_common": null,
+  "shares_basic": 692.0,
+  "shares_diluted": 708.4,
+  "eps_basic_cont": 1.0,
+  "eps_dil_cont": 0.98,
+  "eps_dil": 0.98,
+  "dps": 0.025,
+  "per_share_basis": "post_split"
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Test & Measurement",
+    "sales": 855.4,
+    "op_profit": 187.3,
+    "amort": null,
+    "dep": null,
+    "dep_amort": 33.8,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 1.0,
+    "growth_acq": -1.5,
+    "growth_fx": 0.5,
+    "growth_core": 0.0
+   },
+   {
+    "name": "Environmental",
+    "sales": 725.3,
+    "op_profit": 135.1,
+    "amort": null,
+    "dep": null,
+    "dep_amort": 13.2,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 4.5,
+    "growth_acq": -4.0,
+    "growth_fx": 0.5,
+    "growth_core": 1.0
+   },
+   {
+    "name": "Life Sciences & Diagnostics",
+    "sales": 1567.4,
+    "op_profit": 199.3,
+    "amort": null,
+    "dep": null,
+    "dep_amort": 125.2,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 1.5,
+    "growth_acq": -0.5,
+    "growth_fx": 1.5,
+    "growth_core": 2.5
+   },
+   {
+    "name": "Dental",
+    "sales": 479.8,
+    "op_profit": 62.9,
+    "amort": null,
+    "dep": null,
+    "dep_amort": 20.9,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 3.0,
+    "growth_acq": -1.0,
+    "growth_fx": 0.5,
+    "growth_core": 2.5
+   },
+   {
+    "name": "Industrial Technologies",
+    "sales": 816.8,
+    "op_profit": 170.9,
+    "amort": null,
+    "dep": null,
+    "dep_amort": 21.8,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 7.0,
+    "growth_acq": -8.5,
+    "growth_fx": 0.0,
+    "growth_core": -1.5
+   }
+  ],
+  "other_op_profit": -24.6,
+  "total_growth": {
+   "total": 3.0,
+   "acq": -3.0,
+   "fx": 1.0,
+   "core": 1.0,
+   "other": null,
+   "other_label": null
+  },
+  "respiratory_sales": null,
+  "core_ex_resp": null,
+  "recurring_pct": null,
+  "seg_note": "Five segments: Test & Measurement, Environmental, Life Sciences & Diagnostics, Dental, Industrial Technologies (+ 'Other' = unallocated corporate). Release has no segment table; segment sales / operating profit from 10-Q segment note (three-month columns), segment growth components and combined 'Depreciation and amortization' (dep_amort, extra field; separate dep / amort not published) from 10-Q MD&A segment sections. other_op_profit = 'Other' -24.6 + 'Equity method earnings of Apex joint venture' 0.0 (Apex JV sold Feb-2013). Test & Measurement includes the communications businesses (split off into NetScout in 2015). Growth sign convention: the 2013 release / 10-Q 'Components of Revenue/Sales Growth' tables present additive components (core/existing + acquisitions + currency = total); values here are stored in the schema's deduction convention (total + acq + fx = core), i.e. acq and fx have the opposite sign to the printed table."
+ },
+ "ngaap": {
+  "adj_eps_pub": 0.75,
+  "eps_bridge_start": 0.98,
+  "eps_bridge_start_label": "Diluted Net Earnings Per Share from Continuing Operations (GAAP)",
+  "eps_bridge": [
+   [
+    "Gain on the sale of investment in Apex Tool Group LLC in the first quarter of 2013 ($230 million pre-tax, $144 million after-tax)",
+    -0.2
+   ],
+   [
+    "Retroactive reinstatement of certain federal tax provisions contained in the American Tax Relief Act of 2012 and other discrete items.",
+    -0.03
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Gain on the sale of investment in Apex Tool Group LLC in the first quarter of 2013",
+    -230.0,
+    -144.0,
+    "nonop"
+   ],
+   [
+    "Retroactive reinstatement of certain federal tax provisions contained in the American Tax Relief Act of 2012 and other discrete items (tax benefit; $ not disclosed)",
+    null,
+    null,
+    "tax"
+   ]
+  ],
+  "amort_pretax": null,
+  "adj_op_pub": null,
+  "adj_op_margin_pub": null,
+  "fcf_pub": null,
+  "capex_pub": null,
+  "capex_disposals_pub": null,
+  "cfo_pub_period": null,
+  "guidance": "Q2-13: GAAP diluted EPS from continuing ops $0.80-$0.85 (no adjustments; adjusted = GAAP). FY2013: adjusted diluted EPS reaffirmed $3.32-$3.47 (GAAP $3.55-$3.70 less Apex gain $0.20 and ATRA/discrete tax $0.03). 10-Q: if 29-Mar-2013 FX rates prevail, currency would reduce 2013 revenues ~0.5%.",
+  "notes": "Adjusted diluted EPS from continuing ops = GAAP excluding the Apex JV sale gain and the ATRA retroactive tax benefit / other discrete items; amortization is NOT added back in this era. Q1-12 comparative had no adjustments (0.73 GAAP = adjusted). Release has no FCF table, no adjusted operating profit."
+ },
+ "cf": {
+  "ytd_months": 3,
+  "net_income": 691.9,
+  "disc_ops_ni": 0.0,
+  "dep": 127.5,
+  "amort": 89.3,
+  "sbc": 27.8,
+  "deferred_tax": null,
+  "impair": null,
+  "gains": -229.8,
+  "wc_change": -136.8,
+  "cfo_cont": 636.5,
+  "cfo_disc": 0.0,
+  "cfo": 636.5,
+  "capex": -116.3,
+  "capex_disposals": null,
+  "acquisitions": -12.1,
+  "divest": null,
+  "invest_purch": null,
+  "invest_sales": 692.0,
+  "cfi_disc": 0.0,
+  "cfi": 554.7,
+  "stock_iss": 54.3,
+  "pref_iss": null,
+  "dividends": 0.0,
+  "buyback": null,
+  "debt_net_short": -764.3,
+  "debt_proceeds": null,
+  "debt_repay": -0.5,
+  "spin_cash": null,
+  "cff_disc": null,
+  "cff": -710.5,
+  "fx": -8.7,
+  "net_change": 472.0,
+  "cash_begin": 1678.7,
+  "cash_end": 2150.7,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net earnings",
+    691.9
+   ],
+   [
+    "Less: earnings from discontinued operations, net of income taxes",
+    0.0
+   ],
+   [
+    "Net earnings from continuing operations",
+    691.9
+   ],
+   [
+    "Depreciation",
+    127.5
+   ],
+   [
+    "Amortization",
+    89.3
+   ],
+   [
+    "Stock compensation expense",
+    27.8
+   ],
+   [
+    "Earnings from unconsolidated joint venture, net of cash dividends received",
+    66.6
+   ],
+   [
+    "Pre-tax gain on sale of unconsolidated joint venture",
+    -229.8
+   ],
+   [
+    "Change in trade accounts receivable, net",
+    105.9
+   ],
+   [
+    "Change in inventories",
+    -89.4
+   ],
+   [
+    "Change in trade accounts payable",
+    10.1
+   ],
+   [
+    "Change in prepaid expenses and other assets",
+    43.6
+   ],
+   [
+    "Change in accrued expenses and other liabilities",
+    -207.0
+   ],
+   [
+    "Total operating cash provided by continuing operations",
+    636.5
+   ],
+   [
+    "Total operating cash used in discontinued operations",
+    0.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    636.5
+   ],
+   [
+    "Cash paid for acquisitions",
+    -12.1
+   ],
+   [
+    "Payments for additions to property, plant and equipment",
+    -116.3
+   ],
+   [
+    "Proceeds from sale of unconsolidated joint venture",
+    692.0
+   ],
+   [
+    "All other investing activities",
+    -8.9
+   ],
+   [
+    "Total investing cash provided by (used in) continuing operations",
+    554.7
+   ],
+   [
+    "Proceeds from sale of discontinued operations",
+    0.0
+   ],
+   [
+    "Net cash provided by investing activities",
+    554.7
+   ],
+   [
+    "Proceeds from the issuance of common stock",
+    54.3
+   ],
+   [
+    "Payment of dividends",
+    0.0
+   ],
+   [
+    "Net repayments of borrowings (maturities of 90 days or less)",
+    -764.3
+   ],
+   [
+    "Repayments of borrowings (maturities longer than 90 days)",
+    -0.5
+   ],
+   [
+    "Net cash used in financing activities",
+    -710.5
+   ],
+   [
+    "Effect of exchange rate changes on cash and equivalents",
+    -8.7
+   ],
+   [
+    "Net change in cash and equivalents",
+    472.0
+   ],
+   [
+    "Beginning balance of cash and equivalents",
+    1678.7
+   ],
+   [
+    "Ending balance of cash and equivalents",
+    2150.7
+   ],
+   [
+    "Cash interest payments",
+    37.7
+   ],
+   [
+    "Cash income tax payments",
+    57.1
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 2150.7,
+  "ar": 3118.3,
+  "inventories": 1866.5,
+  "prepaid_other": 774.5,
+  "ca_disc": null,
+  "tca": 7910.0,
+  "ppe": 2109.9,
+  "other_lta": 941.6,
+  "nca_disc": null,
+  "goodwill": 15359.4,
+  "intangibles": 6148.4,
+  "ta": 32469.3,
+  "st_debt": 67.0,
+  "ap": 1534.5,
+  "accrued": 2325.0,
+  "cl_disc": null,
+  "tcl": 3926.5,
+  "other_ltl": 4389.3,
+  "ncl_disc": null,
+  "ltd": 4404.3,
+  "pref": null,
+  "common": 7.8,
+  "apic": 3886.8,
+  "treasury": null,
+  "retained": 16054.5,
+  "aoci": -268.0,
+  "dhr_equity": 19681.1,
+  "nci": 68.1,
+  "te": 19749.2,
+  "tle": 32469.3,
+  "lines_raw": [
+   [
+    "Cash and equivalents",
+    2150.7
+   ],
+   [
+    "Trade accounts receivable, net",
+    3118.3
+   ],
+   [
+    "Finished goods",
+    908.0
+   ],
+   [
+    "Work in process",
+    325.4
+   ],
+   [
+    "Raw materials",
+    633.1
+   ],
+   [
+    "Total inventories",
+    1866.5
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    774.5
+   ],
+   [
+    "Total current assets",
+    7910.0
+   ],
+   [
+    "Property, plant and equipment, net of accumulated depreciation of $2,039.1 and $1,962.3, respectively",
+    2109.9
+   ],
+   [
+    "Investment in joint venture",
+    0.0
+   ],
+   [
+    "Other assets",
+    941.6
+   ],
+   [
+    "Goodwill",
+    15359.4
+   ],
+   [
+    "Other intangible assets, net",
+    6148.4
+   ],
+   [
+    "Total assets",
+    32469.3
+   ],
+   [
+    "Notes payable and current portion of long-term debt",
+    67.0
+   ],
+   [
+    "Trade accounts payable",
+    1534.5
+   ],
+   [
+    "Accrued expenses and other liabilities",
+    2325.0
+   ],
+   [
+    "Total current liabilities",
+    3926.5
+   ],
+   [
+    "Other long-term liabilities",
+    4389.3
+   ],
+   [
+    "Long-term debt",
+    4404.3
+   ],
+   [
+    "Common stock - $0.01 par value",
+    7.8
+   ],
+   [
+    "Additional paid-in capital",
+    3886.8
+   ],
+   [
+    "Retained earnings",
+    16054.5
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    -268.0
+   ],
+   [
+    "Total Danaher stockholders’ equity",
+    19681.1
+   ],
+   [
+    "Non-controlling interests",
+    68.1
+   ],
+   [
+    "Total stockholders’ equity",
+    19749.2
+   ],
+   [
+    "Total liabilities and stockholders’ equity",
+    32469.3
+   ],
+   [
+    "Sales",
+    4444.7
+   ],
+   [
+    "Cost of sales",
+    -2119.0
+   ],
+   [
+    "Gross profit",
+    2325.7
+   ]
+  ],
+  "shares_out": 692.707
+ },
+ "py": {
+  "restated": false,
+  "notes": "Prior-year quarter comparative as presented in this release / 10-Q matches the Q1-12 release and 10-Q as originally reported (sales 4,316.2, operating profit 734.9, net earnings from continuing ops 520.0; same five segments). py other_op = Apex JV equity earnings (14.4 income, shown inside operating profit); py other_op_profit = 'Other' -22.7 + Apex equity earnings 14.3 = -8.4. Q1-12 earnings from discontinued operations: 92.9.",
+  "is": {
+   "sales": 4316.2,
+   "cogs": 2080.7,
+   "sga": 1244.9,
+   "rnd": 270.1,
+   "other_op": -14.4,
+   "op_profit": 734.9,
+   "nonop": 0.0,
+   "interest_exp": 39.4,
+   "interest_inc": 0.7,
+   "ebt": 696.2,
+   "tax": 176.2,
+   "cont_ops": 520.0,
+   "disc_ops": 92.9,
+   "net_income": 612.9,
+   "pref_div": null,
+   "shares_basic": 691.5,
+   "shares_diluted": 714.0,
+   "eps_dil_cont": 0.73,
+   "eps_dil": 0.86
+  },
+  "segments": [
+   {
+    "name": "Test & Measurement",
+    "sales": 846.4,
+    "op_profit": 191.6
+   },
+   {
+    "name": "Environmental",
+    "sales": 694.6,
+    "op_profit": 129.1
+   },
+   {
+    "name": "Life Sciences & Diagnostics",
+    "sales": 1545.9,
+    "op_profit": 205.9
+   },
+   {
+    "name": "Dental",
+    "sales": 464.7,
+    "op_profit": 58.9
+   },
+   {
+    "name": "Industrial Technologies",
+    "sales": 764.6,
+    "op_profit": 157.8
+   }
+  ],
+  "other_op_profit": -8.4,
+  "adj_eps_pub": 0.73,
+  "amort_pretax": null
+ },
+ "notes": "Income statement, EPS bridge and core growth from the release (identical to the 10-Q). Cash flow is 3-month YTD (10-Q). Computed: cf.wc_change = sum of the five 'Change in ...' lines; cf.gains = 'Pre-tax gain on sale of unconsolidated joint venture'; cf.invest_sales = 'Proceeds from sale of unconsolidated joint venture' (Apex); cf.cfi_disc = 'Proceeds from sale of discontinued operations' (line present, nil in 2013). 'Earnings from unconsolidated joint venture, net of cash dividends received' kept only in lines_raw. No separate deferred-tax, impairment, PP&E-proceeds, investment-purchase or long-term-borrowing-proceeds lines in the 10-Q cash flow (null). bs.other_lta = 'Other assets' + 'Investment in joint venture' (nil). bs.treasury null (no treasury line; repurchased shares netted in APIC). bs.shares_out = 692.707m from the 10-Q cover at April 12, 2013 (no BS parenthetical). is.dps 0.025 = regular quarterly dividend declared (10-Q liquidity section; equity statement dividends declared $17.3m in the quarter, computed YTD difference). is.nci null: no NCI line on the income statement. Per-share data post 2010 split. Q1-13: sold the 50% interest in Apex Tool Group JV (Feb-2013) for $797m ($759m cash incl. $67m pre-closing dividends + $38m note); pretax gain $229.8m in 'Gain on sale of unconsolidated joint venture' (non-operating). Equity earnings from Apex stop (Q1-12: 14.4 in operating profit). All self-checks pass."
+}

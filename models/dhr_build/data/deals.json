@@ -1,0 +1,1046 @@
+{
+ "_meta": {
+  "units": "USD millions unless stated",
+  "as_of": "2026-10-06",
+  "compiled_by": "agent a12 from SEC filings (local texts + EDGAR downloads)",
+  "null_means": "not disclosed in reviewed filings"
+ },
+ "masimo": {
+  "announcement_date": {
+   "value": "2026-02-16 (agreement signed); announced 2026-02-17",
+   "source": "Masimo announcement, 8-K Ex.99.1 filed 2026-02-17; Q1-26 10-Q (dhr-20260327, filed 2026-04-21) Note 2"
+  },
+  "closing_date": {
+   "value": "2026-06-10",
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 2 Acquisitions"
+  },
+  "price_per_share": {
+   "value": 180.0,
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 2; Masimo announcement, 8-K Ex.99.1 filed 2026-02-17",
+   "currency": "USD"
+  },
+  "equity_value": {
+   "value": null,
+   "source": "Not disclosed by Danaher. Derived estimate: 52.366m Masimo shares outstanding (Masimo 10-Q cover, 4-Apr-2026) x $180 = ~9,426 (basic, ex dilutive awards)",
+   "derived_estimate": 9426
+  },
+  "enterprise_value": {
+   "value": 9900,
+   "source": "Masimo announcement, 8-K Ex.99.1 filed 2026-02-17 ('approximately $9.9 billion including assumed indebtedness and net of acquired cash'); Q1-26 10-Q (dhr-20260327, filed 2026-04-21) Note 2"
+  },
+  "ebitda_multiple": {
+   "value": {
+    "2027E_EBITDA_x": 18,
+    "2027E_EBITDA_incl_full_synergies_x": 15
+   },
+   "source": "Masimo announcement, 8-K Ex.99.1 filed 2026-02-17"
+  },
+  "cash_consideration_paid": {
+   "value": 9843,
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 2 PPA table 'Net cash consideration' and cash flow statement 'Cash paid for acquisitions' (9,843); text: ~$9.8bn net of cash acquired"
+  },
+  "non_cash_consideration": {
+   "value": 45,
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 2: replacement Danaher restricted stock attributable to pre-acquisition service"
+  },
+  "net_assets_acquired_total": {
+   "value": 9888,
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 2 PPA table"
+  },
+  "cash_acquired": {
+   "value": null,
+   "source": "Not disclosed; consideration stated net of cash acquired (Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 2). Masimo standalone cash was $124.6m at 4-Apr-2026 (Masimo 10-Q XBRL) for reference"
+  },
+  "debt_assumed_or_repaid": {
+   "value": null,
+   "source": "Not disclosed separately; no debt line in PPA (Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 2), EV includes 'assumed indebtedness' (Masimo announcement, 8-K Ex.99.1 filed 2026-02-17). Masimo standalone debt was $452.0m at 4-Apr-2026 (Masimo 10-Q XBRL LongTermDebt)"
+  },
+  "ppa_preliminary": {
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 2 'estimated fair values of the assets acquired and liabilities assumed'",
+   "status": "Preliminary; PP&E, intangibles, acquisition-related liabilities, legal contingencies and valuations still being evaluated",
+   "trade_accounts_receivable": 232,
+   "inventories_incl_fv_step_up": 667,
+   "other_current_assets": null,
+   "property_plant_equipment": 355,
+   "goodwill": 4960,
+   "intangibles_total": 4844,
+   "intangibles_by_type": {
+    "technology": null,
+    "customer_relationships": null,
+    "trade_names": null,
+    "note": "Disclosed only as 'Other intangible assets, primarily technology, customer relationships and trade names'; no split or useful lives disclosed in Q2-26 10-Q"
+   },
+   "intangibles_useful_lives": null,
+   "other_noncurrent_assets": null,
+   "trade_accounts_payable": -77,
+   "current_liabilities_other": null,
+   "noncurrent_liabilities": null,
+   "deferred_tax_liabilities": -1088,
+   "other_assets_and_liabilities_net": -5,
+   "noncontrolling_interest": null,
+   "net_assets_acquired": 9888,
+   "less_non_cash_consideration": -45,
+   "net_cash_consideration": 9843,
+   "goodwill_segment": "Diagnostics (Diagnostics goodwill 6,982 -> 11,906; Note 8 rollforward 'Attributable to the 2026 acquisition' 4,960)"
+  },
+  "masimo_2025_revenue": {
+   "value": 1500,
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 2 ('approximately $1.5 billion in 2025')"
+  },
+  "sales_contributed_q2_26": {
+   "value": null,
+   "source": "Not disclosed in dollars. Q2-26 10-Q (dhr-20260626, filed 2026-07-21) MD&A: acquisitions added 1.5% to total Q2 sales growth and 4.0% to Diagnostics Q2 sales growth (Q2-25 bases 5,936 / 2,309)",
+   "derived_estimate_range": [
+    89,
+    92
+   ]
+  },
+  "earnings_contributed_q2_26": {
+   "value": null,
+   "source": "Not disclosed; Q2-26 10-Q (dhr-20260626, filed 2026-07-21) MD&A: acquired businesses diluted Diagnostics Q2 operating margin by 105 bp (incremental dilutive effect) plus 440 bp from Masimo FV inventory/transaction/CIC charges"
+  },
+  "pro_forma": {
+   "value": {
+    "sales": {
+     "Q2_26": 6511,
+     "Q2_25": 6307,
+     "H1_26": 12866,
+     "H1_25": 12420
+    },
+    "net_earnings": {
+     "Q2_26": 900,
+     "Q2_25": 372,
+     "H1_26": 1878,
+     "H1_25": 1131
+    },
+    "diluted_eps": {
+     "Q2_26": 1.27,
+     "Q2_25": 0.52,
+     "H1_26": 2.65,
+     "H1_25": 1.57
+    }
+   },
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 2 Pro Forma Financial Information (as if acquired 1-Jan-2025)"
+  },
+  "acquisition_costs_expensed": {
+   "value": {
+    "Q1_26": 17,
+    "Q2_26": 34,
+    "H1_26": 51
+   },
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 2; Q1-26 10-Q (dhr-20260327, filed 2026-04-21) Note 2"
+  },
+  "nonrecurring_charges_q2_26": {
+   "value": {
+    "total_pretax": 74,
+    "inventory_fv_step_up_expensed_cogs": 46,
+    "preacq_share_based_and_change_in_control_implied": 28,
+    "total_masimo_adjustments_in_adj_eps_Q2": 108,
+    "total_masimo_adjustments_in_adj_eps_H1": 125,
+    "after_tax_Q2": 95,
+    "after_tax_H1": 110
+   },
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 2, MD&A cost of sales; cash flow statement; Q2-26 earnings release, 8-K Ex.99.1 filed 2026-07-21 non-GAAP reconciliation footnote"
+  },
+  "inventory_step_up": {
+   "value": {
+    "total_step_up": null,
+    "expensed_Q2_26": 46,
+    "expected_expensing_period": null
+   },
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) cash flow 'Amortization of acquisition-related inventory fair value step-up' 46 and MD&A; total step-up and remaining period not disclosed"
+  },
+  "expected_synergies": {
+   "value": {
+    "cost_synergies_annual": 125,
+    "revenue_synergies_annual": 50,
+    "basis": "more than; by fifth full year following completion"
+   },
+   "source": "Masimo announcement, 8-K Ex.99.1 filed 2026-02-17"
+  },
+  "expected_ebitda_2027": {
+   "value": ">530",
+   "source": "Masimo announcement, 8-K Ex.99.1 filed 2026-02-17 ('EBITDA of more than $530 million in 2027')"
+  },
+  "accretion_guidance": {
+   "value": {
+    "first_full_year_adj_eps": "0.15-0.20",
+    "fifth_full_year_adj_eps": "~0.70",
+    "long_term_core_growth": "high-single digit"
+   },
+   "source": "Masimo announcement, 8-K Ex.99.1 filed 2026-02-17"
+  },
+  "segment": {
+   "value": "Diagnostics (standalone operating company alongside Radiometer, Leica Biosystems, Cepheid, Beckman Coulter Diagnostics)",
+   "source": "Masimo announcement, 8-K Ex.99.1 filed 2026-02-17; Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 2"
+  },
+  "financing": {
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 10 Financing; 8-K filed 2026-04-29 (Items 1.01/8.01) + FWP filed 2026-04-22; 8-K filed 2026-06-03 (Item 8.01); 8-K filed 2026-04-17",
+   "summary": "Cash on hand + Masimo Financing Euronotes (EUR 3.0bn, ~$3.5bn net) + Masimo Financing CHF Notes (CHF 2.383bn, ~$3.0bn net) + euro commercial paper (euro CP rose from EUR 933m to EUR 4.1bn; H1 net short-term borrowings +3,673). No term loans.",
+   "instruments": [
+    {
+     "name": "2028 Floating Rate Notes",
+     "currency": "EUR",
+     "amount_m": 500,
+     "coupon": "3M EURIBOR + 0.380% (min 0%)",
+     "issue_price_pct": 100.0,
+     "maturity": "2028-04-29",
+     "issue_date": "2026-04-29",
+     "pricing_date": "2026-04-22",
+     "issuer": "Danaher Corp",
+     "carrying_usd_q2_26": 567
+    },
+    {
+     "name": "2030 Euronotes II",
+     "currency": "EUR",
+     "amount_m": 750,
+     "coupon_pct": 3.25,
+     "issue_price_pct": 99.934,
+     "maturity": "2030-04-29",
+     "issue_date": "2026-04-29",
+     "issuer": "Danaher Corp",
+     "carrying_usd_q2_26": 849
+    },
+    {
+     "name": "2034 Euronotes",
+     "currency": "EUR",
+     "amount_m": 750,
+     "coupon_pct": 3.625,
+     "issue_price_pct": 99.918,
+     "maturity": "2034-04-29",
+     "issue_date": "2026-04-29",
+     "issuer": "Danaher Corp",
+     "carrying_usd_q2_26": 848
+    },
+    {
+     "name": "2038 Euronotes",
+     "currency": "EUR",
+     "amount_m": 1000,
+     "coupon_pct": 4.0,
+     "issue_price_pct": 99.953,
+     "maturity": "2038-04-29",
+     "issue_date": "2026-04-29",
+     "issuer": "Danaher Corp",
+     "carrying_usd_q2_26": 1130
+    },
+    {
+     "name": "2031 CHF Notes (Series A)",
+     "currency": "CHF",
+     "amount_m": 119.5,
+     "coupon_pct": 1.65,
+     "maturity": "2031-06-03",
+     "issue_date": "2026-06-03",
+     "issuer": "DH Masi Finance Inc. (private placement)",
+     "carrying_usd_q2_26": 147
+    },
+    {
+     "name": "2033 CHF Notes II (Series B)",
+     "currency": "CHF",
+     "amount_m": 137.41,
+     "coupon_pct": 1.88,
+     "maturity": "2033-06-03",
+     "issue_date": "2026-06-03",
+     "issuer": "DH Masi Finance Inc.",
+     "carrying_usd_q2_26": 169
+    },
+    {
+     "name": "2036 CHF Notes (Series C)",
+     "currency": "CHF",
+     "amount_m": 221.3,
+     "coupon_pct": 2.1,
+     "maturity": "2036-06-03",
+     "issue_date": "2026-06-03",
+     "issuer": "DH Masi Finance Inc.",
+     "carrying_usd_q2_26": 272
+    },
+    {
+     "name": "2038 CHF Notes (Series D)",
+     "currency": "CHF",
+     "amount_m": 372.66,
+     "coupon_pct": 2.25,
+     "maturity": "2038-06-03",
+     "issue_date": "2026-06-03",
+     "issuer": "DH Masi Finance Inc.",
+     "carrying_usd_q2_26": 457
+    },
+    {
+     "name": "2041 CHF Notes (Series E)",
+     "currency": "CHF",
+     "amount_m": 648.01,
+     "coupon_pct": 2.38,
+     "maturity": "2041-06-03",
+     "issue_date": "2026-06-03",
+     "issuer": "DH Masi Finance Inc.",
+     "carrying_usd_q2_26": 795
+    },
+    {
+     "name": "2046 CHF Notes (Series F)",
+     "currency": "CHF",
+     "amount_m": 502.06,
+     "coupon_pct": 2.51,
+     "maturity": "2046-06-03",
+     "issue_date": "2026-06-03",
+     "issuer": "DH Masi Finance Inc.",
+     "carrying_usd_q2_26": 616
+    },
+    {
+     "name": "2056 CHF Notes (Series G)",
+     "currency": "CHF",
+     "amount_m": 382.0,
+     "coupon_pct": 2.5,
+     "maturity": "2056-06-03",
+     "issue_date": "2026-06-03",
+     "issuer": "DH Masi Finance Inc.",
+     "carrying_usd_q2_26": 469
+    }
+   ],
+   "euronotes_total": {
+    "currency": "EUR",
+    "amount_m": 3000,
+    "net_proceeds_eur_m": 2980,
+    "net_proceeds_usd_m": 3500,
+    "interest": "FRN quarterly from 29-Jul-2026; fixed annual from 29-Apr-2027",
+    "special_mandatory_redemption": "101% on fixed-rate notes if Masimo not closed by 16-Nov-2026 (moot: closed 10-Jun-2026)",
+    "date_note": "8-K says issued 29-Apr-2026; 10-Q says offering completed 23-Apr-2026 (pricing 22-Apr)"
+   },
+   "chf_notes_total": {
+    "currency": "CHF",
+    "amount_m": 2382.94,
+    "net_proceeds_chf_m": 2400,
+    "net_proceeds_usd_m": 3000,
+    "interest": "semi-annual 3-Jun/3-Dec from 3-Dec-2026",
+    "guarantee": "Danaher Corp"
+   },
+   "term_loans": {
+    "value": null,
+    "source": "None disclosed; Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 10"
+   },
+   "commercial_paper": {
+    "value": {
+     "euro_cp_usd_q2_26": 4703,
+     "euro_cp_eur_q2_26": 4100,
+     "euro_cp_usd_dec25": 1097,
+     "usd_cp_q2_26": 0,
+     "wtd_avg_rate_pct": 2.5,
+     "wtd_avg_maturity_days": 79,
+     "classified_long_term": 4700
+    },
+    "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 10"
+   },
+   "bridge_backstop_364_day_facility": {
+    "value": {
+     "size": 5000,
+     "signed": "2026-04-16",
+     "expires": "2027-04-15",
+     "term_out_option": "convert to 1-yr term loan for 0.50% fee",
+     "pricing": "Term SOFR + 58.5-108.5 bp; facility fee 4.0 bp",
+     "drawn_q2_26": 0
+    },
+    "source": "8-K filed 2026-04-17 Item 1.01; Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 10"
+   }
+  }
+ },
+ "statlab": {
+  "name": {
+   "value": "SLMP LLC ('StatLab')",
+   "source": "Q2-26 earnings release, 8-K Ex.99.1 filed 2026-07-21 'Pending SLMP LLC StatLab Acquisition'"
+  },
+  "announcement_date": {
+   "value": "early July 2026 (exact date not in SEC filings; release says 'Earlier this month')",
+   "source": "Q2-26 earnings release, 8-K Ex.99.1 filed 2026-07-21"
+  },
+  "seller": {
+   "value": null,
+   "source": "Not disclosed in Danaher SEC filings"
+  },
+  "purchase_price": {
+   "value": null,
+   "source": "Not disclosed in Q2-26 10-Q (no subsequent-events note on StatLab), Q2 release, or 8-K of 2026-08-03"
+  },
+  "revenue_2025": {
+   "value": 250,
+   "source": "Q2-26 earnings release, 8-K Ex.99.1 filed 2026-07-21 ('~$250M in revenue for the full year 2025')"
+  },
+  "recurring_revenue_share": {
+   "value": ">85%",
+   "source": "Q2-26 earnings release, 8-K Ex.99.1 filed 2026-07-21"
+  },
+  "growth_expectations": {
+   "value": "high-single digit core sales growth over the long term",
+   "source": "Q2-26 earnings release, 8-K Ex.99.1 filed 2026-07-21"
+  },
+  "accretion": {
+   "value": "accretive to adjusted diluted EPS in 1st full year of ownership",
+   "source": "Q2-26 earnings release, 8-K Ex.99.1 filed 2026-07-21"
+  },
+  "expected_closing": {
+   "value": "by end of 2026, subject to customary closing conditions and regulatory approvals",
+   "source": "Q2-26 earnings release, 8-K Ex.99.1 filed 2026-07-21"
+  },
+  "segment": {
+   "value": "Diagnostics (Leica Biosystems, anatomic pathology)",
+   "source": "Q2-26 earnings release, 8-K Ex.99.1 filed 2026-07-21"
+  },
+  "status_after_july_2026": {
+   "value": "Still pending as of 3-Aug-2026, 'remains subject to customary closing conditions, including receipt of applicable regulatory clearances'; no closing 8-K through 2026-10-06 (EDGAR submissions checked)",
+   "source": "8-K filed 2026-08-03 forward-looking statements; EDGAR submissions CIK0000313616 as of 2026-10-06"
+  }
+ },
+ "debt_q2_26": {
+  "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 10 Financing (components of debt table)",
+  "as_of": "2026-06-26",
+  "instruments": [
+   {
+    "name": "Euro CP",
+    "currency": "EUR",
+    "principal_local_m": 4100,
+    "coupon_pct": "2.5% wtd avg (79d wtd avg maturity)",
+    "maturity": null,
+    "carrying_usd_m_2026_06_26": 4703,
+    "carrying_usd_m_2025_12_31": 1097,
+    "issuer": "Danaher Corp / DH Europe Finance II"
+   },
+   {
+    "name": "2026 Biopharma Euronotes",
+    "currency": "EUR",
+    "principal_local_m": 1300,
+    "coupon_pct": 0.2,
+    "maturity": "2026-03-18",
+    "carrying_usd_m_2026_06_26": 0,
+    "carrying_usd_m_2025_12_31": 1469,
+    "issuer": "Danaher International II (repaid 18-Mar-2026)"
+   },
+   {
+    "name": "2026 Euronotes",
+    "currency": "EUR",
+    "principal_local_m": 800,
+    "coupon_pct": 2.1,
+    "maturity": "2026-09-30",
+    "carrying_usd_m_2026_06_26": 912,
+    "carrying_usd_m_2025_12_31": 940,
+    "issuer": "Danaher Corp"
+   },
+   {
+    "name": "2027 CHF Notes",
+    "currency": "CHF",
+    "principal_local_m": 250,
+    "coupon_pct": 0.4773,
+    "maturity": "2027-04-09",
+    "carrying_usd_m_2026_06_26": 308,
+    "carrying_usd_m_2025_12_31": 315,
+    "issuer": "Danaher Switzerland"
+   },
+   {
+    "name": "2027 Yen Notes",
+    "currency": "JPY",
+    "principal_local_m": 30800,
+    "coupon_pct": 0.3,
+    "maturity": "2027-05-11",
+    "carrying_usd_m_2026_06_26": 190,
+    "carrying_usd_m_2025_12_31": 196,
+    "issuer": "Danaher Japan"
+   },
+   {
+    "name": "2027 Euronotes",
+    "currency": "EUR",
+    "principal_local_m": 600,
+    "coupon_pct": 1.2,
+    "maturity": "2027-06-30",
+    "carrying_usd_m_2026_06_26": 683,
+    "carrying_usd_m_2025_12_31": 704,
+    "issuer": "Danaher International"
+   },
+   {
+    "name": "2028 Biopharma Euronotes",
+    "currency": "EUR",
+    "principal_local_m": 1300,
+    "coupon_pct": 0.45,
+    "maturity": "2028-03-18",
+    "carrying_usd_m_2026_06_26": 1421,
+    "carrying_usd_m_2025_12_31": 1466,
+    "issuer": "Danaher International II"
+   },
+   {
+    "name": "2028 Floating Rate Notes",
+    "currency": "EUR",
+    "principal_local_m": 500,
+    "coupon_pct": "3M EURIBOR+0.38%",
+    "maturity": "2028-04-29",
+    "carrying_usd_m_2026_06_26": 567,
+    "carrying_usd_m_2025_12_31": 0,
+    "issuer": "Danaher Corp (Masimo financing)"
+   },
+   {
+    "name": "2028 CHF Bonds",
+    "currency": "CHF",
+    "principal_local_m": 210,
+    "coupon_pct": 1.125,
+    "maturity": "2028-12-08",
+    "carrying_usd_m_2026_06_26": 261,
+    "carrying_usd_m_2025_12_31": 267,
+    "issuer": "Danaher Switzerland"
+   },
+   {
+    "name": "2029 CHF Notes",
+    "currency": "CHF",
+    "principal_local_m": 325,
+    "coupon_pct": 0.8875,
+    "maturity": "2029-10-10",
+    "carrying_usd_m_2026_06_26": 400,
+    "carrying_usd_m_2025_12_31": 409,
+    "issuer": "Danaher Switzerland"
+   },
+   {
+    "name": "2029 Biopharma Notes",
+    "currency": "USD",
+    "principal_local_m": 800,
+    "coupon_pct": 2.6,
+    "maturity": "2029-11-15",
+    "carrying_usd_m_2026_06_26": 798,
+    "carrying_usd_m_2025_12_31": 798,
+    "issuer": "Danaher International II"
+   },
+   {
+    "name": "2030 Euronotes",
+    "currency": "EUR",
+    "principal_local_m": 800,
+    "coupon_pct": 2.5,
+    "maturity": "2030-03-30",
+    "carrying_usd_m_2026_06_26": 911,
+    "carrying_usd_m_2025_12_31": 940,
+    "issuer": "Danaher Corp"
+   },
+   {
+    "name": "2030 Euronotes II",
+    "currency": "EUR",
+    "principal_local_m": 750,
+    "coupon_pct": 3.25,
+    "maturity": "2030-04-29",
+    "carrying_usd_m_2026_06_26": 849,
+    "carrying_usd_m_2025_12_31": 0,
+    "issuer": "Danaher Corp (Masimo financing)"
+   },
+   {
+    "name": "2031 CHF Notes",
+    "currency": "CHF",
+    "principal_local_m": 119.5,
+    "coupon_pct": 1.65,
+    "maturity": "2031-06-03",
+    "carrying_usd_m_2026_06_26": 147,
+    "carrying_usd_m_2025_12_31": 0,
+    "issuer": "DH Masi Finance (Masimo financing)"
+   },
+   {
+    "name": "2031 Biopharma Euronotes",
+    "currency": "EUR",
+    "principal_local_m": 1750,
+    "coupon_pct": 0.75,
+    "maturity": "2031-09-18",
+    "carrying_usd_m_2026_06_26": 1987,
+    "carrying_usd_m_2025_12_31": 2050,
+    "issuer": "Danaher International II"
+   },
+   {
+    "name": "2032 Yen Notes",
+    "currency": "JPY",
+    "principal_local_m": 53200,
+    "coupon_pct": 0.65,
+    "maturity": "2032-05-11",
+    "carrying_usd_m_2026_06_26": 328,
+    "carrying_usd_m_2025_12_31": 339,
+    "issuer": "Danaher Japan"
+   },
+   {
+    "name": "2033 CHF Notes II",
+    "currency": "CHF",
+    "principal_local_m": 137.41,
+    "coupon_pct": 1.88,
+    "maturity": "2033-06-03",
+    "carrying_usd_m_2026_06_26": 169,
+    "carrying_usd_m_2025_12_31": 0,
+    "issuer": "DH Masi Finance (Masimo financing)"
+   },
+   {
+    "name": "2033 CHF Notes",
+    "currency": "CHF",
+    "principal_local_m": 325,
+    "coupon_pct": 1.265,
+    "maturity": "2033-10-10",
+    "carrying_usd_m_2026_06_26": 400,
+    "carrying_usd_m_2025_12_31": 408,
+    "issuer": "Danaher Switzerland"
+   },
+   {
+    "name": "2034 Euronotes",
+    "currency": "EUR",
+    "principal_local_m": 750,
+    "coupon_pct": 3.625,
+    "maturity": "2034-04-29",
+    "carrying_usd_m_2026_06_26": 848,
+    "carrying_usd_m_2025_12_31": 0,
+    "issuer": "Danaher Corp (Masimo financing)"
+   },
+   {
+    "name": "2036 CHF Notes",
+    "currency": "CHF",
+    "principal_local_m": 221.3,
+    "coupon_pct": 2.1,
+    "maturity": "2036-06-03",
+    "carrying_usd_m_2026_06_26": 272,
+    "carrying_usd_m_2025_12_31": 0,
+    "issuer": "DH Masi Finance (Masimo financing)"
+   },
+   {
+    "name": "2037 CHF Notes",
+    "currency": "CHF",
+    "principal_local_m": 225,
+    "coupon_pct": 1.6249,
+    "maturity": "2037-10-09",
+    "carrying_usd_m_2026_06_26": 276,
+    "carrying_usd_m_2025_12_31": 282,
+    "issuer": "Danaher Switzerland"
+   },
+   {
+    "name": "2038 Euronotes",
+    "currency": "EUR",
+    "principal_local_m": 1000,
+    "coupon_pct": 4.0,
+    "maturity": "2038-04-29",
+    "carrying_usd_m_2026_06_26": 1130,
+    "carrying_usd_m_2025_12_31": 0,
+    "issuer": "Danaher Corp (Masimo financing)"
+   },
+   {
+    "name": "2038 CHF Notes",
+    "currency": "CHF",
+    "principal_local_m": 372.66,
+    "coupon_pct": 2.25,
+    "maturity": "2038-06-03",
+    "carrying_usd_m_2026_06_26": 457,
+    "carrying_usd_m_2025_12_31": 0,
+    "issuer": "DH Masi Finance (Masimo financing)"
+   },
+   {
+    "name": "2039 Biopharma Euronotes",
+    "currency": "EUR",
+    "principal_local_m": 1250,
+    "coupon_pct": 1.35,
+    "maturity": "2039-09-18",
+    "carrying_usd_m_2026_06_26": 1410,
+    "carrying_usd_m_2025_12_31": 1456,
+    "issuer": "Danaher International II"
+   },
+   {
+    "name": "2039 Biopharma Notes",
+    "currency": "USD",
+    "principal_local_m": 900,
+    "coupon_pct": 3.25,
+    "maturity": "2039-11-15",
+    "carrying_usd_m_2026_06_26": 892,
+    "carrying_usd_m_2025_12_31": 892,
+    "issuer": "Danaher International II"
+   },
+   {
+    "name": "2041 CHF Notes",
+    "currency": "CHF",
+    "principal_local_m": 648.01,
+    "coupon_pct": 2.38,
+    "maturity": "2041-06-03",
+    "carrying_usd_m_2026_06_26": 795,
+    "carrying_usd_m_2025_12_31": 0,
+    "issuer": "DH Masi Finance (Masimo financing)"
+   },
+   {
+    "name": "2045 U.S. Notes",
+    "currency": "USD",
+    "principal_local_m": 500,
+    "coupon_pct": 4.375,
+    "maturity": "2045-09-15",
+    "carrying_usd_m_2026_06_26": 500,
+    "carrying_usd_m_2025_12_31": 500,
+    "issuer": "Danaher Corp"
+   },
+   {
+    "name": "2045 CHF Notes",
+    "currency": "CHF",
+    "principal_local_m": 125,
+    "coupon_pct": 1.94,
+    "maturity": "2045-10-10",
+    "carrying_usd_m_2026_06_26": 153,
+    "carrying_usd_m_2025_12_31": 157,
+    "issuer": "Danaher Switzerland"
+   },
+   {
+    "name": "2046 CHF Notes",
+    "currency": "CHF",
+    "principal_local_m": 502.06,
+    "coupon_pct": 2.51,
+    "maturity": "2046-06-03",
+    "carrying_usd_m_2026_06_26": 616,
+    "carrying_usd_m_2025_12_31": 0,
+    "issuer": "DH Masi Finance (Masimo financing)"
+   },
+   {
+    "name": "2049 Biopharma Euronotes",
+    "currency": "EUR",
+    "principal_local_m": 750,
+    "coupon_pct": 1.8,
+    "maturity": "2049-09-18",
+    "carrying_usd_m_2026_06_26": 845,
+    "carrying_usd_m_2025_12_31": 873,
+    "issuer": "Danaher International II"
+   },
+   {
+    "name": "2049 Biopharma Notes",
+    "currency": "USD",
+    "principal_local_m": 900,
+    "coupon_pct": 3.4,
+    "maturity": "2049-11-15",
+    "carrying_usd_m_2026_06_26": 891,
+    "carrying_usd_m_2025_12_31": 891,
+    "issuer": "Danaher International II"
+   },
+   {
+    "name": "2050 U.S. Notes",
+    "currency": "USD",
+    "principal_local_m": 1000,
+    "coupon_pct": 2.6,
+    "maturity": "2050-10-01",
+    "carrying_usd_m_2026_06_26": 983,
+    "carrying_usd_m_2025_12_31": 983,
+    "issuer": "Danaher Corp"
+   },
+   {
+    "name": "2051 U.S. Notes",
+    "currency": "USD",
+    "principal_local_m": 1000,
+    "coupon_pct": 2.8,
+    "maturity": "2051-12-10",
+    "carrying_usd_m_2026_06_26": 986,
+    "carrying_usd_m_2025_12_31": 985,
+    "issuer": "Danaher Corp"
+   },
+   {
+    "name": "2056 CHF Notes",
+    "currency": "CHF",
+    "principal_local_m": 382,
+    "coupon_pct": 2.5,
+    "maturity": "2056-06-03",
+    "carrying_usd_m_2026_06_26": 469,
+    "carrying_usd_m_2025_12_31": 0,
+    "issuer": "DH Masi Finance (Masimo financing)"
+   },
+   {
+    "name": "Other",
+    "currency": "USD",
+    "principal_local_m": null,
+    "coupon_pct": null,
+    "maturity": null,
+    "carrying_usd_m_2026_06_26": 1,
+    "carrying_usd_m_2025_12_31": 1,
+    "issuer": ""
+   }
+  ],
+  "total_debt": 26558,
+  "currently_payable": 1411,
+  "long_term_debt": 25147,
+  "total_debt_dec25": 18418,
+  "currently_payable_dec25": 2,
+  "long_term_debt_dec25": 18416,
+  "current_portion_composition_derived": "2026 Euronotes 912 + 2027 CHF Notes 308 + 2027 Yen Notes 190 + other ~1 (derived)",
+  "debt_discounts_premiums_issuance_costs": {
+   "q2_26": 130,
+   "dec25": 93
+  },
+  "cash_and_equivalents_q2_26": {
+   "value": 4348,
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) cash flow statement / MD&A (~$4.3bn)"
+  },
+  "weighted_average_rates": {
+   "value": {
+    "euro_cp_pct": 2.5
+   },
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 10; no overall weighted average disclosed"
+  },
+  "credit_facilities": {
+   "value": {
+    "multi_year_revolver": {
+     "size": 5000,
+     "expires": "2028-08-11",
+     "drawn": 0
+    },
+    "364_day_facility": {
+     "size": 5000,
+     "expires": "2027-04-15",
+     "drawn": 0
+    }
+   },
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 10"
+  },
+  "contractual_maturities_by_year": {
+   "value": null,
+   "source": "Not disclosed in Q2-26 10-Q"
+  },
+  "maturities_by_year_derived_carrying_usd": {
+   "value": {
+    "2026": 912,
+    "2027": 1181,
+    "2028": 2249,
+    "2029": 1198,
+    "2030": 1760,
+    "2031": 2134,
+    "2032": 328,
+    "2033": 569,
+    "2034": 848,
+    "2036": 272,
+    "2037": 276,
+    "2038": 1587,
+    "2039": 2302,
+    "2041": 795,
+    "2045": 653,
+    "2046": 616,
+    "2049": 1736,
+    "2050": 983,
+    "2051": 986,
+    "2056": 469
+   },
+   "source": "Derived from carrying amounts in Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 10 table, excluding euro CP 4,703 (classified long-term) and other 1; carrying amounts net of discounts/costs, FX at 26-Jun-2026"
+  },
+  "post_quarter_events": {
+   "value": "2.1% 2026 Euronotes (EUR 800m) matured 30-Sep-2026; NYSE filed Form 25-NSE for a matured Danaher security on 2026-09-30 (consistent with this repayment; inferred)",
+   "source": "EDGAR submissions (25-NSE accession 0000876661-26-000802); maturity per Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 10"
+  }
+ },
+ "debt_maturities_2025_10k": {
+  "source": "2025 10-K (dhr-20251231, filed 2026-02-24) Note 13 Financing, 'minimum principal payments for the next five years'",
+  "2026": 2410,
+  "2027": 2305,
+  "2028": 1726,
+  "2029": 1203,
+  "2030": 935,
+  "thereafter": 9839
+ },
+ "amort_schedule": {
+  "source_10k": "2025 10-K (dhr-20251231, filed 2026-02-24) Note 10 Goodwill and Other Intangible Assets: 'Based on the intangible assets recorded as of December 31, 2025' (pre-Masimo)",
+  "by_year_10k": {
+   "2026": 1700,
+   "2027": 1600,
+   "2028": 1600,
+   "2029": 1600,
+   "2030": 1400
+  },
+  "historical": {
+   "2023": 1500,
+   "2024": 1600,
+   "2025": 1700
+  },
+  "q2_26_10q": "No forward amortization schedule in Q2-26 10-Q",
+  "guidance_incl_masimo": {
+   "value": {
+    "Q3_26": 500,
+    "FY_26": 1900
+   },
+   "source": "Q2-26 earnings release, 8-K Ex.99.1 filed 2026-07-21 Other Forward-Looking Information (~$0.5bn Q3, ~$1.9bn FY2026)"
+  },
+  "actual_q2_26_segment_amortization": {
+   "value": 463,
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 5 segment table (Q2-26 total amortization of intangible assets)"
+  }
+ },
+ "buybacks": {
+  "Q1_26": {
+   "value": {
+    "shares_m": 0,
+    "usd_m": 0
+   },
+   "source": "Q1-26 10-Q (dhr-20260327, filed 2026-04-21) Part II Item 2 ('Neither the Company nor any affiliated purchaser repurchased any shares')"
+  },
+  "Q2_26": {
+   "value": {
+    "shares_m": 5.0,
+    "usd_m_incl_excise": 903,
+    "avg_price_ex_excise": 178.71,
+    "cash_paid_H1": 894,
+    "monthly": {
+     "Mar28-Apr24": [
+      1030250,
+      177.96
+     ],
+     "Apr25-May22": [
+      3969750,
+      178.91
+     ],
+     "May23-Jun26": [
+      0,
+      null
+     ]
+    },
+    "program_split": "~2.0m under 2024 program, ~3.0m under 2025 program (Note 13; Item 2 table footnotes imply 0.97m/4.03m)"
+   },
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 13 and Part II Item 2"
+  },
+  "remaining_authorization": {
+   "value": {
+    "shares_m": 32.0,
+    "program": "2025 Repurchase Program (35m shares approved 9-Sep-2025)",
+    "2024_program_remaining": 0
+   },
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 13"
+  },
+  "new_authorization_2026": {
+   "value": null,
+   "source": "None disclosed in 2026 filings reviewed"
+  },
+  "excise_tax_paid_Q2_26": {
+   "value": 27,
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 13"
+  }
+ },
+ "dividends": {
+  "q1_26_declared_per_share": {
+   "value": 0.4,
+   "source": "Q1-26 10-Q (dhr-20260327, filed 2026-04-21) MD&A Dividends (payable 24-Apr-2026, record 27-Mar-2026)"
+  },
+  "q2_26_declared_per_share": {
+   "value": 0.4,
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) MD&A Dividends (payable 31-Jul-2026, record 26-Jun-2026)"
+  },
+  "prior_rate": {
+   "value": 0.32,
+   "source": "2025 10-K (dhr-20251231, filed 2026-02-24) (paid 30-Jan-2026, record 26-Dec-2025)"
+  },
+  "raise_date": {
+   "value": null,
+   "source": "Exact declaration date not disclosed; raise from $0.32 to $0.40 (+25%) occurred with the Q1-26 declaration (Q1-26 10-Q (dhr-20260327, filed 2026-04-21))"
+  },
+  "dividends_declared_usd": {
+   "value": {
+    "Q2_26": 281,
+    "H1_26": 564
+   },
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) statement of stockholders' equity"
+  },
+  "dividends_paid_H1_26": {
+   "value": 509,
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) cash flow statement"
+  }
+ },
+ "tax": {
+  "etr_guidance": {
+   "value": {
+    "remainder_2026_pct": 17.0,
+    "FY26_and_Q3_26_pct": 17.0
+   },
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) MD&A Income Taxes; Q2-26 earnings release, 8-K Ex.99.1 filed 2026-07-21; same ~17.0% in Jan-26 and Apr-26 releases"
+  },
+  "actual_etr": {
+   "value": {
+    "Q2_26": 19.3,
+    "H1_26": 17.9,
+    "Q2_25": 15.3,
+    "H1_25": 15.4,
+    "Q2_26_discrete_charges": 21
+   },
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 6"
+  }
+ },
+ "guidance_2026": {
+  "value": {
+   "core_revenue_growth_FY": "3.0%-4.0%",
+   "core_revenue_growth_Q3": "2.0%-3.0%",
+   "adj_eps_FY": "8.45-8.60 (prior 8.35-8.55; initial 8.35-8.50)",
+   "adj_op_margin_Q3": "~26.5%",
+   "fx_impact_sales": {
+    "Q3": "~-1.0%",
+    "FY": "~+0.5%"
+   },
+   "corporate_expense": {
+    "Q3": -90,
+    "FY": -360
+   },
+   "interest_expense_net": {
+    "Q3": -115,
+    "FY": -310
+   },
+   "avg_adj_diluted_shares_m": {
+    "Q3": 707,
+    "FY": 709
+   },
+   "reaffirmed": "2026-08-03 (no change)"
+  },
+  "source": "Q2-26 earnings release, 8-K Ex.99.1 filed 2026-07-21 Outlook / Other Forward-Looking Information; 8-K 2026-08-03 Item 8.01"
+ },
+ "pension": null,
+ "other_2026": [
+  {
+   "date": "2026-02-05",
+   "event": "Director Jessica L. Mega retired from the Board",
+   "source": "8-K filed 2026-02-10 Item 5.02"
+  },
+  {
+   "date": "2026-02-16",
+   "event": "Definitive agreement to acquire Masimo ($180/sh cash, ~$9.9bn EV)",
+   "source": "8-K filed 2026-02-17"
+  },
+  {
+   "date": "2026-03-18",
+   "event": "Repaid EUR 1.3bn 0.2% 2026 Biopharma Euronotes at maturity (cash + CP)",
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 10"
+  },
+  {
+   "date": "2026-04-16",
+   "event": "New $5.0bn 364-day revolving credit facility (expires 15-Apr-2027)",
+   "source": "8-K filed 2026-04-17"
+  },
+  {
+   "date": "2026-04-29",
+   "event": "Issued EUR 3.0bn Masimo Financing Euronotes (priced 22-Apr)",
+   "source": "8-K filed 2026-04-29 (Items 1.01/8.01) + FWP filed 2026-04-22"
+  },
+  {
+   "date": "2026-05-05",
+   "event": "AGM: shareholders approved A&R Omnibus Incentive Plan (+20m share reserve, term to 5-May-2036); all 11 directors elected",
+   "source": "8-K filed 2026-05-07 Items 5.02/5.07"
+  },
+  {
+   "date": "2026-06-03",
+   "event": "Issued CHF 2.383bn private-placement notes via DH Masi Finance",
+   "source": "8-K filed 2026-06-03 (Item 8.01)"
+  },
+  {
+   "date": "2026-06-10",
+   "event": "Masimo acquisition closed (earlier than the 2H26 expectation)",
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 2; Q2-26 earnings release, 8-K Ex.99.1 filed 2026-07-21"
+  },
+  {
+   "date": "2026-07 (early)",
+   "event": "Leica Biosystems announced intention to acquire StatLab (~$250m 2025 revenue); expected close by YE2026",
+   "source": "Q2-26 earnings release, 8-K Ex.99.1 filed 2026-07-21"
+  },
+  {
+   "date": "2026-07-21",
+   "event": "Q2 results; FY26 adj EPS guidance raised to $8.45-8.60",
+   "source": "Q2-26 earnings release, 8-K Ex.99.1 filed 2026-07-21"
+  },
+  {
+   "date": "2026-07-31",
+   "event": "Long-Term Growth Program: special awards to Steven and Mitchell Rales (1.0m options + 0.5m RSUs each, vest 50% yr4/50% yr5), CFO Gugino LTG award $12.5m target, RSUs to Riley ($8.0m) and Gutierrez-Ramos ($2.625m); SBC from LTG program to be excluded from adjusted EPS",
+   "source": "8-K filed 2026-08-03 Items 5.02/8.01"
+  },
+  {
+   "date": "2026-08-03",
+   "event": "Julie Sawyer Montgomery appointed President & CEO and director effective 2026-10-01; Rainer Blair steps down as CEO/director, Senior Advisor to 31-Dec-2026 then consultant to 31-Mar-2027; guidance unchanged",
+   "source": "8-K filed 2026-08-03 Item 5.02 and Ex.99.1"
+  },
+  {
+   "date": "2026-09-30",
+   "event": "2.1% EUR 800m 2026 Euronotes matured; Form 25-NSE filed by NYSE same day (inferred link)",
+   "source": "Q2-26 10-Q (dhr-20260626, filed 2026-07-21) Note 10; EDGAR 25-NSE 0000876661-26-000802"
+  },
+  {
+   "date": "2026-10-01",
+   "event": "CEO transition effective (Sawyer Montgomery)",
+   "source": "8-K filed 2026-08-03"
+  }
+ ]
+}

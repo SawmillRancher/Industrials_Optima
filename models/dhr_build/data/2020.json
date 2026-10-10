@@ -1,0 +1,723 @@
+{
+ "period": "2020",
+ "period_end": "2020-12-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/313616/000031361621000006/dhr-2021128xex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/313616/000031361621000045/dhr-20201231.htm"
+ },
+ "is": {
+  "sales": 22284.0,
+  "cogs": 9809.0,
+  "gp": 12475.0,
+  "sga": 6896.0,
+  "rnd": 1348.0,
+  "other_op_lines": [],
+  "op_profit": 4231.0,
+  "nonop_lines": [
+   [
+    "Other income (expense), net",
+    39.0
+   ],
+   [
+    "Gain on sale of product lines",
+    455.0
+   ],
+   [
+    "Loss on early extinguishment of borrowings",
+    -26.0
+   ]
+  ],
+  "interest_exp": 275.0,
+  "interest_inc": 71.0,
+  "ebt": 4495.0,
+  "tax": 849.0,
+  "cont_ops": 3646.0,
+  "disc_ops": 0.0,
+  "net_income": 3646.0,
+  "nci": null,
+  "pref_div": 136.0,
+  "ni_common": 3510.0,
+  "shares_basic": 706.2,
+  "shares_diluted": 718.7,
+  "eps_basic_cont": 4.97,
+  "eps_dil_cont": 4.89,
+  "eps_dil": 4.89,
+  "dps": 0.72,
+  "per_share_basis": "post_split"
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Life Sciences",
+    "sales": 10576.0,
+    "op_profit": 2054.0,
+    "amort": 870.0,
+    "dep": 183.0,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 52.0,
+    "growth_acq": -46.5,
+    "growth_fx": 0.0,
+    "growth_core": 5.5,
+    "growth_cytiva": 7.5,
+    "core_incl_cytiva": 13.0
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 7403.0,
+    "op_profit": 1538.0,
+    "amort": 205.0,
+    "dep": 397.0,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 13.0,
+    "growth_acq": 0.0,
+    "growth_fx": 0.5,
+    "growth_core": 13.5
+   },
+   {
+    "name": "Environmental & Applied Solutions",
+    "sales": 4305.0,
+    "op_profit": 979.0,
+    "amort": 63.0,
+    "dep": 47.0,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": -2.0,
+    "growth_acq": 0.0,
+    "growth_fx": 0.5,
+    "growth_core": -1.5
+   }
+  ],
+  "other_op_profit": -340.0,
+  "total_growth": {
+   "total": 24.5,
+   "acq": -18.0,
+   "fx": 0.0,
+   "core": 6.5,
+   "other": 3.0,
+   "other_label": "Impact of Cytiva sales growth (net of divested product lines) -> core sales growth including Cytiva (non-GAAP) 9.5%"
+  },
+  "respiratory_sales": null,
+  "core_ex_resp": null,
+  "recurring_pct": 71.7,
+  "seg_note": "Three segments: Life Sciences (incl. Cytiva from 31-Mar-2020), Diagnostics, Environmental & Applied Solutions (+ Other = unallocated corporate, -340). Segment sales / OP from 10-K Note (segment information); segment depreciation / amortization of intangibles and growth tables from 10-K MD&A. Core sales growth including Cytiva: total 9.5% (Cytiva +3.0pt), Life Sciences 13.0% (+7.5pt; extra keys growth_cytiva / core_incl_cytiva). Diagnostics and EAS have no acquisitions line / '—' (0.0); total-company currency '—' (0.0). recurring_pct computed = recurring revenue 15,978 / sales 22,284 (10-K revenue note)."
+ },
+ "ngaap": {
+  "adj_eps_pub": 6.31,
+  "eps_bridge_start": 4.89,
+  "eps_bridge_start_label": "Diluted Net Earnings Per Common Share from Continuing Operations (GAAP)",
+  "eps_bridge": [
+   [
+    "Pretax amortization of acquisition-related intangible assets",
+    1.55
+   ],
+   [
+    "Pretax acquisition-related fair value adjustments to inventory and deferred revenue, incremental transaction costs deemed significant and integration preparation costs, in each case related to the acquisition of Cytiva",
+    0.77
+   ],
+   [
+    "Loss on early extinguishment of debt",
+    0.04
+   ],
+   [
+    "Loss on partial settlement of a defined benefit plan",
+    0.0
+   ],
+   [
+    "Pretax impairment charges related to a facility in the Diagnostics segment in the first quarter of 2020, trade name and other intangible assets in the Environmental & Applied Solutions segment in the first quarter of 2020 and trade names in the Environmental & Applied Solutions segment in the third of quarter 2020",
+    0.03
+   ],
+   [
+    "Pretax fair value (gains) and losses on the Company's equity and limited partnership investments",
+    -0.02
+   ],
+   [
+    "Gain on the sale of certain product lines in the Life Sciences segment in the second quarter of 2020",
+    -0.62
+   ],
+   [
+    "Tax effect of all adjustments reflected above",
+    -0.27
+   ],
+   [
+    "Discrete tax adjustments and other tax-related adjustments",
+    -0.12
+   ],
+   [
+    "Declared dividends on the MCPS assuming “if-converted” method",
+    0.06
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Pretax amortization of acquisition-related intangible assets",
+    1138.0,
+    915.0,
+    "op"
+   ],
+   [
+    "Pretax fair value adjustments to inventory and deferred revenue, transaction costs deemed significant and integration preparation costs related to the acquisition of Cytiva",
+    568.0,
+    450.0,
+    "op"
+   ],
+   [
+    "Loss on early extinguishment of debt (make-whole payments on the 2022 Euronotes)",
+    26.0,
+    20.0,
+    "nonop"
+   ],
+   [
+    "Pretax impairment charges (Dx facility and EAS trade name / intangibles Q1-20; EAS trade names Q3-20)",
+    22.0,
+    17.0,
+    "op"
+   ],
+   [
+    "Pretax fair value (gains) and losses on the Company's equity and limited partnership investments",
+    -18.0,
+    -14.0,
+    "nonop"
+   ],
+   [
+    "Gain on the sale of certain product lines in the Life Sciences segment",
+    -455.0,
+    -305.0,
+    "nonop"
+   ],
+   [
+    "Discrete tax adjustments and other tax-related adjustments (net discrete tax gains)",
+    null,
+    -85.0,
+    "tax"
+   ],
+   [
+    "Declared dividends on the MCPS assuming “if-converted” method",
+    null,
+    136.0,
+    "below_ni"
+   ]
+  ],
+  "amort_pretax": 1138.0,
+  "adj_op_pub": null,
+  "adj_op_margin_pub": null,
+  "fcf_pub": 5426.0,
+  "capex_pub": -791.0,
+  "capex_disposals_pub": 2.0,
+  "cfo_pub_period": 6215.0,
+  "guidance": "Q1-21: core sales growth (excl. Cytiva) +high-single to low-double digit; Cytiva impact >500 bps; core sales growth including Cytiva +mid to high-teens. FY2021: core sales growth (excl. Cytiva) +high-single to low-double digit; Cytiva impact >100 bps; core sales growth including Cytiva +low-double digit. No EPS guidance. 10-K: 2021 capital expenditures ~$1.0-1.2bn (COVID-19 testing / vaccine capacity).",
+  "notes": "Adjusted diluted EPS from continuing ops adds back pretax amortization, Cytiva fair-value adjustments to inventory / deferred revenue and significant transaction & integration costs, LOEE, impairments, deducts net fair-value gains on equity / LP investments and the $455m gain on the Cytiva-related LS product-line divestiture, tax effect, discrete tax items (net gains $85m), and MCPS dividends (Series A + B) under the if-converted method (adjusted diluted shares 735.8m = 718.7m + 17.1m converted). MCPS item amount = IS MCPS dividends 136. FCF = 'Free Cash Flow from Continuing Operations' (full year)."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "net_income": 3646.0,
+  "disc_ops_ni": 0.0,
+  "dep": 637.0,
+  "amort": 1138.0,
+  "sbc": 187.0,
+  "deferred_tax": 518.0,
+  "impair": null,
+  "gains": -455.0,
+  "wc_change": 87.0,
+  "cfo_cont": 6215.0,
+  "cfo_disc": -7.0,
+  "cfo": 6208.0,
+  "capex": -791.0,
+  "capex_disposals": 2.0,
+  "acquisitions": -20971.0,
+  "divest": 826.0,
+  "invest_purch": -342.0,
+  "invest_sales": 13.0,
+  "cfi_disc": 0.0,
+  "cfi": -21239.0,
+  "stock_iss": 153.0,
+  "pref_iss": 1668.0,
+  "dividends": -615.0,
+  "buyback": null,
+  "debt_net_short": -4637.0,
+  "debt_proceeds": 8670.0,
+  "debt_repay": -5933.0,
+  "spin_cash": 0.0,
+  "cff_disc": null,
+  "cff": 1006.0,
+  "fx": 148.0,
+  "net_change": -13877.0,
+  "cash_begin": 19912.0,
+  "cash_end": 6035.0,
+  "cash_basis": "cash",
+  "equity_offering": 1729.0,
+  "lines_raw": [
+   [
+    "2020",
+    2019.0
+   ],
+   [
+    "Net earnings",
+    3646.0
+   ],
+   [
+    "Less: earnings from discontinued operations, net of income taxes",
+    0.0
+   ],
+   [
+    "Net earnings from continuing operations",
+    3646.0
+   ],
+   [
+    "Depreciation",
+    637.0
+   ],
+   [
+    "Amortization of intangible assets",
+    1138.0
+   ],
+   [
+    "Amortization of acquisition-related inventory fair value step-up",
+    457.0
+   ],
+   [
+    "Stock-based compensation expense",
+    187.0
+   ],
+   [
+    "Pretax gain on sale of product lines",
+    -455.0
+   ],
+   [
+    "Change in deferred income taxes",
+    518.0
+   ],
+   [
+    "Change in trade accounts receivable, net",
+    -264.0
+   ],
+   [
+    "Change in inventories",
+    -123.0
+   ],
+   [
+    "Change in trade accounts payable",
+    227.0
+   ],
+   [
+    "Change in prepaid expenses and other assets",
+    102.0
+   ],
+   [
+    "Change in accrued expenses and other liabilities",
+    145.0
+   ],
+   [
+    "Total operating cash provided by continuing operations",
+    6215.0
+   ],
+   [
+    "Total operating cash (used in) provided by discontinued operations",
+    -7.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    6208.0
+   ],
+   [
+    "Cash paid for acquisitions",
+    -20971.0
+   ],
+   [
+    "Payments for additions to property, plant and equipment",
+    -791.0
+   ],
+   [
+    "Proceeds from sales of property, plant and equipment",
+    2.0
+   ],
+   [
+    "Payments for purchases of investments",
+    -342.0
+   ],
+   [
+    "Proceeds from sales of investments",
+    13.0
+   ],
+   [
+    "Proceeds from sale of product lines",
+    826.0
+   ],
+   [
+    "All other investing activities",
+    24.0
+   ],
+   [
+    "Total investing cash used in continuing operations",
+    -21239.0
+   ],
+   [
+    "Total investing cash used in discontinued operations",
+    0.0
+   ],
+   [
+    "Net cash used in investing activities",
+    -21239.0
+   ],
+   [
+    "Proceeds from the issuance of common stock in connection with stock-based compensation",
+    153.0
+   ],
+   [
+    "Proceeds from the public offering of common stock, net of issuance costs",
+    1729.0
+   ],
+   [
+    "Proceeds from the public offering of preferred stock, net of issuance costs",
+    1668.0
+   ],
+   [
+    "Net proceeds from the sale of Envista Holdings Corporation common stock, net of issuance costs",
+    0.0
+   ],
+   [
+    "Payment of dividends",
+    -615.0
+   ],
+   [
+    "Net (repayments of) proceeds from borrowings (maturities of 90 days or less)",
+    -4637.0
+   ],
+   [
+    "Proceeds from borrowings (maturities longer than 90 days)",
+    8670.0
+   ],
+   [
+    "Repayments of borrowings (maturities longer than 90 days)",
+    -5933.0
+   ],
+   [
+    "Make-whole premiums to redeem borrowings prior to maturity",
+    -26.0
+   ],
+   [
+    "All other financing activities",
+    -3.0
+   ],
+   [
+    "Total financing cash provided by (used in) continuing operations",
+    1006.0
+   ],
+   [
+    "Cash distributions to Envista Holdings Corporation, net",
+    0.0
+   ],
+   [
+    "Net cash provided by (used in) financing activities",
+    1006.0
+   ],
+   [
+    "Effect of exchange rate changes on cash and equivalents",
+    148.0
+   ],
+   [
+    "Net change in cash and equivalents",
+    -13877.0
+   ],
+   [
+    "Beginning balance of cash and equivalents",
+    19912.0
+   ],
+   [
+    "Ending balance of cash and equivalents",
+    6035.0
+   ],
+   [
+    "Shares redeemed through the split-off of Envista Holdings Corporation ( 22.9 million shares held as Treasury shares)",
+    0.0
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 6035.0,
+  "ar": 4045.0,
+  "inventories": 2292.0,
+  "prepaid_other": 1430.0,
+  "ca_disc": null,
+  "tca": 13802.0,
+  "ppe": 3262.0,
+  "other_lta": 2395.0,
+  "nca_disc": null,
+  "goodwill": 35420.0,
+  "intangibles": 21282.0,
+  "ta": 76161.0,
+  "st_debt": 11.0,
+  "ap": 2049.0,
+  "accrued": 5342.0,
+  "cl_disc": null,
+  "tcl": 7402.0,
+  "other_ltl": 7789.0,
+  "ncl_disc": null,
+  "ltd": 21193.0,
+  "pref": 3268.0,
+  "common": 9.0,
+  "apic": 9698.0,
+  "treasury": null,
+  "retained": 27159.0,
+  "aoci": -368.0,
+  "dhr_equity": 39766.0,
+  "nci": 11.0,
+  "te": 39777.0,
+  "tle": 76161.0,
+  "shares_out": 711.0,
+  "lines_raw": [
+   [
+    "2020",
+    2019.0
+   ],
+   [
+    "Cash and equivalents",
+    6035.0
+   ],
+   [
+    "Trade accounts receivable, less allowance for doubtful accounts of $ 132 as of December 31, 2020 and $ 104 as of December 31, 2019",
+    4045.0
+   ],
+   [
+    "Inventories",
+    2292.0
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    1430.0
+   ],
+   [
+    "Total current assets",
+    13802.0
+   ],
+   [
+    "Property, plant and equipment, net",
+    3262.0
+   ],
+   [
+    "Other long-term assets",
+    2395.0
+   ],
+   [
+    "Goodwill",
+    35420.0
+   ],
+   [
+    "Other intangible assets, net",
+    21282.0
+   ],
+   [
+    "Total assets",
+    76161.0
+   ],
+   [
+    "Notes payable and current portion of long-term debt",
+    11.0
+   ],
+   [
+    "Trade accounts payable",
+    2049.0
+   ],
+   [
+    "Accrued expenses and other liabilities",
+    5342.0
+   ],
+   [
+    "Total current liabilities",
+    7402.0
+   ],
+   [
+    "Other long-term liabilities",
+    7789.0
+   ],
+   [
+    "Long-term debt",
+    21193.0
+   ],
+   [
+    "Preferred stock, no par value, 15.0 million shares authorized; 1.65 million shares of 4.75 % Mandatory Convertible Preferred Stock, Series A, issued and outstanding as of December 31, 2020 and December 31, 2019; 1.72 million shares of 5.00 % Mandatory Convertible Preferred Stock, Series B, issued and outstanding as of December 31, 2020 and no shares issued or outstanding as of December 31, 2019",
+    3268.0
+   ],
+   [
+    "Common stock - $ 0.01 par value, 2.0 billion shares authorized; 851.3 million issued and 711.0 million outstanding as of December 31, 2020; 835.5 million issued and 695.5 million outstanding as of December 31, 2019",
+    9.0
+   ],
+   [
+    "Additional paid-in capital",
+    9698.0
+   ],
+   [
+    "Retained earnings",
+    27159.0
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    -368.0
+   ],
+   [
+    "Total Danaher stockholders’ equity",
+    39766.0
+   ],
+   [
+    "Noncontrolling interests",
+    11.0
+   ],
+   [
+    "Total stockholders’ equity",
+    39777.0
+   ],
+   [
+    "Total liabilities and stockholders’ equity",
+    76161.0
+   ]
+  ]
+ },
+ "py": {
+  "restated": false,
+  "notes": "2019 comparative as presented in the 2020 10-K (whole $m) matches the 2019 10-K / Q4-19 release as originally reported (already on the post-Envista continuing-operations basis: sales 17,911.1, OP 3,269.4, cont ops 2,432.3, adj EPS 4.42); differences are rounding only.",
+  "is": {
+   "sales": 17911.0,
+   "cogs": 7927.0,
+   "sga": 5589.0,
+   "rnd": 1126.0,
+   "other_op": 0.0,
+   "op_profit": 3269.0,
+   "nonop": 5.0,
+   "interest_exp": 108.0,
+   "interest_inc": 139.0,
+   "ebt": 3305.0,
+   "tax": 873.0,
+   "cont_ops": 2432.0,
+   "disc_ops": 576.0,
+   "net_income": 3008.0,
+   "pref_div": 68.0,
+   "shares_basic": 715.0,
+   "shares_diluted": 725.5,
+   "eps_dil_cont": 3.26,
+   "eps_dil": 4.05
+  },
+  "segments": [
+   {
+    "name": "Life Sciences",
+    "sales": 6951.0,
+    "op_profit": 1401.0
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 6561.0,
+    "op_profit": 1134.0
+   },
+   {
+    "name": "Environmental & Applied Solutions",
+    "sales": 4399.0,
+    "op_profit": 1052.0
+   }
+  ],
+  "other_op_profit": -318.0,
+  "adj_eps_pub": 4.42,
+  "amort_pretax": 625.0
+ },
+ "extra": {
+  "employees": 69000,
+  "dep": 637.0,
+  "amort": 1138.0,
+  "seg_extra": [
+   {
+    "name": "Life Sciences",
+    "dep_amort": 1053.0,
+    "capex": 306.0,
+    "assets": 48919.0
+   },
+   {
+    "name": "Diagnostics",
+    "dep_amort": 602.0,
+    "capex": 447.0,
+    "assets": 15042.0
+   },
+   {
+    "name": "Environmental & Applied Solutions",
+    "dep_amort": 110.0,
+    "capex": 36.0,
+    "assets": 5083.0
+   },
+   {
+    "name": "Other",
+    "dep_amort": 10.0,
+    "capex": 2.0,
+    "assets": 7117.0
+   }
+  ],
+  "acquisitions": [
+   [
+    "Cytiva (GE Biopharma business of GE Life Sciences)",
+    "2020-03-31",
+    20700.0,
+    "Life Sciences"
+   ],
+   [
+    "Four other businesses (aggregate; complement LS and EAS units)",
+    "2020",
+    256.0,
+    "Life Sciences / Environmental & Applied Solutions"
+   ]
+  ],
+  "divestitures": [
+   [
+    "Certain Life Sciences product lines divested for Cytiva regulatory approval (~$170m 2019 revenue)",
+    "2020-04-30",
+    "Cash proceeds net of cash transferred and costs $826m; pretax gain $455m ($305m after-tax, $0.42/sh); not discontinued operations"
+   ]
+  ],
+  "debt_maturities": [
+   [
+    "2021",
+    11.0
+   ],
+   [
+    "2022",
+    1014.0
+   ],
+   [
+    "2023",
+    597.0
+   ],
+   [
+    "2024",
+    2688.0
+   ],
+   [
+    "2025",
+    1468.0
+   ],
+   [
+    "Thereafter",
+    15426.0
+   ]
+  ],
+  "amort_schedule": [
+   [
+    "2021",
+    1380.0
+   ],
+   [
+    "2022",
+    1362.0
+   ],
+   [
+    "2023",
+    1357.0
+   ],
+   [
+    "2024",
+    1316.0
+   ],
+   [
+    "2025",
+    1291.0
+   ]
+  ],
+  "notes": "Cytiva: cash purchase price ~$20.7bn (net of ~$0.1bn cash acquired) plus ~$0.4bn pension liabilities assumed; ~$3.3bn 2019 revenue; 2020 acquisitions added ~$10.4bn goodwill and ~$10.7bn intangibles. Financed with ~$3.0bn from the 2019 common + MCPS Series A offerings, 2019 notes, commercial paper and May-2020 common (1,729) + MCPS Series B (1,668) offerings. Employees ~69,000 (~24,000 US). Segment dep / amort per segment from MD&A; seg_extra.dep_amort, capex, identifiable assets from the segment note. Debt maturities = minimum principal payments (10-K debt note)."
+ },
+ "notes": "Annual record: IS, BS, CF, segments, debt, employees from the 2020 10-K (whole $ millions as published; identical to the Q4-20 release). CF = 10-K full year 2020 (whole $m). Computed: cf.wc_change = sum of five 'Change in ...' lines (87). 'Amortization of acquisition-related inventory fair value step-up' 457 (Cytiva) and make-whole premiums (26) kept only in lines_raw. cf.gains = pretax gain on sale of product lines (455); cf.divest 826 (Cytiva regulatory divestiture of LS product lines, 30-Apr-2020). cf.stock_iss = stock-comp proceeds 153 only; May-2020 public offerings: common 1,729 in cf.equity_offering, 5.0% MCPS Series B 1,668 in cf.pref_iss. cf.spin_cash 0.0 (Envista sale / distribution lines shown '—' for 2020). cf.acquisitions (20,971) = Cytiva ~20,715 + four other businesses 256. Cash 6,035 at year end (vs 19,912 pre-funded at end-2019). is.dps 0.72 COMPUTED = four regular quarterly dividends of $0.18 declared in 2020 (Q1-Q3 10-Qs, 10-K); 10-K equity statement shows common dividends declared 509 and MCPS dividends declared 136. is.nci null (no NCI line on the IS). bs.treasury null (no separate line). Shares outstanding 711.0m per BS parenthetical. All self-checks pass."
+}

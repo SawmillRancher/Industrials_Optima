@@ -1,0 +1,570 @@
+{
+ "period": "Q4-24",
+ "period_end": "2024-12-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/313616/000031361625000004/dhr-20250129xex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/313616/000031361625000043/dhr-20241231.htm",
+  "adj_op_source": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000004/dhr-20260128xex991.htm"
+ },
+ "is": {
+  "sales": 6538.0,
+  "cogs": 2648.0,
+  "gp": 3890.0,
+  "sga": 2023.0,
+  "rnd": 442.0,
+  "other_op_lines": [],
+  "op_profit": 1425.0,
+  "nonop_lines": [
+   [
+    "Other income (expense), net",
+    -63.0
+   ]
+  ],
+  "interest_exp": 61.0,
+  "interest_inc": 14.0,
+  "ebt": 1315.0,
+  "tax": 229.0,
+  "cont_ops": 1086.0,
+  "disc_ops": 0.0,
+  "net_income": 1086.0,
+  "nci": null,
+  "pref_div": 0.0,
+  "ni_common": null,
+  "shares_basic": 722.7,
+  "shares_diluted": 728.2,
+  "eps_basic_cont": 1.5,
+  "eps_dil_cont": 1.49,
+  "eps_dil": 1.49,
+  "dps": 0.27,
+  "per_share_basis": "post_split"
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Biotechnology",
+    "sales": 1869.0,
+    "op_profit": 508.0,
+    "amort": 213.0,
+    "dep": 38.0,
+    "adj_op": 721.0,
+    "other_adj": 0.0,
+    "growth_total": 6.5,
+    "growth_acq": 0.0,
+    "growth_fx": 1.5,
+    "growth_core": 8.0
+   },
+   {
+    "name": "Life Sciences",
+    "sales": 2032.0,
+    "op_profit": 376.0,
+    "amort": 148.0,
+    "dep": 44.0,
+    "adj_op": 524.0,
+    "other_adj": 0.0,
+    "growth_total": 5.5,
+    "growth_acq": -5.0,
+    "growth_fx": 0.5,
+    "growth_core": 1.0
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 2637.0,
+    "op_profit": 624.0,
+    "amort": 47.0,
+    "dep": 102.0,
+    "adj_op": 770.0,
+    "other_adj": 99.0,
+    "growth_total": -3.0,
+    "growth_acq": 0.0,
+    "growth_fx": 1.0,
+    "growth_core": -2.0
+   }
+  ],
+  "other_op_profit": -83.0,
+  "total_growth": {
+   "total": 2.0,
+   "acq": -1.5,
+   "fx": 0.5,
+   "core": 1.0,
+   "other": null,
+   "other_label": null
+  },
+  "respiratory_sales": null,
+  "core_ex_resp": null,
+  "recurring_pct": 78.1,
+  "seg_note": "Three segments: Biotechnology, Life Sciences, Diagnostics (+ Other, -83). Segment sales / OP from the Q4-24 release segment table (three-month); growth from the Q4-24 release. Segment amortization, depreciation, Other Operating Profit Adjustments and Adjusted Operating Profit for Q4-24 are from the Q4-25 release (filed 2026-01-28) segment table, prior-year column (amort/dep agree with FY 2024 10-K less 9M Q3-24 10-Q). Diagnostics other_adj 99 = $43m trade-name impairment + $56m loss on termination of a commercial agreement. recurring_pct computed = (FY recurring 19,366 per 10-K - 9M recurring 14,261 per Q3-24 10-Q) / 6,538. No respiratory revenue figure disclosed."
+ },
+ "ngaap": {
+  "adj_eps_pub": 2.14,
+  "eps_bridge_start": 1.49,
+  "eps_bridge_start_label": "Diluted Net Earnings Per Common Share From Continuing Operations (GAAP)",
+  "eps_bridge": [
+   [
+    "Amortization of acquisition-related intangible assets",
+    0.56
+   ],
+   [
+    "Fair value net (gains) losses on investments",
+    0.09
+   ],
+   [
+    "Impairments",
+    0.06
+   ],
+   [
+    "Acquisition-related items",
+    0.0
+   ],
+   [
+    "Litigation gains",
+    0.0
+   ],
+   [
+    "Contract termination expense",
+    0.08
+   ],
+   [
+    "Tax effect of the above adjustments",
+    -0.13
+   ],
+   [
+    "Discrete tax adjustments",
+    -0.01
+   ],
+   [
+    "MCPS \"as if converted\"",
+    0.0
+   ],
+   [
+    "Rounding",
+    0.0
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Amortization of acquisition-related intangible assets",
+    408.0,
+    338.0,
+    "op"
+   ],
+   [
+    "Fair value net (gains) losses on investments (incl. impairments of equity and limited partnership investments)",
+    64.0,
+    48.0,
+    "nonop"
+   ],
+   [
+    "Impairments (trade name, Diagnostics segment)",
+    43.0,
+    32.0,
+    "op"
+   ],
+   [
+    "Contract termination expense (loss on termination of a commercial agreement, Diagnostics)",
+    56.0,
+    56.0,
+    "op"
+   ],
+   [
+    "Discrete tax adjustments (net discrete tax benefits)",
+    null,
+    -4.0,
+    "tax"
+   ]
+  ],
+  "amort_pretax": 408.0,
+  "adj_op_pub": 1932.0,
+  "adj_op_margin_pub": null,
+  "fcf_pub": 1504.0,
+  "capex_pub": -516.0,
+  "capex_disposals_pub": 1.0,
+  "cfo_pub_period": 2019.0,
+  "guidance": "Q1-25: non-GAAP core revenue expected to decline low-single digits YoY. FY2025: core revenue expected to increase ~3% YoY. (No EPS guidance in the release.)",
+  "notes": "Adjusted diluted EPS from continuing operations adds back amortization of acquisition-related intangibles, fair value net (gains) losses (incl. impairments) on equity & limited partnership investments, impairments, acquisition-related items, contract termination / litigation and other items, net of the aggregate tax effect, and excludes discrete tax items (excess stock-comp tax benefit above ~$7m/quarter). Item after-tax amounts from release footnotes. adj_op_pub (1,932) and segment adj_op / other_adj are from the Q4-25 release (filed 2026-01-28), which first published Adjusted Operating Profit by segment (= GAAP OP + amortization + other operating profit adjustments); the Q4-24 release itself did not publish adjusted operating profit. FCF and three-month CFO from release FCF table."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "net_income": 3899.0,
+  "disc_ops_ni": 0.0,
+  "dep": 721.0,
+  "amort": 1631.0,
+  "sbc": 288.0,
+  "deferred_tax": -483.0,
+  "impair": 265.0,
+  "gains": 57.0,
+  "wc_change": 285.0,
+  "cfo_cont": 6688.0,
+  "cfo_disc": 0.0,
+  "cfo": 6688.0,
+  "capex": -1392.0,
+  "capex_disposals": 13.0,
+  "acquisitions": -558.0,
+  "divest": null,
+  "invest_purch": -331.0,
+  "invest_sales": 253.0,
+  "cfi_disc": 0.0,
+  "cfi": -1981.0,
+  "stock_iss": 162.0,
+  "pref_iss": null,
+  "dividends": -768.0,
+  "buyback": -5979.0,
+  "debt_net_short": 5.0,
+  "debt_proceeds": null,
+  "debt_repay": -1674.0,
+  "spin_cash": 0.0,
+  "cff_disc": null,
+  "cff": -8385.0,
+  "fx": -108.0,
+  "net_change": -3786.0,
+  "cash_begin": 5864.0,
+  "cash_end": 2078.0,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net earnings",
+    3899.0
+   ],
+   [
+    "Less: earnings from discontinued operations, net of income taxes",
+    0.0
+   ],
+   [
+    "Net earnings from continuing operations",
+    3899.0
+   ],
+   [
+    "Depreciation",
+    721.0
+   ],
+   [
+    "Amortization of intangible assets",
+    1631.0
+   ],
+   [
+    "Amortization of acquisition-related inventory fair value step-up",
+    25.0
+   ],
+   [
+    "Stock-based compensation expense",
+    288.0
+   ],
+   [
+    "Investment losses",
+    57.0
+   ],
+   [
+    "Impairment charges",
+    265.0
+   ],
+   [
+    "Change in deferred income taxes",
+    -483.0
+   ],
+   [
+    "Change in trade accounts receivable, net",
+    331.0
+   ],
+   [
+    "Change in inventories",
+    147.0
+   ],
+   [
+    "Change in trade accounts payable",
+    19.0
+   ],
+   [
+    "Change in prepaid expenses and other assets",
+    274.0
+   ],
+   [
+    "Change in accrued expenses and other liabilities",
+    -486.0
+   ],
+   [
+    "Total operating cash provided by continuing operations",
+    6688.0
+   ],
+   [
+    "Total operating cash provided by discontinued operations",
+    0.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    6688.0
+   ],
+   [
+    "Cash paid for acquisitions",
+    -558.0
+   ],
+   [
+    "Payments for additions to property, plant and equipment",
+    -1392.0
+   ],
+   [
+    "Proceeds from sales of property, plant and equipment",
+    13.0
+   ],
+   [
+    "Payments for purchases of investments",
+    -331.0
+   ],
+   [
+    "Proceeds from sales of investments",
+    253.0
+   ],
+   [
+    "All other investing activities",
+    34.0
+   ],
+   [
+    "Total cash used in investing activities from continuing operations",
+    -1981.0
+   ],
+   [
+    "Total investing cash used in discontinued operations",
+    0.0
+   ],
+   [
+    "Net cash used in investing activities",
+    -1981.0
+   ],
+   [
+    "Proceeds from the issuance of common stock in connection with stock-based compensation",
+    162.0
+   ],
+   [
+    "Payment of dividends",
+    -768.0
+   ],
+   [
+    "Net proceeds from (repayments of) borrowings (maturities of 90 days or less)",
+    5.0
+   ],
+   [
+    "Repayments of borrowings (maturities longer than 90 days)",
+    -1674.0
+   ],
+   [
+    "Distribution from discontinued operations",
+    0.0
+   ],
+   [
+    "Payments for repurchase of common stock",
+    -5979.0
+   ],
+   [
+    "All other financing activities",
+    -131.0
+   ],
+   [
+    "Net cash (used in) provided by financing activities for continuing operations",
+    -8385.0
+   ],
+   [
+    "Cash distributions to Veralto Corporation, net",
+    0.0
+   ],
+   [
+    "Net cash used in financing activities",
+    -8385.0
+   ],
+   [
+    "Effect of exchange rate changes on cash and equivalents",
+    -108.0
+   ],
+   [
+    "Net change in cash and equivalents",
+    -3786.0
+   ],
+   [
+    "Beginning balance of cash and equivalents",
+    5864.0
+   ],
+   [
+    "Ending balance of cash and equivalents",
+    2078.0
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 2078.0,
+  "ar": 3537.0,
+  "inventories": 2330.0,
+  "prepaid_other": 1552.0,
+  "ca_disc": null,
+  "tca": 9497.0,
+  "ppe": 4990.0,
+  "other_lta": 3990.0,
+  "nca_disc": null,
+  "goodwill": 40497.0,
+  "intangibles": 18568.0,
+  "ta": 77542.0,
+  "st_debt": 505.0,
+  "ap": 1753.0,
+  "accrued": 4540.0,
+  "cl_disc": null,
+  "tcl": 6798.0,
+  "other_ltl": 5694.0,
+  "ncl_disc": null,
+  "ltd": 15500.0,
+  "pref": null,
+  "common": 9.0,
+  "apic": 16727.0,
+  "treasury": -8163.0,
+  "retained": 44188.0,
+  "aoci": -3218.0,
+  "dhr_equity": 49543.0,
+  "nci": 7.0,
+  "te": 49550.0,
+  "tle": 77542.0,
+  "shares_out": 719.1,
+  "lines_raw": [
+   [
+    "Cash and equivalents",
+    2078.0
+   ],
+   [
+    "Trade accounts receivable, less allowance for doubtful accounts",
+    3537.0
+   ],
+   [
+    "Inventories",
+    2330.0
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    1552.0
+   ],
+   [
+    "Total current assets",
+    9497.0
+   ],
+   [
+    "Property, plant and equipment, net",
+    4990.0
+   ],
+   [
+    "Other long-term assets",
+    3990.0
+   ],
+   [
+    "Goodwill",
+    40497.0
+   ],
+   [
+    "Other intangible assets, net",
+    18568.0
+   ],
+   [
+    "Total assets",
+    77542.0
+   ],
+   [
+    "Notes payable and current portion of long-term debt",
+    505.0
+   ],
+   [
+    "Trade accounts payable",
+    1753.0
+   ],
+   [
+    "Accrued expenses and other liabilities",
+    4540.0
+   ],
+   [
+    "Total current liabilities",
+    6798.0
+   ],
+   [
+    "Other long-term liabilities",
+    5694.0
+   ],
+   [
+    "Long-term debt",
+    15500.0
+   ],
+   [
+    "Common stock - $0.01 par value",
+    9.0
+   ],
+   [
+    "Additional paid-in capital",
+    16727.0
+   ],
+   [
+    "Treasury stock",
+    -8163.0
+   ],
+   [
+    "Retained earnings",
+    44188.0
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    -3218.0
+   ],
+   [
+    "Total Danaher stockholders' equity",
+    49543.0
+   ],
+   [
+    "Noncontrolling interests",
+    7.0
+   ],
+   [
+    "Total stockholders' equity",
+    49550.0
+   ],
+   [
+    "Total liabilities and stockholders' equity",
+    77542.0
+   ]
+  ]
+ },
+ "py": {
+  "restated": false,
+  "notes": "Q4-23 three-month comparative in the Q4-24 release matches the Q4-23 release as originally reported (Veralto already discontinued; sales 6,405, OP 1,337, continuing net earnings 1,121, adjusted EPS 2.09; same three segments).",
+  "is": {
+   "sales": 6405.0,
+   "cogs": 2626.0,
+   "sga": 2035.0,
+   "rnd": 407.0,
+   "other_op": 0.0,
+   "op_profit": 1337.0,
+   "nonop": -137.0,
+   "interest_exp": 85.0,
+   "interest_inc": 117.0,
+   "ebt": 1232.0,
+   "tax": 111.0,
+   "cont_ops": 1121.0,
+   "disc_ops": -42.0,
+   "net_income": 1079.0,
+   "pref_div": 0.0,
+   "shares_basic": 739.8,
+   "shares_diluted": 746.1,
+   "eps_dil_cont": 1.5,
+   "eps_dil": 1.45
+  },
+  "segments": [
+   {
+    "name": "Biotechnology",
+    "sales": 1759.0,
+    "op_profit": 416.0
+   },
+   {
+    "name": "Life Sciences",
+    "sales": 1930.0,
+    "op_profit": 235.0
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 2716.0,
+    "op_profit": 766.0
+   }
+  ],
+  "other_op_profit": -80.0,
+  "adj_eps_pub": 2.09,
+  "amort_pretax": 380.0
+ },
+ "notes": "USD millions as published. Income statement, EPS bridge, growth and segment sales/OP are the Q4-24 release three-month columns (the release publishes them, so no FY-9M derivation needed). Balance sheet and cash flow (FULL-YEAR 2024, ytd_months 12) from the 2024 10-K (identical to the release statements). Computed: cf.wc_change = sum of five 'Change in ...' lines (285); recurring_pct (FY-9M). SG&A includes the $43m Diagnostics trade-name impairment and $56m contract termination loss. 'Amortization of acquisition-related inventory fair value step-up' (25) only in lines_raw; cf.gains = 'Investment losses' (+57). cf.spin_cash = 'Cash distributions to Veralto Corporation, net' (— = 0.0); 'Distribution from discontinued operations' (—) only in lines_raw. cf.debt_proceeds null (no >90-day borrowings line in 2024). 10-K balance sheet now shows Treasury stock (-8,163) separately (Q1-Q3 10-Qs charged repurchases to APIC). DPS 0.27 = quarterly dividend declared in Q4-24 (paid 31-Jan-2025, 10-K). Shares outstanding 719.1m per BS parenthetical. All self-checks pass."
+}

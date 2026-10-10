@@ -1,0 +1,723 @@
+{
+ "period": "2014",
+ "period_end": "2014-12-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/313616/000031361615000026/dhr-2015127xex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/313616/000031361615000038/dhr-20141231x10xk.htm"
+ },
+ "is": {
+  "sales": 19913.8,
+  "cogs": 9471.3,
+  "gp": 10442.5,
+  "sga": 5697.0,
+  "rnd": 1314.2,
+  "other_op_lines": [
+   [
+    "Earnings from unconsolidated joint venture",
+    0.0
+   ]
+  ],
+  "op_profit": 3431.3,
+  "nonop_lines": [
+   [
+    "Other income",
+    156.5
+   ]
+  ],
+  "interest_exp": 122.7,
+  "interest_inc": 16.7,
+  "ebt": 3481.8,
+  "tax": 883.4,
+  "cont_ops": 2598.4,
+  "disc_ops": 0.0,
+  "net_income": 2598.4,
+  "nci": null,
+  "pref_div": null,
+  "ni_common": null,
+  "shares_basic": 702.2,
+  "shares_diluted": 716.1,
+  "eps_basic_cont": 3.7,
+  "eps_dil_cont": 3.63,
+  "eps_dil": 3.63,
+  "dps": 0.4,
+  "per_share_basis": "post_split"
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Test & Measurement",
+    "sales": 3461.9,
+    "op_profit": 657.9,
+    "amort": 91.1,
+    "dep": 41.4,
+    "dep_amort": 132.5,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 1.5,
+    "growth_acq": -2.5,
+    "growth_fx": 0.5,
+    "growth_core": -0.5
+   },
+   {
+    "name": "Environmental",
+    "sales": 3547.3,
+    "op_profit": 705.2,
+    "amort": 36.0,
+    "dep": 49.7,
+    "dep_amort": 85.7,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 7.0,
+    "growth_acq": -3.5,
+    "growth_fx": 1.0,
+    "growth_core": 4.5
+   },
+   {
+    "name": "Life Sciences & Diagnostics",
+    "sales": 7185.7,
+    "op_profit": 1105.9,
+    "amort": 167.1,
+    "dep": 371.9,
+    "dep_amort": 539.0,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 5.0,
+    "growth_acq": -2.0,
+    "growth_fx": 1.5,
+    "growth_core": 4.5
+   },
+   {
+    "name": "Dental",
+    "sales": 2193.1,
+    "op_profit": 304.4,
+    "amort": 49.1,
+    "dep": 35.9,
+    "dep_amort": 85.0,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 4.5,
+    "growth_acq": -3.0,
+    "growth_fx": 1.5,
+    "growth_core": 3.0
+   },
+   {
+    "name": "Industrial Technologies",
+    "sales": 3525.8,
+    "op_profit": 801.3,
+    "amort": 42.6,
+    "dep": 46.2,
+    "dep_amort": 88.8,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 2.5,
+    "growth_acq": 1.0,
+    "growth_fx": 0.5,
+    "growth_core": 4.0
+   }
+  ],
+  "other_op_profit": -143.4,
+  "total_growth": {
+   "total": 4.0,
+   "acq": -1.5,
+   "fx": 1.0,
+   "core": 3.5,
+   "other": null,
+   "other_label": null
+  },
+  "respiratory_sales": null,
+  "core_ex_resp": null,
+  "recurring_pct": null,
+  "seg_note": "Five segments: Test & Measurement, Environmental, Life Sciences & Diagnostics, Dental, Industrial Technologies (+ 'Other' = unallocated corporate). Segment sales / OP / assets / D&A / capex from 10-K Note 19; segment depreciation, amortization and growth components from 10-K MD&A. Industrial Technologies acquisitions line is 'Acquisitions (divestitures), net' (+(1.0)% incl. EVS product line sale). Nobel Biocare (acq. 11-Dec-2014) in Dental (Dental identifiable assets 6,224.3 vs 4,095.1). T&M still includes the communications businesses (later NetScout transaction, 2015). Apex equity-earnings line present in the segment note but nil for 2014 and 2013. Growth sign convention: the 2013 release / 10-Q 'Components of Revenue/Sales Growth' tables present additive components (core/existing + acquisitions + currency = total); values here are stored in the schema's deduction convention (total + acq + fx = core), i.e. acq and fx have the opposite sign to the printed table."
+ },
+ "ngaap": {
+  "adj_eps_pub": 3.68,
+  "eps_bridge_start": 3.63,
+  "eps_bridge_start_label": "Diluted Net Earnings Per Share (GAAP)",
+  "eps_bridge": [
+   [
+    "Impact of discrete tax items in 2014 and 2013 and lower than expected effective tax rate (due primarily to year-end 2014 tax law changes) in the three months and year ended December 31, 2014",
+    0.08
+   ],
+   [
+    "Gain on sale of marketable equity securities in the three months ended December 31, 2014 ($99 million pre-tax, $62 million after tax) and for the year ended December 31, 2014 ($123 million pre-tax, $77 million after-tax) and gain on sale of marketable equity securities for the three months and year ended December 31, 2013 ($202 million pre-tax, $125 million after-tax)",
+    -0.11
+   ],
+   [
+    "Restructuring charges in excess of amounts originally budgeted and publicly communicated in December 2013 for the three months and year ended December 31, 2014 ($94 million pre-tax and $72 million after-tax)",
+    0.1
+   ],
+   [
+    "Acquisition-related transaction costs deemed significant ($12 million pre-tax, $9 million after-tax) for the three months and year ended December 31, 2014 and fair value adjustments to acquisition related inventory ($5 million pre-tax, $4 million after-tax) for the three months and year ended December 31, 2014 in each case incurred in connection with the acquisition of Nobel Biocare",
+    0.02
+   ],
+   [
+    "Gain on sale of electric vehicle systems product line in the year ended December 31, 2014 ($34 million pre-tax, $26 million after-tax)",
+    -0.04
+   ],
+   [
+    "Impairment of intangible assets associated with a technology investment in the communications business for the three months and year ended December 31, 2013 ($31 million pre-tax, $19 million after-tax)",
+    0.0
+   ],
+   [
+    "Gain on the sale of investment in Apex Tool Group LLC in the first quarter of 2013 ($230 million pre-tax, $144 million after-tax)",
+    0.0
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Discrete tax items and lower than expected effective tax rate (year-end 2014 tax law changes) ($ not disclosed)",
+    null,
+    null,
+    "tax"
+   ],
+   [
+    "Gain on sale of marketable equity securities (within 'Other income')",
+    -123.0,
+    -77.0,
+    "nonop"
+   ],
+   [
+    "Restructuring charges in excess of amounts originally budgeted and publicly communicated in December 2013",
+    94.0,
+    72.0,
+    "op"
+   ],
+   [
+    "Acquisition-related transaction costs deemed significant (Nobel Biocare)",
+    12.0,
+    9.0,
+    "op"
+   ],
+   [
+    "Fair value adjustments to acquisition related inventory (Nobel Biocare)",
+    5.0,
+    4.0,
+    "op"
+   ],
+   [
+    "Gain on sale of electric vehicle systems product line (within 'Other income')",
+    -34.0,
+    -26.0,
+    "nonop"
+   ]
+  ],
+  "amort_pretax": null,
+  "adj_op_pub": null,
+  "adj_op_margin_pub": null,
+  "fcf_pub": null,
+  "capex_pub": null,
+  "capex_disposals_pub": null,
+  "cfo_pub_period": null,
+  "guidance": "Q1-15: adjusted diluted EPS $0.90-$0.94 (GAAP $0.76-$0.80 + Nobel inventory step-up $0.02 + amortization $111m pretax / $0.12). FY2015: adjusted diluted EPS $4.30-$4.40 (GAAP $3.81-$3.91 + Nobel inventory step-up $22m pretax / $0.02 + amortization of acquisition-related intangibles $441m pretax, $337m after-tax / $0.47); core revenue growth 3%-4%; stronger US dollar expected to reduce 2015 EPS ~$0.10, ~$0.05 of which offset by Q4-14 productivity actions, recent acquisitions and other actions.",
+  "notes": "2014 adjusted diluted EPS = GAAP excluding discrete tax items / lower year-end tax rate, marketable-securities gains, restructuring above the Dec-2013 plan, Nobel Biocare transaction costs and inventory step-up, and the EVS product-line gain; amortization NOT added back for 2014. Definition change announced: from 2015 guidance, adjusted EPS also excludes amortization of acquisition-related intangibles. No FCF table in the release."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "net_income": 2598.4,
+  "disc_ops_ni": 0.0,
+  "dep": 552.6,
+  "amort": 385.9,
+  "sbc": 121.1,
+  "deferred_tax": 177.3,
+  "impair": null,
+  "gains": -156.5,
+  "wc_change": 79.6,
+  "cfo_cont": 3758.4,
+  "cfo_disc": 0.0,
+  "cfo": 3758.4,
+  "capex": -597.5,
+  "capex_disposals": null,
+  "acquisitions": -3130.9,
+  "divest": null,
+  "invest_purch": null,
+  "invest_sales": 253.8,
+  "cfi_disc": 0.0,
+  "cfi": -3444.3,
+  "stock_iss": 132.9,
+  "pref_iss": null,
+  "dividends": -227.7,
+  "buyback": 0.0,
+  "debt_net_short": 312.2,
+  "debt_proceeds": null,
+  "debt_repay": -414.7,
+  "spin_cash": null,
+  "cff_disc": null,
+  "cff": -218.2,
+  "fx": -205.5,
+  "net_change": -109.6,
+  "cash_begin": 3115.2,
+  "cash_end": 3005.6,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "2014",
+    2013.0
+   ],
+   [
+    "Net earnings",
+    2598.4
+   ],
+   [
+    "Less earnings from discontinued operations, net of income taxes",
+    0.0
+   ],
+   [
+    "Net earnings from continuing operations",
+    2598.4
+   ],
+   [
+    "Depreciation",
+    552.6
+   ],
+   [
+    "Amortization",
+    385.9
+   ],
+   [
+    "Stock-based compensation expense",
+    121.1
+   ],
+   [
+    "Earnings from unconsolidated joint venture, net of cash dividends received",
+    0.0
+   ],
+   [
+    "Pre-tax gain on sales of investments and a product line",
+    -156.5
+   ],
+   [
+    "Change in deferred income taxes",
+    177.3
+   ],
+   [
+    "Change in trade accounts receivable, net",
+    -142.2
+   ],
+   [
+    "Change in inventories",
+    50.6
+   ],
+   [
+    "Change in trade accounts payable",
+    118.4
+   ],
+   [
+    "Change in prepaid expenses and other assets",
+    -125.6
+   ],
+   [
+    "Change in accrued expenses and other liabilities",
+    178.4
+   ],
+   [
+    "Total operating cash provided by continuing operations",
+    3758.4
+   ],
+   [
+    "Total operating cash used in discontinued operations",
+    0.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    3758.4
+   ],
+   [
+    "Cash paid for acquisitions",
+    -3130.9
+   ],
+   [
+    "Payments for additions to property, plant and equipment",
+    -597.5
+   ],
+   [
+    "Proceeds from sales of investments and a product line",
+    253.8
+   ],
+   [
+    "All other investing activities",
+    30.3
+   ],
+   [
+    "Total investing cash used in continuing operations",
+    -3444.3
+   ],
+   [
+    "Proceeds from sale of discontinued operations",
+    0.0
+   ],
+   [
+    "Net cash used in investing activities",
+    -3444.3
+   ],
+   [
+    "Proceeds from the issuance of common stock",
+    132.9
+   ],
+   [
+    "Payment of dividends",
+    -227.7
+   ],
+   [
+    "Purchase of stock",
+    0.0
+   ],
+   [
+    "Net proceeds from (repayments of) borrowings (maturities of 90 days or less)",
+    312.2
+   ],
+   [
+    "Repayments of borrowings (maturities longer than 90 days)",
+    -414.7
+   ],
+   [
+    "All other financing activities",
+    -20.9
+   ],
+   [
+    "Net cash used in financing activities",
+    -218.2
+   ],
+   [
+    "Effect of exchange rate changes on cash and equivalents",
+    -205.5
+   ],
+   [
+    "Net change in cash and equivalents",
+    -109.6
+   ],
+   [
+    "Beginning balance of cash and equivalents",
+    3115.2
+   ],
+   [
+    "Ending balance of cash and equivalents",
+    3005.6
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 3005.6,
+  "ar": 3633.8,
+  "inventories": 1831.5,
+  "prepaid_other": 960.4,
+  "ca_disc": null,
+  "tca": 9431.3,
+  "ppe": 2203.0,
+  "other_lta": 1024.0,
+  "nca_disc": null,
+  "goodwill": 16964.2,
+  "intangibles": 7369.2,
+  "ta": 36991.7,
+  "st_debt": 71.9,
+  "ap": 1875.0,
+  "accrued": 3449.5,
+  "cl_disc": null,
+  "tcl": 5396.4,
+  "other_ltl": 4744.0,
+  "ncl_disc": null,
+  "ltd": 3401.5,
+  "pref": null,
+  "common": 7.9,
+  "apic": 4480.9,
+  "treasury": null,
+  "retained": 20323.0,
+  "aoci": -1433.7,
+  "dhr_equity": 23378.1,
+  "nci": 71.7,
+  "te": 23449.8,
+  "tle": 36991.7,
+  "lines_raw": [
+   [
+    "2014",
+    2013.0
+   ],
+   [
+    "Cash and equivalents",
+    3005.6
+   ],
+   [
+    "Trade accounts receivable, less allowance for doubtful accounts of $122.6 and $121.5, respectively",
+    3633.8
+   ],
+   [
+    "Inventories",
+    1831.5
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    960.4
+   ],
+   [
+    "Total current assets",
+    9431.3
+   ],
+   [
+    "Property, plant and equipment, net",
+    2203.0
+   ],
+   [
+    "Other assets",
+    1024.0
+   ],
+   [
+    "Goodwill",
+    16964.2
+   ],
+   [
+    "Other intangible assets, net",
+    7369.2
+   ],
+   [
+    "Total assets",
+    36991.7
+   ],
+   [
+    "Notes payable and current portion of long-term debt",
+    71.9
+   ],
+   [
+    "Trade accounts payable",
+    1875.0
+   ],
+   [
+    "Accrued expenses and other liabilities",
+    3449.5
+   ],
+   [
+    "Total current liabilities",
+    5396.4
+   ],
+   [
+    "Other long-term liabilities",
+    4744.0
+   ],
+   [
+    "Long-term debt",
+    3401.5
+   ],
+   [
+    "Common stock - $0.01 par value, 2.0 billion shares authorized; 792.5 and 785.7 issued; 704.3 and 698.1 outstanding, respectively",
+    7.9
+   ],
+   [
+    "Additional paid-in capital",
+    4480.9
+   ],
+   [
+    "Retained earnings",
+    20323.0
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    -1433.7
+   ],
+   [
+    "Total Danaher stockholders’ equity",
+    23378.1
+   ],
+   [
+    "Non-controlling interests",
+    71.7
+   ],
+   [
+    "Total stockholders’ equity",
+    23449.8
+   ],
+   [
+    "Total liabilities and stockholders’ equity",
+    36991.7
+   ],
+   [
+    "2014",
+    2013.0
+   ],
+   [
+    "Sales",
+    19913.8
+   ],
+   [
+    "Cost of sales",
+    -9471.3
+   ],
+   [
+    "Gross profit",
+    10442.5
+   ]
+  ],
+  "shares_out": 704.3
+ },
+ "py": {
+  "restated": false,
+  "notes": "2013 comparative in the 2014 10-K / Q4-14 release matches the 2013 10-K as originally reported (sales 19,118.0, operating profit 3,274.9, net earnings 2,695.0, adjusted EPS 3.42; same five segments). Presentation only: the 2014 filings combine the 2013 'Gain on sale of unconsolidated joint venture' (229.8) and 'Gain on sale of marketable equity securities' (201.5) into 'Other income' 431.3.",
+  "is": {
+   "sales": 19118.0,
+   "cogs": 9160.4,
+   "sga": 5432.8,
+   "rnd": 1249.9,
+   "other_op": 0.0,
+   "op_profit": 3274.9,
+   "nonop": 431.3,
+   "interest_exp": 145.9,
+   "interest_inc": 5.7,
+   "ebt": 3566.0,
+   "tax": 871.0,
+   "cont_ops": 2695.0,
+   "disc_ops": 0.0,
+   "net_income": 2695.0,
+   "pref_div": null,
+   "shares_basic": 696.0,
+   "shares_diluted": 711.0,
+   "eps_dil_cont": 3.8,
+   "eps_dil": 3.8
+  },
+  "segments": [
+   {
+    "name": "Test & Measurement",
+    "sales": 3417.3,
+    "op_profit": 669.5
+   },
+   {
+    "name": "Environmental",
+    "sales": 3316.9,
+    "op_profit": 696.5
+   },
+   {
+    "name": "Life Sciences & Diagnostics",
+    "sales": 6856.4,
+    "op_profit": 1009.8
+   },
+   {
+    "name": "Dental",
+    "sales": 2094.9,
+    "op_profit": 304.9
+   },
+   {
+    "name": "Industrial Technologies",
+    "sales": 3432.5,
+    "op_profit": 722.9
+   }
+  ],
+  "other_op_profit": -128.7,
+  "adj_eps_pub": 3.42,
+  "amort_pretax": null
+ },
+ "extra": {
+  "employees": 71000,
+  "dep": 552.6,
+  "amort": 385.9,
+  "seg_extra": [
+   {
+    "name": "Test & Measurement",
+    "dep_amort": 132.5,
+    "capex": 33.9,
+    "assets": 5434.4
+   },
+   {
+    "name": "Environmental",
+    "dep_amort": 85.7,
+    "capex": 76.1,
+    "assets": 3824.9
+   },
+   {
+    "name": "Life Sciences & Diagnostics",
+    "dep_amort": 539.0,
+    "capex": 391.1,
+    "assets": 13743.9
+   },
+   {
+    "name": "Dental",
+    "dep_amort": 85.0,
+    "capex": 24.4,
+    "assets": 6224.3
+   },
+   {
+    "name": "Industrial Technologies",
+    "dep_amort": 88.8,
+    "capex": 70.6,
+    "assets": 4149.0
+   },
+   {
+    "name": "Other",
+    "dep_amort": 7.5,
+    "capex": 1.4,
+    "assets": 3615.2
+   }
+  ],
+  "acquisitions": [
+   [
+    "Nobel Biocare Holding AG (97% via tender offer; squeeze-out of remainder pending; 2013 revenue EUR567m / ~$780m; goodwill ~$1.0bn; funded from available cash)",
+    "2014-12-11",
+    1900.0,
+    "Dental"
+   ],
+   [
+    "Sixteen other businesses (aggregate; ~$420m annual sales; goodwill $630m)",
+    "2014",
+    1300.0,
+    "Test & Measurement / Environmental / Life Sciences & Diagnostics / Dental"
+   ]
+  ],
+  "divestitures": [
+   [
+    "Electric vehicle systems (EVS)/hybrid product line (Industrial Technologies; ~$60m 2014 revenue pre-sale, ~$100m in 2013)",
+    "2014-08",
+    "Sale price $87m cash; pretax gain $34m ($26m after-tax) in 'Other income'"
+   ],
+   [
+    "Marketable equity securities (incl. remaining Align shares)",
+    "2014",
+    "Pretax gains $123m ($77m after-tax), $99m of it in Q4"
+   ]
+  ],
+  "debt_maturities": [
+   [
+    "2015",
+    72.0
+   ],
+   [
+    "2016",
+    1402.0
+   ],
+   [
+    "2017",
+    6.0
+   ],
+   [
+    "2018",
+    506.0
+   ],
+   [
+    "2019",
+    754.0
+   ],
+   [
+    "Thereafter",
+    733.0
+   ]
+  ],
+  "amort_schedule": [
+   [
+    "2015",
+    441.0
+   ],
+   [
+    "2016",
+    397.0
+   ],
+   [
+    "2017",
+    357.0
+   ],
+   [
+    "2018",
+    321.0
+   ],
+   [
+    "2019",
+    289.0
+   ]
+  ],
+  "notes": "Employees ~71,000 (~29,000 US). Total debt 3,473.4. Nobel Biocare consideration ~CHF1.9bn (~$1.9bn) incl. debt assumed, net of cash acquired; other 2014 acquisitions ~$1.3bn (approximate, $m as stated in the 10-K); total cash paid for acquisitions 3,130.9 (CF). Q4-14 restructuring $94m above plan."
+ },
+ "notes": "IS, BS, CF and segment data from the 2014 10-K. The release IS omits the nil 'Earnings from unconsolidated joint venture' line and labels pretax earnings 'Earnings before income taxes'; amounts identical. 'Other income' 156.5 = marketable equity securities gains ~123 + EVS product-line gain ~34. Computed: cf.wc_change = sum of five 'Change in ...' lines; cf.gains = 'Pre-tax gain on sales of investments and a product line' (156.5); cf.invest_sales = 'Proceeds from sales of investments and a product line' 253.8 (includes the $87m EVS product-line sale price, not split in the CF; cf.divest left null). 'All other financing activities' (20.9) and 'All other investing activities' 30.3 only in lines_raw. cf.cfi_disc 0.0 (line nil). bs.treasury null (no line). is.dps 0.40 (10-K selected data; quarterly rate raised to $0.10 in 2014; dividends declared 280.7). is.nci null. All self-checks pass."
+}
