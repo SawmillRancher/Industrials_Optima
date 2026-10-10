@@ -1,0 +1,81 @@
+# UniFirst / Cintas data: source notes
+
+Units are USD millions and shares in millions. Every number in `unf_data.json` has a `src` key that points into the `sources` map below, plus a `loc` giving the table or section. All sources are SEC EDGAR. Raw files are in `raw/` and text extracts are in `txt/`.
+
+## Sources (form, filing date, accession, document)
+| Key | Form | Filed | Accession | Document |
+|---|---|---|---|---|
+| UNF_10K_FY25 | UNF 10-K | 2025-10-29 | 0001193125-25-256222 | unf-20250830.htm |
+| UNF_10K_FY24 | UNF 10-K | 2024-11-14 | 0000950170-24-127140 | unf-20240831.htm |
+| UNF_10K_FY23 | UNF 10-K | 2023-10-26 | 0000950170-23-055282 | unf-20230826.htm |
+| UNF_10K_FY22 | UNF 10-K | 2022-10-26 | 0000950170-22-020172 | unf-20220827.htm |
+| UNF_10K_FY21 | UNF 10-K | 2021-10-27 | 0001564590-21-052248 | unf-10k_20210828.htm |
+| UNF_8K_Q4FY25 | UNF 8-K Ex.99 | 2025-10-22 | 0001193125-25-245773 | unf-ex99.htm |
+| UNF_8K_Q4FY24 | UNF 8-K Ex.99 | 2024-10-23 | 0000950170-24-116485 | unf-ex99.htm |
+| UNF_8K_Q4FY23 | UNF 8-K Ex.99 | 2023-10-18 | 0000950170-23-053878 | unf-ex99.htm |
+| UNF_8K_Q1FY26 | UNF 8-K Ex.99 | 2026-01-07 | 0001193125-26-005469 | unf-ex99.htm |
+| UNF_8K_Q2FY26 | UNF 8-K Ex.99 | 2026-04-01 | 0001193125-26-135782 | unf-ex99.htm |
+| UNF_8K_Q3FY26 | UNF 8-K Ex.99 | 2026-07-01 | 0001628280-26-046349 | unf-2026xq3xex99earningsre.htm |
+| UNF_10Q_Q3FY26 | UNF 10-Q | 2026-07-08 | 0001628280-26-047621 | unf-20260530.htm |
+| UNF_8K_VOTE | UNF 8-K | 2026-06-12 | 0001140361-26-025000 | ef20075767_8k.htm |
+| CTAS_8K_DEAL | CTAS 8-K | 2026-03-11 | 0000950103-26-003567 | dp243132_8k.htm, Ex.99.1, Ex.99.2 |
+| CTAS_425_CALL | CTAS 425 | 2026-03-11 | 0000950103-26-003603 | dp243159_425-ict.htm (call transcript) |
+| CTAS_8K_RCF | CTAS 8-K | 2026-03-31 | 0000723254-26-000010 | ctas-20260327.htm |
+| CTAS_S4 | CTAS S-4 | 2026-04-27 | 0001140361-26-016785 | ny20069194x1_s4.htm, ex107 |
+| CTAS_424B3 | CTAS 424B3 | 2026-05-11 | 0001140361-26-020376 | ny20069194x3_424b3.htm |
+| CTAS_10K_FY26 | CTAS 10-K | 2026-07-29 | 0000723254-26-000028 | ctas-20260531.htm |
+| CTAS_8K_Q1FY27 | CTAS 8-K Ex.99 | 2026-09-23 | 0000723254-26-000044 | ex992026-8x31.htm |
+
+## Section-by-section citations
+1. **UNF annual figures (FY2021–FY2025)**
+   - **Income statement and cash flow:** the Consolidated Statements of Income and Cash Flows in the most recent 10-K that shows each year.
+     - FY23–FY25: UNF_10K_FY25, pp.32 and 36.
+     - FY22: UNF_10K_FY24.
+     - FY21: UNF_10K_FY23.
+   - **Cash and short-term investments:** the balance sheet in the 10-K for that fiscal year-end.
+   - **Debt:** zero in every year. This comes from MD&A Liquidity in each 10-K ("no outstanding borrowings").
+   - **Segments, new 3-segment structure (FY23–FY25):** UNF_10K_FY25, Note 15.
+   - **Segments, old Core Laundry / Specialty Garments / First Aid structure:**
+     - FY21–FY23: UNF_10K_FY23, Note 15.
+     - FY24: UNF_8K_Q4FY24, Adjusted EBITDA table.
+   - **Adjusted EBITDA:**
+     - FY24–FY25: UNF_8K_Q4FY25 reconciliation.
+     - FY23: UNF_8K_Q4FY24 reconciliation.
+     - FY22: only unadjusted EBITDA (240.251) was reported, in UNF_8K_Q4FY23.
+     - FY21: no EBITDA was reported. This is stated in the JSON, not estimated.
+2. **FY2026 quarters:** the Q1, Q2 and Q3 earnings releases (income statement, segment table and GAAP-to-non-GAAP reconciliation). Prior-year quarters come from the comparative columns.
+   - **Merger costs:**
+     - Q2: $1.984m added back for proxy and merger costs (UNF_8K_Q2FY26).
+     - Q3: $20.7m of Cintas transaction-related costs in SG&A (UNF_8K_Q3FY26 and UNF_10Q_Q3FY26).
+   - **Q4 FY2026 / FY2026 10-K:** not filed on EDGAR as of 2026-10-06.
+3. **Shares**
+   - **Cover page:** UNF_10Q_Q3FY26 (14,532,908 Common and 3,551,265 Class B at 2026-07-01).
+   - **Equity awards:** Merger Agreement §3.2 (Annex A of CTAS_424B3) and the S-4 Ex.107 fee table.
+   - **CTAS shares to be issued:**
+     - 14,261,683 is the registered number, based on share-equivalents as of 2026-04-16.
+     - 14,071k is the pro forma figure at 2026-02-28.
+   - **Cash consideration:** $2,825.669m (pro forma Note 3).
+4. **Pro forma:** CTAS_424B3, pp.107–125 (Notes 1–6). The S-4 shows the same figures. No S-4/A was filed.
+   - **No step-up on inventories or rental garments.** Only buildings and land were revalued (+$263.05m).
+   - **Intangibles:**
+     - Customer relationships: $1,241m, 15-year life.
+     - Trade names: $50m, 3-year life.
+   - **Tax rate:** 25%.
+   - **Financing assumption:** $2.8bn at 5%.
+5. **Financing**
+   - **Bridge:** $2.85bn 364-day facility in CTAS_8K_DEAL Item 8.01. After the revolver replaced one tranche, $1.6bn remains (CTAS_424B3).
+   - **Revolver:** $2.0bn, SOFR+70–114bp, matures 2031-03-27, with $1.25bn certain-funds (CTAS_8K_RCF and CTAS_10K_FY26 Note 6).
+   - **Not on EDGAR through 2026-10-06:** no notes offering, term loan or bridge draw.
+6. **CTAS FY26 10-K**
+   - **Transaction costs:** $16.1m in MD&A and the segment table.
+   - **Bridge fees:** $5.2m prepaid (Note 6).
+   - **Termination fee:** $350m reverse fee in Risk Factors.
+   - **Debt:** Note 6 (notes outstanding, maturities, no CP).
+   - **Later quarter:** Q1 FY27 transaction costs of $14.4m are in CTAS_8K_Q1FY27.
+
+## Items not found on EDGAR
+- **Synergy phasing by year:** only "~$375m within four years" is disclosed.
+- **Integration / one-time cost amount:** none disclosed. Management only said it would be "proportional to G&K".
+- **Bridge facility pricing:** not disclosed.
+- **Instrument mix of the permanent $2.8bn financing:** not disclosed.
+- **UNF Q4 FY2026 / FY2026 results:** not yet filed.
