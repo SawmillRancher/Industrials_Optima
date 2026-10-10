@@ -12,11 +12,11 @@ When asked to build a new model (or rebuild or update one), follow `models/MODEL
 - **Reference kit:** copy the build kit closest to the company as your starting scripts. All models and kits are in `models/`, indexed in `models/README.md`. The most complete kits are STE, DHR, ONON, LOAR and WWD.
 - **Kit docs:** write the kit README from `models/templates/NEW_MODEL_README_TEMPLATE.md` and the extraction schema from `models/templates/EXTRACTION_SCHEMA_TEMPLATE.md`.
 - **Sources:** SEC EDGAR only (send a User-Agent; stay under 5 requests/s). Investor-relations sites and SEDAR are blocked; the 8-K Ex. 99.1 releases are the same documents. Never estimate a historical number.
-- **Share price:** if the user didn't give one, ask or use the latest observable close, and state its date.
+- **Share price:** if the user didn't give one, ask. Otherwise use the latest SEC-filed price (10-Q average repurchase price, or a Form 4 transaction / withholding price), cite the form and date, and flag it "update to market".
 - **Done means:**
   1. Recalculate with LibreOffice Calc (the xlsx skill's `recalc.py`).
   2. `python3 models/tools/inspect_model.py <file>` shows 0 error cells and 0 non-zero check rows.
-  3. `python3 models/tools/cyc.py <file>` shows 0 cycles.
+  3. `python3 models/tools/cyc.py <file>` shows 0 cycles, and `python3 models/tools/residue_scan.py <file>` shows 0 residue hits.
   4. The model is added to `models/README.md`.
   5. Everything is committed and pushed.
 - **Improvements:** every new model adds its own entry to `models/MODEL_LESSONS.md`, in the same format. When a build teaches something general (a fix, a pitfall, a new adaptation), also add it to the playbook in the same commit.

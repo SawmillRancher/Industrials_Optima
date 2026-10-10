@@ -54,3 +54,4 @@ Kit paths are relative to `models/`. Every kit README gives its sources, basis a
 | `templates/EXTRACTION_SCHEMA_TEMPLATE.md` | Per-period extraction schema, basis rules and self-checks |
 | `tools/inspect_model.py` | Lists formula errors and non-zero check rows in a recalculated model |
 | `tools/cyc.py` | Scans the Model sheet for circular references |
+| `tools/residue_scan.py` | Finds leftover template-company or other-model text in every sheet's values and cell comments |
