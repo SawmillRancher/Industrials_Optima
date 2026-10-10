@@ -1,0 +1,334 @@
+{
+ "scenario": {
+  "G26": [
+   0.13,
+   0.115,
+   0.1
+  ],
+  "ORG26": [
+   0.11,
+   0.095,
+   0.08
+  ],
+  "INC26": [
+   0.275,
+   0.25,
+   0.225
+  ],
+  "INT26": [
+   50.0,
+   52.5,
+   55.0
+  ],
+  "TAX26": [
+   0.22,
+   0.23,
+   0.24
+  ],
+  "CAPEX26": [
+   130,
+   120,
+   110
+  ],
+  "BB26": [
+   160,
+   130,
+   100
+  ],
+  "LEV": [
+   1.25,
+   1.0,
+   0.75
+  ]
+ },
+ "levers": [
+  [
+   "AW_vol",
+   "AW_vol (Americas Welding volume y/y)",
+   "Americas industrial capex, fabrication & automation demand; volume inflected +7.1% in Q2/26 after nine quarters of declines (2025 \u22124.2%)."
+  ],
+  [
+   "AW_price",
+   "AW_price (Americas Welding price y/y)",
+   "Pricing to offset steel / tariff-driven inflation; 2025 +7.2%, 1H/26 +5.6%. Normalises to low-single-digit."
+  ],
+  [
+   "IW_vol",
+   "IW_vol (International Welding volume y/y)",
+   "Europe weak (2024\u20131H/26 volumes \u22124% to \u221210% p.a.); Asia Pacific improving. Base assumes a gradual recovery."
+  ],
+  [
+   "IW_price",
+   "IW_price (International Welding price y/y)",
+   "Limited pricing power in Europe; 1H/26 +0.9%."
+  ],
+  [
+   "HPG_vol",
+   "HPG_vol (Harris Products volume y/y)",
+   "HVAC/R, retail & specialty gas equipment; 1H/26 volume \u22124.9% against metals-driven price."
+  ],
+  [
+   "HPG_price",
+   "HPG_price (Harris Products price y/y, incl. metals pass-through)",
+   "Silver / copper alloy pass-through drove +37.5% price in 1H/26; Base assumes normalised low-single-digit price from 2027 (metals flat)."
+  ],
+  [
+   "IW_fx",
+   "IW_fx (International Welding FX translation y/y)",
+   "Base 0% (constant currency); Bull assumes a weaker USD, Bear a stronger USD."
+  ],
+  [
+   "MA_spend",
+   "MA_spend (bolt-on acquisitions, $m)",
+   "LECO deployed $33\u2013436m p.a. on acquisitions in 2016\u201325 (avg ~$150m); RISE strategy prioritises automation and growth bolt-ons."
+  ]
+ ],
+ "lever_values": {
+  "AW_vol": {
+   "d": [
+    0.02,
+    -0.02
+   ],
+   "base": [
+    0.03,
+    0.03,
+    0.025,
+    0.025
+   ]
+  },
+  "AW_price": {
+   "d": [
+    0.01,
+    -0.01
+   ],
+   "base": [
+    0.03,
+    0.025,
+    0.025,
+    0.025
+   ]
+  },
+  "IW_vol": {
+   "d": [
+    0.02,
+    -0.02
+   ],
+   "base": [
+    0.02,
+    0.025,
+    0.025,
+    0.025
+   ]
+  },
+  "IW_price": {
+   "d": [
+    0.01,
+    -0.01
+   ],
+   "base": [
+    0.015,
+    0.015,
+    0.015,
+    0.015
+   ]
+  },
+  "HPG_vol": {
+   "d": [
+    0.02,
+    -0.02
+   ],
+   "base": [
+    0.03,
+    0.03,
+    0.03,
+    0.03
+   ]
+  },
+  "HPG_price": {
+   "d": [
+    0.015,
+    -0.015
+   ],
+   "base": [
+    0.03,
+    0.025,
+    0.025,
+    0.025
+   ]
+  },
+  "IW_fx": {
+   "d": [
+    0.01,
+    -0.01
+   ],
+   "base": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "MA_spend": {
+   "d": [
+    150,
+    -150
+   ],
+   "base": [
+    200,
+    250,
+    250,
+    250
+   ],
+   "fmt": "num"
+  }
+ },
+ "acq_q": {
+  "AW": {
+   "Q3/26E": 0.0,
+   "Q4/26E": 0.0
+  },
+  "IW": {
+   "Q3/26E": 0.0246,
+   "Q4/26E": 0.0
+  },
+  "HPG": {
+   "Q3/26E": 0.0,
+   "Q4/26E": 0.0
+  }
+ },
+ "acq_note": {
+  "AW": "No Americas Welding acquisitions in the last 12 months (Vanair Jul-24 and RedViking Apr-24 fully anniversaried). 2027E+: future deals in the M&A lever.",
+  "IW": "Alloy Steel (Australia; ~$48m sales; 100% consolidated from 1-Aug-2025) anniversaries on 1-Aug-2026: Q3/26E = one month (Q2/26 acquisition sales $16.2m \u00f7 3 \u00f7 Q3/25 IW sales = 2.5%); Q4/26E 0%.",
+  "HPG": "No Harris acquisitions in the last 12 months."
+ },
+ "fx_q": {
+  "AW": {
+   "Q3/26E": 0.0,
+   "Q4/26E": 0.0
+  },
+  "IW": {
+   "Q3/26E": 0.0,
+   "Q4/26E": 0.0
+  },
+  "HPG": {
+   "Q3/26E": 0.0,
+   "Q4/26E": 0.0
+  }
+ },
+ "bridge": {
+  "AW": [
+   0.3,
+   0.35
+  ],
+  "IW": [
+   0.25,
+   0.3
+  ],
+  "HPG": [
+   0.2,
+   0.3
+  ]
+ },
+ "corp_aebit": -8.0,
+ "da_pct": 0.0225,
+ "sga_pct": 0.185,
+ "sbc_pct": 0.006,
+ "rat_fc": 15.0,
+ "oth_fc": 4.0,
+ "etr": 0.235,
+ "dps_g": 0.05,
+ "ma": {
+  "mult": 2.0,
+  "growth": 0.04,
+  "margin": 0.15,
+  "da_pct": 0.06,
+  "ppe_pct": 0.1,
+  "int_pct": 0.45,
+  "life": 15
+ },
+ "legacy": [
+  [
+   "NA",
+   [
+    "North America",
+    "North America Welding"
+   ],
+   "North America (to 2008) / North America Welding (2009\u2013Q4/15)"
+  ],
+  [
+   "EU",
+   [
+    "Europe",
+    "Europe Welding"
+   ],
+   "Europe (to 2008) / Europe Welding (2009\u2013Q4/15)"
+  ],
+  [
+   "OC",
+   [
+    "Other Countries"
+   ],
+   "Other Countries (to 2008)"
+  ],
+  [
+   "AP",
+   [
+    "Asia Pacific Welding"
+   ],
+   "Asia Pacific Welding (2009\u2013Q4/15)"
+  ],
+  [
+   "SA",
+   [
+    "South America Welding"
+   ],
+   "South America Welding (2009\u2013Q4/15)"
+  ],
+  [
+   "HP",
+   [
+    "The Harris Products Group",
+    "Harris Products Group"
+   ],
+   "The Harris Products Group (separate segment 2009\u2013Q4/15)"
+  ],
+  [
+   "CE",
+   [
+    "Eliminations",
+    "Corporate / Eliminations",
+    "Corporate/Eliminations"
+   ],
+   "Corporate / eliminations (legacy basis)"
+  ]
+ ],
+ "share_price": 275.54,
+ "share_price_note": "close 6-Oct-2026 (stockanalysis.com via web search; market data sites are blocked from this environment) \u2014 update to market",
+ "debt": {
+  "notes_q2_26": 1150.0,
+  "fac_q2_26": 0.0,
+  "mat": {
+   "2026": 0,
+   "2027": 0,
+   "2028": -100,
+   "2029": -75,
+   "2030": -100
+  },
+  "r_notes": 0.0445,
+  "r_fac": 0.05,
+  "r_cash": 0.025,
+  "min_cash": 250
+ },
+ "amort": {
+  "2026": 33.7,
+  "2027": 31.5,
+  "2028": 30.1,
+  "2029": 26.0,
+  "2030": 22.0
+ },
+ "capex_pct": 0.027,
+ "dso": 46,
+ "dio": 86,
+ "dpo": 49,
+ "accr_pct": 0.027
+}
