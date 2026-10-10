@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -14,21 +14,21 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 |---|---|
 | Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
-| Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
-| Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
+| Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate), BA (deliveries × revenue per delivery) |
+| Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB, BA |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
-| Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
+| Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA), BA (no EBITDA; call-only outlook, UNVERIFIED) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
 | Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
-| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
-| Pension (CAS / FAS, non-service income) | HII, CW |
+| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), BA (MCPS converting Oct-2027), RBA (participating preferred), ONON, HEI (share classes) |
+| Pension (CAS / FAS, non-service income) | HII, CW, BA |
 | Private company, LBO | R&Y |
 
 ---
@@ -165,6 +165,47 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [calibration] For EPS guidance, back-solve the required adjusted EBIT through tax and interest, then solve the margin Δ.
   - [valuation] When FY end ≈ valuation date, roll the DCF: that FY is the base year and net debt is taken at its end.
   - [BS/CF] Add a revolver-headroom memo row so the minimum-cash plug can't silently exceed the commitment.
+
+### BA — The Boeing Company (MLM template via WWD kit; US GAAP / USD m / calendar FY)
+- **Coverage & basis:** FY2006–12 annual, Q1/13–Q2/26 quarterly, Q3/Q4-26E, 2027E–31E (one extra year so the DCF has five explicit years after the 2026E base). As originally reported from 78 releases (CIK 0000012927). Not recast, with flags and comments instead:
+  - 2018 full-retrospective ASC 606 / ASU 2017-07 (FY2017 core EPS $12.04 as published vs $12.33 restated);
+  - the Q3-17 formation of Global Services (Q1/Q2-17 on the old BCA / BDS structure, so FY2017 Σ quarters ≠ year for six segment rows, documented);
+  - the 2019 realignment;
+  - Boeing Capital folded into unallocated in 2023.
+
+  Other basis points: IDS became BDS in 2010, and the 2010–11 releases print no BDS total (Σ sub-segments). Shares outstanding come from the treasury-share caption, with XBRL for the 2017–19 year ends.
+- **Operating build:** BCA = deliveries by program (737 / 747 / 767 / 777 / 787 / 717) × revenue per delivery (BCA revenue ÷ deliveries, which includes non-delivery revenue) × margin. BDS and BGS use growth × margin. Unallocated is restated to a core basis (as reported less the pension item to 2017). The pension line (FAS/CAS service cost adjustment 2018+ / −unallocated pension & postretirement expense to 2017) bridges core operating earnings to earnings from operations. Backlog ÷ revenue is shown as a memo.
+- **Bridges & definitions:**
+  - Core operating earnings / core EPS were first published in the Q4-12 release (FY2011 comparative used for FY2011). 2008–10 are a model rebuild from the unallocated detail (35%, flagged); 2006–07 = GAAP (the 2006–07 "adjusted EPS" used a different basis and is not carried).
+  - 2018+ core EPS deducts FAS/CAS and non-operating pension income and adds the published deferred-tax provision (21% statutory). For 2011–17 the tax line is derived from the published per-share figures.
+  - EBITDA is a model definition (core + D&A), because Boeing publishes none.
+  - Q4-25 diluted EPS uses the if-converted mandatory convertible preferred (a flag row switches the numerator to attributable).
+  - Documented exceptions: FY2006 EPS denominator (check shows "n/c" with a comment); Q4-20 core EPS rounding (±0.025 tolerance stated in the label).
+- **Data quirks & corrections:** sparse release rows (blank cells), "(" in its own cell, footnote markers "(1)" in the deliveries table, "753. 1" with a stray space, "4th Quarter" headers, and Q1 tables where quarter = YTD (a dict keyed on (months, year) silently dropped the quarter tag). All were handled in a positional, colspan-aware table reader (`tables.py`) rather than in text. The Q4-17 release also carries a 2018-basis restated reconciliation, so pre-2018 core figures are taken from the summary table. No published figure was overridden.
+- **Deals & special blocks:** Spirit AeroSystems (closed 8-Dec-25; $8,371m consideration incl. $4.7bn of shares; preliminary PPA with goodwill $10.0bn to BCA, with a check) and the Digital Aviation Solutions sale (31-Oct-25; $10.55bn; $9.6bn gain inside BGS and core EPS, excluded from NOPAT) are in the actuals. The 6.00% mandatory convertible preferred ($5.75bn) converts ~15-Oct-27 at 5.828–6.994 shares per preferred share: the conversion shares follow the price, 2027 dividends are accrued to conversion, and the diluted shares are if-converted when dilutive. 401(k) contributions paid in treasury shares (~$1.5–1.6bn a year) are a non-cash CF line that adds to equity and the share count at the model price.
+- **Calibration & scenarios:** Boeing has published no numeric outlook in its releases since 2019. The 2026 end-points come from earnings calls and are labelled **UNVERIFIED** in the scenario table, header row 3 and `manual_items.json` (with third-party sources):
+  - 737 deliveries ~500 and 787 90–100: (target − 1H) split by the Q3:Q4-25 pattern;
+  - BDS ~2.5% and BGS ~18%: closed-form margin Δ on the 1H margin;
+  - FCF $1–3bn: solved through 2026E year-end inventories via an "operating cash flow before inventories" helper (no circularity);
+  - BCA 2H margin is a scenario assumption, not guidance.
+
+  2027E+ levers: deliveries by program, revenue per delivery, segment margins and growth.
+- **Balance sheet, cash & capital:**
+  - Debt: 10-K maturities with a refinancing % input (0% in 2027 → 100% from 2030), revolver / CP to minimum cash ($8bn, cash-flow basis incl. restricted).
+  - Restricted cash (inside Investments since 2018) is a memo that reconciles CF to BS cash.
+  - The pension liability rolls with the CF pension line.
+  - Short-term investments are held flat and counted in net debt.
+  - Buybacks plug to net debt / adjusted EBITDA of 1.0x / 0.5x / 0.0x, which resumes them in 2029E in the Base case. No dividend (suspended since 2020).
+  - Negative-equity years return "n/m" for ROE / ROIC / leverage.
+- **Valuation:** $185.00, per the user (10-Oct-2026). NOPAT = core operating earnings − gains on dispositions, at 21%. EV and the DCF bridge add pension & retiree-health liabilities and NCI; the preferred is in diluted shares, not in debt. WACC 9.1% (beta 1.2). DCF $193.55; Base price target $452 (30x 2031E core EPS), Bull $729, Bear $201.
+- **Reusable lessons:**
+  - [extraction] Parse release tables positionally (colspan-aware cell spans → nearest period header). Text conversions that drop empty cells misalign sparse rows (disc ops, one-off lines), and a "(" in its own cell flips signs if dropped.
+  - [extraction] Key column tags by (months, year) carefully: in Q1 tables the quarter and year-to-date columns coincide, so write every matching tag rather than a dict keyed on (months, year).
+  - [bridges] When a release carries both the in-force reconciliation and a next-year restated one, take the in-force figures (summary table) and quote the restated value in the definition-row comment.
+  - [calibration] With no outlook in the filings, call guidance can anchor the calibration only when labelled UNVERIFIED in the sheet and sourced in `manual_items.json`; FCF guidance can be hit in closed form through the dominant working-capital balance (inventories) with a "CFO before that item" helper.
+  - [build] For an aircraft OEM, drive revenue by deliveries × revenue per delivery and split the remaining-year delivery target by the prior-year quarterly pattern.
+  - [BS/CF] Stock-funded 401(k) contributions are a real cost and a dilution source: keep them as a separate non-cash CF line and issue shares at the model price.
+  - [QA] A check that no tolerance can absorb (a published EPS whose stated denominator does not reproduce it) gets a text "n/c" with a comment, not a plug.
 
 ### HII — Huntington Ingalls Industries (DSV template, US GAAP as reported / USD millions / FY Dec)
 - **Coverage & basis:** 2015–1H26 from 10-K/10-Q XBRL and 8-K Ex. 99.1 (CIK 0001501585). FY2015–16 are as originally reported; FY2017+ are as recast for ASU 2017-07 in the 2018 10-K (non-service pension moved below OI). Technical Solutions was formed Dec-2016 (renamed Mission Technologies 2022). Q1–Q3/15 stay on the original "Other" basis; Q4/15 and FY2015 are recast. Q4 = FY − 9M. Restricted cash is included from FY2019. Unbilled receivables are separate from FY2017 (ASC 606).

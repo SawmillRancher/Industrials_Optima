@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, BA). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -246,8 +246,8 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | Situation | Precedent | Adaptation |
 |---|---|---|
 | Single reportable segment | RBA, KRMN, LOAR | Revenue-stream or end-market build; margins at group level; anchor on the company's guided KPI |
-| Unit economics disclosed | MLM, VMC, ODFL, SAIA, XPO, CHRW | Volume × price build, price / volume bridge, fall-through; fuel surcharge from DOE diesel × surcharge table (SAIA) |
-| No guidance | ODFL, RMS | Mid-quarter updates; seasonality best / avg / worst; scenario-only forecast |
+| Unit economics disclosed | MLM, VMC, ODFL, SAIA, XPO, CHRW, BA | Volume × price build, price / volume bridge, fall-through; fuel surcharge from DOE diesel × surcharge table (SAIA); deliveries by program × revenue per delivery (BA) |
+| No guidance | ODFL, RMS, BA | Mid-quarter updates; seasonality best / avg / worst; scenario-only forecast; call-only guidance labelled UNVERIFIED (BA) |
 | No non-GAAP published | ODFL, DHR (EBITDA), STE (EBITDA) | Model-defined bridges, clearly labelled, checked against XBRL / GAAP |
 | Definition changed over time | TDY, LOAR, RBA, MLM | Definition-flag row, in-force definition per period, current-definition memo series |
 | Spin-offs / disc ops | DHR, STE, BWXT, XPO | Hybrid recast or post-spin history; recast cell comments; rebuild originally reported adjusted EPS in memo |
@@ -275,7 +275,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -290,6 +290,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
+- **Read release tables positionally, not as text.** Use a colspan-aware cell grid and assign each value to the period header it sits under. Text conversions that drop empty cells misalign sparse rows, and a "(" in its own cell is a sign. Footnote markers like "(1)" sit in their own cells. When tagging columns, remember that in Q1 the quarter and year-to-date columns are the same (write both tags). [BA]
+- **A release can carry two reconciliations** (in-force and next-year restated). Take the in-force figures and quote the restated ones in the definition comment. [BA]
 
 ### 5.2 Basis
 - **Segment re-presentation with a short recast history:** model an aggregate the re-presentation doesn't change and keep the old split as memo. Prove where an absorbed segment went using the restated comparative Δ. [RBA, TFI]
@@ -353,6 +355,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
 - **Apply the Δ only to genuinely uncommitted lines** (retail rather than order-book wholesale). Constant-FX guidance needs a separate FX-translation Δ for the reporting-currency figure. EPS guidance made stale by post-guidance buybacks becomes an information row. [BC, ONON, BWXT]
 - **No guidance:** leave targets as optional blank inputs; don't invent them. [HEI, BC]
+- **Call-only guidance** (nothing in the filings) may anchor the calibration only when it is labelled UNVERIFIED in the scenario table, the header and `manual_items.json` (with its sources). FCF guidance can be solved in closed form through the dominant working-capital balance (e.g. year-end inventories) with a "CFO before that item" helper. [BA]
 
 ### 5.6 Balance sheet, cash and capital
 - **Current year with actual quarters:**
@@ -382,6 +385,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Mandatory convertible preferred: if-converted shares until conversion, with dividends added back in adjusted EPS.
 
   [BWXT, ESAB]
+- **Stock-funded employee contributions** (401(k) match paid in treasury shares) are a separate non-cash CF line that adds to equity and to the share count at the model price. [BA]
 - **Pension:** CAS / FAS and non-service pension income from overfunded plans are non-cash. Accrete the prepaid pension asset, reverse the income in CFO and exclude it from UFCF. [HII, CW]
 - **Leverage ratios use LTM EBITDA** (carried in the quarter columns), not annualised 1H. [VMC, HEI]
 - **Working-capital ratios** come from fiscal-year-end balances, not annualised quarters. [STE, CTAS]
@@ -410,4 +414,5 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Template residue is the most common defect.** At least 10 builds shipped MLM text in Bull-Base-Bear N26 / P40 comments or DCF rationale, and TFI kept Moog comments. `tools/residue_scan.py` is a hard gate. [CLH, WAB, SAIA, ODFL, WCN, LOAR, ONON, LECO, ESAB, STE, CTAS, UBER, TFI, CPRT]
 - **Check also:** foreign row numbers and switch-cell addresses in comments, the wrong currency symbol on non-USD models, and modelling-note dates that contradict the definition flags. [ONON, DHR]
 - **Check tolerances** are set by period when the issuer changes rounding units, and stated in the label. [STE, TMO, CSGP, ONON, DHR]
+- **A check that no tolerance can absorb** (a published EPS that its own stated denominator does not reproduce) shows a text "n/c" with a comment, never a plug. [BA]
 - **Private-company implied CF:** related-party balances are financing; explain the sign of implied capex; leave first-year ratios n/a when there is no opening BS. [R&Y]

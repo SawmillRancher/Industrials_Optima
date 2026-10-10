@@ -122,6 +122,10 @@ def core_lines(p, r):
     put(p, 'nonop_pen', g(rc, 'nonop_pen', 'usd')); put(p, 'nonop_pr', g(rc, 'nonop_pr', 'usd'))
     put(p, 'core_dtax', g(rc, 'dtax', 'usd')); put(p, 'core_sub', g(rc, 'sub', 'usd')); put(p, 'core_sub_ps', g(rc, 'sub', 'ps'))
     put(p, 'sh_core', g(rc, 'sh', 'ps') or g(rc, 'sh', 'usd'))
+    # pension line inside earnings from operations: FAS/CAS service cost adjustment (2018+) / -unallocated pension & postretirement expense
+    put(p, 'pens_item', x_(p, 'se_fascas') if fy >= 2018 else (-upp if upp is not None else None))
+    if fy >= 2018 and g(rc, 'nonop_pen', 'usd') is not None:
+        put(p, 'nonop_inc', -(N(g(rc, 'nonop_pen', 'usd')) + N(g(rc, 'nonop_pr', 'usd'))))
 
 # ---------------------------------------------------------------------------------------------------------------- KPIs
 def kpi_lines(p, r):
@@ -148,14 +152,15 @@ def cf_from(r):
     o['divest'] = rawv(r'^proceeds from dispositions$|^proceeds from (the )?sale of business')
     o['eq_iss'] = rawv(r'stock issuance, net of issuance costs|^common stock issuance|preferred stock issuance')
     o['opt'] = rawv(r'^stock options exercised')
+    o['k401'] = rawv(r'^treasury shares issued for 401\(k\)')
     o['div'] = rawv(r'^dividends paid$|^dividends paid on common')
     o['pref_div'] = rawv(r'dividends paid on mandatory convertible preferred')
     o['beg'] = c.get('beg'); o['end'] = c.get('end_r', c.get('end')); o['end_bs'] = c.get('end')
     return o
 
 def cf_lines(c):
-    o = {'cf_ni': c['ni'], 'cf_dda': c['dda'], 'cf_sbc': c['sbc'], 'cf_pens': c['pens'], 'cf_wc': c['wc']}
-    o['cf_onc'] = c['cfo'] - c['ni'] - c['dda'] - c['sbc'] - c['pens'] - c['wc']
+    o = {'cf_ni': c['ni'], 'cf_dda': c['dda'], 'cf_sbc': c['sbc'], 'cf_401k': c['k401'], 'cf_pens': c['pens'], 'cf_wc': c['wc']}
+    o['cf_onc'] = c['cfo'] - c['ni'] - c['dda'] - c['sbc'] - c['k401'] - c['pens'] - c['wc']
     o['cf_cfo'] = c['cfo']; o['cf_capex'] = c['capex']; o['cf_acq'] = c['acq']; o['cf_divest'] = c['divest']
     o['cf_invnet'] = c['inv_contrib'] + c['inv_proc']
     o['cf_oinv'] = c['cfi'] - c['capex'] - c['acq'] - c['divest'] - o['cf_invnet']; o['cf_cfi'] = c['cfi']
@@ -241,6 +246,9 @@ def run():
         do_bs(p)
         put(p, 'fcf_pub', (r.get('core_pub') or {}).get('fcf'))
     do_cf()
+    for p in periods():
+        e, eb = x_(p, 'cf_end'), x_(p, 'cf_end_bs')
+        if e is not None: put(p, 'cf_restr', round(e - eb, 6) if eb is not None else 0.0)
     for p, v in MAN.get('overrides', {}).items():
         for k, val in v.items():
             if not k.startswith('_'): put(p, k, val)

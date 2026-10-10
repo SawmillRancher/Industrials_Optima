@@ -41,6 +41,7 @@ All models are on this branch. The template lineage runs Moog → DSV → HII �
 | BWXT | BWX Technologies | MLM | `BWXT_Model.xlsx` | workbook only |
 | CW | Curtiss-Wright | MLM | `CW_Model.xlsx` | workbook only |
 | WWD | Woodward ★ (first build on the playbook) | MLM (6-Oct) | `WWD_Model.xlsx` | `wwd_build/`: `python3 build.py --snap --recalc` |
+| BA | Boeing ★ | MLM (6-Oct) | `BA_Model.xlsx` | `ba_build/`: `python3 build.py --snap --recalc` |
 
 Kit paths are relative to `models/`. Every kit README gives its sources, basis and full rebuild steps. Recalculation needs LibreOffice Calc and the xlsx skill's `recalc.py` (set `XLSX_RECALC` or `RECALC_SCRIPT`). For a "workbook only" model, its basis notes, Modelling Notes column and cell comments are the documentation; `MODEL_LESSONS.md` summarises them.
 

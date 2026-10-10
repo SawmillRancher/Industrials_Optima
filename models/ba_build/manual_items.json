@@ -4,5 +4,76 @@
    "mcps_ifconv": 1,
    "_note": "Q4-25 diluted EPS ($10.23) is on the if-converted basis for the 6.00% mandatory convertible preferred: numerator = net earnings attributable to Boeing (preferred dividends of $86m added back), denominator 803.8m incl. conversion shares (Q4-25 release)."
   }
+ },
+ "ppa": {
+  "Q4-25": {
+   "cons": 8371.0,
+   "cash": 281.0,
+   "ca": 1903.0,
+   "ppe": 2419.0,
+   "intang": 109.0,
+   "gw": 9997.0,
+   "onca": 282.0,
+   "cl": 2834.0,
+   "debt": 3608.0,
+   "ncl": 178.0,
+   "names": "Spirit AeroSystems (closed 8-Dec-2025; preliminary)",
+   "_src": "FY2025 10-K Note 2 (preliminary allocation): cash 281; receivables 339 + unbilled 126 + inventories 1,438; PP&E 2,419; goodwill 9,997; intangibles 109; other assets 116 + other 166; payables 953 + accrued 1,784 (incl. $1,065 off-market contracts) + advances 97; debt 329 + 3,279; other LT liabilities 178; consideration 8,371 (Boeing shares 4,704; settled loans / advances 2,571; debt repaid 948; Exchangeable Notes premium 109; awards 39)."
+  }
+ },
+ "guidance_2026": {
+  "_status": "UNVERIFIED: earnings-call statements reported by third-party transcripts / summaries; Boeing has published no numeric outlook in its 8-K releases since 2019.",
+  "fcf": [
+   1000,
+   3000
+  ],
+  "fcf_src": "Q4-25 call (27-Jan-2026); reaffirmed on the Q2-26 call (28-Jul-2026), incl. ~$1bn unfavourable Spirit impact and a ~$700m DOJ payment in Q3-26.",
+  "del_737": 500,
+  "del_737_src": "Q4-25 call: ~500 737 deliveries in 2026; Q2-26 call: on track.",
+  "del_787": [
+   90,
+   100
+  ],
+  "del_787_src": "Q4-25 / Q2-26 calls.",
+  "bds_margin": 0.025,
+  "bds_src": "Q2-26 call: ~2.5% for 2026 incl. the $280m VC-25B charge (Q1-26 call: ~3.5%).",
+  "bgs_margin": 0.18,
+  "bgs_src": "Q4-25 / Q2-26 calls: ~18%.",
+  "bca_margin": "negative in 2026 (Spirit integration), positive in 2027 (conference summary)",
+  "lt_fcf": 10000,
+  "lt_fcf_src": "Long-term free-cash-flow target ~$10bn (Q2-26 call: \"very attainable\").",
+  "sources": [
+   "https://seekingalpha.com/news/4578159-boeing-targets-1b-3b-2026-free-cash-flow-as-737-output-plans-rise-to-47-per-month-this-summer",
+   "https://finance.yahoo.com/markets/stocks/articles/boeing-company-q2-2026-earnings-204932494.html",
+   "https://www.fool.com/earnings/call-transcripts/2026/01/27/boeing-ba-q4-2025-earnings-call-transcript/",
+   "https://quartr.com/events/the-boeing-company-ba-bank-of-america-global-industrials-conference-2026_3en5uZze"
+  ]
+ },
+ "edgar_facts": {
+  "mcps": "6.00% Series A mandatory convertible preferred, 5,750,000 shares, $5,750m liquidation preference; converts ~15-Oct-2027 into 5.8280\u20136.9940 common shares per share (FY2025 10-K, risk factors / Note).",
+  "debt": "Total debt $54.1bn at 31-Dec-2025 (10-K); $45.9bn at 30-Jun-2026, $4.6bn short-term; cash $7.2bn, short-term investments $12.8bn; $10.0bn unused revolvers (Q2-26 10-Q).",
+  "maturities": {
+   "2026": 8351,
+   "2027": 4403,
+   "2028": 2739,
+   "2029": 2508,
+   "2030": 5274,
+   "_src": "FY2025 10-K debt note (debt and other notes; finance leases separately $250m)."
+  },
+  "amort_sched": {
+   "2026": 197,
+   "2027": 182,
+   "2028": 155,
+   "2029": 150,
+   "2030": 144,
+   "_src": "FY2025 10-K Note 4 (estimated amortization of acquired finite-lived intangibles)."
+  },
+  "das": "Digital Aviation Solutions divestiture closed 31-Oct-2025 for $10.55bn cash; pre-tax gain $9.6bn (Q4-25 release).",
+  "spirit": "Spirit AeroSystems acquisition closed 8-Dec-2025; 22.98m Boeing shares issued (0.1955 exchange ratio); goodwill to BCA (10-K Note 2).",
+  "rates": "737 production 42/month (Q4-25 release) \u2192 transitioning to 47/month (Q2-26 release; North Line LRIP July-2026); 787 transitioning to 8/month (Q4-25 release); 737-7 / -10 certification expected 2026, first deliveries 2027 (Q2-26 release)."
+ },
+ "price": {
+  "px": 185.0,
+  "src": "User-provided share price, 10-Oct-2026 (update to market)."
  }
 }

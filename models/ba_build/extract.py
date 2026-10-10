@@ -97,7 +97,7 @@ CF_MAP = [
     ('bb', r'^common shares? repurchased'), ('div', r'^dividends paid'), ('pref_div', r'preferred.*dividends|dividends.*preferred'),
     ('eq_iss', r'proceeds from (the )?issuance of (common|preferred|stock)|issuance of (common|preferred)'), ('cff', r'by financing activities'),
     ('fx', r'^effect of exchange rate'), ('net', r'^net (increase|decrease|\(decrease\)|change).*cash'),
-    ('beg', r'at beginning of (year|period)'), ('end_r', r'including restricted, at end of (period|year)'), ('end', r'^cash and cash equivalents at end of'),
+    ('beg', r'at beginning of (year|period)'), ('end_r', r'including restricted, at end of (period|year)'), ('end', r'^cash (and|&) cash equivalents at end of'),
 ]
 SEG_KEYS = [('bca', r'^commercial airplanes$'), ('bds', r'^(total )?(defense, space (&|and) security|integrated defense systems)$'),
             ('bma', r'^boeing military aircraft'), ('nss', r'^network (&|and) space systems'), ('gss', r'^global services (&|and) support'),
