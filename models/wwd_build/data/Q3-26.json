@@ -1,0 +1,328 @@
+{
+ "period": "Q3-26",
+ "fy": 2026,
+ "q": 3,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/108312/000117184326005009/exh_991.htm",
+  "release_date": "2026-07-29",
+  "filing": "https://www.sec.gov/Archives/edgar/data/108312/000119312526325790/wwd-20260630.htm"
+ },
+ "notes": [],
+ "is": {
+  "rev": 1109.705,
+  "cogs": 759.799,
+  "sga": 106.465,
+  "rd": 49.316,
+  "restr": 9.264,
+  "int_exp": 14.827,
+  "int_inc": -0.611,
+  "oth": -22.867,
+  "tot_costs": 916.193,
+  "ebt": 193.512,
+  "tax": 46.837,
+  "ni_tot": 146.675,
+  "eps_b": 2.47,
+  "eps_d": 2.4,
+  "sh_b": 59.445,
+  "sh_d": 61.018,
+  "dps": 0.32,
+  "ni": 146.675,
+  "other_lines": []
+ },
+ "seg": {
+  "sales_aero": 708.673,
+  "sales_ind": 401.032,
+  "ind_name": "Industrial",
+  "sales_tot": 1109.705,
+  "earn_aero": 170.02,
+  "earn_ind": 88.484,
+  "earn_tot": 258.504,
+  "nonseg": -50.776,
+  "ebit": 207.728,
+  "int_net": -14.216,
+  "capex": 59.617,
+  "dep": 22.501
+ },
+ "ngaap": {
+  "ebit_pub": 207.728,
+  "adj_ebit_pub": 216.992,
+  "ebitda_pub": 239.797,
+  "adj_ebitda_pub": 249.061,
+  "dep": 22.501,
+  "amort": 9.568,
+  "ebitda_adj_tot": 9.264,
+  "ebit_adj_tot": 9.264,
+  "fcf_pub": 87.056,
+  "nonseg_pub": -50.776,
+  "adj_nonseg_pub": -41.512,
+  "adj_tax_pub": 49.148,
+  "adj": {
+   "fmt": "b",
+   "items": [
+    {
+     "label": "Restructuring charges",
+     "pre": 9.264,
+     "net": null,
+     "ps": 0.15,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Tax effect of non-U.S. GAAP net earnings adjustments",
+     "pre": 0.0,
+     "net": -2.311,
+     "ps": -0.03,
+     "cat": "TAX"
+    }
+   ],
+   "gaap_ni": 146.675,
+   "gaap_eps": 2.4,
+   "total": {
+    "pre": null,
+    "net": 6.953,
+    "ps": 0.12
+   },
+   "adj_ni": 153.628,
+   "adj_eps": 2.52
+  }
+ },
+ "cf": {
+  "ytd_months": 9,
+  "cfo": 351.937,
+  "capex": -156.337,
+  "divest": 1.239,
+  "acq": -131.778,
+  "cfi": -286.795,
+  "div": -54.902,
+  "stock_iss": 55.07,
+  "bb": -553.438,
+  "cff": 88.769,
+  "fx": -6.491,
+  "net": 147.42,
+  "beg": 327.431,
+  "end": 474.851,
+  "lines_raw": [
+   [
+    "Net cash provided by operating activities",
+    351.937
+   ],
+   [
+    "Payments for purchase of property, plant, and equipment",
+    -156.337
+   ],
+   [
+    "Proceeds from sales of assets",
+    0.0
+   ],
+   [
+    "Proceeds from sales of investments",
+    0.081
+   ],
+   [
+    "Proceeds from business divestitures",
+    1.239
+   ],
+   [
+    "Payments for acquisitions, net of cash acquired",
+    -131.778
+   ],
+   [
+    "Net cash used in investing activities",
+    -286.795
+   ],
+   [
+    "Cash dividends paid",
+    -54.902
+   ],
+   [
+    "Proceeds from sales of treasury stock",
+    55.07
+   ],
+   [
+    "Payments for repurchases of common stock",
+    -553.438
+   ],
+   [
+    "Borrowings on long-term debt",
+    250.0
+   ],
+   [
+    "Borrowings on revolving lines of credit and short-term borrowings",
+    3002.74
+   ],
+   [
+    "Payments on revolving lines of credit and short-term borrowings",
+    -2532.353
+   ],
+   [
+    "Payments of debt financing costs",
+    -2.583
+   ],
+   [
+    "Payments of long-term debt and finance lease obligations",
+    -75.765
+   ],
+   [
+    "Net cash provided by (used in) financing activities",
+    88.769
+   ],
+   [
+    "Effect of exchange rate changes on cash and cash equivalents",
+    -6.491
+   ],
+   [
+    "Net change in cash and cash equivalents",
+    147.42
+   ],
+   [
+    "Cash and cash equivalents at beginning of year",
+    327.431
+   ],
+   [
+    "Cash and cash equivalents at end of period",
+    474.851
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 474.851,
+  "ar": 1012.481,
+  "inv": 724.803,
+  "tca": 2338.558,
+  "ppe": 1087.764,
+  "gw": 893.956,
+  "intang": 447.263,
+  "ta": 5196.401,
+  "std": 592.426,
+  "cltd": 131.779,
+  "ap": 328.957,
+  "tcl": 1421.202,
+  "ltd": 617.73,
+  "tl": 2722.607,
+  "eq": 2473.794,
+  "tle": 5196.401,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    474.851
+   ],
+   [
+    "Accounts receivable",
+    1012.481
+   ],
+   [
+    "Inventories",
+    724.803
+   ],
+   [
+    "Income taxes receivable",
+    43.88
+   ],
+   [
+    "Assets held for sale",
+    19.953
+   ],
+   [
+    "Other current assets",
+    62.59
+   ],
+   [
+    "Total current assets",
+    2338.558
+   ],
+   [
+    "Property, plant, and equipment, net",
+    1087.764
+   ],
+   [
+    "Goodwill",
+    893.956
+   ],
+   [
+    "Intangible assets, net",
+    447.263
+   ],
+   [
+    "Deferred income tax assets",
+    39.504
+   ],
+   [
+    "Other assets",
+    389.356
+   ],
+   [
+    "Total assets",
+    5196.401
+   ],
+   [
+    "Short-term debt",
+    592.426
+   ],
+   [
+    "Current portion of long-term debt",
+    131.779
+   ],
+   [
+    "Accounts payable",
+    328.957
+   ],
+   [
+    "Income taxes payable",
+    65.196
+   ],
+   [
+    "Accrued liabilities",
+    299.255
+   ],
+   [
+    "Liabilities held for sale",
+    3.589
+   ],
+   [
+    "Total current liabilities",
+    1421.202
+   ],
+   [
+    "Long-term debt, less current portion",
+    617.73
+   ],
+   [
+    "Deferred income tax liabilities",
+    109.023
+   ],
+   [
+    "Other liabilities",
+    574.652
+   ],
+   [
+    "Total liabilities",
+    2722.607
+   ],
+   [
+    "Stockholders\u2019 equity",
+    2473.794
+   ],
+   [
+    "Total liabilities and stockholders\u2019 equity",
+    5196.401
+   ]
+  ]
+ },
+ "em": {
+  "com_oem": 234.398,
+  "com_aft": 267.849,
+  "def_oem": 140.725,
+  "def_aft": 65.701,
+  "aero_tot": 708.673,
+  "pg": 144.675,
+  "trans": 180.155,
+  "og": 76.202,
+  "ind_tot": 401.032
+ },
+ "x": {
+  "sbc_ytd": 28.653,
+  "deftax_ytd": 75.582,
+  "dda_ytd": 91.013,
+  "sh_issued": 72.96,
+  "sh_treasury": 13.731
+ }
+}

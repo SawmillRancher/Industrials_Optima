@@ -1,0 +1,419 @@
+{
+ "period": "Q1-25",
+ "fy": 2025,
+ "q": 1,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/108312/000117184325000584/exh_991.htm",
+  "release_date": "2025-02-03",
+  "filing": "https://www.sec.gov/Archives/edgar/data/108312/000095017025013640/wwd-20241231.htm"
+ },
+ "notes": [],
+ "is": {
+  "rev": 772.725,
+  "cogs": 583.091,
+  "sga": 69.696,
+  "rd": 30.207,
+  "int_exp": 12.341,
+  "int_inc": -1.377,
+  "oth": -23.087,
+  "tot_costs": 670.871,
+  "ebt": 101.854,
+  "tax": 14.763,
+  "ni_tot": 87.091,
+  "eps_b": 1.47,
+  "eps_d": 1.42,
+  "sh_b": 59.216,
+  "sh_d": 61.141,
+  "dps": 0.25,
+  "ni": 87.091,
+  "other_lines": []
+ },
+ "seg": {
+  "sales_aero": 493.882,
+  "sales_ind": 278.843,
+  "ind_name": "Industrial",
+  "sales_tot": 772.725,
+  "earn_aero": 94.725,
+  "earn_ind": 40.197,
+  "earn_tot": 134.922,
+  "nonseg": -22.104,
+  "ebit": 112.818,
+  "int_net": -10.964,
+  "capex": 33.574,
+  "dep": 20.962
+ },
+ "ngaap": {
+  "ebit_pub": 112.818,
+  "adj_ebit_pub": 106.975,
+  "ebitda_pub": 140.694,
+  "adj_ebitda_pub": 134.851,
+  "dep": 20.962,
+  "amort": 6.914,
+  "ebitda_adj_tot": -5.843,
+  "ebit_adj_tot": -5.843,
+  "fcf_pub": 0.942,
+  "nonseg_pub": -22.104,
+  "adj_nonseg_pub": -27.947,
+  "adj_tax_pub": 13.444,
+  "adj": {
+   "fmt": "b",
+   "items": [
+    {
+     "label": "Product rationalization a",
+     "pre": -9.361,
+     "net": null,
+     "ps": -0.15,
+     "cat": "GAIN"
+    },
+    {
+     "label": "Business development activities b",
+     "pre": 3.518,
+     "net": null,
+     "ps": 0.06,
+     "cat": "ACQ"
+    },
+    {
+     "label": "Non-recurring gain related to a previous acquisition a",
+     "pre": 0.0,
+     "net": null,
+     "ps": 0.0,
+     "cat": "GAIN"
+    },
+    {
+     "label": "Tax effect of Non-U.S. GAAP net earnings adjustments",
+     "pre": 0.0,
+     "net": 1.319,
+     "ps": 0.02,
+     "cat": "TAX"
+    }
+   ],
+   "gaap_ni": 87.091,
+   "gaap_eps": 1.42,
+   "total": {
+    "pre": null,
+    "net": -4.524,
+    "ps": -0.07
+   },
+   "adj_ni": 82.567,
+   "adj_eps": 1.35
+  }
+ },
+ "cf": {
+  "ytd_months": 3,
+  "cfo": 34.516,
+  "capex": -33.574,
+  "divest": 1.438,
+  "cfi": -32.1,
+  "div": -14.781,
+  "stock_iss": 28.876,
+  "bb": -35.473,
+  "cff": 19.386,
+  "fx": -20.346,
+  "net": 1.456,
+  "beg": 282.27,
+  "end": 283.726,
+  "lines_raw": [
+   [
+    "Net cash provided by operating activities",
+    34.516
+   ],
+   [
+    "Payments for purchase of property, plant, and equipment",
+    -33.574
+   ],
+   [
+    "Proceeds from sale of assets and short-term investments",
+    0.036
+   ],
+   [
+    "Proceeds from business divestiture",
+    1.438
+   ],
+   [
+    "Net cash used in investing activities",
+    -32.1
+   ],
+   [
+    "Cash dividends paid",
+    -14.781
+   ],
+   [
+    "Proceeds from sales of treasury stock",
+    28.876
+   ],
+   [
+    "Payments for repurchases of common stock",
+    -35.473
+   ],
+   [
+    "Borrowings on revolving lines of credit and short-term borrowings",
+    668.3
+   ],
+   [
+    "Payments on revolving lines of credit and short-term borrowings",
+    -627.3
+   ],
+   [
+    "Payments of long-term debt and finance lease obligations",
+    -0.236
+   ],
+   [
+    "Net cash provided by (used in) financing activities",
+    19.386
+   ],
+   [
+    "Effect of exchange rate changes on cash and cash equivalents",
+    -20.346
+   ],
+   [
+    "Net change in cash and cash equivalents",
+    1.456
+   ],
+   [
+    "Cash and cash equivalents at beginning of year",
+    282.27
+   ],
+   [
+    "Cash and cash equivalents at end of period",
+    283.726
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 283.726,
+  "ar": 692.599,
+  "inv": 632.002,
+  "tca": 1724.596,
+  "ppe": 925.471,
+  "gw": 781.928,
+  "intang": 404.417,
+  "ta": 4281.382,
+  "std": 258.0,
+  "cltd": 160.975,
+  "ap": 224.035,
+  "tcl": 914.822,
+  "ltd": 483.199,
+  "tl": 2072.961,
+  "eq": 2208.421,
+  "tle": 4281.382,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    283.726
+   ],
+   [
+    "Accounts receivable",
+    692.599
+   ],
+   [
+    "Inventories",
+    632.002
+   ],
+   [
+    "Assets held for sale",
+    32.047
+   ],
+   [
+    "Income taxes receivable",
+    16.268
+   ],
+   [
+    "Other current assets",
+    67.954
+   ],
+   [
+    "Total current assets",
+    1724.596
+   ],
+   [
+    "Property, plant, and equipment, net",
+    925.471
+   ],
+   [
+    "Goodwill",
+    781.928
+   ],
+   [
+    "Intangible assets, net",
+    404.417
+   ],
+   [
+    "Deferred income tax assets",
+    87.488
+   ],
+   [
+    "Other assets",
+    357.482
+   ],
+   [
+    "Total assets",
+    4281.382
+   ],
+   [
+    "Short-term debt",
+    258.0
+   ],
+   [
+    "Current portion of long-term debt",
+    160.975
+   ],
+   [
+    "Accounts payable",
+    224.035
+   ],
+   [
+    "Income taxes payable",
+    38.742
+   ],
+   [
+    "Liabilities held for sale",
+    4.322
+   ],
+   [
+    "Accrued liabilities",
+    228.748
+   ],
+   [
+    "Total current liabilities",
+    914.822
+   ],
+   [
+    "Long-term debt, less current portion",
+    483.199
+   ],
+   [
+    "Deferred income tax liabilities",
+    115.984
+   ],
+   [
+    "Other liabilities",
+    558.956
+   ],
+   [
+    "Total liabilities",
+    2072.961
+   ],
+   [
+    "Stockholders\u2019 equity",
+    2208.421
+   ],
+   [
+    "Total liabilities and stockholders\u2019 equity",
+    4281.382
+   ]
+  ]
+ },
+ "em": {
+  "com_oem": 154.076,
+  "com_aft": 163.85,
+  "def_oem": 112.782,
+  "def_aft": 63.174,
+  "aero_tot": 493.882,
+  "pg": 105.219,
+  "trans": 116.606,
+  "og": 57.018,
+  "ind_tot": 278.843
+ },
+ "em_py": {
+  "com_oem": 154.076,
+  "com_aft": 163.85,
+  "def_oem": 112.782,
+  "def_aft": 63.174,
+  "aero_tot": 493.882,
+  "pg": 115.008,
+  "trans": 107.265,
+  "og": 56.57,
+  "ind_tot": 278.843
+ },
+ "py": {
+  "release": "https://www.sec.gov/Archives/edgar/data/108312/000117184326000562/exh_991.htm",
+  "is": {
+   "rev": 772.725,
+   "cogs": 583.091,
+   "sga": 69.696,
+   "rd": 30.207,
+   "int_exp": 12.341,
+   "int_inc": -1.377,
+   "oth": -23.087,
+   "tot_costs": 670.871,
+   "ebt": 101.854,
+   "tax": 14.763,
+   "ni_tot": 87.091,
+   "eps_b": 1.47,
+   "eps_d": 1.42,
+   "sh_b": 59.216,
+   "sh_d": 61.141,
+   "dps": 0.25,
+   "ni": 87.091,
+   "other_lines": []
+  },
+  "seg": {
+   "sales_aero": 493.882,
+   "sales_ind": 278.843,
+   "ind_name": "Industrial",
+   "sales_tot": 772.725,
+   "earn_aero": 94.725,
+   "earn_ind": 40.197,
+   "earn_tot": 134.922,
+   "nonseg": -22.104,
+   "ebit": 112.818,
+   "int_net": -10.964,
+   "capex": 33.574,
+   "dep": 20.962
+  },
+  "ngaap": {
+   "ebit_pub": 112.818,
+   "adj_ebit_pub": 106.975,
+   "ebitda_pub": 140.694,
+   "adj_ebitda_pub": 134.851,
+   "dep": 20.962,
+   "amort": 6.914,
+   "ebitda_adj_tot": -5.843,
+   "ebit_adj_tot": -5.843,
+   "fcf_pub": 0.942,
+   "adj_tax_pub": 13.444,
+   "adj": {
+    "fmt": "b",
+    "items": [
+     {
+      "label": "Product rationalization a",
+      "pre": -9.361,
+      "net": null,
+      "ps": -0.15,
+      "cat": "GAIN"
+     },
+     {
+      "label": "Business development activities b",
+      "pre": 3.518,
+      "net": null,
+      "ps": 0.06,
+      "cat": "ACQ"
+     },
+     {
+      "label": "Tax Effect of Non-U.S. GAAP Net Earnings Adjustments",
+      "pre": 0.0,
+      "net": 1.319,
+      "ps": 0.02,
+      "cat": "TAX"
+     }
+    ],
+    "gaap_ni": 87.091,
+    "gaap_eps": 1.42,
+    "total": {
+     "pre": null,
+     "net": -4.524,
+     "ps": -0.07
+    },
+    "adj_ni": 82.567,
+    "adj_eps": 1.35
+   }
+  }
+ },
+ "x": {
+  "sbc_ytd": 6.666,
+  "deftax_ytd": -1.504,
+  "dda_ytd": 27.876,
+  "sh_issued": 72.96,
+  "sh_treasury": 13.607
+ }
+}
