@@ -1,0 +1,160 @@
+{
+ "period": "Q2-19",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114420419035868/tv525852_ex99-1.htm",
+  "10q": "https://www.sec.gov/Archives/edgar/data/1396009/000139600919000052/vmc-20190630x10q.htm"
+ },
+ "seg": {
+  "agg_rev": 1062.1,
+  "agg_interseg": -87.3,
+  "agg_fa_rev": 806.4,
+  "agg_freight_rev": 241.4,
+  "agg_other_rev": 14.3,
+  "agg_tons": 57.31,
+  "agg_price": 14.07,
+  "agg_gp": 329.2,
+  "agg_dda": 75.8,
+  "agg_cgp": 405.0,
+  "asph_rev": 247.2,
+  "asph_interseg": null,
+  "asph_tons": 3.595,
+  "asph_price": 58.31,
+  "asph_gp": 27.6,
+  "asph_dda": 8.9,
+  "asph_cgp": null,
+  "conc_rev": 103.8,
+  "conc_interseg": null,
+  "conc_cy": 0.815,
+  "conc_price": 126.12,
+  "conc_gp": 12.9,
+  "conc_dda": 3.3,
+  "conc_cgp": null,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": 2.0,
+  "calc_gp": 0.8,
+  "calc_dda": 0.1,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 1415.0,
+  "interseg_total": -87.3,
+  "delivery_rev": null,
+  "other_dda": 5.5,
+  "total_dda": 93.5,
+  "gp_total": 370.5,
+  "notes": "2019: ASC 842 (leases) adopted 1-Jan-2019 - operating lease right-of-use assets and operating lease liabilities on the balance sheet; 'Noncash operating lease expense' line added to the cash flow statement. Revenue presentation as post-ASC 606 (freight & delivery inside segment revenues; no separate delivery revenues line); ASU 2017-07 nonoperating pension cost presentation; CF cash includes restricted cash (ASU 2016-18). Segment revenues include freight & delivery (pass-through) and service revenues; intersegment sales are all Aggregates (asph/conc interseg = null, none reported). agg_price = freight-adjusted ASP as published. Calcium: 73k tons @ $27.50/t. agg_cgp per published Aggregates segment cash gross profit reconciliation (GP + segment DDA&A)."
+ },
+ "is": {
+  "total_rev": 1327.7,
+  "net_sales": null,
+  "delivery_rev": null,
+  "cost_of_rev": 957.2,
+  "gp": 370.5,
+  "sag": 95.7,
+  "gain_sale": 3.5,
+  "other_op_lines": [
+   [
+    "Other operating expense, net",
+    -2.2
+   ]
+  ],
+  "other_op": -2.2,
+  "op_earnings": 276.1,
+  "nonop": 2.5,
+  "interest": 33.0,
+  "ebt": 245.5,
+  "tax": 47.6,
+  "cont_ops": 197.9,
+  "disc_ops": -0.3,
+  "net_earnings": 197.6,
+  "nci": 0.0,
+  "ni_vulcan": 197.6,
+  "shares_basic": 132.269,
+  "shares_diluted": 133.354,
+  "eps_cont_dil": 1.48,
+  "eps_dil": 1.48,
+  "eps_basic": 1.49,
+  "dps": 0.31,
+  "notes": "dps 0.31 from the 10-Q MD&A (dividends @ $0.31 per share); not shown in the release. Vulcan has no noncontrolling interests; nci = 0, ni_vulcan = net earnings. ASU 2017-07: other nonoperating income includes non-service pension/OPEB cost/credit."
+ },
+ "ngaap": {
+  "ebitda_pub": 372.0,
+  "adj_ebitda_pub": 372.0,
+  "ebitda_bridge_tax": 47.6,
+  "ebitda_bridge_disc_ops": 0.3,
+  "ebitda_bridge_lines": [
+   [
+    "Gain on sale of businesses",
+    0.0
+   ],
+   [
+    "Property donation",
+    0.0
+   ],
+   [
+    "Business interruption claims recovery",
+    0.0
+   ],
+   [
+    "Charges associated with divested operations",
+    0.0
+   ],
+   [
+    "Business development",
+    0.0
+   ],
+   [
+    "One-time employee bonuses",
+    0.0
+   ],
+   [
+    "Restructuring charges",
+    0.0
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": null,
+   "gain_sale": 0.0,
+   "impairment": 0.0,
+   "divested_ops": 0.0,
+   "acquisition": 0.0,
+   "restructuring": 0.0,
+   "legal_env": 0.0,
+   "pension": 0.0,
+   "other": 0.0,
+   "other_label": null
+  },
+  "adj_eps_pub": 1.48,
+  "eps_bridge_lines": [
+   [
+    "Diluted EPS from continuing operations",
+    1.48
+   ],
+   [
+    "Items included in Adjusted EBITDA above",
+    0.0
+   ],
+   [
+    "Debt refinancing costs",
+    0.0
+   ],
+   [
+    "Tax reform income tax savings",
+    0.0
+   ],
+   [
+    "Alabama NOL carryforward valuation allowance",
+    0.0
+   ]
+  ],
+  "eps_items_after_tax_ps": 0.0,
+  "eps_discrete_tax_ps": 0.0,
+  "eps_bridge_start_ps": 1.48,
+  "agg_cgp_per_ton_pub": 7.07,
+  "roic_pub": null,
+  "notes": "Reconciliation (exact): Net earnings + income tax expense (continuing ops) + interest expense, net + (earnings) loss on discontinued operations, net of tax [+0.3] = EBIT; + DDA&A = EBITDA. So ni_vulcan + ebitda_bridge_tax + interest + total_dda differs from ebitda_pub by exactly that discontinued-ops add-back (0.3; extra field ebitda_bridge_disc_ops, signed as added); EBITDA is a continuing-operations measure. adj_items.disc_ops = null (disc ops is excluded above EBITDA, not in the EBITDA->Adjusted bridge). Mapping: Gain on sale of businesses -> gain_sale; Business interruption claims recovery (2010 Gulf Coast oil spill claims settlement) -> legal_env; Charges associated with divested operations -> divested_ops; Business development (non-routine acquisition charges incl. purchase-accounting inventory step-up) -> acquisition; Restructuring charges -> restructuring; Property donation / One-time employee bonuses -> other. impairment/pension = 0 (no such lines in bridge). Adjusted EPS bridge starts from diluted EPS from continuing operations; eps_items_after_tax_ps = 'Items included in Adjusted EBITDA above' + debt refinancing costs / debt-purchase interest charges (after tax); eps_discrete_tax_ps = tax reform savings + Alabama NOL valuation allowance + foreign tax credit lines."
+ }
+}

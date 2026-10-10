@@ -1,0 +1,747 @@
+{
+ "period": "2025",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/943452/000162828026007113/a4q2025pressrelease.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/943452/000162828026008067/wab-20251231.htm"
+ },
+ "seg": {
+  "frt_rev": 8036.0,
+  "frt_op": 1567.0,
+  "trn_rev": 3131.0,
+  "trn_op": 422.0,
+  "corp_op": -196.0,
+  "frt_gp": 2835.0,
+  "frt_adj_gp": 2894.0,
+  "frt_adj_op": 1951.0,
+  "trn_gp": 971.0,
+  "trn_adj_gp": 977.0,
+  "trn_adj_op": 464.0,
+  "frt_pl": {
+   "services": 3055.0,
+   "equipment": 2365.0,
+   "components": 1586.0,
+   "digital": 1030.0,
+   "other": null,
+   "labels": "Services, Equipment, Components, Digital Intelligence"
+  },
+  "trn_pl": {
+   "oe": 1393.0,
+   "aftermarket": 1738.0
+  },
+  "legacy_pl": [],
+  "backlog_total": 27407.0,
+  "backlog_12m": 8234.0,
+  "frt_backlog_total": 22493.0,
+  "frt_backlog_12m": 6022.0,
+  "trn_backlog_total": 4914.0,
+  "trn_backlog_12m": 2212.0,
+  "bridge": {
+   "frt": {
+    "acq": 328.0,
+    "divest": -36.0,
+    "fx": -31.0,
+    "organic": 307.0
+   },
+   "trn": {
+    "acq": 27.0,
+    "divest": -36.0,
+    "fx": 64.0,
+    "organic": 157.0
+   },
+   "total": {
+    "acq": 355.0,
+    "divest": -72.0,
+    "fx": 33.0,
+    "organic": 464.0
+   }
+  },
+  "loco_deliveries": null,
+  "seg_adj_recon_rows": [
+   [
+    "Freight Segment Reported Results",
+    [
+     703.0,
+     318.0,
+     556.0,
+     273.0,
+     2835.0,
+     1567.0,
+     2523.0,
+     1422.0
+    ]
+   ],
+   [
+    "Restructuring and Portfolio Optimization costs",
+    [
+     1.0,
+     50.0,
+     8.0,
+     9.0,
+     6.0,
+     56.0,
+     18.0,
+     27.0
+    ]
+   ],
+   [
+    "Transaction costs",
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     3.0,
+     0.0,
+     0.0
+    ]
+   ],
+   [
+    "Inventory Purchase Accounting charge",
+    [
+     29.0,
+     29.0,
+     0.0,
+     0.0,
+     53.0,
+     53.0,
+     0.0,
+     0.0
+    ]
+   ],
+   [
+    "Non-cash Amortization expense",
+    [
+     0.0,
+     72.0,
+     0.0,
+     66.0,
+     0.0,
+     272.0,
+     0.0,
+     267.0
+    ]
+   ],
+   [
+    "Freight Segment Adjusted Results",
+    [
+     733.0,
+     470.0,
+     564.0,
+     348.0,
+     2894.0,
+     1951.0,
+     2541.0,
+     1716.0
+    ]
+   ],
+   [
+    "Transit Segment Reported Results",
+    [
+     263.0,
+     108.0,
+     241.0,
+     103.0,
+     971.0,
+     422.0,
+     843.0,
+     338.0
+    ]
+   ],
+   [
+    "Restructuring and Portfolio Optimization costs",
+    [
+     3.0,
+     4.0,
+     10.0,
+     21.0,
+     6.0,
+     18.0,
+     19.0,
+     41.0
+    ]
+   ],
+   [
+    "Non-cash Amortization expense",
+    [
+     0.0,
+     6.0,
+     0.0,
+     6.0,
+     0.0,
+     24.0,
+     0.0,
+     21.0
+    ]
+   ],
+   [
+    "Transit Segment Adjusted Results",
+    [
+     266.0,
+     118.0,
+     251.0,
+     130.0,
+     977.0,
+     464.0,
+     862.0,
+     400.0
+    ]
+   ]
+  ],
+  "notes": "Segment GP and adjusted GP / adjusted op income from release Appendix G. seg_adj_recon_rows = raw Appendix G rows [label, [GP_cur, OI_cur, GP_prior, OI_prior, (YTD cur GP, OI, YTD prior GP, OI)]] as printed (the Q2-26 Transit inventory row has a stray duplicated cell in the HTML). Backlog columns = period-end. Locomotive delivery counts are not given in the releases.",
+  "seg_rev_note": "Q1-2025 recast: certain Services businesses moved to Components product line (prior periods recast; no segment impact). Digital Intelligence includes Inspection Technologies (from 1-Jul-2025) and Frauscher (from 1-Dec-2025); Transit includes Dellner Couplers (from 10-Feb-2026)."
+ },
+ "is": {
+  "net_sales": 11167.0,
+  "cost_of_sales": 7361.0,
+  "gp": 3806.0,
+  "sga": 1490.0,
+  "eng": 223.0,
+  "amort": 300.0,
+  "other_op_lines": [],
+  "total_opex": 2013.0,
+  "op_income": 1793.0,
+  "interest": 225.0,
+  "other_inc": 24.0,
+  "ebt": 1592.0,
+  "tax": 409.0,
+  "cont_ops": 1183.0,
+  "disc_ops": 0.0,
+  "net_income": 1183.0,
+  "nci": 13.0,
+  "ni_wab": 1170.0,
+  "eps_basic": 6.84,
+  "eps_dil": 6.83,
+  "eps_cont_dil": 6.83,
+  "shares_basic": 170.5,
+  "shares_diluted": 171.1,
+  "dps": 1.0,
+  "per_share_basis": "post_split"
+ },
+ "ngaap": {
+  "adj_table": [
+   [
+    "Reported Results",
+    {
+     "sales": 11167.0,
+     "gp": 3806.0,
+     "opex": -2013.0,
+     "op": 1793.0,
+     "int_other": -201.0,
+     "tax": -409.0,
+     "ni": 1183.0,
+     "nci": -13.0,
+     "ni_wab": 1170.0,
+     "eps": 6.83
+    }
+   ],
+   [
+    "Restructuring and Portfolio Optimization costs",
+    {
+     "sales": 0.0,
+     "gp": 12.0,
+     "opex": 64.0,
+     "op": 76.0,
+     "int_other": 0.0,
+     "tax": 1.0,
+     "ni": 77.0,
+     "nci": 0.0,
+     "ni_wab": 77.0,
+     "eps": 0.45
+    }
+   ],
+   [
+    "Inventory Purchase Accounting charge",
+    {
+     "sales": 0.0,
+     "gp": 53.0,
+     "opex": 0.0,
+     "op": 53.0,
+     "int_other": 0.0,
+     "tax": -13.0,
+     "ni": 40.0,
+     "nci": 0.0,
+     "ni_wab": 40.0,
+     "eps": 0.23
+    }
+   ],
+   [
+    "Transaction costs",
+    {
+     "sales": 0.0,
+     "gp": 0.0,
+     "opex": 49.0,
+     "op": 49.0,
+     "int_other": -19.0,
+     "tax": -4.0,
+     "ni": 26.0,
+     "nci": 0.0,
+     "ni_wab": 26.0,
+     "eps": 0.15
+    }
+   ],
+   [
+    "Non-cash Amortization expense",
+    {
+     "sales": 0.0,
+     "gp": 0.0,
+     "opex": 296.0,
+     "op": 296.0,
+     "int_other": 0.0,
+     "tax": -72.0,
+     "ni": 224.0,
+     "nci": 0.0,
+     "ni_wab": 224.0,
+     "eps": 1.31
+    }
+   ],
+   [
+    "Adjusted Results",
+    {
+     "sales": 11167.0,
+     "gp": 3871.0,
+     "opex": -1604.0,
+     "op": 2267.0,
+     "int_other": -220.0,
+     "tax": -497.0,
+     "ni": 1550.0,
+     "nci": -13.0,
+     "ni_wab": 1537.0,
+     "eps": 8.97
+    }
+   ]
+  ],
+  "adj_eps_pub": 8.97,
+  "adj_op_pub": 2267.0,
+  "adj_gp_pub": 3871.0,
+  "adj_ni_pub": 1537.0,
+  "adj_dil_shares": 171.1,
+  "eps_bridge_lines": [],
+  "eps_bridge_start_ps": null,
+  "ebitda_lines": [
+   [
+    "Reported Income from Operations",
+    1793.0
+   ],
+   [
+    "Other Income (Expense)",
+    24.0
+   ],
+   [
+    "Depreciation & Amortization",
+    494.0
+   ],
+   [
+    "EBITDA",
+    2311.0
+   ],
+   [
+    "Restructuring & Transaction Costs",
+    153.0
+   ],
+   [
+    "Adjusted EBITDA",
+    2464.0
+   ]
+  ],
+  "ebitda_op": 1793.0,
+  "ebitda_other": 24.0,
+  "ebitda_dda": 494.0,
+  "ebitda_pub": 2311.0,
+  "ebitda_adj_items": 153.0,
+  "adj_ebitda_pub": 2464.0,
+  "items": {
+   "restructuring": 76.0,
+   "transaction": 49.0,
+   "inventory_pa": 53.0,
+   "amortization": 296.0,
+   "contract": null,
+   "litigation": null,
+   "other_op": null,
+   "nonop": -19.0,
+   "tax_effect": -88.0,
+   "discrete_tax": null,
+   "other_label": "nonop = 'Interest & Other Exp' column of the item rows (transaction-cost row: removal of MTM gains/losses on acquisition FX forwards / deal financing costs)"
+  },
+  "guidance": "FY2026 (11-Feb-2026): sales $12.19-$12.49bn; adjusted EPS $10.05-$10.45 (+12.0% to +16.5%); includes Dellner Couplers (closed 10-Feb-2026); slide 18: adjusted operating margin up, tax rate ~24.5%, capex ~2% of sales, tariffs as of 10-Feb-2026; release graphic: cash conversion >90% through 2029. GAAP EPS not guided.",
+  "notes": "Adjusted results exclude restructuring & portfolio optimization costs, transaction costs, inventory purchase-accounting (step-up) charges and non-cash amortization expense. EBITDA = op income + other income (expense) + D&A; Adjusted EBITDA adds restructuring & transaction costs (as labelled in the release; the Adjusted EBITDA add-back can differ from restructuring+transaction op-level items because it is defined separately)."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "net_income": 1183.0,
+  "dda": 501.0,
+  "sbc": 80.0,
+  "deferred_tax": 11.0,
+  "gain_loss": 40.0,
+  "wc_change": 7.0,
+  "cfo": 1759.0,
+  "other_op": -63.0,
+  "capex": -260.0,
+  "acquisitions": -2520.0,
+  "proceeds_disp": 13.0,
+  "cfi": -2747.0,
+  "other_inv": 20.0,
+  "debt_proceeds": 4708.0,
+  "debt_repay": -3224.0,
+  "buyback": -223.0,
+  "dividends": -173.0,
+  "stock_proceeds": null,
+  "cff": 1031.0,
+  "other_fin": -57.0,
+  "fx": 31.0,
+  "net_change": 74.0,
+  "cash_begin": 715.0,
+  "cash_end": 789.0,
+  "cash_basis": "cash+restricted",
+  "lines_raw": [
+   [
+    "Net income",
+    1183.0
+   ],
+   [
+    "Depreciation and amortization",
+    501.0
+   ],
+   [
+    "Stock-based compensation expense",
+    80.0
+   ],
+   [
+    "Net loss on business disposition",
+    38.0
+   ],
+   [
+    "Net gain on mark-to-market derivatives",
+    -19.0
+   ],
+   [
+    "Below market intangible amortization",
+    -44.0
+   ],
+   [
+    "Deferred income taxes",
+    11.0
+   ],
+   [
+    "Net loss on disposal of property, plant and equipment",
+    2.0
+   ],
+   [
+    "Accounts receivable and unbilled accounts receivable",
+    -36.0
+   ],
+   [
+    "Inventories",
+    -182.0
+   ],
+   [
+    "Accounts payable",
+    34.0
+   ],
+   [
+    "Accrued income taxes",
+    6.0
+   ],
+   [
+    "Current and noncurrent customer deposits",
+    146.0
+   ],
+   [
+    "Other accrued liabilities",
+    36.0
+   ],
+   [
+    "Other operating activities",
+    3.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    1759.0
+   ],
+   [
+    "Acquisitions of businesses, net of cash acquired",
+    -2520.0
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -260.0
+   ],
+   [
+    "Proceeds from dispositions of businesses, net of cash disposed",
+    8.0
+   ],
+   [
+    "Settlement of foreign currency derivatives related to acquisition",
+    20.0
+   ],
+   [
+    "Proceeds from disposal of property, plant and equipment",
+    5.0
+   ],
+   [
+    "Net cash used for investing activities",
+    -2747.0
+   ],
+   [
+    "Proceeds from debt, net of issuance costs",
+    4708.0
+   ],
+   [
+    "Payments of debt",
+    -3224.0
+   ],
+   [
+    "Repurchase of stock",
+    -223.0
+   ],
+   [
+    "Cash dividends",
+    -173.0
+   ],
+   [
+    "Payment of contingent consideration",
+    0.0
+   ],
+   [
+    "Payment of income tax withholding on share-based compensation",
+    -40.0
+   ],
+   [
+    "Distribution to noncontrolling interest",
+    -6.0
+   ],
+   [
+    "Other financing activities",
+    -11.0
+   ],
+   [
+    "Net cash provided by (used for) financing activities",
+    1031.0
+   ],
+   [
+    "Effect of changes in currency exchange rates on cash",
+    31.0
+   ],
+   [
+    "Increase in cash",
+    74.0
+   ],
+   [
+    "Cash, cash equivalents and restricted cash, beginning of year",
+    715.0
+   ],
+   [
+    "Cash, cash equivalents and restricted cash, end of year",
+    789.0
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 789.0,
+  "restricted_cash": null,
+  "receivables": 1410.0,
+  "unbilled": 487.0,
+  "inventories": 2745.0,
+  "other_current": 263.0,
+  "total_current_assets": 5694.0,
+  "ppe": 1616.0,
+  "goodwill": 10216.0,
+  "intangibles": 3838.0,
+  "other_noncurrent": 705.0,
+  "total_assets": 22069.0,
+  "ap": 1402.0,
+  "customer_deposits": 1015.0,
+  "accrued_comp": 490.0,
+  "accrued_warranty": 266.0,
+  "current_debt": 1250.0,
+  "other_current_liab": 727.0,
+  "total_current_liab": 5150.0,
+  "ltd": 4291.0,
+  "pension": null,
+  "deferred_tax": 606.0,
+  "lt_lease": null,
+  "other_ncl": 832.0,
+  "total_liabilities": 10879.0,
+  "common_apic": 8070.0,
+  "treasury": -190.0,
+  "retained": 3878.0,
+  "aoci": -616.0,
+  "wab_equity": 11142.0,
+  "nci": 48.0,
+  "total_equity": 11190.0,
+  "total_le": 22069.0,
+  "shares_outstanding_end": 170.6,
+  "lines_raw": [
+   [
+    "Cash, cash equivalents and restricted cash",
+    789.0
+   ],
+   [
+    "Accounts receivable",
+    1410.0
+   ],
+   [
+    "Unbilled accounts receivable",
+    487.0
+   ],
+   [
+    "Inventories, net",
+    2745.0
+   ],
+   [
+    "Other current assets",
+    263.0
+   ],
+   [
+    "Total current assets",
+    5694.0
+   ],
+   [
+    "Property, plant and equipment, net",
+    1616.0
+   ],
+   [
+    "Goodwill",
+    10216.0
+   ],
+   [
+    "Other intangible assets, net",
+    3838.0
+   ],
+   [
+    "Other noncurrent assets",
+    705.0
+   ],
+   [
+    "Total noncurrent assets",
+    16375.0
+   ],
+   [
+    "Total Assets",
+    22069.0
+   ],
+   [
+    "Accounts payable",
+    1402.0
+   ],
+   [
+    "Customer deposits",
+    1015.0
+   ],
+   [
+    "Accrued compensation",
+    490.0
+   ],
+   [
+    "Accrued warranty",
+    266.0
+   ],
+   [
+    "Current portion of long-term debt",
+    1250.0
+   ],
+   [
+    "Other accrued liabilities",
+    727.0
+   ],
+   [
+    "Total current liabilities",
+    5150.0
+   ],
+   [
+    "Long-term debt",
+    4291.0
+   ],
+   [
+    "Deferred income taxes",
+    606.0
+   ],
+   [
+    "Other long-term liabilities",
+    832.0
+   ],
+   [
+    "Total Liabilities",
+    10879.0
+   ],
+   [
+    "Common stock, $ .01 par value; 500.0 shares authorized; 171.9 shares issued and 170.6 outstanding at December 31, 2025; 226.9 shares issued and 171.3 outstanding at December 31, 2024",
+    1.0
+   ],
+   [
+    "Additional paid-in capital",
+    8069.0
+   ],
+   [
+    "Treasury stock, at cost, 1.3 and 55.6 shares, at December 31, 2025 and 2024, respectively",
+    -190.0
+   ],
+   [
+    "Retained earnings",
+    3878.0
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -616.0
+   ],
+   [
+    "Total Westinghouse Air Brake Technologies Corporation shareholders\u2019 equity",
+    11142.0
+   ],
+   [
+    "Noncontrolling interest",
+    48.0
+   ],
+   [
+    "Total Equity",
+    11190.0
+   ],
+   [
+    "Total Liabilities and Equity",
+    22069.0
+   ]
+  ]
+ },
+ "extra": {
+  "employees": 31000,
+  "dps_declared": 1.0,
+  "seg_dda": {
+   "freight": 413.0,
+   "transit": 74.0,
+   "corporate": 14.0
+  },
+  "seg_capex": {
+   "freight": 166.0,
+   "transit": 78.0,
+   "corporate": 16.0
+  },
+  "depreciation": 195.0,
+  "amortization": 300.0,
+  "acquisitions": [
+   [
+    "Evident Inspection Technologies division",
+    "2025-07-01",
+    1788.0,
+    "Freight (Digital Intelligence)"
+   ],
+   [
+    "Frauscher Sensor Technology Group GmbH",
+    "2025-12-01",
+    792.0,
+    "Freight (Digital Intelligence)"
+   ],
+   [
+    "Two other Freight acquisitions (Continental Rail, Dotnetix per Mar-2026 investor deck) combined",
+    "2025",
+    26.0,
+    "Freight"
+   ]
+  ],
+  "notes": "Employees 'approximately 31,000' at 31-Dec-2025 (10-K). Segment D&A/capex and segment SG&A/engineering/amortization from 10-K segment note (Freight SG&A 823, eng 170, amort 275; Transit SG&A 471, eng 53, amort 25; Corporate SG&A 196). Depreciation $195m (10-K PP&E note); intangible amortization $300m. Dividends declared 2025 $1.00/sh (4 x $0.25). Inspection Technologies price later revised to $1.797bn in 2026 10-Qs. Dellner Couplers (agreement 18-Mar-2025, ~EUR 890m) closed 10-Feb-2026 (subsequent event). 2025 restructuring includes a $38m loss on a business disposition (10-K)."
+ },
+ "notes": [
+  "cf.wc_change includes every line under 'Changes in operating assets and liabilities' incl. 'Other operating activities'; cf.other_op = below-market intangible amortization and mark-to-market derivative (gain) loss; cf.gain_loss = net loss on PP&E disposal / business disposition; cf.debt_proceeds/debt_repay are 'Proceeds from debt, net of issuance costs' / 'Payments of debt'; cf.other_fin = tax withholding on share-based comp, NCI distributions, contingent consideration and other. bs.cash is the single published line 'Cash, cash equivalents and restricted cash' (restricted not shown separately on the face). bs.lt_lease null: operating lease liabilities are not separately presented (within other long-term liabilities). ngaap.items.nonop = Interest & Other column of the adjusted table item rows (MTM derivative gains/losses on acquisition-related FX forwards, deal financing). All values from releases are rounded to $m as published.",
+  "seg.corp_op = 'Corporate Activities and Elimination' income from operations as published in 10-K segment note (-196).",
+  "All schema self-checks pass (seg sums, product lines, backlog, sales bridge, IS cascade, adjusted table columns, EBITDA, CF sections, cash roll, BS subtotals)."
+ ]
+}

@@ -1,0 +1,548 @@
+{
+ "period": "2008",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000115752309001029/a5891687-ex991.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000095014409001772/g17356e10vk.htm",
+  "interseg_split_fy09_10k": "https://www.sec.gov/Archives/edgar/data/1396009/000095012310018400/g21744e10vk.htm"
+ },
+ "seg": {
+  "agg_rev": 2406.8,
+  "agg_interseg": -206.2,
+  "agg_fa_rev": null,
+  "agg_freight_rev": null,
+  "agg_other_rev": null,
+  "agg_tons": 204.3,
+  "agg_price": 9.98,
+  "agg_gp": 657.6,
+  "agg_dda": 310.8,
+  "agg_cgp": null,
+  "asph_rev": null,
+  "asph_interseg": null,
+  "asph_tons": 9.5,
+  "asph_price": 55.94,
+  "asph_gp": null,
+  "asph_dda": null,
+  "asph_cgp": null,
+  "conc_rev": null,
+  "conc_interseg": null,
+  "conc_cy": 6.35,
+  "conc_price": 97.78,
+  "conc_gp": null,
+  "conc_dda": null,
+  "conc_cgp": null,
+  "cem_rev": 106.5,
+  "cem_interseg": -54.6,
+  "cem_gp": 17.7,
+  "cem_dda": 14.6,
+  "calc_rev": null,
+  "calc_gp": null,
+  "calc_dda": null,
+  "other_seg_label": "Asphalt mix and Concrete (combined reporting segment)",
+  "other_seg_rev": 1201.2,
+  "other_seg_gp": 74.4,
+  "seg_sales_total": 3714.5,
+  "interseg_total": -261.4,
+  "delivery_rev": 198.4,
+  "other_dda": 2.7,
+  "total_dda": 389.1,
+  "gp_total": 749.7,
+  "notes": "FY2008 10-K Note 15 (three reportable segments; segment revenues incl. intersegment; total intersegment -261.4). Per-segment intersegment split (agg -206.2, A&C -0.6 [other_seg_interseg], cement -54.6) first published in the Q4-09 release / FY2009 10-K. Asphalt mix and Concrete is one combined reporting segment -> other_seg_* (other_seg_dda 61.0 added key); asph_*/conc_* hold volumes & prices only. The Q4-08 release showed Aggregates revenue 2,404.5 and intersegment -259.1 (10-K used). Volumes/prices per Q4-08 release (agg tons incl. 15.9m internal; cement 1.039m tons at $96.75/ton). Revenue check: 3,714.5 - 261.4 + 198.4 = 3,651.5 vs 3,651.4 (rounding).",
+  "other_seg_dda": 61.0,
+  "other_seg_interseg": -0.6
+ },
+ "is": {
+  "total_rev": 3651.4,
+  "net_sales": 3453.1,
+  "delivery_rev": 198.4,
+  "cost_of_rev": 2901.7,
+  "gp": 749.7,
+  "sag": 342.6,
+  "gain_sale": 94.2,
+  "other_op_lines": [
+   [
+    "Goodwill impairment",
+    -252.7
+   ],
+   [
+    "Other operating (income) expense, net",
+    0.4
+   ]
+  ],
+  "other_op": -252.3,
+  "op_earnings": 249.1,
+  "nonop": -4.4,
+  "interest": 169.7,
+  "ebt": 75.1,
+  "tax": 76.7,
+  "cont_ops": -1.7,
+  "disc_ops": -2.4,
+  "net_earnings": -4.1,
+  "nci": 0.0,
+  "ni_vulcan": -4.1,
+  "shares_basic": 109.8,
+  "shares_diluted": 109.8,
+  "eps_cont_dil": -0.02,
+  "eps_dil": -0.04,
+  "eps_basic": -0.04,
+  "dps": 1.96,
+  "notes": "FY2008 10-K as originally reported (used instead of the Q4-08 release because the 10-K recorded the 252.7 pre-tax / 227.6 after-tax cement goodwill impairment that the Feb-2009 release did not include; release showed op earnings 501.8, EBT 327.7, tax 96.7, cont ops 231.0, net earnings 228.6, diluted EPS 2.06, diluted shares 111.0). Minority interest (0.283) is netted inside other operating (income) expense in the 10-K. interest = 172.8 - 3.1 interest income. Diluted shares = basic due to loss. Gain on sale includes 73.8 gain on DOJ-required Florida Rock divestitures. Later restated (FY2009 10-K Note 20): tax 71.7, cont ops 3.4, net earnings 0.9, diluted EPS 0.01."
+ },
+ "ngaap": {
+  "ebitda_pub": 886.5,
+  "adj_ebitda_pub": null,
+  "ebitda_bridge_tax": 76.7,
+  "ebitda_bridge_lines": [],
+  "adj_items": {
+   "disc_ops": null,
+   "gain_sale": null,
+   "impairment": null,
+   "divested_ops": null,
+   "acquisition": null,
+   "restructuring": null,
+   "legal_env": null,
+   "pension": null,
+   "other": null,
+   "other_label": null
+  },
+  "adj_eps_pub": 1.74,
+  "eps_bridge_lines": [
+   [
+    "GAAP diluted earnings per share from continuing operations",
+    2.08
+   ],
+   [
+    "After-tax gain per diluted share resulting from sale of required divestitures, net",
+    -0.4
+   ],
+   [
+    "Income tax expense on divested Florida Rock assets",
+    0.06
+   ],
+   [
+    "Earnings per share from continuing operations, net of tax, as adjusted",
+    1.74
+   ]
+  ],
+  "eps_items_after_tax_ps": -0.4,
+  "eps_discrete_tax_ps": 0.06,
+  "eps_bridge_start_ps": 2.08,
+  "agg_cgp_per_ton_pub": null,
+  "roic_pub": null,
+  "ebt_bridge_lines": [
+   [
+    "GAAP earnings from continuing operations before income taxes",
+    327.7
+   ],
+   [
+    "Gain on sale of required divestitures, net",
+    -73.8
+   ],
+   [
+    "Earnings from continuing operations before income taxes, as adjusted",
+    253.9
+   ]
+  ],
+  "cash_earnings_pub": 624.4,
+  "notes": "EBITDA 886.5 per Q4-08 release Table G (EBIT 497.4 + DDA 389.1; pre-impairment basis). The FY2009 release re-presented 2008 EBITDA as 886.5 (EBIT 244.7 + goodwill impairment 252.7 + DDA 389.1), i.e. the impairment is excluded from EBITDA. Check with 10-K figures: ni_vulcan -4.1 + tax 76.7 + interest 169.7 + DDA 389.1 = 631.4; +impairment 252.7 +disc ops loss 2.4 = 886.5 (so the plain check fails by those two add-backs). Adjusted EPS 1.74 and its bridge are from the Q4-08 release, which started from pre-impairment GAAP cont-ops EPS 2.08; the 10-K GAAP cont-ops EPS was -0.02 (impairment $2.07/sh). No Adjusted EBITDA published. Cash earnings 624.4 (EBITDA - net interest - current taxes) published (added key). MD&A cites record cash earnings per ton of aggregates but no figure."
+ },
+ "cf": {
+  "net_earnings": -4.1,
+  "dda": 389.1,
+  "noncash_lease": null,
+  "gain_sale": -94.2,
+  "pension_contrib": -3.1,
+  "sbc": 19.1,
+  "deferred_tax": -22.4,
+  "wc_change": -87.4,
+  "other_op": 238.3,
+  "cfo": 435.2,
+  "capex": -353.2,
+  "proceeds_ppe": 25.5,
+  "proceeds_bus": 225.8,
+  "acquisitions": -84.1,
+  "other_inv": -3.1,
+  "cfi": -189.0,
+  "debt_proceeds": 949.1,
+  "debt_repay": -1057.8,
+  "buyback": 0.0,
+  "dividends": -214.8,
+  "stock_proceeds": 79.7,
+  "other_fin": -27.0,
+  "cff": -270.8,
+  "net_change": -24.7,
+  "cash_begin": 34.9,
+  "cash_end": 10.2,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net earnings (loss)",
+    -4.1
+   ],
+   [
+    "Depreciation, depletion, accretion and amortization",
+    389.1
+   ],
+   [
+    "Goodwill impairment",
+    252.7
+   ],
+   [
+    "Net gain on sale of property, plant & equipment and businesses",
+    -94.2
+   ],
+   [
+    "Contributions to pension plans",
+    -3.1
+   ],
+   [
+    "Share-based compensation",
+    19.1
+   ],
+   [
+    "Accounts and notes receivable",
+    61.4
+   ],
+   [
+    "Inventories",
+    -7.6
+   ],
+   [
+    "Deferred income taxes (assets)",
+    -27.0
+   ],
+   [
+    "Prepaid expenses",
+    -12.9
+   ],
+   [
+    "Other assets",
+    -8.1
+   ],
+   [
+    "Accrued interest and income taxes",
+    -3.1
+   ],
+   [
+    "Trade payables and other accruals",
+    -125.2
+   ],
+   [
+    "Deferred income taxes (liabilities)",
+    4.6
+   ],
+   [
+    "Other noncurrent liabilities",
+    6.8
+   ],
+   [
+    "Other, net (operating)",
+    -13.1
+   ],
+   [
+    "Net cash provided by operating activities",
+    435.2
+   ],
+   [
+    "Purchases of property, plant & equipment",
+    -353.2
+   ],
+   [
+    "Proceeds from sale of property, plant & equipment",
+    25.5
+   ],
+   [
+    "Proceeds from sale of businesses",
+    225.8
+   ],
+   [
+    "Payment for businesses acquired, net of acquired cash",
+    -84.1
+   ],
+   [
+    "(Increase) decrease in investments and long-term receivables",
+    -1.2
+   ],
+   [
+    "Reclassification from cash equivalents to medium-term investments",
+    -36.7
+   ],
+   [
+    "Proceeds from loan on life insurance policies",
+    28.6
+   ],
+   [
+    "Other, net (investing)",
+    6.2
+   ],
+   [
+    "Net cash used for investing activities",
+    -189.0
+   ],
+   [
+    "Net short-term borrowings (payments)",
+    -1009.0
+   ],
+   [
+    "Payment of short-term debt and current maturities",
+    -48.8
+   ],
+   [
+    "Proceeds from issuance of long-term debt, net of discounts",
+    949.1
+   ],
+   [
+    "Debt issuance costs",
+    -5.6
+   ],
+   [
+    "Settlements of forward starting interest rate swap agreements",
+    -32.5
+   ],
+   [
+    "Proceeds from issuance of common stock",
+    55.1
+   ],
+   [
+    "Dividends paid",
+    -214.8
+   ],
+   [
+    "Proceeds from exercise of stock options",
+    24.6
+   ],
+   [
+    "Excess tax benefits from share-based compensation",
+    11.2
+   ],
+   [
+    "Other, net (financing)",
+    -0.1
+   ],
+   [
+    "Net cash provided by (used for) financing activities",
+    -270.8
+   ],
+   [
+    "Net decrease in cash and cash equivalents",
+    -24.7
+   ]
+  ],
+  "notes": "FY2008 10-K cash flow as originally reported. NOTE: the Q4-08 release (Feb-2009, before the goodwill impairment was recorded) showed CFO 484.4, capex -400.6, CFI -236.4, CFF -272.7 (classification changes in the 10-K: 47.4 of accrued capex/other reclassified). other_op includes the non-cash goodwill impairment add-back 252.7. stock_proceeds = common stock issued 55.1 (to pension plan / acquisitions) + option exercises 24.6. Net short-term payments (-1,009.0) in debt_repay. buyback = 0."
+ },
+ "bs": {
+  "cash": 10.2,
+  "restricted_cash": null,
+  "ar_net": 357.0,
+  "inventories": 364.3,
+  "other_current": 162.4,
+  "assets_held_for_sale": 0.0,
+  "total_current_assets": 893.9,
+  "invest_lt_rec": 28.0,
+  "ppe_net": 4155.8,
+  "rou_assets": null,
+  "goodwill": 3083.0,
+  "intangibles": 673.8,
+  "other_noncurrent": 79.7,
+  "total_assets": 8914.2,
+  "current_maturities": 311.7,
+  "short_term_debt": 1082.5,
+  "payables": 147.1,
+  "other_current_liab": 121.8,
+  "liab_held_for_sale": 0.0,
+  "total_current_liab": 1663.1,
+  "ltd": 2153.6,
+  "deferred_tax": 949.0,
+  "deferred_revenue": null,
+  "lt_lease": null,
+  "other_noncurrent_liab": 625.3,
+  "total_liabilities": 5391.4,
+  "common_stock": 110.3,
+  "capital_excess": 1734.8,
+  "retained_earnings": 1862.9,
+  "aoci": -185.3,
+  "treasury_stock": 0.0,
+  "total_vulcan_equity": 3522.7,
+  "nci": 0.4,
+  "total_equity": 3522.7,
+  "total_liab_equity": 8914.2,
+  "shares_outstanding_end": 110.3,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    10.2
+   ],
+   [
+    "Medium-term investments",
+    36.7
+   ],
+   [
+    "Accounts and notes receivable - customers, net",
+    326.2
+   ],
+   [
+    "Accounts and notes receivable - other",
+    30.8
+   ],
+   [
+    "Inventories",
+    364.3
+   ],
+   [
+    "Deferred income taxes (current)",
+    71.2
+   ],
+   [
+    "Prepaid expenses",
+    54.5
+   ],
+   [
+    "Assets held for sale",
+    0.0
+   ],
+   [
+    "Total current assets",
+    893.9
+   ],
+   [
+    "Investments and long-term receivables",
+    28.0
+   ],
+   [
+    "Property, plant & equipment, net",
+    4155.8
+   ],
+   [
+    "Goodwill",
+    3083.0
+   ],
+   [
+    "Other intangible assets, net",
+    673.8
+   ],
+   [
+    "Other assets",
+    79.7
+   ],
+   [
+    "Total assets",
+    8914.2
+   ],
+   [
+    "Current maturities of long-term debt",
+    311.7
+   ],
+   [
+    "Short-term borrowings",
+    1082.5
+   ],
+   [
+    "Trade payables and accruals",
+    147.1
+   ],
+   [
+    "Accrued salaries, wages and management incentives",
+    44.9
+   ],
+   [
+    "Accrued interest",
+    14.4
+   ],
+   [
+    "Current portion of income taxes",
+    0.0
+   ],
+   [
+    "Other accrued liabilities",
+    62.5
+   ],
+   [
+    "Total current liabilities",
+    1663.1
+   ],
+   [
+    "Long-term debt",
+    2153.6
+   ],
+   [
+    "Deferred income taxes",
+    949.0
+   ],
+   [
+    "Deferred management incentive and other compensation",
+    34.8
+   ],
+   [
+    "Pension benefits",
+    198.4
+   ],
+   [
+    "Other postretirement benefits",
+    105.6
+   ],
+   [
+    "Asset retirement obligations",
+    173.4
+   ],
+   [
+    "Other noncurrent liabilities",
+    113.2
+   ],
+   [
+    "Minority interest",
+    0.4
+   ],
+   [
+    "Total liabilities",
+    5391.4
+   ],
+   [
+    "Common stock, $1 par value",
+    110.3
+   ],
+   [
+    "Capital in excess of par value",
+    1734.8
+   ],
+   [
+    "Retained earnings",
+    1862.9
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -185.3
+   ],
+   [
+    "Total shareholders' equity",
+    3522.7
+   ],
+   [
+    "Total liabilities and shareholders' equity",
+    8914.2
+   ]
+  ],
+  "notes": "FY2008 10-K balance sheet as originally reported (after the 252.7 cement goodwill impairment; the Feb-2009 release BS showed goodwill 3,309.5, total assets 9,175.8, equity 3,784.4). other_current includes medium-term investments 36.7 + current deferred taxes 71.2 + prepaids 54.5. Minority interest 0.4 is inside total_liabilities (pre-FAS 160) and not added to total_equity. Later restated in FY2009 10-K Note 20: goodwill 3,085.5, total assets 8,916.6, deferred taxes 920.5, retained earnings 1,893.9, equity 3,553.8."
+ },
+ "extra": {
+  "reserves_bn_tons": 13.3,
+  "dps_declared": 1.96,
+  "capex_by_segment": {
+   "aggregates": 267.7,
+   "asphalt": 13.6,
+   "concrete": null,
+   "cement": 60.2,
+   "calcium": null,
+   "corporate": 12.7
+  },
+  "seg_dda_annual": {
+   "aggregates": 310.8,
+   "asphalt": 61.0,
+   "concrete": null,
+   "cement": 14.6,
+   "calcium": null,
+   "other": 2.7
+  },
+  "employees": 9320,
+  "acquisition_revenue_contribution": null,
+  "notes": "Reserves 13.3bn tons (FY2008 10-K). Employees as of 1-Jan-2009. 'asphalt' = combined Asphalt mix and Concrete segment; cement segment includes calcium (Brooksville). Capex total 354.2. 2008 acquisitions 84.1 cash; no revenue contribution disclosed."
+ }
+}

@@ -1,0 +1,486 @@
+{
+ "period": "Q4-23",
+ "fy": 2023,
+ "q": 4,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/108312/000117184323007149/exh_991.htm",
+  "release_date": "2023-11-16",
+  "filing": "https://www.sec.gov/Archives/edgar/data/108312/000095017023064764/wwd-20230930.htm"
+ },
+ "notes": [
+  "Sales by primary market: Q4 = fiscal year (10-K) less nine months (Q3 10-Q)."
+ ],
+ "is": {
+  "rev": 777.07,
+  "cogs": 587.51,
+  "sga": 65.944,
+  "rd": 32.061,
+  "restr": 0.0,
+  "int_exp": 11.736,
+  "int_inc": -1.361,
+  "oth": -16.86,
+  "tot_costs": 679.03,
+  "ebt": 98.04,
+  "tax": 15.388,
+  "ni_tot": 82.652,
+  "eps_b": 1.38,
+  "eps_d": 1.33,
+  "sh_b": 60.103,
+  "sh_d": 62.039,
+  "dps": 0.22,
+  "ni": 82.652,
+  "other_lines": []
+ },
+ "seg": {
+  "sales_aero": 454.87,
+  "sales_ind": 322.2,
+  "ind_name": "Industrial",
+  "sales_tot": 777.07,
+  "earn_aero": 78.281,
+  "earn_ind": 54.451,
+  "earn_tot": 132.732,
+  "nonseg": -24.317,
+  "ebit": 108.415,
+  "int_net": -10.375,
+  "capex": 19.358,
+  "dep": 20.942
+ },
+ "ngaap": {
+  "ebit_pub": 108.415,
+  "adj_ebit_pub": 108.415,
+  "ebitda_pub": 138.857,
+  "adj_ebitda_pub": 138.857,
+  "dep": 20.942,
+  "amort": 9.5,
+  "ebitda_adj_tot": 0.0,
+  "ebit_adj_tot": 0.0,
+  "nonseg_pub": 24.317,
+  "adj_nonseg_pub": 24.317,
+  "adj": {
+   "fmt": "a",
+   "items": [
+    {
+     "label": "Specific charge for excess and obsolete inventory",
+     "pre": 0.0,
+     "net": 0.0,
+     "ps": 0.0,
+     "cat": "OTHER"
+    },
+    {
+     "label": "Product rationalization",
+     "pre": 0.0,
+     "net": 0.0,
+     "ps": 0.0,
+     "cat": "GAIN"
+    },
+    {
+     "label": "Restructuring charge",
+     "pre": 0.0,
+     "net": 0.0,
+     "ps": 0.0,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Non-recurring charge related to customer collections",
+     "pre": 0.0,
+     "net": 0.0,
+     "ps": 0.0,
+     "cat": "OTHER"
+    },
+    {
+     "label": "Certain non-restructuring separation costs",
+     "pre": 0.0,
+     "net": 0.0,
+     "ps": 0.0,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Non-recurring matter unrelated to the ongoing operations of the business",
+     "pre": 0.0,
+     "net": 0.0,
+     "ps": 0.0,
+     "cat": "OTHER"
+    },
+    {
+     "label": "Business development activities",
+     "pre": 0.0,
+     "net": 0.0,
+     "ps": 0.0,
+     "cat": "ACQ"
+    }
+   ],
+   "gaap_ni": 82.652,
+   "gaap_ebt": 98.04,
+   "gaap_eps": 1.33,
+   "total": {
+    "pre": 0.0,
+    "net": 0.0,
+    "ps": 0.0
+   },
+   "adj_ni": 82.652,
+   "adj_eps": 1.33,
+   "adj_ebt": 98.04
+  }
+ },
+ "cf": {
+  "ytd_months": 12,
+  "cfo": 308.543,
+  "capex": -76.5,
+  "divest": 0.0,
+  "cfi": -73.551,
+  "div": -51.027,
+  "stock_iss": 50.749,
+  "bb": -126.38,
+  "cff": -196.473,
+  "fx": -8.916,
+  "net": 29.603,
+  "beg": 107.844,
+  "end": 137.447,
+  "lines_raw": [
+   [
+    "Net cash provided by operating activities",
+    308.543
+   ],
+   [
+    "Payments for purchase of property, plant, and equipment",
+    -76.5
+   ],
+   [
+    "Proceeds from sale of assets",
+    0.488
+   ],
+   [
+    "Payments for business acquisition, net of cash acquired",
+    0.878
+   ],
+   [
+    "Proceeds from sale of the renewable power systems business and other related business",
+    0.0
+   ],
+   [
+    "Proceeds from sales of short-term investments",
+    7.692
+   ],
+   [
+    "Payments for purchases of short-term investments",
+    -6.109
+   ],
+   [
+    "Net cash used in investing activities",
+    -73.551
+   ],
+   [
+    "Cash dividends paid",
+    -51.027
+   ],
+   [
+    "Proceeds from sales of treasury stock",
+    50.749
+   ],
+   [
+    "Payments for repurchases of common stock",
+    -126.38
+   ],
+   [
+    "Borrowings on revolving lines of credit and short-term borrowings",
+    2323.5
+   ],
+   [
+    "Payments on revolving lines of credit and short-term borrowings",
+    -2390.3
+   ],
+   [
+    "Payments of debt financing costs",
+    -2.236
+   ],
+   [
+    "Payments of long-term debt and finance lease obligations",
+    -0.779
+   ],
+   [
+    "Net cash used in financing activities",
+    -196.473
+   ],
+   [
+    "Effect of exchange rate changes on cash and cash equivalents",
+    -8.916
+   ],
+   [
+    "Net change in cash and cash equivalents",
+    29.603
+   ],
+   [
+    "Cash and cash equivalents at beginning of year",
+    107.844
+   ],
+   [
+    "Cash and cash equivalents at end of year",
+    137.447
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 137.447,
+  "ar": 749.859,
+  "inv": 517.843,
+  "tca": 1469.452,
+  "ppe": 913.094,
+  "gw": 791.468,
+  "intang": 452.363,
+  "ta": 4010.203,
+  "ap": 234.328,
+  "tcl": 617.196,
+  "ltd": 645.709,
+  "tl": 1939.214,
+  "eq": 2070.989,
+  "tle": 4010.203,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    137.447
+   ],
+   [
+    "Accounts receivable",
+    749.859
+   ],
+   [
+    "Inventories",
+    517.843
+   ],
+   [
+    "Income taxes receivable",
+    14.12
+   ],
+   [
+    "Other current assets",
+    50.183
+   ],
+   [
+    "Total current assets",
+    1469.452
+   ],
+   [
+    "Property, plant, and equipment, net",
+    913.094
+   ],
+   [
+    "Goodwill",
+    791.468
+   ],
+   [
+    "Intangible assets, net",
+    452.363
+   ],
+   [
+    "Deferred income tax assets",
+    58.55
+   ],
+   [
+    "Other assets",
+    325.276
+   ],
+   [
+    "Total assets",
+    4010.203
+   ],
+   [
+    "Short term borrowings",
+    0.0
+   ],
+   [
+    "Current portion of long term debt",
+    75.817
+   ],
+   [
+    "Accounts payable",
+    234.328
+   ],
+   [
+    "Income taxes payable",
+    44.435
+   ],
+   [
+    "Accrued liabilities",
+    262.616
+   ],
+   [
+    "Total current liabilities",
+    617.196
+   ],
+   [
+    "Long-term debt, less current portion",
+    645.709
+   ],
+   [
+    "Deferred income tax liabilities",
+    132.819
+   ],
+   [
+    "Other liabilities",
+    543.49
+   ],
+   [
+    "Total liabilities",
+    1939.214
+   ],
+   [
+    "Stockholders\u2019 equity",
+    2070.989
+   ],
+   [
+    "Total liabilities and stockholders\u2019 equity",
+    4010.203
+   ]
+  ]
+ },
+ "em": {
+  "com_oem": 166.956,
+  "com_aft": 142.019,
+  "def_oem": 90.076,
+  "def_aft": 55.819,
+  "aero_tot": 454.87,
+  "ind_tot": 322.2
+ },
+ "em_py": {
+  "com_oem": 166.956,
+  "com_aft": 142.019,
+  "def_oem": 90.076,
+  "def_aft": 55.819,
+  "aero_tot": 454.87,
+  "pg": 105.559,
+  "trans": 161.767,
+  "og": 54.874,
+  "ind_tot": 322.2
+ },
+ "py": {
+  "release": "https://www.sec.gov/Archives/edgar/data/108312/000117184324006564/exh_991.htm",
+  "is": {
+   "rev": 777.07,
+   "cogs": 587.51,
+   "sga": 65.944,
+   "rd": 32.061,
+   "restr": 0.0,
+   "int_exp": 11.736,
+   "int_inc": -1.361,
+   "oth": -16.86,
+   "tot_costs": 679.03,
+   "ebt": 98.04,
+   "tax": 15.388,
+   "ni_tot": 82.652,
+   "eps_b": 1.38,
+   "eps_d": 1.33,
+   "sh_b": 60.103,
+   "sh_d": 62.039,
+   "dps": 0.22,
+   "ni": 82.652,
+   "other_lines": []
+  },
+  "seg": {
+   "sales_aero": 454.87,
+   "sales_ind": 322.2,
+   "ind_name": "Industrial",
+   "sales_tot": 777.07,
+   "earn_aero": 78.281,
+   "earn_ind": 54.451,
+   "earn_tot": 132.732,
+   "nonseg": -24.317,
+   "ebit": 108.415,
+   "int_net": -10.375,
+   "capex": 19.358,
+   "dep": 20.942
+  },
+  "ngaap": {
+   "ebit_pub": 108.415,
+   "adj_ebit_pub": 108.415,
+   "ebitda_pub": 138.857,
+   "adj_ebitda_pub": 138.857,
+   "dep": 20.942,
+   "amort": 9.5,
+   "ebitda_adj_tot": 0.0,
+   "ebit_adj_tot": 0.0,
+   "fcf_pub": 133.555,
+   "adj_fcf_pub": 135.168,
+   "nonseg_pub": 24.317,
+   "adj_nonseg_pub": 24.317,
+   "adj": {
+    "fmt": "a",
+    "items": [
+     {
+      "label": "Non-recurring gain related to a previous acquisition",
+      "pre": 0.0,
+      "net": 0.0,
+      "ps": 0.0,
+      "cat": "GAIN"
+     },
+     {
+      "label": "Business development activities",
+      "pre": 0.0,
+      "net": 0.0,
+      "ps": 0.0,
+      "cat": "ACQ"
+     },
+     {
+      "label": "Non-recurring charge related to a previous acquisition",
+      "pre": 0.0,
+      "net": 0.0,
+      "ps": 0.0,
+      "cat": "ACQ"
+     },
+     {
+      "label": "Certain non-restructuring separation costs",
+      "pre": 0.0,
+      "net": 0.0,
+      "ps": 0.0,
+      "cat": "RESTR"
+     },
+     {
+      "label": "Specific charge for excess and obsolete inventory",
+      "pre": 0.0,
+      "net": 0.0,
+      "ps": 0.0,
+      "cat": "OTHER"
+     },
+     {
+      "label": "Product rationalization",
+      "pre": 0.0,
+      "net": 0.0,
+      "ps": 0.0,
+      "cat": "GAIN"
+     },
+     {
+      "label": "Non-recurring charge related to customer collections",
+      "pre": 0.0,
+      "net": 0.0,
+      "ps": 0.0,
+      "cat": "OTHER"
+     },
+     {
+      "label": "Restructuring charges",
+      "pre": 0.0,
+      "net": 0.0,
+      "ps": 0.0,
+      "cat": "RESTR"
+     }
+    ],
+    "gaap_ni": 82.652,
+    "gaap_ebt": 98.04,
+    "gaap_eps": 1.33,
+    "total": {
+     "pre": 0.0,
+     "net": 0.0,
+     "ps": 0.0
+    },
+    "adj_ni": 82.652,
+    "adj_eps": 1.33,
+    "adj_ebt": 98.04
+   }
+  }
+ },
+ "x": {
+  "sbc_ytd": 23.383,
+  "deftax_ytd": -40.155,
+  "dda_ytd": 119.743,
+  "sh_issued": 72.96,
+  "sh_treasury": 13.07
+ }
+}

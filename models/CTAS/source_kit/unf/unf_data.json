@@ -1,0 +1,1512 @@
+{
+ "meta": {
+  "units": "USD millions; shares millions; per-share in USD",
+  "prepared": "2026-10-06",
+  "source_scope": "SEC EDGAR only"
+ },
+ "sources": {
+  "UNF_10K_FY25": {
+   "form": "10-K",
+   "filer": "UniFirst (CIK 717954)",
+   "filed": "2025-10-29",
+   "accession": "0001193125-25-256222",
+   "doc": "unf-20250830.htm"
+  },
+  "UNF_10K_FY24": {
+   "form": "10-K",
+   "filer": "UniFirst",
+   "filed": "2024-11-14",
+   "accession": "0000950170-24-127140",
+   "doc": "unf-20240831.htm"
+  },
+  "UNF_10K_FY23": {
+   "form": "10-K",
+   "filer": "UniFirst",
+   "filed": "2023-10-26",
+   "accession": "0000950170-23-055282",
+   "doc": "unf-20230826.htm"
+  },
+  "UNF_10K_FY22": {
+   "form": "10-K",
+   "filer": "UniFirst",
+   "filed": "2022-10-26",
+   "accession": "0000950170-22-020172",
+   "doc": "unf-20220827.htm"
+  },
+  "UNF_10K_FY21": {
+   "form": "10-K",
+   "filer": "UniFirst",
+   "filed": "2021-10-27",
+   "accession": "0001564590-21-052248",
+   "doc": "unf-10k_20210828.htm"
+  },
+  "UNF_8K_Q4FY25": {
+   "form": "8-K (Item 2.02) Ex.99",
+   "filer": "UniFirst",
+   "filed": "2025-10-22",
+   "accession": "0001193125-25-245773",
+   "doc": "unf-ex99.htm"
+  },
+  "UNF_8K_Q4FY24": {
+   "form": "8-K (Item 2.02) Ex.99",
+   "filer": "UniFirst",
+   "filed": "2024-10-23",
+   "accession": "0000950170-24-116485",
+   "doc": "unf-ex99.htm"
+  },
+  "UNF_8K_Q4FY23": {
+   "form": "8-K (Item 2.02) Ex.99",
+   "filer": "UniFirst",
+   "filed": "2023-10-18",
+   "accession": "0000950170-23-053878",
+   "doc": "unf-ex99.htm"
+  },
+  "UNF_8K_Q1FY26": {
+   "form": "8-K (Item 2.02) Ex.99",
+   "filer": "UniFirst",
+   "filed": "2026-01-07",
+   "accession": "0001193125-26-005469",
+   "doc": "unf-ex99.htm"
+  },
+  "UNF_8K_Q2FY26": {
+   "form": "8-K (Item 2.02) Ex.99",
+   "filer": "UniFirst",
+   "filed": "2026-04-01",
+   "accession": "0001193125-26-135782",
+   "doc": "unf-ex99.htm"
+  },
+  "UNF_8K_Q3FY26": {
+   "form": "8-K (Item 2.02) Ex.99",
+   "filer": "UniFirst",
+   "filed": "2026-07-01",
+   "accession": "0001628280-26-046349",
+   "doc": "unf-2026xq3xex99earningsre.htm"
+  },
+  "UNF_10Q_Q3FY26": {
+   "form": "10-Q",
+   "filer": "UniFirst",
+   "filed": "2026-07-08",
+   "accession": "0001628280-26-047621",
+   "doc": "unf-20260530.htm"
+  },
+  "UNF_8K_VOTE": {
+   "form": "8-K (Items 5.07/7.01/8.01)",
+   "filer": "UniFirst",
+   "filed": "2026-06-12",
+   "accession": "0001140361-26-025000",
+   "doc": "ef20075767_8k.htm"
+  },
+  "CTAS_S4": {
+   "form": "S-4",
+   "filer": "Cintas (CIK 723254)",
+   "filed": "2026-04-27",
+   "accession": "0001140361-26-016785",
+   "doc": "ny20069194x1_s4.htm; fee table ny20069194x1_ex107.htm"
+  },
+  "CTAS_424B3": {
+   "form": "424B3 (final proxy statement/prospectus; identical pro forma figures to S-4; no S-4/A was filed)",
+   "filer": "Cintas",
+   "filed": "2026-05-11",
+   "accession": "0001140361-26-020376",
+   "doc": "ny20069194x3_424b3.htm"
+  },
+  "CTAS_8K_DEAL": {
+   "form": "8-K (Items 1.01/7.01/8.01)",
+   "filer": "Cintas",
+   "filed": "2026-03-11",
+   "accession": "0000950103-26-003567",
+   "doc": "dp243132_8k.htm, Ex.99.1 dp243132_ex9901.htm (press release), Ex.99.2 dp243132_ex9902.htm (investor presentation)"
+  },
+  "CTAS_425_CALL": {
+   "form": "425 (investor call transcript)",
+   "filer": "Cintas",
+   "filed": "2026-03-11",
+   "accession": "0000950103-26-003603",
+   "doc": "dp243159_425-ict.htm"
+  },
+  "CTAS_8K_RCF": {
+   "form": "8-K (Items 1.01/1.02/2.03)",
+   "filer": "Cintas",
+   "filed": "2026-03-31",
+   "accession": "0000723254-26-000010",
+   "doc": "ctas-20260327.htm (Ex.10.1 exhibit101creditagreement3.htm)"
+  },
+  "CTAS_10K_FY26": {
+   "form": "10-K",
+   "filer": "Cintas",
+   "filed": "2026-07-29",
+   "accession": "0000723254-26-000028",
+   "doc": "ctas-20260531.htm"
+  },
+  "CTAS_8K_Q1FY27": {
+   "form": "8-K (Item 2.02) Ex.99",
+   "filer": "Cintas",
+   "filed": "2026-09-23",
+   "accession": "0000723254-26-000044",
+   "doc": "ex992026-8x31.htm"
+  }
+ },
+ "unf_annual": {
+  "FY2025": {
+   "fiscal_year_end": "2025-08-30",
+   "weeks": 52,
+   "revenue": {
+    "value": 2432.352,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "cost_of_revenues_excl_DA": {
+    "value": 1542.4,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "selling_and_admin": {
+    "value": 565.099,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "depreciation_and_amortization": {
+    "value": 140.355,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "operating_income": {
+    "value": 184.498,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "net_income": {
+    "value": 148.271,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "diluted_eps_common": {
+    "value": 7.98,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "diluted_shares_wavg": {
+    "value": 18.581,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "capex_incl_capitalized_software": {
+    "value": 154.345,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Cash Flows"
+   },
+   "cash_from_operations": {
+    "value": 296.872,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Cash Flows"
+   },
+   "cash_and_equivalents": {
+    "value": 203.501,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Balance Sheets (p.34)"
+   },
+   "short_term_investments": {
+    "value": 5.672,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Balance Sheets (p.34)"
+   },
+   "total_debt": {
+    "value": 0.0,
+    "src": "UNF_10K_FY25",
+    "loc": "MD&A Liquidity: 'no outstanding borrowings' under revolving Credit Agreement at FYE; no debt line on balance sheet"
+   },
+   "segments_new_structure": {
+    "src": "UNF_10K_FY25",
+    "loc": "Note 15 Segment Reporting (p.62)",
+    "revenue": {
+     "Uniform_and_Facility_Service_Solutions": 2218.562,
+     "First_Aid_and_Safety_Solutions": 114.586,
+     "Other_nuclear": 99.204
+    },
+    "operating_income": {
+     "Uniform_and_Facility_Service_Solutions": 168.502,
+     "First_Aid_and_Safety_Solutions": 0.853,
+     "Other_nuclear": 15.143
+    },
+    "depreciation_and_amortization": {
+     "Uniform_and_Facility_Service_Solutions": 133.42,
+     "First_Aid_and_Safety_Solutions": 3.815,
+     "Other_nuclear": 3.12
+    },
+    "capex": {
+     "Uniform_and_Facility_Service_Solutions": 147.265,
+     "First_Aid_and_Safety_Solutions": 5.035,
+     "Other_nuclear": 2.045
+    }
+   },
+   "adjusted_ebitda": {
+    "value": 336.77,
+    "src": "UNF_8K_Q4FY25",
+    "loc": "Reconciliation of GAAP to non-GAAP, 52 weeks ended Aug 30 2025",
+    "reconciliation": {
+     "net_income": 148.271,
+     "provision_for_income_taxes": 47.104,
+     "interest_income_net": -9.77,
+     "depreciation_and_amortization": 140.355,
+     "share_based_comp": 12.173,
+     "gain_on_sale_non_operating_property": -2.792,
+     "executive_transaction_costs": 1.429
+    },
+    "memo_key_initiative_costs_not_added_back": 6.8
+   },
+   "memo_acquisition_intangibles_amortization_in_DA": {
+    "value": 17.0,
+    "src": "UNF_10K_FY25",
+    "loc": "Cash flow statement footnote (1)"
+   }
+  },
+  "FY2024": {
+   "fiscal_year_end": "2024-08-31",
+   "weeks": 53,
+   "revenue": {
+    "value": 2427.431,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "cost_of_revenues_excl_DA": {
+    "value": 1579.835,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "selling_and_admin": {
+    "value": 522.586,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "depreciation_and_amortization": {
+    "value": 141.432,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "operating_income": {
+    "value": 183.578,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "net_income": {
+    "value": 145.474,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "diluted_eps_common": {
+    "value": 7.77,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "diluted_shares_wavg": {
+    "value": 18.724,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "capex_incl_capitalized_software": {
+    "value": 160.417,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Cash Flows"
+   },
+   "cash_from_operations": {
+    "value": 295.269,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Cash Flows"
+   },
+   "cash_and_equivalents": {
+    "value": 161.571,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Balance Sheets (p.34)"
+   },
+   "short_term_investments": {
+    "value": 13.505,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Balance Sheets (p.34)"
+   },
+   "total_debt": {
+    "value": 0.0,
+    "src": "UNF_10K_FY25",
+    "loc": "MD&A Liquidity: 'no outstanding borrowings' under revolving Credit Agreement at FYE; no debt line on balance sheet"
+   },
+   "segments_new_structure": {
+    "src": "UNF_10K_FY25",
+    "loc": "Note 15 (recast)",
+    "revenue": {
+     "Uniform_and_Facility_Service_Solutions": 2224.03,
+     "First_Aid_and_Safety_Solutions": 106.271,
+     "Other_nuclear": 97.13
+    },
+    "operating_income": {
+     "Uniform_and_Facility_Service_Solutions": 169.027,
+     "First_Aid_and_Safety_Solutions": -1.832,
+     "Other_nuclear": 16.383
+    },
+    "depreciation_and_amortization": {
+     "Uniform_and_Facility_Service_Solutions": 134.831,
+     "First_Aid_and_Safety_Solutions": 3.443,
+     "Other_nuclear": 3.158
+    },
+    "capex": {
+     "Uniform_and_Facility_Service_Solutions": 153.48,
+     "First_Aid_and_Safety_Solutions": 3.169,
+     "Other_nuclear": 3.768
+    }
+   },
+   "segments_old_structure": {
+    "src": "UNF_8K_Q4FY24",
+    "loc": "Adjusted EBITDA reconciliation table, 53 weeks ended Aug 31 2024",
+    "revenue": {
+     "Core_Laundry_Operations": 2138.948,
+     "Specialty_Garments": 182.212,
+     "First_Aid": 106.271
+    },
+    "depreciation_and_amortization": {
+     "Core_Laundry_Operations": 133.591,
+     "Specialty_Garments": 4.398,
+     "First_Aid": 3.443
+    },
+    "adjusted_ebitda": {
+     "Core_Laundry_Operations": 284.57,
+     "Specialty_Garments": 47.062,
+     "First_Aid": 1.71
+    }
+   },
+   "adjusted_ebitda": {
+    "value": 333.342,
+    "src": "UNF_8K_Q4FY25",
+    "loc": "Reconciliation table, 53 weeks ended Aug 31 2024 (same total in UNF_8K_Q4FY24)",
+    "reconciliation": {
+     "net_income": 145.474,
+     "provision_for_income_taxes": 43.905,
+     "interest_income_net": -7.242,
+     "depreciation_and_amortization": 141.432,
+     "share_based_comp": 9.773
+    },
+    "memo_key_initiative_costs_not_added_back": 11.8
+   },
+   "memo_acquisition_intangibles_amortization_in_DA": {
+    "value": 18.8,
+    "src": "UNF_10K_FY25",
+    "loc": "Cash flow statement footnote (1)"
+   }
+  },
+  "FY2023": {
+   "fiscal_year_end": "2023-08-26",
+   "weeks": 52,
+   "revenue": {
+    "value": 2233.047,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "cost_of_revenues_excl_DA": {
+    "value": 1481.296,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "selling_and_admin": {
+    "value": 496.915,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "depreciation_and_amortization": {
+    "value": 121.233,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "operating_income": {
+    "value": 133.603,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "net_income": {
+    "value": 103.674,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "diluted_eps_common": {
+    "value": 5.53,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "diluted_shares_wavg": {
+    "value": 18.762,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Income (Item 8, p.32)"
+   },
+   "capex_incl_capitalized_software": {
+    "value": 171.991,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Cash Flows"
+   },
+   "cash_from_operations": {
+    "value": 215.762,
+    "src": "UNF_10K_FY25",
+    "loc": "Consolidated Statements of Cash Flows"
+   },
+   "cash_and_equivalents": {
+    "value": 79.443,
+    "src": "UNF_10K_FY24",
+    "loc": "Consolidated Balance Sheets"
+   },
+   "short_term_investments": {
+    "value": 10.157,
+    "src": "UNF_10K_FY24",
+    "loc": "Consolidated Balance Sheets"
+   },
+   "total_debt": {
+    "value": 0.0,
+    "src": "UNF_10K_FY24",
+    "loc": "MD&A Liquidity: 'no outstanding borrowings' under revolving Credit Agreement at FYE; no debt line on balance sheet"
+   },
+   "segments_new_structure": {
+    "src": "UNF_10K_FY25",
+    "loc": "Note 15 (recast)",
+    "revenue": {
+     "Uniform_and_Facility_Service_Solutions": 2041.18,
+     "First_Aid_and_Safety_Solutions": 94.824,
+     "Other_nuclear": 97.043
+    },
+    "operating_income": {
+     "Uniform_and_Facility_Service_Solutions": 120.064,
+     "First_Aid_and_Safety_Solutions": -2.551,
+     "Other_nuclear": 16.09
+    },
+    "depreciation_and_amortization": {
+     "Uniform_and_Facility_Service_Solutions": 115.054,
+     "First_Aid_and_Safety_Solutions": 2.936,
+     "Other_nuclear": 3.243
+    },
+    "capex": {
+     "Uniform_and_Facility_Service_Solutions": 166.022,
+     "First_Aid_and_Safety_Solutions": 4.037,
+     "Other_nuclear": 1.932
+    }
+   },
+   "segments_old_structure": {
+    "src": "UNF_10K_FY23",
+    "loc": "Note 15 Segment Reporting",
+    "revenue": {
+     "Core_Laundry_Operations": 1961.189,
+     "Specialty_Garments": 177.034,
+     "First_Aid": 94.824
+    },
+    "operating_income": {
+     "Core_Laundry_Operations": 98.666,
+     "Specialty_Garments": 37.488,
+     "First_Aid": -2.551
+    },
+    "depreciation_and_amortization": {
+     "Core_Laundry_Operations": 114.277,
+     "Specialty_Garments": 4.02,
+     "First_Aid": 2.936
+    },
+    "capex": {
+     "Core_Laundry_Operations": 159.136,
+     "Specialty_Garments": 8.818,
+     "First_Aid": 4.037
+    }
+   },
+   "adjusted_ebitda": {
+    "value": 265.412,
+    "src": "UNF_8K_Q4FY24",
+    "loc": "Reconciliation table, 52 weeks ended Aug 26 2023",
+    "reconciliation": {
+     "net_income": 103.674,
+     "provision_for_income_taxes": 35.163,
+     "interest_income_net": -6.738,
+     "depreciation_and_amortization": 121.233,
+     "share_based_comp": 9.063,
+     "acquisition_costs_Clean_Uniform": 3.017
+    },
+    "memo_key_initiative_costs_not_added_back": 33.6,
+    "memo_unadjusted_EBITDA_reported_Oct2023": {
+     "value": 253.332,
+     "src": "UNF_8K_Q4FY23"
+    }
+   },
+   "memo_acquisition_intangibles_amortization_in_DA": {
+    "value": 14.7,
+    "src": "UNF_10K_FY25",
+    "loc": "Cash flow statement footnote (1)"
+   }
+  },
+  "FY2022": {
+   "fiscal_year_end": "2022-08-27",
+   "weeks": 52,
+   "revenue": {
+    "value": 2000.822,
+    "src": "UNF_10K_FY24",
+    "loc": "Consolidated Statements of Income (FY2022 column; also in FY2023 10-K)"
+   },
+   "cost_of_revenues_excl_DA": {
+    "value": 1306.451,
+    "src": "UNF_10K_FY24",
+    "loc": "Consolidated Statements of Income (FY2022 column; also in FY2023 10-K)"
+   },
+   "selling_and_admin": {
+    "value": 451.243,
+    "src": "UNF_10K_FY24",
+    "loc": "Consolidated Statements of Income (FY2022 column; also in FY2023 10-K)"
+   },
+   "depreciation_and_amortization": {
+    "value": 108.777,
+    "src": "UNF_10K_FY24",
+    "loc": "Consolidated Statements of Income (FY2022 column; also in FY2023 10-K)"
+   },
+   "operating_income": {
+    "value": 134.351,
+    "src": "UNF_10K_FY24",
+    "loc": "Consolidated Statements of Income (FY2022 column; also in FY2023 10-K)"
+   },
+   "net_income": {
+    "value": 103.404,
+    "src": "UNF_10K_FY24",
+    "loc": "Consolidated Statements of Income (FY2022 column; also in FY2023 10-K)"
+   },
+   "diluted_eps_common": {
+    "value": 5.46,
+    "src": "UNF_10K_FY24",
+    "loc": "Consolidated Statements of Income (FY2022 column; also in FY2023 10-K)"
+   },
+   "diluted_shares_wavg": {
+    "value": 18.933,
+    "src": "UNF_10K_FY24",
+    "loc": "Consolidated Statements of Income (FY2022 column; also in FY2023 10-K)"
+   },
+   "capex_incl_capitalized_software": {
+    "value": 144.319,
+    "src": "UNF_10K_FY24",
+    "loc": "Consolidated Statements of Cash Flows"
+   },
+   "cash_from_operations": {
+    "value": 122.649,
+    "src": "UNF_10K_FY24",
+    "loc": "Consolidated Statements of Cash Flows"
+   },
+   "cash_and_equivalents": {
+    "value": 376.399,
+    "src": "UNF_10K_FY23",
+    "loc": "Consolidated Balance Sheets"
+   },
+   "short_term_investments": {
+    "value": 0.0,
+    "src": "UNF_10K_FY23",
+    "loc": "Consolidated Balance Sheets"
+   },
+   "total_debt": {
+    "value": 0.0,
+    "src": "UNF_10K_FY23",
+    "loc": "MD&A Liquidity: 'no outstanding borrowings' under revolving Credit Agreement at FYE; no debt line on balance sheet"
+   },
+   "segments_old_structure": {
+    "src": "UNF_10K_FY23",
+    "loc": "Note 15 Segment Reporting",
+    "revenue": {
+     "Core_Laundry_Operations": 1770.502,
+     "Specialty_Garments": 152.885,
+     "First_Aid": 77.435
+    },
+    "operating_income": {
+     "Core_Laundry_Operations": 110.71,
+     "Specialty_Garments": 23.658,
+     "First_Aid": -0.017
+    },
+    "depreciation_and_amortization": {
+     "Core_Laundry_Operations": 102.202,
+     "Specialty_Garments": 4.097,
+     "First_Aid": 2.478
+    },
+    "capex": {
+     "Core_Laundry_Operations": 135.98,
+     "Specialty_Garments": 7.122,
+     "First_Aid": 1.217
+    }
+   },
+   "adjusted_ebitda": {
+    "value": null,
+    "note": "Company did not report Adjusted EBITDA for FY2022; it reported unadjusted EBITDA (NI+tax+interest+D&A, no SBC add-back) of 240.251",
+    "ebitda_reported": 240.251,
+    "src": "UNF_8K_Q4FY23",
+    "loc": "EBITDA reconciliation, 52 weeks ended Aug 27 2022",
+    "reconciliation": {
+     "net_income": 103.404,
+     "provision_for_income_taxes": 30.921,
+     "interest_income_net": -2.851,
+     "depreciation_and_amortization": 108.777
+    }
+   },
+   "memo_acquisition_intangibles_amortization_in_DA": null
+  },
+  "FY2021": {
+   "fiscal_year_end": "2021-08-28",
+   "weeks": 52,
+   "revenue": {
+    "value": 1826.216,
+    "src": "UNF_10K_FY23",
+    "loc": "Consolidated Statements of Income (FY2021 column)"
+   },
+   "cost_of_revenues_excl_DA": {
+    "value": 1141.275,
+    "src": "UNF_10K_FY23",
+    "loc": "Consolidated Statements of Income (FY2021 column)"
+   },
+   "selling_and_admin": {
+    "value": 383.161,
+    "src": "UNF_10K_FY23",
+    "loc": "Consolidated Statements of Income (FY2021 column)"
+   },
+   "depreciation_and_amortization": {
+    "value": 105.955,
+    "src": "UNF_10K_FY23",
+    "loc": "Consolidated Statements of Income (FY2021 column)"
+   },
+   "operating_income": {
+    "value": 195.825,
+    "src": "UNF_10K_FY23",
+    "loc": "Consolidated Statements of Income (FY2021 column)"
+   },
+   "net_income": {
+    "value": 151.111,
+    "src": "UNF_10K_FY23",
+    "loc": "Consolidated Statements of Income (FY2021 column)"
+   },
+   "diluted_eps_common": {
+    "value": 7.94,
+    "src": "UNF_10K_FY23",
+    "loc": "Consolidated Statements of Income (FY2021 column)"
+   },
+   "diluted_shares_wavg": {
+    "value": 19.038,
+    "src": "UNF_10K_FY23",
+    "loc": "Consolidated Statements of Income (FY2021 column)"
+   },
+   "capex_incl_capitalized_software": {
+    "value": 133.639,
+    "src": "UNF_10K_FY23",
+    "loc": "Consolidated Statements of Cash Flows"
+   },
+   "cash_from_operations": {
+    "value": 212.302,
+    "src": "UNF_10K_FY23",
+    "loc": "Consolidated Statements of Cash Flows"
+   },
+   "cash_and_equivalents": {
+    "value": 512.868,
+    "src": "UNF_10K_FY22",
+    "loc": "Consolidated Balance Sheets"
+   },
+   "short_term_investments": {
+    "value": 0.0,
+    "src": "UNF_10K_FY22",
+    "loc": "Consolidated Balance Sheets"
+   },
+   "total_debt": {
+    "value": 0.0,
+    "src": "UNF_10K_FY22",
+    "loc": "MD&A Liquidity: 'no outstanding borrowings' under revolving Credit Agreement at FYE; no debt line on balance sheet"
+   },
+   "segments_old_structure": {
+    "src": "UNF_10K_FY23",
+    "loc": "Note 15 Segment Reporting",
+    "revenue": {
+     "Core_Laundry_Operations": 1615.56,
+     "Specialty_Garments": 145.454,
+     "First_Aid": 65.202
+    },
+    "operating_income": {
+     "Core_Laundry_Operations": 171.717,
+     "Specialty_Garments": 24.801,
+     "First_Aid": -0.693
+    },
+    "depreciation_and_amortization": {
+     "Core_Laundry_Operations": 99.331,
+     "Specialty_Garments": 4.51,
+     "First_Aid": 2.114
+    },
+    "capex": {
+     "Core_Laundry_Operations": 129.783,
+     "Specialty_Garments": 3.407,
+     "First_Aid": 0.449
+    }
+   },
+   "adjusted_ebitda": {
+    "value": null,
+    "note": "Not reported by UniFirst on EDGAR for FY2021 (Q4 FY2021/FY2022 earnings releases contain no EBITDA). Derived OI + D&A = 301.780 is NOT company-reported."
+   },
+   "memo_acquisition_intangibles_amortization_in_DA": null
+  }
+ },
+ "unf_quarterly": {
+  "note": "UniFirst FY2026 ended 2026-08-29. As of 2026-10-06 NO Q4 FY2026 earnings 8-K or FY2026 10-K has been filed on EDGAR (latest UNF filings: 8-Ks 2026-08-28 and 2026-09-11, Item 5.02 COO departure only). Q4/FY2026 is therefore not available.",
+  "Q1_FY26_13wk_to_2025-11-29": {
+   "src": "UNF_8K_Q1FY26",
+   "loc": "Consolidated Statements of Income; Reconciliation of GAAP to Non-GAAP",
+   "revenue": 621.318,
+   "cost_of_revenues": 393.029,
+   "selling_and_admin": 147.806,
+   "depreciation_and_amortization": 35.175,
+   "operating_income": 45.308,
+   "net_income": 34.363,
+   "diluted_eps": 1.89,
+   "diluted_shares": 18.188,
+   "adjusted_ebitda": 82.811,
+   "adj_ebitda_reconciliation": {
+    "net_income": 34.363,
+    "taxes": 12.615,
+    "interest_income_net": -1.929,
+    "DA": 35.175,
+    "SBC": 2.587
+   },
+   "segments": {
+    "revenue": {
+     "UFSS": 565.892,
+     "FirstAid": 30.244,
+     "Other": 25.182
+    },
+    "adjusted_ebitda": {
+     "UFSS": 77.196,
+     "FirstAid": 0.8,
+     "Other": 4.815
+    }
+   },
+   "merger_and_strategic_costs": {
+    "merger_related": 0.0,
+    "key_initiative_ERP_not_added_back": 2.3
+   },
+   "cfo": 14.851,
+   "capex": 38.883,
+   "cash_and_equivalents": 123.977,
+   "short_term_investments": 5.558,
+   "debt": 0.0
+  },
+  "Q1_FY25_13wk_to_2024-11-30": {
+   "src": "UNF_8K_Q1FY26",
+   "loc": "prior-year columns",
+   "revenue": 604.908,
+   "cost_of_revenues": 381.054,
+   "selling_and_admin": 133.515,
+   "depreciation_and_amortization": 34.808,
+   "operating_income": 55.531,
+   "net_income": 43.105,
+   "diluted_eps": 2.31,
+   "diluted_shares": 18.666,
+   "adjusted_ebitda": 93.96,
+   "adj_ebitda_reconciliation": {
+    "net_income": 43.105,
+    "taxes": 14.831,
+    "interest_income_net": -2.695,
+    "DA": 34.808,
+    "SBC": 2.836
+   },
+   "segments": {
+    "revenue": {
+     "UFSS": 552.752,
+     "FirstAid": 26.222,
+     "Other": 25.934
+    },
+    "adjusted_ebitda": {
+     "UFSS": 85.103,
+     "FirstAid": 1.253,
+     "Other": 7.604
+    }
+   },
+   "merger_and_strategic_costs": {
+    "key_initiative_ERP_not_added_back": 2.5
+   }
+  },
+  "Q2_FY26_13wk_to_2026-02-28": {
+   "src": "UNF_8K_Q2FY26",
+   "loc": "Consolidated Statements of Income; Reconciliation of GAAP to Non-GAAP",
+   "revenue": 622.505,
+   "cost_of_revenues": 403.686,
+   "selling_and_admin": 157.413,
+   "depreciation_and_amortization": 35.392,
+   "operating_income": 26.014,
+   "net_income": 20.484,
+   "diluted_eps": 1.13,
+   "diluted_shares": 18.143,
+   "adjusted_ebitda": 66.814,
+   "adj_ebitda_reconciliation": {
+    "net_income": 20.484,
+    "taxes": 6.856,
+    "interest_income_net": -1.576,
+    "DA": 35.392,
+    "SBC": 3.674,
+    "non_operating_adjustments_proxy_and_merger": 1.984
+   },
+   "segments": {
+    "revenue": {
+     "UFSS": 568.808,
+     "FirstAid": 30.793,
+     "Other": 22.904
+    },
+    "adjusted_ebitda": {
+     "UFSS": 63.265,
+     "FirstAid": 0.314,
+     "Other": 3.235
+    }
+   },
+   "merger_and_strategic_costs": {
+    "shareholder_engagement_proxy_and_Cintas_merger_costs_added_back": 1.984,
+    "employee_legal_matter_not_added_back": 2.5,
+    "key_initiative_ERP_not_added_back": 3.0
+   },
+   "cash_and_equivalents": 151.794,
+   "short_term_investments": 5.664,
+   "debt": 0.0,
+   "H1_cfo": 88.475,
+   "H1_capex": 77.284
+  },
+  "Q2_FY25_13wk_to_2025-03-01": {
+   "src": "UNF_8K_Q2FY26",
+   "loc": "prior-year columns",
+   "revenue": 602.219,
+   "cost_of_revenues": 394.145,
+   "selling_and_admin": 141.914,
+   "depreciation_and_amortization": 34.946,
+   "operating_income": 31.214,
+   "net_income": 24.459,
+   "diluted_eps": 1.31,
+   "diluted_shares": 18.649,
+   "adjusted_ebitda": 68.918,
+   "adj_ebitda_reconciliation": {
+    "net_income": 24.459,
+    "taxes": 8.174,
+    "interest_income_net": -2.213,
+    "DA": 34.946,
+    "SBC": 3.198,
+    "executive_transaction_costs": 0.354
+   },
+   "segments": {
+    "revenue": {
+     "UFSS": 551.407,
+     "FirstAid": 27.454,
+     "Other": 23.358
+    },
+    "adjusted_ebitda": {
+     "UFSS": 65.994,
+     "FirstAid": 0.49,
+     "Other": 2.434
+    }
+   },
+   "merger_and_strategic_costs": {
+    "key_initiative_ERP_not_added_back": 1.9
+   }
+  },
+  "Q3_FY26_13wk_to_2026-05-30": {
+   "src": "UNF_8K_Q3FY26",
+   "loc": "Consolidated Statements of Income; Reconciliation of GAAP to Non-GAAP (also UNF_10Q_Q3FY26)",
+   "revenue": 634.402,
+   "cost_of_revenues": 399.676,
+   "selling_and_admin": 175.925,
+   "depreciation_and_amortization": 35.771,
+   "operating_income": 23.03,
+   "net_income": 19.916,
+   "diluted_eps": 1.09,
+   "diluted_shares": 18.216,
+   "adjusted_ebitda": 82.587,
+   "adj_ebitda_reconciliation": {
+    "net_income": 19.916,
+    "taxes": 4.528,
+    "interest_income_net": -1.779,
+    "DA": 35.771,
+    "SBC": 3.405,
+    "non_operating_adjustments_Cintas_transaction_costs": 20.746
+   },
+   "segments": {
+    "revenue": {
+     "UFSS": 575.747,
+     "FirstAid": 30.809,
+     "Other": 27.846
+    },
+    "operating_income": {
+     "UFSS": 19.665,
+     "FirstAid": -1.548,
+     "Other": 4.913
+    },
+    "adjusted_ebitda": {
+     "UFSS": 77.073,
+     "FirstAid": -0.258,
+     "Other": 5.772
+    }
+   },
+   "merger_and_strategic_costs": {
+    "Cintas_transaction_related_costs_in_SG&A": 20.7,
+    "key_initiative_ERP_not_added_back": 5.2
+   },
+   "cash_and_equivalents": 163.225,
+   "short_term_investments": 5.651,
+   "debt": 0.0,
+   "9M_cfo": 139.35,
+   "9M_capex": 106.965
+  },
+  "Q3_FY25_13wk_to_2025-05-31": {
+   "src": "UNF_8K_Q3FY26",
+   "loc": "prior-year columns",
+   "revenue": 610.778,
+   "cost_of_revenues": 385.189,
+   "selling_and_admin": 142.69,
+   "depreciation_and_amortization": 34.722,
+   "operating_income": 48.177,
+   "net_income": 39.68,
+   "diluted_eps": 2.13,
+   "diluted_shares": 18.607,
+   "adjusted_ebitda": 85.826,
+   "adj_ebitda_reconciliation": {
+    "net_income": 39.68,
+    "taxes": 13.715,
+    "interest_income_net": -2.514,
+    "DA": 34.722,
+    "SBC": 3.015,
+    "gain_on_sale_non_operating_property": -2.792
+   },
+   "segments": {
+    "revenue": {
+     "UFSS": 554.331,
+     "FirstAid": 29.787,
+     "Other": 26.66
+    },
+    "operating_income": {
+     "UFSS": 43.243,
+     "FirstAid": 0.525,
+     "Other": 4.409
+    },
+    "adjusted_ebitda": {
+     "UFSS": 79.003,
+     "FirstAid": 1.53,
+     "Other": 5.293
+    }
+   },
+   "merger_and_strategic_costs": {
+    "key_initiative_ERP_not_added_back": 1.0
+   }
+  },
+  "Q4_FY25_13wk_to_2025-08-30": {
+   "src": "UNF_8K_Q4FY25",
+   "loc": "Consolidated Statements of Income; Reconciliation",
+   "revenue": 614.447,
+   "cost_of_revenues": 382.012,
+   "selling_and_admin": 146.98,
+   "depreciation_and_amortization": 35.879,
+   "operating_income": 49.576,
+   "net_income": 41.027,
+   "diluted_eps": 2.23,
+   "diluted_shares": null,
+   "adjusted_ebitda": 88.066,
+   "adj_ebitda_reconciliation": {
+    "net_income": 41.027,
+    "taxes": 10.384,
+    "interest_income_net": -2.348,
+    "DA": 35.879,
+    "SBC": 3.124
+   },
+   "segments": {
+    "revenue": {
+     "UFSS": 560.072,
+     "FirstAid": 31.123,
+     "Other": 23.252
+    },
+    "adjusted_ebitda": {
+     "UFSS": 83.098,
+     "FirstAid": 1.511,
+     "Other": 3.457
+    }
+   },
+   "merger_and_strategic_costs": {
+    "key_initiative_ERP_not_added_back": 1.4
+   }
+  },
+  "9M_FY26_to_2026-05-30": {
+   "src": "UNF_8K_Q3FY26",
+   "loc": "39-week columns",
+   "revenue": 1878.225,
+   "cost_of_revenues": 1196.391,
+   "selling_and_admin": 481.144,
+   "depreciation_and_amortization": 106.338,
+   "operating_income": 94.352,
+   "net_income": 74.763,
+   "diluted_eps": 4.11,
+   "diluted_shares": 18.175,
+   "adjusted_ebitda": 232.212,
+   "adj_ebitda_reconciliation": {
+    "net_income": 74.763,
+    "taxes": 23.999,
+    "interest_income_net": -5.284,
+    "DA": 106.338,
+    "SBC": 9.666,
+    "non_operating_adjustments": 22.73
+   },
+   "merger_and_strategic_costs": {
+    "total_strategic_merger_costs_added_back": 22.73,
+    "key_initiative_and_transaction_costs_total_9M": 33.2
+   }
+  },
+  "9M_FY25_to_2025-05-31": {
+   "src": "UNF_8K_Q3FY26",
+   "loc": "39-week columns",
+   "revenue": 1817.905,
+   "cost_of_revenues": 1160.388,
+   "selling_and_admin": 418.119,
+   "depreciation_and_amortization": 104.476,
+   "operating_income": 134.922,
+   "net_income": 107.244,
+   "diluted_eps": 5.76,
+   "diluted_shares": 18.633,
+   "adjusted_ebitda": 248.704
+  },
+  "FY2026_guidance_Oct2025_midpoint_superseded": {
+   "src": "UNF_8K_Q4FY25",
+   "loc": "Fiscal 2026 outlook reconciliation",
+   "revenue": 2485.0,
+   "net_income": 124.098,
+   "operating_income": 158.8,
+   "DA": 145.6,
+   "SBC": 16.25,
+   "adjusted_ebitda": 319.65,
+   "note": "Guidance withdrawn after merger signing (UNF_8K_Q2FY26)."
+  },
+  "UNF_management_forecasts_in_proxy": {
+   "src": "CTAS_424B3",
+   "loc": "The Mergers - Unaudited Prospective Financial Information Prepared by UniFirst (p.63-64)",
+   "note": "Adjusted EBITDA here is post-SBC (SBC NOT added back)",
+   "FY2026E": {
+    "revenue": 2486,
+    "adj_ebitda_post_sbc": 305,
+    "ebit": 159,
+    "nopat": 118,
+    "ufcf": 101
+   },
+   "FY2027E": {
+    "revenue": 2576,
+    "adj_ebitda_post_sbc": 321,
+    "ebit": 171,
+    "nopat": 126,
+    "ufcf": 111
+   },
+   "FY2028E": {
+    "revenue": 2694,
+    "adj_ebitda_post_sbc": 387,
+    "ebit": 230,
+    "nopat": 170,
+    "ufcf": 162
+   },
+   "FY2029E": {
+    "revenue": 2825,
+    "adj_ebitda_post_sbc": 441,
+    "ebit": 276,
+    "nopat": 204,
+    "ufcf": 206
+   },
+   "FY2030E": {
+    "revenue": 2967,
+    "adj_ebitda_post_sbc": 480,
+    "ebit": 307,
+    "nopat": 227,
+    "ufcf": 235
+   }
+  }
+ },
+ "unf_shares_and_consideration": {
+  "latest_cover_page": {
+   "as_of": "2026-07-01",
+   "common": 14.532908,
+   "class_B": 3.551265,
+   "total": 18.084173,
+   "src": "UNF_10Q_Q3FY26",
+   "loc": "Cover page"
+  },
+  "balance_sheet_2026-05-30": {
+   "common": 14.53264,
+   "class_B": 3.551265,
+   "src": "UNF_10Q_Q3FY26",
+   "loc": "Consolidated Balance Sheet equity captions"
+  },
+  "merger_agreement_capitalization_2026-03-06": {
+   "common_excl_hook_shares": 14.528432,
+   "class_B": 3.551265,
+   "RSU_and_PSU_outstanding_RSU_awards": 0.134634,
+   "SARs": 0.247184,
+   "PSUs_at_max": 0.010568,
+   "hook_shares_held_by_subsidiary_UniTech_excluded": 1.297482,
+   "src": "CTAS_424B3",
+   "loc": "Annex A Merger Agreement Section 3.2(a),(c)"
+  },
+  "S4_fee_table_basis_2026-04-16": {
+   "common": 14.531897,
+   "class_B": 3.551265,
+   "RSU_PSU_shares": 0.145202,
+   "SAR_shares": 0.245318,
+   "total_UNF_share_equivalents": 18.473682,
+   "CTAS_shares_registered": 14.261683,
+   "src": "CTAS_S4",
+   "loc": "Ex.107 filing fee table footnote 1; also 424B3 Q&A (14,261,683 shares, ~3.4% of fully diluted Cintas)"
+  },
+  "pro_forma_share_count": {
+   "UNF_shares_outstanding_2026-02-28": 18.08,
+   "vested_awards_settled": 0.147,
+   "total_preliminary_share_count": 18.227,
+   "CTAS_shares_to_be_issued": 14.071,
+   "CTAS_shares_in_pro_forma_EPS_incl_double_trigger_awards": 14.136,
+   "src": "CTAS_424B3",
+   "loc": "Note 3 Preliminary Aggregate Merger Consideration; Note 6 EPS"
+  },
+  "cash_consideration_total_pro_forma": {
+   "value": 2825.669,
+   "per_share": 155.0,
+   "src": "CTAS_424B3",
+   "loc": "Note 3 (preliminary cash consideration 2,825.185 + 0.484 pre-combination awards)"
+  },
+  "implied_cash_on_S4_basis_2026-04-16": {
+   "value": null,
+   "note": "Not stated in filings; 18.473682m x $155 = 2,863.4 would be a derived figure (includes SARs gross, which settle net)."
+  }
+ },
+ "pro_forma": {
+  "basis": {
+   "src": "CTAS_424B3",
+   "loc": "Unaudited Pro Forma Condensed Combined Financial Statements p.107-125; identical figures in CTAS_S4",
+   "balance_sheet_date": "2026-02-28",
+   "income_periods": [
+    "FY ended 2025-05-31 (Cintas) + FY ended 2025-08-30 (UNF)",
+    "9M ended 2026-02-28"
+   ],
+   "CTAS_price_used": 179.17,
+   "CTAS_price_date": "2026-04-17"
+  },
+  "purchase_consideration": {
+   "cash": 2825.669,
+   "equity_CTAS_shares": 2521.101,
+   "equity_awards_precombination": 4.886,
+   "total_equity": 2525.987,
+   "total": 5351.656,
+   "sensitivity_+10pct_price_197.09": 5603.808,
+   "sensitivity_-10pct_price_161.25": 5099.504,
+   "loc": "Note 3"
+  },
+  "purchase_price_allocation": {
+   "loc": "Note 3 table",
+   "cash_net_of_84.0_seller_costs": 73.458,
+   "accounts_receivable": 291.58,
+   "inventories": 147.477,
+   "rental_items_in_service": 236.251,
+   "rental_items_step_up": 0.0,
+   "inventory_step_up": 0.0,
+   "prepaid_and_other_current": 49.598,
+   "PPE": 1194.638,
+   "customer_relationships": 1241.0,
+   "ROU_assets": 77.804,
+   "other_assets_incl_trade_names": 99.424,
+   "accounts_payable": 92.089,
+   "accrued_comp": 72.627,
+   "accrued_liabilities_current": 58.954,
+   "income_taxes_current": 0.03,
+   "op_lease_current": 20.225,
+   "deferred_income_taxes": 415.006,
+   "op_lease_noncurrent": 59.669,
+   "accrued_liabilities_noncurrent": 195.249,
+   "net_assets_acquired": 2497.381,
+   "goodwill": 2854.275,
+   "total": 5351.656,
+   "note": "No step-up recorded on inventories or uniforms/rental items in service (carried at historical amounts)."
+  },
+  "intangibles": {
+   "customer_relationships": {
+    "fair_value": 1241.0,
+    "life_years": 15,
+    "method": "multi-period excess earnings"
+   },
+   "trade_names": {
+    "fair_value": 50.0,
+    "life_years": 3,
+    "method": "relief-from-royalty"
+   },
+   "amortization_annual": 98.257,
+   "amortization_9M": 73.693,
+   "sensitivity_10pct_annual": 9.8,
+   "loc": "Note 3; Note 4(n)"
+  },
+  "PPE": {
+   "buildings_FV": 558.72,
+   "buildings_life_years": 20,
+   "land_FV": 199.48,
+   "buildings_and_land_total": 758.2,
+   "historical_carrying_buildings_land_eliminated": 495.15,
+   "net_step_up": 263.05,
+   "other_PPE": "historical carrying value",
+   "depreciation_new_annual": 27.936,
+   "depreciation_eliminated_annual": 27.531,
+   "note": "annual = 26.810 COS-rental + 1.126 cost-of-other; eliminated 26.422 + 1.109",
+   "loc": "Note 3; Note 4(c),(l),(m)"
+  },
+  "deferred_taxes": {
+   "DTL_on_purchase_price_adjustments": 283.803,
+   "tax_on_Cintas_transaction_costs": -5.95,
+   "tax_on_retention_bonuses": -9.687,
+   "net_adjustment": 268.166,
+   "loc": "Note 4(h)"
+  },
+  "other_BS_adjustments": {
+   "goodwill_net_adj": 2184.279,
+   "historical_UNF_goodwill_eliminated": 669.996,
+   "deferred_commissions_written_off_current": 20.722,
+   "deferred_commissions_written_off_LT": 88.18,
+   "deferred_customer_signing_bonuses_written_off": 9.271,
+   "environmental_liability_policy_alignment": 13.931,
+   "Cintas_transaction_costs_accrued": 34.0,
+   "retention_bonuses": 38.748,
+   "UNF_seller_transaction_costs_paid_at_close": 84.0,
+   "loc": "Note 4(a),(b),(d),(f),(g),(i)"
+  },
+  "income_statement_adjustments_FY2025": {
+   "revenue_signing_bonus_amort_reversal": 3.366,
+   "SGA_net": 141.823,
+   "SGA_detail": {
+    "deferred_commission_amort_eliminated": -19.661,
+    "UNF_intangible_amort_eliminated": -16.7,
+    "new_intangible_amort": 98.257,
+    "Cintas_transaction_costs_nonrecurring": 34.0,
+    "UNF_SBC_eliminated": -12.173,
+    "accelerated_SBC_nonrecurring": 19.352,
+    "retention_bonuses_nonrecurring": 38.748
+   },
+   "COS_net": 0.405,
+   "interest_expense": 150.859,
+   "tax_on_acq_adj": -34.716,
+   "tax_on_fin_adj": -37.715,
+   "pro_forma_net_income": 1743.262,
+   "pro_forma_diluted_EPS": 4.09,
+   "CTAS_standalone_diluted_EPS": 4.4,
+   "pro_forma_diluted_shares": 424.422,
+   "loc": "Pro forma statement of income FY2025; Note 4(k)-(o); Note 5(e)"
+  },
+  "income_statement_adjustments_9M_FY2026": {
+   "revenue_adj": 2.838,
+   "SGA_net": 36.734,
+   "SGA_detail": {
+    "deferred_commission_amort_eliminated": -15.552,
+    "UNF_intangible_amort_eliminated": -12.022,
+    "new_intangible_amort": 73.693,
+    "UNF_SBC_eliminated": -9.385
+   },
+   "COS_net": -0.434,
+   "interest_expense": 107.144,
+   "pro_forma_net_income": 1479.399,
+   "pro_forma_diluted_EPS": 3.5,
+   "CTAS_standalone_diluted_EPS": 3.65,
+   "pro_forma_diluted_shares": 420.972,
+   "loc": "Pro forma statement of income 9M; Note 4; Note 5(e)"
+  },
+  "tax_rate": {
+   "value": 0.25,
+   "desc": "blended statutory ~25%; 70% of transaction costs assumed deductible",
+   "loc": "Note 4(o), Note 5(f)"
+  },
+  "financing_assumptions": {
+   "permanent_debt_principal": 2800.0,
+   "assumed_rate": 0.05,
+   "deferred_issuance_costs": 19.5,
+   "net_proceeds": 2780.5,
+   "annual_interest": 140.0,
+   "annual_issuance_cost_amort": 2.859,
+   "bridge_fees_nonrecurring": 8.0,
+   "rate_sensitivity_1/8pct_annual": 3.5,
+   "cash_used_from_balance_sheet_net": 137.169,
+   "note": "Pro forma assumes bridge undrawn and terminated; $2.8bn permanent financing (type not specified) at 5%; cash adj = -2,909.669 acquisition + 2,772.5 financing",
+   "loc": "Description of the Financing p.108; Note 5"
+  },
+  "pro_forma_combined_BS_selected": {
+   "cash": 203.493,
+   "goodwill": 6353.303,
+   "service_contracts": 1527.746,
+   "PPE": 2911.502,
+   "debt_current": 229.49,
+   "debt_noncurrent": 5207.801,
+   "total_debt": 5437.291,
+   "deferred_taxes": 906.977,
+   "equity": 7251.259,
+   "loc": "Pro forma balance sheet"
+  },
+  "added_debt_and_total_debt_per_risk_factors": {
+   "additional": 2800,
+   "consolidated_post_close": 5440,
+   "loc": "Risk Factors (approx $2.8bn additional; ~$5.44bn consolidated)"
+  }
+ },
+ "deal_terms_synergies_costs": {
+  "headline": {
+   "per_share_cash": 155.0,
+   "exchange_ratio": 0.772,
+   "value_per_share_at_200.77": 310.0,
+   "EV": 5500,
+   "EV_to_runrate_TTM_EBITDA_incl_synergies": 8.0,
+   "run_rate_cost_synergies": 375,
+   "synergy_timing": "within four years (no annual phasing disclosed)",
+   "net_leverage_at_close": 1.5,
+   "EPS_accretion": "by end of second full year after closing",
+   "src": "CTAS_8K_DEAL",
+   "loc": "Ex.99.1 press release; Ex.99.2 slide 9-10"
+  },
+  "synergy_categories": {
+   "src": "CTAS_425_CALL",
+   "detail": "material cost (sourcing, stock-room optimization/garment sharing), production (operational excellence, automation), delivery (SmartTruck routing), G&A duplicate costs; no revenue synergies modeled. Cash/stock 50/50 structure avoids ~$140m/yr interest vs all-cash."
+  },
+  "integration_one_time_costs": {
+   "value": null,
+   "note": "Not quantified on EDGAR. On the 2026-03-11 call (CTAS_425_CALL) CFO Scott Garula said one-time costs (severance, retention, lease termination) should be 'in line on a proportional basis with what we experienced with G&K'. Pro forma includes only nonrecurring Cintas transaction costs 34.0, retention bonuses 38.748, accelerated SBC 19.352, bridge fees 8.0, UNF seller costs 84.0."
+  },
+  "termination_fees": {
+   "UNF_to_CTAS": 213.3,
+   "CTAS_to_UNF_reverse_antitrust": 350.0,
+   "src": "CTAS_424B3 / CTAS_10K_FY26 / UNF_10Q_Q3FY26",
+   "loc": "Summary; Risk Factors"
+  },
+  "outside_date": {
+   "initial": "2027-01-10",
+   "extensions": [
+    "2027-05-10",
+    "2027-09-10"
+   ],
+   "src": "UNF_10Q_Q3FY26",
+   "loc": "Part II Item 1A Risk Factors"
+  },
+  "status": {
+   "UNF_shareholder_approval": "2026-06-11 (8-K filed 2026-06-12, UNF_8K_VOTE)",
+   "FTC_second_request": "2026-06-11",
+   "expected_close": "prior to end of calendar 2026 (CTAS_8K_Q1FY27)"
+  },
+  "UNF_merger_costs_incurred": {
+   "Q2_FY26_proxy_and_merger": 1.984,
+   "Q3_FY26_transaction_related": 20.746,
+   "9M_total_addback": 22.73,
+   "src": "UNF_8K_Q2FY26 / UNF_8K_Q3FY26"
+  },
+  "CTAS_transaction_costs_incurred": {
+   "FY2026": {
+    "total": 16.1,
+    "SG&A": 15.136,
+    "interest_expense": 1.0,
+    "src": "CTAS_10K_FY26",
+    "loc": "MD&A results; Note 'UniFirst' / segment table"
+   },
+   "Q1_FY2027_to_2026-08-31": {
+    "total": 14.412,
+    "EPS_impact": 0.03,
+    "src": "CTAS_8K_Q1FY27",
+    "loc": "Income statement / segment table"
+   },
+   "bridge_fees_prepaid": {
+    "value": 5.2,
+    "src": "CTAS_10K_FY26",
+    "loc": "Note 6"
+   }
+  }
+ },
+ "ctas_acquisition_financing": {
+  "bridge_commitment": {
+   "date": "2026-03-10",
+   "size": 2850.0,
+   "tenor": "364-day senior unsecured, two tranches",
+   "lenders": "Morgan Stanley Senior Funding, KeyBank, KeyBanc Capital Markets, Wells Fargo Bank, Wells Fargo Securities",
+   "remaining_after_RCF": 1600.0,
+   "pricing": "not disclosed on EDGAR",
+   "src": "CTAS_8K_DEAL (Item 8.01); CTAS_424B3 p.13,108"
+  },
+  "revolving_credit_facility": {
+   "date": "2026-03-27",
+   "borrower": "Cintas Corporation No. 2",
+   "size": 2000.0,
+   "LC_sublimit": 300.0,
+   "swingline": 150.0,
+   "accordion": 1000.0,
+   "maturity": "2031-03-27",
+   "pricing": "Term SOFR + 70-114 bps (or Base Rate)",
+   "certain_funds_for_merger": 1250.0,
+   "note": "replaced Bridge Tranche B; supports CP program; replaced 2022 Third A&R Credit Agreement",
+   "covenant": "Consolidated debt/EBITDA <= 3.50x (step-up to 4.00x for four quarters after material acquisition)",
+   "src": "CTAS_8K_RCF Item 1.01; CTAS_10K_FY26 Note 6"
+  },
+  "term_loans": {
+   "value": null,
+   "note": "No term loan has been entered into per EDGAR as of 2026-10-06 (RCF permits up to $1.0bn incremental revolver/term loans via accordion)."
+  },
+  "notes_offering": {
+   "value": null,
+   "note": "No Cintas notes offering (no 8-K/424B2/FWP) filed Apr-Oct 2026; permanent $2.8bn financing not yet executed per EDGAR."
+  },
+  "UNF_existing_facility": {
+   "size": 300.0,
+   "maturity": "2030-08-12",
+   "pricing": "SOFR+1.00% at FY25 end",
+   "drawn": 0.0,
+   "LCs": 106.7,
+   "plan": "Cintas expects to terminate it and backstop/cash-collateralize LCs",
+   "src": "UNF_10K_FY25 Liquidity; CTAS_424B3 p.13"
+  }
+ },
+ "ctas_debt": {
+  "as_of": "2026-05-31",
+  "src": "CTAS_10K_FY26",
+  "loc": "Note 6 Debt, Derivatives and Hedging Activities; Exhibit index 4.2-4.7",
+  "senior_notes": [
+   {
+    "coupon": 0.037,
+    "principal": 1000.0,
+    "fiscal_maturity": 2027,
+    "title": "3.700% Senior Notes due 2027",
+    "classification": "due within one year"
+   },
+   {
+    "coupon": 0.042,
+    "principal": 400.0,
+    "fiscal_maturity": 2028,
+    "maturity_date": "2028-05-01",
+    "title": "4.200% Senior Notes due 2028"
+   },
+   {
+    "coupon": 0.04,
+    "principal": 800.0,
+    "fiscal_maturity": 2032,
+    "title": "4.000% Senior Notes due 2032"
+   },
+   {
+    "coupon": 0.0615,
+    "principal": 236.55,
+    "fiscal_maturity": 2037,
+    "title": "6.15% Senior Notes due 2036 (calendar)"
+   }
+  ],
+  "total_principal": 2436.55,
+  "debt_issuance_costs": 8.477,
+  "carrying_value": 2436.6,
+  "current_carrying": 998.987,
+  "noncurrent_carrying": 1429.086,
+  "fair_value": 2425.2,
+  "avg_rate": 0.041,
+  "commercial_paper_outstanding": 0.0,
+  "revolver_borrowings": 0.0,
+  "revolver_size": 2000.0,
+  "letters_of_credit": 125.8,
+  "scheduled_maturities_by_FY": {
+   "FY2027": 1000.0,
+   "FY2028": 400.0,
+   "FY2029": 0.0,
+   "FY2030": 0.0,
+   "FY2031": 0.0,
+   "thereafter": 1036.55
+  },
+  "interest_paid_FY2026": 106.2,
+  "update_2026-08-31": {
+   "debt_current": 999.291,
+   "debt_noncurrent": 1429.554,
+   "cash": 243.599,
+   "CP": 0.0,
+   "src": "CTAS_8K_Q1FY27",
+   "loc": "Consolidated balance sheet"
+  },
+  "FY2027_guidance_interest_net": {
+   "value": 103.0,
+   "note": "excludes UniFirst funding",
+   "src": "CTAS_8K_Q1FY27"
+  }
+ }
+}

@@ -1,0 +1,175 @@
+{
+ "period": "Q4-23",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114036124008270/ef20021827_ex99-1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000139600924000006/vmc-20231231x10k.htm"
+ },
+ "seg": {
+  "agg_rev": 1411.0,
+  "agg_interseg": -121.1,
+  "agg_fa_rev": 1068.6,
+  "agg_freight_rev": 309.4,
+  "agg_other_rev": 33.0,
+  "agg_tons": 55.3,
+  "agg_price": 19.32,
+  "agg_gp": 423.9,
+  "agg_dda": 124.7,
+  "agg_cgp": 548.6,
+  "asph_rev": 286.4,
+  "asph_interseg": null,
+  "asph_tons": 3.3,
+  "asph_price": 76.92,
+  "asph_gp": 36.3,
+  "asph_dda": 8.9,
+  "asph_cgp": 45.2,
+  "conc_rev": 256.0,
+  "conc_interseg": null,
+  "conc_cy": 1.5,
+  "conc_price": 173.83,
+  "conc_gp": 11.4,
+  "conc_dda": 12.4,
+  "conc_cgp": 23.8,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": 2.0,
+  "calc_gp": 0.6,
+  "calc_dda": 0.1,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 1955.4,
+  "interseg_total": -121.1,
+  "delivery_rev": null,
+  "other_dda": 6.4,
+  "total_dda": 152.5,
+  "gp_total": 472.2,
+  "notes": "Four reportable segments: Aggregates, Asphalt, Concrete, Calcium (Calcium still reported separately, not folded in). Aggregates revenues include freight & delivery and service revenues; the only intersegment elimination published is 'Aggregates intersegment sales'. Freight & delivery revenues and other revenues are the deductions in the freight-adjusted revenue reconciliation (segment level, incl. intersegment freight). Calcium volume/price no longer published (from Q2-23 release). Volumes published in millions to 1 dp. Asphalt and concrete prices exclude service revenues (footnote 5). Texas ready-mix concrete operations divested in Q4-23 (approx. 4m cubic yards in 2023 per outlook)."
+ },
+ "is": {
+  "total_rev": 1834.3,
+  "net_sales": null,
+  "delivery_rev": null,
+  "cost_of_rev": 1362.1,
+  "gp": 472.2,
+  "sag": 142.4,
+  "gain_sale": 53.7,
+  "other_op_lines": [
+   [
+    "Loss on impairments",
+    0.0
+   ],
+   [
+    "Other operating expense, net",
+    -13.4
+   ]
+  ],
+  "other_op": -13.4,
+  "op_earnings": 370.1,
+  "nonop": 2.6,
+  "interest": 37.4,
+  "ebt": 335.3,
+  "tax": 105.0,
+  "cont_ops": 230.3,
+  "disc_ops": -2.2,
+  "net_earnings": 228.1,
+  "nci": 0.6,
+  "ni_vulcan": 227.5,
+  "shares_basic": 132.7,
+  "shares_diluted": 133.5,
+  "eps_cont_dil": 1.72,
+  "eps_dil": 1.7,
+  "eps_basic": 1.71,
+  "dps": 0.43,
+  "notes": "Effective tax rate from continuing operations 31.3%. Discontinued operations = former Chemicals business (legal/environmental, incl. Lower Passaic River). Quarterly DPS from 10-Q XBRL (CommonStockDividendsPerShareCashPaid, $0.43 per quarter; Vulcan declares and pays in the same quarter); Q4 = FY - 9M from 10-K annual $1.72. Release shows costs as negatives from 2023; stored positive. "
+ },
+ "ngaap": {
+  "ebitda_pub": 521.6,
+  "adj_ebitda_pub": 476.1,
+  "ebitda_bridge_tax": 104.2,
+  "ebitda_bridge_lines": [
+   [
+    "Loss on discontinued operations",
+    3.0
+   ],
+   [
+    "(Gain) loss on sale of real estate and businesses, net",
+    -51.9
+   ],
+   [
+    "Charges associated with divested operations",
+    3.3
+   ],
+   [
+    "Acquisition related charges",
+    0.1
+   ],
+   [
+    "Loss on impairments",
+    0.0
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": 3.0,
+   "gain_sale": -51.9,
+   "impairment": 0.0,
+   "divested_ops": 3.3,
+   "acquisition": 0.1,
+   "restructuring": 0.0,
+   "legal_env": 0.0,
+   "pension": 0.0,
+   "other": 0.0,
+   "other_label": null
+  },
+  "adj_eps_pub": 1.46,
+  "eps_bridge_lines": [
+   [
+    "Net earnings attributable to Vulcan",
+    1.7
+   ],
+   [
+    "Items included in Adjusted EBITDA above, net of tax",
+    -0.25
+   ],
+   [
+    "NOL carryforward valuation allowance",
+    0.01
+   ],
+   [
+    "Adjusted diluted EPS attributable to Vulcan from continuing operations",
+    1.46
+   ]
+  ],
+  "eps_items_after_tax_ps": -0.25,
+  "eps_discrete_tax_ps": 0.01,
+  "eps_bridge_start_ps": 1.7,
+  "agg_cgp_per_ton_pub": 9.92,
+  "roic_pub": 16.3,
+  "ebitda_bridge_disc_ops_aftertax": null,
+  "ebitda_build_lines": [
+   [
+    "Net earnings attributable to Vulcan",
+    227.5
+   ],
+   [
+    "Income tax expense, including discontinued operations",
+    104.2
+   ],
+   [
+    "Interest expense, net",
+    37.4
+   ],
+   [
+    "Depreciation, depletion, accretion and amortization",
+    152.5
+   ],
+   [
+    "EBITDA",
+    521.6
+   ]
+  ],
+  "notes": "New basis from Q2-23: EBITDA = NI attributable to Vulcan + income tax expense INCLUDING discontinued operations + interest + DDA&A; pre-tax loss on discontinued operations is an adjustment in the Adjusted EBITDA bridge (adj_items.disc_ops). Bridge line 'Acquisition related charges' (renamed from 'Business development'); restructuring no longer a separate line. Adjusted EPS bridge starts at diluted EPS net earnings; eps_items_after_tax_ps includes the discontinued-operations per-share amount (included in 'Items included in Adjusted EBITDA above, net of tax') so that start + items + discrete = adjusted. 'Acquisition financing interest costs' (0.00 where shown) counted in items. Discrete tax = Calica NOL carryforward valuation allowance. ROIC = TTM Adjusted EBITDA / 5-quarter average invested capital, in percent."
+ },
+ "self_check_notes": "all SCHEMA.md self-checks pass"
+}

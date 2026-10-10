@@ -1,0 +1,152 @@
+{
+ "period": "Q4-24",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114036125004970/ef20043777_ex99-1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000139600925000005/vmc-20241231.htm"
+ },
+ "seg": {
+  "agg_rev": 1472.3,
+  "agg_interseg": -109.3,
+  "agg_fa_rev": 1154.2,
+  "agg_freight_rev": 297.6,
+  "agg_other_rev": 20.5,
+  "agg_tons": 53.9,
+  "agg_price": 21.41,
+  "agg_gp": 486.5,
+  "agg_dda": 133.8,
+  "agg_cgp": 620.3,
+  "asph_rev": 327.1,
+  "asph_interseg": null,
+  "asph_tons": 3.4,
+  "asph_price": 82.11,
+  "asph_gp": 46.1,
+  "asph_dda": 12.4,
+  "asph_cgp": 58.5,
+  "conc_rev": 163.5,
+  "conc_interseg": null,
+  "conc_cy": 0.9,
+  "conc_price": 183.07,
+  "conc_gp": 4.6,
+  "conc_dda": 10.6,
+  "conc_cgp": 15.2,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": null,
+  "calc_gp": null,
+  "calc_dda": null,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 1962.9,
+  "interseg_total": -109.3,
+  "delivery_rev": null,
+  "other_dda": 7.0,
+  "total_dda": 163.8,
+  "gp_total": 537.2,
+  "notes": "Table D of release (segment revenues include intersegment; aggregates revenue incl. freight & delivery and service revenues). Only aggregates has intersegment sales. Freight/other revenues from Appendix 1 freight-adjusted revenue reconciliation; cash gross profit from Appendix 1. Q4 = three-months column of the Q4 release (not derived)."
+ },
+ "is": {
+  "total_rev": 1853.6,
+  "net_sales": null,
+  "delivery_rev": null,
+  "cost_of_rev": 1316.4,
+  "gp": 537.2,
+  "sag": 138.1,
+  "gain_sale": 47.7,
+  "other_op_lines": [
+   [
+    "Loss on impairments",
+    0.0
+   ],
+   [
+    "Other operating expense, net",
+    -45.8
+   ]
+  ],
+  "other_op": -45.8,
+  "op_earnings": 401.0,
+  "nonop": -9.4,
+  "interest": 52.6,
+  "ebt": 339.0,
+  "tax": 42.9,
+  "cont_ops": 296.1,
+  "disc_ops": -2.6,
+  "net_earnings": 293.5,
+  "nci": -0.3,
+  "ni_vulcan": 293.8,
+  "shares_basic": 132.2,
+  "shares_diluted": 133.0,
+  "eps_cont_dil": 2.23,
+  "eps_dil": 2.21,
+  "eps_basic": 2.22,
+  "dps": 0.46
+ },
+ "ngaap": {
+  "ebitda_pub": 552.2,
+  "adj_ebitda_pub": 550.1,
+  "ebitda_bridge_tax": 42.0,
+  "ebitda_bridge_lines": [
+   [
+    "Loss on discontinued operations",
+    3.4
+   ],
+   [
+    "Gain on sale of real estate and businesses, net",
+    -36.7
+   ],
+   [
+    "Charges associated with divested operations",
+    16.7
+   ],
+   [
+    "Acquisition related charges",
+    14.5
+   ],
+   [
+    "Loss on impairments",
+    0.0
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": 3.4,
+   "gain_sale": -36.7,
+   "impairment": 0.0,
+   "divested_ops": 16.7,
+   "acquisition": 14.5,
+   "restructuring": 0.0,
+   "legal_env": 0.0,
+   "pension": 0.0,
+   "other": 0.0,
+   "other_label": null
+  },
+  "adj_eps_pub": 2.17,
+  "eps_bridge_lines": [
+   [
+    "Net earnings attributable to Vulcan",
+    2.21
+   ],
+   [
+    "Items included in Adjusted EBITDA above, net of tax",
+    -0.01
+   ],
+   [
+    "NOL carryforward valuation allowance",
+    -0.03
+   ],
+   [
+    "Adjusted diluted EPS attributable to Vulcan from continuing operations",
+    2.17
+   ]
+  ],
+  "eps_items_after_tax_ps": -0.01,
+  "eps_discrete_tax_ps": -0.03,
+  "eps_bridge_start_ps": 2.21,
+  "agg_cgp_per_ton_pub": 11.5,
+  "roic_pub": 16.2,
+  "notes": "Vulcan EBITDA = net earnings attributable to Vulcan + income tax (incl. discontinued ops) + interest expense, net + DDA&A; Adjusted EBITDA excludes (gain) loss on discontinued ops (pre-tax), gains on sale of real estate and businesses, impairments, charges associated with divested operations, acquisition related charges (deals requiring antitrust clearance; 2024 incl. Wake Stone inventory step-up $6.4m) and, from Q1-26, CEO transition and reorganization charges. Adjusted EPS = diluted EPS (net earnings, incl. disc ops) + items included in Adjusted EBITDA net of tax + NOL carryforward valuation allowance. roic_pub = TTM ROIC (Adj. EBITDA / avg invested capital, 5-quarter average)."
+ },
+ "notes": "is.dps for Q4 derived as FY declared ($1.84) minus 9M declared (XBRL).",
+ "checks_failed": []
+}

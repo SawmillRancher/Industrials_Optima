@@ -1,0 +1,683 @@
+{
+ "period": "2010",
+ "period_end": "2010-12-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/313616/000119312511014957/dex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/313616/000119312511044412/d10k.htm"
+ },
+ "is": {
+  "sales": 13202.6,
+  "cogs": 6575.8,
+  "gp": 6626.8,
+  "sga": 3673.7,
+  "rnd": 809.5,
+  "other_op_lines": [
+   [
+    "Earnings from unconsolidated joint venture",
+    -22.8
+   ],
+   [
+    "Other income",
+    0.0
+   ]
+  ],
+  "op_profit": 2166.4,
+  "nonop_lines": [
+   [
+    "Gain on contribution of businesses to joint venture",
+    291.0
+   ]
+  ],
+  "interest_exp": 120.8,
+  "interest_inc": 6.1,
+  "ebt": 2342.7,
+  "tax": 549.7,
+  "cont_ops": 1793.0,
+  "disc_ops": 0.0,
+  "net_income": 1793.0,
+  "nci": null,
+  "pref_div": null,
+  "ni_common": null,
+  "shares_basic": 653.194,
+  "shares_diluted": 683.275,
+  "eps_basic_cont": 2.74,
+  "eps_dil_cont": 2.64,
+  "eps_dil": 2.64,
+  "dps": 0.08,
+  "per_share_basis": "post_split"
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Test & Measurement",
+    "sales": 2832.9,
+    "op_profit": 572.9,
+    "amort": null,
+    "dep": null,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 27.5,
+    "growth_acq": 10.5,
+    "growth_fx": 0.0,
+    "growth_core": 17.0
+   },
+   {
+    "name": "Environmental",
+    "sales": 2738.0,
+    "op_profit": 564.3,
+    "amort": null,
+    "dep": null,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 13.0,
+    "growth_acq": 3.0,
+    "growth_fx": -0.5,
+    "growth_core": 10.5
+   },
+   {
+    "name": "Life Sciences & Diagnostics",
+    "sales": 2298.3,
+    "op_profit": 227.9,
+    "amort": null,
+    "dep": null,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 55.0,
+    "growth_acq": 46.0,
+    "growth_fx": 0.0,
+    "growth_core": 9.0
+   },
+   {
+    "name": "Dental",
+    "sales": 1824.6,
+    "op_profit": 203.3,
+    "amort": null,
+    "dep": null,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 10.0,
+    "growth_acq": 6.5,
+    "growth_fx": -1.0,
+    "growth_core": 4.5
+   },
+   {
+    "name": "Industrial Technologies",
+    "sales": 3193.2,
+    "op_profit": 630.1,
+    "amort": null,
+    "dep": null,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 14.0,
+    "growth_acq": 0.5,
+    "growth_fx": 0.0,
+    "growth_core": 13.5
+   },
+   {
+    "name": "Businesses contributed to Apex joint venture",
+    "sales": 315.6,
+    "op_profit": 64.3,
+    "amort": null,
+    "dep": null,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": null,
+    "growth_acq": null,
+    "growth_fx": null,
+    "growth_core": null
+   }
+  ],
+  "other_op_profit": -96.4,
+  "total_growth": {
+   "total": 18.0,
+   "acq": 7.0,
+   "fx": -0.5,
+   "core": 11.5,
+   "other": null,
+   "other_label": null
+  },
+  "respiratory_sales": null,
+  "core_ex_resp": null,
+  "recurring_pct": null,
+  "seg_note": "Q4-2010 resegmentation: five segments Test & Measurement, Environmental, Life Sciences & Diagnostics, Dental, Industrial Technologies (previously four: Professional Instrumentation, Medical Technologies, Industrial Technologies, Tools & Components). The hand-tools businesses contributed to the Apex Tool Group JV (formed 4-Jul-2010, 50/50 with Cooper Industries) are shown separately: entry 'Businesses contributed to Apex joint venture' = sales attributable to periods prior to contribution 315.6 and OP = 41.5 prior to contribution + 22.8 equity-method earnings subsequent to JV formation (64.3, computed sum of the two published rows). Remaining Tools & Components niche businesses moved to Industrial Technologies. Segment data from 10-K Note 19 ($m, identical to release). Growth components from 10-K MD&A segment tables ('Existing businesses' = core, 'Acquisitions', 'Currency exchange rates'), additive presentation (core + acq + fx = total; acq positive = added growth); '—' recorded as 0.0. Core growth excludes H2-2009 sales of the businesses contributed to Apex. Segment depreciation and amortization only published combined (extra.seg_extra); MD&A shows T&M D&A 107.8 vs 107.7 in Note 19. No restructuring charges in 2010."
+ },
+ "ngaap": {
+  "adj_eps_pub": 2.31,
+  "eps_bridge_start": 2.64,
+  "eps_bridge_start_label": "Net Earnings Per Diluted Share (GAAP)",
+  "eps_bridge": [
+   [
+    "Acquisition Related Costs",
+    0.07
+   ],
+   [
+    "Joint Venture Gain",
+    -0.34
+   ],
+   [
+    "Income Tax Items",
+    -0.06
+   ],
+   [
+    "Align Settlement Gain",
+    0.0
+   ],
+   [
+    "Additional Restructurings",
+    0.0
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Acquisition-related transaction costs deemed significant ($8m pre-tax) and fair value adjustments to acquisition related inventory and deferred revenue balances ($54m pre-tax) (\"Acquisition Related Costs\")",
+    62.0,
+    46.4,
+    "op"
+   ],
+   [
+    "Gain on contribution of assets to Apex joint venture (\"Joint Venture Gain\")",
+    -291.0,
+    -232.2,
+    "nonop"
+   ],
+   [
+    "Gains from net reduction in income tax reserves, other discrete tax items and reduction of effective tax rate (\"Income Tax Items\")",
+    null,
+    -42.8,
+    "tax"
+   ]
+  ],
+  "amort_pretax": null,
+  "adj_op_pub": null,
+  "adj_op_margin_pub": null,
+  "fcf_pub": 1867.0,
+  "capex_pub": -217.3,
+  "capex_disposals_pub": null,
+  "cfo_pub_period": 2084.4,
+  "guidance": null,
+  "notes": "Adjusted EPS excludes acquisition transaction costs deemed significant (quarterly costs above $13.5m / ~$0.02 per share; ~$35m expected for 2010), acquisition fair value adjustments to inventory and deferred revenue, the Apex JV gain and discrete income tax items. Amortization of intangibles is NOT added back (amort_pretax null). Adjusted net earnings 1,564.4 (2009: 1,177.2). Free cash flow = operating cash flow less purchases of PP&E (no disposal proceeds) - first year the Q4 release carries an FCF table. Release has no numeric 2011 guidance."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "net_income": 1793.0,
+  "disc_ops_ni": null,
+  "dep": 198.0,
+  "amort": 199.1,
+  "sbc": 88.1,
+  "deferred_tax": 43.4,
+  "impair": null,
+  "gains": -291.0,
+  "wc_change": 76.6,
+  "cfo_cont": 2084.4,
+  "cfo_disc": null,
+  "cfo": 2084.4,
+  "capex": -217.3,
+  "capex_disposals": 1.6,
+  "acquisitions": -2129.7,
+  "divest": 56.5,
+  "invest_purch": 0.0,
+  "invest_sales": null,
+  "cfi_disc": null,
+  "cfi": -2288.9,
+  "stock_iss": 178.4,
+  "pref_iss": null,
+  "dividends": -52.2,
+  "buyback": 0.0,
+  "debt_net_short": 0.0,
+  "debt_proceeds": 0.0,
+  "debt_repay": -9.4,
+  "spin_cash": null,
+  "cff_disc": null,
+  "cff": 116.8,
+  "fx": -1.2,
+  "net_change": -88.9,
+  "cash_begin": 1721.9,
+  "cash_end": 1633.0,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net earnings",
+    1793.0
+   ],
+   [
+    "Depreciation",
+    198.0
+   ],
+   [
+    "Amortization",
+    199.1
+   ],
+   [
+    "Stock compensation expense",
+    88.1
+   ],
+   [
+    "Earnings from unconsolidated joint venture",
+    -22.8
+   ],
+   [
+    "Pre-tax gain on contribution of businesses to joint venture",
+    -291.0
+   ],
+   [
+    "Consideration received in shares",
+    0.0
+   ],
+   [
+    "Change in deferred income taxes",
+    43.4
+   ],
+   [
+    "Change in trade accounts receivable, net",
+    -262.1
+   ],
+   [
+    "Change in inventories",
+    -166.5
+   ],
+   [
+    "Change in accounts payable",
+    224.7
+   ],
+   [
+    "Change in prepaid expenses and other assets",
+    70.7
+   ],
+   [
+    "Change in accrued expenses and other liabilities",
+    209.8
+   ],
+   [
+    "Net cash flows from operating activities",
+    2084.4
+   ],
+   [
+    "Payments for additions to property, plant and equipment",
+    -217.3
+   ],
+   [
+    "Proceeds from disposals of property, plant and equipment",
+    1.6
+   ],
+   [
+    "Proceeds from contribution of businesses to joint venture",
+    56.5
+   ],
+   [
+    "Cash paid for acquisitions",
+    -2129.7
+   ],
+   [
+    "Cash paid for other investments",
+    0.0
+   ],
+   [
+    "Proceeds from divestitures and refundable escrowed purchase price",
+    0.0
+   ],
+   [
+    "Net cash used in investing activities",
+    -2288.9
+   ],
+   [
+    "Proceeds from issuance of common stock",
+    178.4
+   ],
+   [
+    "Payment of dividends",
+    -52.2
+   ],
+   [
+    "Purchase of treasury stock",
+    0.0
+   ],
+   [
+    "Net (repayments) proceeds of borrowings (maturities of 90 days or less)",
+    0.0
+   ],
+   [
+    "Proceeds of borrowings (maturities longer than 90 days)",
+    0.0
+   ],
+   [
+    "Repayments of borrowings (maturities longer than 90 days)",
+    -9.4
+   ],
+   [
+    "Net cash provided by (used in) financing activities",
+    116.8
+   ],
+   [
+    "Effect of exchange rate changes on cash and equivalents",
+    -1.2
+   ],
+   [
+    "Net change in cash and equivalents",
+    -88.9
+   ],
+   [
+    "Beginning balance of cash and equivalents",
+    1721.9
+   ],
+   [
+    "Ending balance of cash and equivalents",
+    1633.0
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 1633.0,
+  "ar": 2219.0,
+  "inventories": 1225.2,
+  "prepaid_other": 652.4,
+  "ca_disc": null,
+  "tca": 5729.5,
+  "ppe": 1192.3,
+  "other_lta": 1212.4,
+  "nca_disc": null,
+  "goodwill": 10758.4,
+  "intangibles": 3324.5,
+  "ta": 22217.1,
+  "st_debt": 40.8,
+  "ap": 1215.8,
+  "accrued": 2048.2,
+  "cl_disc": null,
+  "tcl": 3304.8,
+  "other_ltl": 2355.7,
+  "ncl_disc": null,
+  "ltd": 2783.9,
+  "pref": null,
+  "common": 7.3,
+  "apic": 2412.4,
+  "treasury": null,
+  "retained": 10945.9,
+  "aoci": 345.4,
+  "dhr_equity": 13711.0,
+  "nci": 61.8,
+  "te": 13772.8,
+  "tle": 22217.1,
+  "shares_out": 656.36,
+  "lines_raw": [
+   [
+    "Cash and equivalents",
+    1633.0
+   ],
+   [
+    "Trade accounts receivable, less allowance for doubtful accounts",
+    2219.0
+   ],
+   [
+    "Inventories",
+    1225.2
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    652.4
+   ],
+   [
+    "Total current assets",
+    5729.5
+   ],
+   [
+    "Property, plant and equipment, net",
+    1192.3
+   ],
+   [
+    "Investment in joint venture",
+    511.3
+   ],
+   [
+    "Other assets",
+    701.1
+   ],
+   [
+    "Goodwill",
+    10758.4
+   ],
+   [
+    "Other intangible assets, net",
+    3324.5
+   ],
+   [
+    "Total assets",
+    22217.1
+   ],
+   [
+    "Notes payable and current portion of long-term debt",
+    40.8
+   ],
+   [
+    "Trade accounts payable",
+    1215.8
+   ],
+   [
+    "Accrued expenses and other liabilities",
+    2048.2
+   ],
+   [
+    "Total current liabilities",
+    3304.8
+   ],
+   [
+    "Other long-term liabilities",
+    2355.7
+   ],
+   [
+    "Long-term debt",
+    2783.9
+   ],
+   [
+    "Common stock - $0.01 par value",
+    7.3
+   ],
+   [
+    "Additional paid-in capital",
+    2412.4
+   ],
+   [
+    "Retained earnings",
+    10945.9
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    345.4
+   ],
+   [
+    "Total Danaher stockholders' equity",
+    13711.0
+   ],
+   [
+    "Non-controlling interest",
+    61.8
+   ],
+   [
+    "Total stockholders' equity",
+    13772.8
+   ],
+   [
+    "Total liabilities and stockholders' equity",
+    22217.1
+   ]
+  ]
+ },
+ "py": {
+  "restated": true,
+  "notes": "2009 comparative recast to the new five-segment structure (+ businesses contributed to Apex shown separately); originally reported 2009 segments were Professional Instrumentation 4,330.7 / OP 728.5, Medical Technologies 3,141.9 / 395.5, Industrial Technologies 2,658.0 / 383.2, Tools & Components 1,054.3 / 124.8. Consolidated IS amounts unchanged (no discontinued operations); per-share data and shares restated for the June-2010 2-for-1 split (originally 3.46 diluted EPS, 335.742m diluted shares; adjusted EPS originally 3.53). Release adjusted-EPS bridge for 2009 is split-adjusted (1.77). Other OP -89.6 here vs -89.5 originally (rounding to $m).",
+  "is": {
+   "sales": 11184.9,
+   "cogs": 5904.7,
+   "sga": 3190.2,
+   "rnd": 632.7,
+   "other_op": -85.1,
+   "op_profit": 1542.5,
+   "nonop": 0.0,
+   "interest_exp": 122.7,
+   "interest_inc": 5.0,
+   "ebt": 1424.9,
+   "tax": 273.1,
+   "cont_ops": 1151.7,
+   "disc_ops": 0.0,
+   "net_income": 1151.7,
+   "pref_div": null,
+   "shares_basic": 641.53,
+   "shares_diluted": 671.484,
+   "eps_dil_cont": 1.73,
+   "eps_dil": 1.73
+  },
+  "segments": [
+   {
+    "name": "Test & Measurement",
+    "sales": 2221.3,
+    "op_profit": 301.4
+   },
+   {
+    "name": "Environmental",
+    "sales": 2418.7,
+    "op_profit": 471.0
+   },
+   {
+    "name": "Life Sciences & Diagnostics",
+    "sales": 1484.9,
+    "op_profit": 179.6
+   },
+   {
+    "name": "Dental",
+    "sales": 1657.0,
+    "op_profit": 215.9
+   },
+   {
+    "name": "Industrial Technologies",
+    "sales": 2795.1,
+    "op_profit": 400.2
+   },
+   {
+    "name": "Businesses contributed to Apex joint venture",
+    "sales": 607.9,
+    "op_profit": 63.9
+   }
+  ],
+  "other_op_profit": -89.6,
+  "adj_eps_pub": 1.77,
+  "amort_pretax": null
+ },
+ "extra": {
+  "employees": 48200,
+  "dep": 198.0,
+  "amort": 199.1,
+  "seg_extra": [
+   {
+    "name": "Test & Measurement",
+    "dep_amort": 107.7,
+    "capex": 35.6,
+    "assets": 5322.9
+   },
+   {
+    "name": "Environmental",
+    "dep_amort": 45.9,
+    "capex": 25.4,
+    "assets": 2634.9
+   },
+   {
+    "name": "Life Sciences & Diagnostics",
+    "dep_amort": 90.7,
+    "capex": 49.6,
+    "assets": 4071.7
+   },
+   {
+    "name": "Dental",
+    "dep_amort": 81.7,
+    "capex": 31.8,
+    "assets": 4120.2
+   },
+   {
+    "name": "Industrial Technologies",
+    "dep_amort": 60.3,
+    "capex": 61.6,
+    "assets": 3545.4
+   },
+   {
+    "name": "Businesses contributed to Apex joint venture",
+    "dep_amort": 6.2,
+    "capex": 6.9,
+    "assets": 0.0
+   },
+   {
+    "name": "Other",
+    "dep_amort": 4.6,
+    "capex": 6.4,
+    "assets": 2522.0
+   }
+  ],
+  "acquisitions": [
+   [
+    "MDS Analytical Technologies (50% of AB Sciex + Molecular Devices) and remaining 50% of AB Sciex from Life Technologies (~$650m annual sales)",
+    "2010-01-30",
+    1100.0,
+    "Life Sciences & Diagnostics"
+   ],
+   [
+    "Seventeen other businesses (aggregate; ~$440m annual sales)",
+    "2010",
+    1100.0,
+    "Test & Measurement / Dental / Environmental / Life Sciences & Diagnostics / Industrial Technologies"
+   ]
+  ],
+  "divestitures": [
+   [
+    "Hand tools businesses contributed to Apex Tool Group LLC (50/50 JV with Cooper Industries; equity method)",
+    "2010-07-04",
+    "Pre-tax gain $291.0m ($232.2m after tax, $0.34/sh) in non-operating income; consideration $45.2m cash + $44.8m receivable + 50% equity interest valued at $480.0m; contributed businesses not discontinued operations"
+   ]
+  ],
+  "debt_maturities": [
+   [
+    "2011",
+    41.0
+   ],
+   [
+    "2012",
+    188.0
+   ],
+   [
+    "2013",
+    735.0
+   ],
+   [
+    "2014",
+    6.0
+   ],
+   [
+    "2015",
+    6.0
+   ],
+   [
+    "Thereafter",
+    1849.0
+   ]
+  ],
+  "amort_schedule": [
+   [
+    "2011",
+    225.0
+   ],
+   [
+    "2012",
+    214.0
+   ],
+   [
+    "2013",
+    203.0
+   ],
+   [
+    "2014",
+    193.0
+   ],
+   [
+    "2015",
+    183.0
+   ]
+  ],
+  "notes": "Employees ~48,200 (~21,400 US). Acquisition consideration amounts are approximate as published ('approximately $1.1 billion' each); total cash paid for acquisitions 2,129.7. Pending at year end: Beckman Coulter tender offer agreed Feb-2011 ($83.50/sh, ~$6.8bn incl. debt assumed, net of cash; ~$3.7bn 2010 revenue; Life Sciences & Diagnostics). Seg_extra 'Businesses contributed to Apex' assets 0 at year end (399.0 in 2009). Non-controlling interest 61.8 acquired with a 2010 acquisition (no NCI line on the 2010 income statement)."
+ },
+ "notes": "IS, BS, CF from the 10-K (thousands, converted to $m; identical to release apart from the CF label 'Proceeds from divestitures and refundable escrowed purchase price'). Earnings from the Apex JV (22.8) sit inside operating profit (other_op_lines, negative = income); the 291.0 pre-tax gain on contribution is non-operating. 2-for-1 stock split effected June 2010: all per-share and share data post_split. Computed: is.gp as published; bs.other_lta = Investment in joint venture 511.3 + Other assets 701.1; cf.wc_change = sum of five 'Change in ...' lines; cf.divest = Proceeds from contribution of businesses to joint venture 56.5 + Proceeds from divestitures 0.0; cf.gains = pre-tax JV gain (291.0); JV equity earnings (22.8) only in lines_raw. cf has no continuing/discontinued split (cfo_cont = cfo). bs.treasury null (no line). dps 0.08 = 10-K Selected Financial Data dividends per share (0.02 per quarter). All self-checks pass."
+}

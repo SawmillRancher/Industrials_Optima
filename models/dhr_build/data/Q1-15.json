@@ -1,0 +1,502 @@
+{
+ "period": "Q1-15",
+ "period_end": "2015-04-03",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/313616/000031361615000054/dhr-201543xex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/313616/000031361615000052/dhr-201543x10q.htm"
+ },
+ "is": {
+  "sales": 4873.3,
+  "cogs": 2273.3,
+  "gp": 2600.0,
+  "sga": 1486.7,
+  "rnd": 339.1,
+  "other_op_lines": [],
+  "op_profit": 774.2,
+  "nonop_lines": [],
+  "interest_exp": 30.2,
+  "interest_inc": 2.3,
+  "ebt": 746.3,
+  "tax": 176.5,
+  "cont_ops": 569.8,
+  "disc_ops": 0.0,
+  "net_income": 569.8,
+  "nci": null,
+  "pref_div": null,
+  "ni_common": null,
+  "shares_basic": 707.2,
+  "shares_diluted": 718.7,
+  "eps_basic_cont": 0.81,
+  "eps_dil_cont": 0.79,
+  "eps_dil": 0.79,
+  "dps": 0.135,
+  "per_share_basis": "post_split"
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Test & Measurement",
+    "sales": 857.5,
+    "op_profit": 170.7,
+    "amort": 22.2,
+    "dep": 9.6,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": -1.5,
+    "growth_acq": -0.5,
+    "growth_fx": 4.5,
+    "growth_core": 2.5
+   },
+   {
+    "name": "Environmental",
+    "sales": 823.2,
+    "op_profit": 160.6,
+    "amort": 9.0,
+    "dep": 12.8,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 7.0,
+    "growth_acq": -4.5,
+    "growth_fx": 6.0,
+    "growth_core": 8.5
+   },
+   {
+    "name": "Life Sciences & Diagnostics",
+    "sales": 1695.7,
+    "op_profit": 215.5,
+    "amort": 46.5,
+    "dep": 89.9,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 2.0,
+    "growth_acq": -4.5,
+    "growth_fx": 7.5,
+    "growth_core": 5.0
+   },
+   {
+    "name": "Dental",
+    "sales": 662.4,
+    "op_profit": 60.1,
+    "amort": 22.1,
+    "dep": 12.7,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 30.0,
+    "growth_acq": -39.0,
+    "growth_fx": 8.5,
+    "growth_core": -0.5
+   },
+   {
+    "name": "Industrial Technologies",
+    "sales": 834.5,
+    "op_profit": 205.2,
+    "amort": 9.1,
+    "dep": 11.4,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": -2.5,
+    "growth_acq": 3.5,
+    "growth_fx": 6.0,
+    "growth_core": 7.0
+   }
+  ],
+  "other_op_profit": -37.9,
+  "total_growth": {
+   "total": 4.5,
+   "acq": -6.0,
+   "fx": 6.5,
+   "core": 5.0,
+   "other": null,
+   "other_label": null
+  },
+  "respiratory_sales": null,
+  "core_ex_resp": null,
+  "recurring_pct": null,
+  "seg_note": "Five segments: Test & Measurement, Environmental, Life Sciences & Diagnostics, Dental, Industrial Technologies (+ Other = unallocated corporate). NOTE: no segment re-organisation in 2015 filings - the Life Sciences / Diagnostics split and the Environmental & Applied Solutions segment only appear from 2016 (Fortive separation, Jul-2016). Communications business (Test & Measurement) still included (classified as discontinued operations only from the Q3-15 10-Q). Segment sales/OP from 10-Q Note 12; segment growth, depreciation and amortization from 10-Q MD&A (first quarter with separate segment depreciation and amortization lines). Release has no segment table. Q1-15 had more selling days than Q1-14 (fiscal quarter ended 3-Apr). Growth convention: release/10-Q tables are additive (core + acquisitions + currency = total); stored with the model's deduction-to-core sign convention (total + acq + fx = core), i.e. acq/fx signs flipped vs the table. "
+ },
+ "ngaap": {
+  "adj_eps_pub": 0.93,
+  "eps_bridge_start": 0.79,
+  "eps_bridge_start_label": "Diluted Net Earnings Per Share (GAAP)",
+  "eps_bridge": [
+   [
+    "Fair value adjustments to Nobel Biocare acquisition-related inventory ($20 million pre-tax, $15 million after-tax)",
+    0.02
+   ],
+   [
+    "Amortization of acquisition-related intangible assets in the three months ended April 3, 2015 ($109 million pre-tax, $83 million after-tax) and for the three months ended March 28,2014 ($93 million pre-tax, $71 million after-tax)",
+    0.12
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Fair value adjustments to Nobel Biocare acquisition-related inventory",
+    20.0,
+    15.0,
+    "op"
+   ],
+   [
+    "Amortization of acquisition-related intangible assets",
+    109.0,
+    83.0,
+    "op"
+   ]
+  ],
+  "amort_pretax": 109.0,
+  "adj_op_pub": null,
+  "adj_op_margin_pub": null,
+  "fcf_pub": null,
+  "capex_pub": null,
+  "capex_disposals_pub": null,
+  "cfo_pub_period": null,
+  "guidance": "Q2-15: adjusted diluted EPS $1.01-$1.05 (GAAP $0.89-$0.93; amortization $110m pretax/$85m after-tax/$0.12). FY2015: adjusted diluted EPS lowered to $4.23-$4.33 from $4.30-$4.40 (GAAP $3.74-$3.84; Nobel inventory fair value $20m pretax/$0.02; amortization $439m pretax/$336m after-tax/$0.47); stronger US dollar expected to reduce 2015 EPS by ~$0.07 vs January guidance.",
+  "notes": "2015 definition: adjusted diluted EPS adds back amortization of acquisition-related intangible assets (new from 2015; tax-effected per item in the bridge labels) and excludes items such as acquisition fair-value inventory/deferred revenue adjustments, significant transaction costs, investment gains, separation costs and discrete tax items. Item amounts from bridge labels. No FCF table in release."
+ },
+ "cf": {
+  "ytd_months": 3,
+  "net_income": 569.8,
+  "disc_ops_ni": null,
+  "dep": 138.5,
+  "amort": 108.9,
+  "sbc": 31.4,
+  "deferred_tax": null,
+  "impair": null,
+  "gains": null,
+  "wc_change": -325.0,
+  "cfo": 523.6,
+  "cfo_cont": 523.6,
+  "cfo_disc": null,
+  "capex": -119.2,
+  "capex_disposals": null,
+  "acquisitions": -487.6,
+  "divest": null,
+  "invest_purch": -87.1,
+  "invest_sales": null,
+  "cfi_disc": null,
+  "cfi": -690.7,
+  "stock_iss": 61.6,
+  "pref_iss": null,
+  "dividends": -70.4,
+  "buyback": null,
+  "debt_net_short": -247.5,
+  "debt_proceeds": null,
+  "debt_repay": -1.2,
+  "spin_cash": null,
+  "cff_disc": null,
+  "cff": -260.8,
+  "fx": -66.7,
+  "net_change": -494.6,
+  "cash_begin": 3005.6,
+  "cash_end": 2511.0,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net earnings",
+    569.8
+   ],
+   [
+    "Depreciation",
+    138.5
+   ],
+   [
+    "Amortization",
+    108.9
+   ],
+   [
+    "Stock-based compensation expense",
+    31.4
+   ],
+   [
+    "Change in trade accounts receivable, net",
+    125.6
+   ],
+   [
+    "Change in inventories",
+    -119.0
+   ],
+   [
+    "Change in trade accounts payable",
+    -91.3
+   ],
+   [
+    "Change in prepaid expenses and other assets",
+    -0.1
+   ],
+   [
+    "Change in accrued expenses and other liabilities",
+    -240.2
+   ],
+   [
+    "Net cash provided by operating activities",
+    523.6
+   ],
+   [
+    "Cash paid for acquisitions",
+    -487.6
+   ],
+   [
+    "Payments for additions to property, plant and equipment",
+    -119.2
+   ],
+   [
+    "Payments for purchases of investments",
+    -87.1
+   ],
+   [
+    "All other investing activities",
+    3.2
+   ],
+   [
+    "Net cash used in investing activities",
+    -690.7
+   ],
+   [
+    "Proceeds from the issuance of common stock",
+    61.6
+   ],
+   [
+    "Payment of dividends",
+    -70.4
+   ],
+   [
+    "Net (repayments of) proceeds from borrowings (maturities of 90 days or less)",
+    -247.5
+   ],
+   [
+    "Repayments of borrowings (maturities longer than 90 days)",
+    -1.2
+   ],
+   [
+    "All other financing activities",
+    -3.3
+   ],
+   [
+    "Net cash (used in) provided by financing activities",
+    -260.8
+   ],
+   [
+    "Effect of exchange rate changes on cash and equivalents",
+    -66.7
+   ],
+   [
+    "Net change in cash and equivalents",
+    -494.6
+   ],
+   [
+    "Beginning balance of cash and equivalents",
+    3005.6
+   ],
+   [
+    "Ending balance of cash and equivalents",
+    2511.0
+   ],
+   [
+    "Supplemental: Cash interest payments",
+    37.3
+   ],
+   [
+    "Supplemental: Cash income tax payments",
+    101.0
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 2511.0,
+  "ar": 3446.9,
+  "inventories": 1897.2,
+  "prepaid_other": 919.3,
+  "ca_disc": null,
+  "tca": 8774.4,
+  "ppe": 2135.9,
+  "other_lta": 1092.1,
+  "nca_disc": null,
+  "goodwill": 16711.5,
+  "intangibles": 7358.4,
+  "ta": 36072.3,
+  "st_debt": 123.7,
+  "ap": 1732.3,
+  "accrued": 3096.7,
+  "cl_disc": null,
+  "tcl": 4952.7,
+  "other_ltl": 4675.1,
+  "ncl_disc": null,
+  "ltd": 3053.8,
+  "common": 8.0,
+  "apic": 4623.6,
+  "retained": 20797.3,
+  "aoci": -2107.9,
+  "dhr_equity": 23321.0,
+  "nci": 69.7,
+  "te": 23390.7,
+  "tle": 36072.3,
+  "pref": null,
+  "treasury": null,
+  "lines_raw": [
+   [
+    "Cash and equivalents",
+    2511.0
+   ],
+   [
+    "Trade accounts receivable, net",
+    3446.9
+   ],
+   [
+    "Finished goods",
+    965.6
+   ],
+   [
+    "Work in process",
+    263.3
+   ],
+   [
+    "Raw materials",
+    668.3
+   ],
+   [
+    "Total inventories",
+    1897.2
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    919.3
+   ],
+   [
+    "Total current assets",
+    8774.4
+   ],
+   [
+    "Property, plant and equipment, net of accumulated depreciation of $2,577.4 and $2,594.1, respectively",
+    2135.9
+   ],
+   [
+    "Other assets",
+    1092.1
+   ],
+   [
+    "Goodwill",
+    16711.5
+   ],
+   [
+    "Other intangible assets, net",
+    7358.4
+   ],
+   [
+    "Total assets",
+    36072.3
+   ],
+   [
+    "Notes payable and current portion of long-term debt",
+    123.7
+   ],
+   [
+    "Trade accounts payable",
+    1732.3
+   ],
+   [
+    "Accrued expenses and other liabilities",
+    3096.7
+   ],
+   [
+    "Total current liabilities",
+    4952.7
+   ],
+   [
+    "Other long-term liabilities",
+    4675.1
+   ],
+   [
+    "Long-term debt",
+    3053.8
+   ],
+   [
+    "Common stock - $0.01 par value",
+    8.0
+   ],
+   [
+    "Additional paid-in capital",
+    4623.6
+   ],
+   [
+    "Retained earnings",
+    20797.3
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    -2107.9
+   ],
+   [
+    "Total Danaher stockholders’ equity",
+    23321.0
+   ],
+   [
+    "Non-controlling interests",
+    69.7
+   ],
+   [
+    "Total stockholders’ equity",
+    23390.7
+   ],
+   [
+    "Total liabilities and stockholders’ equity",
+    36072.3
+   ]
+  ],
+  "shares_out": 707.526
+ },
+ "py": {
+  "restated": false,
+  "notes": "Q1-14 three-month income statement and segments as presented match the Q1-14 release/10-Q as originally reported. Adjusted EPS comparative 0.91 is on the new 2015 definition (adds back $93m pretax / $71m after-tax amortization, $0.10); Q1-14 adjusted EPS as originally published was 0.81 (no amortization add-back) - definition change, not a recast.",
+  "is": {
+   "sales": 4662.7,
+   "cogs": 2209.8,
+   "sga": 1350.6,
+   "rnd": 313.4,
+   "other_op": 0.0,
+   "op_profit": 788.9,
+   "nonop": 0.0,
+   "interest_exp": 32.5,
+   "interest_inc": 4.9,
+   "ebt": 761.3,
+   "tax": 181.6,
+   "cont_ops": 579.7,
+   "disc_ops": 0.0,
+   "net_income": 579.7,
+   "pref_div": null,
+   "shares_basic": 700.1,
+   "shares_diluted": 714.8,
+   "eps_dil_cont": 0.81,
+   "eps_dil": 0.81
+  },
+  "segments": [
+   {
+    "name": "Test & Measurement",
+    "sales": 871.0,
+    "op_profit": 192.7
+   },
+   {
+    "name": "Environmental",
+    "sales": 768.7,
+    "op_profit": 145.6
+   },
+   {
+    "name": "Life Sciences & Diagnostics",
+    "sales": 1659.6,
+    "op_profit": 219.7
+   },
+   {
+    "name": "Dental",
+    "sales": 509.7,
+    "op_profit": 75.5
+   },
+   {
+    "name": "Industrial Technologies",
+    "sales": 853.7,
+    "op_profit": 191.7
+   }
+  ],
+  "other_op_profit": -36.3,
+  "adj_eps_pub": 0.91,
+  "amort_pretax": 93.0
+ },
+ "notes": "Release and 10-Q income statements agree (no non-operating line other than interest in Q1-15, so nonop_lines empty). Cash flow is three-month YTD. capex_disposals, gains, deferred_tax null (no lines). shares_out = cover count at 17-Apr-2015. DPS 0.135 = quarterly dividend declared in Q1-15 (10-Q; +35%). Q1-15 acquisitions $488m. All self-checks pass."
+}

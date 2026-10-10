@@ -1,54 +1,57 @@
 # Company models
 
-**Building a new model?** Start with [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). It has the process, the master checklist, the template workbook ([`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx)), fill-in README / extraction-schema templates and the QA tools in [`tools/`](tools).
+**Building a new model?** Start with [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md) for the process and master checklist. Then read the entries for similar companies in [`MODEL_LESSONS.md`](MODEL_LESSONS.md), which records the nuances of every model built so far. Start from [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx) and check the result with [`tools/`](tools).
 
 ## Model index
-Each model was built on its own branch and is not yet on this one. Template generation (the template each model was built on) runs Moog → DSV → HII → RBA → TDY → MLM. Use the latest builds on the 6-Oct-2026 MLM template (★) as references.
+All models are on this branch. The template lineage runs Moog → DSV → HII → RBA → TDY → MLM. ★ marks builds on the current MLM template (6-Oct-2026) with a full build kit; prefer them as references.
 
-| Ticker | Company | Template | Branch | File |
+| Ticker | Company | Template | Workbook | Build kit / rebuild |
 |---|---|---|---|---|
-| TFII | TFI International | Moog generator | `claude/quirky-mendel-0xqtQ` | `TFI_Model.xlsx` |
-| CPRT | Copart (v1, SEC builder) | DSV-style | `claude/optimistic-heisenberg-3egsy8` | `models/Copart_SEC_Model.xlsx` |
-| — | R&Y Tool & Die (private, LBO) | Moog styling | `claude/keen-gates-14p91s` | `models/RY_Tool_3_Statement_Model.xlsx` |
-| HII | Huntington Ingalls | DSV | `claude/keen-knuth-bqfr5g` | `models/HII_Model.xlsx` |
-| RBA | RB Global | HII | `claude/exciting-dirac-i0xacm` | `models/RBA_Model.xlsx` |
-| CPRT | Copart | RBA | `claude/lucid-sagan-mtsd21` | `models/Copart_Model.xlsx` |
-| TDY | Teledyne | RBA | `claude/dreamy-lamport-2r2q2y` | `models/TDY_Model.xlsx` |
-| KRMN | Karman | TDY | `claude/funny-heisenberg-nfxrwu` | `models/karman/KRMN_Model.xlsx` |
-| VMC | Vulcan Materials | TDY | `claude/wonderful-rubin-pz9j20` | `models/VMC_Model.xlsx` |
-| MLM | Martin Marietta (template source) | TDY | `claude/admiring-mendel-ioiosk` | `models/MLM_Model.xlsx` |
-| RMS | Hermès | MLM | `claude/exciting-hamilton-njvy1u` | `models/RMS_Model.xlsx` |
-| CLH | Clean Harbors | MLM | `claude/funny-davinci-41jujt` | `models/CLH_Model.xlsx` |
-| WAB | Wabtec | MLM | `claude/intelligent-noether-279c47` | `models/WAB_Model.xlsx` |
-| XPO | XPO | MLM | `claude/serene-hopper-mw0kgc` | `models/XPO_Model.xlsx` |
-| CHRW | C.H. Robinson (+ RXO PF) | MLM | `claude/magical-planck-7qjmqd` | `models/CHRW/CHRW_Model.xlsx` |
-| ODFL | Old Dominion | MLM | `claude/inspiring-heisenberg-q6cefw` | `models/ODFL_Model.xlsx` |
-| SAIA | Saia | MLM | `claude/dazzling-sagan-96mhry` | `models/SAIA_Model.xlsx` |
-| BC | Brunello Cucinelli | MLM | `claude/cool-faraday-wk9ft3` | `models/BC_Model.xlsx` |
-| WCN | Waste Connections | MLM | `claude/blissful-edison-d4kjl4` | `models/WCN_Model.xlsx` |
-| HEI | HEICO | MLM | `claude/brave-ritchie-e535fc` | `models/HEI_Model.xlsx` |
-| LOAR | Loar Holdings | MLM | `claude/modest-goldberg-886gpx` | `models/LOAR_Model.xlsx` |
-| ONON | On Holding ★ | MLM (6-Oct) | `claude/confident-planck-uj4pis` | `models/ONON_Model.xlsx` |
-| CSGP | CoStar | MLM | `claude/relaxed-ride-lw790g` | `models/CSGP_Model.xlsx` |
-| DHR | Danaher ★ | MLM (6-Oct) | `claude/wizardly-dijkstra-zxf7n3` | `models/DHR_Model.xlsx` |
-| TMO | Thermo Fisher | MLM | `claude/magical-mccarthy-btowq2` | `models/TMO_Model.xlsx` |
-| CTAS | Cintas ★ | MLM (6-Oct) | `claude/affectionate-wozniak-l9cppl` | `models/CTAS/CTAS_Model.xlsx` |
-| STE | STERIS ★ | MLM (6-Oct) | `claude/gifted-lamport-4idqjn` | `models/STE_Model.xlsx` |
-| UBER | Uber | MLM | `claude/great-fermat-efvr52` | `models/UBER_Model.xlsx` |
-| BWXT | BWX Technologies | MLM | `claude/intelligent-ride-0feye2` | `models/BWXT_Model.xlsx` |
-| CW | Curtiss-Wright | MLM | `claude/zealous-wright-co1vi8` | `models/CW_Model.xlsx` |
-| LECO | Lincoln Electric ★ | MLM (6-Oct) | `claude/compassionate-ramanujan-wx8j8s` | `models/LECO_Model.xlsx` (alternate build: `claude/blissful-cerf-7e09o7`, `models/LECO/LECO_Model.xlsx`) |
-| ESAB | ESAB ★ | MLM (6-Oct) | `claude/compassionate-ramanujan-wx8j8s` | `models/ESAB_Model.xlsx` |
+| TFII | TFI International | Moog generator | `../TFI_Model.xlsx` | `src/industrials_optima/financial_model/` (`build-model-template` CLI, `populate_tfi.py`) |
+| CPRT | Copart (v1, SEC builder) | DSV-style | `Copart_SEC_Model.xlsx` | `src/industrials_optima/secmodel/` (`copart-model` CLI) |
+| — | R&Y Tool & Die (private, LBO) | Moog styling | `RY_Tool_3_Statement_Model.xlsx` | `build_ry_model.py` |
+| HII | Huntington Ingalls | DSV | `HII_Model.xlsx` | workbook only |
+| RBA | RB Global | HII | `RBA_Model.xlsx` | `rba/` + `data/rba/`: `RECALC_SCRIPT=<recalc.py> python -m models.rba.build` |
+| CPRT | Copart | RBA | `Copart_Model.xlsx` | workbook only |
+| TDY | Teledyne | RBA | `TDY_Model.xlsx` | `tdy/` + `data/tdy/`: `RECALC_SCRIPT=<recalc.py> python -m models.tdy.build` |
+| KRMN | Karman | TDY | `karman/KRMN_Model.xlsx` | `karman/builder/`: `python3 driver.py ../KRMN_Model.xlsx` |
+| VMC | Vulcan Materials | TDY | `VMC_Model.xlsx` | `vmc_build/`: `python3 build.py --snap` |
+| MLM | Martin Marietta (template source) | TDY | `MLM_Model.xlsx` | workbook only (the template is `templates/MLM_Model.xlsx`) |
+| RMS | Hermès | MLM | `RMS_Model.xlsx` | `rms/` + `data/rms/`: `python3 -m models.rms.build` |
+| CLH | Clean Harbors | MLM | `CLH_Model.xlsx` | workbook only |
+| WAB | Wabtec | MLM | `WAB_Model.xlsx` | `wab_build/`: `python3 build.py --snap` |
+| XPO | XPO | MLM | `XPO_Model.xlsx` | workbook only |
+| CHRW | C.H. Robinson (+ RXO PF) | MLM | `CHRW/CHRW_Model.xlsx` | data only: `CHRW/data/`. The build scripts its README references were never committed |
+| ODFL | Old Dominion | MLM | `ODFL_Model.xlsx` | `odfl_build/`: `python3 build.py --snap` |
+| SAIA | Saia | MLM | `SAIA_Model.xlsx` | workbook only |
+| BC | Brunello Cucinelli | MLM | `BC_Model.xlsx` | workbook only |
+| WCN | Waste Connections | MLM | `WCN_Model.xlsx` | workbook only |
+| HEI | HEICO | MLM | `HEI_Model.xlsx` | workbook only |
+| LOAR | Loar Holdings | MLM | `LOAR_Model.xlsx` | `loar_build/`: `python3 build.py --snap` |
+| ONON | On Holding ★ | MLM (6-Oct) | `ONON_Model.xlsx` | `onon_build/`: `python3 build.py --snap` |
+| CSGP | CoStar | MLM | `CSGP_Model.xlsx` | workbook only |
+| DHR | Danaher ★ | MLM (6-Oct) | `DHR_Model.xlsx` | `dhr_build/`: `python3 build.py --snap --recalc` |
+| TMO | Thermo Fisher | MLM | `TMO_Model.xlsx` | workbook only |
+| CTAS | Cintas ★ | MLM (6-Oct) | `CTAS/CTAS_Model.xlsx` | `CTAS/source_kit/`: `python3 scripts/build_model.py out.xlsx` |
+| STE | STERIS ★ | MLM (6-Oct) | `STE_Model.xlsx` | `ste_build/`: `python3 build.py --snap` |
+| UBER | Uber | MLM | `UBER_Model.xlsx` | workbook only |
+| LECO | Lincoln Electric ★ | MLM (6-Oct) | `LECO_Model.xlsx` | `builder/`: `python3 builder/tools/run_leco.py out/LECO_Model.xlsx` |
+| LECO | Lincoln Electric (alternate build) | MLM | `LECO/LECO_Model.xlsx` | workbook only |
+| ESAB | ESAB ★ | MLM (6-Oct) | `ESAB_Model.xlsx` | `builder/`: `python3 builder/tools/run_esab.py out/ESAB_Model.xlsx` |
+| BWXT | BWX Technologies | MLM | `BWXT_Model.xlsx` | workbook only |
+| CW | Curtiss-Wright | MLM | `CW_Model.xlsx` | workbook only |
+| WWD | Woodward ★ (first build on the playbook) | MLM (6-Oct) | `WWD_Model.xlsx` | `wwd_build/`: `python3 build.py --snap --recalc` |
 
-To fetch a model or its build kit without switching branches:
-`git fetch origin <branch> && git show origin/<branch>:<path> > <local file>`. For a whole directory, use `git archive origin/<branch> <dir> | tar -x`.
+Kit paths are relative to `models/`. Every kit README gives its sources, basis and full rebuild steps. Recalculation needs LibreOffice Calc and the xlsx skill's `recalc.py` (set `XLSX_RECALC` or `RECALC_SCRIPT`). For a "workbook only" model, its basis notes, Modelling Notes column and cell comments are the documentation; `MODEL_LESSONS.md` summarises them.
 
-## Shared assets on this branch
+## Shared assets
 | Path | Purpose |
 |---|---|
 | `MODEL_BUILD_PLAYBOOK.md` | Process, master checklist, adaptation guide, pitfalls |
+| `MODEL_LESSONS.md` | Per-model nuances and reusable lessons from all builds |
 | `templates/MLM_Model.xlsx` | Canonical template workbook (6-Oct-2026 MLM version: reworked DCF, Bull-Base-Bear buyback rows) |
 | `templates/NEW_MODEL_README_TEMPLATE.md` | Fill-in README for each new build kit |
 | `templates/EXTRACTION_SCHEMA_TEMPLATE.md` | Per-period extraction schema, basis rules and self-checks |
 | `tools/inspect_model.py` | Lists formula errors and non-zero check rows in a recalculated model |
 | `tools/cyc.py` | Scans the Model sheet for circular references |
+| `tools/residue_scan.py` | Finds leftover template-company or other-model text in every sheet's values and cell comments |

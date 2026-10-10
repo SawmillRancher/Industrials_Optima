@@ -1,0 +1,556 @@
+{
+ "period": "Q1-20",
+ "period_end": "2020-04-03",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/313616/000031361620000091/dhr-202056xex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/313616/000031361620000093/dhr-202043x10q.htm"
+ },
+ "is": {
+  "sales": 4343.1,
+  "cogs": 1900.3,
+  "gp": 2442.8,
+  "sga": 1458.3,
+  "rnd": 287.0,
+  "other_op_lines": [],
+  "op_profit": 697.5,
+  "nonop_lines": [
+   [
+    "Other (expense) income, net",
+    -1.5
+   ]
+  ],
+  "interest_exp": 47.4,
+  "interest_inc": 62.5,
+  "ebt": 711.1,
+  "tax": 116.0,
+  "cont_ops": 595.1,
+  "disc_ops": 0.0,
+  "net_income": 595.1,
+  "nci": null,
+  "pref_div": 19.6,
+  "ni_common": 575.5,
+  "shares_basic": 697.2,
+  "shares_diluted": 707.9,
+  "eps_basic_cont": 0.83,
+  "eps_dil_cont": 0.81,
+  "eps_dil": 0.81,
+  "dps": 0.18,
+  "per_share_basis": "post_split"
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Life Sciences",
+    "sales": 1650.4,
+    "op_profit": 325.6,
+    "amort": 89.6,
+    "dep": 33.2,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 1.5,
+    "growth_acq": 0.0,
+    "growth_fx": 1.0,
+    "growth_core": 2.5
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 1627.0,
+    "op_profit": 251.2,
+    "amort": 51.4,
+    "dep": 94.1,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 6.0,
+    "growth_acq": 0.0,
+    "growth_fx": 2.0,
+    "growth_core": 8.0
+   },
+   {
+    "name": "Environmental & Applied Solutions",
+    "sales": 1065.7,
+    "op_profit": 239.9,
+    "amort": 15.4,
+    "dep": 11.9,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 1.0,
+    "growth_acq": 0.0,
+    "growth_fx": 1.5,
+    "growth_core": 2.5
+   }
+  ],
+  "other_op_profit": -119.2,
+  "total_growth": {
+   "total": 3.0,
+   "acq": 0.0,
+   "fx": 1.5,
+   "core": 4.5,
+   "other": null,
+   "other_label": null
+  },
+  "respiratory_sales": null,
+  "core_ex_resp": null,
+  "recurring_pct": 73.8,
+  "seg_note": "Three segments: Life Sciences, Diagnostics, Environmental & Applied Solutions (+ Other = unallocated corporate, -119.2). Cytiva (GE Biopharma) acquired 31-Mar-2020 into Life Sciences: on the balance sheet but no Cytiva results in Q1-20 earnings (closed 3 days before quarter end). Release has no segment table; segment sales / OP from 10-Q segment note, depreciation / amortization and growth tables from 10-Q MD&A (three-month). Growth tables have no acquisitions line this quarter (0.0); currency line is a positive 'Impact of' deduction (FX headwind). recurring_pct computed = recurring revenue 3,206.9 / sales 4,343.1 (10-Q revenue note)."
+ },
+ "ngaap": {
+  "adj_eps_pub": 1.05,
+  "eps_bridge_start": 0.81,
+  "eps_bridge_start_label": "Diluted Net Earnings Per Common Share from Continuing Operations (GAAP)",
+  "eps_bridge": [
+   [
+    "Pretax amortization of acquisition-related intangible assets",
+    0.22
+   ],
+   [
+    "Pretax transaction costs deemed significant and integration preparation costs, in each case related to the acquisition of Cytiva",
+    0.08
+   ],
+   [
+    "Pretax impairment charges related to a facility in the Diagnostics segment and a trade name and other intangible assets in the Environmental & Applied Solutions segment",
+    0.01
+   ],
+   [
+    "Pretax fair value adjustments and losses on the Company's equity and limited partnership investments",
+    0.01
+   ],
+   [
+    "Tax effect of all adjustments reflected above",
+    -0.05
+   ],
+   [
+    "Discrete tax adjustments and other tax-related adjustments",
+    -0.04
+   ],
+   [
+    "Declared dividends on the MCPS assuming “if-converted” method",
+    0.01
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Pretax amortization of acquisition-related intangible assets",
+    156.4,
+    125.9,
+    "op"
+   ],
+   [
+    "Pretax transaction costs deemed significant and integration preparation costs, in each case related to the acquisition of Cytiva",
+    59.0,
+    53.0,
+    "op"
+   ],
+   [
+    "Pretax impairment charges related to a facility in the Diagnostics segment and a trade name and other intangible assets in the Environmental & Applied Solutions segment",
+    8.0,
+    6.0,
+    "op"
+   ],
+   [
+    "Pretax fair value adjustments and losses on the Company's equity and limited partnership investments",
+    7.0,
+    5.0,
+    "nonop"
+   ],
+   [
+    "Discrete tax adjustments and other tax-related adjustments (net discrete tax gains)",
+    null,
+    -27.0,
+    "tax"
+   ],
+   [
+    "Declared dividends on the MCPS assuming “if-converted” method",
+    null,
+    19.6,
+    "below_ni"
+   ]
+  ],
+  "amort_pretax": 156.4,
+  "adj_op_pub": null,
+  "adj_op_margin_pub": null,
+  "fcf_pub": null,
+  "capex_pub": null,
+  "capex_disposals_pub": null,
+  "cfo_pub_period": null,
+  "guidance": "FY2020 guidance (given 30-Jan-2020) withdrawn on 13-Apr-2020 due to COVID-19; no EPS guidance in the 6-May release. Q2-20: core revenue growth (excl. Cytiva) (2.0)% to (12.0)%; Cytiva impact ~+2.0%; core revenue growth including Cytiva flat to (10.0)%. From Q2-20 the company will present core revenue growth including Cytiva.",
+  "notes": "Adjusted diluted EPS from continuing ops adds back pretax amortization of acquisition-related intangibles, significant Cytiva transaction / integration costs, impairments (Dx facility; EAS trade name), fair value losses on equity / LP investments, discrete tax items (excess stock-comp benefit above ~$7m/quarter excluded) and MCPS dividends under the if-converted method (adjusted diluted shares 720.3m = 707.9m + 12.4m converted). MCPS item amount = IS MCPS dividends 19.6. The 13-Apr-2020 8-K was a preliminary update only (revenue growth ~3.0%, core ~4.5%, guidance withdrawn); this record uses the full 6-May-2020 results release. Release has no FCF table this quarter."
+ },
+ "cf": {
+  "ytd_months": 3,
+  "net_income": 595.1,
+  "disc_ops_ni": 0.0,
+  "dep": 141.4,
+  "amort": 156.4,
+  "sbc": 45.2,
+  "deferred_tax": null,
+  "impair": null,
+  "gains": null,
+  "wc_change": -112.1,
+  "cfo_cont": 826.0,
+  "cfo_disc": -7.0,
+  "cfo": 819.0,
+  "capex": -132.5,
+  "capex_disposals": 0.5,
+  "acquisitions": -20734.5,
+  "divest": null,
+  "invest_purch": -37.3,
+  "invest_sales": null,
+  "cfi_disc": 0.0,
+  "cfi": -20868.6,
+  "stock_iss": 10.3,
+  "pref_iss": 0.0,
+  "dividends": -138.1,
+  "buyback": null,
+  "debt_net_short": 390.2,
+  "debt_proceeds": 4371.4,
+  "debt_repay": null,
+  "spin_cash": null,
+  "cff_disc": null,
+  "cff": 4633.5,
+  "fx": -128.5,
+  "net_change": -15544.6,
+  "cash_begin": 19912.3,
+  "cash_end": 4367.7,
+  "cash_basis": "cash",
+  "equity_offering": 0.0,
+  "lines_raw": [
+   [
+    "Net earnings",
+    595.1
+   ],
+   [
+    "Less: earnings from discontinued operations, net of income taxes",
+    0.0
+   ],
+   [
+    "Net earnings from continuing operations",
+    595.1
+   ],
+   [
+    "Depreciation",
+    141.4
+   ],
+   [
+    "Amortization",
+    156.4
+   ],
+   [
+    "Stock-based compensation expense",
+    45.2
+   ],
+   [
+    "Change in trade accounts receivable, net",
+    181.6
+   ],
+   [
+    "Change in inventories",
+    -175.6
+   ],
+   [
+    "Change in trade accounts payable",
+    10.0
+   ],
+   [
+    "Change in prepaid expenses and other assets",
+    79.1
+   ],
+   [
+    "Change in accrued expenses and other liabilities",
+    -207.2
+   ],
+   [
+    "Total operating cash provided by continuing operations",
+    826.0
+   ],
+   [
+    "Total operating cash provided by discontinued operations",
+    -7.0
+   ],
+   [
+    "Net operating cash provided by operating activities",
+    819.0
+   ],
+   [
+    "Cash paid for acquisitions",
+    -20734.5
+   ],
+   [
+    "Payments for additions to property, plant and equipment",
+    -132.5
+   ],
+   [
+    "Proceeds from sales of property, plant and equipment",
+    0.5
+   ],
+   [
+    "Payments for purchases of investments",
+    -37.3
+   ],
+   [
+    "All other investing activities",
+    35.2
+   ],
+   [
+    "Total investing cash used in continuing operations",
+    -20868.6
+   ],
+   [
+    "Total investing cash used in discontinued operations",
+    0.0
+   ],
+   [
+    "Net operating cash used in investing activities",
+    -20868.6
+   ],
+   [
+    "Proceeds from the issuance of common stock in connection with stock-based compensation",
+    10.3
+   ],
+   [
+    "Proceeds from the sale of common stock, net of issuance costs",
+    0.0
+   ],
+   [
+    "Proceeds from the sale of preferred stock, net of issuance costs",
+    0.0
+   ],
+   [
+    "Payment of dividends",
+    -138.1
+   ],
+   [
+    "Net proceeds from (repayments of) borrowings (maturities of 90 days or less)",
+    390.2
+   ],
+   [
+    "Proceeds from borrowings (maturities longer than 90 days)",
+    4371.4
+   ],
+   [
+    "All other financing activities",
+    -0.3
+   ],
+   [
+    "Net operating cash provided by financing activities",
+    4633.5
+   ],
+   [
+    "Effect of exchange rate changes on cash and equivalents",
+    -128.5
+   ],
+   [
+    "Net change in cash and equivalents",
+    -15544.6
+   ],
+   [
+    "Beginning balance of cash and equivalents",
+    19912.3
+   ],
+   [
+    "Ending balance of cash and equivalents",
+    4367.7
+   ],
+   [
+    "Cash interest payments",
+    39.2
+   ],
+   [
+    "Cash income tax payments (refunds)",
+    60.9
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 4367.7,
+  "ar": 3433.3,
+  "inventories": 2575.0,
+  "prepaid_other": 766.6,
+  "ca_disc": null,
+  "tca": 11142.6,
+  "ppe": 2988.5,
+  "other_lta": 2561.1,
+  "nca_disc": null,
+  "goodwill": 33725.5,
+  "intangibles": 18512.6,
+  "ta": 68930.3,
+  "st_debt": 3234.3,
+  "ap": 1748.3,
+  "accrued": 3483.0,
+  "cl_disc": null,
+  "tcl": 8465.6,
+  "other_ltl": 6661.1,
+  "ncl_disc": null,
+  "ltd": 22737.2,
+  "pref": 1599.6,
+  "common": 8.4,
+  "apic": 7629.8,
+  "treasury": null,
+  "retained": 24608.6,
+  "aoci": -2791.3,
+  "dhr_equity": 31055.1,
+  "nci": 11.3,
+  "te": 31066.4,
+  "tle": 68930.3,
+  "shares_out": 697.0,
+  "lines_raw": [
+   [
+    "Cash and equivalents",
+    4367.7
+   ],
+   [
+    "Trade accounts receivable, less allowance for doubtful accounts of $119.0 and $103.7, respectively",
+    3433.3
+   ],
+   [
+    "Finished goods",
+    1408.9
+   ],
+   [
+    "Work in process",
+    498.0
+   ],
+   [
+    "Raw materials",
+    668.1
+   ],
+   [
+    "Total inventories",
+    2575.0
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    766.6
+   ],
+   [
+    "Total current assets",
+    11142.6
+   ],
+   [
+    "Property, plant and equipment, net of accumulated depreciation of $2,739.6 and $2,761.4, respectively",
+    2988.5
+   ],
+   [
+    "Other long-term assets",
+    2561.1
+   ],
+   [
+    "Goodwill",
+    33725.5
+   ],
+   [
+    "Other intangible assets, net",
+    18512.6
+   ],
+   [
+    "Total assets",
+    68930.3
+   ],
+   [
+    "Notes payable and current portion of long-term debt",
+    3234.3
+   ],
+   [
+    "Trade accounts payable",
+    1748.3
+   ],
+   [
+    "Accrued expenses and other liabilities",
+    3483.0
+   ],
+   [
+    "Total current liabilities",
+    8465.6
+   ],
+   [
+    "Other long-term liabilities",
+    6661.1
+   ],
+   [
+    "Long-term debt",
+    22737.2
+   ],
+   [
+    "Preferred stock, without par value, 15.0 million shares authorized; 1.65 million shares of 4.75% Mandatory Convertible Preferred Stock, Series A, issued and outstanding as of both April 3, 2020 and December 31, 2019",
+    1599.6
+   ],
+   [
+    "Com mon stock - $ 0.01 par value, 2.0 billion shares authorized; 837.3 million issued and 697.0 million outstanding as of April 3, 2020; 835.5 million issued and 695.5 million outstanding as of December 31, 2019",
+    8.4
+   ],
+   [
+    "Additional paid-in capital",
+    7629.8
+   ],
+   [
+    "Retained earnings",
+    24608.6
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    -2791.3
+   ],
+   [
+    "Total Danaher stockholders’ equity",
+    31055.1
+   ],
+   [
+    "Noncontrolling interests",
+    11.3
+   ],
+   [
+    "Total stockholders’ equity",
+    31066.4
+   ],
+   [
+    "Total liabilities and stockholders’ equity",
+    68930.3
+   ]
+  ]
+ },
+ "py": {
+  "restated": true,
+  "notes": "Q1-19 comparative recast for the Envista (Dental) split-off (discontinued operations). As originally reported (Q1-19 release / 10-Q): sales 4,879.9 (incl. Dental 659.7), operating profit 723.8 (Dental 48.2; Other (111.1) vs recast (67.0)), net earnings 333.8 all continuing, diluted EPS 0.46, adjusted diluted EPS 1.07. Recast: sales 4,220.2, OP 719.7, continuing ops 332.3, disc ops 1.5, diluted EPS cont 0.45, adjusted EPS 0.99 (recast bridge: amortization 0.22, Cytiva costs 0.02, tax effect (0.04), discrete tax 0.34).",
+  "is": {
+   "sales": 4220.2,
+   "cogs": 1865.3,
+   "sga": 1367.7,
+   "rnd": 267.5,
+   "other_op": 0.0,
+   "op_profit": 719.7,
+   "nonop": 5.1,
+   "interest_exp": 20.5,
+   "interest_inc": 15.7,
+   "ebt": 720.0,
+   "tax": 387.7,
+   "cont_ops": 332.3,
+   "disc_ops": 1.5,
+   "net_income": 333.8,
+   "pref_div": 6.5,
+   "shares_basic": 707.6,
+   "shares_diluted": 718.5,
+   "eps_dil_cont": 0.45,
+   "eps_dil": 0.46
+  },
+  "segments": [
+   {
+    "name": "Life Sciences",
+    "sales": 1626.9,
+    "op_profit": 309.0
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 1536.8,
+    "op_profit": 233.1
+   },
+   {
+    "name": "Environmental & Applied Solutions",
+    "sales": 1056.5,
+    "op_profit": 244.6
+   }
+  ],
+  "other_op_profit": -67.0,
+  "adj_eps_pub": 0.99,
+  "amort_pretax": 157.4
+ },
+ "notes": "Release income statement identical to 10-Q. Cash flow is three-month YTD (= quarter). Computed: cf.wc_change = sum of five 'Change in ...' lines; recurring_pct. Cytiva closed 31-Mar-2020: cash paid for acquisitions (20,734.5) (~$20.7bn net of ~$0.1bn cash acquired, plus ~$0.4bn pension liabilities assumed; Cytiva 2019 revenue ~$3.3bn); funded by the pre-raised 2019 cash, commercial paper (+390.2 net short-term) and new long-term borrowings 4,371.4. Required regulatory divestiture of LS product lines (~$170m 2019 revenue) mostly completed 30-Apr-2020 for ~$825m (Q2 gain). No invest_sales / debt_repay / impairment lines in Q1-20 CF (null); Q1-20 impairment (~$8m) sits inside operating costs. is.nci null (no NCI line). DPS 0.18 = regular quarterly dividend declared in Q1-20 (10-Q MD&A). Shares outstanding 697.0m per BS parenthetical (697,511,185 at 1-May-2020 per cover). All self-checks pass."
+}

@@ -1,0 +1,611 @@
+{
+ "period": "2007",
+ "period_end": "2007-12-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/313616/000119312508010663/dex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/313616/000119312508034637/d10k.htm"
+ },
+ "is": {
+  "sales": 11025.9,
+  "cogs": 5985.0,
+  "gp": 5040.9,
+  "sga": 2713.1,
+  "rnd": 601.4,
+  "other_op_lines": [
+   [
+    "Other (income) expense",
+    -14.3
+   ]
+  ],
+  "op_profit": 1740.7,
+  "nonop_lines": [],
+  "interest_exp": 109.7,
+  "interest_inc": 6.1,
+  "ebt": 1637.1,
+  "tax": 423.1,
+  "cont_ops": 1214.0,
+  "disc_ops": 155.9,
+  "net_income": 1369.9,
+  "nci": null,
+  "pref_div": null,
+  "ni_common": null,
+  "shares_basic": 311.225,
+  "shares_diluted": 329.459,
+  "eps_basic_cont": 3.9,
+  "eps_dil_cont": 3.72,
+  "eps_dil": 4.19,
+  "dps": 0.11,
+  "per_share_basis": "pre_split"
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Professional Instrumentation",
+    "sales": 3537.9,
+    "op_profit": 709.5,
+    "amort": null,
+    "dep": null,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 22.0,
+    "growth_acq": -12.0,
+    "growth_fx": -3.5,
+    "growth_core": 6.5
+   },
+   {
+    "name": "Medical Technologies",
+    "sales": 2998.0,
+    "op_profit": 393.2,
+    "amort": null,
+    "dep": null,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 35.0,
+    "growth_acq": -22.0,
+    "growth_fx": -5.0,
+    "growth_core": 8.0
+   },
+   {
+    "name": "Industrial Technologies",
+    "sales": 3153.4,
+    "op_profit": 532.5,
+    "amort": null,
+    "dep": null,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 5.5,
+    "growth_acq": -0.5,
+    "growth_fx": -3.5,
+    "growth_core": 1.5
+   },
+   {
+    "name": "Tools & Components",
+    "sales": 1336.6,
+    "op_profit": 175.6,
+    "amort": null,
+    "dep": null,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": -1.0,
+    "growth_acq": 1.0,
+    "growth_fx": -0.5,
+    "growth_core": -0.5
+   }
+  ],
+  "other_op_profit": -70.1,
+  "total_growth": {
+   "total": 16.5,
+   "acq": -8.5,
+   "fx": -3.5,
+   "core": 4.5,
+   "other": null,
+   "other_label": null
+  },
+  "respiratory_sales": null,
+  "core_ex_resp": null,
+  "recurring_pct": null,
+  "seg_note": "Four segments: Professional Instrumentation, Medical Technologies, Industrial Technologies, Tools & Components (+ Other = corporate). Power quality business (formerly Industrial Technologies) sold Jul-2007 and presented as discontinued operations; IT 2006 recast (sales 3,119.2 -> 2,988.8; OP 485.5 -> 467.7). Tektronix (Nov-2007) and ChemTreat (Jul-2007) in Professional Instrumentation. Segment growth from 10-K MD&A 'Components of Sales Growth' (additive presentation: existing + acquisitions + currency = total); stored in deduction convention (acq / fx sign flipped so core = total + acq + fx). T&C line is 'Product line divestiture' (1.0)% -> growth_acq +1.0. Total company from MD&A text (16.5% total; existing 4.5%, acquisitions 8.5%, currency 3.5%). 10-K segment sales IT 3,153,377 / T&C 1,336,642 vs release 3,153,378 / 1,336,641 (10-K used). MD&A also gives segment D&A (PI 64.8, MT 119.7, IT 63.2, T&C 20.8) but not split dep vs amort."
+ },
+ "ngaap": {
+  "adj_eps_pub": 3.83,
+  "eps_bridge_start": 3.72,
+  "eps_bridge_start_label": "Diluted Earnings Per Share from Continuing Operations per GAAP",
+  "eps_bridge": [
+   [
+    "After-tax gain on indemnity proceeds related to litigation matter ($12.5 million pre-tax)",
+    -0.02
+   ],
+   [
+    "Gains from net reduction in income tax reserves and discrete tax benefits",
+    -0.07
+   ],
+   [
+    "After-tax charges related to the acquisition of Tektronix, for purchased in-process research and development and fair value adjustments to recorded inventory and deferred revenue balances ($68.2 Million pre-tax)",
+    0.2
+   ]
+  ],
+  "item_amounts": [
+   [
+    "After-tax gain on indemnity proceeds related to litigation matter ($12.5 million pre-tax)",
+    -12.5,
+    -8.1,
+    "op"
+   ],
+   [
+    "Gains from net reduction in income tax reserves and discrete tax benefits",
+    null,
+    -21.1,
+    "tax"
+   ],
+   [
+    "After-tax charges related to the acquisition of Tektronix, for purchased in-process research and development and fair value adjustments to recorded inventory and deferred revenue balances ($68.2 Million pre-tax)",
+    68.2,
+    66.0,
+    "op"
+   ]
+  ],
+  "amort_pretax": null,
+  "adj_op_pub": null,
+  "adj_op_margin_pub": null,
+  "fcf_pub": null,
+  "capex_pub": null,
+  "capex_disposals_pub": null,
+  "cfo_pub_period": null,
+  "guidance": "Release gives no numeric guidance ('remain confident in our ability to again deliver in 2008'). 2007 10-K: 2008 effective tax rate expected ~27%; 2008 intangible amortization ~$140m before 2008 acquisitions.",
+  "notes": "Adjusted diluted EPS from continuing operations (first year the reconciliation is on a continuing-ops basis). Excludes indemnity gain, net tax-reserve reductions / discrete tax benefits (incl. ~$0.02 from international tax-rate reductions) and Tektronix IPR&D ($60.4m) + inventory / deferred revenue fair-value charges; amortization NOT added back. Adjusted earnings from continuing ops 1,250.8. Release narrative: adjusted EPS incl. $0.02 of discontinued ops from prior quarters = $3.85; 2006 comparative adjusted EPS from continuing ops 3.20; Q4-07 adjusted EPS 1.12 (Q4 core growth 4.5%). Release has no FCF table; CFO from continuing ops $1.7bn (+11%). Power quality gain on sale $150m after tax ($0.45) in discontinued ops."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "net_income": 1369.9,
+  "disc_ops_ni": 155.9,
+  "dep": 173.9,
+  "amort": 94.6,
+  "sbc": 73.3,
+  "deferred_tax": 29.9,
+  "impair": null,
+  "gains": null,
+  "wc_change": 113.6,
+  "cfo_cont": 1699.3,
+  "cfo_disc": -53.5,
+  "cfo": 1645.8,
+  "capex": -162.1,
+  "capex_disposals": 15.5,
+  "acquisitions": -3576.6,
+  "divest": 301.3,
+  "invest_purch": -23.2,
+  "invest_sales": null,
+  "cfi_disc": -0.7,
+  "cfi": -3445.8,
+  "stock_iss": 182.5,
+  "equity_offering": 550.5,
+  "pref_iss": null,
+  "dividends": -34.3,
+  "buyback": -117.5,
+  "debt_net_short": 647.8,
+  "debt_proceeds": 493.7,
+  "debt_repay": -10.6,
+  "spin_cash": null,
+  "cff_disc": null,
+  "cff": 1712.2,
+  "fx": 9.1,
+  "net_change": -78.7,
+  "cash_begin": 317.8,
+  "cash_end": 239.1,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net earnings",
+    1369.9
+   ],
+   [
+    "Less: earnings from discontinued operations, net of tax",
+    155.9
+   ],
+   [
+    "Net earnings from continuing operations",
+    1214.0
+   ],
+   [
+    "Depreciation",
+    173.9
+   ],
+   [
+    "Amortization",
+    94.6
+   ],
+   [
+    "Stock compensation expense",
+    73.3
+   ],
+   [
+    "Change in deferred income taxes",
+    29.9
+   ],
+   [
+    "Change in trade accounts receivable, net",
+    -72.6
+   ],
+   [
+    "Change in inventories",
+    38.1
+   ],
+   [
+    "Change in accounts payable",
+    103.8
+   ],
+   [
+    "Change in prepaid expenses and other assets",
+    38.6
+   ],
+   [
+    "Change in accrued expenses and other liabilities",
+    5.7
+   ],
+   [
+    "Total operating cash flows from continuing operations",
+    1699.3
+   ],
+   [
+    "Total operating cash flows from discontinued operations",
+    -53.5
+   ],
+   [
+    "Net cash flows from operating activities",
+    1645.8
+   ],
+   [
+    "Payments for additions to property, plant and equipment",
+    -162.1
+   ],
+   [
+    "Proceeds from disposals of property, plant and equipment",
+    15.5
+   ],
+   [
+    "Cash paid for acquisitions",
+    -3576.6
+   ],
+   [
+    "Cash paid for investment in acquisition target and other marketable securities",
+    -23.2
+   ],
+   [
+    "Proceeds from sale of investment and divestitures",
+    301.3
+   ],
+   [
+    "Total investing cash flows from continuing operations",
+    -3445.0
+   ],
+   [
+    "Total investing cash flows from discontinued operations",
+    -0.7
+   ],
+   [
+    "Net cash used in investing activities",
+    -3445.8
+   ],
+   [
+    "Proceeds from issuance of common stock",
+    733.0
+   ],
+   [
+    "Payment of dividends",
+    -34.3
+   ],
+   [
+    "Purchase of treasury stock",
+    -117.5
+   ],
+   [
+    "Net increase in borrowings (maturities of 90 days or less)",
+    647.8
+   ],
+   [
+    "Proceeds from debt borrowings (maturities longer than 90 days)",
+    493.7
+   ],
+   [
+    "Debt repayments",
+    -10.6
+   ],
+   [
+    "Net cash generated by (used in) financing activities",
+    1712.2
+   ],
+   [
+    "Effect of exchange rate changes on cash and equivalents",
+    9.1
+   ],
+   [
+    "Net change in cash and equivalents",
+    -78.7
+   ],
+   [
+    "Beginning balance of cash and equivalents",
+    317.8
+   ],
+   [
+    "Ending balance of cash and equivalents",
+    239.1
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 239.1,
+  "ar": 1984.4,
+  "inventories": 1193.6,
+  "prepaid_other": 632.7,
+  "ca_disc": null,
+  "tca": 4049.8,
+  "ppe": 1108.6,
+  "other_lta": 507.6,
+  "nca_disc": null,
+  "goodwill": 9241.0,
+  "intangibles": 2565.0,
+  "ta": 17471.9,
+  "st_debt": 330.5,
+  "ap": 1125.6,
+  "accrued": 1443.8,
+  "cl_disc": null,
+  "tcl": 2899.9,
+  "other_ltl": 2090.6,
+  "ncl_disc": null,
+  "ltd": 3395.8,
+  "pref": null,
+  "common": 3.5,
+  "apic": 1718.7,
+  "treasury": null,
+  "retained": 6820.8,
+  "aoci": 542.7,
+  "dhr_equity": 9085.7,
+  "nci": null,
+  "te": 9085.7,
+  "tle": 17471.9,
+  "shares_out": 317.984,
+  "lines_raw": [
+   [
+    "Cash and equivalents",
+    239.1
+   ],
+   [
+    "Trade accounts receivable, less allowance for doubtful accounts of $108,781 and $102,369",
+    1984.4
+   ],
+   [
+    "Inventories",
+    1193.6
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    632.7
+   ],
+   [
+    "Total current assets",
+    4049.8
+   ],
+   [
+    "Property, plant and equipment, net",
+    1108.6
+   ],
+   [
+    "Other assets",
+    507.6
+   ],
+   [
+    "Goodwill",
+    9241.0
+   ],
+   [
+    "Other intangible assets, net",
+    2565.0
+   ],
+   [
+    "Total assets",
+    17471.9
+   ],
+   [
+    "Notes payable and current portion of long-term debt",
+    330.5
+   ],
+   [
+    "Trade accounts payable",
+    1125.6
+   ],
+   [
+    "Accrued expenses and other liabilities",
+    1443.8
+   ],
+   [
+    "Total current liabilities",
+    2899.9
+   ],
+   [
+    "Other liabilities",
+    2090.6
+   ],
+   [
+    "Long-term debt",
+    3395.8
+   ],
+   [
+    "Common stock - $0.01 par value, 1 billion shares authorized; 352,608 and 341,223 issued; 317,984 and 308,242 outstanding",
+    3.5
+   ],
+   [
+    "Additional paid-in capital",
+    1718.7
+   ],
+   [
+    "Retained earnings",
+    6820.8
+   ],
+   [
+    "Accumulated other comprehensive income",
+    542.7
+   ],
+   [
+    "Total stockholders' equity",
+    9085.7
+   ],
+   [
+    "Total liabilities and stockholders' equity",
+    17471.9
+   ]
+  ]
+ },
+ "py": {
+  "restated": true,
+  "notes": "2006 comparative recast for the power quality business (sold Jul-2007, discontinued ops) and for the new R&D line. As originally reported (2006 10-K): sales 9,596.4, COGS 5,353.0, SG&A 2,741.8 (incl. R&D, no separate line), OP 1,518.0, EBT 1,446.2, net earnings 1,122.0 (all continuing), diluted EPS 3.48, adjusted EPS 3.24; Industrial Technologies 3,119.2 / 485.5. Recast: sales 9,466.1, OP 1,500.2, cont ops 1,109.2 + disc ops 12.8, diluted EPS cont 3.44; adjusted EPS from continuing ops 3.20; IT 2,988.8 / 467.7.",
+  "is": {
+   "sales": 9466.1,
+   "cogs": 5269.0,
+   "sga": 2273.2,
+   "rnd": 440.0,
+   "other_op": -16.4,
+   "op_profit": 1500.2,
+   "nonop": 0.0,
+   "interest_exp": 79.4,
+   "interest_inc": 8.0,
+   "ebt": 1428.8,
+   "tax": 319.6,
+   "cont_ops": 1109.2,
+   "disc_ops": 12.8,
+   "net_income": 1122.0,
+   "pref_div": null,
+   "shares_basic": 307.984,
+   "shares_diluted": 325.251,
+   "eps_dil_cont": 3.44,
+   "eps_dil": 3.48
+  },
+  "segments": [
+   {
+    "name": "Professional Instrumentation",
+    "sales": 2906.5,
+    "op_profit": 625.6
+   },
+   {
+    "name": "Medical Technologies",
+    "sales": 2220.0,
+    "op_profit": 261.6
+   },
+   {
+    "name": "Industrial Technologies",
+    "sales": 2988.8,
+    "op_profit": 467.7
+   },
+   {
+    "name": "Tools & Components",
+    "sales": 1350.8,
+    "op_profit": 194.1
+   }
+  ],
+  "other_op_profit": -48.8,
+  "adj_eps_pub": 3.2,
+  "amort_pretax": null
+ },
+ "extra": {
+  "employees": 50000,
+  "dep": 173.9,
+  "amort": 94.6,
+  "seg_extra": [
+   {
+    "name": "Professional Instrumentation",
+    "dep_amort": 64.8,
+    "capex": 39.0,
+    "assets": 6692.0
+   },
+   {
+    "name": "Medical Technologies",
+    "dep_amort": 119.7,
+    "capex": 47.6,
+    "assets": 6160.6
+   },
+   {
+    "name": "Industrial Technologies",
+    "dep_amort": 63.2,
+    "capex": 48.0,
+    "assets": 3536.2
+   },
+   {
+    "name": "Tools & Components",
+    "dep_amort": 20.8,
+    "capex": 20.9,
+    "assets": 801.1
+   },
+   {
+    "name": "Other",
+    "dep_amort": null,
+    "capex": 6.5,
+    "assets": 282.1
+   }
+  ],
+  "acquisitions": [
+   [
+    "Tektronix, Inc.",
+    "2007-11",
+    2800.0,
+    "Professional Instrumentation"
+   ],
+   [
+    "ChemTreat, Inc.",
+    "2007-07",
+    425.0,
+    "Professional Instrumentation"
+   ],
+   [
+    "Ten other companies / product lines (aggregate; ~$123m annual sales)",
+    "2007",
+    273.0,
+    "Professional Instrumentation / Medical Technologies / Industrial Technologies"
+   ],
+   [
+    "Vision Systems (remaining shares + transaction costs)",
+    "2007 Q1",
+    96.0,
+    "Medical Technologies"
+   ]
+  ],
+  "divestitures": [
+   [
+    "Power quality business (Industrial Technologies; ~$130m 2006 revenue)",
+    "2007-07",
+    "Sold for $275m cash net of costs; after-tax gain $149.6m ($0.45/sh) in discontinued operations; all periods recast"
+   ]
+  ],
+  "debt_maturities": [
+   [
+    "2008",
+    331.0
+   ],
+   [
+    "2009",
+    4.0
+   ],
+   [
+    "2010",
+    5.0
+   ],
+   [
+    "2011",
+    5.0
+   ],
+   [
+    "2012",
+    1504.0
+   ],
+   [
+    "Thereafter",
+    1877.0
+   ]
+  ],
+  "amort_schedule": [
+   [
+    "2008",
+    140.0
+   ]
+  ],
+  "notes": "Employees ~50,000 (~24,000 US). Tektronix ~$2.8bn cash incl. costs net of cash and debt acquired (revenue ~$1.1bn); funded by CP, Nov-2007 equity offering (6.9m shares at $82.25, net ~$550m) and Dec-2007 $500m 5.625% notes due 2018. Total debt 3,726.2 (USD CP 1,311.2; Euro CP 239.7; Eurobond 2013 729.6; 2008 notes 250.0; LYONs 605.9; 2018 notes 500.0; other 89.8). Goodwill by segment: PI 3,797; MT 3,244; IT 2,006; T&C 194. Amortization schedule: 10-K gives only 2008 (~$140m before 2008 acquisitions)."
+ },
+ "notes": "IS / BS / CF from the 2007 10-K. Release vs 10-K differences (10-K used): BS release other assets 356.2 / total assets 17,320.6 / accrued 1,358.8 / TCL 2,814.9 / other liabilities 2,024.3 (10-K 507.6 / 17,471.9 / 1,443.8 / 2,899.9 / 2,090.6 — Tektronix purchase accounting); CF release deferred taxes 39.3 and accrued change (3.8) vs 10-K 29.9 and 5.7 (same CFO). First year with a separate 'Research and development expenses' IS line (previously within SG&A/COGS). Computed: gp; cf.wc_change = sum of five 'Change in ...' lines (113.6); cf.stock_iss = 733.0 'Proceeds from issuance of common stock' less the Nov-2007 public offering 550.5 (equity statement 'Common stock issuance' 69 + 550,433 thousand) = 182.5, with cf.equity_offering 550.5. cf.divest 301.3 'Proceeds from sale of investment and divestitures' (incl. ~$275m power quality sale). Interest expense / taxes shown negative on the IS, stored positive. dps 0.11 (0.02+0.03+0.03+0.03; 10-K selected data). All self-checks pass."
+}

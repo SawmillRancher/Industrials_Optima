@@ -1,14 +1,15 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the ~30 models built
-so far (TFI, Copart, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON, CSGP,
-DHR, TMO, CTAS, STE, UBER, LECO, BWXT, CW, ESAB).
+The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
 - **Fill-in docs:** [`templates/NEW_MODEL_README_TEMPLATE.md`](templates/NEW_MODEL_README_TEMPLATE.md) and [`templates/EXTRACTION_SCHEMA_TEMPLATE.md`](templates/EXTRACTION_SCHEMA_TEMPLATE.md).
-- **QA tools:** [`tools/inspect_model.py`](tools/inspect_model.py) (formula errors and non-zero check rows) and [`tools/cyc.py`](tools/cyc.py) (circular references).
-- **Reference builds** (on their branches): STE (`models/ste_build`), DHR (`models/dhr_build`), ONON (`models/onon_build`) and LOAR (`models/loar_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
+- **QA tools:** [`tools/inspect_model.py`](tools/inspect_model.py) (formula errors and non-zero check rows), [`tools/cyc.py`](tools/cyc.py) (circular references) and [`tools/residue_scan.py`](tools/residue_scan.py) (leftover template-company text in values and comments).
+- **Per-model lessons:** [`MODEL_LESSONS.md`](MODEL_LESSONS.md) records each model's specific nuances (basis, bridges, data quirks, deals, calibration, valuation) and reusable rules. Read the entries for the most similar companies before you start.
+- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`) and WWD (`wwd_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
 
 ---
 
@@ -208,6 +209,8 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 - [ ] Recalculate with LibreOffice Calc (`libreoffice-calc`; `libreoffice-core` alone cannot open .xlsx) using the xlsx skill's `recalc.py` (`XLSX_RECALC` / `RECALC_SCRIPT`).
 - [ ] `python3 models/tools/inspect_model.py <recalculated.xlsx>` reports **0 error cells and 0 non-zero check rows** (the DuPont row is skipped by design).
 - [ ] `python3 models/tools/cyc.py <file>` reports **0 cycles**.
+- [ ] `python3 models/tools/residue_scan.py <file> --extra <kit-source ticker> <its share price>` reports **0 residue hits**. It scans every sheet's values and cell comments, including Bull-Base-Bear N26 / P40 and the DCF rationale. Use `--allow` only for tokens that are legitimately the new company's (its own name, its industry terms). Comment authors should all be the new build.
+- [ ] Every check-row label states its tolerance where the source rounds (e.g. "(should be 0; ±0.02)").
 - [ ] Flip the switch to Bull and Bear: still 0 errors, the BS still balances, and the results are ordered Bull > Base > Bear on revenue / EPS / price target.
 - [ ] Spot-check against the source: three random historical cells per statement; latest quarter's revenue, OI, NI, EPS, CFO, cash and total assets; published adjusted EPS and EBITDA.
 - [ ] Sanity-check the forecast: margins vs history and LT targets; tax rate; capex / D&A; cash never negative unless the debt schedule draws; leverage path vs company target; buybacks vs FCF; DPS growth; ROIC trend; implied multiples.
@@ -219,7 +222,8 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 - [ ] Output `models/<TICKER>_Model.xlsx`.
 - [ ] Build kit `models/<ticker>_build/`: scripts, `filings.csv`, `data/*.json` (committed), `manual_items.json`, the template copy, and `README.md` from `templates/NEW_MODEL_README_TEMPLATE.md` (columns, basis, structure, bridges, sources, rebuild, validate, files).
 - [ ] Don't commit raw filings (~200 MB), scratch Bull/Bear files or caches. Check `.gitignore`.
-- [ ] Add a row to `models/README.md` (company, file, source documents, CIK).
+- [ ] Add a row to `models/README.md` (ticker, company, template, workbook, build kit and rebuild command).
+- [ ] Add the model's entry to `models/MODEL_LESSONS.md` in the standard format (coverage and basis, operating build, bridges, data quirks, deals, calibration, BS / cash / capital, valuation, reusable lessons). Promote any general lesson to this playbook.
 - [ ] Commit message: `Add <Company> (<TICKER>) 3-statement model built on the MLM template`, with a body covering the build, bridges and checks, history and sources, calibration and scenarios, deal blocks, and the share price and date.
 - [ ] Push to the working branch. Open a PR only if asked.
 
@@ -268,3 +272,142 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 - Saving with openpyxl drops chart formatting. Re-inject the template chart XML after every save.
 - Files without cached values look blank in viewers. Store calculated values.
 - `libreoffice-core` cannot open .xlsx; install `libreoffice-calc`.
+
+---
+
+## 5. Lessons from all 33 builds
+
+These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
+
+### 5.1 Sources and extraction
+- **Share price fallback.** With market sites blocked and no price from the user, use the latest SEC-filed price: the 10-Q Part II Item 2 average repurchase price, or a Form 4 transaction / withholding price. Cite the form and date, and flag "update to market". Don't use unverifiable web quotes. [WWD, BWXT, MLM, CLH, WAB, CSGP, CTAS, UBER]
+- **XBRL can be wrong, not just incomplete.** Facts tagged 0, tags retired mid-history into a combined concept, and sign flips all occur. Tie every XBRL-sourced fact to the face statement before using it as a primary input. For as-originally-reported checks, use the earliest-filed fact, and compare absolute values where the tag's sign convention changed. [TFI, ODFL]
+- **Foreign filers' EDGAR history starts at the US listing.** Record reporting-currency switches and keep an FX reference series for any manually entered earlier data. For non-SEC issuers, confirm EDGAR holds only F-6 ADR CIKs, say so in header row 3, and source from the home regulator's filings. [TFI, RBA, RMS]
+- **Derivations when releases are thin:**
+  - Acquired sales = (total growth % − organic growth %) × prior-year revenue. [KRMN]
+  - Working capital from a single-line CFO = CFO − NI − D&A − SBC − deferred tax, using XBRL for the components and noting missing tags. [WWD]
+  - Recast Q4 = FY recast − 9M recast; quarters that were never recast stay blank. [LECO]
+  - Each derivation is noted in the cell comment.
+- **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
+- **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
+
+### 5.2 Basis
+- **Segment re-presentation with a short recast history:** model an aggregate the re-presentation doesn't change and keep the old split as memo. Prove where an absorbed segment went using the restated comparative Δ. [RBA, TFI]
+- **Partial standard recasts** (e.g. ASC 606 recast only at total revenue for an earlier year) get a memo row for that year rather than mixing bases in the main line. [RBA]
+- **Disc-ops recast published only in totals:** scale minor opex lines to the restated totals, with SG&A as the plug, and comment the cells. [STE]
+- **After a spin:** start the BS at the first post-spin balance sheet even if the P&L uses earlier recast comparatives, and fill earlier y/y with company-reported change % memos. Spin-cos put carve-out (Form 10) years in the main columns, with the former parent's segment history as a flagged memo under the parent's CIK. [XPO, ESAB]
+- **Half-year reporters:** carry quarterly revenue as "1st / 2nd quarter of the half" memo rows inside the half-year columns, with a Σ check. [RMS, BC]
+- **Two builds of one company:** diff their dated facts (split dates, deconsolidation quarter, label cut-overs) and resolve each from the filing. [LECO]
+
+### 5.3 Operating build
+- **When a segment or product table changes revenue basis** (net sales → ex-freight → total revenue; pre-ASC 606), add a derived "outside the lines" row (consolidated − Σ lines) so the build check ties in every period. [MLM, VMC]
+- **Tie operating statistics to reported revenue with an explicit ratio row** (revenue ÷ (volume × yield)). Derive orders from a backlog roll-forward when they aren't published; backlog builds need a derived "adjustments / de-bookings" line. [XPO, WAB, BWXT]
+- **Pass-through or intermediary businesses:** drive the net-revenue measure (AGP, statistics-basis revenue) and derive gross revenue through a margin or adjustment row. [CHRW, ODFL]
+- **Commodity pass-through "price"** (metals, fuel surcharge) is a separate lever from real pricing. Fuel surcharge = DOE diesel × the published surcharge table (from its effective date) × trailing capture ratio. [LECO, SAIA]
+- **Two disclosed revenue cuts** (channel × region): drive one and scale the other pro rata, with a Σ check. [BC]
+- **Acquisition timing:**
+  - A stub closed inside the last actual quarter goes in a memo row and is stripped from the organic base.
+  - Anniversaries are pro-rated by days or months consolidated.
+  - Swap the y/y trend for an explicit organic input when an anniversary or divestiture falls inside the forecast quarters.
+  - Infer a new deal's run-rate from the 10-Q "acquisitions contribution %" × prior-year segment revenue.
+  - Re-map a target's costs to the acquirer's presentation before applying margins.
+
+  [ESAB, LECO, MLM, TDY, VMC, TMO, CTAS]
+- **Strip one-offs and calendar effects before compounding:** restructuring out of base unit costs; extra workday or 53rd week out of the YTD trend. [CHRW, CTAS]
+- **Operational calendars** (work days) are rebuilt in code and validated against every published count before filling unpublished periods. [ODFL]
+- **Marketplaces:** receivables and payables run as days of GTV, not revenue. [RBA]
+
+### 5.4 Bridges
+- **Tax effect of adjusting items: derive it, don't assume it.**
+  - Use the after-tax − pre-tax columns, or published adjusted NI − GAAP NI − pre-tax items (− discrete tax − NCI share).
+  - Where the tax effect has to be imputed, bound the period ETR (about 15–40%), and use disclosed after-tax amounts for non-deductible items.
+  - Gross up after-tax-only items at the statutory rate in force each year.
+
+  [TDY, VMC, STE, LECO, WWD, HEI, BC, CPRT]
+- **When the company stops publishing a measure,** flag "not published from <period>" (or "adjusted = GAAP") in the definition row. Keep a labelled model rebuild held constant across periods, and default forecast adjusting items to nil. [CPRT, HII, CLH]
+- **Retroactive redefinitions:**
+  - Periods a later release recomputed take the new definition; periods never republished stay on the old one, flagged.
+  - Fill a partially restated add-back using the tax rate implied by the restated periods.
+  - When a published adjusted figure is later restated, record both values in the definition-row comment and say which one the check uses.
+
+  [RBA, LOAR, VMC, TDY]
+- **Rebuild a company measure exactly as published,** even if it isn't tax-effected or excludes SBC. Add a tax-effected memo variant if useful. [KRMN, TDY, VMC, MLM]
+- **Adjust only for items the company itself quantified,** and list the items it named but didn't adjust. Keep model items and company items distinguishable within a row via per-period comments, and use a labelled plug row only for definitional drift or overlapping company measures in published periods. [ODFL, BC, HEI, CHRW, UBER]
+- **Store each period's company adjusting-item wording and amounts as a comment** on the total-items cell, so the category rows can stay few without losing the audit trail. [WAB]
+- **Use the company's own share count** (adjusted / fully diluted in loss quarters, unrounded) in the adjusted EPS bridge. [WAB, XPO]
+- **Don't force FY = Σ quarters** for adjusted measures the company computes annually (annual tax effect, FY cc rates), or for a measure whose definition changed mid-year. Exempt them from the quarter-sum check with a comment. [ONON, VMC]
+- **Known, explained source differences** (a restated starting NI, a release issued before a 10-Q impairment) can stay as documented check exceptions rather than plugs. [WCN]
+- **Long-term target base years** stay "as first published", with a note that definitions have since changed. [XPO]
+- **Two-class / participating preferred:** the adjusted-NI bridge needs an "allocation to preferred" line, and the preferred is deducted in the EV bridge. [RBA]
+
+### 5.5 Calibration
+- **Order of operations.** Apply every explicitly guided driver first, then solve one uniform Δ on the least-guided driver. Use a "sensitivity to +1.00" helper row for a closed-form linear solve, with no goal-seek and no circularity. [VMC, MLM, TDY, WAB, DHR, LOAR, CSGP]
+- **EPS guidance → operating target:** required adjusted OI = EPS × guidance share count (ex future buybacks) ÷ (1 − guided ETR) + net interest − adjusted other income, less the actual YTD. Then solve margins to it. [DHR, CTAS, STE, WAB, WWD]
+- **Two anchors in one year:** if a quarterly guide and a FY guide both exist, solve Q3 to the quarter and Q4 to the year with separate Δs and checks. For one-quarter-ahead guidance only, carry the solved Δ forward. [DHR, ONON, TDY, UBER]
+- **Guidance that excludes a deal or one-off:** calibrate a legacy / guidance-basis memo series with its own check, and add the deal block and excluded items on top. Deals already inside guidance go inside segment acquisition %. Check the deal close date against the outlook date. [MLM, KRMN, CLH, CSGP, CTAS, UBER, TMO, ONON, DHR]
+- **Incremental-margin guidance:** target = prior-year half + incremental % × Δ sales. [LECO]
+- **Operating-ratio guidance:** solve the remaining quarters on OR, with the largest controllable cost line balancing, and show the implied shift vs run-rate. [SAIA]
+- **FCF or CFO guidance:** solve the dominant working-capital item (contract assets, DSO, advance billings) with one designated BS plug, or keep it as an information row. [HII, WCN, CW, BWXT, TMO]
+- **Segment ranges that don't sum to the total:** drive segments from their own end-points and close to the total with one uniform Δ. Allocate aggregate guidance by 1H mix or prior-year quarter × 1H momentum. [CW, HII, RBA]
+- **Guided cost items** (D&A, interest, SBC) for the remaining halves = (FY mid − 1H) ÷ 2. Add post-guidance financing events (new notes) on top. Take point estimates from the company's own outlook reconciliation rather than guessing. [CLH, XPO, WAB, VMC, MLM, TDY]
+- **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
+- **Apply the Δ only to genuinely uncommitted lines** (retail rather than order-book wholesale). Constant-FX guidance needs a separate FX-translation Δ for the reporting-currency figure. EPS guidance made stale by post-guidance buybacks becomes an information row. [BC, ONON, BWXT]
+- **No guidance:** leave targets as optional blank inputs; don't invent them. [HEI, BC]
+
+### 5.6 Balance sheet, cash and capital
+- **Current year with actual quarters:**
+  - Roll the year-end BS from the latest quarter-end BS plus the remaining flows.
+  - Seed shares from the latest cover-page count.
+  - Limit the buyback row to the remaining quarters; actual share counts already include YTD repurchases.
+
+  [TMO, STE, UBER, CTAS, CSGP, DHR, ONON, RBA]
+- **Dividends = DPS × beginning shares,** so they aren't circular with plug-driven buybacks. [TMO, CTAS, CSGP]
+- **Deal year:** size working capital, leverage, the buyback floor and EV multiples on pro forma full-year revenue and Adj. EBITDA (memo rows), and exclude acquired NWC from ΔNWC. Check whether acquired intangibles are tax-deductible; if not, add a DTL unwind. [MLM, CSGP, DHR, CTAS, TMO, UBER, ESAB, KRMN]
+- **Choose the buyback plug to fit the capital structure:**
+  - net-debt floor for levered companies;
+  - target cash, or a negative net-debt floor (a net-cash cap), for net-cash companies;
+  - share-neutral purchases where they only serve stock plans.
+
+  Book buyback equity the way the company does (treasury vs retired; APIC first, then retained earnings). [ODFL, WCN, HEI, BC, CPRT, XPO, CLH, WAB]
+- **Net-cash companies:** replace the revolver with yield on opening net cash (HTM securities count as cash), and keep exceptional dividends as their own lever. Split country-specific tax levies into an "of which" row so the recurring ETR is clean. [RMS, CPRT]
+- **Financing labels:**
+  - Revolver draws above the commitment are labelled financing assumptions.
+  - Add a revolver-headroom memo.
+  - After a debt-funded deal, sweep surplus cash to prepayable debt before buybacks resume.
+  - Calibrate a fees / capitalized-interest row to YTD interest when coupons overstate actual expense.
+
+  [KRMN, MLM, WWD, BWXT]
+- **Convertibles and preferred:**
+  - Convertibles: treasury-stock dilution above the conversion price, driven by the forecast share price; capped calls ignored; counted at face in net debt.
+  - Mandatory convertible preferred: if-converted shares until conversion, with dividends added back in adjusted EPS.
+
+  [BWXT, ESAB]
+- **Pension:** CAS / FAS and non-service pension income from overfunded plans are non-cash. Accrete the prepaid pension asset, reverse the income in CFO and exclude it from UFCF. [HII, CW]
+- **Leverage ratios use LTM EBITDA** (carried in the quarter columns), not annualised 1H. [VMC, HEI]
+- **Working-capital ratios** come from fiscal-year-end balances, not annualised quarters. [STE, CTAS]
+- **Use the company's own capex / FCF definition** when it is guided, so guided and modelled figures are comparable. [RBA, HII]
+- **Reconcile BS cash vs CF ending cash with a memo line** when definitions differ (overdraft, restricted cash, disc-ops cash). [ONON, CSGP, DHR]
+
+### 5.7 Valuation
+- **Standard NOPAT basis** (the builds diverged here; this is now the rule):
+  - NOPAT = (adjusted EBIT before acquired-intangible amortization − SBC − cash restructuring / integration / legal items the company excludes) × (1 − tax), with a depreciation-only add-back.
+  - Use the company's assumed non-GAAP tax rate when the GAAP ETR is distorted.
+  - State the basis in the DCF notes. If a kit uses full-cost EBIT (STE, CTAS, LOAR, CSGP), keep the D&A add-back consistent with it.
+
+  [DHR, TMO, CSGP, ONON, CLH, WAB, XPO, CPRT, RBA, KRMN]
+- **Don't double-count the current year:** when valuation net debt is taken at the current fiscal year end, exclude that year's UFCF. When the FY ended just before the valuation date, make it the base year. [BWXT, CW, WWD, BC, HEI]
+- **EV bridge items:**
+  - Add legacy debt-like items (asbestos net of insurance) and redeemable NCI.
+  - Carry equity stakes and retained divestiture stakes at carrying value outside invested capital.
+  - Disclose the market-cap overstatement when a dual-class company is priced off one class.
+  - With negative NWC, terminal ΔWC = |NWC| × g.
+
+  [ESAB, BWXT, HEI, UBER]
+- **Deal tabs** show accretion both vs the standalone with buybacks and on the company's comparison basis, and solve for the synergies or margin needed to meet the stated accretion. [CHRW]
+- **Historical average share prices** come from 10-K Item 5 only where disclosed; leave later years blank. [HII]
+
+### 5.8 QA
+- **Template residue is the most common defect.** At least 10 builds shipped MLM text in Bull-Base-Bear N26 / P40 comments or DCF rationale, and TFI kept Moog comments. `tools/residue_scan.py` is a hard gate. [CLH, WAB, SAIA, ODFL, WCN, LOAR, ONON, LECO, ESAB, STE, CTAS, UBER, TFI, CPRT]
+- **Check also:** foreign row numbers and switch-cell addresses in comments, the wrong currency symbol on non-USD models, and modelling-note dates that contradict the definition flags. [ONON, DHR]
+- **Check tolerances** are set by period when the issuer changes rounding units, and stated in the label. [STE, TMO, CSGP, ONON, DHR]
+- **Private-company implied CF:** related-party balances are financing; explain the sign of implied capex; leave first-year ratios n/a when there is no opening BS. [R&Y]

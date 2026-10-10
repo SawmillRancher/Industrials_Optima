@@ -1,0 +1,167 @@
+{
+ "period": "Q3-21",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000110465921134041/tm2131876d1_ex99-1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000139600921000050/vmc-20210930x10q.htm"
+ },
+ "seg": {
+  "agg_rev": 1172.4,
+  "agg_interseg": -97.3,
+  "agg_fa_rev": 898.0,
+  "agg_freight_rev": 253.1,
+  "agg_other_rev": 21.4,
+  "agg_tons": 60.163,
+  "agg_price": 14.93,
+  "agg_gp": 372.3,
+  "agg_dda": 93.3,
+  "agg_cgp": 465.7,
+  "asph_rev": 220.7,
+  "asph_interseg": null,
+  "asph_tons": 3.202,
+  "asph_price": 59.43,
+  "asph_gp": 7.1,
+  "asph_dda": 9.0,
+  "asph_cgp": null,
+  "conc_rev": 219.2,
+  "conc_interseg": null,
+  "conc_cy": 1.596,
+  "conc_price": 136.29,
+  "conc_gp": 14.3,
+  "conc_dda": 8.7,
+  "conc_cgp": null,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": 1.5,
+  "calc_gp": 0.3,
+  "calc_dda": 0.0,
+  "calc_tons": 0.052,
+  "calc_price": 28.29,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 1613.8,
+  "interseg_total": -97.3,
+  "delivery_rev": null,
+  "other_dda": 6.5,
+  "total_dda": 117.5,
+  "gp_total": 394.1,
+  "notes": "Four reportable segments (Aggregates, Asphalt, Concrete, Calcium); Calcium still separate in 2020-21. Segment revenues incl. freight & delivery (post-2018 basis); intersegment eliminations are all Aggregates sales. Tons/cubic yards converted from thousands to millions (3 dp). calc_tons/calc_price are extra fields (Calcium tons m, $/ton). Freight-adjusted revenues, freight & delivery and other revenues from Appendix 1 reconciliation; Aggregates cash gross profit as published. Concrete revenue/volumes jump reflect U.S. Concrete (closed 26-Aug-2021)."
+ },
+ "is": {
+  "total_rev": 1516.5,
+  "net_sales": null,
+  "delivery_rev": null,
+  "cost_of_rev": 1122.4,
+  "gp": 394.1,
+  "sag": 103.8,
+  "gain_sale": 2.9,
+  "other_op_lines": [
+   [
+    "Other operating expense, net",
+    -30.8
+   ]
+  ],
+  "other_op": -30.8,
+  "op_earnings": 262.4,
+  "nonop": 3.2,
+  "interest": 36.8,
+  "ebt": 228.7,
+  "tax": 51.8,
+  "cont_ops": 177.0,
+  "disc_ops": -0.2,
+  "net_earnings": 176.8,
+  "nci": -0.1,
+  "ni_vulcan": 176.9,
+  "shares_basic": 132.81,
+  "shares_diluted": 133.544,
+  "eps_cont_dil": 1.33,
+  "eps_dil": 1.32,
+  "eps_basic": 1.33,
+  "dps": 0.37,
+  "notes": "dps from 10-Q statement of equity (cash dividends on common stock, per share)."
+ },
+ "ngaap": {
+  "ebitda_pub": 383.2,
+  "adj_ebitda_pub": 417.7,
+  "ebitda_bridge_tax": 51.8,
+  "ebitda_bridge_disc_ops": 0.2,
+  "ebitda_bridge_start": [
+   "2021",
+   2.0
+  ],
+  "ebitda_bridge_lines": [
+   [
+    "Gain on sale of real estate and businesses, net",
+    0.0
+   ],
+   [
+    "Property donation",
+    0.0
+   ],
+   [
+    "Charges associated with divested operations",
+    0.4
+   ],
+   [
+    "Business development",
+    24.7
+   ],
+   [
+    "COVID-19 direct incremental costs",
+    5.9
+   ],
+   [
+    "Pension settlement charge",
+    0.0
+   ],
+   [
+    "Restructuring charges",
+    3.5
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": null,
+   "gain_sale": 0.0,
+   "impairment": 0.0,
+   "divested_ops": 0.4,
+   "acquisition": 24.7,
+   "restructuring": 3.5,
+   "legal_env": 0.0,
+   "pension": 0.0,
+   "other": 5.9,
+   "other_label": "COVID-19 direct incremental costs"
+  },
+  "adj_eps_pub": 1.54,
+  "eps_bridge_lines": [
+   [
+    "Diluted EPS attributable to Vulcan from continuing operations",
+    1.33
+   ],
+   [
+    "Items included in Adjusted EBITDA above",
+    0.21
+   ],
+   [
+    "Alabama NOL carryforward valuation allowance",
+    0.0
+   ],
+   [
+    "Acquisition financing interest costs",
+    0.0
+   ],
+   [
+    "Adjusted diluted EPS",
+    1.54
+   ]
+  ],
+  "eps_bridge_start_ps": 1.33,
+  "eps_items_after_tax_ps": 0.21,
+  "eps_discrete_tax_ps": 0.0,
+  "agg_cgp_per_ton_pub": 7.74,
+  "roic_pub": 14.2,
+  "notes": "Vulcan's EBITDA bridge starts at net earnings (2021 Q3+: net earnings attributable to Vulcan) and adds back income tax, interest expense and the loss (earnings) on discontinued operations NET OF TAX before DDA&A, so published EBITDA is continuing-ops EBITDA; the schema check ni_vulcan+ebitda_bridge_tax+interest+total_dda=ebitda_pub therefore differs by ebitda_bridge_disc_ops (extra field, value as added); including it the check ties. adj_items.disc_ops is null (disc ops is not an EBITDA->Adjusted EBITDA item). Adjusted EPS bridge: 'Items included in Adjusted EBITDA above' is the after-tax per-share effect of all EBITDA adjustments. Business development = non-routine acquisition charges incl. purchase-accounting inventory step-up -> adj_items.acquisition; COVID-19 direct incremental costs -> adj_items.other. Q3-21: U.S. Concrete (USCR) acquired 26-Aug-2021. Business development 24.7 includes USCR acquisition-related expenses of 21.1 and purchase-accounting inventory step-up of 3.0 (footnote). COVID costs include 3.0 vaccination incentive program. Restructuring 3.5. Bridge now starts at 'Net earnings attributable to Vulcan'. ROIC TTM 14.2%."
+ },
+ "checks": []
+}

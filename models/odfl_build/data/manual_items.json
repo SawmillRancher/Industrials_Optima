@@ -1,0 +1,19 @@
+{
+ "_doc": "Company-identified one-off items (named in ODFL earnings releases / 10-Q / 10-K). Pre-tax op-level items: positive = add back (a charge); negative = remove (a benefit). disc_tax: discrete tax items, signed as ADDED to GAAP net income to reach adjusted (negative = remove a tax benefit). Gains/losses on disposal of property & equipment come from the cash-flow statement for every period and are not listed here.",
+ "items": [
+  {"period": "2007", "op": -2.0, "line": "revenue", "label": "Q2-07 final resolution of a single-customer pricing issue for Jul-2004 to Sep-2006 (revenue recognised $2.0m, $0.03/share)",
+   "source": "Q2-07 release (8-K 26-Jul-2007, Ex. 99.1) and Q2-07 10-Q MD&A"},
+  {"period": "Q4-17", "op": 9.8, "line": "swb", "label": "Special bonus to non-executive employees after passage of the Tax Cuts and Jobs Act ($9.8m)",
+   "source": "Q4-17 release (8-K 1-Feb-2018, Ex. 99.1)"},
+  {"period": "2017", "op": 9.8, "line": "swb", "label": "Special bonus to non-executive employees after passage of the Tax Cuts and Jobs Act ($9.8m, Q4-17)",
+   "source": "Q4-17 release (8-K 1-Feb-2018, Ex. 99.1)"},
+  {"period": "Q4-17", "disc_tax": -104.9, "label": "Tax Cuts and Jobs Act — revaluation of the net deferred tax liability (net tax benefit $104.9m)",
+   "source": "Q4-17 release (8-K 1-Feb-2018, Ex. 99.1)"},
+  {"period": "2017", "disc_tax": -104.9, "label": "Tax Cuts and Jobs Act — revaluation of the net deferred tax liability (net tax benefit $104.9m, Q4-17)",
+   "source": "Q4-17 release (8-K 1-Feb-2018, Ex. 99.1)"},
+  {"period": "Q3-22", "op": -15.8, "line": "swb", "label": "One-time reduction in salaries, wages & benefits on termination of the Executive Chairman's employment agreement (Aug-2022, $15.8m)",
+   "source": "Q3-22 release (8-K 26-Oct-2022, Ex. 99.1)"},
+  {"period": "2022", "op": -15.8, "line": "swb", "label": "One-time reduction in salaries, wages & benefits on termination of the Executive Chairman's employment agreement (Q3-22, $15.8m)",
+   "source": "Q3-22 release (8-K 26-Oct-2022, Ex. 99.1)"}
+ ]
+}

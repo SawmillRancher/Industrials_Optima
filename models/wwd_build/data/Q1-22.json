@@ -1,0 +1,361 @@
+{
+ "period": "Q1-22",
+ "fy": 2022,
+ "q": 1,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/108312/000117184322000647/exh_991.htm",
+  "release_date": "2022-01-31",
+  "filing": "https://www.sec.gov/Archives/edgar/data/108312/000156459022003920/wwd-10q_20211231.htm"
+ },
+ "notes": [],
+ "is": {
+  "rev": 541.586,
+  "cogs": 419.151,
+  "sga": 62.306,
+  "rd": 25.392,
+  "int_exp": 8.306,
+  "int_inc": -0.641,
+  "oth": -10.674,
+  "tot_costs": 503.84,
+  "ebt": 37.746,
+  "tax": 7.441,
+  "ni_tot": 30.305,
+  "eps_b": 0.48,
+  "eps_d": 0.47,
+  "sh_b": 63.094,
+  "sh_d": 65.099,
+  "dps": 0.1625,
+  "ni": 30.305,
+  "other_lines": []
+ },
+ "seg": {
+  "sales_aero": 336.435,
+  "sales_ind": 205.151,
+  "ind_name": "Industrial",
+  "sales_tot": 541.586,
+  "earn_aero": 51.083,
+  "earn_ind": 23.693,
+  "earn_tot": 74.776,
+  "nonseg": -29.365,
+  "ebit": 45.411,
+  "int_net": -7.665,
+  "capex": 13.123,
+  "dep": 21.033
+ },
+ "ngaap": {
+  "ebit_pub": 45.411,
+  "adj_ebit_pub": 53.393,
+  "ebitda_pub": 76.132,
+  "adj_ebitda_pub": 84.114,
+  "dep": 21.033,
+  "amort": 9.688,
+  "ebitda_adj_tot": 7.982,
+  "ebit_adj_tot": 7.982,
+  "fcf_pub": 26.167,
+  "adj_fcf_pub": 27.442,
+  "nonseg_pub": 29.365,
+  "adj_nonseg_pub": 21.383,
+  "adj": {
+   "fmt": "a",
+   "items": [
+    {
+     "label": "Non-recurring matter unrelated to the ongoing operations of the business",
+     "pre": 5.0,
+     "net": 3.75,
+     "ps": 0.06,
+     "cat": "OTHER"
+    },
+    {
+     "label": "Business development activities",
+     "pre": 2.982,
+     "net": 2.236,
+     "ps": 0.03,
+     "cat": "ACQ"
+    }
+   ],
+   "gaap_ni": 30.305,
+   "gaap_ebt": 37.746,
+   "gaap_eps": 0.47,
+   "total": {
+    "pre": 7.982,
+    "net": 5.986,
+    "ps": 0.09
+   },
+   "adj_ni": 36.291,
+   "adj_eps": 0.56,
+   "adj_ebt": 45.728
+  }
+ },
+ "cf": {
+  "ytd_months": 3,
+  "cfo": 39.29,
+  "capex": -13.123,
+  "cfi": -13.115,
+  "div": -10.247,
+  "stock_iss": 3.198,
+  "cff": -46.688,
+  "fx": -0.967,
+  "net": -21.48,
+  "beg": 448.462,
+  "end": 426.982,
+  "lines_raw": [
+   [
+    "Net cash provided by operating activities",
+    39.29
+   ],
+   [
+    "Payments for purchase of property, plant, and equipment",
+    -13.123
+   ],
+   [
+    "Proceeds from sale of assets",
+    0.001
+   ],
+   [
+    "Payments for purchases of short-term investments",
+    0.0
+   ],
+   [
+    "Proceeds from sales of short-term investments",
+    0.007
+   ],
+   [
+    "Net cash used in investing activities",
+    -13.115
+   ],
+   [
+    "Cash dividends paid",
+    -10.247
+   ],
+   [
+    "Proceeds from sales of treasury stock",
+    3.198
+   ],
+   [
+    "Purchase of treasury stock",
+    -39.258
+   ],
+   [
+    "Borrowings on revolving lines of credit and short-term borrowings",
+    0.0
+   ],
+   [
+    "Payments on revolving lines of credit and short-term borrowings",
+    0.0
+   ],
+   [
+    "Payments of long-term debt and finance lease obligations",
+    -0.381
+   ],
+   [
+    "Net cash used in financing activities",
+    -46.688
+   ],
+   [
+    "Effect of exchange rate changes on cash and cash equivalents",
+    -0.967
+   ],
+   [
+    "Net change in cash and cash equivalents",
+    -21.48
+   ],
+   [
+    "Cash and cash equivalents at beginning of year",
+    448.462
+   ],
+   [
+    "Cash and cash equivalents at end of period",
+    426.982
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 426.982,
+  "ar": 506.216,
+  "inv": 451.834,
+  "tca": 1446.731,
+  "ppe": 934.403,
+  "gw": 800.022,
+  "intang": 538.782,
+  "ta": 4035.24,
+  "cltd": 0.424,
+  "ap": 165.867,
+  "tcl": 329.508,
+  "ltd": 729.826,
+  "tl": 1811.808,
+  "eq": 2223.432,
+  "tle": 4035.24,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    426.982
+   ],
+   [
+    "Accounts receivable",
+    506.216
+   ],
+   [
+    "Inventories",
+    451.834
+   ],
+   [
+    "Income taxes receivable",
+    8.928
+   ],
+   [
+    "Other current assets",
+    52.771
+   ],
+   [
+    "Total current assets",
+    1446.731
+   ],
+   [
+    "Property, plant, and equipment, net",
+    934.403
+   ],
+   [
+    "Goodwill",
+    800.022
+   ],
+   [
+    "Intangible assets, net",
+    538.782
+   ],
+   [
+    "Deferred income tax assets",
+    13.97
+   ],
+   [
+    "Other assets",
+    301.332
+   ],
+   [
+    "Total assets",
+    4035.24
+   ],
+   [
+    "Current portion of long-term debt",
+    0.424
+   ],
+   [
+    "Accounts payable",
+    165.867
+   ],
+   [
+    "Income taxes payable",
+    17.004
+   ],
+   [
+    "Accrued liabilities",
+    146.213
+   ],
+   [
+    "Total current liabilities",
+    329.508
+   ],
+   [
+    "Long-term debt, less current portion",
+    729.826
+   ],
+   [
+    "Deferred income tax liabilities",
+    156.169
+   ],
+   [
+    "Other liabilities",
+    596.305
+   ],
+   [
+    "Total liabilities",
+    1811.808
+   ],
+   [
+    "Stockholders\u2019 equity",
+    2223.432
+   ],
+   [
+    "Total liabilities and stockholders\u2019 equity",
+    4035.24
+   ]
+  ]
+ },
+ "em": {
+  "com_oem": 104.826,
+  "com_aft": 86.086,
+  "def_oem": 105.375,
+  "def_aft": 40.148,
+  "aero_tot": 336.435,
+  "recip": 158.334,
+  "ind_turb": 46.817,
+  "ind_tot": 205.151
+ },
+ "em_py": {
+  "com_oem": 104.826,
+  "com_aft": 86.086,
+  "def_oem": 105.375,
+  "def_aft": 40.148,
+  "aero_tot": 336.435,
+  "recip": 158.334,
+  "ind_turb": 46.817,
+  "ind_tot": 205.151
+ },
+ "py": {
+  "release": "https://www.sec.gov/Archives/edgar/data/108312/000117184323000542/exh_991.htm",
+  "is": {
+   "rev": 541.586,
+   "cogs": 419.151,
+   "sga": 62.306,
+   "rd": 25.392,
+   "int_exp": 8.306,
+   "int_inc": -0.641,
+   "oth": -10.674,
+   "tot_costs": 503.84,
+   "ebt": 37.746,
+   "tax": 7.441,
+   "ni_tot": 30.305,
+   "eps_b": 0.48,
+   "eps_d": 0.47,
+   "sh_b": 63.094,
+   "sh_d": 65.099,
+   "dps": 0.1625,
+   "ni": 30.305,
+   "other_lines": []
+  },
+  "seg": {
+   "sales_aero": 336.435,
+   "sales_ind": 205.151,
+   "ind_name": "Industrial",
+   "sales_tot": 541.586,
+   "earn_aero": 51.083,
+   "earn_ind": 23.693,
+   "earn_tot": 74.776,
+   "nonseg": -29.365,
+   "ebit": 45.411,
+   "int_net": -7.665,
+   "capex": 13.123,
+   "dep": 21.033
+  },
+  "ngaap": {
+   "ebit_pub": 45.411,
+   "adj_ebit_pub": 53.393,
+   "ebitda_pub": 76.132,
+   "adj_ebitda_pub": 84.114,
+   "dep": 21.033,
+   "amort": 9.688,
+   "ebitda_adj_tot": 7.982,
+   "ebit_adj_tot": 7.982,
+   "fcf_pub": 26.167,
+   "adj_fcf_pub": 27.442,
+   "nonseg_pub": 29.365,
+   "adj_nonseg_pub": 21.383
+  }
+ },
+ "x": {
+  "sbc_ytd": 11.892,
+  "deftax_ytd": null,
+  "dda_ytd": 30.721,
+  "sh_issued": 72.96,
+  "sh_treasury": 9.877
+ }
+}

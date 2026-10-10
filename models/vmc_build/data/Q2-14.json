@@ -1,0 +1,142 @@
+{
+ "period": "Q2-14",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114420414046955/v385744_ex99-1.htm",
+  "10k_or_10q": null,
+  "adj_eps_source": "https://www.sec.gov/Archives/edgar/data/1396009/000114420415046164/v417093_ex99-1.htm"
+ },
+ "seg": {
+  "agg_rev": 595.6,
+  "agg_interseg": -43.1,
+  "agg_fa_rev": null,
+  "agg_freight_rev": null,
+  "agg_other_rev": null,
+  "agg_tons": 43.648,
+  "agg_price": 11.08,
+  "agg_gp": 161.7,
+  "agg_dda": 56.3,
+  "agg_cgp": 218.1,
+  "asph_rev": 107.8,
+  "asph_interseg": null,
+  "asph_tons": 1.857,
+  "asph_price": 53.52,
+  "asph_gp": 9.0,
+  "asph_dda": 2.4,
+  "asph_cgp": null,
+  "conc_rev": 93.8,
+  "conc_interseg": null,
+  "conc_cy": 0.949,
+  "conc_price": 98.82,
+  "conc_gp": 3.2,
+  "conc_dda": 4.8,
+  "conc_cgp": null,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": 2.2,
+  "calc_gp": 0.8,
+  "calc_dda": 0.2,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 799.4,
+  "interseg_total": -43.1,
+  "delivery_rev": 34.9,
+  "other_dda": 4.6,
+  "total_dda": 68.3,
+  "gp_total": 174.8,
+  "notes": "As originally reported (old net-sales presentation; total revenues = net sales 756.3 + delivery revenues 34.9). The segment was still labelled 'Cement' in this release but after the 7-Mar-2014 sale it contains only the retained calcium products business (release: revenues $2.2m, GP $0.8m) - recorded in calc_* (renamed 'Calcium' from Q4-14). Cement intersegment sales 0. seg_sales_total computed as sum. Later releases (Q2-15) restate Q2-14 on the new basis incl. freight (Aggregates 628.9, Asphalt 109.3, Concrete 93.8, Calcium 2.2); not used here. Aggregates price is old freight-adjusted definition. agg_fa_rev not published."
+ },
+ "is": {
+  "total_rev": 791.1,
+  "net_sales": 756.3,
+  "delivery_rev": 34.9,
+  "cost_of_rev": 616.4,
+  "gp": 174.8,
+  "sag": 67.6,
+  "gain_sale": 1.2,
+  "other_op_lines": [
+   [
+    "Other operating expense, net",
+    -5.1
+   ]
+  ],
+  "other_op": -5.1,
+  "op_earnings": 103.2,
+  "nonop": 1.8,
+  "interest": 40.6,
+  "ebt": 64.5,
+  "tax": 18.0,
+  "cont_ops": 46.5,
+  "disc_ops": -0.5,
+  "net_earnings": 46.0,
+  "nci": 0.0,
+  "ni_vulcan": 46.0,
+  "shares_basic": 131.149,
+  "shares_diluted": 132.876,
+  "eps_cont_dil": 0.35,
+  "eps_dil": 0.35,
+  "eps_basic": 0.35,
+  "dps": 0.05,
+  "notes": "Old presentation: Net sales and Delivery revenues shown on the face of the income statement."
+ },
+ "ngaap": {
+  "ebitda_pub": 173.4,
+  "adj_ebitda_pub": 172.8,
+  "ebitda_bridge_tax": 18.0,
+  "ebitda_bridge_disc_ops": 0.5,
+  "ebitda_bridge_lines": [
+   [
+    "Gain on sale of real estate and businesses",
+    -1.1
+   ],
+   [
+    "Charges associated with divestitures",
+    1.8
+   ],
+   [
+    "Amortization of deferred revenue",
+    -1.4
+   ],
+   [
+    "Restructuring charges",
+    0.0
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": 0.0,
+   "gain_sale": -1.1,
+   "impairment": 0.0,
+   "divested_ops": 1.8,
+   "acquisition": 0.0,
+   "restructuring": 0.0,
+   "legal_env": 0.0,
+   "pension": 0.0,
+   "other": -1.4,
+   "other_label": "Amortization of deferred revenue"
+  },
+  "adj_eps_pub": 0.36,
+  "eps_bridge_lines": [
+   [
+    "Diluted EPS - continuing operations, as reported",
+    0.35
+   ],
+   [
+    "Net charges related to restructuring and business development costs (per Q2-15 release)",
+    0.01
+   ],
+   [
+    "Adjusted diluted EPS - continuing operations (per Q2-15 release)",
+    0.36
+   ]
+  ],
+  "eps_items_after_tax_ps": 0.01,
+  "eps_discrete_tax_ps": 0.0,
+  "eps_bridge_start_ps": 0.35,
+  "agg_cgp_per_ton_pub": 5.0,
+  "roic_pub": null,
+  "notes": "Q2-14 release did not publish an adjusted EPS; it said EPS of $0.35 'includes costs of $0.02 per diluted share related to acquisition and divestiture activity'. The adjusted figure $0.36 (+$0.01 items) is from the Q2-15 release's prior-year comparison. Cash gross profit per ton $5.00 from release text. Vulcan's EBITDA reconciliation = net earnings + provision for income taxes (continuing ops) + interest expense, net + (earnings) loss on discontinued operations net of tax (extra field ebitda_bridge_disc_ops, signed as added) + DDA&A (EBITDA excludes discontinued operations). Hence self-check ni_vulcan + ebitda_bridge_tax + interest + total_dda = ebitda_pub differs by the after-tax discontinued-operations add-back (0.5); not an extraction error."
+ },
+ "check_notes": "Self-check results: EBITDA check (ni+tax+interest+dda) is off by the discontinued-ops add-back 0.5; passes once ebitda_bridge_disc_ops is included (Vulcan definition, see ngaap.notes). All other checks pass."
+}

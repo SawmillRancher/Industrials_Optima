@@ -1,0 +1,562 @@
+{
+ "period": "2023",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114036124008270/ef20021827_ex99-1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000139600924000006/vmc-20231231x10k.htm"
+ },
+ "seg": {
+  "agg_rev": 5909.9,
+  "agg_interseg": -527.0,
+  "agg_fa_rev": 4452.3,
+  "agg_freight_rev": 1350.2,
+  "agg_other_rev": 107.4,
+  "agg_tons": 234.3,
+  "agg_price": 19.0,
+  "agg_gp": 1733.6,
+  "agg_dda": 482.2,
+  "agg_cgp": 2215.8,
+  "asph_rev": 1140.7,
+  "asph_interseg": null,
+  "asph_tons": 13.4,
+  "asph_price": 75.76,
+  "asph_gp": 149.6,
+  "asph_dda": 35.6,
+  "asph_cgp": 185.2,
+  "conc_rev": 1249.3,
+  "conc_interseg": null,
+  "conc_cy": 7.5,
+  "conc_price": 166.95,
+  "conc_gp": 62.1,
+  "conc_dda": 72.8,
+  "conc_cgp": 134.9,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": 9.0,
+  "calc_gp": 3.2,
+  "calc_dda": 0.2,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 8308.9,
+  "interseg_total": -527.0,
+  "delivery_rev": null,
+  "other_dda": 26.2,
+  "total_dda": 617.0,
+  "gp_total": 1948.5,
+  "notes": "Four reportable segments: Aggregates, Asphalt, Concrete, Calcium (Calcium still reported separately, not folded in). Aggregates revenues include freight & delivery and service revenues; the only intersegment elimination published is 'Aggregates intersegment sales'. Freight & delivery revenues and other revenues are the deductions in the freight-adjusted revenue reconciliation (segment level, incl. intersegment freight). Calcium volume/price no longer published (from Q2-23 release). Volumes published in millions to 1 dp. Asphalt and concrete prices exclude service revenues (footnote 5). Texas ready-mix concrete operations divested in Q4-23 (approx. 4m cubic yards in 2023 per outlook)."
+ },
+ "is": {
+  "total_rev": 7781.9,
+  "net_sales": null,
+  "delivery_rev": null,
+  "cost_of_rev": 5833.4,
+  "gp": 1948.5,
+  "sag": 542.8,
+  "gain_sale": 76.4,
+  "other_op_lines": [
+   [
+    "Loss on impairments",
+    -28.3
+   ],
+   [
+    "Other operating expense, net",
+    -26.4
+   ]
+  ],
+  "other_op": -54.7,
+  "op_earnings": 1427.4,
+  "nonop": -2.7,
+  "interest": 179.6,
+  "ebt": 1245.1,
+  "tax": 299.4,
+  "cont_ops": 945.7,
+  "disc_ops": -10.8,
+  "net_earnings": 934.9,
+  "nci": 1.7,
+  "ni_vulcan": 933.2,
+  "shares_basic": 133.0,
+  "shares_diluted": 133.7,
+  "eps_cont_dil": 7.06,
+  "eps_dil": 6.98,
+  "eps_basic": 7.02,
+  "dps": 1.72,
+  "notes": "Effective tax rate from continuing operations 24.0%. Discontinued operations = former Chemicals business (legal/environmental, incl. Lower Passaic River). DPS = 10-K cash dividends per share. Release shows costs as negatives from 2023; stored positive. "
+ },
+ "ngaap": {
+  "ebitda_pub": 2025.4,
+  "adj_ebitda_pub": 2011.3,
+  "ebitda_bridge_tax": 295.6,
+  "ebitda_bridge_lines": [
+   [
+    "Loss on discontinued operations",
+    14.7
+   ],
+   [
+    "(Gain) loss on sale of real estate and businesses, net",
+    -67.1
+   ],
+   [
+    "Charges associated with divested operations",
+    7.9
+   ],
+   [
+    "Acquisition related charges",
+    2.1
+   ],
+   [
+    "Loss on impairments",
+    28.3
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": 14.7,
+   "gain_sale": -67.1,
+   "impairment": 28.3,
+   "divested_ops": 7.9,
+   "acquisition": 2.1,
+   "restructuring": 0.0,
+   "legal_env": 0.0,
+   "pension": 0.0,
+   "other": 0.0,
+   "other_label": null
+  },
+  "adj_eps_pub": 7.0,
+  "eps_bridge_lines": [
+   [
+    "Net earnings attributable to Vulcan",
+    6.98
+   ],
+   [
+    "Items included in Adjusted EBITDA above, net of tax",
+    -0.08
+   ],
+   [
+    "NOL carryforward valuation allowance",
+    0.1
+   ],
+   [
+    "Adjusted diluted EPS attributable to Vulcan from continuing operations",
+    7.0
+   ]
+  ],
+  "eps_items_after_tax_ps": -0.08,
+  "eps_discrete_tax_ps": 0.1,
+  "eps_bridge_start_ps": 6.98,
+  "agg_cgp_per_ton_pub": 9.46,
+  "roic_pub": 16.3,
+  "ebitda_bridge_disc_ops_aftertax": null,
+  "ebitda_build_lines": [
+   [
+    "Net earnings attributable to Vulcan",
+    933.2
+   ],
+   [
+    "Income tax expense, including discontinued operations",
+    295.6
+   ],
+   [
+    "Interest expense, net",
+    179.6
+   ],
+   [
+    "Depreciation, depletion, accretion and amortization",
+    617.0
+   ],
+   [
+    "EBITDA",
+    2025.4
+   ]
+  ],
+  "notes": "New basis from Q2-23: EBITDA = NI attributable to Vulcan + income tax expense INCLUDING discontinued operations + interest + DDA&A; pre-tax loss on discontinued operations is an adjustment in the Adjusted EBITDA bridge (adj_items.disc_ops). Bridge line 'Acquisition related charges' (renamed from 'Business development'); restructuring no longer a separate line. Adjusted EPS bridge starts at diluted EPS net earnings; eps_items_after_tax_ps includes the discontinued-operations per-share amount (included in 'Items included in Adjusted EBITDA above, net of tax') so that start + items + discrete = adjusted. 'Acquisition financing interest costs' (0.00 where shown) counted in items. Discrete tax = Calica NOL carryforward valuation allowance. ROIC = TTM Adjusted EBITDA / 5-quarter average invested capital, in percent."
+ },
+ "cf": {
+  "net_earnings": 934.9,
+  "dda": 617.0,
+  "noncash_lease": 53.9,
+  "gain_sale": -76.4,
+  "pension_contrib": -7.4,
+  "sbc": 63.2,
+  "deferred_tax": -43.3,
+  "wc_change": -47.3,
+  "other_op": 42.2,
+  "cfo": 1536.8,
+  "capex": -872.6,
+  "proceeds_ppe": 94.6,
+  "proceeds_bus": 613.6,
+  "acquisitions": 0.9,
+  "other_inv": 0.0,
+  "cfi": -163.5,
+  "debt_proceeds": 716.1,
+  "debt_repay": -847.4,
+  "buyback": -200.0,
+  "dividends": -228.4,
+  "stock_proceeds": null,
+  "other_fin": -25.9,
+  "cff": -585.6,
+  "net_change": 787.7,
+  "cash_begin": 161.5,
+  "cash_end": 949.2,
+  "cash_basis": "cash+restricted",
+  "lines_raw": [
+   [
+    "Net earnings",
+    934.9
+   ],
+   [
+    "Depreciation, depletion, accretion and amortization",
+    617.0
+   ],
+   [
+    "Loss on impairments",
+    28.3
+   ],
+   [
+    "Noncash operating lease expense",
+    53.9
+   ],
+   [
+    "Net gain on sale of property, plant & equipment and businesses",
+    -76.4
+   ],
+   [
+    "Contributions to pension plans",
+    -7.4
+   ],
+   [
+    "Share-based compensation expense",
+    63.2
+   ],
+   [
+    "Deferred income taxes, net",
+    -43.3
+   ],
+   [
+    "Accounts and notes receivable",
+    28.2
+   ],
+   [
+    "Inventories",
+    -54.6
+   ],
+   [
+    "Other assets",
+    27.8
+   ],
+   [
+    "Accrued interest and income taxes",
+    18.8
+   ],
+   [
+    "Trade payables and other accruals",
+    -25.1
+   ],
+   [
+    "Other noncurrent liabilities",
+    -42.4
+   ],
+   [
+    "Other, net (operating)",
+    13.9
+   ],
+   [
+    "Net cash provided by operating activities",
+    1536.8
+   ],
+   [
+    "Purchases of property, plant & equipment",
+    -872.6
+   ],
+   [
+    "Proceeds from sale of property, plant & equipment",
+    94.6
+   ],
+   [
+    "Proceeds from sale of businesses",
+    613.6
+   ],
+   [
+    "Payment for businesses acquired, net of acquired cash and adjustments",
+    0.9
+   ],
+   [
+    "Other, net (investing)",
+    0.0
+   ],
+   [
+    "Net cash used for investing activities",
+    -163.5
+   ],
+   [
+    "Proceeds from short-term debt",
+    166.1
+   ],
+   [
+    "Payment of short-term debt",
+    -266.1
+   ],
+   [
+    "Payment of current maturities and long-term debt",
+    -550.5
+   ],
+   [
+    "Proceeds from issuance of long-term debt",
+    550.0
+   ],
+   [
+    "Debt issuance and exchange costs",
+    -3.4
+   ],
+   [
+    "Payment of finance leases",
+    -30.8
+   ],
+   [
+    "Purchases of common stock",
+    -200.0
+   ],
+   [
+    "Dividends paid",
+    -228.4
+   ],
+   [
+    "Share-based compensation, shares withheld for taxes",
+    -21.9
+   ],
+   [
+    "Distribution to noncontrolling interest",
+    -0.8
+   ],
+   [
+    "Other, net (financing)",
+    0.2
+   ],
+   [
+    "Net cash used for financing activities",
+    -585.6
+   ],
+   [
+    "Net increase (decrease) in cash and cash equivalents and restricted cash",
+    787.7
+   ],
+   [
+    "Cash and cash equivalents and restricted cash at beginning of year",
+    161.5
+   ],
+   [
+    "Cash and cash equivalents and restricted cash at end of year",
+    949.2
+   ]
+  ],
+  "notes": "From 10-K cash flow statement (same as release Table C). other_op = loss on impairments + other, net. wc_change = sum of asset/liability change lines. debt_proceeds = ST proceeds + LT issuance; debt_repay = ST payments + current maturities/LTD + finance leases. other_fin = debt issuance costs + shares withheld for taxes + other + distribution to NCI. No option-exercise proceeds line (stock_proceeds null)."
+ },
+ "bs": {
+  "cash": 931.1,
+  "restricted_cash": 18.1,
+  "ar_net": 889.7,
+  "inventories": 615.6,
+  "other_current": 70.4,
+  "assets_held_for_sale": 0.0,
+  "total_current_assets": 2524.9,
+  "invest_lt_rec": 31.3,
+  "ppe_net": 6217.7,
+  "rou_assets": 511.7,
+  "goodwill": 3531.7,
+  "intangibles": 1460.7,
+  "other_noncurrent": 267.7,
+  "total_assets": 14545.7,
+  "current_maturities": 0.5,
+  "short_term_debt": 0.0,
+  "payables": 390.4,
+  "other_current_liab": 406.7,
+  "liab_held_for_sale": 0.0,
+  "total_current_liab": 797.6,
+  "ltd": 3877.3,
+  "deferred_tax": 1028.9,
+  "deferred_revenue": 145.3,
+  "lt_lease": 507.4,
+  "other_noncurrent_liab": 681.3,
+  "total_liabilities": 7037.8,
+  "common_stock": 132.1,
+  "capital_excess": 2880.1,
+  "retained_earnings": 4615.0,
+  "aoci": -143.8,
+  "total_vulcan_equity": 7483.4,
+  "nci": 24.5,
+  "total_equity": 7507.9,
+  "total_liab_equity": 14545.7,
+  "shares_outstanding_end": 132.1,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    931.1
+   ],
+   [
+    "Restricted cash",
+    18.1
+   ],
+   [
+    "Accounts and notes receivable, net",
+    889.7
+   ],
+   [
+    "Inventories",
+    615.6
+   ],
+   [
+    "Other current assets",
+    70.4
+   ],
+   [
+    "Total current assets",
+    2524.9
+   ],
+   [
+    "Investments and long-term receivables",
+    31.3
+   ],
+   [
+    "Property, plant & equipment, net",
+    6217.7
+   ],
+   [
+    "Operating lease right-of-use assets, net",
+    511.7
+   ],
+   [
+    "Goodwill",
+    3531.7
+   ],
+   [
+    "Other intangible assets, net",
+    1460.7
+   ],
+   [
+    "Other noncurrent assets",
+    267.7
+   ],
+   [
+    "Total assets",
+    14545.7
+   ],
+   [
+    "Current maturities of long-term debt",
+    0.5
+   ],
+   [
+    "Short-term debt",
+    0.0
+   ],
+   [
+    "Trade payables and accruals",
+    390.4
+   ],
+   [
+    "Accrued salaries, wages and management incentives",
+    135.8
+   ],
+   [
+    "Accrued interest",
+    32.8
+   ],
+   [
+    "Other current liabilities",
+    238.1
+   ],
+   [
+    "Total current liabilities",
+    797.6
+   ],
+   [
+    "Long-term debt",
+    3877.3
+   ],
+   [
+    "Deferred income taxes, net",
+    1028.9
+   ],
+   [
+    "Pension and other postretirement benefits",
+    83.6
+   ],
+   [
+    "Asset retirement obligations",
+    324.1
+   ],
+   [
+    "Deferred revenue",
+    145.3
+   ],
+   [
+    "Noncurrent operating lease liabilities",
+    507.4
+   ],
+   [
+    "Other noncurrent liabilities",
+    273.6
+   ],
+   [
+    "Total liabilities",
+    7037.8
+   ],
+   [
+    "Common stock, $1 par value (outstanding 132.1 shares)",
+    132.1
+   ],
+   [
+    "Capital in excess of par value",
+    2880.1
+   ],
+   [
+    "Retained earnings",
+    4615.0
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -143.8
+   ],
+   [
+    "Total shareholders' equity",
+    7483.4
+   ],
+   [
+    "Noncontrolling interest",
+    24.5
+   ],
+   [
+    "Total equity",
+    7507.9
+   ],
+   [
+    "Total liabilities and equity",
+    14545.7
+   ]
+  ],
+  "notes": "From 10-K balance sheet. other_current_liab = accrued salaries/wages/incentives + accrued interest + other current liabilities (release shows these combined as 'Other current liabilities'). other_noncurrent_liab = pension & OPEB + asset retirement obligations + other noncurrent liabilities. total_liabilities as published. Shares outstanding from BS par-value caption."
+ },
+ "extra": {
+  "reserves_bn_tons": 15.6,
+  "dps_declared": 1.72,
+  "capex_by_segment": {
+   "aggregates": 764.9,
+   "asphalt": 46.9,
+   "concrete": 15.8,
+   "cement": null,
+   "calcium": 0.0,
+   "corporate": 0.9
+  },
+  "seg_dda_annual": {
+   "aggregates": 482.2,
+   "asphalt": 35.6,
+   "concrete": 72.8,
+   "cement": null,
+   "calcium": 0.2,
+   "other": 26.2
+  },
+  "employees": 10961,
+  "acquisition_revenue_contribution": null,
+  "notes": "Reserves 15.6bn tons (incl. 407.6m tons at Calica subject to NAFTA arbitration). Capex by segment (10-K Note 15, total $828.5m incl. accrual changes; CF capex $872.6m). Employees = 10,382 US + 335 Mexico + 163 Honduras + 80 Canada + 1 Bahamas as of Jan 1, 2024 (summed). No business acquisitions in 2023. Divestitures: Texas ready-mix (Q3 impairment $28.3m, Q4 loss on sale $13.8m); Virginia excess real estate gain $65.7m (Q4); Illinois former recycled-concrete real estate gain $15.2m (Q2). Proceeds from sale of businesses $613.6m. Share repurchases $200.0m. Dividends $1.72/share ($0.43/quarter)."
+ },
+ "self_check_notes": "all SCHEMA.md self-checks pass"
+}

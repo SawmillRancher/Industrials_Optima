@@ -1,0 +1,580 @@
+{
+ "period": "2006",
+ "period_end": "2006-12-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/313616/000119312507012069/dex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/313616/000119312507043522/d10k.htm"
+ },
+ "is": {
+  "sales": 9596.4,
+  "cogs": 5353.0,
+  "gp": 4243.4,
+  "sga": 2741.8,
+  "rnd": null,
+  "other_op_lines": [
+   [
+    "Other (income) expense, net",
+    -16.4
+   ]
+  ],
+  "op_profit": 1518.0,
+  "nonop_lines": [],
+  "interest_exp": 79.8,
+  "interest_inc": 8.0,
+  "ebt": 1446.2,
+  "tax": 324.1,
+  "cont_ops": 1122.0,
+  "disc_ops": 0.0,
+  "net_income": 1122.0,
+  "nci": null,
+  "pref_div": null,
+  "ni_common": null,
+  "shares_basic": 307.984,
+  "shares_diluted": 325.251,
+  "eps_basic_cont": 3.64,
+  "eps_dil_cont": 3.48,
+  "eps_dil": 3.48,
+  "dps": 0.08,
+  "per_share_basis": "pre_split"
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Professional Instrumentation",
+    "sales": 2906.5,
+    "op_profit": 625.6,
+    "amort": null,
+    "dep": null,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 12.0,
+    "growth_acq": -4.0,
+    "growth_fx": -0.5,
+    "growth_core": 7.5
+   },
+   {
+    "name": "Medical Technologies",
+    "sales": 2220.0,
+    "op_profit": 261.6,
+    "amort": null,
+    "dep": null,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 88.0,
+    "growth_acq": -78.0,
+    "growth_fx": -1.5,
+    "growth_core": 8.5
+   },
+   {
+    "name": "Industrial Technologies",
+    "sales": 3119.2,
+    "op_profit": 485.5,
+    "amort": null,
+    "dep": null,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 7.5,
+    "growth_acq": -1.0,
+    "growth_fx": -0.5,
+    "growth_core": 6.0
+   },
+   {
+    "name": "Tools & Components",
+    "sales": 1350.8,
+    "op_profit": 194.1,
+    "amort": null,
+    "dep": null,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 4.5,
+    "growth_acq": 0.0,
+    "growth_fx": 0.0,
+    "growth_core": 4.5
+   }
+  ],
+  "other_op_profit": -48.8,
+  "total_growth": {
+   "total": 20.0,
+   "acq": -13.0,
+   "fx": -0.5,
+   "core": 6.5,
+   "other": null,
+   "other_label": null
+  },
+  "respiratory_sales": null,
+  "core_ex_resp": null,
+  "recurring_pct": null,
+  "seg_note": "Four segments adopted with the Q4-06 release / 2006 10-K: Professional Instrumentation (electronic test, environmental), Medical Technologies (newly split out of Professional Instrumentation), Industrial Technologies, Tools & Components (+ Other = corporate). 2005 recast to the four-segment structure. Release also shows the historical three-segment presentation (PI incl. Medical: 2006 sales 5,126.4 / OP 887.2). Industrial Technologies still includes the power quality business (sold Jul-2007; later recast to discontinued ops: 2006 IT restated to 2,988.8 / 467.7 in the 2007 10-K). Segment growth from 10-K MD&A 'Components of Sales Growth' tables, which present ADDITIVE components (existing businesses + acquisitions + currency = total); stored here in the deduction convention (acq / fx sign flipped so core = total + acq + fx). T&C row label 'Divestiture' 0.0. Total company growth from MD&A text ('approximately 20%', existing 6.5%, acquisitions ~13%, currency ~0.5%). 'Sales from existing businesses' = core. No segment depreciation / amortization split (combined D&A in extra.seg_extra)."
+ },
+ "ngaap": {
+  "adj_eps_pub": 3.24,
+  "eps_bridge_start": 3.48,
+  "eps_bridge_start_label": "Diluted net earnings per share per GAAP",
+  "eps_bridge": [
+   [
+    "After-tax gain on sale of securities acquired in connection with an unsuccessful acquisition bid (First Technology - $14 million pre-tax)",
+    -0.03
+   ],
+   [
+    "Gains from favorable settlement of tax contingencies and benefit of certain changes in German tax regulations",
+    -0.21
+   ],
+   [
+    "Other after-tax (gains) loss on sale of real estate & other non-operational assets",
+    0.0
+   ]
+  ],
+  "item_amounts": [
+   [
+    "After-tax gain on sale of securities acquired in connection with an unsuccessful acquisition bid (First Technology - $14 million pre-tax)",
+    -14.0,
+    -9.1,
+    "op"
+   ],
+   [
+    "Gains from favorable settlement of tax contingencies and benefit of certain changes in German tax regulations",
+    null,
+    -69.5,
+    "tax"
+   ],
+   [
+    "Other after-tax (gains) loss on sale of real estate & other non-operational assets",
+    null,
+    -1.7,
+    "op"
+   ]
+  ],
+  "amort_pretax": null,
+  "adj_op_pub": null,
+  "adj_op_margin_pub": null,
+  "fcf_pub": null,
+  "capex_pub": null,
+  "capex_disposals_pub": null,
+  "cfo_pub_period": null,
+  "guidance": "Release gives no numeric guidance (only 'confidence in our ability to deliver positive results in 2007'). 2006 10-K: effective tax rate for 2007 expected ~27%.",
+  "notes": "Adjusted net earnings / adjusted diluted EPS (total company; no discontinued ops in 2006 as originally reported). Definition: excludes tax-contingency settlements / German tax-law benefit, First Technology securities gain and real-estate gains; amortization is NOT added back (no amortization adjustment in this era). For the 2005 comparative it also DEDUCTS pro-forma stock-option expense ($0.09) since SFAS 123R was adopted 1-Jan-2006. Adjusted net earnings 1,041.7 (GAAP 1,122.0). Real-estate gains $1.7m after tax shown as '—' per share for FY06. Narrative: Q4-06 adjusted EPS 0.95. Q4 core growth 5.5% (release narrative). Release has no FCF table; operating cash flow $1.5bn record (+29%)."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "net_income": 1122.0,
+  "disc_ops_ni": null,
+  "dep": 153.0,
+  "amort": 64.2,
+  "sbc": 67.2,
+  "deferred_tax": 24.2,
+  "impair": null,
+  "gains": null,
+  "wc_change": 116.7,
+  "cfo_cont": 1547.3,
+  "cfo_disc": null,
+  "cfo": 1547.3,
+  "capex": -137.7,
+  "capex_disposals": 10.0,
+  "acquisitions": -2656.0,
+  "divest": 98.5,
+  "invest_purch": -84.1,
+  "invest_sales": null,
+  "cfi_disc": null,
+  "cfi": -2769.4,
+  "stock_iss": 98.4,
+  "pref_iss": null,
+  "dividends": -24.6,
+  "buyback": 0.0,
+  "debt_net_short": 846.9,
+  "debt_proceeds": 757.5,
+  "debt_repay": -459.4,
+  "spin_cash": null,
+  "cff_disc": null,
+  "cff": 1218.8,
+  "fx": 5.5,
+  "net_change": 2.3,
+  "cash_begin": 315.6,
+  "cash_end": 317.8,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net earnings from operations",
+    1122.0
+   ],
+   [
+    "Depreciation expense",
+    153.0
+   ],
+   [
+    "Amortization expense",
+    64.2
+   ],
+   [
+    "Stock compensation expense",
+    67.2
+   ],
+   [
+    "Change in deferred income taxes",
+    24.2
+   ],
+   [
+    "Change in trade accounts receivable, net",
+    -50.8
+   ],
+   [
+    "Change in inventories",
+    3.4
+   ],
+   [
+    "Change in accounts payable",
+    80.8
+   ],
+   [
+    "Change in accrued expenses and other liabilities",
+    98.3
+   ],
+   [
+    "Change in prepaid expenses and other assets",
+    -14.9
+   ],
+   [
+    "Net cash provided from operating activities",
+    1547.3
+   ],
+   [
+    "Payments for additions to property, plant and equipment",
+    -137.7
+   ],
+   [
+    "Proceeds from disposals of property, plant and equipment",
+    10.0
+   ],
+   [
+    "Cash paid for acquisitions",
+    -2656.0
+   ],
+   [
+    "Cash paid for investment in acquisition target",
+    -84.1
+   ],
+   [
+    "Proceeds from sale of investment in acquisition target and other divestitures",
+    98.5
+   ],
+   [
+    "Net cash used in investing activities",
+    -2769.4
+   ],
+   [
+    "Proceeds from issuance of common stock",
+    98.4
+   ],
+   [
+    "Dividends paid",
+    -24.6
+   ],
+   [
+    "Purchase of treasury stock",
+    0.0
+   ],
+   [
+    "Net increase in borrowings (maturities of 90 days or less)",
+    846.9
+   ],
+   [
+    "Proceeds from debt borrowings (maturities longer than 90 days)",
+    757.5
+   ],
+   [
+    "Debt repayments",
+    -459.4
+   ],
+   [
+    "Net cash provided from (used in) financing activities",
+    1218.8
+   ],
+   [
+    "Effect of exchange rate changes on cash",
+    5.5
+   ],
+   [
+    "Net change in cash and equivalents",
+    2.3
+   ],
+   [
+    "Beginning balance of cash and equivalents",
+    315.6
+   ],
+   [
+    "Ending balance of cash and equivalents",
+    317.8
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 317.8,
+  "ar": 1675.0,
+  "inventories": 1005.4,
+  "prepaid_other": 396.8,
+  "ca_disc": null,
+  "tca": 3394.9,
+  "ppe": 874.4,
+  "other_lta": 300.4,
+  "nca_disc": null,
+  "goodwill": 6596.1,
+  "intangibles": 1698.3,
+  "ta": 12864.2,
+  "st_debt": 10.9,
+  "ap": 952.3,
+  "accrued": 1496.4,
+  "cl_disc": null,
+  "tcl": 2459.6,
+  "other_ltl": 1337.1,
+  "ncl_disc": null,
+  "ltd": 2422.9,
+  "pref": null,
+  "common": 3.4,
+  "apic": 1027.5,
+  "treasury": null,
+  "retained": 5421.8,
+  "aoci": 192.0,
+  "dhr_equity": 6644.7,
+  "nci": null,
+  "te": 6644.7,
+  "tle": 12864.2,
+  "shares_out": 308.242,
+  "lines_raw": [
+   [
+    "Cash and equivalents",
+    317.8
+   ],
+   [
+    "Trade accounts receivable, less allowance for doubtful accounts of $103,201 and $91,115, respectively",
+    1675.0
+   ],
+   [
+    "Inventories",
+    1005.4
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    396.8
+   ],
+   [
+    "Total current assets",
+    3394.9
+   ],
+   [
+    "Property, plant and equipment, net",
+    874.4
+   ],
+   [
+    "Other assets",
+    300.4
+   ],
+   [
+    "Goodwill",
+    6596.1
+   ],
+   [
+    "Other intangible assets, net",
+    1698.3
+   ],
+   [
+    "Total assets (unlabelled total)",
+    12864.2
+   ],
+   [
+    "Notes payable and current portion of long-term debt",
+    10.9
+   ],
+   [
+    "Trade accounts payable",
+    952.3
+   ],
+   [
+    "Accrued expenses",
+    1496.4
+   ],
+   [
+    "Total current liabilities",
+    2459.6
+   ],
+   [
+    "Other liabilities",
+    1337.1
+   ],
+   [
+    "Long-term debt",
+    2422.9
+   ],
+   [
+    "Common stock, one cent par value; 500,000 shares authorized; 341,223 and 338,547 issued; 308,242 and 305,571 outstanding",
+    3.4
+   ],
+   [
+    "Additional paid-in capital",
+    1027.5
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    192.0
+   ],
+   [
+    "Retained earnings",
+    5421.8
+   ],
+   [
+    "Total stockholders' equity",
+    6644.7
+   ],
+   [
+    "Total liabilities and stockholders' equity (unlabelled total)",
+    12864.2
+   ]
+  ]
+ },
+ "py": {
+  "restated": true,
+  "notes": "2005 comparative: income statement unchanged from 2005 as originally reported (sales 7,984.7, OP 1,264.7, NI 897.8, diluted EPS 2.76). Segments recast from three to four segments (Medical Technologies carved out of Professional Instrumentation; original 2005 PI 3,782.1 sales / 677.0 OP). py.adj_eps_pub 2.66 is the 2005 figure as presented in the Q4-06 release, which deducts pro-forma stock-option expense ($0.09) and excludes 2005 one-off items; not comparable to the 2005 release's own definition. R&D not a separate line (inside SG&A / COGS) in 2005-2006 10-K presentation.",
+  "is": {
+   "sales": 7984.7,
+   "cogs": 4539.7,
+   "sga": 2175.8,
+   "rnd": null,
+   "other_op": 4.6,
+   "op_profit": 1264.7,
+   "nonop": 0.0,
+   "interest_exp": 44.9,
+   "interest_inc": 14.7,
+   "ebt": 1234.4,
+   "tax": 336.6,
+   "cont_ops": 897.8,
+   "disc_ops": 0.0,
+   "net_income": 897.8,
+   "pref_div": null,
+   "shares_basic": 308.905,
+   "shares_diluted": 327.983,
+   "eps_dil_cont": 2.76,
+   "eps_dil": 2.76
+  },
+  "segments": [
+   {
+    "name": "Professional Instrumentation",
+    "sales": 2600.6,
+    "op_profit": 538.3
+   },
+   {
+    "name": "Medical Technologies",
+    "sales": 1181.5,
+    "op_profit": 138.7
+   },
+   {
+    "name": "Industrial Technologies",
+    "sales": 2908.1,
+    "op_profit": 426.4
+   },
+   {
+    "name": "Tools & Components",
+    "sales": 1294.5,
+    "op_profit": 199.3
+   }
+  ],
+  "other_op_profit": -38.0,
+  "adj_eps_pub": 2.66,
+  "amort_pretax": null
+ },
+ "extra": {
+  "employees": 45000,
+  "dep": 153.0,
+  "amort": 64.2,
+  "seg_extra": [
+   {
+    "name": "Professional Instrumentation",
+    "dep_amort": 48.8,
+    "capex": 34.5,
+    "assets": 2691.0
+   },
+   {
+    "name": "Medical Technologies",
+    "dep_amort": 84.3,
+    "capex": 31.6,
+    "assets": 5534.1
+   },
+   {
+    "name": "Industrial Technologies",
+    "dep_amort": 62.7,
+    "capex": 46.0,
+    "assets": 3702.9
+   },
+   {
+    "name": "Tools & Components",
+    "dep_amort": 21.4,
+    "capex": 25.6,
+    "assets": 824.4
+   },
+   {
+    "name": "Other",
+    "dep_amort": null,
+    "capex": null,
+    "assets": 111.6
+   }
+  ],
+  "acquisitions": [
+   [
+    "Sybron Dental Specialties",
+    "2006-05 (consolidated from 2006-05-19)",
+    2000.0,
+    "Medical Technologies"
+   ],
+   [
+    "Vision Systems Ltd (Vision; control gained Nov-2006, remaining shares Q1-07)",
+    "2006-11-30",
+    520.0,
+    "Medical Technologies"
+   ],
+   [
+    "Nine other companies / product lines (aggregate; ~$140m annual sales)",
+    "2006",
+    213.0,
+    "Professional Instrumentation / Medical Technologies / Industrial Technologies"
+   ]
+  ],
+  "divestitures": [
+   [
+    "First Technology plc 19.5% stake (failed bid) sold",
+    "2006 Q2",
+    "Pretax gain ~$14m incl. break-up fee (in Other (income) expense, net); $84.1m paid / proceeds within 'Proceeds from sale of investment in acquisition target and other divestitures'"
+   ],
+   [
+    "Three parcels of real estate and equipment",
+    "2006",
+    "~$10m proceeds"
+   ]
+  ],
+  "debt_maturities": [
+   [
+    "2007",
+    11.0
+   ],
+   [
+    "2008",
+    258.0
+   ],
+   [
+    "2009",
+    5.0
+   ],
+   [
+    "2010",
+    9.0
+   ],
+   [
+    "2011",
+    878.0
+   ],
+   [
+    "Thereafter",
+    1272.0
+   ]
+  ],
+  "amort_schedule": [],
+  "notes": "Employees ~45,000 (~21,000 US). Sybron Dental: ~$2.0bn net of $94m cash plus ~$182m assumed debt. Vision: ~$520m net of $122m cash. Total debt 2,433.7 (CP 866.7 classified long-term; LYONs 594.2; 2008 notes 250.0; Eurobond 2013 660.2). R&D spend $446m (10-K Item 1 table; not an income-statement line). Amortization 64.2 includes $6.5m Vision IPR&D write-off. 10-K gives no forward amortization schedule. Segment D&A total 217.2 = depreciation 153.0 + amortization 64.2."
+ },
+ "notes": "IS / BS / CF from the 2006 10-K (as originally reported, before the 2007 power-quality discontinued-ops recast). Release vs 10-K differences (10-K used): IS label 'Other expense (income), net' in release; BS release prepaid 432.6 / TCA 3,430.7 / other assets 264.6 / accrued 1,523.9 / TCL 2,487.1 / other liabilities 1,361.4 / AOCI 140.1 / equity 6,592.8 (10-K: 396.8 / 3,394.9 / 300.4 / 1,496.4 / 2,459.6 / 1,337.1 / 192.0 / 6,644.7; same total assets 12,864.2); release CF combined D&A 217.2, had no deferred-tax line, accrued change 122.4 and different investing lines. No continuing/discontinued split presented: cont_ops = net earnings, disc_ops 0.0, eps_*_cont = net EPS. R&D not presented on the IS (rnd null; included in SG&A/COGS). Computed: gp = sales − COGS; cf.wc_change = sum of five 'Change in ...' lines (116.7); cfo_cont = total CFO (no disc ops). cf.divest 98.5 is the combined line 'Proceeds from sale of investment in acquisition target and other divestitures' (mostly First Technology share sale); invest_purch = 'Cash paid for investment in acquisition target' (84.1). Interest expense shown negative on the IS, stored positive. dps 0.08 = 4 x $0.02 (10-K Item 5 / selected data). All self-checks pass."
+}

@@ -1,0 +1,576 @@
+{
+ "period": "Q2-16",
+ "period_end": "2016-07-01",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/313616/000031361616000208/dhr-2016725xex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/313616/000031361616000206/dhr-201671x10q.htm",
+  "pro_forma_ex_fortive": "https://www.sec.gov/Archives/edgar/data/313616/000031361616000208/dhr-2016725xex992.htm"
+ },
+ "is": {
+  "sales": 5785.0,
+  "cogs": 2635.6,
+  "gp": 3149.4,
+  "sga": 1778.3,
+  "rnd": 336.6,
+  "other_op_lines": [],
+  "op_profit": 1034.5,
+  "nonop_lines": [
+   [
+    "Other income",
+    0.0
+   ]
+  ],
+  "interest_exp": 66.4,
+  "interest_inc": 0.0,
+  "ebt": 968.1,
+  "tax": 311.4,
+  "cont_ops": 656.7,
+  "disc_ops": 0.0,
+  "net_income": 656.7,
+  "nci": null,
+  "pref_div": null,
+  "ni_common": null,
+  "shares_basic": 690.9,
+  "shares_diluted": 698.9,
+  "eps_basic_cont": 0.95,
+  "eps_dil_cont": 0.94,
+  "eps_dil": 0.94,
+  "dps": 0.16,
+  "per_share_basis": "post_split"
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Test & Measurement",
+    "sales": 650.2,
+    "op_profit": 144.5,
+    "amort": 13.7,
+    "dep": 6.5,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": -3.5,
+    "growth_acq": -1.0,
+    "growth_fx": 0.5,
+    "growth_core": -4.0
+   },
+   {
+    "name": "Environmental",
+    "sales": 958.2,
+    "op_profit": 202.3,
+    "amort": 10.6,
+    "dep": 13.9,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 7.5,
+    "growth_acq": -3.0,
+    "growth_fx": 1.5,
+    "growth_core": 6.0
+   },
+   {
+    "name": "Life Sciences & Diagnostics",
+    "sales": 2602.9,
+    "op_profit": 427.4,
+    "amort": 109.7,
+    "dep": 112.0,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 41.5,
+    "growth_acq": -39.5,
+    "growth_fx": 0.5,
+    "growth_core": 2.5
+   },
+   {
+    "name": "Dental",
+    "sales": 714.6,
+    "op_profit": 109.2,
+    "amort": 21.3,
+    "dep": 10.9,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 4.0,
+    "growth_acq": -0.5,
+    "growth_fx": 0.5,
+    "growth_core": 4.0
+   },
+   {
+    "name": "Industrial Technologies",
+    "sales": 859.1,
+    "op_profit": 217.0,
+    "amort": 9.5,
+    "dep": 10.7,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": -0.5,
+    "growth_acq": -1.0,
+    "growth_fx": 0.5,
+    "growth_core": -1.0
+   }
+  ],
+  "other_op_profit": -65.9,
+  "total_growth": {
+   "total": 16.5,
+   "acq": -15.0,
+   "fx": 0.5,
+   "core": 2.0,
+   "other": null,
+   "other_label": null
+  },
+  "respiratory_sales": null,
+  "core_ex_resp": null,
+  "recurring_pct": null,
+  "seg_note": "Last quarter on the pre-spin five-segment structure (Test & Measurement, Environmental, Life Sciences & Diagnostics, Dental, Industrial Technologies) + Other. Fortive spun off 2-Jul-2016 (day after quarter end); from Q3-16 four segments: Life Sciences, Diagnostics, Dental, Environmental & Applied Solutions. Release has no segment table; segment sales / OP / depreciation / amortization and growth components from 10-Q Note 13 and MD&A (three-month). Growth tables are additive in the source (Existing + Acquisitions + Currency = Total); converted to the deduction convention (total + acq + fx = core). Release growth table labelled 'Total Revenue Growth from Continuing Operations (GAAP)'."
+ },
+ "ngaap": {
+  "adj_eps_pub": 1.25,
+  "eps_bridge_start": 0.94,
+  "eps_bridge_start_label": "Diluted Net Earnings Per Share from Continuing Operations (Including Fortive Corporation) (GAAP)",
+  "eps_bridge": [
+   [
+    "Pretax amortization of acquisition-related intangible assets",
+    0.24
+   ],
+   [
+    "Pretax gain on sale of marketable securities in the three months ended April 1, 2016",
+    0.0
+   ],
+   [
+    "Pretax costs related to preparation for 2016 separation of Fortive Corporation (\"Fortive Separation\") primarily related to professional fees for legal, tax, finance and information technology services",
+    0.02
+   ],
+   [
+    "Pretax fair value adjustments to Nobel Biocare acquisition-related inventory incurred in the six months ended July 3, 2015",
+    0.0
+   ],
+   [
+    "Tax effect of all adjustments reflected above",
+    -0.06
+   ],
+   [
+    "Fortive Separation-related tax costs related to repatriation of earnings, legal entity realignments and other discrete matters",
+    0.14
+   ],
+   [
+    "Other discrete income tax items related to Fortive Corporation's operations",
+    -0.03
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Pretax amortization of acquisition-related intangible assets",
+    165.0,
+    125.0,
+    "op"
+   ],
+   [
+    "Pretax costs related to preparation for 2016 separation of Fortive Corporation",
+    17.0,
+    15.0,
+    "op"
+   ],
+   [
+    "Fortive Separation-related tax costs related to repatriation of earnings, legal entity realignments and other discrete matters",
+    null,
+    99.0,
+    "tax"
+   ],
+   [
+    "Other discrete income tax items (net gains) related to Fortive Corporation's operations",
+    null,
+    -20.0,
+    "tax"
+   ]
+  ],
+  "amort_pretax": 165.0,
+  "adj_op_pub": null,
+  "adj_op_margin_pub": null,
+  "fcf_pub": 1097.9,
+  "capex_pub": -183.9,
+  "capex_disposals_pub": null,
+  "cfo_pub_period": 1281.8,
+  "guidance": "Guidance now excludes Fortive (treated as discontinued operation from 2-Jul-2016). Q3-16: GAAP diluted EPS from continuing ops $0.47-$0.51; adjusted diluted EPS $0.80-$0.84 (amortization $140m pretax / $110m after-tax, $0.20; anticipated early debt redemption charge $192m pretax / $122m after-tax, $0.27; tax effect ($0.14)). FY2016 (Fortive as discontinued operation): GAAP diluted EPS $2.79-$2.86; adjusted diluted EPS $3.53-$3.60 (amortization $564m pretax / $440m after-tax, $0.81; marketable securities gain ($0.32); debt redemption charge $0.27; tax effect ($0.16); separation tax costs $0.14). No core growth guidance in release.",
+  "notes": "Definition change this quarter: adjusted EPS now shows pretax adjustments with a single aggregate 'Tax effect of all adjustments' line and also excludes discrete tax items (Fortive separation tax costs $99m; other discrete items). Reported adjusted EPS $1.25 still INCLUDES Fortive (spin 2-Jul-2016). Ex. 99.2 (pro forma, Fortive as discontinued operation): Q2-16 ex-Fortive sales 4,241.9, OP 710.1, continuing net earnings 418.0, diluted EPS 0.60, adjusted EPS 0.90 (amortization $144.2m pretax); Q1-16 ex-Fortive sales 3,924.1, OP 613.1, adjusted 0.79; Q2-15 ex-Fortive sales 3,406.3, OP 582.9, adjusted 0.76. Release FCF table (three-month): operating cash flow from continuing ops 1,281.8 less capex (183.9) = FCF 1,097.9 (Q2-15: 1,101.3 / (136.2) / 965.1). Amortization per release footnote $165m (CF YTD 324.4 - Q1 159.6 = 164.8)."
+ },
+ "cf": {
+  "ytd_months": 6,
+  "net_income": 1415.1,
+  "disc_ops_ni": 0.0,
+  "dep": 306.5,
+  "amort": 324.4,
+  "sbc": 87.3,
+  "deferred_tax": null,
+  "impair": null,
+  "gains": -223.4,
+  "wc_change": 144.7,
+  "cfo_cont": 2054.6,
+  "cfo_disc": 0.0,
+  "cfo": 2054.6,
+  "capex": -334.9,
+  "capex_disposals": null,
+  "acquisitions": -105.4,
+  "divest": null,
+  "invest_purch": 0.0,
+  "invest_sales": 264.8,
+  "cfi_disc": 0.0,
+  "cfi": -165.9,
+  "stock_iss": 144.8,
+  "pref_iss": null,
+  "dividends": -202.8,
+  "buyback": null,
+  "debt_net_short": -1178.0,
+  "debt_proceeds": 3240.9,
+  "debt_repay": -504.1,
+  "spin_cash": null,
+  "cff_disc": null,
+  "cff": 1474.1,
+  "fx": -56.0,
+  "net_change": 3306.8,
+  "cash_begin": 790.8,
+  "cash_end": 4097.6,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net earnings",
+    1415.1
+   ],
+   [
+    "Less: loss from discontinued operations, net of income taxes",
+    0.0
+   ],
+   [
+    "Net earnings from continuing operations",
+    1415.1
+   ],
+   [
+    "Depreciation",
+    306.5
+   ],
+   [
+    "Amortization",
+    324.4
+   ],
+   [
+    "Stock-based compensation expense",
+    87.3
+   ],
+   [
+    "Pretax gain on sale of investments",
+    -223.4
+   ],
+   [
+    "Change in trade accounts receivable, net",
+    -31.9
+   ],
+   [
+    "Change in inventories",
+    -141.8
+   ],
+   [
+    "Change in trade accounts payable",
+    -54.7
+   ],
+   [
+    "Change in prepaid expenses and other assets",
+    85.7
+   ],
+   [
+    "Change in accrued expenses and other liabilities",
+    287.4
+   ],
+   [
+    "Total operating cash provided by continuing operations",
+    2054.6
+   ],
+   [
+    "Total operating cash used in discontinued operations",
+    0.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    2054.6
+   ],
+   [
+    "Cash paid for acquisitions",
+    -105.4
+   ],
+   [
+    "Payments for additions to property, plant and equipment",
+    -334.9
+   ],
+   [
+    "Payments for purchases of investments",
+    0.0
+   ],
+   [
+    "Proceeds from sale of investments",
+    264.8
+   ],
+   [
+    "All other investing activities",
+    9.6
+   ],
+   [
+    "Total investing cash used in continuing operations",
+    -165.9
+   ],
+   [
+    "Total investing cash used in discontinued operations",
+    0.0
+   ],
+   [
+    "Net cash used in investing activities",
+    -165.9
+   ],
+   [
+    "Proceeds from the issuance of common stock",
+    144.8
+   ],
+   [
+    "Payment of dividends",
+    -202.8
+   ],
+   [
+    "Net repayments of borrowings (maturities of 90 days or less)",
+    -1178.0
+   ],
+   [
+    "Proceeds from borrowings (maturities longer than 90 days)",
+    3240.9
+   ],
+   [
+    "Repayments of borrowings (maturities longer than 90 days)",
+    -504.1
+   ],
+   [
+    "All other financing activities",
+    -26.7
+   ],
+   [
+    "Net cash provided by (used in) financing activities",
+    1474.1
+   ],
+   [
+    "Effect of exchange rate changes on cash and equivalents",
+    -56.0
+   ],
+   [
+    "Net change in cash and equivalents",
+    3306.8
+   ],
+   [
+    "Beginning balance of cash and equivalents",
+    790.8
+   ],
+   [
+    "Ending balance of cash and equivalents",
+    4097.6
+   ],
+   [
+    "Supplemental: Cash interest payments",
+    102.0
+   ],
+   [
+    "Supplemental: Cash income tax payments",
+    233.1
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 4097.6,
+  "ar": 3994.8,
+  "inventories": 2240.2,
+  "prepaid_other": 898.4,
+  "ca_disc": null,
+  "tca": 11231.0,
+  "ppe": 2784.8,
+  "other_lta": 1026.1,
+  "nca_disc": null,
+  "goodwill": 25378.3,
+  "intangibles": 11083.5,
+  "ta": 51503.7,
+  "st_debt": 2644.5,
+  "ap": 1993.2,
+  "accrued": 3388.2,
+  "cl_disc": null,
+  "tcl": 8025.9,
+  "other_ltl": 6349.8,
+  "ncl_disc": null,
+  "ltd": 12007.7,
+  "pref": null,
+  "common": 8.1,
+  "apic": 5221.4,
+  "treasury": null,
+  "retained": 22206.8,
+  "aoci": -2391.2,
+  "dhr_equity": 25045.1,
+  "nci": 75.2,
+  "te": 25120.3,
+  "tle": 51503.7,
+  "shares_out": 690.5,
+  "lines_raw": [
+   [
+    "Cash and equivalents",
+    4097.6
+   ],
+   [
+    "Trade accounts receivable, net",
+    3994.8
+   ],
+   [
+    "Finished goods",
+    1137.7
+   ],
+   [
+    "Work in process",
+    347.0
+   ],
+   [
+    "Raw materials",
+    755.5
+   ],
+   [
+    "Total inventories",
+    2240.2
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    898.4
+   ],
+   [
+    "Total current assets",
+    11231.0
+   ],
+   [
+    "Property, plant and equipment, net of accumulated depreciation of $2,923.6",
+    2784.8
+   ],
+   [
+    "Other assets",
+    1026.1
+   ],
+   [
+    "Goodwill",
+    25378.3
+   ],
+   [
+    "Other intangible assets, net",
+    11083.5
+   ],
+   [
+    "Total assets",
+    51503.7
+   ],
+   [
+    "Notes payable and current portion of long-term debt",
+    2644.5
+   ],
+   [
+    "Trade accounts payable",
+    1993.2
+   ],
+   [
+    "Accrued expenses and other liabilities",
+    3388.2
+   ],
+   [
+    "Total current liabilities",
+    8025.9
+   ],
+   [
+    "Other long-term liabilities",
+    6349.8
+   ],
+   [
+    "Long-term debt",
+    12007.7
+   ],
+   [
+    "Common stock - $0.01 par value (805.7 issued; 690.5 outstanding)",
+    8.1
+   ],
+   [
+    "Additional paid-in capital",
+    5221.4
+   ],
+   [
+    "Retained earnings",
+    22206.8
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    -2391.2
+   ],
+   [
+    "Total Danaher stockholders' equity",
+    25045.1
+   ],
+   [
+    "Noncontrolling interests",
+    75.2
+   ],
+   [
+    "Total stockholders' equity",
+    25120.3
+   ],
+   [
+    "Total liabilities and stockholders' equity",
+    51503.7
+   ]
+  ]
+ },
+ "py": {
+  "restated": true,
+  "notes": "Q2-15 comparative as presented in the Q2-16 release / 10-Q is recast for the communications business split-off (Jul-2015, discontinued operations). As originally reported (Q2-15 release): sales 5,127.1, operating profit 931.1, net earnings 695.6, diluted EPS 0.97, adjusted diluted EPS 1.08. Recast: sales 4,960.2 / OP 934.4 / continuing ops 715.5 / diluted EPS cont 0.99 / adjusted 1.07 (new definition incl. discrete tax items). Still includes Fortive.",
+  "is": {
+   "sales": 4960.2,
+   "cogs": 2316.2,
+   "sga": 1405.0,
+   "rnd": 304.6,
+   "other_op": 0.0,
+   "op_profit": 934.4,
+   "nonop": 0.0,
+   "interest_exp": 29.0,
+   "interest_inc": 2.3,
+   "ebt": 907.7,
+   "tax": 192.2,
+   "cont_ops": 715.5,
+   "disc_ops": -19.8,
+   "net_income": 695.7,
+   "pref_div": null,
+   "shares_basic": 709.5,
+   "shares_diluted": 719.6,
+   "eps_dil_cont": 0.99,
+   "eps_dil": 0.97
+  },
+  "segments": [
+   {
+    "name": "Test & Measurement",
+    "sales": 675.5,
+    "op_profit": 163.9
+   },
+   {
+    "name": "Environmental",
+    "sales": 892.3,
+    "op_profit": 201.1
+   },
+   {
+    "name": "Life Sciences & Diagnostics",
+    "sales": 1840.3,
+    "op_profit": 285.9
+   },
+   {
+    "name": "Dental",
+    "sales": 687.6,
+    "op_profit": 97.3
+   },
+   {
+    "name": "Industrial Technologies",
+    "sales": 864.5,
+    "op_profit": 221.4
+   }
+  ],
+  "other_op_profit": -35.2,
+  "adj_eps_pub": 1.07,
+  "amort_pretax": 99.0
+ },
+ "notes": "Quarter record: IS, EPS bridge, core growth and FCF from the Q2-16 release (IS identical to the 10-Q); segments from 10-Q Note 13 / MD&A; BS at 1-Jul-2016 (still consolidating Fortive, spun off the next day) and six-month cash flow from the 10-Q. Fortive's ~$3.4bn June-2016 notes are in 'Proceeds from borrowings (maturities longer than 90 days)' (3,240.9) and the ~$3.0bn pre-spin cash distribution to Danaher was intercompany, hence the 4,097.6 cash balance; no separate spin cash line yet (cf.spin_cash null). Computed: cf.wc_change = sum of five 'Change in ...' lines (144.7). Other income and interest income shown as '—' (0.0) for the quarter. is.dps 0.16 = quarterly dividend declared in Q2-16 (10-Q MD&A). bs.shares_out 690.5 from BS parenthetical. All self-checks pass."
+}

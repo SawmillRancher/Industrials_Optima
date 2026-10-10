@@ -1,0 +1,567 @@
+{
+ "period": "Q4-19",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/943452/000119312520039526/d885843dex991.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/943452/000162828020002098/wab-20191231.htm"
+ },
+ "seg": {
+  "frt_rev": 1667.1,
+  "frt_op": 239.2,
+  "frt_gp": 514.2,
+  "frt_adj_gp": null,
+  "frt_adj_op": null,
+  "trn_rev": 701.3,
+  "trn_op": 39.0,
+  "trn_gp": 160.7,
+  "trn_adj_gp": null,
+  "trn_adj_op": null,
+  "corp_op": -52.1,
+  "seg_rev_note": "Segment composition changed effective Q4-19 (GE Transportation integration / restructuring moved asset groups between Freight and Transit); Q4-19 release and 2019 10-K present 2019 and 2018 on the new basis, with new product lines (Freight: Equipment, Components, Digital Electronics, Services; Transit: OEM, Aftermarket).",
+  "frt_pl": {
+   "services": 568.2,
+   "equipment": 638.0,
+   "components": 250.1,
+   "digital": 210.8,
+   "other": null,
+   "labels": "Freight: Equipment, Components, Digital Electronics, Services; Transit: Original Equipment Manufacturer, Aftermarket"
+  },
+  "trn_pl": {
+   "oe": 313.8,
+   "aftermarket": 387.5
+  },
+  "legacy_pl": [],
+  "backlog_total": 22431.7,
+  "backlog_12m": 5603.8,
+  "frt_backlog_total": 18945.3,
+  "frt_backlog_12m": 3911.0,
+  "trn_backlog_total": 3486.4,
+  "trn_backlog_12m": 1692.8,
+  "bridge": {
+   "frt": {
+    "acq": 1269.5,
+    "divest": null,
+    "fx": -2.0,
+    "organic": -22.0
+   },
+   "trn": {
+    "acq": 2.0,
+    "divest": null,
+    "fx": -16.0,
+    "organic": 19.0
+   },
+   "total": {
+    "acq": 1271.5,
+    "divest": null,
+    "fx": -18.0,
+    "organic": -3.0
+   }
+  },
+  "loco_deliveries": null,
+  "notes": "Bridge from release text (Freight: acquisitions '$1.3 billion', organic -$22m, FX -$2m; Transit: organic +$19m, acquisitions $2m, FX -$16m). Freight acquisitions recorded as 1269.5 = Q4-19 Freight sales 1667.1 - recast Q4-18 Freight sales 421.6 + 22 + 2 (computed residual; published only as $1.3bn); totals summed. corp_op computed as total op income - segments (Q4 three-month corporate not published). frt_gp/trn_gp from Q4-19 release Appendix G/H. Release: Freight op income reduced by $31m of policy harmonization/restructuring/transaction/litigation; Freight adjusted op income = 16.1% of adjusted sales; Transit excl. $11m restructuring 7.1%. Recast adjusted segment op income (2020 definition, Q4-20 release): Freight 314.1, Transit 55.2. Backlog: Q4-19 release Sep-30-2019 comparative recast (Freight 18,571.5 vs 18,257.6 originally)."
+ },
+ "is": {
+  "net_sales": 2368.4,
+  "cost_of_sales": 1693.5,
+  "gp": 674.9,
+  "sga": 323.7,
+  "eng": 59.6,
+  "amort": 65.5,
+  "other_op_lines": [],
+  "total_opex": 448.8,
+  "op_income": 226.1,
+  "interest": 58.3,
+  "other_inc": 6.9,
+  "ebt": 174.7,
+  "tax": 37.7,
+  "cont_ops": 137.0,
+  "disc_ops": 0.0,
+  "net_income": 137.0,
+  "nci": 1.3,
+  "ni_wab": 135.7,
+  "shares_basic": 191.1,
+  "shares_diluted": 191.6,
+  "eps_basic": 0.71,
+  "eps_dil": 0.71,
+  "eps_cont_dil": 0.71,
+  "dps": 0.12,
+  "per_share_basis": "post_split"
+ },
+ "ngaap": {
+  "adj_table": [
+   [
+    "Reported Results",
+    {
+     "sales": 2368.4,
+     "gp": 674.9,
+     "opex": -448.8,
+     "op": 226.1,
+     "int_other": -51.4,
+     "tax": -37.7,
+     "ni": 137.0,
+     "nci": -1.3,
+     "ni_wab": 135.7,
+     "eps": 0.71
+    }
+   ],
+   [
+    "Restructuring, Transaction, & Litigation costs",
+    {
+     "sales": 0.0,
+     "gp": 9.9,
+     "opex": 61.1,
+     "op": 71.0,
+     "int_other": 3.5,
+     "tax": -18.0,
+     "ni": 56.5,
+     "nci": 0.0,
+     "ni_wab": 56.5,
+     "eps": 0.29
+    }
+   ],
+   [
+    "Policy Harmonization",
+    {
+     "sales": 8.0,
+     "gp": 6.6,
+     "opex": 9.0,
+     "op": 15.6,
+     "int_other": 0.0,
+     "tax": -3.8,
+     "ni": 11.8,
+     "nci": 0.0,
+     "ni_wab": 11.8,
+     "eps": 0.06
+    }
+   ],
+   [
+    "Tax on Transaction Costs",
+    {
+     "sales": 0.0,
+     "gp": 0.0,
+     "opex": 0.0,
+     "op": 0.0,
+     "int_other": 0.0,
+     "tax": -3.5,
+     "ni": -3.5,
+     "nci": 0.0,
+     "ni_wab": -3.5,
+     "eps": -0.02
+    }
+   ],
+   [
+    "Adjusted Results",
+    {
+     "sales": 2376.4,
+     "gp": 691.4,
+     "opex": -378.7,
+     "op": 312.7,
+     "int_other": -47.9,
+     "tax": -63.0,
+     "ni": 201.8,
+     "nci": -1.3,
+     "ni_wab": 200.5,
+     "eps": 1.04
+    }
+   ]
+  ],
+  "adj_eps_pub": 1.04,
+  "adj_op_pub": 312.7,
+  "adj_gp_pub": 691.4,
+  "adj_ni_pub": 200.5,
+  "adj_dil_shares": 191.6,
+  "eps_bridge_lines": [],
+  "eps_bridge_start_ps": null,
+  "ebitda_lines": [
+   [
+    "Income from Operations (as reported)",
+    226.1
+   ],
+   [
+    "Depreciation",
+    45.3
+   ],
+   [
+    "Amortization",
+    65.5
+   ],
+   [
+    "EBITDA (Income from Operations plus Depreciation & Amortization)",
+    336.9
+   ],
+   [
+    "Restructuring, Transaction, & Litigation costs",
+    71.0
+   ],
+   [
+    "One-time PPA Charges",
+    0.0
+   ],
+   [
+    "Policy Harmonization",
+    15.6
+   ],
+   [
+    "Adjusted Results (Adjusted EBITDA)",
+    423.5
+   ]
+  ],
+  "ebitda_op": 226.1,
+  "ebitda_other": null,
+  "ebitda_dda": 110.8,
+  "ebitda_pub": 336.9,
+  "ebitda_adj_items": 86.6,
+  "adj_ebitda_pub": 423.5,
+  "items": {
+   "restructuring": 71.0,
+   "transaction": null,
+   "inventory_pa": null,
+   "amortization": null,
+   "contract": null,
+   "litigation": null,
+   "other_op": 15.6,
+   "nonop": 3.5,
+   "tax_effect": -21.8,
+   "discrete_tax": -3.5,
+   "other_label": "restructuring = combined 'Restructuring/Transaction (and Litigation) costs' row as published (transaction not split out, so transaction=null); inventory_pa = 'One-time PPA' (non-cash GE Transportation inventory step-up); other_op = non-cash accounting 'Policy Harmonization' (GE Transportation accounting-policy harmonization; also adjusts net sales/GP); nonop = merger-related interest/financing costs in the 'Interest & Other Exp' column of the restructuring/transaction row; discrete_tax = 'Tax on Transaction Costs' (non-deductible transaction costs)."
+  },
+  "guidance": "2020 guidance (Feb-18-2020): GAAP sales ~$8.7bn; GAAP op income ~$1.1bn; GAAP diluted EPS $3.20-$3.50; EBITDA ~$1.6bn; adjusted op income ~$1.4bn; adjusted EBITDA ~$1.6bn; adjusted EPS $4.50-$4.80 (adjusted guidance now excludes recurring purchase price accounting amortization); adjusted op margin ~16%; adjusted ETR ~25.5%; net synergy benefit >$150m in 2020; GAAP CFO ~$900m incl. ~$100m outflows for prior-year restructuring and litigation; Q1-20 expected seasonally lower.",
+  "notes": "2019 'adjusted' definition (as originally reported): excludes GE Transportation merger costs - transaction & restructuring (and, from Q3, litigation) costs, one-time non-cash purchase price accounting (inventory step-up) charges, non-cash accounting policy harmonization, related merger financing interest and tax on non-deductible transaction costs. Recurring PPA amortization was NOT added back in 2019. EBITDA (2019 definition) = income from operations + depreciation + amortization (other income excluded, so ebitda_other=null); ebitda_dda = depreciation + amortization columns summed. From Q1-20 Wabtec redefined adjusted results (adds back all non-cash intangible amortization and FX losses; drops policy harmonization and one-time PPA in adjusted sales/GP) and EBITDA (= op income + other income + D&A). Q4-19 adjusted results INCLUDE +$15.6m non-cash policy harmonization. Recurring PPA after-tax $0.26/sh not added back. Recast in Q3-20/Q4-20 releases under 2020 definition: Q4-19 adjusted op income 362.6, adjusted EPS $1.23; 2020-definition EBITDA 343.8, adjusted EBITDA 414.8."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "net_income": 326.5,
+  "dda": 401.4,
+  "sbc": 50.0,
+  "deferred_tax": -27.3,
+  "gain_loss": 15.9,
+  "wc_change": 331.2,
+  "other_op": -82.2,
+  "cfo": 1015.5,
+  "capex": -185.3,
+  "acquisitions": -2996.4,
+  "proceeds_disp": 3.9,
+  "other_inv": 0.0,
+  "cfi": -3177.8,
+  "debt_proceeds": 3982.4,
+  "debt_repay": -3423.6,
+  "buyback": null,
+  "dividends": -81.7,
+  "stock_proceeds": 0.8,
+  "other_fin": -16.4,
+  "cff": 461.5,
+  "fx": -37.3,
+  "net_change": -1738.1,
+  "cash_begin": 2342.3,
+  "cash_end": 604.2,
+  "cash_basis": "cash+restricted",
+  "lines_raw": [
+   [
+    "Net income",
+    326.5
+   ],
+   [
+    "Depreciation and amortization",
+    401.4
+   ],
+   [
+    "Stock-based compensation expense",
+    50.0
+   ],
+   [
+    "Below market intangible amortization",
+    -82.2
+   ],
+   [
+    "Deferred income taxes",
+    -27.3
+   ],
+   [
+    "Loss on disposal of property, plant and equipment",
+    15.9
+   ],
+   [
+    "Accounts receivable and unbilled accounts receivable",
+    -6.3
+   ],
+   [
+    "Inventories",
+    255.9
+   ],
+   [
+    "Accounts payable",
+    -144.3
+   ],
+   [
+    "Accrued income taxes",
+    10.7
+   ],
+   [
+    "Accrued liabilities and customer deposits",
+    -11.9
+   ],
+   [
+    "Other assets and liabilities",
+    227.1
+   ],
+   [
+    "Net cash provided by operating activities",
+    1015.5
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -185.3
+   ],
+   [
+    "Proceeds from disposal of property, plant and equipment",
+    3.9
+   ],
+   [
+    "Acquisitions of business, net of cash acquired",
+    -2996.4
+   ],
+   [
+    "Other",
+    0.0
+   ],
+   [
+    "Net cash used for investing activities",
+    -3177.8
+   ],
+   [
+    "Proceeds from debt, net of issuance costs",
+    3982.4
+   ],
+   [
+    "Payments of debt",
+    -3423.6
+   ],
+   [
+    "Proceeds from exercise of stock options and other benefit plans",
+    0.8
+   ],
+   [
+    "Payment of income tax withholding on share-based compensation",
+    -6.3
+   ],
+   [
+    "Payment of contingent consideration on acquisitions",
+    -10.1
+   ],
+   [
+    "Cash dividends",
+    -81.7
+   ],
+   [
+    "Net cash provided by (used for) financing activities",
+    461.5
+   ],
+   [
+    "Effect of changes in currency exchange rates",
+    -37.3
+   ],
+   [
+    "(Decrease) increase in cash",
+    -1738.1
+   ],
+   [
+    "Cash, cash equivalents and restricted cash, beginning of year",
+    2342.3
+   ],
+   [
+    "Cash, cash equivalents and restricted cash, end of year",
+    604.2
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 604.2,
+  "restricted_cash": null,
+  "receivables": 1149.9,
+  "unbilled": 514.0,
+  "inventories": 1773.1,
+  "other_current": 150.9,
+  "total_current_assets": 4192.1,
+  "ppe": 1655.8,
+  "goodwill": 8360.6,
+  "intangibles": 4104.0,
+  "other_noncurrent": 631.7,
+  "total_assets": 18944.2,
+  "ap": 1157.5,
+  "customer_deposits": 604.2,
+  "accrued_comp": 343.8,
+  "accrued_warranty": 226.5,
+  "current_debt": 95.7,
+  "other_current_liab": 830.3,
+  "total_current_liab": 3258.0,
+  "ltd": 4333.6,
+  "pension": 113.0,
+  "deferred_tax": 145.3,
+  "lt_lease": null,
+  "other_ncl": 1100.7,
+  "total_liabilities": 8950.6,
+  "common_apic": 7879.2,
+  "treasury": -807.1,
+  "retained": 3267.0,
+  "aoci": -382.6,
+  "wab_equity": 9956.5,
+  "nci": 37.1,
+  "total_equity": 9993.6,
+  "total_le": 18944.2,
+  "shares_outstanding_end": 191.7,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    604.2
+   ],
+   [
+    "Restricted cash",
+    0.0
+   ],
+   [
+    "Accounts receivable",
+    1149.9
+   ],
+   [
+    "Unbilled accounts receivables",
+    514.0
+   ],
+   [
+    "Inventories",
+    1773.1
+   ],
+   [
+    "Other current assets",
+    150.9
+   ],
+   [
+    "Total current assets",
+    4192.1
+   ],
+   [
+    "Property, plant and equipment",
+    2216.0
+   ],
+   [
+    "Accumulated depreciation",
+    -560.2
+   ],
+   [
+    "Property, plant and equipment, net",
+    1655.8
+   ],
+   [
+    "Goodwill",
+    8360.6
+   ],
+   [
+    "Other intangibles, net",
+    4104.0
+   ],
+   [
+    "Other noncurrent assets",
+    631.7
+   ],
+   [
+    "Total other assets",
+    13096.3
+   ],
+   [
+    "Total Assets",
+    18944.2
+   ],
+   [
+    "Accounts payable",
+    1157.5
+   ],
+   [
+    "Customer deposits",
+    604.2
+   ],
+   [
+    "Accrued compensation",
+    343.8
+   ],
+   [
+    "Accrued warranty",
+    226.5
+   ],
+   [
+    "Current portion of long-term debt",
+    95.7
+   ],
+   [
+    "Other accrued liabilities",
+    830.3
+   ],
+   [
+    "Total current liabilities",
+    3258.0
+   ],
+   [
+    "Long-term debt",
+    4333.6
+   ],
+   [
+    "Accrued postretirement and pension benefits",
+    113.0
+   ],
+   [
+    "Deferred income taxes",
+    145.3
+   ],
+   [
+    "Contingent consideration",
+    291.8
+   ],
+   [
+    "Other long term liabilities",
+    808.9
+   ],
+   [
+    "Total Liabilities",
+    8950.6
+   ],
+   [
+    "Convertible preferred stock, $.01 par value; 1,000,000 shares authorized, no shares issued and outstanding, at December 31, 2019 and December 31, 2018",
+    0.0
+   ],
+   [
+    "Common stock, $.01 par value; 500,000,000 shares authorized: 226,947,180 and 132,349,534 shares issued and 191,699,193 and 96,614,946 outstanding at December 31, 2019 and December 31, 2018, respectively",
+    2.0
+   ],
+   [
+    "Additional paid-in capital",
+    7877.2
+   ],
+   [
+    "Treasury stock, at cost, 35,247,987 and 35,734,588 shares, at December 31, 2019 and December 31, 2018, respectively",
+    -807.1
+   ],
+   [
+    "Retained earnings",
+    3267.0
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -382.6
+   ],
+   [
+    "Total Westinghouse Air Brake Technologies Corporation shareholders\u2019 equity",
+    9956.5
+   ],
+   [
+    "Noncontrolling interest",
+    37.1
+   ],
+   [
+    "Total Equity",
+    9993.6
+   ],
+   [
+    "Total Liabilities and Equity",
+    18944.2
+   ]
+  ],
+  "notes": "10-K balance sheet. other_ncl = Contingent consideration 291.8, Other long term liabilities 808.9. Note: Q4-19 release (Appendix B) showed total assets 18,886.2 / other long-term assets 573.7 / total liabilities 8,892.6; the 10-K (used here) shows 18,944.2 / 631.7 / 8,950.6 (operating lease ROU/lease liability gross-up). Operating lease liabilities PV 273.1 (current+noncurrent) are within other accrued / other long-term liabilities; lt_lease = null. cf other_fin = Payment of income tax withholding on share-based compensation, Payment of contingent consideration on acquisitions."
+ }
+}

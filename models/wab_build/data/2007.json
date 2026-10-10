@@ -1,0 +1,495 @@
+{
+ "period": "2007",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/943452/000119312508034995/dex991.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/943452/000119312508043352/d10k.htm"
+ },
+ "seg": {
+  "frt_rev": 734.2,
+  "frt_op": 126.5,
+  "frt_gp": null,
+  "frt_adj_gp": null,
+  "frt_adj_op": null,
+  "trn_rev": 625.9,
+  "trn_op": 69.0,
+  "trn_gp": null,
+  "trn_adj_gp": null,
+  "trn_adj_op": null,
+  "corp_op": -15.8,
+  "seg_rev_note": "Segment sales = sales to external customers (intersegment: Freight 17.7, Transit 0.9). FY2008 10-K recast the 2007 product-line table (Brake Products 466.9, Freight Electronics & Specialty 358.1, ROB 328.8, 'Other Transit Products' 151.4, Other 54.9); legacy_pl here is as originally reported in FY2007 10-K.",
+  "frt_pl": {
+   "services": null,
+   "equipment": null,
+   "components": null,
+   "digital": null,
+   "other": null,
+   "labels": null
+  },
+  "trn_pl": {
+   "oe": null,
+   "aftermarket": null
+  },
+  "legacy_pl": [
+   [
+    "Brake Products",
+    458.0
+   ],
+   [
+    "Freight Electronics & Specialty Products",
+    393.0
+   ],
+   [
+    "Remanufacturing, Overhaul & Build",
+    329.6
+   ],
+   [
+    "Transit Products",
+    142.8
+   ],
+   [
+    "Other",
+    36.7
+   ]
+  ],
+  "backlog_total": 1021.2,
+  "backlog_12m": 532.4,
+  "frt_backlog_total": 224.9,
+  "frt_backlog_12m": 153.7,
+  "trn_backlog_total": 796.3,
+  "trn_backlog_12m": 378.7,
+  "bridge": {
+   "frt": {
+    "acq": null,
+    "divest": null,
+    "fx": null,
+    "organic": null
+   },
+   "trn": {
+    "acq": null,
+    "divest": null,
+    "fx": null,
+    "organic": null
+   },
+   "total": {
+    "acq": null,
+    "divest": null,
+    "fx": null,
+    "organic": null
+   }
+  },
+  "loco_deliveries": null,
+  "notes": "Segment figures from FY2007 10-K Note 19; corp_op = 'Corporate Activities and Elimination' as published. Backlog from 10-K Item 1 (12m = expected delivery 2008). Release: multi-year backlog above $1bn for 7th consecutive quarter. Segment assets: Freight 692.7, Transit 587.8, Corporate (121.8)."
+ },
+ "is": {
+  "net_sales": 1360.1,
+  "cost_of_sales": 990.5,
+  "gp": 369.6,
+  "sga": 148.4,
+  "eng": 37.4,
+  "amort": 4.0,
+  "other_op_lines": [],
+  "total_opex": 189.9,
+  "op_income": 179.7,
+  "interest": 3.6,
+  "other_inc": -3.6,
+  "ebt": 172.5,
+  "tax": 63.1,
+  "cont_ops": 109.4,
+  "disc_ops": 0.2,
+  "net_income": 109.6,
+  "nci": null,
+  "ni_wab": 109.6,
+  "shares_basic": 48.53,
+  "shares_diluted": 49.14,
+  "eps_basic": 2.26,
+  "eps_dil": 2.23,
+  "eps_cont_dil": 2.23,
+  "dps": 0.04,
+  "per_share_basis": "pre_split"
+ },
+ "ngaap": {
+  "adj_table": [],
+  "adj_eps_pub": null,
+  "adj_op_pub": null,
+  "adj_gp_pub": null,
+  "adj_ni_pub": null,
+  "adj_dil_shares": null,
+  "eps_bridge_lines": [],
+  "eps_bridge_start_ps": null,
+  "ebitda_lines": [],
+  "ebitda_op": null,
+  "ebitda_other": null,
+  "ebitda_dda": null,
+  "ebitda_pub": null,
+  "ebitda_adj_items": null,
+  "adj_ebitda_pub": null,
+  "items": {
+   "restructuring": null,
+   "transaction": null,
+   "inventory_pa": null,
+   "amortization": null,
+   "contract": null,
+   "litigation": null,
+   "other_op": null,
+   "nonop": null,
+   "tax_effect": null,
+   "discrete_tax": null,
+   "other_label": null
+  },
+  "guidance": "2008 (affirmed in Q4-07 release): EPS about $2.50 per diluted share, based on mid-single-digit revenue growth (about 12% EPS growth vs 2007) despite expected decline in U.S. new freight car production.",
+  "notes": "No adjusted results or adjusted EPS published for FY2007 (release reports GAAP only; Q4-07 compared against Q4-06 ex-8-cent tax benefit). 10-K discloses 2007 restructuring charges ($3.6m Stoney Creek/Wallaceburg plan + $1.5m other Canadian operations + ~$0.5m Australia; $5.5m in cost of sales) but company did not adjust EPS for them, so items left null."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "net_income": 109.6,
+  "dda": 29.1,
+  "sbc": 11.3,
+  "deferred_tax": -2.3,
+  "gain_loss": null,
+  "wc_change": -2.8,
+  "other_op": -2.3,
+  "cfo": 142.5,
+  "capex": -20.4,
+  "acquisitions": -73.6,
+  "proceeds_disp": 0.1,
+  "other_inv": 0.4,
+  "cfi": -93.5,
+  "debt_proceeds": 0.0,
+  "debt_repay": -0.7,
+  "buyback": -17.9,
+  "dividends": -1.9,
+  "stock_proceeds": 5.4,
+  "other_fin": 2.1,
+  "cff": -13.0,
+  "fx": 10.7,
+  "net_change": 46.7,
+  "cash_begin": 188.0,
+  "cash_end": 234.7,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net income",
+    109.6
+   ],
+   [
+    "Depreciation and amortization",
+    29.1
+   ],
+   [
+    "Stock-based compensation expense",
+    11.3
+   ],
+   [
+    "Deferred income taxes",
+    -2.3
+   ],
+   [
+    "Excess income tax benefits from exercise of stock options (operating)",
+    -2.1
+   ],
+   [
+    "Discontinued operations (operating)",
+    -0.2
+   ],
+   [
+    "Accounts receivable",
+    -31.6
+   ],
+   [
+    "Inventories",
+    -14.3
+   ],
+   [
+    "Accounts payable",
+    32.8
+   ],
+   [
+    "Accrued income taxes",
+    13.5
+   ],
+   [
+    "Accrued liabilities and customer deposits",
+    -4.3
+   ],
+   [
+    "Other assets and liabilities",
+    1.1
+   ],
+   [
+    "Net cash provided by operating activities",
+    142.5
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -20.4
+   ],
+   [
+    "Proceeds from disposal of property, plant and equipment",
+    0.1
+   ],
+   [
+    "Acquisitions of businesses, net of cash acquired",
+    -73.6
+   ],
+   [
+    "Discontinued operations (investing)",
+    0.4
+   ],
+   [
+    "Net cash used for investing activities",
+    -93.5
+   ],
+   [
+    "Repayments of other borrowings",
+    -0.7
+   ],
+   [
+    "Stock repurchase",
+    -17.9
+   ],
+   [
+    "Proceeds from treasury stock from stock based benefit plans",
+    5.4
+   ],
+   [
+    "Excess income tax benefits from exercise of stock options (financing)",
+    2.1
+   ],
+   [
+    "Cash dividends",
+    -1.9
+   ],
+   [
+    "Net cash (used for) provided by financing activities",
+    -13.0
+   ],
+   [
+    "Effect of changes in currency exchange rates",
+    10.7
+   ],
+   [
+    "Increase in cash",
+    46.7
+   ],
+   [
+    "Cash, beginning of year",
+    188.0
+   ],
+   [
+    "Cash, end of year",
+    234.7
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 234.7,
+  "restricted_cash": null,
+  "receivables": 222.2,
+  "unbilled": null,
+  "inventories": 176.0,
+  "other_current": 32.9,
+  "total_current_assets": 665.8,
+  "ppe": 182.4,
+  "goodwill": 232.6,
+  "intangibles": 58.7,
+  "other_noncurrent": 19.2,
+  "total_assets": 1158.7,
+  "ap": 137.2,
+  "customer_deposits": 67.3,
+  "accrued_comp": 30.5,
+  "accrued_warranty": 14.4,
+  "current_debt": null,
+  "other_current_liab": 45.8,
+  "total_current_liab": 295.2,
+  "ltd": 150.2,
+  "pension": 53.5,
+  "deferred_tax": 9.8,
+  "lt_lease": null,
+  "other_ncl": 32.6,
+  "total_liabilities": 541.4,
+  "common_apic": 321.6,
+  "treasury": -238.1,
+  "retained": 524.5,
+  "aoci": 9.3,
+  "wab_equity": 617.3,
+  "nci": null,
+  "total_equity": 617.3,
+  "total_le": 1158.7,
+  "shares_outstanding_end": 48.7,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    234.7
+   ],
+   [
+    "Accounts receivable",
+    222.2
+   ],
+   [
+    "Inventories",
+    176.0
+   ],
+   [
+    "Deferred income taxes (current asset)",
+    24.8
+   ],
+   [
+    "Other",
+    8.1
+   ],
+   [
+    "Total current assets",
+    665.8
+   ],
+   [
+    "Property, plant and equipment",
+    417.2
+   ],
+   [
+    "Accumulated depreciation",
+    -234.7
+   ],
+   [
+    "Property, plant and equipment, net",
+    182.4
+   ],
+   [
+    "Goodwill",
+    232.6
+   ],
+   [
+    "Other intangibles, net",
+    58.7
+   ],
+   [
+    "Deferred income taxes (noncurrent asset)",
+    4.3
+   ],
+   [
+    "Other noncurrent assets",
+    14.9
+   ],
+   [
+    "Total other assets",
+    310.5
+   ],
+   [
+    "Total Assets",
+    1158.7
+   ],
+   [
+    "Accounts payable",
+    137.2
+   ],
+   [
+    "Accrued income taxes",
+    3.6
+   ],
+   [
+    "Customer deposits",
+    67.3
+   ],
+   [
+    "Accrued compensation",
+    30.5
+   ],
+   [
+    "Accrued warranty",
+    14.4
+   ],
+   [
+    "Commitments and contingencies (current)",
+    0.8
+   ],
+   [
+    "Other accrued liabilities",
+    41.4
+   ],
+   [
+    "Total current liabilities",
+    295.2
+   ],
+   [
+    "Long-term debt",
+    150.2
+   ],
+   [
+    "Reserve for postretirement and pension benefits",
+    53.5
+   ],
+   [
+    "Deferred income taxes (liability)",
+    9.8
+   ],
+   [
+    "Commitments and contingencies (noncurrent)",
+    1.2
+   ],
+   [
+    "Accrued warranty (noncurrent)",
+    7.9
+   ],
+   [
+    "Other long-term liabilities",
+    23.6
+   ],
+   [
+    "Total liabilities",
+    541.4
+   ],
+   [
+    "Common stock",
+    0.7
+   ],
+   [
+    "Additional paid-in capital",
+    320.9
+   ],
+   [
+    "Treasury stock",
+    -238.1
+   ],
+   [
+    "Retained earnings",
+    524.5
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    9.3
+   ],
+   [
+    "Total shareholders' equity",
+    617.3
+   ],
+   [
+    "Total Liabilities and Shareholders' Equity",
+    1158.7
+   ]
+  ]
+ },
+ "extra": {
+  "employees": 6023,
+  "dps_declared": 0.04,
+  "seg_dda": {
+   "freight": 15.9,
+   "transit": 12.1,
+   "corporate": 1.1
+  },
+  "seg_capex": {
+   "freight": 12.4,
+   "transit": 7.3,
+   "corporate": 0.8
+  },
+  "depreciation": 25.1,
+  "amortization": 3.9,
+  "acquisitions": [
+   [
+    "Ricon Corporation (wheelchair lifts/ramps, anti-graffiti windows)",
+    "2007-06-08",
+    73.6,
+    "not stated (bus/transit products)"
+   ]
+  ],
+  "notes": "IS: FY2007 10-K = Q4-07 release. Restructuring plan expenses of $5.5m recorded in cost of sales in 2007 (MD&A; GP% ex-charges 27.6%). Basic EPS cont ops 2.25; disc ops +0.01 basic / 0.00 diluted. No noncontrolling interest reported (nci null). | Ricon price $73.6m incl. $6.5m escrow; preliminary goodwill $49.7m. Discontinued operations: +$0.2m net of tax in 2007 (sale of China JV Aug 6, 2007 for ~$0.4m cash; Rutgers non-core division working-capital dispute). Share repurchase: 509,800 shares for $17.9m. Current portion of LTD not shown separately on the FY2007 BS as originally reported (FY2008 10-K recast shows $0.073m current portion and folds accrued income taxes into other accrued liabilities); current_debt left null, LTD 150.177 incl. 6.875% notes $150m."
+ }
+}

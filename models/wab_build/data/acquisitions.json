@@ -1,0 +1,392 @@
+{
+ "units": "USD millions unless stated",
+ "summary": {
+  "deployed_2025_usd_bn": 2.5,
+  "deployed_2026ytd_usd_bn": 1.1,
+  "acquisitions_2025_count": 4,
+  "acquisitions_2026ytd_count": 1,
+  "cf_acquisitions_net_of_cash": {
+   "FY2025": -2520.0,
+   "9M-25": -1755.0,
+   "6M-25": -21.0,
+   "Q1-26": -1062.0,
+   "6M-26": -1062.0
+  },
+  "investing_1h26": {
+   "cfi": -1160.0,
+   "acquisitions": -1062.0,
+   "capex": -108.0,
+   "other_investing": 10.0,
+   "explanation": "The ~$1.16bn 1H-2026 investing outflow is $1,062m acquisitions (10-Q MD&A: 'primarily for Dellner Couplers'; all paid in Q1-26) plus $108m capex, less $10m other. Dellner consideration $1,053m less $17m cash acquired = $1,036m (computed); the ~$26m balance is not itemised (no other 2026 acquisition is disclosed; Q1-26 deck shows 1 acquisition / $1.1bn 2026 YTD). Restricted cash (acquisition escrow) fell from $25m to $10m."
+  },
+  "sources": [
+   "https://www.sec.gov/Archives/edgar/data/943452/000162828026008067/wab-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/943452/000162828026026422/wab-20260331.htm",
+   "https://www.sec.gov/Archives/edgar/data/943452/000162828026049139/wab-20260630.htm",
+   "https://www.sec.gov/Archives/edgar/data/943452/000162828026026384/a1q2026earningspresentat007.jpg"
+  ]
+ },
+ "acquisitions": [
+  {
+   "name": "Evident's Inspection Technologies division (Inspection Technologies)",
+   "seller": "Evident Corporation (formerly Olympus Scientific Solutions)",
+   "announced": "2025-01-14",
+   "closing_date": "2025-07-01",
+   "segment": "Freight - Digital Intelligence product line",
+   "headline_price": 1780.0,
+   "headline_price_note": "$1.78bn agreed (~$1.68bn net of ~$95m tax benefits); 12.0x projected 2025 adj. EBITDA incl. $25m run-rate cost synergies (by end of year 3, ~$5m one-time cost)",
+   "cash_consideration": 1797.0,
+   "cash_consideration_history": {
+    "Q3-25 10-Q / 10-K 2025": 1788.0,
+    "Q1-26 & Q2-26 10-Q": 1797.0
+   },
+   "consideration_net_of_cash_acquired": 1757.0,
+   "funding": "cash on hand, $750m 5.50% 2035 Notes, term loan / credit agreement borrowings",
+   "ppa_latest": {
+    "cash_acquired": 40,
+    "receivables": 86,
+    "inventories": 148,
+    "other_current_assets": 7,
+    "ppe": 59,
+    "goodwill": 940,
+    "intangibles_total": 723,
+    "other_noncurrent_assets": 46,
+    "total_assets_acquired": 2049,
+    "current_liabilities": 81,
+    "noncurrent_liabilities": 171,
+    "total_liabilities_assumed": 252,
+    "net_assets_acquired": 1797,
+    "deferred_taxes": null,
+    "intangibles_by_type": {
+     "customer_relationships": 411,
+     "trade_names_indefinite": 142,
+     "acquired_technology": 170
+    },
+    "source": "Q2-26 10-Q Note 3 (measurement period closed; no longer labelled preliminary)"
+   },
+   "ppa_10k_2025": {
+    "cash_acquired": 44,
+    "receivables": 73,
+    "inventories": 144,
+    "other_current_assets": 8,
+    "ppe": 59,
+    "goodwill": 936,
+    "intangibles_total": 723,
+    "other_noncurrent_assets": 37,
+    "total_assets_acquired": 2024,
+    "current_liabilities": 65,
+    "noncurrent_liabilities": 171,
+    "total_liabilities_assumed": 236,
+    "net_assets_acquired": 1788,
+    "deferred_taxes": null,
+    "intangibles_by_type": {
+     "customer_relationships": 411,
+     "trade_names_indefinite": 142,
+     "acquired_technology": 170
+    },
+    "source": "10-K 2025 Note 3 (preliminary)"
+   },
+   "ppa_q3_25": {
+    "cash_acquired": 44,
+    "receivables": 73,
+    "inventories": 144,
+    "other_current_assets": 8,
+    "ppe": 59,
+    "goodwill": 932,
+    "intangibles_total": 734,
+    "other_noncurrent_assets": 37,
+    "total_assets_acquired": 2031,
+    "current_liabilities": 64,
+    "noncurrent_liabilities": 179,
+    "total_liabilities_assumed": 243,
+    "net_assets_acquired": 1788,
+    "deferred_taxes": null,
+    "source": "Q3-25 10-Q Note 3 (preliminary; intangibles not split)"
+   },
+   "useful_lives": "Not disclosed per acquisition; customer relationships & acquired technology amortised, trade names indefinite. Company-wide weighted avg remaining lives at 30-Jun-2026: backlog 7y, customer relationships 17y, technology 7y.",
+   "goodwill_tax_deductible": "approximately half",
+   "annual_sales_acquired": 433.0,
+   "annual_sales_note": "CY2024E revenue ~$433m, EBITDA ~$112m (25.9% margin); 8% 2020-24E revenue CAGR; ~1,300 employees (8-K 14-Jan-2025 Ex.99.1/99.2)",
+   "sales_contribution": [
+    {
+     "period": "Q3-25",
+     "value": 128.0,
+     "basis": "Freight 'sales from acquisitions', 'primarily from Inspection Technologies' (total company acquisitions $134m)"
+    },
+    {
+     "period": "9M-25",
+     "value": 161.0,
+     "basis": "Freight acquisitions, primarily IT"
+    },
+    {
+     "period": "Q4-25",
+     "value": 167.0,
+     "basis": "Freight acquisitions = IT + Frauscher (from 1-Dec) + small bolt-ons; not split"
+    },
+    {
+     "period": "FY2025",
+     "value": 328.0,
+     "basis": "Freight acquisitions 'primarily from Inspection Technologies'"
+    },
+    {
+     "period": "Q1-26",
+     "value": 184.0,
+     "basis": "Freight acquisitions 'primarily from Inspection Technologies and Frauscher'"
+    },
+    {
+     "period": "Q2-26",
+     "value": 163.0,
+     "basis": "Freight acquisitions, primarily IT and Frauscher (IT anniversaried 1-Jul-2026 so Q2-26 is last full quarter of inorganic contribution)"
+    },
+    {
+     "period": "6M-26",
+     "value": 347.0,
+     "basis": "Freight acquisitions, primarily IT and Frauscher"
+    }
+   ],
+   "inventory_step_up": [
+    {
+     "period": "Q3-25",
+     "value": 24.0,
+     "note": "IT only"
+    },
+    {
+     "period": "Q4-25",
+     "value": 29.0,
+     "note": "IT + Frauscher (FY25 $53m less 9M $24m)"
+    },
+    {
+     "period": "FY2025",
+     "value": 53.0,
+     "note": "IT and Frauscher combined, Freight cost of sales"
+    }
+   ],
+   "transaction_costs": "Company-wide transaction costs (all completed/announced deals): Q1-25 $10m, Q2-25 $25m, Q3-25 $9m, FY2025 $49m (SG&A); not split by deal",
+   "sources": [
+    "https://www.sec.gov/Archives/edgar/data/943452/000114036125001006/ef20041523_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/943452/000114036125001006/ef20041523_ex99-2.htm",
+    "https://www.sec.gov/Archives/edgar/data/943452/000114036125024383/ef20051463_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/943452/000162828025045790/wab-20250930.htm",
+    "https://www.sec.gov/Archives/edgar/data/943452/000162828026008067/wab-20251231.htm",
+    "https://www.sec.gov/Archives/edgar/data/943452/000162828026049139/wab-20260630.htm"
+   ]
+  },
+  {
+   "name": "Frauscher Sensor Technology Group GmbH",
+   "announced": "2025-07-07",
+   "closing_date": "2025-12-01",
+   "segment": "Freight - Digital Intelligence product line",
+   "headline_price": null,
+   "headline_price_eur": 675.0,
+   "headline_price_note": "~EUR 675m agreed; FX forwards EUR 690m notional used at closing",
+   "cash_consideration": 792.0,
+   "consideration_net_of_cash_acquired": 765.0,
+   "funding": "cash on hand, $500m 2025 Term Credit Agreement (28-Nov-2025), other borrowings",
+   "ppa_latest": {
+    "cash_acquired": 27,
+    "receivables": 48,
+    "inventories": 49,
+    "other_current_assets": 6,
+    "ppe": 14,
+    "goodwill": 372,
+    "intangibles_total": 405,
+    "other_noncurrent_assets": 24,
+    "total_assets_acquired": 945,
+    "current_liabilities": 35,
+    "noncurrent_liabilities": 118,
+    "total_liabilities_assumed": 153,
+    "net_assets_acquired": 792,
+    "deferred_taxes": null,
+    "intangibles_by_type": {
+     "customer_relationships": null,
+     "trade_names_indefinite": null,
+     "acquired_technology": null
+    },
+    "source": "Q1-26 / Q2-26 10-Q Note 3 (preliminary; measurement period open)"
+   },
+   "ppa_10k_2025": {
+    "cash_acquired": 27,
+    "receivables": 48,
+    "inventories": 48,
+    "other_current_assets": 5,
+    "ppe": 14,
+    "goodwill": 368,
+    "intangibles_total": 393,
+    "other_noncurrent_assets": 24,
+    "total_assets_acquired": 927,
+    "current_liabilities": 34,
+    "noncurrent_liabilities": 101,
+    "total_liabilities_assumed": 135,
+    "net_assets_acquired": 792,
+    "deferred_taxes": null,
+    "source": "10-K 2025 Note 3 (preliminary)"
+   },
+   "useful_lives": "Not disclosed; intangibles = customer relationships and acquired technology (amortised) and trade names (indefinite); split not disclosed.",
+   "goodwill_tax_deductible": "not deductible",
+   "annual_sales_acquired": null,
+   "annual_sales_note": "Not disclosed in SEC filings (10-K: post-acquisition sales and pro forma impact not material/significant).",
+   "sales_contribution": [
+    {
+     "period": "Q4-25",
+     "value": null,
+     "basis": "one month; included in Freight acquisitions $167m, not split"
+    },
+    {
+     "period": "Q1-26",
+     "value": null,
+     "basis": "included in Freight acquisitions $184m with IT"
+    },
+    {
+     "period": "Q2-26",
+     "value": null,
+     "basis": "included in Freight acquisitions $163m with IT"
+    }
+   ],
+   "inventory_step_up": [
+    {
+     "period": "Q4-25",
+     "value": null,
+     "note": "within FY25 $53m (IT + Frauscher) and Q4-25 $29m; not split"
+    },
+    {
+     "period": "Q1-26",
+     "value": 20.0,
+     "note": "Freight step-up 'related to acquisitions' (Frauscher and/or IT; not split)"
+    }
+   ],
+   "transaction_costs": "within company totals (FY2025 $49m; Q1-26 $13m; Q2-26 $1m)",
+   "other": "Net MTM derivative gain on Dellner/Frauscher FX forwards: $32m Q2-25, net $30m 9M-25, $19m FY2025 (excluded from adjusted results via Transaction costs row).",
+   "sources": [
+    "https://www.sec.gov/Archives/edgar/data/943452/000162828025035852/wab-20250630.htm",
+    "https://www.sec.gov/Archives/edgar/data/943452/000162828026008067/wab-20251231.htm",
+    "https://www.sec.gov/Archives/edgar/data/943452/000162828026026422/wab-20260331.htm",
+    "https://www.sec.gov/Archives/edgar/data/943452/000162828026049139/wab-20260630.htm"
+   ]
+  },
+  {
+   "name": "Dellner Couplers",
+   "announced": "2025-03-18",
+   "closing_date": "2026-02-10",
+   "segment": "Transit",
+   "headline_price": 960.0,
+   "headline_price_eur": 890.0,
+   "headline_price_note": "~EUR 890m agreed (Q1-25 10-Q quoted ~$960m); FX forwards EUR 600m notional used at closing",
+   "cash_consideration": 1053.0,
+   "consideration_net_of_cash_acquired": 1036.0,
+   "funding": "cash on hand and borrowings (revolver / receivables program)",
+   "ppa_latest": {
+    "cash_acquired": 17,
+    "receivables": 58,
+    "inventories": 77,
+    "other_current_assets": 36,
+    "ppe": 53,
+    "goodwill": 475,
+    "intangibles_total": 531,
+    "other_noncurrent_assets": 9,
+    "total_assets_acquired": 1256,
+    "current_liabilities": 76,
+    "noncurrent_liabilities": 127,
+    "total_liabilities_assumed": 203,
+    "net_assets_acquired": 1053,
+    "deferred_taxes": null,
+    "intangibles_by_type": {
+     "backlog": null,
+     "customer_relationships": null,
+     "acquired_technology": null,
+     "trade_names_indefinite": null
+    },
+    "source": "Q2-26 10-Q Note 3 (preliminary)"
+   },
+   "ppa_q1_26": {
+    "cash_acquired": 17,
+    "receivables": 58,
+    "inventories": 77,
+    "other_current_assets": 33,
+    "ppe": 53,
+    "goodwill": 475,
+    "intangibles_total": 531,
+    "other_noncurrent_assets": 9,
+    "total_assets_acquired": 1256,
+    "current_liabilities": 76,
+    "noncurrent_liabilities": 127,
+    "total_liabilities_assumed": 203,
+    "net_assets_acquired": 1053,
+    "deferred_taxes": null,
+    "unbilled_receivables": 3,
+    "source": "Q1-26 10-Q Note 3 (preliminary; separate unbilled AR $3m, other current $33m)"
+   },
+   "useful_lives": "Not disclosed; intangibles include backlog, customer relationships, acquired technology (amortised) and trade names (indefinite). Q2-26 goodwill note: Transit goodwill additions $475m.",
+   "goodwill_tax_deductible": "not deductible",
+   "annual_sales_acquired": null,
+   "annual_sales_note": "Not disclosed in SEC filings reviewed.",
+   "sales_contribution": [
+    {
+     "period": "Q1-26",
+     "value": 41.0,
+     "basis": "Transit 'Acquisitions' in sales bridge (Dellner only Transit deal)"
+    },
+    {
+     "period": "Q2-26",
+     "value": 69.0,
+     "basis": "10-Q: 'Sales from the Dellner Couplers acquisition increased sales by $69 million'"
+    },
+    {
+     "period": "6M-26",
+     "value": 110.0,
+     "basis": "10-Q: Dellner $110m"
+    }
+   ],
+   "inventory_step_up": [
+    {
+     "period": "Q1-26",
+     "value": 3.0,
+     "note": "Transit cost of sales"
+    },
+    {
+     "period": "Q2-26",
+     "value": 5.0,
+     "note": "Transit"
+    },
+    {
+     "period": "6M-26",
+     "value": 8.0,
+     "note": "Transit"
+    }
+   ],
+   "transaction_costs": "Company-wide: Q1-26 $13m, Q2-26 $1m, 6M-26 $14m (SG&A); plus $2m below op income in 6M-26 adjusted table; not split by deal",
+   "sources": [
+    "https://www.sec.gov/Archives/edgar/data/943452/000162828025019005/wab-20250331.htm",
+    "https://www.sec.gov/Archives/edgar/data/943452/000162828025035852/wab-20250630.htm",
+    "https://www.sec.gov/Archives/edgar/data/943452/000162828026026422/wab-20260331.htm",
+    "https://www.sec.gov/Archives/edgar/data/943452/000162828026049139/wab-20260630.htm",
+    "https://www.sec.gov/Archives/edgar/data/943452/000162828026007113/a4q2025pressrelease.htm"
+   ]
+  },
+  {
+   "name": "Two other Freight bolt-ons in 2025 (Continental Rail and Dotnetix per 3-Mar-2026 investor deck)",
+   "closing_date": "2025 (H1; CF shows $21m acquisitions in 6M-25)",
+   "segment": "Freight",
+   "cash_consideration": null,
+   "consideration_net_of_cash_acquired": 26.0,
+   "ppa_latest": null,
+   "annual_sales_acquired": null,
+   "sales_contribution": [
+    {
+     "period": "Q1-25",
+     "value": 23.0,
+     "basis": "total acquisitions in Q1-25 bridge (Freight 15 / Transit 8) = annualisation of 2024 deals + 2025 bolt-ons; not split"
+    }
+   ],
+   "notes": "10-K: 'combined purchase price of approximately $26 million, net of cash acquired, individually and collectively immaterial'.",
+   "sources": [
+    "https://www.sec.gov/Archives/edgar/data/943452/000162828026008067/wab-20251231.htm",
+    "https://www.sec.gov/Archives/edgar/data/943452/000114036126007441/ef20066964_ex99-1.htm"
+   ]
+  }
+ ],
+ "notes": [
+  "Deferred taxes in the purchase-price allocations are not separately disclosed (included in noncurrent liabilities).",
+  "consideration_net_of_cash_acquired values are computed (price less cash acquired).",
+  "Inventory step-up and transaction costs come from release adjusted-results tables and 10-Q/10-K MD&A."
+ ]
+}

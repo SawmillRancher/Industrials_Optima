@@ -1,0 +1,493 @@
+{
+ "period": "2018",
+ "fy": 2018,
+ "q": null,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/108312/000117184318007710/exh_991.htm",
+  "release_date": "2018-11-07",
+  "filing": "https://www.sec.gov/Archives/edgar/data/108312/000010831218000023/wwd-20180930x10k.htm"
+ },
+ "notes": [],
+ "is": {
+  "rev": 2325.873,
+  "cogs": 1719.675,
+  "sga": 192.757,
+  "rd": 148.279,
+  "restr": 17.013,
+  "int_exp": 31.77,
+  "int_inc": -1.674,
+  "oth": -1.525,
+  "tot_costs": 2106.295,
+  "ebt": 219.578,
+  "tax": 39.2,
+  "ni_tot": 180.378,
+  "eps_b": 2.93,
+  "eps_d": 2.82,
+  "sh_b": 61.493,
+  "sh_d": 63.876,
+  "dps": 0.5525,
+  "ni": 180.378,
+  "other_lines": []
+ },
+ "seg": {
+  "sales_aero": 1557.988,
+  "sales_ind": 767.885,
+  "ind_name": "Industrial",
+  "sales_tot": 2325.873,
+  "earn_aero": 301.803,
+  "earn_ind": 47.938,
+  "earn_tot": 349.741,
+  "nonseg": -100.067,
+  "ebit": 249.674,
+  "int_net": -30.096,
+  "capex": 127.14,
+  "dep": 71.389
+ },
+ "ngaap": {
+  "ebit_pub": 249.674,
+  "adj_ebit_pub": 325.666,
+  "ebitda_pub": 365.805,
+  "adj_ebitda_pub": 423.736,
+  "dep": 71.389,
+  "amort": 44.742,
+  "fcf_pub": 172.152,
+  "nonseg_pub": 100.067,
+  "adj_nonseg_pub": 58.46,
+  "adj_seg_ind": 82.323,
+  "gaap_seg_ind": 47.938,
+  "adj": {
+   "fmt": "a",
+   "items": [
+    {
+     "label": "Restructuring charges",
+     "pre": 17.013,
+     "net": 12.674,
+     "ps": 0.2,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Duarte move related costs",
+     "pre": 6.165,
+     "net": 4.414,
+     "ps": 0.07,
+     "cat": "ACQ"
+    },
+    {
+     "label": "Purchase accounting impacts*",
+     "pre": 34.385,
+     "net": 24.591,
+     "ps": 0.38,
+     "cat": "STEPUP"
+    },
+    {
+     "label": "L'Orange transaction and integration costs",
+     "pre": 5.208,
+     "net": 3.758,
+     "ps": 0.06,
+     "cat": "ACQ"
+    },
+    {
+     "label": "Cost associated with the Forward Option",
+     "pre": 5.543,
+     "net": 3.88,
+     "ps": 0.06,
+     "cat": "OTHER"
+    },
+    {
+     "label": "Warranty and indemnity insurance costs associated with the acquisition of L'Orange",
+     "pre": 4.293,
+     "net": 3.005,
+     "ps": 0.05,
+     "cat": "ACQ"
+    },
+    {
+     "label": "German real estate transfer costs associated with the acquisition of L'Orange",
+     "pre": 3.385,
+     "net": 2.37,
+     "ps": 0.04,
+     "cat": "ACQ"
+    },
+    {
+     "label": "Transition impact of U.S. tax legislation",
+     "pre": 0.0,
+     "net": 10.86,
+     "ps": 0.17,
+     "cat": "TAXD"
+    }
+   ],
+   "gaap_ni": 180.378,
+   "gaap_ebt": 219.578,
+   "gaap_eps": 2.82,
+   "subtotal": {
+    "pre": 75.992,
+    "net": 54.692,
+    "ps": 0.86
+   },
+   "total": {
+    "pre": 75.992,
+    "net": 65.552,
+    "ps": 1.03
+   },
+   "adj_ni": 245.93,
+   "adj_eps": 3.85,
+   "adj_ebt": 295.57
+  }
+ },
+ "cf": {
+  "ytd_months": 12,
+  "cfo": 299.292,
+  "capex": -127.14,
+  "acq": -771.115,
+  "cfi": -896.567,
+  "div": -34.003,
+  "stock_iss": 9.132,
+  "bb": 0.0,
+  "cff": 605.998,
+  "fx": -12.681,
+  "net": -3.958,
+  "beg": 87.552,
+  "end": 83.594,
+  "lines_raw": [
+   [
+    "Net cash provided by operating activities",
+    299.292
+   ],
+   [
+    "Payments for property, plant, and equipment",
+    -127.14
+   ],
+   [
+    "Net proceeds from sale of assets",
+    1.923
+   ],
+   [
+    "Proceeds from sales of short-term investments",
+    9.088
+   ],
+   [
+    "Payments for purchases of short-term investments",
+    -9.323
+   ],
+   [
+    "Business acquisitions, net of cash acquired",
+    -771.115
+   ],
+   [
+    "Net cash used in investing activities",
+    -896.567
+   ],
+   [
+    "Cash dividends paid",
+    -34.003
+   ],
+   [
+    "Proceeds from sales of treasury stock",
+    9.132
+   ],
+   [
+    "Payments for repurchases of common stock",
+    0.0
+   ],
+   [
+    "Borrowings on revolving lines of credit and short-term borrowings",
+    1930.261
+   ],
+   [
+    "Payments on revolving lines of credit and short-term borrowings",
+    -1691.934
+   ],
+   [
+    "Proceeds from the issuance of long-term debt",
+    400.0
+   ],
+   [
+    "Payments of long-term debt and capital lease obligations",
+    -0.421
+   ],
+   [
+    "Payment of debt financing costs",
+    -1.494
+   ],
+   [
+    "Payments for forward option derivative instrument",
+    -5.543
+   ],
+   [
+    "Net cash provided by (used in) financing activities",
+    605.998
+   ],
+   [
+    "Effect of exchange rate changes on cash and cash equivalents",
+    -12.681
+   ],
+   [
+    "Net change in cash and cash equivalents",
+    -3.958
+   ],
+   [
+    "Cash and cash equivalents at beginning of year",
+    87.552
+   ],
+   [
+    "Cash and cash equivalents at end of period",
+    83.594
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 83.594,
+  "ar": 431.82,
+  "inv": 549.596,
+  "tca": 1114.797,
+  "ppe": 1060.005,
+  "gw": 813.25,
+  "intang": 700.883,
+  "ta": 3790.649,
+  "std": 153.635,
+  "ap": 226.285,
+  "tcl": 591.178,
+  "ltd": 1092.397,
+  "tl": 2252.545,
+  "eq": 1538.104,
+  "tle": 3790.649,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    83.594
+   ],
+   [
+    "Accounts receivable",
+    431.82
+   ],
+   [
+    "Inventories",
+    549.596
+   ],
+   [
+    "Income taxes receivable",
+    6.397
+   ],
+   [
+    "Other current assets",
+    43.39
+   ],
+   [
+    "Total current assets",
+    1114.797
+   ],
+   [
+    "Property, plant, and equipment, net",
+    1060.005
+   ],
+   [
+    "Goodwill",
+    813.25
+   ],
+   [
+    "Intangible assets, net",
+    700.883
+   ],
+   [
+    "Deferred income tax assets",
+    16.57
+   ],
+   [
+    "Other assets",
+    85.144
+   ],
+   [
+    "Total assets",
+    3790.649
+   ],
+   [
+    "Short-term borrowings",
+    153.635
+   ],
+   [
+    "Accounts payable",
+    226.285
+   ],
+   [
+    "Income taxes payable",
+    16.745
+   ],
+   [
+    "Accrued liabilities",
+    194.513
+   ],
+   [
+    "Total current liabilities",
+    591.178
+   ],
+   [
+    "Long-term debt, less current portion",
+    1092.397
+   ],
+   [
+    "Deferred income tax liabilities",
+    170.915
+   ],
+   [
+    "Other liabilities",
+    398.055
+   ],
+   [
+    "Total liabilities",
+    2252.545
+   ],
+   [
+    "Stockholders\u2019 equity",
+    1538.104
+   ],
+   [
+    "Total liabilities and stockholders\u2019 equity",
+    3790.649
+   ]
+  ]
+ },
+ "em": {},
+ "em_py": {},
+ "em_py2": {},
+ "py": {
+  "release": "https://www.sec.gov/Archives/edgar/data/108312/000117184319007633/exh_991.htm",
+  "is": {
+   "rev": 2325.873,
+   "cogs": 1722.802,
+   "sga": 193.736,
+   "rd": 148.279,
+   "restr": 17.013,
+   "int_exp": 40.465,
+   "int_inc": -1.674,
+   "oth": -14.326,
+   "tot_costs": 2106.295,
+   "ebt": 219.578,
+   "tax": 39.2,
+   "ni_tot": 180.378,
+   "eps_b": 2.93,
+   "eps_d": 2.82,
+   "sh_b": 61.493,
+   "sh_d": 63.876,
+   "dps": 0.5525,
+   "ni": 180.378,
+   "other_lines": []
+  },
+  "seg": {
+   "sales_aero": 1557.988,
+   "sales_ind": 767.885,
+   "ind_name": "Industrial",
+   "sales_tot": 2325.873,
+   "earn_aero": 308.553,
+   "earn_ind": 49.894,
+   "earn_tot": 358.447,
+   "nonseg": -100.078,
+   "ebit": 258.369,
+   "int_net": -38.791,
+   "capex": 127.14,
+   "dep": 71.389
+  },
+  "ngaap": {
+   "ebit_pub": 258.369,
+   "adj_ebit_pub": 334.361,
+   "ebitda_pub": 374.5,
+   "adj_ebitda_pub": 432.431,
+   "dep": 71.389,
+   "amort": 44.742,
+   "fcf_pub": 172.152,
+   "nonseg_pub": 100.078,
+   "adj_nonseg_pub": 58.471,
+   "adj_seg_ind": 84.279,
+   "gaap_seg_ind": 49.894,
+   "adj": {
+    "fmt": "a",
+    "items": [
+     {
+      "label": "Restructuring charges",
+      "pre": 17.013,
+      "net": 12.674,
+      "ps": 0.2,
+      "cat": "RESTR"
+     },
+     {
+      "label": "Duarte move related costs",
+      "pre": 6.165,
+      "net": 4.414,
+      "ps": 0.07,
+      "cat": "ACQ"
+     },
+     {
+      "label": "Purchase accounting impacts*",
+      "pre": 34.385,
+      "net": 24.591,
+      "ps": 0.38,
+      "cat": "STEPUP"
+     },
+     {
+      "label": "Merger and acquisition transaction and integration costs",
+      "pre": 5.208,
+      "net": 3.758,
+      "ps": 0.06,
+      "cat": "ACQ"
+     },
+     {
+      "label": "Cost associated with the Forward Option",
+      "pre": 5.543,
+      "net": 3.88,
+      "ps": 0.06,
+      "cat": "OTHER"
+     },
+     {
+      "label": "Warranty and indemnity insurance costs associated with the acquisition of L'Orange",
+      "pre": 4.293,
+      "net": 3.005,
+      "ps": 0.05,
+      "cat": "ACQ"
+     },
+     {
+      "label": "German real estate transfer costs associated with the acquisition of L'Orange",
+      "pre": 3.385,
+      "net": 2.37,
+      "ps": 0.04,
+      "cat": "ACQ"
+     },
+     {
+      "label": "Impairment of Senvion related assets",
+      "pre": 0.0,
+      "net": 0.0,
+      "ps": 0.0,
+      "cat": "IMPAIR"
+     },
+     {
+      "label": "Transition impact of U.S. tax legislation",
+      "pre": 0.0,
+      "net": 10.86,
+      "ps": 0.17,
+      "cat": "TAXD"
+     }
+    ],
+    "gaap_ni": 180.378,
+    "gaap_ebt": 219.578,
+    "gaap_eps": 2.82,
+    "subtotal": {
+     "pre": 75.992,
+     "net": 54.692,
+     "ps": 0.86
+    },
+    "total": {
+     "pre": 75.992,
+     "net": 65.552,
+     "ps": 1.03
+    },
+    "adj_ni": 245.93,
+    "adj_eps": 3.85,
+    "adj_ebt": 295.57
+   }
+  }
+ },
+ "x": {
+  "sbc_ytd": 18.229,
+  "deftax_ytd": -30.177,
+  "dda_ytd": 116.131,
+  "sh_issued": 72.96,
+  "sh_treasury": 11.203
+ }
+}

@@ -1,0 +1,145 @@
+{
+ "period": "Q1-14",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114420414027867/v377483_ex99-1.htm",
+  "10k_or_10q": null
+ },
+ "seg": {
+  "agg_rev": 404.3,
+  "agg_interseg": -43.4,
+  "agg_fa_rev": null,
+  "agg_freight_rev": null,
+  "agg_other_rev": null,
+  "agg_tons": 29.628,
+  "agg_price": 10.94,
+  "agg_gp": 38.5,
+  "agg_dda": 54.6,
+  "agg_cgp": 93.1,
+  "asph_rev": 83.0,
+  "asph_interseg": null,
+  "asph_tons": 1.441,
+  "asph_price": 53.07,
+  "asph_gp": 4.7,
+  "asph_dda": 2.4,
+  "asph_cgp": null,
+  "conc_rev": 96.0,
+  "conc_interseg": null,
+  "conc_cy": 0.958,
+  "conc_price": 95.41,
+  "conc_gp": -9.2,
+  "conc_dda": 6.0,
+  "conc_cgp": null,
+  "cem_rev": 17.9,
+  "cem_interseg": -9.2,
+  "cem_gp": 0.1,
+  "cem_dda": 1.1,
+  "calc_rev": null,
+  "calc_gp": null,
+  "calc_dda": null,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 601.2,
+  "interseg_total": -52.7,
+  "delivery_rev": 25.9,
+  "other_dda": 5.3,
+  "total_dda": 69.4,
+  "gp_total": 34.1,
+  "notes": "Old presentation: segment revenues exclude delivery revenues (net-sales basis); total revenues = net sales 548.5 + delivery revenues 25.9. seg_sales_total and interseg_total computed as sums (release shows only per-segment lines). Cement segment (cement + calcium products) includes the Florida cement business until its sale to Cementos Argos on 7-Mar-2014; Concrete includes Florida concrete until 7-Mar-2014. Cement tons 0.172m (0.076 customer + 0.096 internal), price $92.51. Aggregates price is the old freight-adjusted definition (total sales $ less freight to remote distribution sites / tons); aggregates tons 29.628m incl. 2.360m internal. agg_fa_rev not published."
+ },
+ "is": {
+  "total_rev": 574.4,
+  "net_sales": 548.5,
+  "delivery_rev": 25.9,
+  "cost_of_rev": 540.3,
+  "gp": 34.1,
+  "sag": 66.1,
+  "gain_sale": 236.4,
+  "other_op_lines": [
+   [
+    "Other operating expense, net",
+    -9.7
+   ]
+  ],
+  "other_op": -9.7,
+  "op_earnings": 194.7,
+  "nonop": 2.8,
+  "interest": 120.1,
+  "ebt": 77.4,
+  "tax": 22.9,
+  "cont_ops": 54.5,
+  "disc_ops": -0.5,
+  "net_earnings": 54.0,
+  "nci": 0.0,
+  "ni_vulcan": 54.0,
+  "shares_basic": 130.81,
+  "shares_diluted": 132.314,
+  "eps_cont_dil": 0.41,
+  "eps_dil": 0.41,
+  "eps_basic": 0.41,
+  "dps": 0.05,
+  "notes": "Old presentation: Net sales and Delivery revenues shown on the face of the income statement."
+ },
+ "ngaap": {
+  "ebitda_pub": 266.9,
+  "adj_ebitda_pub": 39.0,
+  "ebitda_bridge_tax": 22.9,
+  "ebitda_bridge_disc_ops": 0.5,
+  "ebitda_bridge_lines": [
+   [
+    "Gain on sale of real estate and businesses",
+    -236.0
+   ],
+   [
+    "Charges associated with divestitures",
+    9.1
+   ],
+   [
+    "Amortization of deferred revenue",
+    -1.0
+   ],
+   [
+    "Restructuring charges",
+    0.0
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": 0.0,
+   "gain_sale": -236.0,
+   "impairment": 0.0,
+   "divested_ops": 9.1,
+   "acquisition": 0.0,
+   "restructuring": 0.0,
+   "legal_env": 0.0,
+   "pension": 0.0,
+   "other": -1.0,
+   "other_label": "Amortization of deferred revenue"
+  },
+  "adj_eps_pub": -0.28,
+  "eps_bridge_lines": [
+   [
+    "Diluted EPS - continuing operations, as reported",
+    0.41
+   ],
+   [
+    "Disposition transaction (gain on sale of Florida cement & concrete, net of related charges)",
+    -1.04
+   ],
+   [
+    "Debt purchase (charges to interest expense on $506m tender)",
+    0.35
+   ],
+   [
+    "Adjusted diluted EPS - continuing operations",
+    -0.28
+   ]
+  ],
+  "eps_items_after_tax_ps": -0.69,
+  "eps_discrete_tax_ps": 0.0,
+  "eps_bridge_start_ps": 0.41,
+  "agg_cgp_per_ton_pub": null,
+  "roic_pub": null,
+  "notes": "Adjusted EPS per Table G (results adjusted for disposition transaction and debt purchase); per-share item values from release summary text ($1.04 income, $0.35 charge). Adjusted EBITDA definition (Q1-14 to Q3-15): EBITDA less gains on real estate/businesses, plus divestiture/acquisition charges and restructuring, less amortization of deferred revenue. Aggregates cash gross profit per ton not published as $ (only '+8%'). Vulcan's EBITDA reconciliation = net earnings + provision for income taxes (continuing ops) + interest expense, net + (earnings) loss on discontinued operations net of tax (extra field ebitda_bridge_disc_ops, signed as added) + DDA&A (EBITDA excludes discontinued operations). Hence self-check ni_vulcan + ebitda_bridge_tax + interest + total_dda = ebitda_pub differs by the after-tax discontinued-operations add-back (0.5); not an extraction error."
+ },
+ "check_notes": "Self-check results: EBITDA check (ni+tax+interest+dda) is off by the discontinued-ops add-back 0.5; passes once ebitda_bridge_disc_ops is included (Vulcan definition, see ngaap.notes). All other checks pass."
+}

@@ -1,0 +1,551 @@
+{
+ "period": "2017",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000119312518048755/d542094dex991.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000139600918000011/vmc-20171231x10k.htm"
+ },
+ "seg": {
+  "agg_rev": 3096.1,
+  "agg_interseg": -253.4,
+  "agg_fa_rev": 2392.7,
+  "agg_freight_rev": 670.7,
+  "agg_other_rev": 32.7,
+  "agg_tons": 183.179,
+  "agg_price": 13.06,
+  "agg_gp": 860.0,
+  "agg_dda": 245.2,
+  "agg_cgp": 1105.2,
+  "asph_rev": 622.1,
+  "asph_interseg": null,
+  "asph_tons": 10.391,
+  "asph_price": 52.64,
+  "asph_gp": 91.9,
+  "asph_dda": 25.4,
+  "asph_cgp": null,
+  "conc_rev": 417.7,
+  "conc_interseg": null,
+  "conc_cy": 3.568,
+  "conc_price": 116.45,
+  "conc_gp": 46.1,
+  "conc_dda": 13.8,
+  "conc_cgp": null,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": 7.7,
+  "calc_gp": 2.5,
+  "calc_dda": 0.7,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 4143.7,
+  "interseg_total": -253.4,
+  "delivery_rev": null,
+  "other_dda": 20.9,
+  "total_dda": 306.0,
+  "gp_total": 1000.6,
+  "notes": "Segment revenues include freight, delivery & transportation revenues (Aggregates footnote), so seg.delivery_rev is null (not shown separately in the segment table; consolidated freight & delivery revenues are in is.delivery_rev). Only Aggregates has intersegment sales. Calcium segment = calcium products (Florida). Asphalt/Concrete cash GP not published in release (null). "
+ },
+ "is": {
+  "total_rev": 3890.3,
+  "net_sales": 3361.4,
+  "delivery_rev": 528.9,
+  "cost_of_rev": 2889.7,
+  "gp": 1000.6,
+  "sag": 323.9,
+  "gain_sale": 17.8,
+  "other_op_lines": [
+   [
+    "Other operating income (expense), net",
+    -47.4
+   ]
+  ],
+  "other_op": -47.4,
+  "op_earnings": 647.1,
+  "nonop": 5.3,
+  "interest": 291.1,
+  "ebt": 361.3,
+  "tax": -232.1,
+  "cont_ops": 593.4,
+  "disc_ops": 7.8,
+  "net_earnings": 601.2,
+  "nci": 0.0,
+  "ni_vulcan": 601.2,
+  "shares_basic": 132.513,
+  "shares_diluted": 134.878,
+  "eps_cont_dil": 4.4,
+  "eps_dil": 4.46,
+  "eps_basic": 4.54,
+  "dps": 1.0,
+  "notes": "Pre-2018 presentation: income statement shows only 'Total revenues' (freight & delivery revenues included). is.delivery_rev = 'Freight and delivery revenues' and is.net_sales = 'Total revenues excluding freight and delivery revenues' from the release's non-GAAP gross-margin reconciliation (published figures, not computed). No noncontrolling interest (nci = 0). dps = cash dividends per share as shown in the release/10-Q statement of earnings. "
+ },
+ "ngaap": {
+  "ebitda_pub": 958.4,
+  "adj_ebitda_pub": 981.9,
+  "ebitda_bridge_tax": -232.1,
+  "ebitda_bridge_disc_ops_addback": -7.8,
+  "ebitda_bridge_lines": [
+   [
+    "Gain on sale of real estate and businesses",
+    -10.5
+   ],
+   [
+    "Property donation",
+    4.3
+   ],
+   [
+    "Business interruption claims recovery, net of incentives",
+    0.0
+   ],
+   [
+    "Charges associated with divested operations",
+    18.1
+   ],
+   [
+    "Business development, net of termination fee",
+    3.1
+   ],
+   [
+    "One time employee bonuses",
+    6.7
+   ],
+   [
+    "Asset impairment",
+    0.0
+   ],
+   [
+    "Restructuring charges",
+    1.9
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": null,
+   "gain_sale": -10.5,
+   "impairment": 0.0,
+   "divested_ops": 18.1,
+   "acquisition": 3.1,
+   "restructuring": 1.9,
+   "legal_env": 0.0,
+   "pension": null,
+   "other": 11.0,
+   "other_label": "Property donation; One time employee bonuses"
+  },
+  "adj_eps_pub": 3.04,
+  "eps_bridge_lines": [
+   [
+    "Diluted EPS",
+    4.4
+   ],
+   [
+    "Items included in Adjusted EBITDA above",
+    0.11
+   ],
+   [
+    "Interest charges associated with debt purchase",
+    0.73
+   ],
+   [
+    "Tax reform income tax savings",
+    -1.99
+   ],
+   [
+    "Alabama NOL carryforward valuation allowance",
+    -0.21
+   ],
+   [
+    "Foreign tax credit carryforward utilization",
+    0.0
+   ],
+   [
+    "Adjusted Diluted EPS",
+    3.04
+   ]
+  ],
+  "eps_items_after_tax_ps": 0.84,
+  "eps_discrete_tax_ps": -2.2,
+  "eps_bridge_start_ps": 4.4,
+  "agg_cgp_per_ton_pub": 6.03,
+  "roic_pub": null,
+  "notes": "EBITDA (Vulcan definition) excludes discontinued operations: the Net earnings->EBITDA reconciliation adds back income tax (continuing ops), interest expense, net, and '(Earnings) loss on discontinued operations, net of tax' (captured in extra field ebitda_bridge_disc_ops_addback), then DDA&A. Hence the schema check ni_vulcan + tax + interest + total_dda = ebitda_pub only holds after adding ebitda_bridge_disc_ops_addback; adj_items.disc_ops is null (not an EBITDA->Adjusted EBITDA item). ebitda_bridge_lines = EBITDA->Adjusted EBITDA lines (zero lines kept as published). FY2017 from Q4-17 release twelve-month columns. Bridge 'Diluted EPS' = diluted EPS from continuing operations. TCJA deferred-tax remeasurement net benefit ~$268m ($1.99/sh) + Alabama NOL valuation allowance release $29m ($0.21/sh) = discrete tax $(2.20)/sh. eps_items_after_tax_ps = 0.11 EBITDA items + 0.73 after-tax interest charges on 2017 debt refinancing (pretax $153m in interest expense). Restated FY2016 comparative Adjusted EPS in this release is $3.03 (vs $2.86 originally)."
+ },
+ "cf": {
+  "net_earnings": 601.2,
+  "dda": 306.0,
+  "noncash_lease": null,
+  "gain_sale": -17.8,
+  "pension_contrib": -20.0,
+  "sbc": 26.6,
+  "deferred_tax": -235.7,
+  "wc_change": -169.4,
+  "other_op": 153.8,
+  "cfo": 644.7,
+  "capex": -459.6,
+  "proceeds_ppe": 15.8,
+  "proceeds_bus": 287.3,
+  "acquisitions": -1109.7,
+  "other_inv": -3.2,
+  "cfi": -1269.5,
+  "debt_proceeds": 2205.0,
+  "debt_repay": -1468.3,
+  "buyback": -60.3,
+  "dividends": -132.3,
+  "stock_proceeds": 0.0,
+  "other_fin": -40.6,
+  "cff": 503.4,
+  "net_change": -121.4,
+  "cash_begin": 268.0,
+  "cash_end": 146.6,
+  "cash_basis": "cash+restricted",
+  "lines_raw": [
+   [
+    "Net earnings",
+    601.2
+   ],
+   [
+    "Depreciation, depletion, accretion and amortization",
+    306.0
+   ],
+   [
+    "Net gain on sale of property, plant & equipment and businesses",
+    -17.8
+   ],
+   [
+    "Contributions to pension plans",
+    -20.0
+   ],
+   [
+    "Share-based compensation expense",
+    26.6
+   ],
+   [
+    "Excess tax benefits from share-based compensation",
+    0.0
+   ],
+   [
+    "Deferred tax expense (benefit)",
+    -235.7
+   ],
+   [
+    "Cost of debt purchase",
+    140.8
+   ],
+   [
+    "Accounts and notes receivable",
+    -81.6
+   ],
+   [
+    "Inventories",
+    -14.1
+   ],
+   [
+    "Prepaid expenses",
+    -28.4
+   ],
+   [
+    "Other assets",
+    -23.8
+   ],
+   [
+    "Accrued interest and income taxes",
+    1.3
+   ],
+   [
+    "Trade payables and other accruals",
+    9.8
+   ],
+   [
+    "Other noncurrent liabilities",
+    -32.6
+   ],
+   [
+    "Other, net",
+    13.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    644.7
+   ],
+   [
+    "Purchases of property, plant & equipment",
+    -459.6
+   ],
+   [
+    "Proceeds from sale of property, plant & equipment",
+    15.8
+   ],
+   [
+    "Proceeds from sale of businesses, net of transaction costs",
+    287.3
+   ],
+   [
+    "Payment for businesses acquired, net of acquired cash",
+    -1109.7
+   ],
+   [
+    "Other, net",
+    -3.2
+   ],
+   [
+    "Net cash used for investing activities",
+    -1269.5
+   ],
+   [
+    "Proceeds from short-term debt",
+    5.0
+   ],
+   [
+    "Payment of short-term debt",
+    -5.0
+   ],
+   [
+    "Payment of current maturities and long-term debt",
+    -1463.3
+   ],
+   [
+    "Proceeds from issuance of long-term debt",
+    2200.0
+   ],
+   [
+    "Debt discounts and issuance costs",
+    -15.3
+   ],
+   [
+    "Purchases of common stock",
+    -60.3
+   ],
+   [
+    "Dividends paid",
+    -132.3
+   ],
+   [
+    "Proceeds from exercise of stock options",
+    0.0
+   ],
+   [
+    "Share-based compensation, shares withheld for taxes",
+    -25.3
+   ],
+   [
+    "Excess tax benefits from share-based compensation",
+    0.0
+   ],
+   [
+    "Net cash provided by (used for) financing activities",
+    503.4
+   ],
+   [
+    "Net increase (decrease) in cash and cash equivalents and restricted cash",
+    -121.4
+   ],
+   [
+    "Cash and cash equivalents and restricted cash at beginning of year",
+    268.0
+   ],
+   [
+    "Cash and cash equivalents and restricted cash at end of year",
+    146.6
+   ]
+  ],
+  "notes": "FY2017 10-K cash flow statement (ASU 2016-18 early adopted Q4-17: cash basis includes restricted cash). The Q4-17 release showed Proceeds from short-term debt 355.0 and LTD issuance 1,850.0; the 10-K re-presents as 5.0 / 2,200.0 ($350m term loan classified long-term). Total debt_proceeds identical (2,205.0). other_op = cost of debt purchase 140.8 + other, net 13.0. other_fin = debt discounts & issuance costs -15.3 + shares withheld for taxes -25.3."
+ },
+ "bs": {
+  "cash": 141.6,
+  "restricted_cash": 5.0,
+  "ar_net": 588.3,
+  "inventories": 384.3,
+  "other_current": 60.8,
+  "assets_held_for_sale": null,
+  "total_current_assets": 1180.1,
+  "invest_lt_rec": 35.1,
+  "ppe_net": 3918.9,
+  "rou_assets": null,
+  "goodwill": 3122.3,
+  "intangibles": 1063.6,
+  "other_noncurrent": 184.8,
+  "total_assets": 9504.9,
+  "current_maturities": 41.4,
+  "short_term_debt": 0.0,
+  "payables": 197.3,
+  "other_current_liab": 204.2,
+  "liab_held_for_sale": null,
+  "total_current_liab": 442.9,
+  "ltd": 2813.5,
+  "deferred_tax": 464.1,
+  "deferred_revenue": 191.5,
+  "lt_lease": null,
+  "other_noncurrent_liab": 624.1,
+  "total_liabilities": 4536.0,
+  "common_stock": 132.3,
+  "capital_excess": 2805.6,
+  "retained_earnings": 2180.4,
+  "aoci": -149.5,
+  "total_vulcan_equity": 4968.9,
+  "nci": 0.0,
+  "total_equity": 4968.9,
+  "total_liab_equity": 9504.9,
+  "shares_outstanding_end": 132.324,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    141.6
+   ],
+   [
+    "Restricted cash",
+    5.0
+   ],
+   [
+    "Accounts and notes receivable - Customers, less allowance",
+    434.1
+   ],
+   [
+    "Accounts and notes receivable - Other",
+    154.2
+   ],
+   [
+    "Inventories",
+    384.3
+   ],
+   [
+    "Prepaid expenses",
+    60.8
+   ],
+   [
+    "Total current assets",
+    1180.1
+   ],
+   [
+    "Investments and long-term receivables",
+    35.1
+   ],
+   [
+    "Property, plant & equipment, net",
+    3918.9
+   ],
+   [
+    "Goodwill",
+    3122.3
+   ],
+   [
+    "Other intangible assets, net",
+    1063.6
+   ],
+   [
+    "Other noncurrent assets",
+    184.8
+   ],
+   [
+    "Total assets",
+    9504.9
+   ],
+   [
+    "Current maturities of long-term debt",
+    41.4
+   ],
+   [
+    "Trade payables and accruals",
+    197.3
+   ],
+   [
+    "Accrued salaries, wages and management incentives",
+    87.2
+   ],
+   [
+    "Accrued interest",
+    11.7
+   ],
+   [
+    "Other current liabilities",
+    105.3
+   ],
+   [
+    "Total current liabilities",
+    442.9
+   ],
+   [
+    "Long-term debt",
+    2813.5
+   ],
+   [
+    "Deferred income taxes, net",
+    464.1
+   ],
+   [
+    "Deferred management incentive and other compensation",
+    19.9
+   ],
+   [
+    "Pension benefits",
+    245.4
+   ],
+   [
+    "Other postretirement benefits",
+    37.9
+   ],
+   [
+    "Asset retirement obligations",
+    218.1
+   ],
+   [
+    "Deferred revenue",
+    191.5
+   ],
+   [
+    "Other noncurrent liabilities",
+    102.8
+   ],
+   [
+    "Total liabilities",
+    4536.0
+   ],
+   [
+    "Common stock, $1 par value",
+    132.3
+   ],
+   [
+    "Capital in excess of par value",
+    2805.6
+   ],
+   [
+    "Retained earnings",
+    2180.4
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -149.5
+   ],
+   [
+    "Total equity",
+    4968.9
+   ],
+   [
+    "Total liabilities and equity",
+    9504.9
+   ]
+  ],
+  "notes": "FY2017 10-K balance sheet. NOTE: the Q4-17 release balance sheet showed Short-term debt 350.0 (current) and Long-term debt 2,463.5; the 10-K classifies the $350m as long-term debt (2,813.5) with no short-term debt (total current liabilities 442.9 vs 792.9 in release). 10-K used. ar_net = customer + other receivables; other_current_liab = accrued salaries 87.2 + accrued interest 11.7 + other 105.3; other_noncurrent_liab = deferred comp 19.9 + pension 245.4 + OPEB 37.9 + ARO 218.1 + other 102.8. TCJA cut deferred income taxes to 464.1 (from 702.9)."
+ },
+ "extra": {
+  "reserves_bn_tons": 16.0,
+  "dps_declared": 1.0,
+  "capex_by_segment": {
+   "aggregates": 422.0,
+   "asphalt": 13.0,
+   "concrete": 25.2,
+   "cement": null,
+   "calcium": 0.1,
+   "corporate": 4.0
+  },
+  "seg_dda_annual": {
+   "aggregates": 245.2,
+   "asphalt": 25.4,
+   "concrete": 13.8,
+   "cement": null,
+   "calcium": 0.7,
+   "other": 20.9
+  },
+  "employees": 8287,
+  "acquisition_revenue_contribution": 162.5,
+  "notes": "Reserves 16.0bn tons (10-K). Employees = 7,900 US + 386 Mexico + 1 Bahamas as of 1-Jan-2018 (summed). Segment capex (10-K) total 464.2 vs cash capex 459.6. Acquisition revenue = 'Actual Results' total revenues of 2017 material acquisitions (Aggregates USA, Tennessee asphalt, etc.) per 10-K Note 19: $162.5m (net earnings $11.8m); pro forma 2017 revenues $4,015.9m."
+ }
+}

@@ -1,0 +1,602 @@
+{
+ "period": "2007",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000115752308001380/a5610709ex99_1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000095014408001522/g11999e10vk.htm",
+  "10k_ex13_annual_report": "https://www.sec.gov/Archives/edgar/data/1396009/000095014408001522/g11999exv13.htm",
+  "seg_recast_fy08_10k": "https://www.sec.gov/Archives/edgar/data/1396009/000095014409001772/g17356e10vk.htm",
+  "interseg_split_fy09_10k": "https://www.sec.gov/Archives/edgar/data/1396009/000095012310018400/g21744e10vk.htm"
+ },
+ "seg": {
+  "agg_rev": 2316.7,
+  "agg_interseg": null,
+  "agg_fa_rev": null,
+  "agg_freight_rev": null,
+  "agg_other_rev": null,
+  "agg_tons": 231.2,
+  "agg_price": 9.35,
+  "agg_gp": 828.7,
+  "agg_dda": 246.9,
+  "agg_cgp": null,
+  "asph_rev": null,
+  "asph_interseg": null,
+  "asph_tons": 10.5,
+  "asph_price": 48.47,
+  "asph_gp": null,
+  "asph_dda": null,
+  "asph_cgp": null,
+  "conc_rev": null,
+  "conc_interseg": null,
+  "conc_cy": 2.6,
+  "conc_price": 95.56,
+  "conc_gp": null,
+  "conc_dda": null,
+  "conc_cgp": null,
+  "cem_rev": 7.7,
+  "cem_interseg": null,
+  "cem_gp": 0.0,
+  "cem_dda": 1.9,
+  "calc_rev": null,
+  "calc_gp": null,
+  "calc_dda": null,
+  "other_seg_label": "Asphalt mix and Concrete (combined reporting segment)",
+  "other_seg_rev": 765.7,
+  "other_seg_gp": 122.2,
+  "seg_sales_total": 3090.1,
+  "interseg_total": null,
+  "delivery_rev": 237.7,
+  "other_dda": 2.4,
+  "total_dda": 271.5,
+  "gp_total": 950.9,
+  "notes": "As originally reported in the FY2007 10-K Note 15 and Q4-07 release: after the 16-Nov-2007 Florida Rock acquisition Vulcan reported three segments (Aggregates; Asphalt mix and Concrete combined; Cement) with segment revenues shown NET of intersegment sales (agg 2,316.7, A&C 765.7, cement 7.7; intersegment not disclosed -> interseg fields null). Asphalt mix and Concrete are a single combined segment, so revenue/GP sit in other_seg_* (other_seg_dda 20.3 added key); asph_*/conc_* hold only volumes and prices. Cement GP reported as '-' (0.0). Prices are LEGACY Vulcan averages (exclude Florida Rock), freight-adjusted for aggregates incl. internal sales; volumes include Florida Rock post-closing. agg_tons incl. 12.0m internal tons; cement 0.142m tons. total_dda = 271.5 per 10-K segment table/CF; the Q4-07 release IS memo line showed 272.8 (used in its EBITDA reconciliation). No freight-to-remote-sites split disclosed for 2007. See seg_recast for the FY2008 10-K basis incl. intersegment.",
+  "other_seg_dda": 20.3,
+  "other_seg_interseg": null
+ },
+ "seg_recast": {
+  "agg_rev": 2448.2,
+  "agg_interseg": -131.5,
+  "agg_fa_rev": null,
+  "agg_freight_rev": null,
+  "agg_other_rev": null,
+  "agg_tons": 231.2,
+  "agg_price": 9.35,
+  "agg_gp": 828.7,
+  "agg_dda": 246.9,
+  "agg_cgp": null,
+  "asph_rev": null,
+  "asph_interseg": null,
+  "asph_tons": 10.5,
+  "asph_price": 48.47,
+  "asph_gp": null,
+  "asph_dda": null,
+  "asph_cgp": null,
+  "conc_rev": null,
+  "conc_interseg": null,
+  "conc_cy": 2.6,
+  "conc_price": 95.56,
+  "conc_gp": null,
+  "conc_dda": null,
+  "conc_cgp": null,
+  "cem_rev": 14.1,
+  "cem_interseg": -6.4,
+  "cem_gp": 0.0,
+  "cem_dda": 1.9,
+  "calc_rev": null,
+  "calc_gp": null,
+  "calc_dda": null,
+  "other_seg_label": "Asphalt mix and Concrete (combined reporting segment)",
+  "other_seg_rev": 765.9,
+  "other_seg_gp": 122.2,
+  "seg_sales_total": 3228.2,
+  "interseg_total": -138.1,
+  "delivery_rev": 237.7,
+  "other_dda": 2.4,
+  "total_dda": 271.5,
+  "gp_total": 950.9,
+  "notes": "FY2008 10-K Note 15 presentation (segment revenues incl. intersegment; total intersegment -138.1). Per-segment intersegment split (agg -131.5, A&C -0.2 [other_seg_interseg], cement -6.4) is from the FY2009 10-K segment table. Still three reportable segments (Asphalt mix and Concrete combined), not four. The Q4-08 release showed slightly different 2007 figures (Aggregates 2,445.5, intersegment -135.5).",
+  "other_seg_dda": 20.3,
+  "other_seg_interseg": -0.2
+ },
+ "is": {
+  "total_rev": 3327.8,
+  "net_sales": 3090.1,
+  "delivery_rev": 237.7,
+  "cost_of_rev": 2376.9,
+  "gp": 950.9,
+  "sag": 289.6,
+  "gain_sale": 58.7,
+  "other_op_lines": [
+   [
+    "Other operating expense (income), net",
+    -5.4
+   ],
+   [
+    "Minority interest in earnings of a consolidated subsidiary",
+    -0.2
+   ]
+  ],
+  "other_op": -5.5,
+  "op_earnings": 714.4,
+  "nonop": -5.3,
+  "interest": 41.6,
+  "ebt": 667.5,
+  "tax": 204.4,
+  "cont_ops": 463.1,
+  "disc_ops": -12.2,
+  "net_earnings": 450.9,
+  "nci": 0.0,
+  "ni_vulcan": 450.9,
+  "shares_basic": 97.0,
+  "shares_diluted": 99.4,
+  "eps_cont_dil": 4.66,
+  "eps_dil": 4.54,
+  "eps_basic": 4.65,
+  "dps": 1.84,
+  "notes": "Q4-07 release / FY2007 10-K (identical). interest = interest expense 48.2 - interest income 6.6. Minority interest (0.151) was deducted within operating earnings, so it is in other_op_lines and nci = 0. Gain on sale of PP&E includes the 43.8 California real-estate gain. Florida Rock included from 16-Nov-2007."
+ },
+ "ngaap": {
+  "ebitda_pub": 981.9,
+  "adj_ebitda_pub": null,
+  "ebitda_bridge_tax": 204.4,
+  "ebitda_bridge_lines": [],
+  "adj_items": {
+   "disc_ops": null,
+   "gain_sale": null,
+   "impairment": null,
+   "divested_ops": null,
+   "acquisition": null,
+   "restructuring": null,
+   "legal_env": null,
+   "pension": null,
+   "other": null,
+   "other_label": null
+  },
+  "adj_eps_pub": 4.73,
+  "eps_bridge_lines": [
+   [
+    "GAAP Diluted earnings per share from continuing operations",
+    4.66
+   ],
+   [
+    "After-tax gain per diluted share resulting from sale of California real estate, net",
+    -0.24
+   ],
+   [
+    "After-tax gain per diluted share resulting from the adjustment in the carrying value of the ECU earn-out",
+    -0.01
+   ],
+   [
+    "Florida Rock Acquisition",
+    0.32
+   ],
+   [
+    "Earnings per share from continuing operations, net of tax, as adjusted",
+    4.73
+   ]
+  ],
+  "eps_items_after_tax_ps": 0.07,
+  "eps_discrete_tax_ps": null,
+  "eps_bridge_start_ps": 4.66,
+  "agg_cgp_per_ton_pub": null,
+  "roic_pub": null,
+  "ebt_bridge_lines": [
+   [
+    "GAAP Earnings from continuing operations before income taxes",
+    667.5
+   ],
+   [
+    "Gain on sale of California real estate, net",
+    -40.0
+   ],
+   [
+    "Gain from adjustment in the carrying value of the ECU earn-out",
+    -1.9
+   ],
+   [
+    "Florida Rock Acquisition",
+    32.1
+   ],
+   [
+    "Earnings from continuing operations before income taxes, as adjusted",
+    657.7
+   ]
+  ],
+  "notes": "EBITDA 981.9 per Q4-07 release Table F = EBIT (op earnings 714.4 + other expense -5.3 = 709.1) + DDA from continuing ops 272.8; i.e. continuing-ops basis. Check ni_vulcan + tax + interest + total_dda (271.5) = 968.4 does not equal 981.9 because Vulcan's EBITDA also adds back the discontinued-ops loss (12.2) and uses release DDA 272.8 (vs 271.5 in the 10-K). The Q4-08 release restated 2007 EBITDA to 980.6 (DDA 271.5). No Adjusted EBITDA published; adj_items null. 'As adjusted' EPS excludes the California real-estate gain, ECU earn-out gain and Florida Rock acquisition effects (0.13 transaction costs, 0.12 higher interest, 0.07 share dilution = 0.32). Pre-tax reconciliation in ebt_bridge_lines (added key). The Q4-08 release re-presented 2007 adjusted EPS as 4.41 (excluding only real-estate and ECU gains)."
+ },
+ "cf": {
+  "net_earnings": 450.9,
+  "dda": 271.5,
+  "noncash_lease": null,
+  "gain_sale": -58.7,
+  "pension_contrib": -1.8,
+  "sbc": 16.9,
+  "deferred_tax": -8.5,
+  "wc_change": 38.6,
+  "other_op": -0.9,
+  "cfo": 708.1,
+  "capex": -483.3,
+  "proceeds_ppe": 88.9,
+  "proceeds_bus": 30.6,
+  "acquisitions": -3297.9,
+  "other_inv": 7.4,
+  "cfi": -3654.3,
+  "debt_proceeds": 3116.2,
+  "debt_repay": -2.1,
+  "buyback": -4.8,
+  "dividends": -181.3,
+  "stock_proceeds": 35.1,
+  "other_fin": -37.2,
+  "cff": 2925.8,
+  "net_change": -20.3,
+  "cash_begin": 55.2,
+  "cash_end": 34.9,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net earnings",
+    450.9
+   ],
+   [
+    "Depreciation, depletion, accretion and amortization",
+    271.5
+   ],
+   [
+    "Net gain on sale of property, plant and equipment",
+    -58.7
+   ],
+   [
+    "Contributions to pension plans",
+    -1.8
+   ],
+   [
+    "Share-based compensation",
+    16.9
+   ],
+   [
+    "Accounts and notes receivable",
+    44.8
+   ],
+   [
+    "Inventories",
+    -29.5
+   ],
+   [
+    "Deferred income taxes (assets)",
+    -18.6
+   ],
+   [
+    "Prepaid expenses",
+    27.2
+   ],
+   [
+    "Customer long-term receivables",
+    -0.1
+   ],
+   [
+    "Other assets",
+    -20.9
+   ],
+   [
+    "Accrued interest and income taxes",
+    18.7
+   ],
+   [
+    "Trade payables and other accruals",
+    -22.5
+   ],
+   [
+    "Deferred income taxes (liabilities)",
+    10.1
+   ],
+   [
+    "Other noncurrent liabilities",
+    -1.3
+   ],
+   [
+    "Other, net (operating)",
+    21.4
+   ],
+   [
+    "Net cash provided by operating activities",
+    708.1
+   ],
+   [
+    "Purchases of property, plant and equipment",
+    -483.3
+   ],
+   [
+    "Proceeds from sale of property, plant and equipment",
+    88.9
+   ],
+   [
+    "Proceeds from sale of Chemicals business, net of cash transaction fees",
+    30.6
+   ],
+   [
+    "Payment for businesses acquired, net of acquired cash",
+    -3297.9
+   ],
+   [
+    "Decrease in investments and long-term receivables",
+    5.0
+   ],
+   [
+    "Other, net (investing)",
+    2.4
+   ],
+   [
+    "Net cash used for investing activities",
+    -3654.3
+   ],
+   [
+    "Net short-term borrowings",
+    1892.6
+   ],
+   [
+    "Payment of short-term debt and current maturities",
+    -2.0
+   ],
+   [
+    "Payment of long-term debt",
+    -0.0
+   ],
+   [
+    "Proceeds from issuance of long-term debt, net of discounts",
+    1223.6
+   ],
+   [
+    "Debt issuance costs",
+    -9.2
+   ],
+   [
+    "Settlements of forward starting interest rate swap agreements",
+    -57.3
+   ],
+   [
+    "Purchases of common stock",
+    -4.8
+   ],
+   [
+    "Dividends paid",
+    -181.3
+   ],
+   [
+    "Proceeds from exercise of stock options",
+    35.1
+   ],
+   [
+    "Excess tax benefits from share-based compensation",
+    29.2
+   ],
+   [
+    "Other, net (financing)",
+    0.0
+   ],
+   [
+    "Net cash provided by (used for) financing activities",
+    2925.8
+   ],
+   [
+    "Net (decrease) increase in cash and cash equivalents",
+    -20.3
+   ]
+  ],
+  "notes": "FY2007 10-K (Ex.13) cash flow as originally reported (DDA 271.5; the Q4-07 release condensed CF also showed 271.5 in CF but 272.8 in its IS memo line). Florida Rock acquisition: cash paid for businesses 3,297.9 (stock issued 1,436.5 noncash). debt_proceeds = net ST borrowings 1,892.6 + LT issuance 1,223.6. other_fin = debt issuance costs, forward-starting swap settlements (-57.3), excess tax benefits (+29.2), other."
+ },
+ "bs": {
+  "cash": 34.9,
+  "restricted_cash": null,
+  "ar_net": 421.9,
+  "inventories": 356.3,
+  "other_current": 84.4,
+  "assets_held_for_sale": 259.8,
+  "total_current_assets": 1157.2,
+  "invest_lt_rec": 25.4,
+  "ppe_net": 3620.1,
+  "rou_assets": null,
+  "goodwill": 3789.1,
+  "intangibles": null,
+  "other_noncurrent": 344.5,
+  "total_assets": 8936.4,
+  "current_maturities": 35.2,
+  "short_term_debt": 2091.5,
+  "payables": 219.5,
+  "other_current_liab": 175.6,
+  "liab_held_for_sale": 6.3,
+  "total_current_liab": 2528.2,
+  "ltd": 1529.8,
+  "deferred_tax": 671.5,
+  "deferred_revenue": null,
+  "lt_lease": null,
+  "other_noncurrent_liab": 446.8,
+  "total_liabilities": 5176.8,
+  "common_stock": 108.2,
+  "capital_excess": 1607.9,
+  "retained_earnings": 2083.7,
+  "aoci": -40.2,
+  "treasury_stock": 0.0,
+  "total_vulcan_equity": 3759.6,
+  "nci": 0.4,
+  "total_equity": 3759.6,
+  "total_liab_equity": 8936.4,
+  "shares_outstanding_end": 108.2,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    34.9
+   ],
+   [
+    "Accounts and notes receivable - customers, net",
+    383.0
+   ],
+   [
+    "Accounts and notes receivable - other",
+    38.8
+   ],
+   [
+    "Inventories",
+    356.3
+   ],
+   [
+    "Deferred income taxes (current)",
+    44.2
+   ],
+   [
+    "Prepaid expenses",
+    40.2
+   ],
+   [
+    "Assets held for sale",
+    259.8
+   ],
+   [
+    "Total current assets",
+    1157.2
+   ],
+   [
+    "Investments and long-term receivables",
+    25.4
+   ],
+   [
+    "Property, plant and equipment, net",
+    3620.1
+   ],
+   [
+    "Goodwill",
+    3789.1
+   ],
+   [
+    "Other assets",
+    344.5
+   ],
+   [
+    "Total assets",
+    8936.4
+   ],
+   [
+    "Current maturities of long-term debt",
+    35.2
+   ],
+   [
+    "Short-term borrowings",
+    2091.5
+   ],
+   [
+    "Trade payables and accruals",
+    219.5
+   ],
+   [
+    "Accrued salaries, wages and management incentives",
+    92.1
+   ],
+   [
+    "Accrued interest",
+    16.1
+   ],
+   [
+    "Current portion of income taxes",
+    1.4
+   ],
+   [
+    "Other accrued liabilities",
+    66.1
+   ],
+   [
+    "Liabilities of assets held for sale",
+    6.3
+   ],
+   [
+    "Total current liabilities",
+    2528.2
+   ],
+   [
+    "Long-term debt",
+    1529.8
+   ],
+   [
+    "Deferred income taxes",
+    671.5
+   ],
+   [
+    "Deferred management incentive and other compensation",
+    90.5
+   ],
+   [
+    "Other postretirement benefits",
+    99.2
+   ],
+   [
+    "Asset retirement obligations",
+    131.4
+   ],
+   [
+    "Noncurrent self-insurance reserve",
+    41.5
+   ],
+   [
+    "Other noncurrent liabilities",
+    84.3
+   ],
+   [
+    "Minority interest",
+    0.4
+   ],
+   [
+    "Total liabilities",
+    5176.8
+   ],
+   [
+    "Common stock, $1 par value",
+    108.2
+   ],
+   [
+    "Capital in excess of par value",
+    1607.9
+   ],
+   [
+    "Retained earnings",
+    2083.7
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -40.2
+   ],
+   [
+    "Treasury stock at cost",
+    0.0
+   ],
+   [
+    "Total shareholders' equity",
+    3759.6
+   ],
+   [
+    "Total liabilities and shareholders' equity",
+    8936.4
+   ]
+  ],
+  "notes": "FY2007 10-K (Ex.13) balance sheet as originally reported. The Q4-07 condensed release differed slightly (goodwill 3,793.9, deferred tax assets 53.4, total assets 8,942.9, LTD 1,528.7, equity 3,760.3); the audited 10-K is used. Minority interest 0.4 was presented within total liabilities (pre-FAS 160) - shown in bs.nci but NOT added to total_equity (total_liabilities 5,176.8 already includes it). Intangibles were inside other assets (FY2008 10-K later split: other intangibles 121.9, other assets 222.6). All treasury shares (44.1m) were cancelled in 2007; 108,234k shares issued = outstanding (10-K cover: 108,373,595 at 15-Feb-2008). Later restated in FY2009 10-K (Note 20): retained earnings 2,109.7."
+ },
+ "extra": {
+  "reserves_bn_tons": 12.7,
+  "dps_declared": 1.84,
+  "capex_by_segment": {
+   "aggregates": 445.0,
+   "asphalt": 24.2,
+   "concrete": null,
+   "cement": 10.3,
+   "calcium": null,
+   "corporate": 1.0
+  },
+  "seg_dda_annual": {
+   "aggregates": 246.9,
+   "asphalt": 20.3,
+   "concrete": null,
+   "cement": 1.9,
+   "calcium": null,
+   "other": 2.4
+  },
+  "employees": 10522,
+  "acquisition_revenue_contribution": null,
+  "notes": "Reserves 12.7bn tons proven & probable (FY2007 10-K; incl. ~1.6bn tons from Florida Rock). Employees as of 1-Jan-2008. 'asphalt' capex/DDA = combined Asphalt mix and Concrete segment. Capex total 480.5 (incl. accrued; cash PP&E purchases 483.3). Florida Rock revenue contribution not quantified (MD&A: legacy Asphalt mix & Concrete net sales fell 60.5 ex-Florida Rock). Florida Rock purchase: ~$4.2bn cash + stock."
+ }
+}

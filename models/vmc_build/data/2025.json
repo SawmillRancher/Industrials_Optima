@@ -1,0 +1,539 @@
+{
+ "period": "2025",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114036126005605/ef20065685_ex99-1.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000162828026009546/vmc-20251231.htm"
+ },
+ "seg": {
+  "agg_rev": 6297.2,
+  "agg_interseg": -497.1,
+  "agg_fa_rev": 4985.4,
+  "agg_freight_rev": 1215.2,
+  "agg_other_rev": 96.6,
+  "agg_tons": 226.8,
+  "agg_price": 21.98,
+  "agg_gp": 1964.8,
+  "agg_dda": 603.5,
+  "agg_cgp": 2568.3,
+  "asph_rev": 1294.4,
+  "asph_interseg": null,
+  "asph_tons": 13.4,
+  "asph_price": 81.93,
+  "asph_gp": 173.9,
+  "asph_dda": 49.8,
+  "asph_cgp": 223.7,
+  "conc_rev": 846.6,
+  "conc_interseg": null,
+  "conc_cy": 4.5,
+  "conc_price": 188.82,
+  "conc_gp": 35.9,
+  "conc_dda": 62.0,
+  "conc_cgp": 97.9,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": null,
+  "calc_gp": null,
+  "calc_dda": null,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 8438.2,
+  "interseg_total": -497.1,
+  "delivery_rev": null,
+  "other_dda": 33.2,
+  "total_dda": 748.5,
+  "gp_total": 2174.6,
+  "notes": "Table D of release (segment revenues include intersegment; aggregates revenue incl. freight & delivery and service revenues). Only aggregates has intersegment sales. Freight/other revenues from Appendix 1 freight-adjusted revenue reconciliation; cash gross profit from Appendix 1."
+ },
+ "is": {
+  "total_rev": 7941.1,
+  "net_sales": null,
+  "delivery_rev": null,
+  "cost_of_rev": 5766.5,
+  "gp": 2174.6,
+  "sag": 564.1,
+  "gain_sale": 52.4,
+  "other_op_lines": [
+   [
+    "Loss on impairments",
+    0.0
+   ],
+   [
+    "Other operating expense, net",
+    -43.3
+   ]
+  ],
+  "other_op": -43.3,
+  "op_earnings": 1619.6,
+  "nonop": -3.2,
+  "interest": 226.3,
+  "ebt": 1390.1,
+  "tax": 307.5,
+  "cont_ops": 1082.6,
+  "disc_ops": -4.5,
+  "net_earnings": 1078.1,
+  "nci": 1.4,
+  "ni_vulcan": 1076.7,
+  "shares_basic": 132.0,
+  "shares_diluted": 132.7,
+  "eps_cont_dil": 8.15,
+  "eps_dil": 8.11,
+  "eps_basic": 8.16,
+  "dps": 1.96
+ },
+ "ngaap": {
+  "ebitda_pub": 2357.4,
+  "adj_ebitda_pub": 2323.6,
+  "ebitda_bridge_tax": 305.9,
+  "ebitda_bridge_lines": [
+   [
+    "Loss on discontinued operations",
+    6.1
+   ],
+   [
+    "Gain on sale of real estate and businesses, net",
+    -42.4
+   ],
+   [
+    "Loss on impairments",
+    0.0
+   ],
+   [
+    "Charges associated with divested operations",
+    0.6
+   ],
+   [
+    "Acquisition related charges",
+    2.0
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": 6.1,
+   "gain_sale": -42.4,
+   "impairment": 0.0,
+   "divested_ops": 0.6,
+   "acquisition": 2.0,
+   "restructuring": 0.0,
+   "legal_env": 0.0,
+   "pension": 0.0,
+   "other": 0.0,
+   "other_label": null
+  },
+  "adj_eps_pub": 8.0,
+  "eps_bridge_lines": [
+   [
+    "Net earnings attributable to Vulcan",
+    8.11
+   ],
+   [
+    "Items included in Adjusted EBITDA above, net of tax",
+    -0.18
+   ],
+   [
+    "NOL carryforward valuation allowance",
+    0.07
+   ],
+   [
+    "Adjusted diluted EPS attributable to Vulcan from continuing operations",
+    8.0
+   ]
+  ],
+  "eps_items_after_tax_ps": -0.18,
+  "eps_discrete_tax_ps": 0.07,
+  "eps_bridge_start_ps": 8.11,
+  "agg_cgp_per_ton_pub": 11.33,
+  "roic_pub": 15.7,
+  "notes": "Vulcan EBITDA = net earnings attributable to Vulcan + income tax (incl. discontinued ops) + interest expense, net + DDA&A; Adjusted EBITDA excludes (gain) loss on discontinued ops (pre-tax), gains on sale of real estate and businesses, impairments, charges associated with divested operations, acquisition related charges (deals requiring antitrust clearance; 2024 incl. Wake Stone inventory step-up $6.4m) and, from Q1-26, CEO transition and reorganization charges. Adjusted EPS = diluted EPS (net earnings, incl. disc ops) + items included in Adjusted EBITDA net of tax + NOL carryforward valuation allowance. roic_pub = TTM ROIC (Adj. EBITDA / avg invested capital, 5-quarter average)."
+ },
+ "cf": {
+  "net_earnings": 1078.1,
+  "dda": 748.5,
+  "noncash_lease": 54.2,
+  "gain_sale": -52.4,
+  "pension_contrib": -14.6,
+  "sbc": 63.1,
+  "deferred_tax": 26.1,
+  "wc_change": -98.7,
+  "other_op": 8.7,
+  "cfo": 1813.0,
+  "capex": -677.7,
+  "proceeds_ppe": 24.1,
+  "proceeds_bus": 127.4,
+  "acquisitions": -13.5,
+  "other_inv": 10.5,
+  "cfi": -529.2,
+  "debt_proceeds": 0.0,
+  "debt_repay": -961.4,
+  "buyback": -438.4,
+  "dividends": -259.8,
+  "stock_proceeds": null,
+  "other_fin": -35.6,
+  "cff": -1695.2,
+  "net_change": -411.4,
+  "cash_begin": 600.8,
+  "cash_end": 189.4,
+  "cash_basis": "cash+restricted",
+  "lines_raw": [
+   [
+    "Net earnings",
+    1078.1
+   ],
+   [
+    "Depreciation, depletion, accretion and amortization",
+    748.5
+   ],
+   [
+    "Noncash operating lease expense",
+    54.2
+   ],
+   [
+    "Net gain on sale of property, plant & equipment and businesses",
+    -52.4
+   ],
+   [
+    "Loss on impairments",
+    0.0
+   ],
+   [
+    "Contributions to pension plans",
+    -14.6
+   ],
+   [
+    "Share-based compensation expense",
+    63.1
+   ],
+   [
+    "Deferred income taxes, net",
+    26.1
+   ],
+   [
+    "Changes in assets and liabilities before initial effects of business acquisitions and dispositions",
+    -98.7
+   ],
+   [
+    "Other, net",
+    8.7
+   ],
+   [
+    "Net cash provided by operating activities",
+    1813.0
+   ],
+   [
+    "Purchases of property, plant & equipment",
+    -677.7
+   ],
+   [
+    "Proceeds from sale of property, plant & equipment",
+    24.1
+   ],
+   [
+    "Proceeds from sale of businesses",
+    127.4
+   ],
+   [
+    "Payment for businesses acquired, net of acquired cash and adjustments",
+    -13.5
+   ],
+   [
+    "Other, net",
+    10.5
+   ],
+   [
+    "Net cash used for investing activities",
+    -529.2
+   ],
+   [
+    "Proceeds from short-term debt",
+    0.0
+   ],
+   [
+    "Payment of short-term debt",
+    -550.0
+   ],
+   [
+    "Payment of current maturities and long-term debt",
+    -400.5
+   ],
+   [
+    "Proceeds from issuance of long-term debt",
+    0.0
+   ],
+   [
+    "Debt issuance and exchange costs",
+    0.0
+   ],
+   [
+    "Payment of finance leases",
+    -10.9
+   ],
+   [
+    "Purchases of common stock",
+    -438.4
+   ],
+   [
+    "Dividends paid",
+    -259.8
+   ],
+   [
+    "Share-based compensation, shares withheld for taxes",
+    -34.0
+   ],
+   [
+    "Distribution to noncontrolling interest",
+    -1.5
+   ],
+   [
+    "Other, net",
+    -0.1
+   ],
+   [
+    "Net cash provided by (used for) financing activities",
+    -1695.2
+   ],
+   [
+    "Net decrease in cash and cash equivalents and restricted cash",
+    -411.4
+   ],
+   [
+    "Cash and cash equivalents and restricted cash at beginning of year",
+    600.8
+   ],
+   [
+    "Cash and cash equivalents and restricted cash at end of period",
+    189.4
+   ]
+  ],
+  "notes": "Twelve months from Q4 release Table C (agrees with 10-K). other_op = Loss on impairments + Other, net. debt_proceeds = short-term borrowings + LT debt issuance; debt_repay incl. finance lease payments. other_fin = debt issuance costs, shares withheld for taxes, NCI distributions, other. stock_proceeds not presented (null)."
+ },
+ "bs": {
+  "cash": 183.3,
+  "restricted_cash": 6.1,
+  "ar_net": 887.7,
+  "inventories": 680.5,
+  "other_current": 101.8,
+  "assets_held_for_sale": 708.5,
+  "total_current_assets": 2567.9,
+  "invest_lt_rec": 33.7,
+  "ppe_net": 8148.6,
+  "rou_assets": 521.5,
+  "goodwill": 3780.9,
+  "intangibles": 1489.0,
+  "other_noncurrent": 158.8,
+  "total_assets": 16700.4,
+  "current_maturities": 0.4,
+  "short_term_debt": null,
+  "payables": 438.5,
+  "other_current_liab": 487.9,
+  "liab_held_for_sale": 29.3,
+  "total_current_liab": 956.1,
+  "ltd": 4361.7,
+  "deferred_tax": 1358.3,
+  "deferred_revenue": 130.6,
+  "lt_lease": 522.6,
+  "other_noncurrent_liab": 822.2,
+  "total_liabilities": 8151.5,
+  "common_stock": 130.6,
+  "capital_excess": 2930.0,
+  "retained_earnings": 5590.1,
+  "aoci": -125.6,
+  "total_vulcan_equity": 8525.1,
+  "nci": 23.8,
+  "total_equity": 8548.9,
+  "total_liab_equity": 16700.4,
+  "shares_outstanding_end": 130.6,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    183.3
+   ],
+   [
+    "Restricted cash",
+    6.1
+   ],
+   [
+    "Accounts and notes receivable, gross",
+    898.2
+   ],
+   [
+    "Allowance for credit losses",
+    -10.5
+   ],
+   [
+    "Accounts and notes receivable, net",
+    887.7
+   ],
+   [
+    "Finished products",
+    557.7
+   ],
+   [
+    "Raw materials",
+    36.7
+   ],
+   [
+    "Products in process",
+    5.4
+   ],
+   [
+    "Operating supplies and other",
+    80.7
+   ],
+   [
+    "Inventories",
+    680.5
+   ],
+   [
+    "Other current assets",
+    101.8
+   ],
+   [
+    "Assets held for sale",
+    708.5
+   ],
+   [
+    "Total current assets",
+    2567.9
+   ],
+   [
+    "Investments and long-term receivables",
+    33.7
+   ],
+   [
+    "Property, plant & equipment, cost",
+    14504.7
+   ],
+   [
+    "Allowances for depreciation, depletion & amortization",
+    -6356.1
+   ],
+   [
+    "Property, plant & equipment, net",
+    8148.6
+   ],
+   [
+    "Operating lease right-of-use assets, net",
+    521.5
+   ],
+   [
+    "Goodwill",
+    3780.9
+   ],
+   [
+    "Other intangible assets, net",
+    1489.0
+   ],
+   [
+    "Other noncurrent assets",
+    158.8
+   ],
+   [
+    "Total assets",
+    16700.4
+   ],
+   [
+    "Current maturities of long-term debt",
+    0.4
+   ],
+   [
+    "Trade payables and accruals",
+    438.5
+   ],
+   [
+    "Other current liabilities",
+    487.9
+   ],
+   [
+    "Liabilities held for sale",
+    29.3
+   ],
+   [
+    "Total current liabilities",
+    956.1
+   ],
+   [
+    "Long-term debt",
+    4361.7
+   ],
+   [
+    "Deferred income taxes, net",
+    1358.3
+   ],
+   [
+    "Deferred revenue",
+    130.6
+   ],
+   [
+    "Noncurrent operating lease liabilities",
+    522.6
+   ],
+   [
+    "Other noncurrent liabilities",
+    822.2
+   ],
+   [
+    "Total liabilities",
+    8151.5
+   ],
+   [
+    "Common stock, $1 par value",
+    130.6
+   ],
+   [
+    "Capital in excess of par value",
+    2930.0
+   ],
+   [
+    "Retained earnings",
+    5590.1
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -125.6
+   ],
+   [
+    "Total shareholder\u2019s equity",
+    8525.1
+   ],
+   [
+    "Noncontrolling interest",
+    23.8
+   ],
+   [
+    "Total equity",
+    8548.9
+   ],
+   [
+    "Total liabilities and equity",
+    16700.4
+   ]
+  ],
+  "notes": "Balance sheet at 31-Dec from Q4 release Table B (as originally reported; matches 10-K). No short-term debt line presented (null). shares_outstanding_end = common stock at $1 par (m shares)."
+ },
+ "extra": {
+  "reserves_bn_tons": 16.6,
+  "dps_declared": 1.96,
+  "capex_by_segment": {
+   "aggregates": 622.1,
+   "asphalt": 37.4,
+   "concrete": 15.3,
+   "cement": null,
+   "calcium": null,
+   "corporate": 28.1
+  },
+  "seg_dda_annual": {
+   "aggregates": 603.5,
+   "asphalt": 49.8,
+   "concrete": 62.0,
+   "cement": null,
+   "calcium": null,
+   "other": 33.2
+  },
+  "employees": 11548,
+  "acquisition_revenue_contribution": null,
+  "notes": "Employees = 11,172 US + 280 Mexico + 32 Honduras + 63 Canada + 1 Bahamas as of 1-Jan-2026 (summed). Capex by segment from 10-K segment note (total 702.9; CF purchases of PP&E 677.7). No business acquisitions in 2025. Q4-25: Houston asphalt mix & construction paving divested (pretax gain $42.4m); California ready-mix held for sale at 31-Dec-25 (assets $708.5m, liabilities $29.3m). Remaining buyback authorization 5,272,677 shares at 31-Dec-25."
+ },
+ "notes": null,
+ "checks_failed": []
+}

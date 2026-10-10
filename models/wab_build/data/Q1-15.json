@@ -1,0 +1,480 @@
+{
+ "period": "Q1-15",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/943452/000119312515141089/d913801dex991.htm",
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/943452/000156459015003068/wab-10q_20150331.htm"
+ },
+ "seg": {
+  "frt_rev": 511.9,
+  "frt_op": 111.6,
+  "frt_gp": null,
+  "frt_adj_gp": null,
+  "frt_adj_op": null,
+  "trn_rev": 306.7,
+  "trn_op": 41.4,
+  "trn_gp": null,
+  "trn_adj_gp": null,
+  "trn_adj_op": null,
+  "corp_op": -4.6,
+  "seg_rev_note": "Freight Group / Transit Group sales to external customers. Segment income from operations from the 10-Q/10-K segment note (not in the release).",
+  "frt_pl": {
+   "services": null,
+   "equipment": null,
+   "components": null,
+   "digital": null,
+   "other": null,
+   "labels": null
+  },
+  "trn_pl": {
+   "oe": null,
+   "aftermarket": null
+  },
+  "legacy_pl": [
+   [
+    "Specialty Products & Electronics",
+    425.5
+   ],
+   [
+    "Brake Products",
+    167.4
+   ],
+   [
+    "Remanufacturing, Overhaul & Build",
+    136.7
+   ],
+   [
+    "Other Transit Products",
+    46.8
+   ],
+   [
+    "Other",
+    42.2
+   ]
+  ],
+  "backlog_total": null,
+  "backlog_12m": null,
+  "frt_backlog_total": null,
+  "frt_backlog_12m": null,
+  "trn_backlog_total": null,
+  "trn_backlog_12m": null,
+  "bridge": {
+   "frt": {
+    "acq": 18.1,
+    "divest": null,
+    "fx": -10.4,
+    "organic": 118.6
+   },
+   "trn": {
+    "acq": 59.8,
+    "divest": null,
+    "fx": -28.3,
+    "organic": -34.5
+   },
+   "total": {
+    "acq": 78.0,
+    "divest": null,
+    "fx": -38.7,
+    "organic": 84.1
+   }
+  },
+  "loco_deliveries": null,
+  "notes": "legacy_pl = 10-Q 'Sales by product' three-month table. Bridge from 10-Q MD&A 'major components of the change in sales' table (acquisitions and foreign exchange as published; organic = sum of the published 'Change in Sales by Product Line' rows, i.e. total change - acquisitions - FX, computed). Bridge rows ($m, Freight/Transit/Total): [[\"In thousands Segment Segment Total First Quarter 2014 Net Sales\", [385.5, 309.7, 695.2]], [\"Acquisitions\", [18.1, 59.8, 78.0]], [\"Specialty Products & Electronics\", [84.5, 3.2, 87.8]], [\"Brake Products\", [14.7, 3.5, 18.2]], [\"Remanufacturing, Overhaul & Build\", [12.9, -37.8, -24.9]], [\"Other Transit Products\", [0.0, -3.3, -3.3]], [\"Other\", [6.5, -0.2, 6.3]], [\"Foreign exchange\", [-10.4, -28.3, -38.7]], [\"First Quarter 2015 Net Sales\", [511.9, 306.7, 818.6]]]. Backlog is disclosed only annually in the 10-K (null for interim quarters)."
+ },
+ "is": {
+  "net_sales": 818.6,
+  "cost_of_sales": 563.2,
+  "gp": 255.4,
+  "sga": 84.8,
+  "eng": 16.9,
+  "amort": 5.3,
+  "other_op_lines": [],
+  "total_opex": 106.9,
+  "op_income": 148.4,
+  "interest": 4.3,
+  "other_inc": -2.9,
+  "ebt": 141.2,
+  "tax": 45.1,
+  "cont_ops": 96.2,
+  "disc_ops": 0.0,
+  "net_income": 96.2,
+  "nci": 0.0,
+  "ni_wab": 96.2,
+  "shares_basic": 96.24,
+  "shares_diluted": 97.39,
+  "eps_basic": 1.0,
+  "eps_dil": 0.99,
+  "eps_cont_dil": 0.99,
+  "dps": 0.06,
+  "per_share_basis": "post_split"
+ },
+ "ngaap": {
+  "adj_table": [],
+  "adj_eps_pub": null,
+  "adj_op_pub": null,
+  "adj_gp_pub": null,
+  "adj_ni_pub": null,
+  "adj_dil_shares": null,
+  "eps_bridge_lines": [],
+  "eps_bridge_start_ps": null,
+  "ebitda_lines": [],
+  "ebitda_op": null,
+  "ebitda_other": null,
+  "ebitda_dda": null,
+  "ebitda_pub": null,
+  "ebitda_adj_items": null,
+  "adj_ebitda_pub": null,
+  "items": {
+   "restructuring": null,
+   "transaction": null,
+   "inventory_pa": null,
+   "amortization": null,
+   "contract": null,
+   "litigation": null,
+   "other_op": null,
+   "nonop": null,
+   "tax_effect": null,
+   "discrete_tax": null,
+   "other_label": null
+  },
+  "guidance": "Raised 2015 guidance: EPS about $4.10 (diluted), revenues expected up about 10% for the year.",
+  "notes": "No reconciliation table or EBITDA reconciliation published in the release (2015-2016 releases contain only the GAAP income statement and segment sales)."
+ },
+ "cf": {
+  "ytd_months": 3,
+  "net_income": 96.2,
+  "dda": 15.6,
+  "sbc": 8.8,
+  "deferred_tax": null,
+  "gain_loss": 0.1,
+  "wc_change": -76.7,
+  "other_op": -0.3,
+  "cfo": 43.7,
+  "capex": -8.5,
+  "acquisitions": -75.7,
+  "proceeds_disp": 0.1,
+  "other_inv": 0.0,
+  "cfi": -84.0,
+  "debt_proceeds": 111.7,
+  "debt_repay": -211.8,
+  "buyback": 0.0,
+  "dividends": -5.8,
+  "stock_proceeds": 0.4,
+  "other_fin": -14.3,
+  "cff": -119.8,
+  "fx": -16.6,
+  "net_change": -176.7,
+  "cash_begin": 425.8,
+  "cash_end": 249.1,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net income attributable to Wabtec shareholders",
+    96.2
+   ],
+   [
+    "Depreciation and amortization",
+    15.6
+   ],
+   [
+    "Stock-based compensation expense",
+    8.8
+   ],
+   [
+    "Loss on disposal of property, plant and equipment",
+    0.1
+   ],
+   [
+    "Excess income tax benefits from exercise of stock options",
+    -0.3
+   ],
+   [
+    "Accounts receivable and unbilled accounts receivable",
+    -39.5
+   ],
+   [
+    "Inventories",
+    -18.5
+   ],
+   [
+    "Accounts payable",
+    -12.9
+   ],
+   [
+    "Accrued income taxes",
+    24.6
+   ],
+   [
+    "Accrued liabilities and customer deposits",
+    -16.5
+   ],
+   [
+    "Other assets and liabilities",
+    -13.8
+   ],
+   [
+    "Net cash provided by operating activities",
+    43.7
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -8.5
+   ],
+   [
+    "Proceeds from disposal of property, plant and equipment",
+    0.1
+   ],
+   [
+    "Acquisitions of businesses, net of cash acquired",
+    -75.7
+   ],
+   [
+    "Net cash used for investing activities",
+    -84.0
+   ],
+   [
+    "Proceeds from debt",
+    111.7
+   ],
+   [
+    "Payments of debt",
+    -211.8
+   ],
+   [
+    "Purchase of treasury stock",
+    0.0
+   ],
+   [
+    "Proceeds from exercise of stock options and other benefit plans",
+    0.4
+   ],
+   [
+    "Excess income tax benefits from exercise of stock options",
+    0.3
+   ],
+   [
+    "Payment of income tax withholding on share-based compensation",
+    -14.6
+   ],
+   [
+    "Earn-out settlement",
+    0.0
+   ],
+   [
+    "Cash dividends ($0.06 and $0.04 per share for the three months ended March 31, 2015 and 2014, respectively)",
+    -5.8
+   ],
+   [
+    "Net cash used for financing activities",
+    -119.8
+   ],
+   [
+    "Effect of changes in currency exchange rates",
+    -16.6
+   ],
+   [
+    "(Decrease) increase in cash",
+    -176.7
+   ],
+   [
+    "Cash, beginning of period",
+    425.8
+   ],
+   [
+    "Cash, end of period",
+    249.1
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 249.1,
+  "restricted_cash": null,
+  "receivables": 495.7,
+  "unbilled": 170.0,
+  "inventories": 515.9,
+  "other_current": 73.2,
+  "total_current_assets": 1503.9,
+  "ppe": 349.0,
+  "goodwill": 834.2,
+  "intangibles": 441.4,
+  "other_noncurrent": 39.0,
+  "total_assets": 3167.5,
+  "ap": 381.3,
+  "customer_deposits": 106.9,
+  "accrued_comp": 62.9,
+  "accrued_warranty": 63.6,
+  "current_debt": 0.6,
+  "other_current_liab": 80.5,
+  "total_current_liab": 695.8,
+  "ltd": 420.4,
+  "pension": 78.1,
+  "deferred_tax": 113.8,
+  "lt_lease": null,
+  "other_ncl": 42.1,
+  "total_liabilities": 1350.2,
+  "common_apic": 450.9,
+  "treasury": -388.6,
+  "retained": 1999.5,
+  "aoci": -245.6,
+  "wab_equity": 1816.2,
+  "nci": 1.1,
+  "total_equity": 1817.4,
+  "total_le": 3167.5,
+  "shares_outstanding_end": 96.61,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    249.1
+   ],
+   [
+    "Accounts receivable",
+    495.7
+   ],
+   [
+    "Unbilled accounts receivable",
+    170.0
+   ],
+   [
+    "Inventories",
+    515.9
+   ],
+   [
+    "Deferred income taxes",
+    44.4
+   ],
+   [
+    "Other",
+    28.8
+   ],
+   [
+    "Total current assets",
+    1503.9
+   ],
+   [
+    "Property, plant and equipment",
+    694.0
+   ],
+   [
+    "Accumulated depreciation",
+    -344.9
+   ],
+   [
+    "Property, plant and equipment, net",
+    349.0
+   ],
+   [
+    "Goodwill",
+    834.2
+   ],
+   [
+    "Other intangibles, net",
+    441.4
+   ],
+   [
+    "Other noncurrent assets",
+    39.0
+   ],
+   [
+    "Total other assets",
+    1314.5
+   ],
+   [
+    "Total Assets",
+    3167.5
+   ],
+   [
+    "Accounts payable",
+    381.3
+   ],
+   [
+    "Customer deposits",
+    106.9
+   ],
+   [
+    "Accrued compensation",
+    62.9
+   ],
+   [
+    "Accrued warranty",
+    63.6
+   ],
+   [
+    "Current portion of long-term debt",
+    0.6
+   ],
+   [
+    "Other accrued liabilities",
+    80.5
+   ],
+   [
+    "Total current liabilities",
+    695.8
+   ],
+   [
+    "Long-term debt",
+    420.4
+   ],
+   [
+    "Accrued postretirement and pension benefits",
+    78.1
+   ],
+   [
+    "Deferred income taxes",
+    113.8
+   ],
+   [
+    "Accrued warranty",
+    21.5
+   ],
+   [
+    "Other long-term liabilities",
+    20.6
+   ],
+   [
+    "Total liabilities",
+    1350.2
+   ],
+   [
+    "Preferred stock, 1,000,000 shares authorized, no shares issued",
+    0.0
+   ],
+   [
+    "Common stock, $.01 par value",
+    1.3
+   ],
+   [
+    "Additional paid-in capital",
+    449.6
+   ],
+   [
+    "Treasury stock, at cost",
+    -388.6
+   ],
+   [
+    "Retained earnings",
+    1999.5
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -245.6
+   ],
+   [
+    "Total Westinghouse Air Brake Technologies Corporation shareholders' equity",
+    1816.2
+   ],
+   [
+    "Non-controlling interest (minority interest)",
+    1.1
+   ],
+   [
+    "Total shareholders’ equity",
+    1817.4
+   ],
+   [
+    "Total Liabilities and Shareholders’ Equity",
+    3167.5
+   ]
+  ]
+ },
+ "notes": "dps = dividends declared per share for the quarter (10-K Item 5 table). Net income attributable to NCI not presented (not material) before the Nov-2016 Faiveley consolidation; nci set to 0 where no NCI line is shown.",
+ "self_check_failures": []
+}

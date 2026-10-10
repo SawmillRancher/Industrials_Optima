@@ -1,0 +1,164 @@
+{
+ "period": "Q4-18",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1396009/000114420419007543/tv513638_ex99-1.htm",
+  "10k": "https://www.sec.gov/Archives/edgar/data/1396009/000139600919000021/vmc-20181231x10k.htm"
+ },
+ "seg": {
+  "agg_rev": 874.0,
+  "agg_interseg": -66.3,
+  "agg_fa_rev": 657.6,
+  "agg_freight_rev": 203.5,
+  "agg_other_rev": 12.9,
+  "agg_tons": 49.716,
+  "agg_price": 13.23,
+  "agg_gp": 256.4,
+  "agg_dda": 73.2,
+  "agg_cgp": 329.6,
+  "asph_rev": 185.8,
+  "asph_interseg": null,
+  "asph_tons": 2.769,
+  "asph_price": 56.03,
+  "asph_gp": 6.6,
+  "asph_dda": 8.6,
+  "asph_cgp": null,
+  "conc_rev": 92.6,
+  "conc_interseg": null,
+  "conc_cy": 0.737,
+  "conc_price": 124.34,
+  "conc_gp": 11.8,
+  "conc_dda": 3.0,
+  "conc_cgp": null,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": 2.0,
+  "calc_gp": 0.5,
+  "calc_dda": 0.1,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 1154.4,
+  "interseg_total": -66.3,
+  "delivery_rev": null,
+  "other_dda": 4.9,
+  "total_dda": 89.8,
+  "gp_total": 275.3,
+  "notes": "2018 accounting changes: ASC 606 adopted 1-Jan-2018 (modified retrospective; company states no change to amount/timing of revenue). Freight & delivery revenues are now included inside segment revenues/total revenues - no separate 'delivery revenues' line (delivery_rev = null); Aggregates freight & delivery revenues shown via the freight-adjusted revenue reconciliation. ASU 2017-07 adopted 2018: non-service components of net periodic pension/OPEB cost moved from cost of revenues/SAG to 'Other nonoperating income, net' (prior periods revised; segment GP affected). ASU 2016-18 adopted 2018: cash flow statement reconciles cash + restricted cash. Segment revenues include freight & delivery (pass-through) and service revenues; intersegment sales are all Aggregates (asph/conc interseg = null, none reported). agg_price = freight-adjusted ASP as published. Calcium: 69k tons @ $28.48/t. agg_cgp per published Aggregates segment cash gross profit reconciliation (GP + segment DDA&A). Q4 = three-months column of the Q4 release (not derived)."
+ },
+ "is": {
+  "total_rev": 1088.0,
+  "net_sales": null,
+  "delivery_rev": null,
+  "cost_of_rev": 812.8,
+  "gp": 275.3,
+  "sag": 84.4,
+  "gain_sale": 6.6,
+  "other_op_lines": [
+   [
+    "Other operating expense, net",
+    -11.0
+   ]
+  ],
+  "other_op": -11.0,
+  "op_earnings": 186.5,
+  "nonop": 0.3,
+  "interest": 32.9,
+  "ebt": 153.9,
+  "tax": 29.6,
+  "cont_ops": 124.3,
+  "disc_ops": -0.3,
+  "net_earnings": 124.0,
+  "nci": 0.0,
+  "ni_vulcan": 124.0,
+  "shares_basic": 132.06,
+  "shares_diluted": 133.369,
+  "eps_cont_dil": 0.93,
+  "eps_dil": 0.93,
+  "eps_basic": 0.94,
+  "dps": 0.28,
+  "notes": "dps 0.28 derived = FY2018 1.12 (10-K) - 9M 0.84 (Q3-18 release); Q4-18 release does not show DPS. Vulcan has no noncontrolling interests; nci = 0, ni_vulcan = net earnings. ASU 2017-07: other nonoperating income includes non-service pension/OPEB cost/credit."
+ },
+ "ngaap": {
+  "ebitda_pub": 276.6,
+  "adj_ebitda_pub": 285.6,
+  "ebitda_bridge_tax": 29.6,
+  "ebitda_bridge_disc_ops": 0.3,
+  "ebitda_bridge_lines": [
+   [
+    "Gain on sale of businesses",
+    0.0
+   ],
+   [
+    "Property donation",
+    0.0
+   ],
+   [
+    "Business interruption claims recovery, net of incentives",
+    0.0
+   ],
+   [
+    "Charges associated with divested operations",
+    8.5
+   ],
+   [
+    "Business development, net of termination fee",
+    0.0
+   ],
+   [
+    "One-time employee bonuses",
+    0.0
+   ],
+   [
+    "Restructuring charges",
+    0.5
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": null,
+   "gain_sale": 0.0,
+   "impairment": 0.0,
+   "divested_ops": 8.5,
+   "acquisition": 0.0,
+   "restructuring": 0.5,
+   "legal_env": 0.0,
+   "pension": 0.0,
+   "other": 0.0,
+   "other_label": null
+  },
+  "adj_eps_pub": 0.99,
+  "eps_bridge_lines": [
+   [
+    "Diluted EPS",
+    0.93
+   ],
+   [
+    "Items included in Adjusted EBITDA above",
+    0.06
+   ],
+   [
+    "Interest charges associated with debt purchase",
+    0.0
+   ],
+   [
+    "Debt refinancing costs",
+    0.0
+   ],
+   [
+    "Tax reform income tax savings",
+    0.0
+   ],
+   [
+    "Alabama NOL carryforward valuation allowance",
+    0.0
+   ]
+  ],
+  "eps_items_after_tax_ps": 0.06,
+  "eps_discrete_tax_ps": 0.0,
+  "eps_bridge_start_ps": 0.93,
+  "agg_cgp_per_ton_pub": 6.63,
+  "roic_pub": null,
+  "notes": "Reconciliation (exact): Net earnings + income tax expense (continuing ops) + interest expense, net + (earnings) loss on discontinued operations, net of tax [+0.3] = EBIT; + DDA&A = EBITDA. So ni_vulcan + ebitda_bridge_tax + interest + total_dda differs from ebitda_pub by exactly that discontinued-ops add-back (0.3; extra field ebitda_bridge_disc_ops, signed as added); EBITDA is a continuing-operations measure. adj_items.disc_ops = null (disc ops is excluded above EBITDA, not in the EBITDA->Adjusted bridge). Mapping: Gain on sale of businesses -> gain_sale; Business interruption claims recovery (2010 Gulf Coast oil spill claims settlement) -> legal_env; Charges associated with divested operations -> divested_ops; Business development (non-routine acquisition charges incl. purchase-accounting inventory step-up) -> acquisition; Restructuring charges -> restructuring; Property donation / One-time employee bonuses -> other. impairment/pension = 0 (no such lines in bridge). Adjusted EPS bridge starts from diluted EPS from continuing operations; eps_items_after_tax_ps = 'Items included in Adjusted EBITDA above' + debt refinancing costs / debt-purchase interest charges (after tax); eps_discrete_tax_ps = tax reform savings + Alabama NOL valuation allowance + foreign tax credit lines. Q4-18 release also publishes FY2018 after-tax cash flow from earnings 925.6 (Adj EBITDA - WC change - O&M capex - cash taxes)."
+ }
+}

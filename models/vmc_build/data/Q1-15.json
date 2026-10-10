@@ -1,0 +1,146 @@
+{
+ "period": "Q1-15",
+ "sources": {
+  "release": null,
+  "10k_or_10q": "https://www.sec.gov/Archives/edgar/data/1396009/000139600915000014/vmc-20150331x10q.htm",
+  "supplemental": "https://www.sec.gov/Archives/edgar/data/1396009/000114420415046164/v417093_ex99-1.htm"
+ },
+ "seg": {
+  "agg_rev": 503.5,
+  "agg_interseg": -36.9,
+  "agg_fa_rev": 379.9,
+  "agg_freight_rev": 117.4,
+  "agg_other_rev": 6.2,
+  "agg_tons": 33.5,
+  "agg_price": null,
+  "agg_gp": 67.7,
+  "agg_dda": 55.5,
+  "agg_cgp": 123.2,
+  "asph_rev": 103.1,
+  "asph_interseg": null,
+  "asph_tons": null,
+  "asph_price": null,
+  "asph_gp": 8.8,
+  "asph_dda": 3.9,
+  "asph_cgp": 12.7,
+  "conc_rev": 59.8,
+  "conc_interseg": null,
+  "conc_cy": 0.573,
+  "conc_price": null,
+  "conc_gp": 0.8,
+  "conc_dda": 2.7,
+  "conc_cgp": 3.5,
+  "cem_rev": null,
+  "cem_interseg": null,
+  "cem_gp": null,
+  "cem_dda": null,
+  "calc_rev": 1.8,
+  "calc_gp": 0.6,
+  "calc_dda": 0.2,
+  "other_seg_label": null,
+  "other_seg_rev": null,
+  "other_seg_gp": null,
+  "seg_sales_total": 668.2,
+  "interseg_total": -36.9,
+  "delivery_rev": null,
+  "other_dda": 4.4,
+  "total_dda": 66.7,
+  "gp_total": 77.9,
+  "notes": "No Q1-15 earnings-release 8-K (Item 2.02) exists on EDGAR (not in submissions index); Q1-15 taken from the 10-Q (segment note and MD&A, published in $ millions 1dp). conc_cy 0.573m from Q2-15 release Appendix 5 ('Q1 2015 as reported'); same appendix gives Concrete 59,789 / GP 810 / DDA 2,728 and Calcium sales 1,855 / GP 572 / DDA 162 (thousands) - 10-Q shows calcium sales as 1.8. Aggregates freight-adjusted price, asphalt tons/price and concrete price not published for Q1-15 (FA revenue 379.9 / 33.5m tons = ~11.34, not filled). Calcium cash GP 0.8. Total DDA&A in IS 66.723."
+ },
+ "is": {
+  "total_rev": 631.3,
+  "net_sales": 524.9,
+  "delivery_rev": 106.4,
+  "cost_of_rev": 553.4,
+  "gp": 77.9,
+  "sag": 66.8,
+  "gain_sale": 6.4,
+  "other_op_lines": [
+   [
+    "Restructuring charges",
+    -2.8
+   ],
+   [
+    "Other operating expense, net",
+    -3.9
+   ]
+  ],
+  "other_op": -6.7,
+  "op_earnings": 10.8,
+  "nonop": 1.0,
+  "interest": 62.5,
+  "ebt": -50.7,
+  "tax": -14.1,
+  "cont_ops": -36.7,
+  "disc_ops": -3.0,
+  "net_earnings": -39.7,
+  "nci": 0.0,
+  "ni_vulcan": -39.7,
+  "shares_basic": 132.659,
+  "shares_diluted": 132.659,
+  "eps_cont_dil": -0.28,
+  "eps_dil": -0.3,
+  "eps_basic": -0.3,
+  "dps": 0.1,
+  "notes": "From Q3-14 the income statement shows only Total revenues (net sales / delivery revenues split eliminated). net_sales = published 'Total revenues excluding freight and delivery revenues' and delivery_rev = published consolidated 'Freight and delivery revenues' (non-GAAP gross-margin appendix; from Q4-14 the figure includes freight to remote distribution sites, so it is not comparable with the pre-Q3-14 'Delivery revenues' line). Q3-14 as originally reported 78.5 (restated to 135.3 incl. remote-site freight in the Q3-15 release)."
+ },
+ "ngaap": {
+  "ebitda_pub": 78.5,
+  "adj_ebitda_pub": 76.8,
+  "ebitda_bridge_tax": -14.1,
+  "ebitda_bridge_disc_ops": 3.0,
+  "ebitda_bridge_lines": [
+   [
+    "Gain on sale of real estate and businesses",
+    -5.9
+   ],
+   [
+    "Charges associated with acquisitions and divestitures",
+    2.4
+   ],
+   [
+    "Amortization of deferred revenue",
+    -1.0
+   ],
+   [
+    "Restructuring charges",
+    2.8
+   ]
+  ],
+  "adj_items": {
+   "disc_ops": 0.0,
+   "gain_sale": -5.9,
+   "impairment": 0.0,
+   "divested_ops": 0.0,
+   "acquisition": 2.4,
+   "restructuring": 2.8,
+   "legal_env": 0.0,
+   "pension": 0.0,
+   "other": -1.0,
+   "other_label": "Amortization of deferred revenue"
+  },
+  "adj_eps_pub": -0.16,
+  "eps_bridge_lines": [
+   [
+    "Diluted EPS - continuing operations, as reported",
+    -0.28
+   ],
+   [
+    "Discrete items: $3.5m net gain on concrete-for-asphalt swap, $2.8m restructuring, $21.7m debt purchase charge (aggregate, after tax; per-share split not published)",
+    0.12
+   ],
+   [
+    "Adjusted diluted EPS - continuing operations",
+    -0.16
+   ]
+  ],
+  "eps_items_after_tax_ps": 0.12,
+  "eps_discrete_tax_ps": 0.0,
+  "eps_bridge_start_ps": -0.28,
+  "agg_cgp_per_ton_pub": 3.68,
+  "roic_pub": null,
+  "notes": "From 10-Q MD&A ($ millions). Adjusted EPS -0.16 published; the +0.12 aggregate item line is derived (-0.16 - (-0.28)). EBITDA reconciliation (10-Q): NE -39.7 + tax -14.1 + interest 62.5 + disc ops 3.0 + DDA&A 66.8 = 78.5; self-check without the disc-ops add-back is off by 3.0 (EBITDA excludes discontinued operations); 10-Q shows DDA&A 66.8 in the EBITDA table vs 66.7 in the segment note."
+ },
+ "check_notes": "Self-check results: EBITDA check (ni+tax+interest+dda) is off by the discontinued-ops add-back 3.0; passes once ebitda_bridge_disc_ops is included (Vulcan definition, see ngaap.notes). All other checks pass."
+}

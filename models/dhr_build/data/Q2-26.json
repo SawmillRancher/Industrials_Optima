@@ -1,0 +1,543 @@
+{
+ "period": "Q2-26",
+ "period_end": "2026-06-26",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000163/dhr-20260721xex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm"
+ },
+ "is": {
+  "sales": 6265.0,
+  "cogs": 2654.0,
+  "gp": 3611.0,
+  "sga": 2072.0,
+  "rnd": 412.0,
+  "other_op_lines": [],
+  "op_profit": 1127.0,
+  "nonop_lines": [
+   [
+    "Other income (expense), net",
+    -3.0
+   ]
+  ],
+  "interest_exp": 107.0,
+  "interest_inc": 61.0,
+  "ebt": 1078.0,
+  "tax": 208.0,
+  "cont_ops": 870.0,
+  "disc_ops": 0.0,
+  "net_income": 870.0,
+  "nci": null,
+  "pref_div": null,
+  "ni_common": null,
+  "shares_basic": 705.3,
+  "shares_diluted": 707.6,
+  "eps_basic_cont": 1.23,
+  "eps_dil_cont": 1.23,
+  "eps_dil": 1.23,
+  "dps": 0.4,
+  "per_share_basis": "post_split"
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Biotechnology",
+    "sales": 1920.0,
+    "op_profit": 556.0,
+    "amort": 231.0,
+    "dep": 40.0,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 4.0,
+    "growth_acq": 0.0,
+    "growth_fx": -1.5,
+    "growth_core": 2.5
+   },
+   {
+    "name": "Life Sciences",
+    "sales": 1879.0,
+    "op_profit": 244.0,
+    "amort": 151.0,
+    "dep": 48.0,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 5.5,
+    "growth_acq": 0.0,
+    "growth_fx": 0.0,
+    "growth_core": 5.5
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 2466.0,
+    "op_profit": 416.0,
+    "amort": 81.0,
+    "dep": 107.0,
+    "adj_op": null,
+    "other_adj": null,
+    "growth_total": 7.0,
+    "growth_acq": -4.0,
+    "growth_fx": -1.0,
+    "growth_core": 2.0
+   }
+  ],
+  "other_op_profit": -89.0,
+  "total_growth": {
+   "total": 5.5,
+   "acq": -1.5,
+   "fx": -1.0,
+   "core": 3.0,
+   "other": null,
+   "other_label": null
+  },
+  "respiratory_sales": 250.0,
+  "core_ex_resp": 4.5,
+  "recurring_pct": 83.0,
+  "seg_note": "Three segments: Biotechnology, Life Sciences, Diagnostics (+ Other = unallocated corporate, -89). Release has no segment P&L table; segment sales / OP / depreciation / amortization from 10-Q Note 5 (three-month columns); segment growth from release table. Masimo (acquired 10-Jun-2026, ~$9.8bn) is in Diagnostics: Diagnostics acquisitions impact (4.0)%. Respiratory testing impact 1.5pt total / 3.0pt Diagnostics; Diagnostics core ex-respiratory 5.0%. Respiratory testing sales ~$250m (rounded to nearest $50m; Q2-25 ~$300m). recurring_pct computed = recurring revenue 5,200 / 6,265 (10-Q revenue note). Q2-25 Life Sciences OP included a $432m trade-name impairment."
+ },
+ "ngaap": {
+  "adj_eps_pub": 1.94,
+  "eps_bridge_start": 1.23,
+  "eps_bridge_start_label": "Diluted Net Earnings Per Common Share (GAAP)",
+  "eps_bridge": [
+   [
+    "Amortization of acquisition-related intangible assets",
+    0.65
+   ],
+   [
+    "Fair value net (gains) losses on investments",
+    0.01
+   ],
+   [
+    "Acquisition-related items",
+    0.15
+   ],
+   [
+    "Impairments",
+    0.0
+   ],
+   [
+    "Gain on a product line disposition",
+    0.0
+   ],
+   [
+    "Tax effect of the above adjustments",
+    -0.13
+   ],
+   [
+    "Discrete tax adjustments",
+    0.03
+   ],
+   [
+    "Rounding",
+    0.0
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Amortization of acquisition-related intangible assets",
+    463.0,
+    384.0,
+    "op"
+   ],
+   [
+    "Fair value net (gains) losses on investments",
+    7.0,
+    5.0,
+    "nonop"
+   ],
+   [
+    "Acquisition-related items (Masimo inventory fair value step-up, significant transaction costs, pre-acquisition share-based and change-in-control payments)",
+    108.0,
+    95.0,
+    "op"
+   ],
+   [
+    "Discrete tax adjustments (net discrete tax charges)",
+    null,
+    21.0,
+    "tax"
+   ]
+  ],
+  "amort_pretax": 463.0,
+  "adj_op_pub": null,
+  "adj_op_margin_pub": null,
+  "fcf_pub": 1265.0,
+  "capex_pub": -269.0,
+  "capex_disposals_pub": 0.0,
+  "cfo_pub_period": 1534.0,
+  "guidance": "Q3-26: core revenue growth +2.0% to +3.0% (Biotech +MSD, Life Sciences +3-4%, Diagnostics flat; respiratory impact +2.5pt; core ex-respiratory ~+5.0%); FX ~(1.0)% on sales; amortization ~$(500)m; corporate expense ~$(90)m; net interest expense ~$(115)m; tax rate ~17.0%; adjusted diluted shares ~707m. Q4-26: core +MSD (respiratory flat). FY2026: core revenue growth +3.0% to +4.0% (Biotech +MSD, Life Sciences +3-4%, Diagnostics up slightly; respiratory impact +LSD; core ex-respiratory +MSD); adjusted diluted EPS raised to $8.45-$8.60 (from $8.35-$8.55); adjusted operating profit margin ~26.5%; FX ~+0.5% on sales; amortization ~$(1,900)m; corporate expense ~$(360)m; net interest expense ~$(310)m; tax rate ~17.0%; adjusted diluted shares ~709m. Respiratory testing sales ~$500m Q3-26, ~$1,600m FY26. Pending StatLab acquisition (~$250m 2025 revenue, Leica Biosystems / Diagnostics), expected to close by end-2026.",
+  "notes": "Adjusted diluted EPS adds back amortization of acquisition-related intangibles, fair value gains/losses on equity & LP investments, Masimo acquisition-related items, impairments, product-line disposition gains, and discrete tax items; no MCPS (converted 2022/2023). New non-GAAP measure from this quarter: core sales growth excluding respiratory testing; from Q3-26 core sales will also exclude tariff refunds returned to customers. Item amounts from release footnotes."
+ },
+ "cf": {
+  "ytd_months": 6,
+  "net_income": 1899.0,
+  "disc_ops_ni": null,
+  "dep": 389.0,
+  "amort": 897.0,
+  "sbc": 151.0,
+  "deferred_tax": null,
+  "impair": 0.0,
+  "gains": 84.0,
+  "wc_change": -610.0,
+  "cfo_cont": 2856.0,
+  "cfo_disc": null,
+  "cfo": 2856.0,
+  "capex": -506.0,
+  "capex_disposals": 0.0,
+  "acquisitions": -9843.0,
+  "divest": 0.0,
+  "invest_purch": -67.0,
+  "invest_sales": 0.0,
+  "cfi_disc": null,
+  "cfi": -10396.0,
+  "stock_iss": -1.0,
+  "pref_iss": null,
+  "dividends": -509.0,
+  "buyback": -894.0,
+  "debt_net_short": 3673.0,
+  "debt_proceeds": 6555.0,
+  "debt_repay": -1434.0,
+  "spin_cash": null,
+  "cff_disc": null,
+  "cff": 7319.0,
+  "fx": -46.0,
+  "net_change": -267.0,
+  "cash_begin": 4615.0,
+  "cash_end": 4348.0,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net earnings",
+    1899.0
+   ],
+   [
+    "Depreciation",
+    389.0
+   ],
+   [
+    "Amortization of intangible assets",
+    897.0
+   ],
+   [
+    "Amortization of acquisition-related inventory fair value step-up",
+    46.0
+   ],
+   [
+    "Stock-based compensation expense",
+    151.0
+   ],
+   [
+    "Investment losses and pretax gain on sale of product line",
+    84.0
+   ],
+   [
+    "Impairment charges",
+    0.0
+   ],
+   [
+    "Change in trade accounts receivable, net",
+    137.0
+   ],
+   [
+    "Change in inventories",
+    -178.0
+   ],
+   [
+    "Change in trade accounts payable",
+    -79.0
+   ],
+   [
+    "Change in prepaid expenses and other assets",
+    81.0
+   ],
+   [
+    "Change in accrued expenses and other liabilities",
+    -571.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    2856.0
+   ],
+   [
+    "Cash paid for acquisitions",
+    -9843.0
+   ],
+   [
+    "Payments for additions to property, plant and equipment",
+    -506.0
+   ],
+   [
+    "Proceeds from sales of property, plant and equipment",
+    0.0
+   ],
+   [
+    "Payments for purchases of investments",
+    -67.0
+   ],
+   [
+    "Proceeds from sales of investments",
+    0.0
+   ],
+   [
+    "Proceeds from sale of product line",
+    0.0
+   ],
+   [
+    "All other investing activities",
+    20.0
+   ],
+   [
+    "Total cash used in investing activities",
+    -10396.0
+   ],
+   [
+    "(Payments for) proceeds from the issuance of common stock in connection with stock-based compensation, net",
+    -1.0
+   ],
+   [
+    "Payment of dividends",
+    -509.0
+   ],
+   [
+    "Net proceeds from (repayments of) borrowings (maturities of 90 days or less)",
+    3673.0
+   ],
+   [
+    "Borrowings (maturities longer than 90 days)",
+    6555.0
+   ],
+   [
+    "Repayments of borrowings (maturities longer than 90 days)",
+    -1434.0
+   ],
+   [
+    "Payments for repurchase of common stock",
+    -894.0
+   ],
+   [
+    "All other financing activities",
+    -71.0
+   ],
+   [
+    "Total cash provided by (used in) financing activities",
+    7319.0
+   ],
+   [
+    "Effect of exchange rate changes on cash and equivalents",
+    -46.0
+   ],
+   [
+    "Net change in cash and equivalents",
+    -267.0
+   ],
+   [
+    "Beginning balance of cash and equivalents",
+    4615.0
+   ],
+   [
+    "Ending balance of cash and equivalents",
+    4348.0
+   ],
+   [
+    "Supplemental: Cash interest payments",
+    136.0
+   ],
+   [
+    "Supplemental: Cash income tax payments",
+    541.0
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 4348.0,
+  "ar": 3965.0,
+  "inventories": 3260.0,
+  "prepaid_other": 1808.0,
+  "ca_disc": null,
+  "tca": 13381.0,
+  "ppe": 5825.0,
+  "other_lta": 4389.0,
+  "nca_disc": null,
+  "goodwill": 47414.0,
+  "intangibles": 21358.0,
+  "ta": 92367.0,
+  "st_debt": 1411.0,
+  "ap": 1822.0,
+  "accrued": 4872.0,
+  "cl_disc": null,
+  "tcl": 8105.0,
+  "other_ltl": 6523.0,
+  "ncl_disc": null,
+  "ltd": 25147.0,
+  "pref": null,
+  "common": 9.0,
+  "apic": 17459.0,
+  "treasury": -12318.0,
+  "retained": 48226.0,
+  "aoci": -795.0,
+  "dhr_equity": 52581.0,
+  "nci": 11.0,
+  "te": 52592.0,
+  "tle": 92367.0,
+  "shares_out": 702.9,
+  "lines_raw": [
+   [
+    "Cash and equivalents",
+    4348.0
+   ],
+   [
+    "Trade accounts receivable, less allowance for doubtful accounts",
+    3965.0
+   ],
+   [
+    "Finished goods",
+    1813.0
+   ],
+   [
+    "Work in process",
+    537.0
+   ],
+   [
+    "Raw materials",
+    910.0
+   ],
+   [
+    "Total inventories",
+    3260.0
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    1808.0
+   ],
+   [
+    "Total current assets",
+    13381.0
+   ],
+   [
+    "Property, plant and equipment, net of accumulated depreciation",
+    5825.0
+   ],
+   [
+    "Other long-term assets",
+    4389.0
+   ],
+   [
+    "Goodwill",
+    47414.0
+   ],
+   [
+    "Other intangible assets, net",
+    21358.0
+   ],
+   [
+    "Total assets",
+    92367.0
+   ],
+   [
+    "Notes payable and current portion of long-term debt",
+    1411.0
+   ],
+   [
+    "Trade accounts payable",
+    1822.0
+   ],
+   [
+    "Accrued expenses and other liabilities",
+    4872.0
+   ],
+   [
+    "Total current liabilities",
+    8105.0
+   ],
+   [
+    "Other long-term liabilities",
+    6523.0
+   ],
+   [
+    "Long-term debt",
+    25147.0
+   ],
+   [
+    "Common stock - $0.01 par value",
+    9.0
+   ],
+   [
+    "Additional paid-in capital",
+    17459.0
+   ],
+   [
+    "Treasury stock",
+    -12318.0
+   ],
+   [
+    "Retained earnings",
+    48226.0
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    -795.0
+   ],
+   [
+    "Total Danaher stockholders' equity",
+    52581.0
+   ],
+   [
+    "Noncontrolling interests",
+    11.0
+   ],
+   [
+    "Total stockholders' equity",
+    52592.0
+   ],
+   [
+    "Total liabilities and stockholders' equity",
+    92367.0
+   ]
+  ]
+ },
+ "py": {
+  "restated": false,
+  "notes": "Q2-25 three-month comparative as presented in the Q2-26 release / 10-Q matches the Q2-25 release and 10-Q as originally reported (sales 5,936, OP 760, net earnings 555, adjusted EPS 1.80; same three segments).",
+  "is": {
+   "sales": 5936.0,
+   "cogs": 2413.0,
+   "sga": 2360.0,
+   "rnd": 403.0,
+   "other_op": 0.0,
+   "op_profit": 760.0,
+   "nonop": -42.0,
+   "interest_exp": 71.0,
+   "interest_inc": 8.0,
+   "ebt": 655.0,
+   "tax": 100.0,
+   "cont_ops": 555.0,
+   "disc_ops": 0.0,
+   "net_income": 555.0,
+   "pref_div": null,
+   "shares_basic": 716.5,
+   "shares_diluted": 719.1,
+   "eps_dil_cont": 0.77,
+   "eps_dil": 0.77
+  },
+  "segments": [
+   {
+    "name": "Biotechnology",
+    "sales": 1850.0,
+    "op_profit": 531.0
+   },
+   {
+    "name": "Life Sciences",
+    "sales": 1777.0,
+    "op_profit": -239.0
+   },
+   {
+    "name": "Diagnostics",
+    "sales": 2309.0,
+    "op_profit": 554.0
+   }
+  ],
+  "other_op_profit": -86.0,
+  "adj_eps_pub": 1.8,
+  "amort_pretax": 426.0
+ },
+ "notes": "USD millions in whole numbers as published (2026 filings report $m without decimals). Release (income statement, EPS bridge, growth, FCF) and 10-Q agree. Cash flow is six-month YTD; three-month CFO 1,534 / FCF 1,265 from release. Computed: cf.wc_change = sum of five 'Change in ...' lines (-610); recurring_pct. 'Amortization of acquisition-related inventory fair value step-up' (46) is an extra noncash CF line kept only in lines_raw. cf.gains = 'Investment losses and pretax gain on sale of product line' (+84, a loss add-back). cf.stock_iss is a net outflow (-1) as labelled '(Payments for) proceeds ... net'. cf.deferred_tax null (no separate line in 2026 CF). Q2 three-month impairments none; Q2-25 $432m impairment sat inside operating costs (no separate IS line). Shares outstanding 702.9m per BS parenthetical (702,986,054 at 16-Jul-2026 per cover). DPS 0.40 = quarterly dividend declared in Q2-26 (10-Q MD&A). Masimo acquired 10-Jun-2026 for ~$9.8bn cash ($180/share), net cash consideration 9,843, goodwill 4,960, intangibles 4,844; 2025 revenue ~$1.5bn; financed with cash, long-term debt and commercial paper. All self-checks pass."
+}
