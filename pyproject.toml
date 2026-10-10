@@ -41,6 +41,10 @@ dev = [
 industrials-optima = "industrials_optima.cli:main"
 hazwaste = "industrials_optima.hazwaste.cli:main"
 copart-model = "industrials_optima.secmodel.build:main"
+build-model-template = "industrials_optima.financial_model.cli:main"
+
+[tool.setuptools.package-data]
+"industrials_optima.financial_model" = ["templates/*.xlsx"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
