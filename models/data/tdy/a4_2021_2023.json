@@ -1,0 +1,2060 @@
+{
+ "periods": {
+  "Q1/21": {
+   "is": {
+    "net_sales": 805.7,
+    "cost_sales": 492.5,
+    "sga": 168.2,
+    "other_op": -9.8,
+    "op_income": 135.2,
+    "interest_exp_net": 22.3,
+    "gain_debt_ext": -13.4,
+    "non_service_pension": 2.8,
+    "other_income": -1.0,
+    "pretax": 101.3,
+    "tax": 16.6,
+    "income_cont": 84.7,
+    "net_income": 84.7,
+    "ni_teledyne": 84.7,
+    "shares_basic": 37.0,
+    "eps_basic": 2.29,
+    "shares_diluted": 38.0,
+    "eps_diluted": 2.23,
+    "da": 29.3,
+    "da_ex_stepup": 29.3,
+    "amort_intangibles": 9.8,
+    "sbc": 7.0,
+    "capex": 17.6,
+    "discrete_tax_benefit": 6.3
+   },
+   "seg": {
+    "sales_di": 263.3,
+    "sales_inst": 286.5,
+    "sales_ade": 151.2,
+    "sales_es": 104.7,
+    "oi_di": 52.0,
+    "oi_inst": 59.4,
+    "oi_ade": 28.3,
+    "oi_es": 14.9,
+    "corp_exp": 19.4,
+    "amort_di": 4.6,
+    "amort_inst": 5.0,
+    "amort_ade": 0.2,
+    "amort_es": 0.0,
+    "adj_oi_di": 56.6,
+    "adj_oi_inst": 64.4,
+    "adj_oi_ade": 28.5,
+    "adj_oi_es": 14.9,
+    "adj_corp": 13.5,
+    "seg_items": [
+     {
+      "seg": "corp",
+      "label": "Transaction and integration costs",
+      "cat": "ACQ",
+      "value": 5.9
+     }
+    ],
+    "inst_marine": 102.0,
+    "inst_env": 114.8,
+    "inst_etm": 69.7
+   },
+   "ops": {
+    "sales_us_gov": 207.6,
+    "cfo_published": 124.9,
+    "capex_published": 17.6,
+    "fcf_published": 107.3,
+    "fcf_adj_published": 110.1,
+    "total_debt_published": 3243.3,
+    "net_debt_published": 9.1
+   },
+   "adj_oi": {
+    "oi_gaap": 135.2,
+    "adj_oi_published": 150.9,
+    "adj_om_published": 0.187,
+    "items": [
+     {
+      "label": "FLIR transaction and integration costs",
+      "cat": "ACQ",
+      "value": 5.9
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 9.8
+     }
+    ]
+   },
+   "adj_ni": {
+    "base": "Net income (GAAP)",
+    "ni_gaap": 84.7,
+    "eps_gaap": 2.23,
+    "pretax_gaap": 101.3,
+    "adj_pretax_published": 147.6,
+    "adj_ni_published": 121.3,
+    "adj_eps_published": 3.19,
+    "items": [
+     {
+      "label": "FLIR transaction and integration costs",
+      "cat": "ACQ",
+      "value": 5.9,
+      "value_ni": 5.8,
+      "value_eps": 0.15
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 9.8,
+      "value_ni": 7.5,
+      "value_eps": 0.2
+     },
+     {
+      "label": "Bridge loan and debt extinguishment fees",
+      "cat": "DEBT",
+      "value": 30.6,
+      "value_ni": 23.3,
+      "value_eps": 0.61
+     },
+     {
+      "label": "Income tax effect of pre-tax adjustments (derived: 'Net income' column less 'Income before income taxes' column, summed over pre-tax items)",
+      "cat": "TAX",
+      "value": -9.7
+     }
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000055/q1-2022earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428521000085/q1-2021earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000049/tdy-20220102.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428521000111/tdy-20210404.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000081/tdy-20220403.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001094285.json"
+   ]
+  },
+  "Q2/21": {
+   "is": {
+    "net_sales": 1121.0,
+    "cost_sales": 663.1,
+    "sga": 320.7,
+    "other_op": -32.8,
+    "op_income": 104.4,
+    "interest_exp_net": 21.2,
+    "gain_debt_ext": 0.0,
+    "non_service_pension": 2.8,
+    "other_income": 6.1,
+    "pretax": 92.1,
+    "tax": 27.4,
+    "income_cont": 64.7,
+    "net_income": 64.7,
+    "ni_teledyne": 64.7,
+    "shares_basic": 42.5,
+    "eps_basic": 1.52,
+    "shares_diluted": 43.6,
+    "eps_diluted": 1.48,
+    "da": 83.1,
+    "da_ex_stepup": 59.7,
+    "amort_intangibles": 32.8,
+    "sbc": 8.4,
+    "capex": 20.8,
+    "discrete_tax_benefit": -4.1
+   },
+   "seg": {
+    "sales_di": 579.5,
+    "sales_inst": 291.1,
+    "sales_ade": 152.4,
+    "sales_es": 98.0,
+    "oi_di": 84.6,
+    "oi_inst": 64.6,
+    "oi_ade": 28.4,
+    "oi_es": 11.0,
+    "corp_exp": 84.2,
+    "amort_di": 27.4,
+    "amort_inst": 5.2,
+    "amort_ade": 0.2,
+    "amort_es": 0.0,
+    "adj_oi_di": 159.4,
+    "adj_oi_inst": 69.8,
+    "adj_oi_ade": 28.6,
+    "adj_oi_es": 11.0,
+    "adj_corp": 13.7,
+    "seg_items": [
+     {
+      "seg": "di",
+      "label": "Inventory step-up expense",
+      "cat": "STEPUP",
+      "value": 23.4
+     },
+     {
+      "seg": "di",
+      "label": "Transaction and integration costs",
+      "cat": "ACQ",
+      "value": 24.0
+     },
+     {
+      "seg": "corp",
+      "label": "Transaction and integration costs",
+      "cat": "ACQ",
+      "value": 70.5
+     }
+    ],
+    "inst_marine": 104.9,
+    "inst_env": 112.8,
+    "inst_etm": 73.4
+   },
+   "ops": {
+    "acq_sales": 301.4,
+    "sales_us_gov": 276.9,
+    "cfo_published": 211.3,
+    "capex_published": 20.8,
+    "fcf_published": 190.5,
+    "fcf_adj_published": 257.2,
+    "total_debt_published": 4742.0,
+    "net_debt_published": 4046.9,
+    "leverage_published": 3.7
+   },
+   "adj_oi": {
+    "oi_gaap": 104.4,
+    "adj_oi_published": 255.1,
+    "adj_om_published": 0.228,
+    "items": [
+     {
+      "label": "FLIR transaction and integration costs",
+      "cat": "ACQ",
+      "value": 94.5
+     },
+     {
+      "label": "FLIR inventory step-up expense",
+      "cat": "STEPUP",
+      "value": 23.4
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 32.8
+     }
+    ]
+   },
+   "adj_ni": {
+    "base": "Net income (GAAP)",
+    "ni_gaap": 64.7,
+    "eps_gaap": 1.48,
+    "pretax_gaap": 92.1,
+    "adj_pretax_published": 242.8,
+    "adj_ni_published": 201.0,
+    "adj_eps_published": 4.61,
+    "items": [
+     {
+      "label": "FLIR transaction and integration costs",
+      "cat": "ACQ",
+      "value": 94.5,
+      "value_ni": 80.7,
+      "value_eps": 1.85
+     },
+     {
+      "label": "FLIR inventory step-up expense",
+      "cat": "STEPUP",
+      "value": 23.4,
+      "value_ni": 18.0,
+      "value_eps": 0.41
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 32.8,
+      "value_ni": 25.2,
+      "value_eps": 0.59
+     },
+     {
+      "label": "Income tax effect of pre-tax adjustments (derived: 'Net income' column less 'Income before income taxes' column, summed over pre-tax items)",
+      "cat": "TAX",
+      "value": -26.8
+     },
+     {
+      "label": "Acquisition-related tax matters",
+      "cat": "TAXD",
+      "value": 12.4,
+      "value_eps": 0.28
+     }
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000096/q2-2022earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428521000122/q2-2021earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000049/tdy-20220102.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428521000140/tdy-20210704.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000099/tdy-20220703.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428521000167/q3-2021earningsrelease.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001094285.json"
+   ]
+  },
+  "Q3/21": {
+   "is": {
+    "net_sales": 1311.9,
+    "cost_sales": 787.7,
+    "sga": 279.3,
+    "other_op": -55.3,
+    "op_income": 189.6,
+    "interest_exp_net": 23.8,
+    "gain_debt_ext": 0.0,
+    "non_service_pension": 2.8,
+    "other_income": -0.7,
+    "pretax": 167.9,
+    "tax": 33.8,
+    "income_cont": 134.1,
+    "net_income": 134.1,
+    "nci": 0.0,
+    "ni_teledyne": 134.1,
+    "shares_basic": 46.6,
+    "eps_basic": 2.88,
+    "shares_diluted": 47.7,
+    "eps_diluted": 2.81,
+    "da": 125.4,
+    "da_ex_stepup": 90.2,
+    "amort_intangibles": 55.3,
+    "sbc": 8.7,
+    "capex": 29.2,
+    "discrete_tax_benefit": 6.3
+   },
+   "seg": {
+    "sales_di": 760.6,
+    "sales_inst": 287.1,
+    "sales_ade": 161.8,
+    "sales_es": 102.4,
+    "oi_di": 94.9,
+    "oi_inst": 63.0,
+    "oi_ade": 35.9,
+    "oi_es": 11.5,
+    "corp_exp": 15.7,
+    "amort_di": 50.1,
+    "amort_inst": 5.0,
+    "amort_ade": 0.2,
+    "amort_es": 0.0,
+    "adj_oi_di": 181.7,
+    "adj_oi_inst": 68.0,
+    "adj_oi_ade": 36.1,
+    "adj_oi_es": 11.5,
+    "adj_corp": 15.4,
+    "seg_items": [
+     {
+      "seg": "di",
+      "label": "Inventory step-up expense",
+      "cat": "STEPUP",
+      "value": 35.2
+     },
+     {
+      "seg": "di",
+      "label": "Transaction and integration costs",
+      "cat": "ACQ",
+      "value": 1.5
+     },
+     {
+      "seg": "corp",
+      "label": "Transaction and integration costs",
+      "cat": "ACQ",
+      "value": 0.3
+     }
+    ],
+    "inst_marine": 104.7,
+    "inst_env": 108.0,
+    "inst_etm": 74.4
+   },
+   "ops": {
+    "acq_sales": 473.6,
+    "sales_us_gov": 357.6,
+    "cfo_published": 192.8,
+    "capex_published": 29.2,
+    "fcf_published": 163.6,
+    "fcf_adj_published": 165.7,
+    "total_debt_published": 4441.7,
+    "net_debt_published": 3889.9,
+    "leverage_published": 3.3
+   },
+   "adj_oi": {
+    "oi_gaap": 189.6,
+    "adj_oi_published": 281.9,
+    "adj_om_published": 0.215,
+    "items": [
+     {
+      "label": "FLIR transaction and integration costs",
+      "cat": "ACQ",
+      "value": 1.8
+     },
+     {
+      "label": "FLIR inventory step-up expense",
+      "cat": "STEPUP",
+      "value": 35.2
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 55.3
+     }
+    ]
+   },
+   "adj_ni": {
+    "base": "Net income attributable to Teledyne (GAAP)",
+    "ni_gaap": 134.1,
+    "eps_gaap": 2.81,
+    "pretax_gaap": 167.9,
+    "adj_pretax_published": 260.2,
+    "adj_ni_published": 207.2,
+    "adj_eps_published": 4.34,
+    "items": [
+     {
+      "label": "FLIR transaction and integration costs",
+      "cat": "ACQ",
+      "value": 1.8,
+      "value_ni": 1.7,
+      "value_eps": 0.04
+     },
+     {
+      "label": "FLIR inventory step-up expense",
+      "cat": "STEPUP",
+      "value": 35.2,
+      "value_ni": 27.1,
+      "value_eps": 0.57
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 55.3,
+      "value_ni": 42.6,
+      "value_eps": 0.88
+     },
+     {
+      "label": "Income tax effect of pre-tax adjustments (derived: 'Net income' column less 'Income before income taxes' column, summed over pre-tax items)",
+      "cat": "TAX",
+      "value": -20.9
+     },
+     {
+      "label": "Acquisition-related tax matters",
+      "cat": "TAXD",
+      "value": 1.7,
+      "value_eps": 0.04
+     }
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000102/q3-2022earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428521000167/q3-2021earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000049/tdy-20220102.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428521000170/tdy-20211003.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000121/tdy-20221002.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001094285.json"
+   ]
+  },
+  "Q4/21": {
+   "is": {
+    "net_sales": 1375.7,
+    "cost_sales": 829.6,
+    "sga": 299.6,
+    "other_op": -51.4,
+    "op_income": 195.1,
+    "interest_exp_net": 23.5,
+    "gain_debt_ext": 0.0,
+    "non_service_pension": 2.8,
+    "other_income": -1.9,
+    "pretax": 172.5,
+    "tax": 10.7,
+    "income_cont": 161.8,
+    "net_income": 161.8,
+    "nci": 0.0,
+    "ni_teledyne": 161.8,
+    "shares_diluted": 47.7,
+    "eps_diluted": 3.39,
+    "da": 134.0,
+    "da_ex_stepup": 86.2,
+    "amort_intangibles": 51.4,
+    "sbc": 9.8,
+    "capex": 34.0,
+    "discrete_tax_benefit": 26.2
+   },
+   "seg": {
+    "sales_di": 809.5,
+    "sales_inst": 302.2,
+    "sales_ade": 163.3,
+    "sales_es": 100.7,
+    "oi_di": 94.1,
+    "oi_inst": 66.7,
+    "oi_ade": 40.6,
+    "oi_es": 11.2,
+    "corp_exp": 17.5,
+    "amort_di": 46.3,
+    "amort_inst": 4.9,
+    "amort_ade": 0.2,
+    "amort_es": 0.0,
+    "adj_oi_di": 188.6,
+    "adj_oi_inst": 71.6,
+    "adj_oi_ade": 40.8,
+    "adj_oi_es": 11.2,
+    "adj_corp": 17.1,
+    "seg_items": [
+     {
+      "seg": "di",
+      "label": "Inventory step-up expense",
+      "cat": "STEPUP",
+      "value": 47.8
+     },
+     {
+      "seg": "di",
+      "label": "Transaction and integration costs",
+      "cat": "ACQ",
+      "value": 0.4
+     },
+     {
+      "seg": "corp",
+      "label": "Transaction and integration costs",
+      "cat": "ACQ",
+      "value": 0.4
+     }
+    ],
+    "inst_marine": 112.5,
+    "inst_env": 110.7,
+    "inst_etm": 79.0
+   },
+   "ops": {
+    "acq_sales": 498.6,
+    "sales_us_gov": 351.0,
+    "cfo_published": 295.6,
+    "capex_published": 34.0,
+    "fcf_published": 261.6,
+    "fcf_adj_published": 261.6,
+    "total_debt_published": 4099.4,
+    "net_debt_published": 3624.7,
+    "leverage_published": 2.9
+   },
+   "adj_oi": {
+    "oi_gaap": 195.1,
+    "adj_oi_published": 295.1,
+    "adj_om_published": 0.215,
+    "items": [
+     {
+      "label": "FLIR transaction and integration costs",
+      "cat": "ACQ",
+      "value": 0.8
+     },
+     {
+      "label": "FLIR inventory step-up expense",
+      "cat": "STEPUP",
+      "value": 47.8
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 51.4
+     }
+    ]
+   },
+   "adj_ni": {
+    "base": "Net income attributable to Teledyne (GAAP)",
+    "ni_gaap": 161.8,
+    "eps_gaap": 3.39,
+    "pretax_gaap": 172.5,
+    "adj_pretax_published": 272.5,
+    "adj_ni_published": 217.4,
+    "adj_eps_published": 4.56,
+    "items": [
+     {
+      "label": "FLIR transaction and integration costs",
+      "cat": "ACQ",
+      "value": 0.8,
+      "value_ni": 0.7,
+      "value_eps": 0.01
+     },
+     {
+      "label": "FLIR inventory step-up expense",
+      "cat": "STEPUP",
+      "value": 47.8,
+      "value_ni": 36.7,
+      "value_eps": 0.78
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 51.4,
+      "value_ni": 39.6,
+      "value_eps": 0.83
+     },
+     {
+      "label": "Income tax effect of pre-tax adjustments (derived: 'Net income' column less 'Income before income taxes' column, summed over pre-tax items)",
+      "cat": "TAX",
+      "value": -23.0
+     },
+     {
+      "label": "Acquisition-related tax matters",
+      "cat": "TAXD",
+      "value": -21.4,
+      "value_eps": -0.45
+     }
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000004/q4-2022earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000008/q4-2021earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000049/tdy-20220102.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001094285.json"
+   ]
+  },
+  "2021": {
+   "is": {
+    "net_sales": 4614.3,
+    "cost_sales": 2772.9,
+    "sga": 1067.8,
+    "other_op": -149.3,
+    "op_income": 624.3,
+    "interest_exp_net": 90.8,
+    "gain_debt_ext": -13.4,
+    "non_service_pension": 11.2,
+    "other_income": 2.5,
+    "pretax": 533.8,
+    "tax": 88.5,
+    "income_cont": 445.3,
+    "net_income": 445.3,
+    "nci": 0.0,
+    "ni_teledyne": 445.3,
+    "shares_basic": 43.2,
+    "eps_basic": 10.31,
+    "shares_diluted": 44.3,
+    "eps_diluted": 10.05,
+    "da": 371.8,
+    "da_ex_stepup": 265.4,
+    "depreciation": 115.2,
+    "amort_intangibles": 149.3,
+    "sbc": 33.9,
+    "capex": 101.6,
+    "rd_bp_company": 299.3,
+    "discrete_tax_benefit": 34.7
+   },
+   "seg": {
+    "sales_di": 2412.9,
+    "sales_inst": 1166.9,
+    "sales_ade": 628.7,
+    "sales_es": 405.8,
+    "oi_di": 325.6,
+    "oi_inst": 253.7,
+    "oi_ade": 133.2,
+    "oi_es": 48.6,
+    "corp_exp": 136.8,
+    "amort_di": 128.4,
+    "amort_inst": 20.1,
+    "amort_ade": 0.8,
+    "amort_es": 0.0,
+    "adj_oi_di": 586.3,
+    "adj_oi_inst": 273.8,
+    "adj_oi_ade": 134.0,
+    "adj_oi_es": 48.6,
+    "adj_corp": 59.7,
+    "seg_items": [
+     {
+      "seg": "di",
+      "label": "Inventory step-up expense",
+      "cat": "STEPUP",
+      "value": 106.4
+     },
+     {
+      "seg": "di",
+      "label": "Transaction and integration costs",
+      "cat": "ACQ",
+      "value": 25.9
+     },
+     {
+      "seg": "corp",
+      "label": "Transaction and integration costs",
+      "cat": "ACQ",
+      "value": 77.1
+     }
+    ],
+    "inst_marine": 424.1,
+    "inst_env": 446.3,
+    "inst_etm": 296.5,
+    "da_di": 309.2,
+    "da_inst": 38.1,
+    "da_ade": 13.2,
+    "da_es": 7.2,
+    "da_corp": 4.1,
+    "capex_di": 64.2,
+    "capex_inst": 13.3,
+    "capex_ade": 8.4,
+    "capex_es": 12.9,
+    "capex_corp": 2.8,
+    "assets_di": 11756.8,
+    "assets_inst": 1640.3,
+    "assets_ade": 536.3,
+    "assets_es": 179.2,
+    "assets_corp": 317.7,
+    "sales_us_gov_di": 515.9,
+    "sales_us_gov_inst": 91.6,
+    "sales_us_gov_ade": 227.2,
+    "sales_us_gov_es": 358.4
+   },
+   "ops": {
+    "acq_sales": 1273.6,
+    "sales_us_gov": 1193.1,
+    "rev_us": 2466.4,
+    "rev_europe": 958.5,
+    "rev_asia": 807.9,
+    "rev_other": 381.5,
+    "cfo_published": 824.6,
+    "capex_published": 101.6,
+    "fcf_published": 723.0,
+    "fcf_adj_published": 794.6,
+    "total_debt_published": 4099.4,
+    "net_debt_published": 3624.7,
+    "leverage_published": 2.9,
+    "rpo": 2929.0,
+    "employees": 14500
+   },
+   "adj_oi": {
+    "oi_gaap": 624.3,
+    "adj_oi_published": 983.0,
+    "adj_om_published": 0.213,
+    "items": [
+     {
+      "label": "FLIR transaction and integration costs",
+      "cat": "ACQ",
+      "value": 103.0
+     },
+     {
+      "label": "FLIR inventory step-up expense",
+      "cat": "STEPUP",
+      "value": 106.4
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 149.3
+     }
+    ]
+   },
+   "adj_ni": {
+    "base": "Net income attributable to Teledyne (GAAP)",
+    "ni_gaap": 445.3,
+    "eps_gaap": 10.05,
+    "pretax_gaap": 533.8,
+    "adj_pretax_published": 923.1,
+    "adj_ni_published": 746.9,
+    "adj_eps_published": 16.86,
+    "items": [
+     {
+      "label": "FLIR transaction and integration costs",
+      "cat": "ACQ",
+      "value": 103.0,
+      "value_ni": 88.9,
+      "value_eps": 2.01
+     },
+     {
+      "label": "FLIR inventory step-up expense",
+      "cat": "STEPUP",
+      "value": 106.4,
+      "value_ni": 81.8,
+      "value_eps": 1.85
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 149.3,
+      "value_ni": 114.9,
+      "value_eps": 2.59
+     },
+     {
+      "label": "Acquisition-related tax matters",
+      "cat": "TAXD",
+      "value": -7.3,
+      "value_eps": -0.17
+     },
+     {
+      "label": "Income tax effect of pre-tax adjustments (derived: 'Net income' column less 'Income before income taxes' column, summed over pre-tax items)",
+      "cat": "TAX",
+      "value": -80.4
+     },
+     {
+      "label": "Bridge loan and debt extinguishment fees",
+      "cat": "DEBT",
+      "value": 30.6,
+      "value_ni": 23.3,
+      "value_eps": 0.53
+     }
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000004/q4-2022earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000008/q4-2021earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000049/tdy-20220102.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001094285.json"
+   ]
+  },
+  "Q1/22": {
+   "is": {
+    "net_sales": 1321.0,
+    "cost_sales": 752.6,
+    "sga": 291.3,
+    "other_op": -53.6,
+    "op_income": 223.5,
+    "interest_exp_net": 22.3,
+    "gain_debt_ext": 0.0,
+    "non_service_pension": 2.8,
+    "other_income": -1.0,
+    "pretax": 203.0,
+    "tax": -9.6,
+    "income_cont": 212.6,
+    "net_income": 212.6,
+    "nci": 0.0,
+    "ni_teledyne": 212.6,
+    "shares_basic": 46.7,
+    "eps_basic": 4.55,
+    "shares_diluted": 47.7,
+    "eps_diluted": 4.46,
+    "da": 86.9,
+    "amort_intangibles": 53.6,
+    "sbc": 9.0,
+    "capex": 21.0,
+    "discrete_tax_benefit": 56.5
+   },
+   "seg": {
+    "sales_di": 750.5,
+    "sales_inst": 308.9,
+    "sales_ade": 166.2,
+    "sales_es": 95.4,
+    "oi_di": 115.7,
+    "oi_inst": 71.6,
+    "oi_ade": 42.9,
+    "oi_es": 9.4,
+    "corp_exp": 16.1,
+    "amort_di": 48.5,
+    "amort_inst": 4.9,
+    "amort_ade": 0.2,
+    "amort_es": 0.0,
+    "adj_oi_di": 164.2,
+    "adj_oi_inst": 76.5,
+    "adj_oi_ade": 43.1,
+    "adj_oi_es": 9.4,
+    "adj_corp": 16.1,
+    "seg_items": [],
+    "inst_marine": 111.9,
+    "inst_env": 114.0,
+    "inst_etm": 83.0
+   },
+   "ops": {
+    "acq_sales": 452.6,
+    "sales_us_gov": 310.2,
+    "cfo_published": -216.7,
+    "capex_published": 21.0,
+    "fcf_published": -237.7,
+    "fcf_adj_published": 58.7,
+    "total_debt_published": 4131.8,
+    "net_debt_published": 3847.5,
+    "leverage_published": 2.8
+   },
+   "adj_oi": {
+    "oi_gaap": 223.5,
+    "adj_oi_published": 277.1,
+    "adj_om_published": 0.21,
+    "items": [
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 53.6
+     }
+    ]
+   },
+   "adj_ni": {
+    "base": "Net income attributable to Teledyne (GAAP)",
+    "ni_gaap": 212.6,
+    "eps_gaap": 4.46,
+    "pretax_gaap": 203.0,
+    "adj_pretax_published": 256.6,
+    "adj_ni_published": 203.9,
+    "adj_eps_published": 4.27,
+    "items": [
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 53.6,
+      "value_ni": 41.3,
+      "value_eps": 0.86
+     },
+     {
+      "label": "Income tax effect of pre-tax adjustments (derived: 'Net income' column less 'Income before income taxes' column, summed over pre-tax items)",
+      "cat": "TAX",
+      "value": -12.3
+     },
+     {
+      "label": "Acquisition-related tax matters",
+      "cat": "TAXD",
+      "value": -50.0,
+      "value_eps": -1.05
+     }
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000058/q1-2023earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000055/q1-2022earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000053/tdy-20230101.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000081/tdy-20220403.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000083/tdy-20230402.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001094285.json"
+   ]
+  },
+  "Q2/22": {
+   "is": {
+    "net_sales": 1355.8,
+    "cost_sales": 788.6,
+    "sga": 286.4,
+    "other_op": -51.3,
+    "op_income": 229.5,
+    "interest_exp_net": 22.5,
+    "gain_debt_ext": 10.6,
+    "non_service_pension": 2.9,
+    "other_income": 1.0,
+    "pretax": 221.5,
+    "tax": 50.2,
+    "income_cont": 171.3,
+    "net_income": 171.3,
+    "nci": 0.0,
+    "ni_teledyne": 171.3,
+    "shares_basic": 46.8,
+    "eps_basic": 3.66,
+    "shares_diluted": 47.7,
+    "eps_diluted": 3.59,
+    "da": 82.7,
+    "amort_intangibles": 51.3,
+    "sbc": 6.4,
+    "capex": 20.8,
+    "discrete_tax_benefit": 1.0
+   },
+   "seg": {
+    "sales_di": 775.8,
+    "sales_inst": 312.5,
+    "sales_ade": 168.8,
+    "sales_es": 98.7,
+    "oi_di": 117.9,
+    "oi_inst": 73.6,
+    "oi_ade": 44.1,
+    "oi_es": 8.6,
+    "corp_exp": 14.7,
+    "amort_di": 46.4,
+    "amort_inst": 4.7,
+    "amort_ade": 0.2,
+    "amort_es": 0.0,
+    "adj_oi_di": 164.3,
+    "adj_oi_inst": 78.3,
+    "adj_oi_ade": 44.3,
+    "adj_oi_es": 8.6,
+    "adj_corp": 14.7,
+    "seg_items": [],
+    "inst_marine": 115.3,
+    "inst_env": 115.5,
+    "inst_etm": 81.7
+   },
+   "ops": {
+    "acq_sales": 167.6,
+    "sales_us_gov": 343.3,
+    "cfo_published": 196.9,
+    "capex_published": 20.8,
+    "fcf_published": 176.1,
+    "fcf_adj_published": 176.1,
+    "total_debt_published": 3945.7,
+    "net_debt_published": 3666.9,
+    "leverage_published": 2.5,
+    "book_to_bill_published": 1.08
+   },
+   "adj_oi": {
+    "oi_gaap": 229.5,
+    "adj_oi_published": 280.8,
+    "adj_om_published": 0.207,
+    "items": [
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 51.3
+     }
+    ]
+   },
+   "adj_ni": {
+    "base": "Net income attributable to Teledyne (GAAP)",
+    "ni_gaap": 171.3,
+    "eps_gaap": 3.59,
+    "pretax_gaap": 221.5,
+    "adj_pretax_published": 272.8,
+    "adj_ni_published": 211.3,
+    "adj_eps_published": 4.43,
+    "items": [
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 51.3,
+      "value_ni": 39.4,
+      "value_eps": 0.83
+     },
+     {
+      "label": "Income tax effect of pre-tax adjustments (derived: 'Net income' column less 'Income before income taxes' column, summed over pre-tax items)",
+      "cat": "TAX",
+      "value": -11.9
+     },
+     {
+      "label": "Acquisition-related tax matters",
+      "cat": "TAXD",
+      "value": 0.6,
+      "value_eps": 0.01
+     }
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000097/q2-2023earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000096/q2-2022earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000053/tdy-20230101.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000099/tdy-20220703.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000102/tdy-20230702.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001094285.json"
+   ]
+  },
+  "Q3/22": {
+   "is": {
+    "net_sales": 1363.6,
+    "cost_sales": 785.8,
+    "sga": 283.7,
+    "other_op": -48.9,
+    "op_income": 245.2,
+    "interest_exp_net": 22.0,
+    "gain_debt_ext": 0.0,
+    "non_service_pension": 2.9,
+    "other_income": 5.2,
+    "pretax": 231.3,
+    "tax": 53.1,
+    "income_cont": 178.2,
+    "net_income": 178.2,
+    "nci": -0.1,
+    "ni_teledyne": 178.3,
+    "shares_basic": 46.8,
+    "eps_basic": 3.81,
+    "shares_diluted": 47.7,
+    "eps_diluted": 3.74,
+    "da": 80.8,
+    "amort_intangibles": 48.9,
+    "sbc": 6.7,
+    "capex": 16.7,
+    "discrete_tax_benefit": 0.3
+   },
+   "seg": {
+    "sales_di": 777.9,
+    "sales_inst": 306.4,
+    "sales_ade": 169.5,
+    "sales_es": 109.8,
+    "oi_di": 133.7,
+    "oi_inst": 71.1,
+    "oi_ade": 44.3,
+    "oi_es": 11.9,
+    "corp_exp": 15.8,
+    "amort_di": 44.7,
+    "amort_inst": 4.0,
+    "amort_ade": 0.2,
+    "amort_es": 0.0,
+    "adj_oi_di": 178.4,
+    "adj_oi_inst": 75.1,
+    "adj_oi_ade": 44.5,
+    "adj_oi_es": 11.9,
+    "adj_corp": 15.8,
+    "seg_items": [],
+    "inst_marine": 110.0,
+    "inst_env": 114.8,
+    "inst_etm": 81.6
+   },
+   "ops": {
+    "sales_us_gov": 347.7,
+    "cfo_published": 268.9,
+    "capex_published": 16.7,
+    "fcf_published": 252.2,
+    "fcf_adj_published": 252.2,
+    "total_debt_published": 3918.4,
+    "net_debt_published": 3439.1,
+    "book_to_bill_published": 1.06
+   },
+   "adj_oi": {
+    "oi_gaap": 245.2,
+    "adj_oi_published": 294.1,
+    "adj_om_published": 0.216,
+    "items": [
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 48.9
+     }
+    ]
+   },
+   "adj_ni": {
+    "base": "Net income attributable to Teledyne (GAAP)",
+    "ni_gaap": 178.3,
+    "eps_gaap": 3.74,
+    "pretax_gaap": 231.3,
+    "adj_pretax_published": 280.2,
+    "adj_ni_published": 216.5,
+    "adj_eps_published": 4.54,
+    "items": [
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 48.9,
+      "value_ni": 37.4,
+      "value_eps": 0.78
+     },
+     {
+      "label": "Income tax effect of pre-tax adjustments (derived: 'Net income' column less 'Income before income taxes' column, summed over pre-tax items)",
+      "cat": "TAX",
+      "value": -11.5
+     },
+     {
+      "label": "Acquisition-related tax matters",
+      "cat": "TAXD",
+      "value": 0.8,
+      "value_eps": 0.02
+     }
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000122/q3-2023earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000102/q3-2022earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000053/tdy-20230101.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428522000121/tdy-20221002.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000129/tdy-20231001.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001094285.json"
+   ]
+  },
+  "Q4/22": {
+   "is": {
+    "net_sales": 1418.2,
+    "cost_sales": 801.3,
+    "sga": 295.2,
+    "other_op": -47.9,
+    "op_income": 273.8,
+    "interest_exp_net": 22.5,
+    "gain_debt_ext": 0.0,
+    "non_service_pension": 2.8,
+    "other_income": -1.8,
+    "pretax": 252.3,
+    "tax": 25.5,
+    "income_cont": 226.8,
+    "net_income": 226.8,
+    "nci": 0.4,
+    "ni_teledyne": 226.4,
+    "shares_diluted": 47.8,
+    "eps_diluted": 4.74,
+    "da": 81.8,
+    "amort_intangibles": 47.9,
+    "sbc": 11.4,
+    "capex": 34.1,
+    "discrete_tax_benefit": 28.9
+   },
+   "seg": {
+    "sales_di": 806.7,
+    "sales_inst": 326.2,
+    "sales_ade": 177.9,
+    "sales_es": 107.4,
+    "oi_di": 152.0,
+    "oi_inst": 79.0,
+    "oi_ade": 52.8,
+    "oi_es": 9.3,
+    "corp_exp": 19.3,
+    "amort_di": 44.1,
+    "amort_inst": 3.6,
+    "amort_ade": 0.2,
+    "amort_es": 0.0,
+    "adj_oi_di": 192.1,
+    "adj_oi_inst": 82.6,
+    "adj_oi_ade": 53.0,
+    "adj_oi_es": 9.3,
+    "adj_corp": 19.3,
+    "seg_items": [
+     {
+      "seg": "di",
+      "label": "FLIR integration costs",
+      "cat": "ACQ",
+      "value": -4.0
+     }
+    ],
+    "inst_marine": 123.5,
+    "inst_env": 120.7,
+    "inst_etm": 82.0
+   },
+   "ops": {
+    "sales_us_gov": 358.7,
+    "cfo_published": 237.7,
+    "capex_published": 34.1,
+    "fcf_published": 203.6,
+    "fcf_adj_published": 203.6,
+    "total_debt_published": 3920.6,
+    "net_debt_published": 3282.5,
+    "leverage_published": 2.4
+   },
+   "adj_oi": {
+    "oi_gaap": 273.8,
+    "adj_oi_published": 317.7,
+    "adj_om_published": 0.224,
+    "items": [
+     {
+      "label": "FLIR integration costs",
+      "cat": "ACQ",
+      "value": -4.0
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 47.9
+     }
+    ]
+   },
+   "adj_ni": {
+    "base": "Net income attributable to Teledyne (GAAP)",
+    "ni_gaap": 226.4,
+    "eps_gaap": 4.74,
+    "pretax_gaap": 252.3,
+    "adj_pretax_published": 296.2,
+    "adj_ni_published": 236.1,
+    "adj_eps_published": 4.94,
+    "items": [
+     {
+      "label": "FLIR integration costs",
+      "cat": "ACQ",
+      "value": -4.0,
+      "value_ni": -3.0,
+      "value_eps": -0.06
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 47.9,
+      "value_ni": 36.8,
+      "value_eps": 0.77
+     },
+     {
+      "label": "Income tax effect of pre-tax adjustments (derived: 'Net income' column less 'Income before income taxes' column, summed over pre-tax items)",
+      "cat": "TAX",
+      "value": -10.1
+     },
+     {
+      "label": "Acquisition-related tax matters",
+      "cat": "TAXD",
+      "value": -24.1,
+      "value_eps": -0.51
+     }
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428524000005/q4-2023earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000004/q4-2022earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000053/tdy-20230101.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001094285.json"
+   ]
+  },
+  "2022": {
+   "is": {
+    "net_sales": 5458.6,
+    "cost_sales": 3128.3,
+    "sga": 1156.6,
+    "other_op": -201.7,
+    "op_income": 972.0,
+    "interest_exp_net": 89.3,
+    "gain_debt_ext": 10.6,
+    "non_service_pension": 11.4,
+    "other_income": 3.4,
+    "pretax": 908.1,
+    "tax": 119.2,
+    "income_cont": 788.9,
+    "net_income": 788.9,
+    "nci": 0.3,
+    "ni_teledyne": 788.6,
+    "shares_basic": 46.8,
+    "eps_basic": 16.85,
+    "shares_diluted": 47.7,
+    "eps_diluted": 16.53,
+    "da": 332.2,
+    "depreciation": 129.8,
+    "amort_intangibles": 201.7,
+    "sbc": 31.5,
+    "capex": 92.6,
+    "rd_company": 352.2,
+    "rd_bp_company": 360.6,
+    "discrete_tax_benefit": 86.7
+   },
+   "seg": {
+    "sales_di": 3110.9,
+    "sales_inst": 1254.0,
+    "sales_ade": 682.4,
+    "sales_es": 411.3,
+    "oi_di": 519.3,
+    "oi_inst": 295.3,
+    "oi_ade": 184.1,
+    "oi_es": 39.2,
+    "corp_exp": 65.9,
+    "amort_di": 183.7,
+    "amort_inst": 17.2,
+    "amort_ade": 0.8,
+    "amort_es": 0.0,
+    "adj_oi_di": 699.0,
+    "adj_oi_inst": 312.5,
+    "adj_oi_ade": 184.9,
+    "adj_oi_es": 39.2,
+    "adj_corp": 65.9,
+    "seg_items": [
+     {
+      "seg": "di",
+      "label": "FLIR integration costs",
+      "cat": "ACQ",
+      "value": -4.0
+     }
+    ],
+    "inst_marine": 460.7,
+    "inst_env": 465.0,
+    "inst_etm": 328.3,
+    "da_di": 279.0,
+    "da_inst": 32.6,
+    "da_ade": 12.4,
+    "da_es": 4.4,
+    "da_corp": 3.8,
+    "capex_di": 63.9,
+    "capex_inst": 9.3,
+    "capex_ade": 8.0,
+    "capex_es": 5.3,
+    "capex_corp": 6.1,
+    "assets_di": 11432.3,
+    "assets_inst": 1626.4,
+    "assets_ade": 540.1,
+    "assets_es": 200.3,
+    "assets_corp": 554.9,
+    "sales_us_gov_di": 619.1,
+    "sales_us_gov_inst": 108.1,
+    "sales_us_gov_ade": 266.3,
+    "sales_us_gov_es": 366.4
+   },
+   "ops": {
+    "acq_sales": 593.7,
+    "sales_us_gov": 1359.9,
+    "rev_us": 2872.6,
+    "rev_europe": 1157.3,
+    "rev_asia": 971.5,
+    "rev_other": 457.2,
+    "cfo_published": 486.8,
+    "capex_published": 92.6,
+    "fcf_published": 394.2,
+    "fcf_adj_published": 690.6,
+    "total_debt_published": 3920.6,
+    "net_debt_published": 3282.5,
+    "leverage_published": 2.4,
+    "rpo": 3099.3,
+    "employees": 14700
+   },
+   "adj_oi": {
+    "oi_gaap": 972.0,
+    "adj_oi_published": 1169.7,
+    "adj_om_published": 0.214,
+    "items": [
+     {
+      "label": "FLIR integration costs",
+      "cat": "ACQ",
+      "value": -4.0
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 201.7
+     }
+    ]
+   },
+   "adj_ni": {
+    "base": "Net income attributable to Teledyne (GAAP)",
+    "ni_gaap": 788.6,
+    "eps_gaap": 16.53,
+    "pretax_gaap": 908.1,
+    "adj_pretax_published": 1105.8,
+    "adj_ni_published": 867.8,
+    "adj_eps_published": 18.19,
+    "items": [
+     {
+      "label": "FLIR integration costs",
+      "cat": "ACQ",
+      "value": -4.0,
+      "value_ni": -3.0,
+      "value_eps": -0.06
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 201.7,
+      "value_ni": 154.9,
+      "value_eps": 3.24
+     },
+     {
+      "label": "Income tax effect of pre-tax adjustments (derived: 'Net income' column less 'Income before income taxes' column, summed over pre-tax items)",
+      "cat": "TAX",
+      "value": -45.8
+     },
+     {
+      "label": "Acquisition-related tax matters",
+      "cat": "TAXD",
+      "value": -72.7,
+      "value_eps": -1.52
+     }
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428524000005/q4-2023earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000004/q4-2022earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000053/tdy-20230101.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001094285.json"
+   ]
+  },
+  "Q1/23": {
+   "is": {
+    "net_sales": 1383.3,
+    "cost_sales": 790.7,
+    "sga": 300.4,
+    "other_op": -49.7,
+    "op_income": 242.5,
+    "interest_exp_net": 21.0,
+    "gain_debt_ext": 0.0,
+    "non_service_pension": 3.3,
+    "other_income": -1.1,
+    "pretax": 223.7,
+    "tax": 44.9,
+    "income_cont": 178.8,
+    "net_income": 178.8,
+    "nci": 0.1,
+    "ni_teledyne": 178.7,
+    "shares_basic": 46.9,
+    "eps_basic": 3.81,
+    "shares_diluted": 47.9,
+    "eps_diluted": 3.73,
+    "da": 82.1,
+    "amort_intangibles": 49.7,
+    "sbc": 7.9,
+    "capex": 24.4,
+    "discrete_tax_benefit": 6.6
+   },
+   "seg": {
+    "sales_di": 772.5,
+    "sales_inst": 333.5,
+    "sales_ade": 173.2,
+    "sales_es": 104.1,
+    "oi_di": 122.2,
+    "oi_inst": 80.7,
+    "oi_ade": 47.0,
+    "oi_es": 10.0,
+    "corp_exp": 17.4,
+    "amort_di": 45.8,
+    "amort_inst": 3.7,
+    "amort_ade": 0.2,
+    "amort_es": 0.0,
+    "adj_oi_di": 168.0,
+    "adj_oi_inst": 84.4,
+    "adj_oi_ade": 47.2,
+    "adj_oi_es": 10.0,
+    "adj_corp": 17.4,
+    "seg_items": [],
+    "inst_marine": 128.2,
+    "inst_env": 117.9,
+    "inst_etm": 87.4
+   },
+   "ops": {
+    "acq_sales": 25.0,
+    "sales_us_gov": 311.5,
+    "cfo_published": 203.0,
+    "capex_published": 24.4,
+    "fcf_published": 178.6,
+    "fcf_adj_published": 178.6,
+    "total_debt_published": 3820.4,
+    "net_debt_published": 3155.2,
+    "leverage_published": 2.3
+   },
+   "adj_oi": {
+    "oi_gaap": 242.5,
+    "adj_oi_published": 292.2,
+    "adj_om_published": 0.211,
+    "items": [
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 49.7
+     }
+    ]
+   },
+   "adj_ni": {
+    "base": "Net income attributable to Teledyne (GAAP)",
+    "ni_gaap": 178.7,
+    "eps_gaap": 3.73,
+    "pretax_gaap": 223.7,
+    "adj_pretax_published": 273.4,
+    "adj_ni_published": 217.2,
+    "adj_eps_published": 4.53,
+    "items": [
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 49.7,
+      "value_ni": 38.2,
+      "value_eps": 0.79
+     },
+     {
+      "label": "Income tax effect of pre-tax adjustments (derived: 'Net income' column less 'Income before income taxes' column, summed over pre-tax items)",
+      "cat": "TAX",
+      "value": -11.5
+     },
+     {
+      "label": "Acquisition-related tax matters",
+      "cat": "TAXD",
+      "value": 0.3,
+      "value_eps": 0.01
+     }
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428524000052/q1-2024earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000058/q1-2023earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428524000044/tdy-20231231.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000083/tdy-20230402.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001094285.json"
+   ]
+  },
+  "Q2/23": {
+   "is": {
+    "net_sales": 1424.7,
+    "cost_sales": 806.3,
+    "sga": 313.0,
+    "other_op": -49.3,
+    "op_income": 256.1,
+    "interest_exp_net": 22.3,
+    "gain_debt_ext": 1.6,
+    "non_service_pension": 2.9,
+    "other_income": -3.4,
+    "pretax": 234.9,
+    "tax": 49.4,
+    "income_cont": 185.5,
+    "net_income": 185.5,
+    "nci": 0.2,
+    "ni_teledyne": 185.3,
+    "shares_basic": 47.0,
+    "eps_basic": 3.94,
+    "shares_diluted": 47.9,
+    "eps_diluted": 3.87,
+    "da": 80.0,
+    "amort_intangibles": 49.3,
+    "sbc": 8.4,
+    "capex": 27.3,
+    "discrete_tax_benefit": 1.4
+   },
+   "seg": {
+    "sales_di": 793.3,
+    "sales_inst": 328.4,
+    "sales_ade": 186.0,
+    "sales_es": 117.0,
+    "oi_di": 124.6,
+    "oi_inst": 81.4,
+    "oi_ade": 53.2,
+    "oi_es": 11.5,
+    "corp_exp": 14.6,
+    "amort_di": 45.6,
+    "amort_inst": 3.5,
+    "amort_ade": 0.2,
+    "amort_es": 0.0,
+    "adj_oi_di": 170.2,
+    "adj_oi_inst": 84.9,
+    "adj_oi_ade": 53.4,
+    "adj_oi_es": 11.5,
+    "adj_corp": 14.6,
+    "seg_items": [],
+    "inst_marine": 127.4,
+    "inst_env": 115.3,
+    "inst_etm": 85.7
+   },
+   "ops": {
+    "acq_sales": 28.8,
+    "sales_us_gov": 316.8,
+    "cfo_published": 190.5,
+    "capex_published": 27.3,
+    "fcf_published": 163.2,
+    "total_debt_published": 3353.3,
+    "net_debt_published": 2989.1,
+    "leverage_published": 2.1
+   },
+   "adj_oi": {
+    "oi_gaap": 256.1,
+    "adj_oi_published": 305.4,
+    "adj_om_published": 0.214,
+    "items": [
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 49.3
+     }
+    ]
+   },
+   "adj_ni": {
+    "base": "Net income attributable to Teledyne (GAAP)",
+    "ni_gaap": 185.3,
+    "eps_gaap": 3.87,
+    "pretax_gaap": 234.9,
+    "adj_pretax_published": 284.2,
+    "adj_ni_published": 223.7,
+    "adj_eps_published": 4.67,
+    "items": [
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 49.3,
+      "value_ni": 38.0,
+      "value_eps": 0.79
+     },
+     {
+      "label": "Income tax effect of pre-tax adjustments (derived: 'Net income' column less 'Income before income taxes' column, summed over pre-tax items)",
+      "cat": "TAX",
+      "value": -11.3
+     },
+     {
+      "label": "FLIR acquisition-related tax matters",
+      "cat": "TAXD",
+      "value": 0.4,
+      "value_eps": 0.01
+     }
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428524000088/q2-2024earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000097/q2-2023earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428524000044/tdy-20231231.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000102/tdy-20230702.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001094285.json"
+   ]
+  },
+  "Q3/23": {
+   "is": {
+    "net_sales": 1402.5,
+    "cost_sales": 797.2,
+    "sga": 291.9,
+    "other_op": -49.1,
+    "op_income": 264.3,
+    "interest_exp_net": 18.4,
+    "gain_debt_ext": 0.0,
+    "non_service_pension": 3.1,
+    "other_income": -2.9,
+    "pretax": 246.1,
+    "tax": 47.3,
+    "income_cont": 198.8,
+    "net_income": 198.8,
+    "nci": 0.2,
+    "ni_teledyne": 198.6,
+    "shares_basic": 47.1,
+    "eps_basic": 4.22,
+    "shares_diluted": 47.9,
+    "eps_diluted": 4.15,
+    "da": 76.9,
+    "amort_intangibles": 49.1,
+    "sbc": 8.0,
+    "capex": 23.0,
+    "discrete_tax_benefit": 6.1
+   },
+   "seg": {
+    "sales_di": 775.8,
+    "sales_inst": 329.1,
+    "sales_ade": 183.3,
+    "sales_es": 114.3,
+    "oi_di": 136.3,
+    "oi_inst": 85.5,
+    "oi_ade": 49.4,
+    "oi_es": 10.9,
+    "corp_exp": 17.8,
+    "amort_di": 45.4,
+    "amort_inst": 3.5,
+    "amort_ade": 0.2,
+    "amort_es": 0.0,
+    "adj_oi_di": 187.5,
+    "adj_oi_inst": 89.0,
+    "adj_oi_ade": 49.6,
+    "adj_oi_es": 10.9,
+    "adj_corp": 17.8,
+    "seg_items": [
+     {
+      "seg": "di",
+      "label": "FLIR integration costs",
+      "cat": "ACQ",
+      "value": 5.8
+     }
+    ],
+    "inst_marine": 132.5,
+    "inst_env": 113.0,
+    "inst_etm": 83.6
+   },
+   "ops": {
+    "acq_sales": 25.8,
+    "sales_us_gov": 350.8,
+    "cfo_published": 278.2,
+    "capex_published": 23.0,
+    "fcf_published": 255.2,
+    "total_debt_published": 3244.1,
+    "net_debt_published": 2735.5
+   },
+   "adj_oi": {
+    "oi_gaap": 264.3,
+    "adj_oi_published": 319.2,
+    "adj_om_published": 0.228,
+    "items": [
+     {
+      "label": "FLIR integration costs",
+      "cat": "ACQ",
+      "value": 5.8
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 49.1
+     }
+    ]
+   },
+   "adj_ni": {
+    "base": "Net income attributable to Teledyne (GAAP)",
+    "ni_gaap": 198.6,
+    "eps_gaap": 4.15,
+    "pretax_gaap": 246.1,
+    "adj_pretax_published": 301.0,
+    "adj_ni_published": 241.9,
+    "adj_eps_published": 5.05,
+    "items": [
+     {
+      "label": "FLIR integration costs",
+      "cat": "ACQ",
+      "value": 5.8,
+      "value_ni": 4.5,
+      "value_eps": 0.09
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 49.1,
+      "value_ni": 37.8,
+      "value_eps": 0.79
+     },
+     {
+      "label": "Income tax effect of pre-tax adjustments (derived: 'Net income' column less 'Income before income taxes' column, summed over pre-tax items)",
+      "cat": "TAX",
+      "value": -12.6
+     },
+     {
+      "label": "FLIR acquisition-related tax matters",
+      "cat": "TAXD",
+      "value": 1.0,
+      "value_eps": 0.02
+     }
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428524000099/q3-2024earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000122/q3-2023earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428524000044/tdy-20231231.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428523000129/tdy-20231001.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001094285.json"
+   ]
+  },
+  "Q4/23": {
+   "is": {
+    "net_sales": 1425.0,
+    "cost_sales": 801.9,
+    "sga": 303.0,
+    "other_op": -48.6,
+    "op_income": 271.5,
+    "interest_exp_net": 15.6,
+    "gain_debt_ext": 0.0,
+    "non_service_pension": 3.1,
+    "other_income": -4.8,
+    "pretax": 254.2,
+    "tax": -69.3,
+    "income_cont": 323.5,
+    "net_income": 323.5,
+    "nci": 0.4,
+    "ni_teledyne": 323.1,
+    "shares_diluted": 47.9,
+    "eps_diluted": 6.75,
+    "da": 77.4,
+    "amort_intangibles": 48.6,
+    "sbc": 8.0,
+    "capex": 40.2,
+    "discrete_tax_benefit": 123.4
+   },
+   "seg": {
+    "sales_di": 802.5,
+    "sales_inst": 335.2,
+    "sales_ade": 184.0,
+    "sales_es": 103.3,
+    "oi_di": 134.3,
+    "oi_inst": 90.7,
+    "oi_ade": 50.0,
+    "oi_es": 12.3,
+    "corp_exp": 15.8,
+    "amort_di": 44.9,
+    "amort_inst": 3.5,
+    "amort_ade": 0.2,
+    "amort_es": 0.0,
+    "adj_oi_di": 182.2,
+    "adj_oi_inst": 94.2,
+    "adj_oi_ade": 50.2,
+    "adj_oi_es": 12.3,
+    "adj_corp": 15.8,
+    "seg_items": [
+     {
+      "seg": "di",
+      "label": "Transaction and integration costs",
+      "cat": "ACQ",
+      "value": 3.0
+     }
+    ],
+    "inst_marine": 141.6,
+    "inst_env": 111.9,
+    "inst_etm": 81.7
+   },
+   "ops": {
+    "acq_sales": 17.6,
+    "sales_us_gov": 392.4,
+    "cfo_published": 164.4,
+    "capex_published": 40.2,
+    "fcf_published": 124.2,
+    "fcf_adj_published": 124.2,
+    "total_debt_published": 3244.9,
+    "net_debt_published": 2596.6,
+    "leverage_published": 1.9,
+    "orders": 1519.4
+   },
+   "adj_oi": {
+    "oi_gaap": 271.5,
+    "adj_oi_published": 323.1,
+    "adj_om_published": 0.227,
+    "items": [
+     {
+      "label": "Transaction and integration costs",
+      "cat": "ACQ",
+      "value": 3.0
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 48.6
+     }
+    ]
+   },
+   "adj_ni": {
+    "base": "Net income attributable to Teledyne (GAAP)",
+    "ni_gaap": 323.1,
+    "eps_gaap": 6.75,
+    "pretax_gaap": 254.2,
+    "adj_pretax_published": 305.8,
+    "adj_ni_published": 260.5,
+    "adj_eps_published": 5.44,
+    "items": [
+     {
+      "label": "Transaction and integration costs",
+      "cat": "ACQ",
+      "value": 3.0,
+      "value_ni": 2.3,
+      "value_eps": 0.05
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 48.6,
+      "value_ni": 37.3,
+      "value_eps": 0.77
+     },
+     {
+      "label": "Income tax effect of pre-tax adjustments (derived: 'Net income' column less 'Income before income taxes' column, summed over pre-tax items)",
+      "cat": "TAX",
+      "value": -12.0
+     },
+     {
+      "label": "FLIR acquisition-related tax matters",
+      "cat": "TAXD",
+      "value": -102.2,
+      "value_eps": -2.13
+     }
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428525000003/q4-2024earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428524000005/q4-2023earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428524000044/tdy-20231231.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001094285.json"
+   ]
+  },
+  "2023": {
+   "is": {
+    "net_sales": 5635.5,
+    "cost_sales": 3196.1,
+    "sga": 1208.3,
+    "other_op": -196.7,
+    "op_income": 1034.4,
+    "interest_exp_net": 77.3,
+    "gain_debt_ext": 1.6,
+    "non_service_pension": 12.4,
+    "other_income": -12.2,
+    "pretax": 958.9,
+    "tax": 72.3,
+    "income_cont": 886.6,
+    "net_income": 886.6,
+    "nci": 0.9,
+    "ni_teledyne": 885.7,
+    "shares_basic": 47.1,
+    "eps_basic": 18.8,
+    "shares_diluted": 47.9,
+    "eps_diluted": 18.49,
+    "da": 316.4,
+    "depreciation": 119.1,
+    "amort_intangibles": 196.7,
+    "sbc": 32.3,
+    "capex": 114.9,
+    "rd_company": 356.3,
+    "rd_bp_company": 365.8,
+    "discrete_tax_benefit": 137.5
+   },
+   "seg": {
+    "sales_di": 3144.1,
+    "sales_inst": 1326.2,
+    "sales_ade": 726.5,
+    "sales_es": 438.7,
+    "oi_di": 517.4,
+    "oi_inst": 338.3,
+    "oi_ade": 199.6,
+    "oi_es": 44.7,
+    "corp_exp": 65.6,
+    "amort_di": 181.7,
+    "amort_inst": 14.2,
+    "amort_ade": 0.8,
+    "amort_es": 0.0,
+    "adj_oi_di": 707.9,
+    "adj_oi_inst": 352.5,
+    "adj_oi_ade": 200.4,
+    "adj_oi_es": 44.7,
+    "adj_corp": 65.6,
+    "seg_items": [
+     {
+      "seg": "di",
+      "label": "Transaction and integration costs",
+      "cat": "ACQ",
+      "value": 8.8
+     }
+    ],
+    "inst_marine": 529.7,
+    "inst_env": 458.1,
+    "inst_etm": 338.4,
+    "da_di": 268.9,
+    "da_inst": 27.7,
+    "da_ade": 11.5,
+    "da_es": 4.4,
+    "da_corp": 3.9,
+    "capex_di": 78.2,
+    "capex_inst": 14.0,
+    "capex_ade": 10.9,
+    "capex_es": 3.4,
+    "capex_corp": 8.4,
+    "assets_di": 11382.2,
+    "assets_inst": 1692.3,
+    "assets_ade": 569.1,
+    "assets_es": 184.8,
+    "assets_corp": 699.5,
+    "sales_us_gov_di": 570.7,
+    "sales_us_gov_inst": 95.9,
+    "sales_us_gov_ade": 330.3,
+    "sales_us_gov_es": 384.8
+   },
+   "ops": {
+    "acq_sales": 99.8,
+    "sales_us_gov": 1381.7,
+    "rev_us": 2895.4,
+    "rev_europe": 1332.7,
+    "rev_asia": 946.8,
+    "rev_other": 460.6,
+    "cfo_published": 836.1,
+    "capex_published": 114.9,
+    "fcf_published": 721.2,
+    "fcf_adj_published": 721.2,
+    "total_debt_published": 3244.9,
+    "net_debt_published": 2596.6,
+    "leverage_published": 1.9,
+    "rpo": 3141.7,
+    "employees": 14900
+   },
+   "adj_oi": {
+    "oi_gaap": 1034.4,
+    "adj_oi_published": 1239.9,
+    "adj_om_published": 0.22,
+    "items": [
+     {
+      "label": "Transaction and integration costs",
+      "cat": "ACQ",
+      "value": 8.8
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 196.7
+     }
+    ]
+   },
+   "adj_ni": {
+    "base": "Net income attributable to Teledyne (GAAP)",
+    "ni_gaap": 885.7,
+    "eps_gaap": 18.49,
+    "pretax_gaap": 958.9,
+    "adj_pretax_published": 1164.4,
+    "adj_ni_published": 943.3,
+    "adj_eps_published": 19.69,
+    "items": [
+     {
+      "label": "Transaction and integration costs",
+      "cat": "ACQ",
+      "value": 8.8,
+      "value_ni": 6.8,
+      "value_eps": 0.14
+     },
+     {
+      "label": "Acquired intangible asset amortization",
+      "cat": "AMORT",
+      "value": 196.7,
+      "value_ni": 151.3,
+      "value_eps": 3.16
+     },
+     {
+      "label": "Income tax effect of pre-tax adjustments (derived: 'Net income' column less 'Income before income taxes' column, summed over pre-tax items)",
+      "cat": "TAX",
+      "value": -47.4
+     },
+     {
+      "label": "FLIR acquisition-related tax matters",
+      "cat": "TAXD",
+      "value": -100.5,
+      "value_eps": -2.1
+     }
+    ]
+   },
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428525000003/q4-2024earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428524000005/q4-2023earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1094285/000109428524000044/tdy-20231231.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001094285.json"
+   ]
+  }
+ },
+ "notes": [
+  "SCOPE/SOURCES: Q1/21-Q4/23 and FY2021-FY2023; IS, seg, ops, adj_oi, adj_ni only (no bs/cf). Per the latest-filing rule every quarter is taken from the prior-year column of the following year's Q-release (Q1/21 from Q1/22 release, ..., Q4/23 and FY2023 from the Q4/24 release filed 22-Jan-2025, FY2021 from Q4/22 release, FY2022 from Q4/23 release); the period's own release and the 10-K are also cited in src. Product lines, US-Government sales and basic EPS/shares come from 10-Qs/10-Ks (XBRL companyfacts). All 2023 values shown in 2024 releases are identical to the 2023 releases (only labels changed, see below); all 2022 values shown in 2023 releases are identical to 2022 releases except where noted.",
+  "NON-GAAP DEFINITION EVOLUTION (1) Q1/21 release (28-Apr-2021, https://www.sec.gov/Archives/edgar/data/1094285/000109428521000085/q1-2021earningsrelease.htm): measures were called 'adjusted' and excluded ONLY charges related to the pending FLIR acquisition: 'Transaction costs' $5.9m (corporate SG&A; NI effect 4.6, $0.12) and 'Debt issue costs and interest expense' $33.1m (17.2 bridge-facility fees/interest + 13.4 debt-extinguishment on $493.3m notes called 17-Mar-21 + 2.5 interest on the $3.0bn FLIR notes; NI 25.6, $0.67). Acquired-intangible amortization was NOT excluded. Originally published Q1/21: adjusted OI 141.1 (17.5% margin), adjusted NI 114.9, adjusted EPS 3.02; tax effect at the overall estimated effective rate ex discrete items.",
+  "NON-GAAP DEFINITION EVOLUTION (2) Q2/21 release (28-Jul-2021, https://www.sec.gov/Archives/edgar/data/1094285/000109428521000122/q2-2021earningsrelease.htm), first release after the FLIR close (14-May-2021): renamed 'non-GAAP'; from this release ALL acquired intangible asset amortization (FLIR and all prior acquisitions) is excluded, plus FLIR inventory step-up, FLIR transaction and integration costs (incl. $52.2m cash settlement of FLIR employee/director stock awards in Q2/21), bridge loan and debt extinguishment fees and the remeasurement of deferred taxes on acquired intangibles for tax-law changes ('Tax rate changes on acquired intangible assets', UK rate rise to 25%: +12.4 in Q2/21). Acquired intangible amortization was simultaneously moved out of SG&A to its own income-statement line (prior periods reclassified). Q1/21 and all 2020 quarters were recast (Appendix A and a revised Q1/21 table): Q1/21 restated to non-GAAP OI 150.9 (18.7%), non-GAAP NI 121.3, EPS 3.19 - the LATER figures are recorded here. In the recast, Q1/21 financing exclusion became 'Bridge loan and debt extinguishment fees' 30.6 (the 2.5 interest on the permanent notes is no longer excluded) and transaction-cost tax effect became 5.8 NI (was 4.6). Tax effects from Q2/21 are item-by-item at jurisdictional rates (US marginal rate for most amortization).",
+  "NON-GAAP DEFINITION EVOLUTION (3) Q3/21 release (https://www.sec.gov/Archives/edgar/data/1094285/000109428521000167/q3-2021earningsrelease.htm): new NI item 'Acquisition-related foreign tax matters' = post-acquisition interest on certain FLIR income-tax reserves PLUS the UK deferred-tax remeasurement previously labelled 'Tax rate changes on acquired intangible assets' (9M/21 14.1 = Q2 12.4 + Q3 1.7). (4) Q4/21 release (https://www.sec.gov/Archives/edgar/data/1094285/000109428522000008/q4-2021earningsrelease.htm): renamed 'Acquisition-related tax matters' and widened to include tax benefits/costs from settlement or resolution of FLIR tax reserves (Q4/21 -21.4; FY21 -7.3). FY2022 outlook (Q4/21 release) excludes only acquired intangible amortization 'for all acquisitions' (FLIR deal costs ended). (5) Q4/22 release (https://www.sec.gov/Archives/edgar/data/1094285/000109428523000004/q4-2022earningsrelease.htm): 'FLIR transaction and integration costs' of -4.0 (pre-tax income from favourable resolution of certain FLIR integration-related costs). (6) Q1/23 release: definition text trimmed to 'certain FLIR acquisition integration-related costs, acquired intangible asset amortization' and tax matters; inventory step-up and bridge fees no longer referenced. (7) Q2/23 outlook / Q3/23 release (https://www.sec.gov/Archives/edgar/data/1094285/000109428523000122/q3-2023earningsrelease.htm): new 'FLIR integration costs' (facility consolidation/relocation of Teledyne FLIR operations) 5.8 in Q3/23, 3.0 in Q4/23. (8) Label changes only: Q2/24 release onward 'FLIR acquisition-related tax matters' (used here for Q2/23-Q4/23 and FY2023); Q4/24 release (https://www.sec.gov/Archives/edgar/data/1094285/000109428525000003/q4-2024earningsrelease.htm) relabels the Q4/23 and FY2023 FLIR integration costs as 'Transaction and integration costs' (used here for Q4/23 and FY2023); Q3/22 and Q4/22/FY2022 columns in the 2023 releases relabel the Q4/22 -4.0 'FLIR transaction and integration costs' as 'FLIR integration costs'. Amounts unchanged in all relabelings.",
+  "ADJ_NI STRUCTURE: Teledyne's NI reconciliation shows each item in three columns (Income before income taxes / Net income / Diluted EPS) and NO separate tax line. For each pre-tax item 'value' = pre-tax amount, 'value_ni' = after-tax amount added to net income, 'value_eps' = per-share; a derived TAX item = sum(value_ni - value) over pre-tax items makes items sum exactly to adj_ni_published - ni_gaap. Tax-only items (acquisition-related tax matters, TAXD) have no pre-tax amount: value = NI-column amount. Items shown as '-' in a period are omitted. adj_pretax_published = company's non-GAAP income before income taxes. Base: 'Net income' through Q2/21 presentations, 'Net income attributable to Teledyne' from Q3/22 onward (NCI immaterial; none in 2021).",
+  "ADJ_OI / SEGMENTS: adj_oi from the consolidated GAAP OI -> non-GAAP OI table; adj_om_published is the company's stated margin (fraction). Segment non-GAAP from Appendix A tables: amort_<seg> = segment acquired intangible amortization; adj_oi_<seg> = segment non-GAAP OI; adj_corp = non-GAAP corporate expense shown as a POSITIVE expense (same sign convention as corp_exp; company shows it negative); seg_items = segment inventory step-up and transaction/integration costs (seg 'corp' = corporate). Check: sum(adj_oi_<seg>) - adj_corp = adj_oi_published, and oi_<seg> + amort_<seg> + seg_items = adj_oi_<seg>, hold for every period. FLIR is in Digital Imaging; the 2021 'transaction' costs in corporate (77.1 FY21) include the $52.2m FLIR stock-award settlement (Q2/21).",
+  "IS PRESENTATION: Acquired intangible asset amortization is a separate IS line from the Q2/21 release (Q1/21 reclassified out of SG&A in the Q1/22 release: SG&A 168.2 vs 178.0 originally). It is recorded as other_op = -amortization (label 'Acquired intangible asset amortization') so that net_sales - cost_sales - sga + other_op = op_income; the same amount is in memo amort_intangibles. sga includes company R&D as presented.",
+  "IS PRESENTATION: 'Gain (loss) on debt extinguishment' became a separate non-operating line in the Q2/22 release (prior periods reclassified out of interest and debt expense). It is recorded under extra key gain_debt_ext (signed, gain +). Q1/21: the Q1/22 release still shows interest and debt expense of 35.7 for Q1/21; using the reclassified 6M/21 and FY2021 presentation (interest 43.5 = Q1 22.3 + Q2 21.2; loss on extinguishment 13.4, all in Q1) Q1/21 is recorded as interest_exp_net 22.3 and gain_debt_ext -13.4 (sum unchanged at 35.7). The 13.4 relates to the $493.3m notes called 17-Mar-2021. Q2/22: +10.6 gain on repurchase of $75.0m 2030/2031 notes; Q2/23: +1.6 gain on $10.0m 2031 notes. pretax = op_income - interest_exp_net + gain_debt_ext + non_service_pension + other_income holds for all periods.",
+  "IS: NCI line first presented in the Q3/22 release (NL Acoustics 80% interest acquired 15-Jul-2022); 2021 Q3/Q4/FY and Q1/22-Q2/22 shown as '-' in later releases (recorded 0); Q1/21, Q2/21 latest presentations have no NCI line (omitted). Q2/21 base for adj_ni is 'Net income'. Tax: Q1/22 benefit (9.6) and Q4/23 benefit (69.3) recorded as negative tax. discrete_tax_benefit (extra key) = net discrete income tax benefit (+) / expense (-) stated in releases (Q1/22 includes 50.0 FLIR tax-reserve resolution; Q4/23 123.4 mainly resolution of historical acquisition-related tax positions, of which 102.2 treated as acquisition-related tax matter).",
+  "IS MEMO - basic shares/EPS: Q1-Q3 and FY from XBRL (10-Q/10-K, us-gaap:WeightedAverageNumberOfSharesOutstandingBasic, EarningsPerShareBasic); Q4 basic is not reported separately and is omitted (implied Q4 basic shares ~46.8 (2021), ~46.8 (2022), ~47.1 (2023)). Diluted shares/EPS from releases. Share count jumped in 2021 after 9.5m TDY shares were issued to FLIR holders on 14-May-2021.",
+  "IS MEMO - D&A: 'da' = depreciation and amortization as on the cash-flow statement/10-K (FY2021 371.8; 10-K footnote: includes $106.4m FLIR inventory step-up in Digital Imaging). Quarterly 2021 da derived from 10-Q YTD XBRL (6M 112.4, 9M 237.8): Q2 83.1, Q3 125.4, Q4 134.0 (= Q4/21 release figure, which included 47.8 step-up). Releases for Q2/21 and Q3/21 quoted D&A EXCLUDING step-up (59.7, 90.2) and the Q4/22 release restated Q4/21 D&A to 86.2 ex step-up; these are in extra key da_ex_stepup (FY21 265.4 = 115.2 depreciation + 149.3 intangible amortization + 0.9 other). 2022/2023 quarterly D&A from releases sum to the 10-K totals (332.2, 316.4). depreciation (FY only) from XBRL us-gaap:Depreciation.",
+  "IS MEMO - SBC: FY from 10-K cash-flow statement (33.9 / 31.5 / 32.3). 2021 quarters from 10-Q equity statement XBRL (StockGrantedDuringPeriodValueSharebasedCompensationGross: 7.0, 8.4, 8.7; Q4 = 33.9 - 24.1 = 9.8 derived). 2021 releases gave only stock option expense (4.2, 3.6, 5.8, 6.4 = 20.0) plus FLIR RSU expense in Digital Imaging (Q2 4.4, Q3 1.8, Q4 1.5; FY 7.8). 2022 quarters from 'stock-based compensation expense' comparatives in 2023 releases (9.0, 6.4, 6.7, 11.4) - these sum to 33.5 vs 10-K CF 31.5; XBRL equity-statement quarterly values are 7.0, 6.5, 6.6 (Q4 implied 11.4), i.e. the difference sits in Q1/22. 2023 quarters (7.9, 8.4, 8.0, 8.0) sum to 32.3 = CF.",
+  "IS MEMO - R&D: rd_company = 'research and development expense' per FY2024 10-K XBRL (2022 352.2, 2023 356.3; not given for 2021). rd_bp_company (extra) = company-funded R&D plus bid & proposal costs per FY2021-FY2023 10-K policy note (2021 299.3 incl. 113.8 FLIR partial year; 2022 360.6; 2023 365.8).",
+  "SEGMENTS: four segments (Digital Imaging, Instrumentation, Aerospace & Defense Electronics, Engineered Systems); releases list Digital Imaging first from Q2/21. No other reconciling line between segment OI and consolidated OI besides corporate expense. Product lines (Instrumentation only; exact labels 'Marine Instrumentation', 'Environmental Instrumentation', 'Test and Measurement Instrumentation') from 10-Q revenue notes and 10-K segment note; Q4 = FY - 9M (derived). A&DE (aerospace electronics / defense electronics) and Engineered Systems (engineered products / energy systems / turbine engines) product-line LEVELS are not disclosed - releases give only y/y changes (e.g. Q1/21 A&DE aerospace -10.7, defense +5.6). Teledyne exited the (cruise missile) turbine engine business in Q1/21. Annual seg da_/capex_/assets_ and sales_us_gov_<seg> from FY2023 10-K segment note (same values in FY2021/22 10-Ks; FY2021 D&A DI 309.2 includes 106.4 step-up).",
+  "OPS - acq_sales: 2021 and Q1/22-Q2/22 = incremental net sales from the FLIR acquisition (FLIR acquired 14-May-2021; Q2/22 167.6 reflects only the pre-anniversary portion). Q3/22, Q4/22 not stated. FY2022 593.7 'current and prior year acquisitions' (FLIR + NL Acoustics (Jul-22) + ETM-Electromatic (28-Oct-22)). 2023 quarters are Digital Imaging segment 'incremental sales from recent acquisitions' (ETM, ChartWorld (3-Jan-23), etc.; Q1 25.0, Q2 28.8, Q3 25.8, Q4 17.6 = 97.2); FY2023 99.8 is the company total (balance ~2.6 likely Xena Networks, Instrumentation, acquired 13-Oct-2023).",
+  "OPS - cash/leverage: cfo_published, capex_published, fcf_published (FCF = CFO - capex) and fcf_adj_published (adjusted FCF: adds back FLIR transaction cash payments net of tax in 2021, and the $296.4m Swedish Tax Authority payment for a pre-acquisition 2018 FLIR reassessment in Q1/22/FY22) from release tables. total_debt_published / net_debt_published = company non-GAAP total debt / net debt at period end (FY key = year end). leverage_published = 'Consolidated Leverage Ratio' (credit-agreement basis) as stated: Q2/21 3.7x (from Q3/21 release: 'declined to 3.3x from 3.7x at the end of the second quarter'; Q4/21 release also cites 3.8x in May 2021); Q3/22 not stated; Q2/23 2.1x is stated 'including continued debt repayment through July'; Q3/23 stated only as 'slightly below 2.0x' (omitted).",
+  "OPS - other: sales_us_gov = sales to US Government incl. as subcontractor (10-Q / 10-K customer-type table; Q4 = FY - 9M derived). rev_us/rev_europe/rev_asia/rev_other = net sales by geographic region of customer destination per the FY2023 10-K (FY2021 10-K originally presented sales by country of origin: US 2,932.1, Canada 458.1, UK 286.3, Belgium 227.3, Netherlands 127.0, other 583.5). orders: only Q4/23 'all-time record orders of $1,519.4 million' stated (Q1/24 release: Q1/24 orders 1,433.2 up 7.8% y/y, so Q1/23 not stated in $). book_to_bill_published Q2/22 1.08x, Q3/22 1.06x. Funded backlog not disclosed in this era; Q2/22 release says 'over $3.0 billion of backlog'; rpo = remaining performance obligations at fiscal year end from 10-K revenue note (2,929.0 / 3,099.3 / 3,141.7; ~76-78% within 12 months). employees = approximate total workforce from 10-K Item 1.",
+  "CHECKS (validate.py): IS arithmetic ties for all 15 periods; quarterly sums = FY for every IS, segment, amortization, non-GAAP OI and NI item within 0.1 rounding except (a) per-share figures (adj EPS quarters sum 16.70 vs FY 16.86 in 2021 because of the May-2021 share issuance; 2022 18.18 vs 18.19; 2023 19.69 vs 19.69; GAAP EPS 9.91 vs 10.05 in 2021), (b) 2022 SBC (33.5 vs 31.5, see SBC note), (c) 2023 acq_sales (quarters are DI-only, 97.2 vs company total 99.8), (d) 2023 sales_us_gov: Q4/23 = FY 1,381.7 - reported 9M 989.3 = 392.4, but reported Q1+Q2+Q3 = 979.1 because the 10-Q 9M A&DE US-Gov figure (205.9) exceeds the sum of its quarters (64.7+61.0+69.8 = 195.5) - company inconsistency (repeated unchanged in the Q3/24 10-Q), so 2023 quarters sum to 1,371.5; every reconciliation ties (oi_gaap + items = adj_oi_published; ni_gaap + items = adj_ni_published; segment sums = consolidated). Revenue, operating income, net income, diluted EPS, amortization and capex agree with XBRL companyfacts (Q4 = FY - 9M).",
+  "OTHER: FY2021 52 weeks (Q4/21 13 weeks; Q4/20 was 14 weeks). FLIR consideration ~$8.1bn (9.5m TDY shares + $3.7bn cash). FY2021 FLIR-related pre-tax charges 350.3 (110.3 FLIR intangible amortization, 106.4 step-up, 103.0 transaction/integration, 30.6 bridge/extinguishment) plus 39.0 amortization from prior acquisitions = 389.3 total specified items. Swedish tax matter: SEK 2.8bn ($303.0m) liability affirmed 26-Jan-2022; $296.4m paid Q1/22 (in CFO; added back in adjusted FCF)."
+ ]
+}
