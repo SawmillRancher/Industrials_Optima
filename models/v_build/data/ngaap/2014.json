@@ -1,0 +1,49 @@
+{
+  "period": "2014",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000119312514387186/d812512dex991.htm",
+  "release_date": "2014-10-29",
+  "published": true,
+  "measure_names": "adjusted (adjusted operating expenses, operating margin, net income, diluted earnings per share)",
+  "columns": [
+    "Operating Expenses",
+    "Operating Margin (1),(2)",
+    "Net Income",
+    "Diluted Earnings per Share (2)"
+  ],
+  "gaap": {
+    "opex": 5005,
+    "op_margin": 61,
+    "nonop": 27,
+    "ebt": 7724,
+    "tax": 2286,
+    "etr": 29.6,
+    "ni": 5438,
+    "eps": 8.62
+  },
+  "items": [
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -450,
+      "nonop": null,
+      "ebt": null,
+      "tax": null,
+      "ni": 283,
+      "eps": 0.45,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 4555,
+    "op_margin": 64,
+    "nonop": null,
+    "ebt": null,
+    "tax": null,
+    "etr": null,
+    "ni": 5721,
+    "eps": 9.07,
+    "shares": 631
+  },
+  "definition": "Excludes the $450 million provision (and related tax benefits) for litigation covered by the retrospective responsibility plan.",
+  "notes": "Twelve Months Ended September 30, 2014 (2014 column). NI impact 283 is net of tax (footnote 3; '(3)' after 283 is a footnote marker). Op-margin impact 4 pts. No EBT/tax columns (implied tax benefit 167 not recorded). gaap etr 29.6 from release text. Self-checks: opex 5005-450=4555 OK; ni 5438+283=5721 OK; eps 8.62+0.45=9.07 OK."
+}

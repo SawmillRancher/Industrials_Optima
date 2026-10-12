@@ -1,0 +1,84 @@
+{
+  "period": "Q2-22",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000023/q22022earningsrelease.htm",
+  "release_date": "2022-04-26",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision",
+    "Effective Income Tax Rate (1)",
+    "Net Income",
+    "Diluted Earnings Per Share (1)"
+  ],
+  "gaap": {
+    "opex": 2387,
+    "op_margin": null,
+    "nonop": -260,
+    "ebt": null,
+    "tax": 895,
+    "etr": 19.7,
+    "ni": 3647,
+    "eps": 1.7
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": 127,
+      "ebt": null,
+      "tax": 28,
+      "ni": 99,
+      "eps": 0.05,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -20,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 4,
+      "ni": 16,
+      "eps": 0.01,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -20,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 2,
+      "ni": 18,
+      "eps": 0.01,
+      "where": "op"
+    },
+    {
+      "label": "Russia-Ukraine charges",
+      "cat": "OTHER",
+      "opex": -60,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 4,
+      "ni": 56,
+      "eps": 0.03,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 2287,
+    "op_margin": null,
+    "nonop": -133,
+    "ebt": null,
+    "tax": 933,
+    "etr": 19.6,
+    "ni": 3836,
+    "eps": 1.79,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs; Russia-Ukraine charges (loss within general and administrative expense of $35 million from the deconsolidation of our Russian subsidiary and $25 million in personnel expense to support employees in Russia and Ukraine), and the related tax impacts.",
+  "notes": "Table 'Three Months Ended March 31, 2022' in the 2022-04-26 release (Ex. 99.1); GAAP row labelled 'As reported'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0. Self-check rounding differences within tolerance: eps +0.01 (company footnote: figures may not recalculate exactly due to rounding; EPS computed on unrounded numbers)."
+}

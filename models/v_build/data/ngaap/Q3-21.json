@@ -1,0 +1,84 @@
+{
+  "period": "Q3-21",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000038/q32021earningsrelease.htm",
+  "release_date": "2021-07-27",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision",
+    "Effective Income Tax Rate (1)",
+    "Net Income",
+    "Diluted Earnings Per Share (1)"
+  ],
+  "gaap": {
+    "opex": 2066,
+    "op_margin": null,
+    "nonop": 325,
+    "ebt": null,
+    "tax": 1814,
+    "etr": 41.3,
+    "ni": 2575,
+    "eps": 1.18
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": -439,
+      "ebt": null,
+      "tax": -99,
+      "ni": -340,
+      "eps": -0.16,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -13,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 3,
+      "ni": 10,
+      "eps": 0,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -5,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 1,
+      "ni": 4,
+      "eps": 0,
+      "where": "op"
+    },
+    {
+      "label": "Remeasurement of deferred tax balances",
+      "cat": "TAX",
+      "opex": 0,
+      "nonop": 0,
+      "ebt": null,
+      "tax": -1007,
+      "ni": 1007,
+      "eps": 0.46,
+      "where": "tax"
+    }
+  ],
+  "adjusted": {
+    "opex": 2048,
+    "op_margin": null,
+    "nonop": -114,
+    "ebt": null,
+    "tax": 712,
+    "etr": 17.9,
+    "ni": 3256,
+    "eps": 1.49,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs; remeasurement of deferred tax balances (UK enacted legislation on June 10, 2021 increasing the tax rate from 19% to 25%; non-recurring, non-cash income tax expense of $1.0 billion), and the related tax impacts.",
+  "notes": "Table 'Three Months Ended June 30, 2021' in the 2021-07-27 release (Ex. 99.1); GAAP row labelled 'As reported'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0. Self-check rounding differences within tolerance: eps -0.01 (company footnote: figures may not recalculate exactly due to rounding; EPS computed on unrounded numbers)."
+}

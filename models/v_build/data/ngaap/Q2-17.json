@@ -1,0 +1,64 @@
+{
+  "period": "Q2-17",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316117000026/vex991earningsrelease33117.htm",
+  "release_date": "2017-04-20",
+  "published": true,
+  "measure_names": "adjusted / as adjusted (operating expenses, operating margin, non-operating income (expense), income before income taxes, income tax provision, effective income tax rate, net income, diluted earnings per share)",
+  "columns": [
+    "Operating Expenses",
+    "Operating Margin (1),(2)",
+    "Non-operating Income (Expense)",
+    "Income Before Income Taxes",
+    "Income Tax Provision",
+    "Effective Income Tax Rate (1)",
+    "Net Income",
+    "Diluted Earnings Per Share (1)"
+  ],
+  "gaap": {
+    "opex": 1669,
+    "op_margin": 63,
+    "nonop": -106,
+    "ebt": 2702,
+    "tax": 2272,
+    "etr": 84.1,
+    "ni": 430,
+    "eps": 0.18
+  },
+  "items": [
+    {
+      "label": "Elimination of deferred tax balances",
+      "cat": "TAX",
+      "opex": 0.0,
+      "nonop": 0.0,
+      "ebt": 0.0,
+      "tax": -1515,
+      "ni": 1515,
+      "eps": 0.63,
+      "where": "tax"
+    },
+    {
+      "label": "Charitable contribution",
+      "cat": "OTHER",
+      "opex": -192,
+      "nonop": 0.0,
+      "ebt": 192,
+      "tax": 71,
+      "ni": 121,
+      "eps": 0.05,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 1477,
+    "op_margin": 67,
+    "nonop": -106,
+    "ebt": 2894,
+    "tax": 828,
+    "etr": 28.6,
+    "ni": 2066,
+    "eps": 0.86,
+    "shares": null
+  },
+  "definition": "Excludes the non-recurring, non-cash $1.5bn income tax provision from eliminating Visa Europe deferred tax balances and the $192M charitable contribution of Visa shares (legal entity reorganization).",
+  "notes": "Three Months Ended March 31, 2017 table. Charitable contribution op-margin impact 4 pts. Diluted shares not shown in the table (null; income statement 2,406 class A). Self-checks: opex 1669-192=1477 OK; nonop OK; ebt 2702+192=2894 OK; tax 2272-1515+71=828 OK; ni 430+1515+121=2066 OK; eps 0.18+0.63+0.05=0.86 OK."
+}

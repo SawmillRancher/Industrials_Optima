@@ -1,0 +1,95 @@
+{
+  "period": "Q2-24",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000027/q22024earningsrelease.htm",
+  "release_date": "2024-04-23",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision (1)",
+    "Effective Income Tax Rate (2)",
+    "Net Income",
+    "Diluted Earnings Per Share (2)"
+  ],
+  "gaap": {
+    "opex": 3421,
+    "op_margin": null,
+    "nonop": 159,
+    "ebt": null,
+    "tax": 850,
+    "etr": 15.4,
+    "ni": 4663,
+    "eps": 2.29
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": 30,
+      "ebt": null,
+      "tax": 7,
+      "ni": 23,
+      "eps": 0.01,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -43,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 10,
+      "ni": 33,
+      "eps": 0.02,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -26,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 1,
+      "ni": 25,
+      "eps": 0.01,
+      "where": "op"
+    },
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -424,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 95,
+      "ni": 329,
+      "eps": 0.16,
+      "where": "op"
+    },
+    {
+      "label": "Lease consolidation costs",
+      "cat": "RESTR",
+      "opex": -57,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 13,
+      "ni": 44,
+      "eps": 0.02,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 2871,
+    "op_margin": null,
+    "nonop": 189,
+    "ebt": null,
+    "tax": 976,
+    "etr": 16.0,
+    "ni": 5117,
+    "eps": 2.51,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs; litigation provision (significant accruals for uncovered legal matters and additional accruals for the interchange multidistrict litigation covered by the U.S. retrospective responsibility plan); lease consolidation costs (charge within general and administrative expense associated with the consolidation of certain leased office spaces).",
+  "notes": "Table 'Three Months Ended March 31, 2024' in the 2024-04-23 release (Ex. 99.1); GAAP row labelled 'As reported'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0."
+}

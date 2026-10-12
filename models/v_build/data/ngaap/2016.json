@@ -1,0 +1,119 @@
+{
+  "period": "2016",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316116000053/vex991093016earningsrelease.htm",
+  "release_date": "2016-10-24",
+  "published": true,
+  "measure_names": "adjusted / as adjusted (operating expenses, operating margin, non-operating income (expense), income before income taxes, income taxes, effective income tax rate, net income, diluted earnings per share)",
+  "columns": [
+    "Operating Expenses",
+    "Operating Margin (2),(3)",
+    "Non-operating Income (Expense)",
+    "Income Before Income Taxes",
+    "Income Taxes",
+    "Effective Income Tax Rate (2)",
+    "Net Income",
+    "Diluted Earnings Per Share (2)"
+  ],
+  "gaap": {
+    "opex": 7199,
+    "op_margin": 52,
+    "nonop": 129,
+    "ebt": 8012,
+    "tax": 2021,
+    "etr": 25.2,
+    "ni": 5991,
+    "eps": 2.48
+  },
+  "items": [
+    {
+      "label": "Severance cost",
+      "cat": "RESTR",
+      "opex": -110,
+      "nonop": 0.0,
+      "ebt": 110,
+      "tax": 38,
+      "ni": 72,
+      "eps": 0.03,
+      "where": "op"
+    },
+    {
+      "label": "Remeasurement of deferred tax liability",
+      "cat": "TAX",
+      "opex": 0.0,
+      "nonop": 0.0,
+      "ebt": 0.0,
+      "tax": 88,
+      "ni": -88,
+      "eps": -0.04,
+      "where": "tax"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -152,
+      "nonop": 0.0,
+      "ebt": 152,
+      "tax": 56,
+      "ni": 96,
+      "eps": 0.04,
+      "where": "op"
+    },
+    {
+      "label": "Visa Europe Framework Agreement loss",
+      "cat": "VE",
+      "opex": -1877,
+      "nonop": 0.0,
+      "ebt": 1877,
+      "tax": 693,
+      "ni": 1184,
+      "eps": 0.49,
+      "where": "op"
+    },
+    {
+      "label": "Net gains on currency forward contracts",
+      "cat": "VE",
+      "opex": 0.0,
+      "nonop": -74,
+      "ebt": -74,
+      "tax": -27,
+      "ni": -47,
+      "eps": -0.02,
+      "where": "nonop"
+    },
+    {
+      "label": "Foreign exchange gain on euro deposits",
+      "cat": "VE",
+      "opex": 0.0,
+      "nonop": -145,
+      "ebt": -145,
+      "tax": -54,
+      "ni": -91,
+      "eps": -0.04,
+      "where": "nonop"
+    },
+    {
+      "label": "Revaluation of Visa Europe put option",
+      "cat": "VE",
+      "opex": 0.0,
+      "nonop": -255,
+      "ebt": -255,
+      "tax": 0.0,
+      "ni": -255,
+      "eps": -0.11,
+      "where": "nonop"
+    }
+  ],
+  "adjusted": {
+    "opex": 5060,
+    "op_margin": 66,
+    "nonop": -345,
+    "ebt": 9677,
+    "tax": 2815,
+    "etr": 29.1,
+    "ni": 6862,
+    "eps": 2.84,
+    "shares": 2414
+  },
+  "definition": "Excludes items that are non-recurring or have no cash impact: Q4 severance, UK deferred tax liability remeasurement, Visa Europe acquisition-related costs, Framework Agreement loss, currency forward gains, FX gain on euro deposits and the Visa Europe put revaluation.",
+  "notes": "Twelve Months Ended September 30, 2016 table. Op-margin impacts per item (pts): severance 1, acquisition costs 1, Framework Agreement loss 12 (no item field). Self-checks: opex 7199-110-152-1877=5060 OK; nonop 129-74-145-255=-345 OK; ebt OK (9677); tax 2021+38+88+56+693-27-54+0=2815 OK; ni 5991+72-88+96+1184-47-91-255=6862 OK; eps 2.48+0.03-0.04+0.04+0.49-0.02-0.04-0.11=2.83 vs 2.84 OK (rounding)."
+}

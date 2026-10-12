@@ -1,0 +1,73 @@
+{
+  "period": "Q2-20",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316120000024/q22020ex991.htm",
+  "release_date": "2020-04-30",
+  "published": true,
+  "measure_names": "non-GAAP ('Non-GAAP')",
+  "columns": [
+    "Operating Expenses",
+    "Non-operating Income (Expense)",
+    "Income Tax Provision",
+    "Effective Income Tax Rate",
+    "Net Income",
+    "Diluted Earnings Per Share"
+  ],
+  "gaap": {
+    "opex": 1930,
+    "op_margin": null,
+    "nonop": -95,
+    "ebt": null,
+    "tax": 745,
+    "etr": 19.4,
+    "ni": 3084,
+    "eps": 1.38
+  },
+  "items": [
+    {
+      "label": "(Gains) Losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0.0,
+      "nonop": 2,
+      "ebt": null,
+      "tax": 0.0,
+      "ni": 2,
+      "eps": 0.0,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -11,
+      "nonop": 0.0,
+      "ebt": null,
+      "tax": 2,
+      "ni": 9,
+      "eps": 0.0,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -5,
+      "nonop": 0.0,
+      "ebt": null,
+      "tax": 2,
+      "ni": 3,
+      "eps": 0.0,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 1914,
+    "op_margin": null,
+    "nonop": -93,
+    "ebt": null,
+    "tax": 749,
+    "etr": 19.5,
+    "ni": 3098,
+    "eps": 1.39,
+    "shares": null
+  },
+  "definition": "Non-GAAP excludes items 'not representative of our continuing operations' and that 'may distort our longer-term operating trends'; from fiscal 2020 the methodology also excludes gains and losses on equity investments, amortization of acquired intangible assets and acquisition-related costs for acquisitions closed in fiscal 2019 and later (prior year restated).",
+  "notes": "No ebt/op_margin column. EPS items all '\u2014'; 1.38 vs 1.39 published (rounding). Shares not shown."
+}

@@ -1,0 +1,95 @@
+{
+  "period": "2020",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316120000061/q42020ex991.htm",
+  "release_date": "2020-10-28",
+  "published": true,
+  "measure_names": "non-GAAP ('Non-GAAP')",
+  "columns": [
+    "Operating Expenses",
+    "Non-operating Income (Expense)",
+    "Income Tax Provision",
+    "Effective Income Tax Rate",
+    "Net Income",
+    "Diluted Earnings Per Share"
+  ],
+  "gaap": {
+    "opex": 7765,
+    "op_margin": null,
+    "nonop": -291,
+    "ebt": null,
+    "tax": 2924,
+    "etr": 21.2,
+    "ni": 10866,
+    "eps": 4.89
+  },
+  "items": [
+    {
+      "label": "(Gains) Losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0.0,
+      "nonop": -101,
+      "ebt": null,
+      "tax": -23,
+      "ni": -78,
+      "eps": -0.04,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -46,
+      "nonop": 0.0,
+      "ebt": null,
+      "tax": 11,
+      "ni": 35,
+      "eps": 0.02,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -17,
+      "nonop": 0.0,
+      "ebt": null,
+      "tax": 4,
+      "ni": 13,
+      "eps": 0.01,
+      "where": "op"
+    },
+    {
+      "label": "Remeasurement of deferred tax balances",
+      "cat": "TAX",
+      "opex": 0.0,
+      "nonop": 0.0,
+      "ebt": null,
+      "tax": -329,
+      "ni": 329,
+      "eps": 0.15,
+      "where": "tax"
+    },
+    {
+      "label": "Resolution of a tax item",
+      "cat": "TAX",
+      "opex": 0.0,
+      "nonop": 0.0,
+      "ebt": null,
+      "tax": -28,
+      "ni": 28,
+      "eps": 0.01,
+      "where": "tax"
+    }
+  ],
+  "adjusted": {
+    "opex": 7702,
+    "op_margin": null,
+    "nonop": -392,
+    "ebt": null,
+    "tax": 2559,
+    "etr": 18.6,
+    "ni": 11193,
+    "eps": 5.04,
+    "shares": null
+  },
+  "definition": "Non-GAAP excludes items 'not representative of our continuing operations' and that 'may distort our longer-term operating trends'; from fiscal 2020 the methodology also excludes gains and losses on equity investments, amortization of acquired intangible assets and acquisition-related costs for acquisitions closed in fiscal 2019 and later (prior year restated); FY2020 also excludes the UK deferred tax remeasurement ($329 million) and resolution of a tax item ($28 million).",
+  "notes": "Twelve months ended Sep-30-2020 table from the Q4 FY2020 release. No ebt/op_margin column. Shares not shown."
+}

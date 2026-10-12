@@ -1,0 +1,49 @@
+{
+  "period": "2015",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000119312515361234/d89014dex991.htm",
+  "release_date": "2015-11-02",
+  "published": true,
+  "measure_names": "adjusted / as adjusted (operating expenses, operating margin, net income, diluted earnings per share)",
+  "columns": [
+    "Operating Expenses",
+    "Operating Margin (1),(2)",
+    "Net Income",
+    "Diluted Earnings per Share (2),(3)"
+  ],
+  "gaap": {
+    "opex": 4816,
+    "op_margin": 65,
+    "nonop": -69,
+    "ebt": 8995,
+    "tax": 2667,
+    "etr": 29.6,
+    "ni": 6328,
+    "eps": 2.58
+  },
+  "items": [
+    {
+      "label": "Revaluation of Visa Europe put option",
+      "cat": "VE",
+      "opex": null,
+      "nonop": null,
+      "ebt": null,
+      "tax": null,
+      "ni": 110,
+      "eps": 0.04,
+      "where": "nonop"
+    }
+  ],
+  "adjusted": {
+    "opex": 4816,
+    "op_margin": 65,
+    "nonop": null,
+    "ebt": null,
+    "tax": null,
+    "etr": null,
+    "ni": 6438,
+    "eps": 2.62,
+    "shares": 2457
+  },
+  "definition": "Excludes the $110 million non-cash, non-operating expense from the revaluation of the Visa Europe put option (not subject to tax).",
+  "notes": "Twelve Months Ended September 30, 2015 (2015 column); post-split document. Opex/margin columns show '\u2014' for the put item. Not adjusted: the $239M (Q3 table: $280M) one-time tax benefit from resolution of uncertain tax positions. Pre-tax / non-op effect = 110 (not taxed; no column). gaap etr 29.6 from release text. Self-checks: ni 6328+110=6438 OK; eps 2.58+0.04=2.62 OK; opex 4816=4816 OK."
+}

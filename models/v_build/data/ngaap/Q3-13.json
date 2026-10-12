@@ -1,0 +1,37 @@
+{
+  "period": "Q3-13",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000119312513300529/d572461dex991.htm",
+  "release_date": "2013-07-24",
+  "published": false,
+  "measure_names": "adjusted (prior-year quarter only)",
+  "columns": [
+    "Operating expenses",
+    "Operating margin (1)",
+    "Net income (loss) attributable to Visa Inc.",
+    "Diluted earnings (loss) per share (2)"
+  ],
+  "gaap": {
+    "opex": 1173,
+    "op_margin": 61,
+    "nonop": 5,
+    "ebt": 1833,
+    "tax": 608,
+    "etr": 33.2,
+    "ni": 1225,
+    "eps": 1.88
+  },
+  "items": [],
+  "adjusted": {
+    "opex": 1173,
+    "op_margin": 61,
+    "nonop": null,
+    "ebt": null,
+    "tax": null,
+    "etr": null,
+    "ni": 1225,
+    "eps": 1.88,
+    "shares": 651
+  },
+  "definition": "No adjustments for the quarter; the reconciliation adjusts only the prior-year quarter (Q3 FY2012 $4.1bn covered litigation provision).",
+  "notes": "Reconciliation adjusts only the three months ended June 30, 2012. 2013 column: litigation provision '\u2014', 'Adjusted' = as reported (opex 1,173, margin 61, NI 1,225, EPS 1.88, shares 651), recorded under adjusted. etr 33.2 from release text. No self-check failures."
+}

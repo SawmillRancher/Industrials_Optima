@@ -1,0 +1,106 @@
+{
+  "period": "Q3-26",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000103/q32026earningsrelease.htm",
+  "release_date": "2026-07-28",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision (1)",
+    "Effective Income Tax Rate (2)",
+    "Net Income",
+    "Diluted Earnings Per Share (2)"
+  ],
+  "gaap": {
+    "opex": 4756,
+    "op_margin": null,
+    "nonop": -44,
+    "ebt": null,
+    "tax": 1205,
+    "etr": 17.6,
+    "ni": 5628,
+    "eps": 2.97
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": 9,
+      "ebt": null,
+      "tax": 2,
+      "ni": 7,
+      "eps": 0,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -64,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 20,
+      "ni": 44,
+      "eps": 0.02,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -14,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 0,
+      "ni": 14,
+      "eps": 0.01,
+      "where": "op"
+    },
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -237,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 54,
+      "ni": 183,
+      "eps": 0.1,
+      "where": "op"
+    },
+    {
+      "label": "Deferred tax benefit",
+      "cat": "TAX",
+      "opex": 0,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 18,
+      "ni": -18,
+      "eps": -0.01,
+      "where": "tax"
+    },
+    {
+      "label": "Severance costs",
+      "cat": "RESTR",
+      "opex": -563,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 125,
+      "ni": 438,
+      "eps": 0.23,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 3878,
+    "op_margin": null,
+    "nonop": -35,
+    "ebt": null,
+    "tax": 1424,
+    "etr": 18.4,
+    "ni": 6296,
+    "eps": 3.32,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs; litigation provision (significant accruals for uncovered legal matters and additional accruals for the interchange multidistrict litigation covered by the U.S. retrospective responsibility plan); deferred tax benefit (one-time non-cash benefit within income tax provision due to a change in the U.S. taxation of certain foreign earnings); severance costs (within personnel expense resulting from actions taken to drive operational efficiencies and reinvest in high-growth opportunities).",
+  "notes": "Table 'Three Months Ended June 30, 2026' in the 2026-07-28 release (Ex. 99.1); GAAP row labelled 'GAAP'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0."
+}

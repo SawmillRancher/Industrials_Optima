@@ -1,0 +1,84 @@
+{
+  "period": "Q2-26",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000077/q22026earningsrelease.htm",
+  "release_date": "2026-04-28",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision (1)",
+    "Effective Income Tax Rate (2)",
+    "Net Income",
+    "Diluted Earnings Per Share (2)"
+  ],
+  "gaap": {
+    "opex": 3996,
+    "op_margin": null,
+    "nonop": -60,
+    "ebt": null,
+    "tax": 1153,
+    "etr": 16.1,
+    "ni": 6021,
+    "eps": 3.14
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": 15,
+      "ebt": null,
+      "tax": 3,
+      "ni": 12,
+      "eps": 0.01,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -50,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 13,
+      "ni": 37,
+      "eps": 0.02,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -36,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 6,
+      "ni": 30,
+      "eps": 0.02,
+      "where": "op"
+    },
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -311,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 69,
+      "ni": 242,
+      "eps": 0.13,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 3599,
+    "op_margin": null,
+    "nonop": -45,
+    "ebt": null,
+    "tax": 1244,
+    "etr": 16.4,
+    "ni": 6342,
+    "eps": 3.31,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs; litigation provision (significant accruals for uncovered legal matters and additional accruals for the interchange multidistrict litigation covered by the U.S. retrospective responsibility plan).",
+  "notes": "Table 'Three Months Ended March 31, 2026' in the 2026-04-28 release (Ex. 99.1); GAAP row labelled 'GAAP'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0. Self-check rounding differences within tolerance: eps +0.01 (company footnote: figures may not recalculate exactly due to rounding; EPS computed on unrounded numbers)."
+}

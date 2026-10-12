@@ -1,0 +1,96 @@
+{
+  "period": "2009",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000119312509214847/dex991.htm",
+  "release_date": "2009-10-27",
+  "published": true,
+  "measure_names": "adjusted (adjusted operating income, adjusted operating expenses, adjusted operating margin, adjusted net income, adjusted diluted class A earnings per share)",
+  "columns": [
+    "Three Months Ended September 30, 2009",
+    "Three Months Ended September 30, 2008",
+    "Twelve Months Ended September 30, 2009",
+    "Twelve Months Ended September 30, 2008",
+    "(opex / non-operating tables:) Actual",
+    "Adjustments",
+    "As Adjusted"
+  ],
+  "gaap": {
+    "opex": 3373,
+    "op_margin": null,
+    "nonop": 462,
+    "ebt": 4000,
+    "tax": 1648,
+    "etr": null,
+    "ni": 2353,
+    "eps": 3.1
+  },
+  "items": [
+    {
+      "label": "Restructuring (2)",
+      "cat": "RESTR",
+      "opex": -67,
+      "nonop": null,
+      "ebt": 67,
+      "tax": null,
+      "ni": null,
+      "eps": null,
+      "where": "op"
+    },
+    {
+      "label": "Asset step-up amortization (3)",
+      "cat": "AMORT",
+      "opex": -68,
+      "nonop": null,
+      "ebt": 68,
+      "tax": null,
+      "ni": null,
+      "eps": null,
+      "where": "op"
+    },
+    {
+      "label": "Interest accretion on American Express settlement (4)",
+      "cat": "LITIG",
+      "opex": null,
+      "nonop": 36,
+      "ebt": 36,
+      "tax": null,
+      "ni": null,
+      "eps": null,
+      "where": "nonop"
+    },
+    {
+      "label": "Interest expense on Discover settlement (5)",
+      "cat": "LITIG",
+      "opex": null,
+      "nonop": 5,
+      "ebt": 5,
+      "tax": null,
+      "ni": null,
+      "eps": null,
+      "where": "nonop"
+    },
+    {
+      "label": "Investment income on Litigation Escrow and EU proceeds (6)",
+      "cat": "OTHER",
+      "opex": null,
+      "nonop": -22,
+      "ebt": -22,
+      "tax": null,
+      "ni": null,
+      "eps": null,
+      "where": "nonop"
+    }
+  ],
+  "adjusted": {
+    "opex": 3238,
+    "op_margin": 53,
+    "nonop": 481,
+    "ebt": 4154,
+    "tax": 1707,
+    "etr": 41,
+    "ni": 2448,
+    "eps": 3.23,
+    "shares": 758
+  },
+  "definition": "Adjusted basis 'reflective of restructuring and purchase amortization' (excludes restructuring, asset step-up amortization, AmEx/Discover settlement interest and investment income on litigation escrow / EU proceeds); tax at the GAAP effective rate adjusted for one-time Singapore incentive charges (41%).",
+  "notes": "Twelve Months Ended September 30, 2009 column. Pre-tax table: item amounts in ebt; opex/nonop from the opex and non-operating reconciliation tables (non-op table combines AmEx accretion and Discover interest into one 41 adjustment to interest expense; split per the main table 36 + 5). Rows 'Litigation reserve (1)' and 'Underwater contract (LIBOR adjustment) (7)' show '\u2014' for FY2009 and are omitted. gaap.ebt 4000 = 'Net (loss) income before taxes and minority interest'; minority interest (1) added back in the table. adjusted.tax printed '(1,707)', recorded positive; adjusted.etr 41 = 'Tax rate (8)'. adjusted.shares 758 = weighted average diluted shares in the adjusted EPS table. Release notes adjusted FY2009 includes the VisaNet do Brasil sale gain (ex-sale: $2.2bn / $2.92, text only). Self-checks: opex 3373-135=3238 OK; nonop 462+19=481 OK; ebt 4000+154=4154 OK. ni / eps / tax checks not applicable (no per-item tax or after-tax amounts; implied tax adjustment 59 not printed)."
+}

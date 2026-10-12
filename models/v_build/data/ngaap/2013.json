@@ -1,0 +1,37 @@
+{
+  "period": "2013",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000119312513418554/d620084dex991.htm",
+  "release_date": "2013-10-30",
+  "published": false,
+  "measure_names": "adjusted (presented for fiscal 2012 only; fiscal 2013 shown as reported = adjusted)",
+  "columns": [
+    "Operating expenses",
+    "Operating margin (1)",
+    "Net income attributable to Visa Inc.",
+    "Diluted earnings per share (2)"
+  ],
+  "gaap": {
+    "opex": 4539,
+    "op_margin": 61,
+    "nonop": 18,
+    "ebt": 7257,
+    "tax": 2277,
+    "etr": 31.4,
+    "ni": 4980,
+    "eps": 7.59
+  },
+  "items": [],
+  "adjusted": {
+    "opex": 4539,
+    "op_margin": 61,
+    "nonop": null,
+    "ebt": null,
+    "tax": null,
+    "etr": null,
+    "ni": 4980,
+    "eps": 7.59,
+    "shares": 656
+  },
+  "definition": "No fiscal 2013 adjustments; the reconciliation adjusts only the fiscal 2012 comparative (reversal of tax reserves, litigation provision, deferred tax adjustment).",
+  "notes": "The FY2013 Q4 release's 'Reconciliation of Non-GAAP Financial Results\u2014Full Year' adjusts only the 2012 column; the release says the adjusted measure is for fiscal year 2012. The 2013 column shows '\u2014' for every adjustment and 'Adjusted' = as reported (opex 4,539, margin 61, NI 4,980, EPS 7.59, shares 656); those printed values are recorded under adjusted. etr 31.4 from the release text. Self-checks trivially pass (no items)."
+}

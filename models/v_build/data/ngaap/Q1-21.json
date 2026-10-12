@@ -1,0 +1,73 @@
+{
+  "period": "Q1-21",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000009/q12021ex991.htm",
+  "release_date": "2021-01-28",
+  "published": true,
+  "measure_names": "non-GAAP ('Non-GAAP')",
+  "columns": [
+    "Operating Expenses",
+    "Non-operating Income (Expense)",
+    "Income Tax Provision",
+    "Effective Income Tax Rate",
+    "Net Income",
+    "Diluted Earnings Per Share"
+  ],
+  "gaap": {
+    "opex": 1843,
+    "op_margin": null,
+    "nonop": -96,
+    "ebt": null,
+    "tax": 622,
+    "etr": 16.6,
+    "ni": 3126,
+    "eps": 1.42
+  },
+  "items": [
+    {
+      "label": "(Gains) Losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0.0,
+      "nonop": -16,
+      "ebt": null,
+      "tax": -4,
+      "ni": -12,
+      "eps": -0.01,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -12,
+      "nonop": 0.0,
+      "ebt": null,
+      "tax": 3,
+      "ni": 9,
+      "eps": 0.0,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -3,
+      "nonop": 0.0,
+      "ebt": null,
+      "tax": 1,
+      "ni": 2,
+      "eps": 0.0,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 1828,
+    "op_margin": null,
+    "nonop": -112,
+    "ebt": null,
+    "tax": 622,
+    "etr": 16.6,
+    "ni": 3125,
+    "eps": 1.42,
+    "shares": null
+  },
+  "definition": "Non-GAAP excludes items 'not representative of our continuing operations, as they may be non-recurring or have no cash impact, and may distort our longer-term operating trends': gains and losses on equity investments, amortization of acquired intangible assets, acquisition-related costs.",
+  "notes": "No ebt/op_margin column. EPS 1.42 - 0.01 = 1.41 vs 1.42 published (rounding). Shares not shown."
+}

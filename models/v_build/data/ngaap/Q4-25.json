@@ -1,0 +1,84 @@
+{
+  "period": "Q4-25",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000077/q42025earningsrelease.htm",
+  "release_date": "2025-10-28",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision (1)",
+    "Effective Income Tax Rate (2)",
+    "Net Income",
+    "Diluted Earnings Per Share (2)"
+  ],
+  "gaap": {
+    "opex": 4576,
+    "op_margin": null,
+    "nonop": 75,
+    "ebt": null,
+    "tax": 1133,
+    "etr": 18.2,
+    "ni": 5090,
+    "eps": 2.62
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": -46,
+      "ebt": null,
+      "tax": -10,
+      "ni": -36,
+      "eps": -0.02,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -54,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 13,
+      "ni": 41,
+      "eps": 0.02,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -12,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 1,
+      "ni": 11,
+      "eps": 0.01,
+      "where": "op"
+    },
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -899,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 202,
+      "ni": 697,
+      "eps": 0.36,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 3611,
+    "op_margin": null,
+    "nonop": 29,
+    "ebt": null,
+    "tax": 1339,
+    "etr": 18.8,
+    "ni": 5803,
+    "eps": 2.98,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs; litigation provision (significant accruals for uncovered legal matters and additional accruals for the interchange multidistrict litigation covered by the U.S. retrospective responsibility plan).",
+  "notes": "Table 'Three Months Ended September 30, 2025' in the 2025-10-28 release (Ex. 99.1); GAAP row labelled 'GAAP'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0. Self-check rounding differences within tolerance: eps +0.01 (company footnote: figures may not recalculate exactly due to rounding; EPS computed on unrounded numbers)."
+}

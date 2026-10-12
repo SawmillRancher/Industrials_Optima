@@ -1,0 +1,52 @@
+{
+  "period": "Q3-18",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316118000030/vex991earningsrelease630.htm",
+  "release_date": "2018-07-25",
+  "published": true,
+  "measure_names": "adjusted ('As adjusted')",
+  "columns": [
+    "Operating Expenses",
+    "Operating Margin",
+    "Income Before Income Taxes",
+    "Income Tax Provision",
+    "Effective Income Tax Rate",
+    "Net Income",
+    "Diluted Earnings Per Share"
+  ],
+  "gaap": {
+    "opex": 2355,
+    "op_margin": 55,
+    "nonop": null,
+    "ebt": 2812,
+    "tax": 483,
+    "etr": 17.2,
+    "ni": 2329,
+    "eps": 1.0
+  },
+  "items": [
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -600,
+      "nonop": null,
+      "ebt": 600,
+      "tax": 137,
+      "ni": 463,
+      "eps": 0.2,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 1755,
+    "op_margin": 67,
+    "nonop": null,
+    "ebt": 3412,
+    "tax": 620,
+    "etr": 18.2,
+    "ni": 2792,
+    "eps": 1.2,
+    "shares": null
+  },
+  "definition": "Adjusted results exclude certain significant items 'not indicative of our operating performance ... as they were either non-recurring or had no cash impact': litigation provision of $600 million (tax benefit $137 million) for the interchange multidistrict litigation.",
+  "notes": "Table has no non-operating column (nonop null). Litigation provision row also shows operating margin impact of 11%. Shares not shown."
+}

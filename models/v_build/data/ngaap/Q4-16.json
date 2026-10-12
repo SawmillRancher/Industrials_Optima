@@ -1,0 +1,64 @@
+{
+  "period": "Q4-16",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316116000053/vex991093016earningsrelease.htm",
+  "release_date": "2016-10-24",
+  "published": true,
+  "measure_names": "adjusted / as adjusted (operating expenses, operating margin, non-operating income (expense), income before income taxes, income taxes, effective income tax rate, net income, diluted earnings per share)",
+  "columns": [
+    "Operating Expenses",
+    "Operating Margin (2),(3)",
+    "Non-operating (Expense) Income",
+    "Income Before Income Taxes",
+    "Income Taxes",
+    "Effective Income Tax Rate (2)",
+    "Net Income",
+    "Diluted Earnings Per Share (2)"
+  ],
+  "gaap": {
+    "opex": 1636,
+    "op_margin": 62,
+    "nonop": -115,
+    "ebt": 2510,
+    "tax": 579,
+    "etr": 23.1,
+    "ni": 1931,
+    "eps": 0.79
+  },
+  "items": [
+    {
+      "label": "Severance cost",
+      "cat": "RESTR",
+      "opex": -110,
+      "nonop": 0.0,
+      "ebt": 110,
+      "tax": 38,
+      "ni": 72,
+      "eps": 0.03,
+      "where": "op"
+    },
+    {
+      "label": "Remeasurement of deferred tax liability",
+      "cat": "TAX",
+      "opex": 0.0,
+      "nonop": 0.0,
+      "ebt": 0.0,
+      "tax": 88,
+      "ni": -88,
+      "eps": -0.04,
+      "where": "tax"
+    }
+  ],
+  "adjusted": {
+    "opex": 1526,
+    "op_margin": 64,
+    "nonop": -115,
+    "ebt": 2620,
+    "tax": 705,
+    "etr": 26.9,
+    "ni": 1915,
+    "eps": 0.78,
+    "shares": 2440
+  },
+  "definition": "Excludes the $110 million severance charge and the non-cash $88 million UK deferred tax liability remeasurement gain.",
+  "notes": "Three Months Ended September 30, 2016 table. Severance op-margin impact 3 pts. Self-checks: opex 1636-110=1526 OK; nonop OK; ebt 2510+110=2620 OK; tax 579+38+88=705 OK; ni 1931+72-88=1915 OK; eps 0.79+0.03-0.04=0.78 OK."
+}

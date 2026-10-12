@@ -1,0 +1,46 @@
+{
+  "period": "2011",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000119312511282026/d247231dex991.htm",
+  "release_date": "2011-10-26",
+  "published": true,
+  "measure_names": "adjusted (adjusted net income attributable to Visa Inc., adjusted diluted earnings per share)",
+  "columns": [
+    "Fiscal Year 2011"
+  ],
+  "gaap": {
+    "opex": 3732,
+    "op_margin": null,
+    "nonop": 200,
+    "ebt": 5656,
+    "tax": 2010,
+    "etr": null,
+    "ni": 3650,
+    "eps": 5.16
+  },
+  "items": [
+    {
+      "label": "Revaluation of Visa Europe Put option (1)",
+      "cat": "VE",
+      "opex": null,
+      "nonop": null,
+      "ebt": null,
+      "tax": null,
+      "ni": -122,
+      "eps": -0.17,
+      "where": "nonop"
+    }
+  ],
+  "adjusted": {
+    "opex": null,
+    "op_margin": null,
+    "nonop": null,
+    "ebt": null,
+    "tax": null,
+    "etr": null,
+    "ni": 3528,
+    "eps": 4.99,
+    "shares": 707
+  },
+  "definition": "Excludes the revaluation of the Visa Europe put option (non-cash, non-operating income, not subject to tax).",
+  "notes": "Fiscal Year 2011 column. EPS impact printed as 'Impact of revaluation of Visa Europe put option | 0.17' below 'Diluted earnings per share (as reported) 5.16' (i.e. the bridge from adjusted 4.99 back to reported); recorded as -0.17 so that reported + item = adjusted. Footnote: not subject to tax (pre-tax/non-operating effect -122, no such column). gaap opex/nonop/ebt/tax from the income statement. Self-checks: ni 3650-122=3528 OK; eps 5.16-0.17=4.99 OK."
+}

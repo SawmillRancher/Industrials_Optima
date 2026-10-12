@@ -1,0 +1,84 @@
+{
+  "period": "Q3-22",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000055/q32022earningsrelease.htm",
+  "release_date": "2022-07-26",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision",
+    "Effective Income Tax Rate (1)",
+    "Net Income",
+    "Diluted Earnings Per Share (1)"
+  ],
+  "gaap": {
+    "opex": 3127,
+    "op_margin": null,
+    "nonop": -319,
+    "ebt": null,
+    "tax": 418,
+    "etr": 10.9,
+    "ni": 3411,
+    "eps": 1.6
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": 246,
+      "ebt": null,
+      "tax": 54,
+      "ni": 192,
+      "eps": 0.09,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -44,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 10,
+      "ni": 34,
+      "eps": 0.02,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -14,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 2,
+      "ni": 12,
+      "eps": 0.01,
+      "where": "op"
+    },
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -716,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 159,
+      "ni": 557,
+      "eps": 0.26,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 2353,
+    "op_margin": null,
+    "nonop": -73,
+    "ebt": null,
+    "tax": 643,
+    "etr": 13.3,
+    "ni": 4206,
+    "eps": 1.98,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs; litigation provision (additional accruals to address claims associated with the interchange multidistrict litigation, recovered under the U.S. retrospective responsibility plan), and the related tax impacts.",
+  "notes": "Table 'Three Months Ended June 30, 2022' in the 2022-07-26 release (Ex. 99.1); GAAP row labelled 'As reported'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0."
+}

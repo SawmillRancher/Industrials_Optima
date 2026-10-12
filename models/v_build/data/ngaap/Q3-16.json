@@ -1,0 +1,86 @@
+{
+  "period": "Q3-16",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000119312516653695/d222651dex991.htm",
+  "release_date": "2016-07-21",
+  "published": true,
+  "measure_names": "adjusted / as adjusted (operating expenses, operating margin, non-operating income, income before income taxes, income taxes, effective income tax rate, net income, diluted earnings per share)",
+  "columns": [
+    "Operating Expenses",
+    "Operating Margin (1)",
+    "Non- operating (Expense) Income",
+    "Income Before Income Taxes",
+    "Income Taxes",
+    "Effective Income Tax Rate (2)",
+    "Net Income",
+    "Diluted Earnings Per Share (1)"
+  ],
+  "gaap": {
+    "opex": 3202,
+    "op_margin": 12,
+    "nonop": -6,
+    "ebt": 422,
+    "tax": 10,
+    "etr": 2.3,
+    "ni": 412,
+    "eps": 0.17
+  },
+  "items": [
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -152,
+      "nonop": 0.0,
+      "ebt": 152,
+      "tax": 56,
+      "ni": 96,
+      "eps": 0.04,
+      "where": "op"
+    },
+    {
+      "label": "Visa Europe Framework Agreement loss",
+      "cat": "VE",
+      "opex": -1877,
+      "nonop": 0.0,
+      "ebt": 1877,
+      "tax": 693,
+      "ni": 1184,
+      "eps": 0.5,
+      "where": "op"
+    },
+    {
+      "label": "Net losses on currency forward contracts",
+      "cat": "VE",
+      "opex": 0.0,
+      "nonop": 42,
+      "ebt": 42,
+      "tax": 8,
+      "ni": 34,
+      "eps": 0.01,
+      "where": "nonop"
+    },
+    {
+      "label": "Foreign exchange gain on euro deposits",
+      "cat": "VE",
+      "opex": 0.0,
+      "nonop": -145,
+      "ebt": -145,
+      "tax": -54,
+      "ni": -91,
+      "eps": -0.04,
+      "where": "nonop"
+    }
+  ],
+  "adjusted": {
+    "opex": 1173,
+    "op_margin": 68,
+    "nonop": -109,
+    "ebt": 2348,
+    "tax": 713,
+    "etr": 30.4,
+    "ni": 1635,
+    "eps": 0.69,
+    "shares": 2386
+  },
+  "definition": "Excludes special items related to the acquisition of Visa Europe: acquisition-related costs, Framework Agreement loss, currency forward losses and FX gain on euro deposits.",
+  "notes": "Three Months Ended June 30, 2016 table. Op-margin impacts: acquisition costs 4 pts, Framework Agreement loss 52 pts. Self-checks: opex 3202-152-1877=1173 OK; nonop -6+42-145=-109 OK; ebt 422+152+1877+42-145=2348 OK; tax 10+56+693+8-54=713 OK; ni 412+96+1184+34-91=1635 OK; eps 0.17+0.04+0.50+0.01-0.04=0.68 vs 0.69 OK (rounding)."
+}

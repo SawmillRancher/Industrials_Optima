@@ -1,0 +1,53 @@
+{
+  "period": "Q4-18",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316118000052/fy18q4pressrelease10.htm",
+  "release_date": "2018-10-24",
+  "published": true,
+  "measure_names": "adjusted ('As adjusted')",
+  "columns": [
+    "Operating Expenses",
+    "Operating Margin",
+    "Non-operating (Expense) Income",
+    "Income Before Income Taxes",
+    "Income Tax Provision",
+    "Effective Income Tax Rate",
+    "Net Income",
+    "Diluted Earnings Per Share"
+  ],
+  "gaap": {
+    "opex": 2028,
+    "op_margin": 63,
+    "nonop": 132,
+    "ebt": 3538,
+    "tax": 693,
+    "etr": 19.6,
+    "ni": 2845,
+    "eps": 1.23
+  },
+  "items": [
+    {
+      "label": "Charitable contribution",
+      "cat": "OTHER",
+      "opex": -195,
+      "nonop": -193,
+      "ebt": 2,
+      "tax": 51,
+      "ni": -49,
+      "eps": -0.02,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 1833,
+    "op_margin": 66,
+    "nonop": -61,
+    "ebt": 3540,
+    "tax": 744,
+    "etr": 21.0,
+    "ni": 2796,
+    "eps": 1.21,
+    "shares": null
+  },
+  "definition": "Adjusted results exclude certain significant items 'not indicative of our operating performance ... as they were either non-recurring or had no cash impact': charitable contribution of available-for-sale investment securities to the Visa Foundation ($195 million G&A expense, $193 million realized gain in non-operating income, $51 million cash tax benefit).",
+  "notes": "Charitable contribution hits both operating expenses (195) and non-operating income (193 realized gain removed); 'where' set to op. Item operating margin impact 4%. Shares not shown."
+}

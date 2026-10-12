@@ -1,0 +1,84 @@
+{
+  "period": "Q2-25",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000035/q22025earningsrelease.htm",
+  "release_date": "2025-04-29",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision (1)",
+    "Effective Income Tax Rate (2)",
+    "Net Income",
+    "Diluted Earnings Per Share (2)"
+  ],
+  "gaap": {
+    "opex": 4159,
+    "op_margin": null,
+    "nonop": 3,
+    "ebt": null,
+    "tax": 861,
+    "etr": 15.8,
+    "ni": 4577,
+    "eps": 2.32
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": 23,
+      "ebt": null,
+      "tax": 5,
+      "ni": 18,
+      "eps": 0.01,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -64,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 16,
+      "ni": 48,
+      "eps": 0.02,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -32,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 3,
+      "ni": 29,
+      "eps": 0.02,
+      "where": "op"
+    },
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -992,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 222,
+      "ni": 770,
+      "eps": 0.39,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 3071,
+    "op_margin": null,
+    "nonop": 26,
+    "ebt": null,
+    "tax": 1107,
+    "etr": 16.9,
+    "ni": 5442,
+    "eps": 2.76,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs; litigation provision (significant accruals for uncovered legal matters and additional accruals for the interchange multidistrict litigation covered by the U.S. retrospective responsibility plan).",
+  "notes": "Table 'Three Months Ended March 31, 2025' in the 2025-04-29 release (Ex. 99.1); GAAP row labelled 'As reported'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0."
+}

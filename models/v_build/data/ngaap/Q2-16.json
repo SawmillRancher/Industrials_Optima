@@ -1,0 +1,48 @@
+{
+  "period": "Q2-16",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000119312516550256/d173021dex991.htm",
+  "release_date": "2016-04-21",
+  "published": true,
+  "measure_names": "adjusted / as adjusted (net income, effective income tax rate, diluted earnings per share)",
+  "columns": [
+    "Net Income",
+    "Effective Income Tax Rate (1)",
+    "Diluted Earnings per Share (1)"
+  ],
+  "gaap": {
+    "opex": 1192,
+    "op_margin": null,
+    "nonop": 7,
+    "ebt": 2441,
+    "tax": 734,
+    "etr": 30,
+    "ni": 1707,
+    "eps": 0.71
+  },
+  "items": [
+    {
+      "label": "Net unrealized gains on currency forward contracts",
+      "cat": "VE",
+      "opex": null,
+      "nonop": null,
+      "ebt": null,
+      "tax": null,
+      "ni": -81,
+      "eps": -0.03,
+      "where": "nonop"
+    }
+  ],
+  "adjusted": {
+    "opex": null,
+    "op_margin": null,
+    "nonop": null,
+    "ebt": null,
+    "tax": null,
+    "etr": 30,
+    "ni": 1626,
+    "eps": 0.68,
+    "shares": 2401
+  },
+  "definition": "Excludes the non-recurring net unrealized gain on currency forward contracts hedging the Visa Europe upfront cash consideration ($116M pre-tax, $81M after tax).",
+  "notes": "Three Months Ended March 31, 2016 columns. 'Revaluation of Visa Europe put option' row shows '\u2014' for the quarter (six-month only) and is omitted. Release narrative: $116M pre-tax gain in non-operating income, $81M net of tax (implied tax 35, computed); not recorded in nonop/ebt/tax (no such columns). Self-checks: ni 1707-81=1626 OK; eps 0.71-0.03=0.68 OK."
+}

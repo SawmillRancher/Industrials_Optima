@@ -1,0 +1,95 @@
+{
+  "period": "2022",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000076/q42022earningsrelease.htm",
+  "release_date": "2022-10-25",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision",
+    "Effective Income Tax Rate (1)",
+    "Net Income",
+    "Diluted Earnings Per Share (1)"
+  ],
+  "gaap": {
+    "opex": 10497,
+    "op_margin": null,
+    "nonop": -677,
+    "ebt": null,
+    "tax": 3179,
+    "etr": 17.5,
+    "ni": 14957,
+    "eps": 7.0
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": 264,
+      "ebt": null,
+      "tax": 67,
+      "ni": 197,
+      "eps": 0.09,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -120,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 26,
+      "ni": 94,
+      "eps": 0.04,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -69,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 9,
+      "ni": 60,
+      "eps": 0.03,
+      "where": "op"
+    },
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -861,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 191,
+      "ni": 670,
+      "eps": 0.31,
+      "where": "op"
+    },
+    {
+      "label": "Russia-Ukraine charges",
+      "cat": "OTHER",
+      "opex": -60,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 4,
+      "ni": 56,
+      "eps": 0.03,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 9387,
+    "op_margin": null,
+    "nonop": -413,
+    "ebt": null,
+    "tax": 3476,
+    "etr": 17.8,
+    "ni": 16034,
+    "eps": 7.5,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs; litigation provision (additional accruals to address claims associated with the interchange multidistrict litigation, recovered under the U.S. retrospective responsibility plan); Russia-Ukraine charges (loss within general and administrative expense of $35 million from the deconsolidation of our Russian subsidiary and $25 million in personnel expense to support employees in Russia and Ukraine), and the related tax impacts.",
+  "notes": "Table 'Twelve Months Ended September 30, 2022' in the 2022-10-25 release (Ex. 99.1); GAAP row labelled 'As reported'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0."
+}

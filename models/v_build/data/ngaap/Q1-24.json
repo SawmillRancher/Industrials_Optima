@@ -1,0 +1,73 @@
+{
+  "period": "Q1-24",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000013/q12024earningsrelease.htm",
+  "release_date": "2024-01-25",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision (1)",
+    "Effective Income Tax Rate (2)",
+    "Net Income",
+    "Diluted Earnings Per Share (2)"
+  ],
+  "gaap": {
+    "opex": 2680,
+    "op_margin": null,
+    "nonop": 88,
+    "ebt": null,
+    "tax": 1152,
+    "etr": 19.1,
+    "ni": 4890,
+    "eps": 2.39
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": -4,
+      "ebt": null,
+      "tax": -1,
+      "ni": -3,
+      "eps": 0,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -40,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 9,
+      "ni": 31,
+      "eps": 0.01,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -21,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 1,
+      "ni": 20,
+      "eps": 0.01,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 2619,
+    "op_margin": null,
+    "nonop": 84,
+    "ebt": null,
+    "tax": 1161,
+    "etr": 19.0,
+    "ni": 4938,
+    "eps": 2.41,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs.",
+  "notes": "Table 'Three Months Ended December 31, 2023' in the 2024-01-25 release (Ex. 99.1); GAAP row labelled 'As reported'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0."
+}

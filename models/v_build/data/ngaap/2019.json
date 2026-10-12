@@ -1,0 +1,53 @@
+{
+  "period": "2019",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316119000042/q42019ex9913.htm",
+  "release_date": "2019-10-24",
+  "published": true,
+  "measure_names": "non-GAAP ('Non-GAAP')",
+  "columns": [
+    "Operating Expenses",
+    "Operating Margin",
+    "Non-operating Income (Expense)",
+    "Income Before Income Taxes",
+    "Income Tax Provision",
+    "Effective Income Tax Rate",
+    "Net Income",
+    "Diluted Earnings Per Share"
+  ],
+  "gaap": {
+    "opex": 7976,
+    "op_margin": 65,
+    "nonop": -117,
+    "ebt": 14884,
+    "tax": 2804,
+    "etr": 18.8,
+    "ni": 12080,
+    "eps": 5.32
+  },
+  "items": [
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -370,
+      "nonop": 0.0,
+      "ebt": 370,
+      "tax": 83,
+      "ni": 287,
+      "eps": 0.13,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 7606,
+    "op_margin": 67,
+    "nonop": -117,
+    "ebt": 15254,
+    "tax": 2887,
+    "etr": 18.9,
+    "ni": 12367,
+    "eps": 5.44,
+    "shares": null
+  },
+  "definition": "Non-GAAP excludes items 'not indicative of our operating performance ... as they are either non-recurring or have no cash impact': litigation provision of $370 million (tax benefit $83 million).",
+  "notes": "Twelve months ended Sep-30-2019 table from the Q4 FY2019 release. Item operating margin impact 2%. EPS 5.32 + 0.13 = 5.45 vs 5.44 published (rounding; totals on unrounded numbers). As originally published; the Q4 FY2020 release restated FY2019 to non-GAAP NI 12,274 / EPS 5.40. Shares not shown."
+}

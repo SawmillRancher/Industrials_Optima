@@ -1,0 +1,95 @@
+{
+  "period": "Q1-26",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000044/q12026earningsrelease.htm",
+  "release_date": "2026-01-29",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision (1)",
+    "Effective Income Tax Rate (2)",
+    "Net Income",
+    "Diluted Earnings Per Share (2)"
+  ],
+  "gaap": {
+    "opex": 4164,
+    "op_margin": null,
+    "nonop": -11,
+    "ebt": null,
+    "tax": 873,
+    "etr": 13.0,
+    "ni": 5853,
+    "eps": 3.03
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": 7,
+      "ebt": null,
+      "tax": 2,
+      "ni": 5,
+      "eps": 0,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -54,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 14,
+      "ni": 40,
+      "eps": 0.02,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -12,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 1,
+      "ni": 11,
+      "eps": 0.01,
+      "where": "op"
+    },
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -707,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 159,
+      "ni": 548,
+      "eps": 0.28,
+      "where": "op"
+    },
+    {
+      "label": "Deferred tax benefit",
+      "cat": "TAX",
+      "opex": 0,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 333,
+      "ni": -333,
+      "eps": -0.17,
+      "where": "tax"
+    }
+  ],
+  "adjusted": {
+    "opex": 3391,
+    "op_margin": null,
+    "nonop": -4,
+    "ebt": null,
+    "tax": 1382,
+    "etr": 18.4,
+    "ni": 6124,
+    "eps": 3.17,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs; litigation provision (significant accruals for uncovered legal matters and additional accruals for the interchange multidistrict litigation covered by the U.S. retrospective responsibility plan); deferred tax benefit (one-time non-cash benefit within income tax provision due to a change in the U.S. taxation of certain foreign earnings).",
+  "notes": "Table 'Three Months Ended December 31, 2025' in the 2026-01-29 release (Ex. 99.1); GAAP row labelled 'GAAP'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0."
+}

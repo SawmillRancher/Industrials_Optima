@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, V). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -258,6 +258,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | Pending / new acquisition | DHR, MLM, CTAS, ESAB, CSGP, UBER, CHRW | Separate block, PPA, financing, synergies, closing-date toggle; deal tab for large deals |
 | Dual-class / splits | ONON, HEI, CTAS, ODFL | Class-equivalent shares; split-adjust by source filing date |
 | Private company | R&Y | Compilation statements; implied CF from BS changes; LBO tab |
+| Payment network (two-sided, contra-revenue incentives) | V | Revenue by category: lagged payments volume × yield, transactions × revenue per transaction, growth for cross-border / other; client incentives as % of gross revenue; as-converted share classes; call-only guidance marked unverified |
 
 ### 4.3 Pitfalls that have bitten before
 - Template-company constants left in forecast formulas or notes (Moog `888`, MLM LNA rows, MLM-specific DCF text).
@@ -272,10 +273,11 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 - Saving with openpyxl drops chart formatting. Re-inject the template chart XML after every save.
 - Files without cached values look blank in viewers. Store calculated values.
 - `libreoffice-core` cannot open .xlsx; install `libreoffice-calc`.
+- Detached `nohup … &` downloads can lose write access in the build sandbox ("curl: (23) Failure writing output"); run long downloads as managed background jobs. [V]
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -290,6 +292,10 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
+- **Slide-image earnings releases** (Workiva exhibits, typically ~2018–21) have no table rows: the numbers survive only in a hidden 1-pt white text layer. Write that layer to text for the non-GAAP tables, take the statements from the 10-Q / 10-K, and derive Q4 = FY − 9M (compare with the Q4 release wherever it is tabular). [V]
+- **Call-only guidance** (no outlook in the 8-K): use secondary summaries only as UNVERIFIED inputs, list their URLs in `manual_items.json`, and label the header, scenario table and every dependent row. When summaries conflict with actuals (a full-year growth rate below the 9M actual), calibrate to the internally consistent anchor and keep the rest as information rows. [V]
+- **XBRL per-share dividend facts** can repeat the quarterly rate in annual and year-to-date contexts. Never sum them; take DPS from the release's declaration sentence or the 10-K selected data. [V]
+- **Irregular non-GAAP tables across many eras** can be extracted by parallel agents by period range against one schema with self-checks, provided `check_data.py` re-verifies every file against the statements (NI, EPS, opex tie-outs). [V, RBA, TDY]
 
 ### 5.2 Basis
 - **Segment re-presentation with a short recast history:** model an aggregate the re-presentation doesn't change and keep the old split as memo. Prove where an absorbed segment went using the restated comparative Δ. [RBA, TFI]
@@ -315,6 +321,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   [ESAB, LECO, MLM, TDY, VMC, TMO, CTAS]
 - **Strip one-offs and calendar effects before compounding:** restructuring out of base unit costs; extra workday or 53rd week out of the YTD trend. [CHRW, CTAS]
 - **Operational calendars** (work days) are rebuilt in code and validated against every published count before filling unpublished periods. [ODFL]
+- **Lagged volume drivers:** when revenue is recognised on the prior quarter's volume (Visa service revenue), the latest release already publishes the volume behind the next quarter. Enter it as a published input and put the calibration Δ on yields. [V]
 - **Marketplaces:** receivables and payables run as days of GTV, not revenue. [RBA]
 
 ### 5.4 Bridges
@@ -334,7 +341,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Rebuild a company measure exactly as published,** even if it isn't tax-effected or excludes SBC. Add a tax-effected memo variant if useful. [KRMN, TDY, VMC, MLM]
 - **Adjust only for items the company itself quantified,** and list the items it named but didn't adjust. Keep model items and company items distinguishable within a row via per-period comments, and use a labelled plug row only for definitional drift or overlapping company measures in published periods. [ODFL, BC, HEI, CHRW, UBER]
 - **Store each period's company adjusting-item wording and amounts as a comment** on the total-items cell, so the category rows can stay few without losing the audit trail. [WAB]
-- **Use the company's own share count** (adjusted / fully diluted in loss quarters, unrounded) in the adjusted EPS bridge. [WAB, XPO]
+- **Use the company's own share count** (adjusted / fully diluted in loss quarters, unrounded) in the adjusted EPS bridge. With several share classes and conversion rates, use the as-converted diluted count, so NI ÷ shares reproduces EPS; a period-end proxy is weighted diluted − ½ of the period's repurchases. [WAB, XPO, V, ONON]
 - **Don't force FY = Σ quarters** for adjusted measures the company computes annually (annual tax effect, FY cc rates), or for a measure whose definition changed mid-year. Exempt them from the quarter-sum check with a comment. [ONON, VMC]
 - **Known, explained source differences** (a restated starting NI, a release issued before a 10-Q impairment) can stay as documented check exceptions rather than plugs. [WCN]
 - **Long-term target base years** stay "as first published", with a note that definitions have since changed. [XPO]

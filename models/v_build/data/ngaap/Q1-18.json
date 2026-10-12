@@ -1,0 +1,61 @@
+{
+  "period": "Q1-18",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316118000008/vex991earningsrelease123.htm",
+  "release_date": "2018-02-01",
+  "published": true,
+  "measure_names": "adjusted ('As adjusted'); 'non-GAAP adjusted financial measures'",
+  "columns": [
+    "Income Before Income Taxes",
+    "Income Tax Provision",
+    "Effective Income Tax Rate",
+    "Net Income",
+    "Diluted Earnings Per Share"
+  ],
+  "gaap": {
+    "opex": null,
+    "op_margin": null,
+    "nonop": null,
+    "ebt": 3239,
+    "tax": 717,
+    "etr": 22.1,
+    "ni": 2522,
+    "eps": 1.07
+  },
+  "items": [
+    {
+      "label": "Remeasurement of deferred tax balances",
+      "cat": "TAX",
+      "opex": null,
+      "nonop": null,
+      "ebt": 0.0,
+      "tax": 1133,
+      "ni": -1133,
+      "eps": -0.48,
+      "where": "tax"
+    },
+    {
+      "label": "Transition tax on foreign earnings",
+      "cat": "TAX",
+      "opex": null,
+      "nonop": null,
+      "ebt": 0.0,
+      "tax": -1147,
+      "ni": 1147,
+      "eps": 0.49,
+      "where": "tax"
+    }
+  ],
+  "adjusted": {
+    "opex": null,
+    "op_margin": null,
+    "nonop": null,
+    "ebt": 3239,
+    "tax": 703,
+    "etr": 21.7,
+    "ni": 2536,
+    "eps": 1.08,
+    "shares": null
+  },
+  "definition": "Adjusted results exclude certain significant items 'not indicative of our operating performance ... as they were either non-recurring or had no cash impact': TCJA remeasurement of deferred tax balances (benefit ~$1.1bn) and transition tax on foreign earnings (~$1.1bn).",
+  "notes": "Table has no operating expense, operating margin or non-operating column; those fields are null. Shares not shown in the table."
+}

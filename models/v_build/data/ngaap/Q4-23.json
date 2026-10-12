@@ -1,0 +1,84 @@
+{
+  "period": "Q4-23",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000092/q42023earningsrelease.htm",
+  "release_date": "2023-10-24",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision (1)",
+    "Effective Income Tax Rate (2)",
+    "Net Income",
+    "Diluted Earnings Per Share (2)"
+  ],
+  "gaap": {
+    "opex": 3059,
+    "op_margin": null,
+    "nonop": 86,
+    "ebt": null,
+    "tax": 955,
+    "etr": 16.9,
+    "ni": 4681,
+    "eps": 2.27
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": -7,
+      "ebt": null,
+      "tax": -2,
+      "ni": -5,
+      "eps": 0,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -46,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 10,
+      "ni": 36,
+      "eps": 0.02,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -21,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 2,
+      "ni": 19,
+      "eps": 0.01,
+      "where": "op"
+    },
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -109,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 24,
+      "ni": 85,
+      "eps": 0.04,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 2883,
+    "op_margin": null,
+    "nonop": 79,
+    "ebt": null,
+    "tax": 989,
+    "etr": 17.0,
+    "ni": 4816,
+    "eps": 2.33,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs; litigation provision (additional accruals to address claims associated with the interchange multidistrict litigation, recovered under the U.S. retrospective responsibility plan), and the related tax impacts.",
+  "notes": "Table 'Three Months Ended September 30, 2023' in the 2023-10-24 release (Ex. 99.1); GAAP row labelled 'As reported'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0. Self-check rounding differences within tolerance: eps +0.01 (company footnote: figures may not recalculate exactly due to rounding; EPS computed on unrounded numbers)."
+}

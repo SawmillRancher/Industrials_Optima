@@ -1,0 +1,48 @@
+{
+  "period": "Q1-16",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000119312516441825/d72749dex991.htm",
+  "release_date": "2016-01-28",
+  "published": true,
+  "measure_names": "adjusted / as adjusted (net income, effective income tax rate, diluted earnings per share)",
+  "columns": [
+    "Net Income",
+    "Effective Income Tax Rate (1)",
+    "Diluted Earnings per Share (1)"
+  ],
+  "gaap": {
+    "opex": 1169,
+    "op_margin": null,
+    "nonop": 243,
+    "ebt": 2639,
+    "tax": 698,
+    "etr": 26,
+    "ni": 1941,
+    "eps": 0.8
+  },
+  "items": [
+    {
+      "label": "Revaluation of Visa Europe put option",
+      "cat": "VE",
+      "opex": null,
+      "nonop": null,
+      "ebt": null,
+      "tax": null,
+      "ni": -255,
+      "eps": -0.1,
+      "where": "nonop"
+    }
+  ],
+  "adjusted": {
+    "opex": null,
+    "op_margin": null,
+    "nonop": null,
+    "ebt": null,
+    "tax": null,
+    "etr": 29,
+    "ni": 1686,
+    "eps": 0.69,
+    "shares": 2430
+  },
+  "definition": "Excludes the $255 million non-cash, non-operating income from the decrease in fair value of the Visa Europe put option (not subject to tax).",
+  "notes": "Three Months Ended December 31, 2015 table. ETR printed as whole percent (26% / +3% / 29%); release text gives GAAP 26.4% and adjusted 29.3%. Pre-tax / non-op effect -255 (not taxed; no column). Self-checks: ni 1941-255=1686 OK; eps 0.80-0.10=0.70 vs 0.69 OK (rounding)."
+}

@@ -1,0 +1,106 @@
+{
+  "period": "2025",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000077/q42025earningsrelease.htm",
+  "release_date": "2025-10-28",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision (1)",
+    "Effective Income Tax Rate (2)",
+    "Net Income",
+    "Diluted Earnings Per Share (2)"
+  ],
+  "gaap": {
+    "opex": 16006,
+    "op_margin": null,
+    "nonop": 200,
+    "ebt": null,
+    "tax": 4136,
+    "etr": 17.1,
+    "ni": 20058,
+    "eps": 10.2
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": 87,
+      "ebt": null,
+      "tax": 19,
+      "ni": 68,
+      "eps": 0.03,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -218,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 54,
+      "ni": 164,
+      "eps": 0.08,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -97,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 7,
+      "ni": 90,
+      "eps": 0.05,
+      "where": "op"
+    },
+    {
+      "label": "Severance costs",
+      "cat": "RESTR",
+      "opex": -213,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 45,
+      "ni": 168,
+      "eps": 0.09,
+      "where": "op"
+    },
+    {
+      "label": "Lease consolidation costs",
+      "cat": "RESTR",
+      "opex": -39,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 9,
+      "ni": 30,
+      "eps": 0.02,
+      "where": "op"
+    },
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -2533,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 569,
+      "ni": 1964,
+      "eps": 1.0,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 12906,
+    "op_margin": null,
+    "nonop": 287,
+    "ebt": null,
+    "tax": 4839,
+    "etr": 17.7,
+    "ni": 22542,
+    "eps": 11.47,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs; severance costs (within personnel expense to realign our organizational structure and focus on areas that will drive higher long-term growth); lease consolidation costs (charge within general and administrative expense associated with the consolidation of certain leased office spaces); litigation provision (significant accruals for uncovered legal matters and additional accruals for the interchange multidistrict litigation covered by the U.S. retrospective responsibility plan).",
+  "notes": "Table 'Twelve Months Ended September 30, 2025' in the 2025-10-28 release (Ex. 99.1); GAAP row labelled 'GAAP'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0."
+}

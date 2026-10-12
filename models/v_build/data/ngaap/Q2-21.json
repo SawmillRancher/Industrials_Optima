@@ -1,0 +1,84 @@
+{
+  "period": "Q2-21",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000023/q22021ex991.htm",
+  "release_date": "2021-04-27",
+  "published": true,
+  "measure_names": "non-GAAP ('Non-GAAP')",
+  "columns": [
+    "Operating Expenses",
+    "Non-operating Income (Expense)",
+    "Income Tax Provision",
+    "Effective Income Tax Rate",
+    "Net Income",
+    "Diluted Earnings Per Share"
+  ],
+  "gaap": {
+    "opex": 2148,
+    "op_margin": null,
+    "nonop": 47,
+    "ebt": null,
+    "tax": 602,
+    "etr": 16.6,
+    "ni": 3026,
+    "eps": 1.38
+  },
+  "items": [
+    {
+      "label": "(Gains) Losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0.0,
+      "nonop": -156,
+      "ebt": null,
+      "tax": -35,
+      "ni": -121,
+      "eps": -0.05,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -13,
+      "nonop": 0.0,
+      "ebt": null,
+      "tax": 3,
+      "ni": 10,
+      "eps": 0.0,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -5,
+      "nonop": 0.0,
+      "ebt": null,
+      "tax": 1,
+      "ni": 4,
+      "eps": 0.0,
+      "where": "op"
+    },
+    {
+      "label": "Indirect taxes",
+      "cat": "OTHER",
+      "opex": -152,
+      "nonop": 0.0,
+      "ebt": null,
+      "tax": 40,
+      "ni": 112,
+      "eps": 0.05,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 1978,
+    "op_margin": null,
+    "nonop": -109,
+    "ebt": null,
+    "tax": 611,
+    "etr": 16.8,
+    "ni": 3031,
+    "eps": 1.38,
+    "shares": null
+  },
+  "definition": "Non-GAAP excludes items 'not representative of our continuing operations, as they may be non-recurring or have no cash impact, and may distort our longer-term operating trends': gains and losses on equity investments, amortization of acquired intangible assets, acquisition-related costs; Q2 also excludes a one-time indirect taxes charge of $152 million in G&A (tax benefit $40 million).",
+  "notes": "No ebt/op_margin column. Shares not shown."
+}

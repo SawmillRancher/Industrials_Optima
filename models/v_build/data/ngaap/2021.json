@@ -1,0 +1,95 @@
+{
+  "period": "2021",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000056/q42021earningsrelease.htm",
+  "release_date": "2021-10-26",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision",
+    "Effective Income Tax Rate (1)",
+    "Net Income",
+    "Diluted Earnings Per Share (1)"
+  ],
+  "gaap": {
+    "opex": 8301,
+    "op_margin": null,
+    "nonop": 259,
+    "ebt": null,
+    "tax": 3752,
+    "etr": 23.4,
+    "ni": 12311,
+    "eps": 5.63
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": -712,
+      "ebt": null,
+      "tax": -159,
+      "ni": -553,
+      "eps": -0.25,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -51,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 12,
+      "ni": 39,
+      "eps": 0.02,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -21,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 4,
+      "ni": 17,
+      "eps": 0.01,
+      "where": "op"
+    },
+    {
+      "label": "Remeasurement of deferred tax balances",
+      "cat": "TAX",
+      "opex": 0,
+      "nonop": 0,
+      "ebt": null,
+      "tax": -1007,
+      "ni": 1007,
+      "eps": 0.46,
+      "where": "tax"
+    },
+    {
+      "label": "Indirect taxes",
+      "cat": "OTHER",
+      "opex": -152,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 40,
+      "ni": 112,
+      "eps": 0.05,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 8077,
+    "op_margin": null,
+    "nonop": -453,
+    "ebt": null,
+    "tax": 2642,
+    "etr": 17.0,
+    "ni": 12933,
+    "eps": 5.91,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs; remeasurement of deferred tax balances (UK enacted legislation on June 10, 2021 increasing the tax rate from 19% to 25%; non-recurring, non-cash income tax expense of $1.0 billion); indirect taxes (one-time charge within general and administrative expense of $152 million to record probable additional indirect taxes related to prior periods), and the related tax impacts.",
+  "notes": "Table 'Twelve Months Ended September 30, 2021' in the 2021-10-26 release (Ex. 99.1); GAAP row labelled 'As reported'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0. Self-check rounding differences within tolerance: eps +0.01 (company footnote: figures may not recalculate exactly due to rounding; EPS computed on unrounded numbers)."
+}

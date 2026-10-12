@@ -1,0 +1,73 @@
+{
+  "period": "Q4-21",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000056/q42021earningsrelease.htm",
+  "release_date": "2021-10-26",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision",
+    "Effective Income Tax Rate (1)",
+    "Net Income",
+    "Diluted Earnings Per Share (1)"
+  ],
+  "gaap": {
+    "opex": 2244,
+    "op_margin": null,
+    "nonop": -17,
+    "ebt": null,
+    "tax": 714,
+    "etr": 16.6,
+    "ni": 3584,
+    "eps": 1.65
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": -101,
+      "ebt": null,
+      "tax": -21,
+      "ni": -80,
+      "eps": -0.04,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -13,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 3,
+      "ni": 10,
+      "eps": 0,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -8,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 1,
+      "ni": 7,
+      "eps": 0,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 2223,
+    "op_margin": null,
+    "nonop": -118,
+    "ebt": null,
+    "tax": 697,
+    "etr": 16.5,
+    "ni": 3521,
+    "eps": 1.62,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs, and the related tax impacts.",
+  "notes": "Table 'Three Months Ended September 30, 2021' in the 2021-10-26 release (Ex. 99.1); GAAP row labelled 'As reported'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0. Self-check rounding differences within tolerance: eps -0.01 (company footnote: figures may not recalculate exactly due to rounding; EPS computed on unrounded numbers)."
+}

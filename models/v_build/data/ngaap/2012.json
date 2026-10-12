@@ -1,0 +1,74 @@
+{
+  "period": "2012",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000119312512443798/d430830dex991.htm",
+  "release_date": "2012-10-31",
+  "published": true,
+  "measure_names": "adjusted (adjusted operating expenses, operating margin, net income attributable to Visa Inc., diluted earnings per share, effective income tax rate)",
+  "columns": [
+    "Operating Expenses",
+    "Operating Margin (2)",
+    "Net Income Attributable to Visa Inc.",
+    "Diluted Earnings Per Share",
+    "(tax table:) Income Before Income Taxes",
+    "Income Tax Provision",
+    "Effective income tax rate"
+  ],
+  "gaap": {
+    "opex": 8282,
+    "op_margin": 21,
+    "nonop": 68,
+    "ebt": 2207,
+    "tax": 65,
+    "etr": 3,
+    "ni": 2144,
+    "eps": 3.16
+  },
+  "items": [
+    {
+      "label": "Reversal of tax reserves",
+      "cat": "TAX",
+      "opex": null,
+      "nonop": null,
+      "ebt": -43,
+      "tax": 283,
+      "ni": -326,
+      "eps": -0.48,
+      "where": "tax"
+    },
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -4098,
+      "nonop": null,
+      "ebt": 4098,
+      "tax": 1505,
+      "ni": 2593,
+      "eps": 3.82,
+      "where": "op"
+    },
+    {
+      "label": "Impact of deferred tax adjustment",
+      "cat": "TAX",
+      "opex": null,
+      "nonop": null,
+      "ebt": 0.0,
+      "tax": 208,
+      "ni": -208,
+      "eps": -0.31,
+      "where": "tax"
+    }
+  ],
+  "adjusted": {
+    "opex": 4184,
+    "op_margin": 60,
+    "nonop": null,
+    "ebt": 6262,
+    "tax": 2061,
+    "etr": 33,
+    "ni": 4203,
+    "eps": 6.2,
+    "shares": 678
+  },
+  "definition": "Excludes special items that are non-recurring, have no cash impact or relate to amounts covered by the retrospective responsibility plan: reversal of tax reserves, covered litigation provision ($4.1bn) and related tax benefits, and the one-time California deferred tax remeasurement.",
+  "notes": "2012 columns of 'Reconciliation of Non-GAAP Financial Results\u2014Full Year' (opex, op margin, NI, EPS) merged with 'Reconciliation of Non-GAAP Financial Results\u2014Effective Tax Rate' (EBT, tax). The deferred tax item is labelled 'Remeasurement of net deferred tax liabilities' in the tax table (ebt '\u2014'). Litigation provision op-margin impact 39 pts (no item field). Reversal of tax reserves pre-tax (43) reflects reversed accrued interest. adjusted.nonop not presented (null). adjusted.shares 678 = diluted weighted-average shares (as reported). Self-checks: opex 8282-4098=4184 OK; ebt 2207-43+4098+0=6262 OK; tax 65+283+1505+208=2061 OK; ni 2144-326+2593-208=4203 OK; eps 3.16-0.48+3.82-0.31=6.19 vs 6.20 OK (rounding, within 0.02)."
+}

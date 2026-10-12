@@ -1,0 +1,73 @@
+{
+  "period": "Q4-22",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000076/q42022earningsrelease.htm",
+  "release_date": "2022-10-25",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision",
+    "Effective Income Tax Rate (1)",
+    "Net Income",
+    "Diluted Earnings Per Share (1)"
+  ],
+  "gaap": {
+    "opex": 2700,
+    "op_margin": null,
+    "nonop": -219,
+    "ebt": null,
+    "tax": 928,
+    "etr": 19.1,
+    "ni": 3940,
+    "eps": 1.86
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": 122,
+      "ebt": null,
+      "tax": 27,
+      "ni": 95,
+      "eps": 0.04,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -43,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 9,
+      "ni": 34,
+      "eps": 0.02,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -25,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 3,
+      "ni": 22,
+      "eps": 0.01,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 2632,
+    "op_margin": null,
+    "nonop": -97,
+    "ebt": null,
+    "tax": 967,
+    "etr": 19.1,
+    "ni": 4091,
+    "eps": 1.93,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs, and the related tax impacts.",
+  "notes": "Table 'Three Months Ended September 30, 2022' in the 2022-10-25 release (Ex. 99.1); GAAP row labelled 'As reported'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0."
+}

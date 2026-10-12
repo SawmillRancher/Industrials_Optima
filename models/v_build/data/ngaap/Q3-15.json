@@ -1,0 +1,47 @@
+{
+  "period": "Q3-15",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000119312515261161/d86330dex991.htm",
+  "release_date": "2015-07-23",
+  "published": true,
+  "measure_names": "as adjusted / adjusted (net income, diluted earnings per share)",
+  "columns": [
+    "Net Income",
+    "Diluted Earnings per Share (1)"
+  ],
+  "gaap": {
+    "opex": 1256,
+    "op_margin": null,
+    "nonop": -94,
+    "ebt": 2168,
+    "tax": 471,
+    "etr": 21.7,
+    "ni": 1697,
+    "eps": 0.69
+  },
+  "items": [
+    {
+      "label": "Revaluation of Visa Europe put option",
+      "cat": "VE",
+      "opex": null,
+      "nonop": null,
+      "ebt": null,
+      "tax": null,
+      "ni": 110,
+      "eps": 0.04,
+      "where": "nonop"
+    }
+  ],
+  "adjusted": {
+    "opex": null,
+    "op_margin": null,
+    "nonop": null,
+    "ebt": null,
+    "tax": null,
+    "etr": null,
+    "ni": 1807,
+    "eps": 0.74,
+    "shares": 2448
+  },
+  "definition": "Excludes the $110 million non-cash, non-operating expense from the remeasurement of the Visa Europe put option (not subject to tax).",
+  "notes": "Three Months Ended June 30, 2015 (2015 columns). Not adjusted: the $280M tax benefit from resolution of uncertain tax positions (included in both GAAP and adjusted). Pre-tax / non-op effect 110 (not taxed; no column). gaap etr 21.7 from release text. Self-checks: ni 1697+110=1807 OK; eps 0.69+0.04=0.73 vs 0.74 OK (rounding)."
+}

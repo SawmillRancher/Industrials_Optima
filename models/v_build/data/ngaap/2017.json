@@ -1,0 +1,64 @@
+{
+  "period": "2017",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316117000041/vex991093017earningsrelease.htm",
+  "release_date": "2017-10-25",
+  "published": true,
+  "measure_names": "adjusted / as adjusted (operating expenses, operating margin, non-operating income (expense), income before income taxes, income tax provision, effective income tax rate, net income, diluted earnings per share)",
+  "columns": [
+    "Operating Expenses",
+    "Operating Margin (1),(2)",
+    "Non-operating (Expense) Income",
+    "Income Before Income Taxes",
+    "Income Tax Provision",
+    "Effective Income Tax Rate (1)",
+    "Net Income",
+    "Diluted Earnings Per Share (1)"
+  ],
+  "gaap": {
+    "opex": 6214,
+    "op_margin": 66,
+    "nonop": -450,
+    "ebt": 11694,
+    "tax": 4995,
+    "etr": 42.7,
+    "ni": 6699,
+    "eps": 2.8
+  },
+  "items": [
+    {
+      "label": "Elimination of deferred tax balances",
+      "cat": "TAX",
+      "opex": 0.0,
+      "nonop": 0.0,
+      "ebt": 0.0,
+      "tax": -1515,
+      "ni": 1515,
+      "eps": 0.63,
+      "where": "tax"
+    },
+    {
+      "label": "Charitable contribution",
+      "cat": "OTHER",
+      "opex": -192,
+      "nonop": 0.0,
+      "ebt": 192,
+      "tax": 71,
+      "ni": 121,
+      "eps": 0.05,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 6022,
+    "op_margin": 67,
+    "nonop": -450,
+    "ebt": 11886,
+    "tax": 3551,
+    "etr": 29.9,
+    "ni": 8335,
+    "eps": 3.48,
+    "shares": null
+  },
+  "definition": "Excludes the non-recurring, non-cash income tax provision from eliminating Visa Europe deferred tax balances and the charitable contribution of Visa shares (legal entity reorganization).",
+  "notes": "Twelve Months Ended September 30, 2017 table. Charitable contribution op-margin impact 1 pt. Diluted shares not shown in the table (null). Self-checks: opex 6214-192=6022 OK; nonop -450 OK; ebt 11694+192=11886 OK; tax 4995-1515+71=3551 OK; ni 6699+1515+121=8335 OK; eps 2.80+0.63+0.05=3.48 OK."
+}

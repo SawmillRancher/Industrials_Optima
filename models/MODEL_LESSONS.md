@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -13,22 +13,23 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Situation | Read |
 |---|---|
 | Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
-| Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
-| Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
+| Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER, V |
+| Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate), V (payments volume × yield, transactions × revenue per transaction) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
-| Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
+| Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA), V (EBITDA; guidance on the call only, unverified) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
-| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
+| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), V (Sep), CPRT (Jul), TDY (52/53-week) |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
-| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
+| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes), V (as-converted class A / B / C and series A / B / C preferred) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
+| Image-based (slide) earnings releases, call-only guidance | V |
 | Private company, LBO | R&Y |
 
 ---
@@ -635,6 +636,55 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [basis] Split-adjust per-share history. Leaving EPS as reported (v1) breaks every per-share trend; v2 restated for all four 2-for-1 splits.
   - [bridges] Start the non-GAAP bridge from NI *attributable*, not total NI, or EPS will not tie.
   - [extraction] Harvest the non-GAAP tables directly from 8-K Ex. 99.1 with a dedicated parser. XBRL does not carry them.
+
+## Payments networks
+
+### V — Visa Inc. (MLM template via WWD kit; US GAAP / USD m / FY ends 30-Sep)
+- **Coverage & basis:** FY2008–12 annual and Q1/13–Q3/26 quarterly, as originally reported. CIK 0001403161; IPO 19-Mar-2008 after the Oct-2007 reorganization, so FY2008 is the first Visa Inc. 10-K year. Template columns are shifted −1.
+  - Q1–Q3 statements come from the 10-Q (identical to the release).
+  - Q4 comes from the release three-month column for FY2013–17 and FY2021+, where the release is tabular. For FY2018–20 it is FY − 9M, because the Q1 FY18 – Q2 FY21 releases are Workiva slide images whose tables survive only as a hidden white text layer. Every tabular Q4 agreed with FY − 9M within $1m.
+  - 4-for-1 split on 18-Mar-2015, applied by filing date.
+  - ASC 606 from FY2019 (revenue categories moved from the statement to the revenue note). ASU 2016-18 restricted cash enters the cash flow from FY2019 (escrow and collateral), so the BS-vs-CF cash check runs to FY2018, with a derived restricted-cash memo after that.
+- **Operating build:** one segment, built by revenue category.
+  - Service revenue = nominal payments volume × yield. Visa assesses service revenue on the prior quarter's volume, so the volume row is the lagged quarter; Q4 = 12M − 9M from the 10-K / Q3 10-Q MD&A.
+  - Data processing revenue = processed transactions × revenue per transaction.
+  - International transaction and other (value-added services) revenue are driven by growth.
+  - Client incentives = % of gross revenue: 19.9% in FY2017 → 28.3% in FY2025.
+  - Growth is decomposed into payments volume × net revenue yield (chart).
+- **Bridges & definitions:** these follow the definition in force each period, with 13 flags.
+  - FY2008–09 "adjusted" tables add back IPO-era items (litigation reserve, restructuring, step-up amortization, settlement accretion, escrow income) and apply a normalized 41% tax.
+  - FY2010–17 have one-off items only: Visa Europe put option, the FY2012 $4.1bn litigation provision, the FY2016 Visa Europe acquisition, TCJA in FY2018.
+  - From Q1 FY2020 the definition adds equity-investment gains / losses, acquired-intangible amortization and acquisition costs.
+  - Many quarters have no reconciliation at all (adjusted = GAAP, n/p). Q1–Q3 FY19 were later recast by the FY2020 releases; the original basis is kept.
+  - Non-GAAP opex is checked against the published figure. Adjusted EBITDA is a model definition (Visa publishes none).
+  - The historical tax effect = published non-GAAP NI − GAAP NI − pre-tax items, which absorbs the normalized-rate tables and tax-only items.
+- **Data quirks & corrections:**
+  - The 73 non-GAAP files were extracted by three agents by era, against one schema with self-checks, then re-verified in `check_data.py` (1,515 checks pass).
+  - FY2008 class A EPS was computed by the company on income allocated from the IPO; it is flagged n/m.
+  - XBRL `CommonStockDividendsPerShareDeclared` carries the quarterly rate in annual contexts too. DPS therefore comes from each release's "declared a quarterly cash dividend of $x" sentence (next quarter) and the 10-K selected-data row, with XBRL only as a quarterly-rate fallback.
+  - The 10-Q "Interest expense, net" label (FY2022) briefly broke a parser match.
+- **Deals & special blocks:**
+  - Visa Europe (21-Jun-2016) PPA from the FY2016 10-K: $18,784m accounting consideration after deducting the $1,856m framework-agreement loss; $16.1bn indefinite-lived intangibles.
+  - Future M&A lever of $1.0bn a year at 8x EV/sales.
+  - Covered litigation is funded through the U.S. escrow and class B conversion-rate cuts (an as-converted share reduction), so no provisions are forecast and the DCF excludes them.
+- **Calibration & scenarios:**
+  - The outlook is given only on the call since FY2020; the 8-K has none. The Q4 FY26 commentary (revenue growth similar to Q3's 14%; non-GAAP EPS growth at the low end of mid-teens) comes from web-search summaries and is labelled UNVERIFIED everywhere.
+  - A conflicting "FY revenue low end of low teens" (impossible after 9M +15.3%) is shown as an information row only.
+  - Q4 payments volume growth (+11% nominal, quarter to June) is published in the Q3 release, so the revenue Δ falls on yields and growth rates. A second Δ on adjusted-opex growth solves EPS.
+  - Scenario levers: payments volume, transactions, two yields, international and other growth, incentives %, adjusted margin, M&A, leverage target.
+- **Balance sheet, cash & capital:**
+  - Settlement receivable / payable and client-incentive balances run as FY-end ratios to net revenue; collateral, escrow and accrued litigation are held.
+  - Notes are refinanced at maturity, with commercial paper / incremental borrowing as the plug to $12bn minimum cash.
+  - Buybacks plug to net debt (debt − cash − investments) / adjusted EBITDA of 0.50x / 0.35x / 0.25x.
+  - Shares are as-converted class A, starting from a 30-Jun-2026 proxy (Q3 weighted diluted − ½ of Q3 repurchases).
+- **Valuation:** $389, user-provided (12-Oct-2026; the latest SEC-filed price was the $330.82 June-2026 repurchase average). NOPAT = adjusted EBIT, full-cost (after acquired amortization and SBC), less acquisition and severance costs. Preferred stock is in the share count, not deducted. Base DCF $418; P/E 30x Base on FY2030–31E.
+- **Reusable lessons:**
+  - [sources] Slide-image releases (Workiva exhibits with a hidden 1-pt white text layer) have no table rows. Read non-GAAP tables from the text layer, take statements from the 10-Q / 10-K, and derive Q4 = FY − 9M.
+  - [calibration] When guidance exists only on the call, use secondary summaries only as UNVERIFIED inputs with their URLs. Calibrate to the internally consistent anchor (here the quarter) and keep conflicting statements as information rows.
+  - [build] When revenue is recognised on lagged volume, the latest release already publishes the volume that drives the next quarter. Enter it as a published input and put the calibration Δ on yields.
+  - [extraction] XBRL per-share dividend facts can repeat the quarterly rate in annual contexts. Never sum them; use the release declaration sentence or 10-K selected data.
+  - [basis] With several share classes and conversion rates, use the company's as-converted diluted class A count. NI ÷ that count reproduces EPS; a period-end proxy is weighted diluted − ½ of the period's repurchases.
+  - [tooling] Detached `nohup … &` downloads lost write access in the build sandbox ("curl: (23) Failure writing output"). Run long downloads as managed background jobs.
 
 ## Consumer & luxury (IFRS, non-USD)
 

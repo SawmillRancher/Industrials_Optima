@@ -1,0 +1,117 @@
+{
+  "period": "2024",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000053/q42024earningsrelease.htm",
+  "release_date": "2024-10-29",
+  "published": true,
+  "measure_names": "non-GAAP",
+  "columns": [
+    "Operating Expenses",
+    "Non- operating Income (Expense)",
+    "Income Tax Provision (1)",
+    "Effective Income Tax Rate (2)",
+    "Net Income",
+    "Diluted Earnings Per Share (2)"
+  ],
+  "gaap": {
+    "opex": 12331,
+    "op_margin": null,
+    "nonop": 321,
+    "ebt": null,
+    "tax": 4173,
+    "etr": 17.4,
+    "ni": 19743,
+    "eps": 9.73
+  },
+  "items": [
+    {
+      "label": "(Gains) losses on equity investments, net",
+      "cat": "EQINV",
+      "opex": 0,
+      "nonop": 94,
+      "ebt": null,
+      "tax": 12,
+      "ni": 82,
+      "eps": 0.04,
+      "where": "nonop"
+    },
+    {
+      "label": "Amortization of acquired intangible assets",
+      "cat": "AMORT",
+      "opex": -178,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 43,
+      "ni": 135,
+      "eps": 0.07,
+      "where": "op"
+    },
+    {
+      "label": "Acquisition-related costs",
+      "cat": "ACQ",
+      "opex": -104,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 8,
+      "ni": 96,
+      "eps": 0.05,
+      "where": "op"
+    },
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -434,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 97,
+      "ni": 337,
+      "eps": 0.17,
+      "where": "op"
+    },
+    {
+      "label": "Lease consolidation costs",
+      "cat": "RESTR",
+      "opex": -57,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 13,
+      "ni": 44,
+      "eps": 0.02,
+      "where": "op"
+    },
+    {
+      "label": "Indirect taxes",
+      "cat": "OTHER",
+      "opex": 118,
+      "nonop": 0,
+      "ebt": null,
+      "tax": -29,
+      "ni": -89,
+      "eps": -0.04,
+      "where": "op"
+    },
+    {
+      "label": "Charitable contribution",
+      "cat": "OTHER",
+      "opex": -67,
+      "nonop": 0,
+      "ebt": null,
+      "tax": 26,
+      "ni": 41,
+      "eps": 0.02,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 11609,
+    "op_margin": null,
+    "nonop": 415,
+    "ebt": null,
+    "tax": 4343,
+    "etr": 17.6,
+    "ni": 20389,
+    "eps": 10.05,
+    "shares": null
+  },
+  "definition": "We exclude gains and losses on equity investments; amortization of acquired intangible assets; acquisition-related costs; litigation provision (significant accruals for uncovered legal matters and additional accruals for the interchange multidistrict litigation covered by the U.S. retrospective responsibility plan); lease consolidation costs (charge within general and administrative expense associated with the consolidation of certain leased office spaces); indirect taxes (one-time benefit within general and administrative expense from the release of the reserve previously recognized in fiscal 2021, as a result of the resolution of an audit); charitable contribution (non-cash general and administrative expense for investment securities donated to the Visa Foundation).",
+  "notes": "Table 'Twelve Months Ended September 30, 2024' in the 2024-10-29 release (Ex. 99.1); GAAP row labelled 'As reported'. Item rows leave the Effective Income Tax Rate column blank. Values transcribed as printed; '—' recorded as 0. Self-check rounding differences within tolerance: eps +0.01 (company footnote: figures may not recalculate exactly due to rounding; EPS computed on unrounded numbers)."
+}

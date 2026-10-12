@@ -1,0 +1,103 @@
+{
+ "guidance_fy26": {
+  "status": "UNVERIFIED - not on EDGAR. Visa gives its outlook only on the earnings call / webcast slides (investor.visa.com, blocked); since FY2020 the 8-K Item 2.02 Ex. 99.1 release contains no outlook. Figures below are from secondary summaries of the Q3 FY26 call (28-Jul-2026) found by web search; the sources disagree in places.",
+  "sources": [
+   "https://www.investing.com/news/transcripts/earnings-call-transcript-visa-tops-q3-2026-estimates-raises-outlook-93CH-4818303 (search snippet only; page not reachable)",
+   "https://www.tikr.com/blog/visas-q3-earnings-crossed-4-trillion-in-volume-then-came-the-layoffs (search snippet)",
+   "https://finance.biggo.com/quote/V/earnings-call/US_V_2026-07-28 (search snippet)"
+  ],
+  "q4_net_revenue_growth": [
+   0.14,
+   0.13,
+   0.12
+  ],
+  "q4_net_revenue_note": "Q4 FY26 adjusted net revenue growth 'similar to Q3' (Q3: +14% nominal, +13% constant dollar) - UNVERIFIED. Model end-points high / mid / low = 14% / 13% / 12% on Q4 FY25 net revenue $10,724m.",
+  "q4_adj_eps_growth": [
+   0.15,
+   0.14,
+   0.13
+  ],
+  "q4_adj_eps_note": "Q4 FY26 non-GAAP EPS growth 'low end of mid-teens' - UNVERIFIED. End-points 15% / 14% / 13% on Q4 FY25 non-GAAP EPS $2.98.",
+  "q4_opex_growth_note": "Q4 FY26 adjusted operating expense growth 'low double digits' - UNVERIFIED (information row).",
+  "fy_eps_growth_note": "Full-year FY26 non-GAAP EPS growth 'low end of mid-teens' (raised) - UNVERIFIED (information row).",
+  "fy_rev_note": "Some summaries cite full-year FY26 net revenue growth 'low end of low-teens'; with 9M FY26 net revenue +15.3% that would imply Q4 growth of ~3%, which conflicts with the Q4 commentary - not used (information only).",
+  "fy_tax_rate": [
+   0.18,
+   0.1825
+  ],
+  "fy_nonop_expense": 165.0,
+  "fy_nonop_note": "FY26 non-GAAP non-operating expense ~$165m and tax rate 18.0-18.25% (call; UNVERIFIED). 9M FY26 non-GAAP non-operating expense $84m -> Q4 ~$81m."
+ },
+ "q4_inputs": {
+  "pv_growth_nominal": 0.11,
+  "pv_growth_note": "Q3 FY26 release (8-K 28-Jul-2026, Ex. 99.1) 'Key business drivers': payments volume growth for the quarter ended 30-Jun-2026 +11% nominal (+10% constant). Service revenue in Q4 FY26 is based on this quarter's volume (company: service revenue is assessed on prior-quarter payments volume).",
+  "pv_growth_src": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000103/q32026earningsrelease.htm",
+  "dividend_q4": 0.67,
+  "dividend_note": "Q3 FY26 release: on 28-Jul-2026 the board declared a quarterly cash dividend of $0.670 per class A share (paid 1-Sep-2026)."
+ },
+ "buyback": {
+  "remaining_2026_06_30": 28352.0,
+  "note": "Q3 FY26 10-Q Part II Item 2: remaining authorization $28,352m at 30-Jun-2026 (incl. the $20.0bn program authorized Apr-2026). Q3 FY26: 14 million shares at $330.71 average; 9M FY26 $16.5bn (50 million shares).",
+  "src": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000104/v-20260630.htm"
+ },
+ "shares": {
+  "as_converted_2026_06_30_proxy": 1890.75,
+  "note": "Proxy for as-converted class A shares at 30-Jun-2026: Q3 FY26 weighted diluted class A shares (1,898m, as-converted incl. class B / C common and series A / B / C preferred) less half of the 14.5m shares repurchased in the quarter. Visa reports no single as-converted period-end count in the release (ONON precedent: weighted count as period-end proxy)."
+ },
+ "debt": {
+  "at_2026_06_30": "Q3 FY26 10-Q Note 6: total debt $24,131m principal (carrying $23,858m: current maturities $2,996m, long-term $20,862m) incl. commercial paper $1,500m (3.77%). USD senior notes 0.75-4.70%; EUR notes 2.00-3.875%.",
+  "cp_2026_06_30": 1500.0,
+  "maturities_principal": {
+   "2027": 2750.0,
+   "2028": 1428.0,
+   "2029": 2042.0,
+   "2030": 1500.0,
+   "2031": 1750.0
+  },
+  "maturities_note": "FY2027: $1.5bn 1.90% Apr-2027, $0.5bn 0.75% Aug-2027, $0.75bn 2.75% Sep-2027; FY2028: EUR 2.25% May-2028 ($1,428m); FY2029: $0.9bn 3.80% Feb-2029 + EUR 2.00% Jun-2029 ($1,142m); FY2030: $1.5bn 2.05% Apr-2030; FY2031: $0.75bn 4.10% + $1.0bn 1.10% Feb-2031. EUR at 30-Jun-2026 carrying values.",
+  "new_notes_note": "Feb-2026: $3.0bn fixed-rate notes (3.80% 2029, 4.10% 2031, 4.40% 2033, 4.70% 2036). Maturities assumed refinanced with new notes at ~4.5% (assumption)."
+ },
+ "amort": {
+  "finite_lived_10k": {
+   "2026": 63.0,
+   "2027": 62.0,
+   "2028": 43.0,
+   "2029": 29.0,
+   "2030": 10.0
+  },
+  "technology_10k": {
+   "2026": 802.0,
+   "2027": 640.0,
+   "2028": 509.0,
+   "2029": 355.0,
+   "2030": 174.0
+  },
+  "note": "FY2025 10-K Notes 7-8: estimated amortization of finite-lived intangibles (customer relationships) $63m / $62m / $43m / $29m / $10m (FY26-30) and of technology (capitalized software and acquired technology, inside D&A) $802m / $640m / $509m / $355m / $174m. The non-GAAP item 'amortization of acquired intangible assets' ($232m FY25; $168m 9M FY26) covers acquired technology + customer relationships. Forecast item: $64m Q4/26E (Q3 run-rate), then $230m / $190m / $150m / $110m / $80m FY27-31 (assumption, declining with the 10-K schedules) + future-acquisition amortization.",
+  "src": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm"
+ },
+ "litigation": {
+  "note": "U.S. retrospective responsibility plan: covered litigation is paid from the U.S. litigation escrow ($888m at 30-Jun-2026; $875m deposited 9M FY26), funded by reducing the class B conversion rate (an as-converted share reduction with no P&L effect). VE territory covered losses are recovered through series B / C preferred conversion-rate adjustments. Litigation provisions are excluded from non-GAAP results; the forecast assumes no further provisions or escrow deposits (assumption)."
+ },
+ "deals": {
+  "visa_europe": "Visa Europe acquired 21-Jun-2016 (Q3 FY2016): up-front cash EUR 12.25bn ($13.9bn), preferred stock (series B / C) ~$5.3bn and deferred cash EUR 1.0bn (paid Jun-2019); Visa Europe framework agreement loss $1,877m (Q3 FY16, non-GAAP item). FY2016 10-K Note 2.",
+  "recent": "Currencycloud (Dec-2021, FY22), Tink (Mar-2023, FY23), Pismo (Jan-2024, FY24), Featurespace (Dec-2024, FY25); FY26: acquisitions net of cash $705m (9M, cash-flow statement)."
+ },
+ "price": {
+  "px": 389.0,
+  "date": "2026-10-12",
+  "note": "User-provided share price ($389, given 12-Oct-2026). Latest SEC-filed price for reference: $330.82 weighted-average repurchase price, June 2026 (Q3 FY26 10-Q Part II Item 2)."
+ },
+ "ppa": {
+  "Q3-16": {
+   "cons": 18784.0,
+   "ca": 4457.0,
+   "nca": 258.0,
+   "intang": 16137.0,
+   "gw": 3268.0,
+   "cl": 2731.0,
+   "ncl": 2605.0,
+   "names": "Visa Europe (21-Jun-2016); preliminary PPA",
+   "src": "FY2016 10-K Note 2 (https://www.sec.gov/Archives/edgar/data/1403161/000140316116000058/v093016.htm): cash $13,882m + preferred $5,692m + deferred $1,236m − framework agreement loss $1,856m − treasury stock $170m = $18,784m accounting consideration."
+  }
+ }
+}

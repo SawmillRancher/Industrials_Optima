@@ -1,0 +1,47 @@
+{
+  "period": "2010",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000119312510237985/dex991.htm",
+  "release_date": "2010-10-27",
+  "published": true,
+  "measure_names": "adjusted (adjusted net income attributable to Visa Inc., adjusted diluted earnings per share)",
+  "columns": [
+    "Three Months Ended September 30, 2010",
+    "Twelve Months Ended September 30, 2010"
+  ],
+  "gaap": {
+    "opex": 3476,
+    "op_margin": null,
+    "nonop": 49,
+    "ebt": 4638,
+    "tax": 1674,
+    "etr": null,
+    "ni": 2966,
+    "eps": 4.01
+  },
+  "items": [
+    {
+      "label": "Revaluation of Visa Europe Put option (1)",
+      "cat": "VE",
+      "opex": null,
+      "nonop": null,
+      "ebt": null,
+      "tax": null,
+      "ni": -79,
+      "eps": null,
+      "where": "nonop"
+    }
+  ],
+  "adjusted": {
+    "opex": null,
+    "op_margin": null,
+    "nonop": null,
+    "ebt": null,
+    "tax": null,
+    "etr": null,
+    "ni": 2887,
+    "eps": 3.91,
+    "shares": 739
+  },
+  "definition": "Excludes the revaluation of the Visa Europe put option (non-cash, non-operating income, not subject to tax).",
+  "notes": "Twelve Months Ended September 30, 2010 column of 'Adjusted Net Income and Earnings Per Share'. Table rows: net income (as reported), the put revaluation, adjusted net income, diluted shares (as reported) 739, adjusted diluted EPS. No per-item EPS or opex/nonop/tax columns; footnote: not subject to tax, so the pre-tax and non-operating effect equals -79 (not recorded in nonop/ebt because no such column). gaap opex/nonop/ebt/tax/eps from the income statement. Self-checks: ni 2966-79=2887 OK. EPS check fails by construction: no per-item EPS printed (4.01 + 0 vs 3.91; implied -0.10, not recorded)."
+}

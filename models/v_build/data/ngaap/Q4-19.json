@@ -1,0 +1,53 @@
+{
+  "period": "Q4-19",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316119000042/q42019ex9913.htm",
+  "release_date": "2019-10-24",
+  "published": true,
+  "measure_names": "non-GAAP ('Non-GAAP')",
+  "columns": [
+    "Operating Expenses",
+    "Operating Margin",
+    "Non-operating Income (Expense)",
+    "Income Before Income Taxes",
+    "Income Tax Provision",
+    "Effective Income Tax Rate",
+    "Net Income",
+    "Diluted Earnings Per Share"
+  ],
+  "gaap": {
+    "opex": 2402,
+    "op_margin": 61,
+    "nonop": -24,
+    "ebt": 3711,
+    "tax": 686,
+    "etr": 18.5,
+    "ni": 3025,
+    "eps": 1.34
+  },
+  "items": [
+    {
+      "label": "Litigation provision",
+      "cat": "LITIG",
+      "opex": -370,
+      "nonop": 0.0,
+      "ebt": 370,
+      "tax": 83,
+      "ni": 287,
+      "eps": 0.13,
+      "where": "op"
+    }
+  ],
+  "adjusted": {
+    "opex": 2032,
+    "op_margin": 67,
+    "nonop": -24,
+    "ebt": 4081,
+    "tax": 769,
+    "etr": 18.9,
+    "ni": 3312,
+    "eps": 1.47,
+    "shares": null
+  },
+  "definition": "Non-GAAP excludes items 'not indicative of our operating performance ... as they are either non-recurring or have no cash impact': litigation provision of $370 million (tax benefit $83 million) for the interchange multidistrict litigation.",
+  "notes": "Item operating margin impact 6%. As originally published (pre-FY2020 methodology); the Q4 FY2020 release restated Q4-19 to non-GAAP NI 3,283 / EPS 1.46 adding equity investment, amortization and acquisition-cost items. Shares not shown."
+}

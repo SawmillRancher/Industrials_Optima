@@ -1,0 +1,107 @@
+{
+  "period": "2008",
+  "source": "https://www.sec.gov/Archives/edgar/data/1403161/000119312508219089/dex991.htm",
+  "release_date": "2008-10-29",
+  "published": true,
+  "measure_names": "adjusted (adjusted operating income, adjusted operating expenses, adjusted operating margin, adjusted net income, adjusted diluted (class A) earnings per share)",
+  "columns": [
+    "For the Three Months Ended September 30, 2008",
+    "For the Twelve Months Ended September 30, 2008",
+    "Pro Forma For the Three Months ended September 30, 2007",
+    "Pro Forma For the Twelve Months ended September 30, 2007",
+    "(opex / non-operating tables:) Actual",
+    "Adjustments",
+    "As Adjusted"
+  ],
+  "gaap": {
+    "opex": 5031,
+    "op_margin": null,
+    "nonop": 104,
+    "ebt": 1336,
+    "tax": 532,
+    "etr": null,
+    "ni": 804,
+    "eps": 0.96
+  },
+  "items": [
+    {
+      "label": "Litigation reserve (1)",
+      "cat": "LITIG",
+      "opex": -1457,
+      "nonop": null,
+      "ebt": 1457,
+      "tax": null,
+      "ni": null,
+      "eps": null,
+      "where": "op"
+    },
+    {
+      "label": "Restructuring (2)",
+      "cat": "RESTR",
+      "opex": -140,
+      "nonop": null,
+      "ebt": 140,
+      "tax": null,
+      "ni": null,
+      "eps": null,
+      "where": "op"
+    },
+    {
+      "label": "Asset step-up amortization (3)",
+      "cat": "AMORT",
+      "opex": -68,
+      "nonop": null,
+      "ebt": 68,
+      "tax": null,
+      "ni": null,
+      "eps": null,
+      "where": "op"
+    },
+    {
+      "label": "Interest accretion on American Express settlement (4)",
+      "cat": "LITIG",
+      "opex": null,
+      "nonop": 68,
+      "ebt": 68,
+      "tax": null,
+      "ni": null,
+      "eps": null,
+      "where": "nonop"
+    },
+    {
+      "label": "Investment income on Litigation Escrow and EU proceeds (5)",
+      "cat": "OTHER",
+      "opex": null,
+      "nonop": -70,
+      "ebt": -70,
+      "tax": null,
+      "ni": null,
+      "eps": null,
+      "where": "nonop"
+    },
+    {
+      "label": "Underwater contract (LIBOR adjustment) (6)",
+      "cat": "VE",
+      "opex": null,
+      "nonop": -35,
+      "ebt": -35,
+      "tax": null,
+      "ni": null,
+      "eps": null,
+      "where": "nonop"
+    }
+  ],
+  "adjusted": {
+    "opex": 3366,
+    "op_margin": 46,
+    "nonop": 67,
+    "ebt": 2964,
+    "tax": 1215,
+    "etr": 41,
+    "ni": 1749,
+    "eps": 2.25,
+    "shares": 776
+  },
+  "definition": "Adjusted basis 'reflective of a normalized tax rate and excluding litigation reserves, restructuring charges and purchase amortization'; also excludes AmEx settlement interest accretion, investment income on litigation escrow / EU (IPO) proceeds and the Framework Agreement (LIBOR) underwater-contract income; tax at a normalized 41%.",
+  "notes": "Twelve-month column of 'Reconciliation of Non-GAAP Adjusted Operating Income and Net Income' (pro forma 2007 columns ignored). Pre-tax table with normalized 41% tax (footnote 7): item amounts recorded in ebt (sign = effect on pre-tax income); item opex/nonop from the opex and non-operating reconciliation tables (Adjustments column). Item ni/eps not presented (null). adjusted.tax 1215 printed as '(1,215)' (deducted in the table); recorded as a positive expense to match gaap.tax. adjusted.nonop 67 and adjusted.opex 3366 from the opex / non-op reconciliation tables. adjusted.shares 776 = 'Adjusted Weighted Average Shares Outstanding - Non GAAP' (GAAP diluted class A 769 + share adjustments 7). gaap.eps = diluted class A EPS 0.96 from the income statement. gaap.op_margin not printed (null). Self-checks: opex 5031-1665=3366 OK; nonop 104-37=67 OK; ebt 1336+1628=2964 OK. ni / eps / tax checks not applicable (no per-item after-tax or tax amounts; adjusted tax is 41% x adjusted pre-tax, implied tax adjustment 683 not printed). EPS also differs in share basis (GAAP 769M weighted vs adjusted 776M)."
+}
