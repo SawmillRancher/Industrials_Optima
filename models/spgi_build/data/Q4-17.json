@@ -1,0 +1,446 @@
+{
+ "period": "Q4-17",
+ "fy": 2017,
+ "q": 4,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404018000055/a4q2017earningsreleasetabl.htm",
+  "release_date": "2018-02-06",
+  "doc": "2018-02-06_8-K_0000064040-18-000055_a4q2017earningsreleasetabl.txt"
+ },
+ "notes": [
+  "Ratings footnote items (legal 53 + severance 10 = 63) vs printed Ratings non-GAAP adjustments 64 (company rounding); total pre-tax footnote items 98 vs printed 99. Published numbers kept.",
+  "U.S. tax reform: net one-time charge $149m = $173m deemed repatriation tax less $24m revaluation of net deferred tax liabilities; offset by $21m tax benefit on prior-year divestitures. Recorded as TAX items with pre = 0.",
+  "Pension related charge ($8m) was in unallocated expense (operating) in this release -> seg CORP, cat OTHER. From Q1-18 (ASU 2017-07) pension non-service cost moves to other (income) expense.",
+  "Lease exit charges categorised IMPAIR (lease).",
+  "S&P DJI operating profit attributable to the Company $87m; adjusted OP attributable (Adjusted net operating profit) $90m (NCI $32m).",
+  "Adjusted total expense (Exhibit 5 note) $837m; adjusted ETR 28.5%.",
+  "Cash flow and FCF are full-year (ytd_months 12); no three-month cash flow printed.",
+  "seg_recast_2018 = Exhibit 10 recast of 2017 MI / Platts (2018 segment presentation), by quarter.",
+  "Intersegment royalty charged by Ratings to MCI: $26m.",
+  "cfpub capex and nci_dist recorded as positive cash costs (release prints them in brackets). fcf_items signed as printed (added to FCF to reach FCF excluding certain items).",
+  "rev_type key ELIM = intersegment elimination; CORP = Corporate revenue.",
+  "mci_split = Market Intelligence / Platts revenue as printed in the organic revenue exhibit (sub-lines of MCI)."
+ ],
+ "is": {
+  "rev": 1589,
+  "exp": 961,
+  "gain_disp": 0,
+  "op": 628,
+  "int": 39,
+  "ebt": 589,
+  "tax": 290,
+  "ni": 299,
+  "nci": 36,
+  "ni_attr": 263,
+  "eps_b": 1.03,
+  "eps_d": 1.02,
+  "sh_b": 254.4,
+  "sh_d": 257.0,
+  "sh_end": 253.7
+ },
+ "seg": [
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 789,
+   "exp": 415,
+   "op": 374,
+   "nongaap": 64,
+   "deal_amort": 1,
+   "adj_op": 439
+  },
+  {
+   "name": "Market and Commodities Intelligence",
+   "code": "MCI",
+   "rev": 637,
+   "exp": 429,
+   "op": 208,
+   "nongaap": 3,
+   "deal_amort": 22,
+   "adj_op": 233
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 191,
+   "exp": 72,
+   "op": 119,
+   "deal_amort": 3,
+   "adj_op": 122
+  }
+ ],
+ "seg_other": {
+  "elim": -28,
+  "corp": 73,
+  "corp_nongaap": 32,
+  "adj_corp": 41,
+  "seg_op_total": 701,
+  "adj_seg_op_total": 793
+ },
+ "ngaap": {
+  "adj_op": 752,
+  "adj_ni": 474,
+  "adj_eps": 1.85,
+  "start_ni": 263,
+  "start_eps": 1.02,
+  "start_basis": "total",
+  "items": [
+   {
+    "label": "Legal settlement expenses",
+    "seg": "RAT",
+    "pre": 53,
+    "net": 33,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "RAT",
+    "pre": 10,
+    "net": 6,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "MCI",
+    "pre": 3,
+    "net": 2,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Charge to exit leased facilities",
+    "seg": "CORP",
+    "pre": 19,
+    "net": 16,
+    "cat": "IMPAIR"
+   },
+   {
+    "label": "Pension related charge",
+    "seg": "CORP",
+    "pre": 8,
+    "net": 7,
+    "cat": "OTHER"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "CORP",
+    "pre": 5,
+    "net": 3,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Tax expense due to U.S. tax reform (primarily deemed repatriation of foreign earnings)",
+    "seg": "TAX",
+    "pre": 0,
+    "net": 149,
+    "cat": "TAX"
+   },
+   {
+    "label": "Tax benefit related to prior year divestitures",
+    "seg": "TAX",
+    "pre": 0,
+    "net": -21,
+    "cat": "TAX"
+   }
+  ],
+  "items_total_pre": 99,
+  "items_total_net": 195,
+  "items_total_ps": 0.76,
+  "items_total_tax": -96,
+  "deal_amort_pre": 25,
+  "deal_amort_net": 16,
+  "deal_amort_ps": 0.06,
+  "deal_amort_tax": 9,
+  "adj_tax": 203,
+  "adj_int": 39,
+  "adj_ebt": 713,
+  "adj_etr_pct": 28.5,
+  "adj_total_expense": 837,
+  "definition": "adjusted diluted EPS (Adjusted Net Income attributable to SPGI and Adjusted Diluted EPS)"
+ },
+ "cfpub": {
+  "ytd_months": 12,
+  "cfo": 2016,
+  "capex": 123,
+  "nci_dist": 111,
+  "fcf_pub": 1782,
+  "fcf_items": [
+   [
+    "Tax on gain from sale of J.D. Power",
+    0
+   ],
+   [
+    "Tax on gain from sale of SPSE and CMA",
+    67
+   ],
+   [
+    "Payment of legal and regulatory settlements",
+    4
+   ],
+   [
+    "Legal settlement insurance recoveries",
+    0
+   ],
+   [
+    "Tax benefit from legal settlements",
+    -2
+   ]
+  ],
+  "adj_fcf_pub": 1851
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and cash equivalents",
+    2779
+   ],
+   [
+    "Other current assets",
+    1545
+   ],
+   [
+    "Total current assets",
+    4324
+   ],
+   [
+    "Property and equipment, net",
+    275
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    4377
+   ],
+   [
+    "Other non-current assets",
+    449
+   ],
+   [
+    "Total assets",
+    9425
+   ],
+   [
+    "Short-term debt",
+    399
+   ],
+   [
+    "Unearned revenue",
+    1613
+   ],
+   [
+    "Other current liabilities",
+    1202
+   ],
+   [
+    "Long-term debt",
+    3170
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    923
+   ],
+   [
+    "Total liabilities",
+    7307
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    1350
+   ],
+   [
+    "Total equity",
+    768
+   ],
+   [
+    "Total liabilities and equity",
+    9425
+   ]
+  ],
+  "ta": 9425,
+  "tl": 7307,
+  "rnci": 1350,
+  "te": 768,
+  "tle": 9425
+ },
+ "organic": {
+  "organic_rev": 1589,
+  "organic_rev_cc": 1572,
+  "organic_rev_base": 1393,
+  "organic_growth_pct": 14,
+  "organic_cc_growth_pct": 13,
+  "seg": {
+   "MCI": {
+    "rev": 637,
+    "organic_rev": 637,
+    "organic_rev_base": 589
+   },
+   "MI": {
+    "rev": 440,
+    "organic_rev": 440,
+    "organic_rev_base": 401
+   },
+   "CI": {
+    "rev": 197,
+    "organic_rev": 197,
+    "organic_rev_base": 188
+   },
+   "IDX": {
+    "rev": 191,
+    "organic_rev": 191,
+    "organic_rev_base": 171
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Subscription / Non-Transaction": 388,
+   "Asset-Linked Fees": 0,
+   "Non-Subscription / Transaction": 401
+  },
+  "MCI": {
+   "Subscription / Non-Transaction": 603,
+   "Asset-Linked Fees": 0,
+   "Non-Subscription / Transaction": 34
+  },
+  "IDX": {
+   "Subscription / Non-Transaction": 36,
+   "Asset-Linked Fees": 121,
+   "Non-Subscription / Transaction": 34
+  },
+  "ELIM": {
+   "Subscription / Non-Transaction": -28,
+   "Asset-Linked Fees": 0,
+   "Non-Subscription / Transaction": 0
+  }
+ },
+ "guidance": [
+  {
+   "item": "GAAP diluted EPS",
+   "low": 8.15,
+   "high": 8.3,
+   "basis": "FY2018"
+  },
+  {
+   "item": "Deal-related amortization (per share)",
+   "low": 0.3,
+   "high": 0.3,
+   "basis": "FY2018"
+  },
+  {
+   "item": "Adjusted diluted EPS",
+   "low": 8.45,
+   "high": 8.6,
+   "basis": "FY2018"
+  },
+  {
+   "item": "Free cash flow excluding certain items",
+   "low": 2300,
+   "high": 2300,
+   "basis": "FY2018",
+   "text": "approximately $2.3 billion"
+  },
+  {
+   "item": "Reported revenue growth",
+   "low": null,
+   "high": null,
+   "basis": "FY2018",
+   "text": "mid single-digits"
+  },
+  {
+   "item": "Effective tax rate (%)",
+   "low": 21,
+   "high": 22.5,
+   "basis": "FY2018",
+   "text": "anticipated 21% to 22.5% after U.S. tax reform"
+  }
+ ],
+ "seg_recast_2018": {
+  "_source": "Q4-17 release Exhibit 10: recast of 2017 to 2018 segment presentation (MCI split into Market Intelligence and Platts)",
+  "MI": {
+   "name": "S&P Global Market Intelligence",
+   "rev": {
+    "Q1": 402,
+    "Q2": 414,
+    "Q3": 422,
+    "Q4": 440,
+    "FY": 1678
+   },
+   "Q1": {
+    "op": 104,
+    "nongaap": 4,
+    "deal_amort": 17,
+    "adj_op": 125
+   },
+   "Q2": {
+    "op": 113,
+    "nongaap": 4,
+    "deal_amort": 18,
+    "adj_op": 135
+   },
+   "Q3": {
+    "op": 124,
+    "nongaap": 0,
+    "deal_amort": 17,
+    "adj_op": 141
+   },
+   "Q4": {
+    "op": 127,
+    "nongaap": 3,
+    "deal_amort": 17,
+    "adj_op": 147
+   },
+   "FY": {
+    "op": 467,
+    "nongaap": 12,
+    "deal_amort": 69,
+    "adj_op": 548
+   }
+  },
+  "CI": {
+   "name": "S&P Global Platts",
+   "rev": {
+    "Q1": 191,
+    "Q2": 192,
+    "Q3": 193,
+    "Q4": 197,
+    "FY": 774
+   },
+   "Q1": {
+    "op": 82,
+    "nongaap": 11,
+    "deal_amort": 5,
+    "adj_op": 98
+   },
+   "Q2": {
+    "op": 78,
+    "nongaap": 9,
+    "deal_amort": 5,
+    "adj_op": 92
+   },
+   "Q3": {
+    "op": 84,
+    "nongaap": 0,
+    "deal_amort": 5,
+    "adj_op": 89
+   },
+   "Q4": {
+    "op": 81,
+    "nongaap": 0,
+    "deal_amort": 5,
+    "adj_op": 86
+   },
+   "FY": {
+    "op": 326,
+    "nongaap": 21,
+    "deal_amort": 18,
+    "adj_op": 365
+   }
+  },
+  "footnotes": [
+   "MI: Q1 non-cash disposition-related adjustment $4m ($4m after-tax); Q2 employee severance $4m ($3m after-tax); Q4 employee severance $3m ($2m after-tax).",
+   "Platts: Q1 non-cash acquisition-related adjustment $11m ($3m after-tax); Q2 lease exit $6m ($3m after-tax), asset write-off $2m ($1m after-tax), employee severance $1m ($1m after-tax)."
+  ]
+ },
+ "mci_split": {
+  "MI_rev": 440,
+  "CI_rev": 197
+ }
+}

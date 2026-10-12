@@ -1,0 +1,340 @@
+{
+ "period": "Q2-13",
+ "fy": 2013,
+ "q": 2,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000114420413041049/v350733_ex99.htm",
+  "release_date": "2013-07-25",
+  "doc": "2013-07-25_8-K_0001144204-13-041049_v350733_ex99.txt"
+ },
+ "notes": [
+  "Company renamed McGraw Hill Financial, Inc. (MHFI).",
+  "is.nci = 23 (continuing 23; discontinued \"\u2014\").",
+  "S&P DJI net operating profit attributable to the Company = 60 (Exhibit 8; NCI 20).",
+  "Single adjustment: ~$10m remaining Growth and Value Plan costs (professional fees and outsourcing) in unallocated expense; after tax 7, per share 0.02.",
+  "Adjusted diluted EPS total = 0.92 (disc ops excluded).",
+  "Cash-flow signs as printed (outflows negative). corp/adj_corp are positive costs; corp_nongaap is the add-back to unallocated expense."
+ ],
+ "is": {
+  "rev": 1250,
+  "exp": 814,
+  "op": 436,
+  "int": 16,
+  "ebt": 420,
+  "tax": 147,
+  "ni_cont": 273,
+  "disc": 4,
+  "ni": 277,
+  "nci": 23,
+  "ni_attr": 254,
+  "ni_attr_cont": 250,
+  "eps_b": 0.93,
+  "eps_d": 0.91,
+  "eps_d_cont": 0.9,
+  "sh_b": 274.3,
+  "sh_d": 278.3,
+  "other_lines": [
+   [
+    "Less: net income attributable to noncontrolling interests - continuing",
+    -23
+   ],
+   [
+    "Less: net (income) loss attributable to noncontrolling interests - discontinued",
+    0
+   ],
+   [
+    "Income from discontinued operations attributable to MHFI",
+    4
+   ],
+   [
+    "Basic EPS - continuing operations",
+    0.91
+   ],
+   [
+    "Basic EPS - discontinued operations",
+    0.01
+   ],
+   [
+    "Diluted EPS - discontinued operations",
+    0.01
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "S&P Ratings",
+   "code": "RAT",
+   "rev": 599,
+   "exp": 322,
+   "op": 277,
+   "nongaap": 0,
+   "adj_op": 277
+  },
+  {
+   "name": "S&P Capital IQ",
+   "code": "CIQ",
+   "rev": 287,
+   "exp": 232,
+   "op": 55,
+   "nongaap": 0,
+   "adj_op": 55
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 123,
+   "exp": 43,
+   "op": 80,
+   "nongaap": 0,
+   "adj_op": 80
+  },
+  {
+   "name": "Commodities & Commercial Markets",
+   "code": "CC",
+   "rev": 259,
+   "exp": 176,
+   "op": 83,
+   "nongaap": 0,
+   "adj_op": 83
+  }
+ ],
+ "seg_other": {
+  "elim": -18,
+  "corp": 59,
+  "corp_nongaap": 10,
+  "adj_corp": 49,
+  "seg_op_total": 495,
+  "adj_seg_op_total": 495
+ },
+ "ngaap": {
+  "adj_op": 446,
+  "adj_ni": 257,
+  "adj_eps": 0.92,
+  "start_ni": 250,
+  "start_eps": 0.9,
+  "start_basis": "cont",
+  "definition": "adjusted diluted EPS from continuing operations",
+  "adj_tax": 150,
+  "adj_int": 16,
+  "items_total_pre": 10,
+  "items_total_net": 7,
+  "items_total_ps": 0.02,
+  "adj_eps_total": 0.92,
+  "items": [
+   {
+    "label": "Remaining Growth and Value Plan costs to enable the separation of MHE (professional fees and outsourcing)",
+    "seg": "CORP",
+    "pre": 10,
+    "net": 7,
+    "cat": "DISP",
+    "ps": 0.02
+   }
+  ]
+ },
+ "cfpub": {
+  "ytd_months": 6,
+  "cfo": 226,
+  "capex": -43,
+  "nci_dist": -38,
+  "fcf_pub": 145,
+  "fcf_items": [
+   [
+    "Cash provided by operating activities",
+    226
+   ],
+   [
+    "Capital expenditures",
+    -43
+   ],
+   [
+    "Dividends and other payments paid to noncontrolling interests",
+    -38
+   ]
+  ],
+  "dep": 45,
+  "amort": 25,
+  "sbc": 47
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and equivalents",
+    1900
+   ],
+   [
+    "Other current assets",
+    1207
+   ],
+   [
+    "Assets held for sale (a)",
+    0
+   ],
+   [
+    "Total current assets",
+    3107
+   ],
+   [
+    "Property and equipment, net",
+    340
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    2469
+   ],
+   [
+    "Other non-current assets",
+    244
+   ],
+   [
+    "Total assets",
+    6160
+   ],
+   [
+    "Short-term debt",
+    0
+   ],
+   [
+    "Unearned revenue",
+    1284
+   ],
+   [
+    "Other current liabilities",
+    1111
+   ],
+   [
+    "Liabilities held for sale (a)",
+    0
+   ],
+   [
+    "Long-term debt",
+    799
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    885
+   ],
+   [
+    "Total liabilities",
+    4079
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    810
+   ],
+   [
+    "Total equity",
+    1271
+   ],
+   [
+    "Total liabilities and equity",
+    6160
+   ]
+  ],
+  "ta": 6160,
+  "tl": 4079,
+  "rnci": 810,
+  "te": 1271,
+  "tle": 6160
+ },
+ "organic": {
+  "note": "No total organic table; segment adjusted revenue (Exhibit 8).",
+  "seg": {
+   "CIQ": {
+    "rev": 287,
+    "adjustments": [
+     [
+      "Acquisitions (QuantHouse and CMA)",
+      -8,
+      -4
+     ],
+     [
+      "Product closures",
+      0,
+      -4
+     ]
+    ],
+    "organic_rev": 279,
+    "organic_rev_base": 269,
+    "growth_pct": 3
+   },
+   "IDX": {
+    "rev": 123,
+    "adjustments": [
+     [
+      "Dow Jones Indices",
+      -29,
+      0
+     ]
+    ],
+    "organic_rev": 94,
+    "organic_rev_base": 89,
+    "growth_pct": 6
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-transaction": 312,
+   "Transaction": 287
+  },
+  "CIQ": {
+   "Subscription": 260,
+   "Non-subscription": 27
+  },
+  "IDX": {
+   "Subscription": 26,
+   "Non-subscription": 97
+  },
+  "CC": {
+   "Commodities Markets - Subscription": 123,
+   "Commodities Markets - Non-subscription": 14,
+   "Commercial Markets - Subscription": 38,
+   "Commercial Markets - Non-subscription": 84
+  },
+  "ELIM": {
+   "Subscription / Non-transaction": -18
+  },
+  "TOTAL": {
+   "Subscription / Non-transaction": 741,
+   "Non-subscription / Transaction": 509
+  }
+ },
+ "rev_geo": {
+  "RAT": {
+   "Domestic": 323,
+   "International": 276
+  },
+  "CIQ": {
+   "Domestic": 190,
+   "International": 97
+  },
+  "IDX": {
+   "Domestic": 99,
+   "International": 24
+  },
+  "Commodities Markets": {
+   "Domestic": 55,
+   "International": 82
+  },
+  "Commercial Markets": {
+   "Domestic": 92,
+   "International": 30
+  },
+  "ELIM": {
+   "Domestic": -9,
+   "International": -9
+  },
+  "TOTAL": {
+   "Domestic": 750,
+   "International": 500
+  }
+ },
+ "guidance": [
+  {
+   "item": "2013 adjusted diluted EPS",
+   "low": 3.15,
+   "high": 3.25,
+   "basis": "adjusted earnings per share guidance increased from $3.10 to $3.20"
+  }
+ ]
+}

@@ -1,0 +1,434 @@
+{
+ "period": "Q4-15",
+ "fy": 2015,
+ "q": 4,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404016000036/mhfi4q2015earningsreleaset.htm",
+  "release_date": "2016-02-04",
+  "doc": "2016-02-04_8-K_0000064040-16-000036_mhfi4q2015earningsreleaset.txt"
+ },
+ "notes": [
+  "Non-GAAP adjustments are printed per segment (pre-tax) and only in aggregate after tax (items_total_*); per-item after-tax amounts are not published, so item 'net' is omitted and check_rec's start_ni + items_net check differs by exactly items_total_net.",
+  "Definition change announced: beginning 2016 adjusted results exclude deal-related amortization. The Q4-15 / FY2015 headline adjusted EPS (from continuing operations) does NOT exclude it; recast figures (Exhibits 9-10) are in 'recast_deal_amort_2015' and are not used in ngaap.",
+  "Segment expense table total (906) excludes unallocated expense; IS expenses 950.",
+  "Ratings adj 20 = legal settlements 15 + restructuring 5. CIQ & SNL adj 25 = operating-efficiency costs primarily restructuring 20 + acquisition-related costs 6 (sum 26; printed 25, rounding). Unallocated adj 9 = restructuring (footnote d, amount from table). C&C adjustment '\u2014' with footnote c.",
+  "Text: restructuring pre-tax charges $33m in Q4 (5 + 20 + 9 = 34 by footnotes, rounding), legal and regulatory settlements $15m, SNL transaction costs $6m.",
+  "S&P Dow Jones Indices Adjusted Net Operating Profit (attributable) = 69 (OP 94 less NCI 25).",
+  "Organic revenue: Total Adjusted Revenue 1,300 vs 1,290 (+1%); Organic Revenue Constant Currency Basis 1,325 vs 1,290 (+3%).",
+  "Balance sheet: J.D. Power classified as assets/liabilities of a business held for sale (503 / 206).",
+  "Cash flow is full-year (ytd 12)."
+ ],
+ "is": {
+  "rev": 1374,
+  "exp": 950,
+  "gain_disp": 0,
+  "op": 424,
+  "int": 40,
+  "ebt": 384,
+  "tax": 108,
+  "ni_cont": 276,
+  "disc": 0,
+  "ni": 276,
+  "nci": 28,
+  "ni_attr": 248,
+  "ni_attr_cont": 248,
+  "eps_b": 0.92,
+  "eps_d": 0.91,
+  "eps_d_cont": 0.91,
+  "sh_b": 268.5,
+  "sh_d": 272.1,
+  "sh_end": 265.2,
+  "other_lines": [
+   [
+    "Other (income) loss",
+    0
+   ],
+   [
+    "Gain on sale of discontinued operations",
+    0
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "S&P Ratings Services",
+   "code": "RAT",
+   "rev": 578,
+   "exp": 346,
+   "op": 232,
+   "nongaap": 20,
+   "adj_op": 252
+  },
+  {
+   "name": "S&P Capital IQ and SNL",
+   "code": "CIQ",
+   "rev": 405,
+   "exp": 355,
+   "op": 50,
+   "nongaap": 25,
+   "adj_op": 75
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 151,
+   "exp": 57,
+   "op": 94,
+   "nongaap": 0,
+   "adj_op": 94
+  },
+  {
+   "name": "Commodities & Commercial Markets",
+   "code": "CC",
+   "rev": 264,
+   "exp": 172,
+   "op": 92,
+   "nongaap": 0,
+   "adj_op": 92
+  }
+ ],
+ "seg_other": {
+  "elim": -24,
+  "corp": 44,
+  "corp_nongaap": 9,
+  "adj_corp": 35,
+  "seg_op_total": 468,
+  "adj_seg_op_total": 513
+ },
+ "ngaap": {
+  "adj_op": 478,
+  "adj_ni": 284,
+  "adj_eps": 1.04,
+  "start_ni": 248,
+  "start_eps": 0.91,
+  "start_basis": "cont",
+  "items": [
+   {
+    "label": "Legal settlements",
+    "seg": "RAT",
+    "pre": 15,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Restructuring charges",
+    "seg": "RAT",
+    "pre": 5,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Costs related to identified operating efficiencies primarily related to restructuring",
+    "seg": "CIQ",
+    "pre": 20,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Acquisition-related costs",
+    "seg": "CIQ",
+    "pre": 6,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Restructuring charges",
+    "seg": "CORP",
+    "pre": 9,
+    "cat": "SEVER"
+   }
+  ],
+  "items_total_pre": 54,
+  "items_total_net": 36,
+  "items_total_ps": 0.13,
+  "adj_tax": 126,
+  "adj_int": 40,
+  "definition": "adjusted diluted EPS from continuing operations"
+ },
+ "recast_deal_amort_2015": {
+  "source": "Q4-15 release Exhibit 10 'Recasted Results by Segment Adjusted for Deal-Related Amortization'",
+  "Q1-15": {
+   "seg_deal_amort": {
+    "RAT": 1,
+    "CIQ": 6,
+    "IDX": 1,
+    "CC": 3
+   },
+   "deal_amort_pre": 11,
+   "deal_amort_tax": 4,
+   "deal_amort_net": 7,
+   "deal_amort_ps": 0.03,
+   "seg_adj_op": {
+    "RAT": 286,
+    "CIQ": 68,
+    "IDX": 97,
+    "CC": 89
+   },
+   "adj_op": 507,
+   "adj_tax": 158,
+   "adj_ni": 307,
+   "adj_eps": 1.11
+  },
+  "Q2-15": {
+   "seg_deal_amort": {
+    "RAT": 1,
+    "CIQ": 6,
+    "IDX": 1,
+    "CC": 3
+   },
+   "deal_amort_pre": 11,
+   "deal_amort_tax": 4,
+   "deal_amort_net": 7,
+   "deal_amort_ps": 0.03,
+   "seg_adj_op": {
+    "RAT": 330,
+    "CIQ": 80,
+    "IDX": 97,
+    "CC": 91
+   },
+   "adj_op": 563,
+   "adj_tax": 177,
+   "adj_ni": 342,
+   "adj_eps": 1.24
+  },
+  "Q3-15": {
+   "seg_deal_amort": {
+    "RAT": 1,
+    "CIQ": 10,
+    "IDX": 1,
+    "CC": 5
+   },
+   "deal_amort_pre": 17,
+   "deal_amort_tax": 6,
+   "deal_amort_net": 11,
+   "deal_amort_ps": 0.04,
+   "seg_adj_op": {
+    "RAT": 281,
+    "CIQ": 95,
+    "IDX": 108,
+    "CC": 97
+   },
+   "adj_op": 545,
+   "adj_tax": 150,
+   "adj_ni": 336,
+   "adj_eps": 1.22
+  },
+  "Q4-15": {
+   "seg_deal_amort": {
+    "RAT": 2,
+    "CIQ": 19,
+    "IDX": 1,
+    "CC": 5
+   },
+   "deal_amort_pre": 27,
+   "deal_amort_tax": 7,
+   "deal_amort_net": 20,
+   "deal_amort_ps": 0.07,
+   "seg_adj_op": {
+    "RAT": 254,
+    "CIQ": 94,
+    "IDX": 96,
+    "CC": 96
+   },
+   "adj_op": 505,
+   "adj_tax": 133,
+   "adj_ni": 304,
+   "adj_eps": 1.12
+  },
+  "2015": {
+   "seg_deal_amort": {
+    "RAT": 5,
+    "CIQ": 41,
+    "IDX": 5,
+    "CC": 16
+   },
+   "deal_amort_pre": 67,
+   "deal_amort_tax": 23,
+   "deal_amort_net": 44,
+   "deal_amort_ps": 0.16,
+   "seg_adj_op": {
+    "RAT": 1151,
+    "CIQ": 338,
+    "IDX": 397,
+    "CC": 374
+   },
+   "adj_op": 2121,
+   "adj_tax": 619,
+   "adj_ni": 1288,
+   "adj_eps": 4.69
+  }
+ },
+ "cfpub": {
+  "ytd_months": 12,
+  "cfo": 195,
+  "capex": 139,
+  "nci_dist": 104,
+  "fcf_pub": -48,
+  "fcf_items": [
+   [
+    "Payment of legal and regulatory settlements",
+    1624
+   ],
+   [
+    "Legal settlement insurance recoveries",
+    -101
+   ],
+   [
+    "Tax benefit from legal settlements",
+    -250
+   ]
+  ],
+  "adj_fcf_pub": 1225
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and cash equivalents",
+    1481
+   ],
+   [
+    "Other current assets",
+    1312
+   ],
+   [
+    "Assets of a business held for sale",
+    503
+   ],
+   [
+    "Total current assets",
+    3296
+   ],
+   [
+    "Property and equipment, net",
+    270
+   ],
+   [
+    "Goodwill",
+    2882
+   ],
+   [
+    "Other intangible assets, net",
+    1522
+   ],
+   [
+    "Other non-current assets",
+    213
+   ],
+   [
+    "Total assets",
+    8183
+   ],
+   [
+    "Short-term debt",
+    143
+   ],
+   [
+    "Unearned revenue",
+    1421
+   ],
+   [
+    "Other current liabilities",
+    1138
+   ],
+   [
+    "Liabilities of a business held for sale",
+    206
+   ],
+   [
+    "Long-term debt",
+    3468
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    644
+   ],
+   [
+    "Total liabilities",
+    7020
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    920
+   ],
+   [
+    "Total equity",
+    243
+   ],
+   [
+    "Total liabilities and equity",
+    8183
+   ]
+  ],
+  "ta": 8183,
+  "tl": 7020,
+  "rnci": 920,
+  "te": 243,
+  "tle": 8183
+ },
+ "organic": {
+  "organic_rev": 1300,
+  "organic_rev_base": 1290,
+  "organic_rev_cc": 1325,
+  "organic_rev_cc_base": 1290,
+  "seg": {
+   "CIQ": {
+    "rev": 405,
+    "organic_rev": 341,
+    "organic_rev_base": 318
+   },
+   "CC": {
+    "rev": 264,
+    "organic_rev": 254,
+    "organic_rev_base": 236
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Subscription / Non-Transaction": 331,
+   "Non-Subscription / Transaction": 247
+  },
+  "CIQ": {
+   "Subscription / Non-Transaction": 370,
+   "Non-Subscription / Transaction": 35
+  },
+  "IDX": {
+   "Subscription / Non-Transaction": 32,
+   "Non-Subscription / Transaction": 119
+  },
+  "CC": {
+   "Subscription / Non-Transaction": 172,
+   "Non-Subscription / Transaction": 92
+  },
+  "ELIM": {
+   "Subscription / Non-Transaction": -24,
+   "Non-Subscription / Transaction": 0
+  },
+  "TOTAL": {
+   "Subscription / Non-Transaction": 881,
+   "Non-Subscription / Transaction": 493
+  }
+ },
+ "guidance": [
+  {
+   "item": "Adjusted diluted EPS",
+   "low": 5.0,
+   "high": 5.15,
+   "basis": "FY2016; new definition excluding deal-related amortization"
+  },
+  {
+   "item": "Revenue growth",
+   "low": null,
+   "high": null,
+   "basis": "FY2016; 'mid-to-high single-digit revenue growth'"
+  },
+  {
+   "item": "Amortization expense ($m)",
+   "low": 98,
+   "high": 98,
+   "basis": "FY2016 expected amortization expense"
+  },
+  {
+   "item": "SNL synergies ($m)",
+   "low": 100,
+   "high": 100,
+   "basis": "approximately $100 million anticipated (about 70% cost)"
+  }
+ ]
+}

@@ -1,0 +1,358 @@
+{
+ "period": "Q3-20",
+ "fy": 2020,
+ "q": 3,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404020000180/spgi3q2020-earningsrel.htm",
+  "release_date": "2020-10-27",
+  "doc": "2020-10-27_8-K_0000064040-20-000180_spgi3q2020-earningsrel.txt"
+ },
+ "notes": [
+  "Income statement prints a separate line 'Loss on extinguishment of debt' 279 (expense) between interest expense and EBT; no schema key, recorded in is.other_lines as printed (279, an expense). EBT 636 = OP 944 + other income 6 - interest 35 - loss on extinguishment 279. check_rec 'op+oth-int = ebt' therefore fails by 279 (915 vs 636); published numbers kept.",
+  "'Gain on dispositions' (8) printed as a reduction of cost -> gain_disp = +8 (MI $4m, Corporate $4m). 'Other (income) expense, net' (6) -> income -> oth_inc = +6.",
+  "Segment-table total expenses 902 = income-statement expenses 910 less gain 8; Corporate Unallocated expense 36 is net of the $4m Corporate gain.",
+  "Prior-year (Q3-19) segment expenses/OP recast in this release (e.g. Ratings OP 477 vs 472); total segment OP 936 unchanged.",
+  "New in this release: Exhibit 5 adds an 'Adjusted Expenses' table (Total SPGI adjusted expenses 870 for Q3-20).",
+  "Non-GAAP adjustments: OP 0 printed (RAT 5, MI (4), Corporate (2)); debt extinguishment 279 pre-tax (below OP); tax 69; after tax 210 ($0.87). Pre-tax total 279 computed, not printed as one line. Corporate: (36) + (2) + 7 = (31) computed vs adjusted (32) published (rounding).",
+  "start_ni + item nets + amort = 690 (computed) vs adjusted 689 published (rounding).",
+  "Indices Adjusted Net Operating Profit (attributable to the Company) = 112 (adj OP 153 less NCI 41).",
+  "Guidance: GAAP EPS cut to $10.00-$10.15 (debt tender premium); excludes potential future impairment charges from new productivity program; adjusted EPS raised to $11.30-$11.45."
+ ],
+ "is": {
+  "rev": 1846,
+  "exp": 910,
+  "gain_disp": 8,
+  "op": 944,
+  "oth_inc": 6,
+  "int": 35,
+  "ebt": 636,
+  "tax": 138,
+  "ni": 498,
+  "nci": 43,
+  "ni_attr": 455,
+  "eps_b": 1.89,
+  "eps_d": 1.88,
+  "sh_b": 240.6,
+  "sh_d": 241.6,
+  "sh_end": 240.6,
+  "other_lines": [
+   [
+    "Loss on extinguishment of debt",
+    279
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 894,
+   "exp": 350,
+   "op": 544,
+   "nongaap": 5,
+   "deal_amort": 3,
+   "adj_op": 552
+  },
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 530,
+   "exp": 366,
+   "op": 164,
+   "nongaap": -4,
+   "deal_amort": 19,
+   "adj_op": 179
+  },
+  {
+   "name": "Platts",
+   "code": "CI",
+   "rev": 222,
+   "exp": 101,
+   "op": 121,
+   "nongaap": 0,
+   "deal_amort": 2,
+   "adj_op": 124
+  },
+  {
+   "name": "Indices",
+   "code": "IDX",
+   "rev": 234,
+   "exp": 83,
+   "op": 151,
+   "nongaap": 0,
+   "deal_amort": 1,
+   "adj_op": 153
+  }
+ ],
+ "seg_other": {
+  "elim": -34,
+  "corp": 36,
+  "corp_nongaap": -2,
+  "corp_deal_amort": 7,
+  "adj_corp": 32,
+  "seg_op_total": 980,
+  "adj_seg_op_total": 1008
+ },
+ "ngaap": {
+  "adj_op": 976,
+  "adj_ni": 689,
+  "adj_eps": 2.85,
+  "start_ni": 455,
+  "start_eps": 1.88,
+  "start_basis": "total",
+  "items": [
+   {
+    "label": "Technology-related impairment charge",
+    "seg": "RAT",
+    "pre": 5,
+    "net": 4,
+    "cat": "IMPAIR"
+   },
+   {
+    "label": "Gain on dispositions",
+    "seg": "MI",
+    "pre": -4,
+    "net": -3,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Gain on disposition",
+    "seg": "CORP",
+    "pre": -4,
+    "net": -3,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Kensho retention related expense",
+    "seg": "CORP",
+    "pre": 2,
+    "net": 2,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Loss on the extinguishment of debt",
+    "seg": "NONOP",
+    "pre": 279,
+    "net": 210,
+    "cat": "NONOP"
+   }
+  ],
+  "items_total_net": 210,
+  "items_total_ps": 0.87,
+  "deal_amort_pre": 32,
+  "deal_amort_net": 25,
+  "deal_amort_ps": 0.1,
+  "adj_tax": 215,
+  "adj_int": 35,
+  "adj_oth_inc": 6,
+  "definition": "adjusted diluted EPS"
+ },
+ "cfpub": {
+  "ytd_months": 9,
+  "cfo": 2426,
+  "capex": 43,
+  "nci_dist": 143,
+  "fcf_pub": 2240,
+  "fcf_items": [
+   [
+    "Settlements of prior-year tax audits",
+    0
+   ],
+   [
+    "Payment of legal settlements",
+    0
+   ]
+  ],
+  "adj_fcf_pub": 2240
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash, cash equivalents, and restricted cash",
+    3168
+   ],
+   [
+    "Other current assets",
+    1673
+   ],
+   [
+    "Total current assets",
+    4841
+   ],
+   [
+    "Property and equipment, net",
+    298
+   ],
+   [
+    "Right of use assets",
+    610
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    5091
+   ],
+   [
+    "Other non-current assets",
+    612
+   ],
+   [
+    "Total assets",
+    11452
+   ],
+   [
+    "Unearned revenue",
+    1720
+   ],
+   [
+    "Other current liabilities",
+    1095
+   ],
+   [
+    "Long-term debt",
+    4110
+   ],
+   [
+    "Lease liabilities — non-current",
+    563
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    955
+   ],
+   [
+    "Total liabilities",
+    8443
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    2511
+   ],
+   [
+    "Total equity",
+    498
+   ],
+   [
+    "Total liabilities and equity",
+    11452
+   ]
+  ],
+  "ta": 11452,
+  "tl": 8443,
+  "rnci": 2511,
+  "te": 498,
+  "tle": 11452
+ },
+ "organic": {
+  "organic_rev": 1829,
+  "organic_rev_base": 1685,
+  "organic_rev_cc": 1821,
+  "organic_rev_cc_base": 1685,
+  "seg": {
+   "RAT": {
+    "rev": 894,
+    "organic_rev": 887,
+    "organic_rev_base": 789
+   },
+   "MI": {
+    "rev": 530,
+    "organic_rev": 520,
+    "organic_rev_base": 485
+   },
+   "CI": {
+    "rev": 222,
+    "organic_rev": 222,
+    "organic_rev_base": 211
+   },
+   "IDX": {
+    "rev": 234,
+    "organic_rev": 234,
+    "organic_rev_base": 232
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-Subscription / Transaction": 490,
+   "Non-Transaction": 404,
+   "Total revenue": 894
+  },
+  "MI": {
+   "Non-Subscription / Transaction": 13,
+   "Subscription": 517,
+   "Asset-Linked Fees": 0,
+   "Total revenue": 530
+  },
+  "CI": {
+   "Non-Subscription / Transaction": 2,
+   "Subscription": 205,
+   "Sales Usage-Based Royalties": 15,
+   "Total revenue": 222
+  },
+  "IDX": {
+   "Subscription": 43,
+   "Asset-Linked Fees": 156,
+   "Sales Usage-Based Royalties": 35,
+   "Total revenue": 234
+  },
+  "ELIM": {
+   "Non-Transaction": -34,
+   "Total revenue": -34
+  }
+ },
+ "guidance": [
+  {
+   "item": "GAAP diluted EPS",
+   "low": 10.0,
+   "high": 10.15,
+   "basis": "FY2020 (decreased from $10.25-$10.45)"
+  },
+  {
+   "item": "Deal-related amortization",
+   "low": 0.41,
+   "high": 0.41,
+   "basis": "FY2020 per share"
+  },
+  {
+   "item": "Compensation for replacement equity awards and retention plans",
+   "low": 0.04,
+   "high": 0.04,
+   "basis": "FY2020 per share"
+  },
+  {
+   "item": "Restructuring",
+   "low": 0.05,
+   "high": 0.05,
+   "basis": "FY2020 per share"
+  },
+  {
+   "item": "Gain on dispositions",
+   "low": -0.05,
+   "high": -0.05,
+   "basis": "FY2020 per share"
+  },
+  {
+   "item": "Technology-related impairment charge",
+   "low": 0.02,
+   "high": 0.02,
+   "basis": "FY2020 per share"
+  },
+  {
+   "item": "Loss on extinguishment of debt",
+   "low": 0.9,
+   "high": 0.9,
+   "basis": "FY2020 per share"
+  },
+  {
+   "item": "Tax rate",
+   "low": -0.07,
+   "high": -0.07,
+   "basis": "FY2020 per share"
+  },
+  {
+   "item": "Non-GAAP diluted EPS",
+   "low": 11.3,
+   "high": 11.45,
+   "basis": "FY2020 (increased from $10.75-$10.95)"
+  }
+ ]
+}

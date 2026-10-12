@@ -1,0 +1,354 @@
+{
+ "period": "Q4-19",
+ "fy": 2019,
+ "q": 4,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404020000052/a4q2019earningsrelease.htm",
+  "release_date": "2020-02-06",
+  "doc": "2020-02-06_8-K_0000064040-20-000052_a4q2019earningsrelease.txt"
+ },
+ "notes": [
+  "Exhibit 5 is titled 'Operating Results by Segment - Reported vs. Performance'.",
+  "Revenue-by-type rows reordered (Subscription first) from Q4-2019; labels unchanged.",
+  "Exhibit 4 shows a 'Corporate' revenue line: 0 in 2019 (5 in Q4-18, 15 in FY2018); not recorded as a segment.",
+  "Other expense (income), net printed (6) -> income -> oth_inc = +6.",
+  "Interest expense, net 93 includes $57m costs of early repayment of Senior Notes (non-GAAP item, after-tax $43m); adjusted interest expense 36.",
+  "OP non-GAAP adjustments: segments 8 (MI) + Corporate 10 printed; Total SPGI printed 19 (company rounding). Corporate footnote items sum to 11 (4+6+1, computed) vs 10 printed.",
+  "Non-GAAP adjustments printed in aggregate after tax 57 ($0.23); footnote after-tax items sum to 57 (computed). Pre-tax total 76 (19 OP + 57 interest) computed, not printed as one line.",
+  "Adjusted total expense (company note) 869 for Q4-2019.",
+  "Indices Adjusted Net Operating Profit (attributable to the Company) = 116 (adj OP 158 less NCI 42).",
+  "Organic revenue: no constant-currency line in this release (only acquisitions/divestitures-adjusted revenue).",
+  "Cash flow / FCF printed for twelve months only (ytd 12)."
+ ],
+ "is": {
+  "rev": 1735,
+  "exp": 917,
+  "gain_disp": 0,
+  "op": 818,
+  "oth_inc": 6,
+  "int": 93,
+  "ebt": 731,
+  "tax": 146,
+  "ni": 585,
+  "nci": 44,
+  "ni_attr": 541,
+  "eps_b": 2.22,
+  "eps_d": 2.2,
+  "sh_b": 244.0,
+  "sh_d": 245.6,
+  "sh_end": 244.0,
+  "other_lines": []
+ },
+ "seg": [
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 820,
+   "exp": 347,
+   "op": 473,
+   "nongaap": 0,
+   "deal_amort": 0,
+   "adj_op": 473
+  },
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 502,
+   "exp": 357,
+   "op": 145,
+   "nongaap": 8,
+   "deal_amort": 19,
+   "adj_op": 172
+  },
+  {
+   "name": "Platts",
+   "code": "CI",
+   "rev": 213,
+   "exp": 108,
+   "op": 105,
+   "nongaap": 0,
+   "deal_amort": 2,
+   "adj_op": 107
+  },
+  {
+   "name": "Indices",
+   "code": "IDX",
+   "rev": 233,
+   "exp": 76,
+   "op": 157,
+   "nongaap": 0,
+   "deal_amort": 1,
+   "adj_op": 158
+  }
+ ],
+ "seg_other": {
+  "elim": -33,
+  "corp": 62,
+  "corp_nongaap": 10,
+  "corp_deal_amort": 7,
+  "adj_corp": 45,
+  "seg_op_total": 880,
+  "adj_seg_op_total": 911
+ },
+ "ngaap": {
+  "adj_op": 866,
+  "adj_ni": 621,
+  "adj_eps": 2.53,
+  "start_ni": 541,
+  "start_eps": 2.2,
+  "start_basis": "total",
+  "items": [
+   {
+    "label": "Employee severance charges",
+    "seg": "MI",
+    "pre": 4,
+    "net": 3,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Acquisition-related costs",
+    "seg": "MI",
+    "pre": 4,
+    "net": 3,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Kensho retention related expense",
+    "seg": "CORP",
+    "pre": 4,
+    "net": 3,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Lease impairments",
+    "seg": "CORP",
+    "pre": 6,
+    "net": 4,
+    "cat": "IMPAIR"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "CORP",
+    "pre": 1,
+    "net": 1,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Costs associated with early repayment of our Senior Notes",
+    "seg": "NONOP",
+    "pre": 57,
+    "net": 43,
+    "cat": "NONOP"
+   }
+  ],
+  "items_total_net": 57,
+  "items_total_ps": 0.23,
+  "deal_amort_pre": 30,
+  "deal_amort_net": 23,
+  "deal_amort_ps": 0.09,
+  "adj_tax": 171,
+  "adj_int": 36,
+  "adj_oth_inc": 6,
+  "definition": "adjusted diluted EPS"
+ },
+ "cfpub": {
+  "ytd_months": 12,
+  "cfo": 2776,
+  "capex": 115,
+  "nci_dist": 143,
+  "fcf_pub": 2518,
+  "fcf_items": [
+   [
+    "Settlement of prior-year tax audits",
+    51
+   ],
+   [
+    "Tax on gain from sale of SPIAS and RigData",
+    13
+   ],
+   [
+    "Payment of legal settlements",
+    1
+   ],
+   [
+    "Tax benefit from legal settlements",
+    0
+   ]
+  ],
+  "adj_fcf_pub": 2583
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash, cash equivalents, and restricted cash",
+    2886
+   ],
+   [
+    "Other current assets",
+    1826
+   ],
+   [
+    "Total current assets",
+    4712
+   ],
+   [
+    "Property and equipment, net",
+    320
+   ],
+   [
+    "Right of use assets",
+    676
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    4999
+   ],
+   [
+    "Other non-current assets",
+    641
+   ],
+   [
+    "Total assets",
+    11348
+   ],
+   [
+    "Unearned revenue",
+    1928
+   ],
+   [
+    "Other current liabilities",
+    1165
+   ],
+   [
+    "Long-term debt",
+    3948
+   ],
+   [
+    "Lease liabilities — non-current",
+    620
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    883
+   ],
+   [
+    "Total liabilities",
+    8544
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    2268
+   ],
+   [
+    "Total equity",
+    536
+   ],
+   [
+    "Total liabilities and equity",
+    11348
+   ]
+  ],
+  "ta": 11348,
+  "tl": 8544,
+  "rnci": 2268,
+  "te": 536,
+  "tle": 11348
+ },
+ "organic": {
+  "organic_rev": 1733,
+  "organic_rev_base": 1528,
+  "seg": {
+   "RAT": {
+    "rev": 820,
+    "organic_rev": 820,
+    "organic_rev_base": 661
+   },
+   "MI": {
+    "rev": 502,
+    "organic_rev": 499,
+    "organic_rev_base": 473
+   },
+   "CI": {
+    "rev": 213,
+    "organic_rev": 213,
+    "organic_rev_base": 207
+   },
+   "IDX": {
+    "rev": 233,
+    "organic_rev": 233,
+    "organic_rev_base": 215
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-Subscription / Transaction": 429,
+   "Non-Transaction": 391,
+   "Total revenue": 820
+  },
+  "MI": {
+   "Subscription": 488,
+   "Non-Subscription / Transaction": 14,
+   "Asset-Linked Fees": 0,
+   "Total revenue": 502
+  },
+  "CI": {
+   "Subscription": 195,
+   "Non-Subscription / Transaction": 3,
+   "Sales Usage-Based Royalties": 15,
+   "Total revenue": 213
+  },
+  "IDX": {
+   "Subscription": 43,
+   "Asset-Linked Fees": 159,
+   "Sales Usage-Based Royalties": 31,
+   "Total revenue": 233
+  },
+  "CORP": {
+   "Subscription": 0,
+   "Total revenue": 0
+  },
+  "ELIM": {
+   "Non-Transaction": -33,
+   "Total revenue": -33
+  }
+ },
+ "guidance": [
+  {
+   "item": "GAAP diluted EPS",
+   "low": 10.0,
+   "high": 10.2,
+   "basis": "FY2020"
+  },
+  {
+   "item": "Deal-related amortization",
+   "low": 0.37,
+   "high": 0.37,
+   "basis": "FY2020 per share"
+  },
+  {
+   "item": "Compensation for replacement equity awards and retention plans",
+   "low": 0.03,
+   "high": 0.03,
+   "basis": "FY2020 per share"
+  },
+  {
+   "item": "Non-GAAP diluted EPS",
+   "low": 10.4,
+   "high": 10.6,
+   "basis": "FY2020"
+  },
+  {
+   "item": "Reported revenue growth",
+   "low": null,
+   "high": null,
+   "basis": "FY2020: 'expected to increase mid to high single-digits' (no numeric range)"
+  },
+  {
+   "item": "Free cash flow excluding certain items ($m)",
+   "low": 2600,
+   "high": 2700,
+   "basis": "FY2020: '$2.6 billion to $2.7 billion'"
+  }
+ ]
+}

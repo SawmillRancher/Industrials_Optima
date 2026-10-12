@@ -1,0 +1,303 @@
+{
+ "period": "Q1-21",
+ "fy": 2021,
+ "q": 1,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404021000117/spgi1q2021-earningsrelease.htm",
+  "release_date": "2021-04-29",
+  "doc": "2021-04-29_8-K_0000064040-21-000117_spgi1q2021-earningsrelease.txt"
+ },
+ "notes": [
+  "Income statement 'Gain on dispositions' printed as (2) and deducted from expenses (2,016 - 937 + 2 = 1,081): recorded gain_disp = +2.",
+  "'Other (income) expense, net' printed (7) = income of 7: oth_inc = +7.",
+  "Segment expense table total (935) is net of the 2 gain on disposition (IS expenses 937).",
+  "Market Intelligence: OP 166 - 2 (gain) + 16 amortization = 180 vs published adjusted OP 181 (company rounding).",
+  "Indices adjusted operating profit attributable to the Company: 141 (Adjusted Indices Net Operating Profit; NCI share 51). GAAP OP attributable 140 (narrative).",
+  "corp_nongaap / corp_deal_amort are in add-back sign (they reduce unallocated expense): adj_corp = corp - corp_nongaap - corp_deal_amort.",
+  "Non-GAAP item after-tax amounts sum to 41 (-2 + 41 + 2) vs aggregate 'Non-GAAP adjustments' line 40 (rounding); 755 + 41 + 25 = 821 vs adjusted NI 820.",
+  "cfpub.capex and cfpub.nci_dist recorded as positive outflows (printed (18) and (69)).",
+  "Guidance is adjusted only, stand-alone basis excluding IHS Markit merger; no GAAP guidance given."
+ ],
+ "is": {
+  "rev": 2016,
+  "exp": 937,
+  "gain_disp": 2,
+  "op": 1081,
+  "oth_inc": 7,
+  "int": 32,
+  "ebt": 1056,
+  "tax": 248,
+  "ni": 808,
+  "nci": 53,
+  "ni_attr": 755,
+  "eps_b": 3.14,
+  "eps_d": 3.12,
+  "sh_b": 240.6,
+  "sh_d": 241.6,
+  "sh_end": 240.9,
+  "other_lines": []
+ },
+ "seg": [
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 1017,
+   "exp": 336,
+   "op": 681,
+   "deal_amort": 5,
+   "adj_op": 686
+  },
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 539,
+   "exp": 373,
+   "op": 166,
+   "nongaap": -2,
+   "deal_amort": 16,
+   "adj_op": 181
+  },
+  {
+   "name": "Platts",
+   "code": "CI",
+   "rev": 225,
+   "exp": 96,
+   "op": 129,
+   "deal_amort": 2,
+   "adj_op": 131
+  },
+  {
+   "name": "Indices",
+   "code": "IDX",
+   "rev": 270,
+   "exp": 79,
+   "op": 191,
+   "deal_amort": 1,
+   "adj_op": 192
+  }
+ ],
+ "seg_other": {
+  "elim": -35,
+  "corp": 86,
+  "corp_nongaap": 52,
+  "corp_deal_amort": 7,
+  "adj_corp": 28,
+  "seg_op_total": 1167,
+  "adj_seg_op_total": 1190
+ },
+ "ngaap": {
+  "adj_op": 1162,
+  "adj_ni": 820,
+  "adj_eps": 3.39,
+  "start_ni": 755,
+  "start_eps": 3.12,
+  "start_basis": "total",
+  "items": [
+   {
+    "label": "Gain on disposition",
+    "seg": "MI",
+    "pre": -2,
+    "net": -2,
+    "cat": "GAIN"
+   },
+   {
+    "label": "IHS Markit merger costs",
+    "seg": "CORP",
+    "pre": 49,
+    "net": 41,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Kensho retention related expense",
+    "seg": "CORP",
+    "pre": 2,
+    "net": 2,
+    "cat": "ACQ"
+   }
+  ],
+  "items_total_pre": 50,
+  "items_total_net": 40,
+  "items_total_ps": 0.17,
+  "deal_amort_pre": 31,
+  "deal_amort_net": 25,
+  "deal_amort_ps": 0.1,
+  "adj_tax": 264,
+  "adj_tax_items": 10,
+  "adj_tax_deal_amort": 7,
+  "definition": "adjusted diluted EPS"
+ },
+ "cfpub": {
+  "ytd_months": 3,
+  "cfo": 768,
+  "capex": 18,
+  "nci_dist": 69,
+  "fcf_pub": 681,
+  "fcf_items": [
+   [
+    "IHS Markit merger costs",
+    37
+   ]
+  ],
+  "adj_fcf_pub": 718
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash, cash equivalents, and restricted cash",
+    4518
+   ],
+   [
+    "Other current assets",
+    1788
+   ],
+   [
+    "Total current assets",
+    6306
+   ],
+   [
+    "Property and equipment, net",
+    281
+   ],
+   [
+    "Right of use assets",
+    479
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    5045
+   ],
+   [
+    "Other non-current assets",
+    719
+   ],
+   [
+    "Total assets",
+    12830
+   ],
+   [
+    "Unearned revenue",
+    2111
+   ],
+   [
+    "Other current liabilities",
+    1292
+   ],
+   [
+    "Long-term debt",
+    4111
+   ],
+   [
+    "Lease liabilities \u2014 non-current",
+    525
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    885
+   ],
+   [
+    "Total liabilities",
+    8924
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    2808
+   ],
+   [
+    "Total equity",
+    1098
+   ],
+   [
+    "Total liabilities and equity",
+    12830
+   ]
+  ],
+  "ta": 12830,
+  "tl": 8924,
+  "rnci": 2808,
+  "te": 1098,
+  "tle": 12830
+ },
+ "organic": {
+  "rev": 2016,
+  "adjustments": [
+   [
+    "Ratings acquisitions",
+    -8
+   ],
+   [
+    "Market Intelligence divestitures",
+    0
+   ]
+  ],
+  "organic_rev": 2008,
+  "organic_rev_cc": 1989,
+  "prior_rev": 1786,
+  "prior_organic_rev": 1781,
+  "seg": {
+   "RAT": {
+    "rev": 1017,
+    "organic_rev": 1009,
+    "prior_organic_rev": 823
+   },
+   "MI": {
+    "rev": 539,
+    "organic_rev": 539,
+    "prior_organic_rev": 516
+   },
+   "CI": {
+    "rev": 225,
+    "organic_rev": 225,
+    "prior_organic_rev": 215
+   },
+   "IDX": {
+    "rev": 270,
+    "organic_rev": 270,
+    "prior_organic_rev": 259
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-Subscription / Transaction": 582,
+   "Non-Transaction": 435
+  },
+  "MI": {
+   "Non-Subscription / Transaction": 12,
+   "Subscription": 527,
+   "Asset-Linked Fees": 0
+  },
+  "CI": {
+   "Non-Subscription / Transaction": 1,
+   "Subscription": 208,
+   "Sales Usage-Based Royalties": 16
+  },
+  "IDX": {
+   "Subscription": 46,
+   "Asset-Linked Fees": 183,
+   "Sales Usage-Based Royalties": 41
+  },
+  "ELIM": {
+   "Non-Transaction": -35
+  }
+ },
+ "guidance": [
+  {
+   "item": "Adjusted diluted EPS (stand-alone, excl. merger)",
+   "low": 12.55,
+   "high": 12.75,
+   "basis": "adjusted"
+  },
+  {
+   "item": "Free cash flow excluding certain items ($bn)",
+   "low": 3.4,
+   "high": 3.5,
+   "basis": "adjusted"
+  },
+  {
+   "item": "Reported revenue growth",
+   "low": null,
+   "high": null,
+   "basis": "GAAP; \"increase mid single-digits\""
+  }
+ ]
+}

@@ -1,0 +1,507 @@
+{
+ "period": "Q1-24",
+ "fy": 2024,
+ "q": 1,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404024000121/spgi1q2024-earningsrelease.htm",
+  "release_date": "2024-04-25",
+  "doc": "2024-04-25_8-K_0000064040-24-000121_spgi1q2024-earningsrelease.txt"
+ },
+ "notes": [
+  "Engineering Solutions sold May 2, 2023; ES segment printed with zero for the quarter. Fincentric classified as held for sale at March 31, 2024 (BS assets 60, liabilities 10).",
+  "IS \"Other (income) expense, net\" printed (9) -> oth_inc +9 (income); no non-GAAP adjustment to other income. Segment-table total expenses 2,106 = IS expenses 2,112 less equity income 6.",
+  "CORP \"recovery of lease-related costs\" $1M ($1M after-tax) is a benefit -> pre -1 / net -1 (CORP items 18+2+1-1 = 20 = printed corp_nongaap).",
+  "TAX items (footnote h): tax expense of $6M associated with IHS Markit prior to acquisition (+6), offset by tax benefit of $2M due to annualized effective tax rate differences for GAAP (-2).",
+  "Item after-tax sum 55 = printed aggregate 55; 991 + 55 + 212 = 1,258.",
+  "ngaap.items_total_pre = operating-level \"Non-GAAP adjustments\" (75); interest adjustment (premium amortization benefit, footnote g) printed separately as 7 (adjusted interest 85 vs GAAP 78).",
+  "Segment rounding: MI 189+45+140=374 vs adj 373; Ratings 679+2+7=688 vs 687; CI 226+5+32=263 vs 264; Indices 272+2+9=283 vs 282; Corporate 57-20 = 37 vs adjusted 36.",
+  "Non-GAAP adjusted tax line: non-GAAP adjustments 13, deal-related amortization 67.",
+  "cfpub: capex and nci_dist (\"Distributions to noncontrolling interest holders, net\") positive outflows.",
+  "Guidance raised: revenue growth 6.0%-8.0% (prior 5.5%-7.5%); GAAP EPS $10.80-$11.05; adjusted EPS $13.85-$14.10. Exhibit 8 bridge: deal amortization 2.77, IHS Markit merger costs 0.28, premium amortization benefit (0.07), restructuring 0.09, tax rate (0.02).",
+  "No organic/constant-currency table; revenue ex Engineering Solutions growth 14% stated in text."
+ ],
+ "is": {
+  "rev": 3491,
+  "exp": 2112,
+  "gain_disp": 0,
+  "eq_inc": 6,
+  "op": 1385,
+  "oth_inc": 9,
+  "int": 78,
+  "ebt": 1316,
+  "tax": 248,
+  "ni": 1068,
+  "nci": 77,
+  "ni_attr": 991,
+  "eps_b": 3.16,
+  "eps_d": 3.16,
+  "sh_b": 313.6,
+  "sh_d": 314.0,
+  "sh_end": 313.1
+ },
+ "seg": [
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 1142,
+   "exp": 953,
+   "op": 189,
+   "nongaap": 45,
+   "deal_amort": 140,
+   "adj_op": 373
+  },
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 1062,
+   "exp": 383,
+   "op": 679,
+   "nongaap": 2,
+   "deal_amort": 7,
+   "adj_op": 687
+  },
+  {
+   "name": "Commodity Insights",
+   "code": "CI",
+   "rev": 559,
+   "exp": 333,
+   "op": 226,
+   "nongaap": 5,
+   "deal_amort": 32,
+   "adj_op": 264
+  },
+  {
+   "name": "Mobility",
+   "code": "MOB",
+   "rev": 386,
+   "exp": 316,
+   "op": 70,
+   "nongaap": 1,
+   "deal_amort": 76,
+   "adj_op": 147
+  },
+  {
+   "name": "Indices",
+   "code": "IDX",
+   "rev": 387,
+   "exp": 115,
+   "op": 272,
+   "nongaap": 2,
+   "deal_amort": 9,
+   "adj_op": 282
+  },
+  {
+   "name": "Engineering Solutions",
+   "code": "ES",
+   "rev": 0,
+   "exp": 0,
+   "op": 0,
+   "deal_amort": 0,
+   "adj_op": 0
+  }
+ ],
+ "seg_other": {
+  "elim": -45,
+  "corp": 57,
+  "corp_nongaap": 20,
+  "corp_deal_amort": 0,
+  "adj_corp": 36,
+  "eq_inc": 6,
+  "eq_deal_amort": 14,
+  "adj_eq_inc": 20,
+  "seg_op_total": 1436,
+  "adj_seg_op_total": 1754
+ },
+ "ngaap": {
+  "adj_op": 1738,
+  "adj_ni": 1258,
+  "adj_eps": 4.01,
+  "start_ni": 991,
+  "start_eps": 3.16,
+  "start_basis": "total",
+  "definition": "adjusted diluted EPS",
+  "items": [
+   {
+    "label": "Employee severance charges",
+    "seg": "MI",
+    "pre": 31,
+    "net": 23,
+    "cat": "SEVER"
+   },
+   {
+    "label": "IHS Markit merger costs",
+    "seg": "MI",
+    "pre": 11,
+    "net": 8,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Acquisition-related costs",
+    "seg": "MI",
+    "pre": 3,
+    "net": 2,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "RAT",
+    "pre": 2,
+    "net": 1,
+    "cat": "SEVER"
+   },
+   {
+    "label": "IHS Markit merger costs",
+    "seg": "CI",
+    "pre": 5,
+    "net": 4,
+    "cat": "ACQ"
+   },
+   {
+    "label": "IHS Markit merger costs",
+    "seg": "MOB",
+    "pre": 1,
+    "net": 1,
+    "cat": "ACQ"
+   },
+   {
+    "label": "IHS Markit merger costs",
+    "seg": "IDX",
+    "pre": 1,
+    "net": 1,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "IDX",
+    "pre": 1,
+    "net": 1,
+    "cat": "SEVER"
+   },
+   {
+    "label": "IHS Markit merger costs",
+    "seg": "CORP",
+    "pre": 18,
+    "net": 14,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "CORP",
+    "pre": 2,
+    "net": 1,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Acquisition-related costs",
+    "seg": "CORP",
+    "pre": 1,
+    "net": 1,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Recovery of lease-related costs",
+    "seg": "CORP",
+    "pre": -1,
+    "net": -1,
+    "cat": "IMPAIR"
+   },
+   {
+    "label": "Premium amortization benefit (interest expense)",
+    "seg": "NONOP",
+    "pre": -7,
+    "net": -5,
+    "cat": "NONOP"
+   },
+   {
+    "label": "Tax expense associated with IHS Markit prior to acquisition",
+    "seg": "TAX",
+    "net": 6,
+    "cat": "TAX"
+   },
+   {
+    "label": "Tax benefit due to annualized effective tax rate differences for GAAP",
+    "seg": "TAX",
+    "net": -2,
+    "cat": "TAX"
+   }
+  ],
+  "items_total_pre": 75,
+  "items_total_net": 55,
+  "items_total_ps": 0.18,
+  "deal_amort_pre": 278,
+  "deal_amort_net": 212,
+  "deal_amort_ps": 0.67,
+  "adj_tax": 328,
+  "adj_int": 85,
+  "adj_oth_inc": 9
+ },
+ "cfpub": {
+  "ytd_months": 3,
+  "cfo": 948,
+  "capex": 24,
+  "nci_dist": 73,
+  "fcf_pub": 851,
+  "fcf_items": [
+   [
+    "IHS Markit merger costs",
+    167
+   ]
+  ],
+  "adj_fcf_pub": 1018
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash, cash equivalents, and restricted cash",
+    1544
+   ],
+   [
+    "Other current assets",
+    3824
+   ],
+   [
+    "Assets of a business held for sale",
+    60
+   ],
+   [
+    "Total current assets",
+    5428
+   ],
+   [
+    "Property and equipment, net",
+    247
+   ],
+   [
+    "Right of use assets",
+    371
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    51868
+   ],
+   [
+    "Equity investments in unconsolidated subsidiaries",
+    1775
+   ],
+   [
+    "Other non-current assets",
+    788
+   ],
+   [
+    "Total assets",
+    60477
+   ],
+   [
+    "Short-term debt",
+    301
+   ],
+   [
+    "Unearned revenue",
+    3535
+   ],
+   [
+    "Other current liabilities",
+    2031
+   ],
+   [
+    "Liabilities of a business held for sale",
+    10
+   ],
+   [
+    "Long-term debt",
+    11404
+   ],
+   [
+    "Lease liabilities \u2014 non-current",
+    524
+   ],
+   [
+    "Deferred tax liability \u2014 non-current",
+    3631
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    792
+   ],
+   [
+    "Total liabilities",
+    22228
+   ],
+   [
+    "Redeemable noncontrolling interests",
+    3825
+   ],
+   [
+    "Total equity",
+    34424
+   ],
+   [
+    "Total liabilities and equity",
+    60477
+   ]
+  ],
+  "ta": 60477,
+  "tl": 22228,
+  "rnci": 3825,
+  "te": 34424,
+  "tle": 60477
+ },
+ "rev_type": {
+  "MI": {
+   "Subscription": 947,
+   "Non-subscription / Transaction": 54,
+   "Recurring variable": 141
+  },
+  "RAT": {
+   "Non-subscription / Transaction": 582,
+   "Non-transaction": 480
+  },
+  "CI": {
+   "Subscription": 450,
+   "Non-subscription / Transaction": 83,
+   "Sales usage-based royalties": 26
+  },
+  "MOB": {
+   "Subscription": 311,
+   "Non-subscription / Transaction": 75
+  },
+  "IDX": {
+   "Subscription": 70,
+   "Asset-linked fees": 244,
+   "Sales usage-based royalties": 73
+  },
+  "ES": {},
+  "ELIM": {
+   "Non-transaction": -45
+  },
+  "TOTAL": {
+   "Subscription": 1778,
+   "Non-subscription / Transaction": 794,
+   "Non-transaction": 435,
+   "Asset-linked fees": 244,
+   "Sales usage-based royalties": 99,
+   "Recurring variable": 141
+  }
+ },
+ "guidance": [
+  {
+   "item": "Revenue growth",
+   "low": 6.0,
+   "high": 8.0,
+   "unit": "%",
+   "basis": "GAAP"
+  },
+  {
+   "item": "Revenue growth",
+   "low": 6.0,
+   "high": 8.0,
+   "unit": "%",
+   "basis": "Adjusted"
+  },
+  {
+   "item": "Corporate unallocated expense",
+   "low": 220,
+   "high": 230,
+   "unit": "$M",
+   "basis": "GAAP"
+  },
+  {
+   "item": "Corporate unallocated expense",
+   "low": 160,
+   "high": 170,
+   "unit": "$M",
+   "basis": "Adjusted"
+  },
+  {
+   "item": "Deal-related amortization",
+   "low": 1095,
+   "high": 1105,
+   "unit": "$M",
+   "basis": "GAAP"
+  },
+  {
+   "item": "Deal-related amortization",
+   "low": 1095,
+   "high": 1105,
+   "unit": "$M",
+   "basis": "Adjusted"
+  },
+  {
+   "item": "Operating profit margin expansion",
+   "low": 500,
+   "high": 550,
+   "unit": "bps",
+   "basis": "GAAP"
+  },
+  {
+   "item": "Operating profit margin expansion",
+   "low": 100,
+   "high": 150,
+   "unit": "bps",
+   "basis": "Adjusted"
+  },
+  {
+   "item": "Interest expense, net",
+   "low": 325,
+   "high": 335,
+   "unit": "$M",
+   "basis": "GAAP"
+  },
+  {
+   "item": "Interest expense, net",
+   "low": 350,
+   "high": 360,
+   "unit": "$M",
+   "basis": "Adjusted"
+  },
+  {
+   "item": "Tax rate",
+   "low": 21.0,
+   "high": 22.0,
+   "unit": "%",
+   "basis": "GAAP"
+  },
+  {
+   "item": "Tax rate",
+   "low": 21.5,
+   "high": 22.5,
+   "unit": "%",
+   "basis": "Adjusted"
+  },
+  {
+   "item": "Diluted EPS",
+   "low": 10.8,
+   "high": 11.05,
+   "unit": "$",
+   "basis": "GAAP"
+  },
+  {
+   "item": "Diluted EPS",
+   "low": 13.85,
+   "high": 14.1,
+   "unit": "$",
+   "basis": "Adjusted"
+  },
+  {
+   "item": "Capital expenditures",
+   "low": 185,
+   "high": 195,
+   "unit": "$M",
+   "basis": "GAAP and Adjusted"
+  },
+  {
+   "item": "Cash provided by operating activities, less capital expenditures and distributions to noncontrolling interest holders",
+   "low": 4200,
+   "high": 4200,
+   "unit": "$M (~)",
+   "basis": "GAAP"
+  },
+  {
+   "item": "Adjusted free cash flow, excluding certain items",
+   "low": 4500,
+   "high": 4500,
+   "unit": "$M (~)",
+   "basis": "Adjusted"
+  }
+ ]
+}

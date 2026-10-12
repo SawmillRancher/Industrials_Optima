@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, SPGI). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -93,7 +93,7 @@ Copy this section into the new model's PR description or working notes and tick 
   - [ ] Bridge start + Σ items = published adjusted EPS (±0.01) / adjusted measure.
   - [ ] CFO + CFI + CFF + FX = Δcash; beginning cash + Δ = ending cash.
   - [ ] TA = TL&E; components sum to subtotals.
-- [ ] Large extraction can be split across parallel agents by period range (RBA / TDY used a1…a8 files). Give every agent the same schema, paths and self-checks.
+- [ ] Large extraction can be split across parallel agents by period range (RBA / TDY used a1…a8 files; SPGI seven agents). Give every agent the same schema, paths and a self-check script it must run before finishing (SPGI `check_rec.py`).
 
 ### Phase 3 — Normalisation and data checks
 - [ ] `normalize.py` maps the extraction to flat model keys `DATA[period]['x'][key]` and records the basis used per period.
@@ -250,7 +250,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | No guidance | ODFL, RMS | Mid-quarter updates; seasonality best / avg / worst; scenario-only forecast |
 | No non-GAAP published | ODFL, DHR (EBITDA), STE (EBITDA) | Model-defined bridges, clearly labelled, checked against XBRL / GAAP |
 | Definition changed over time | TDY, LOAR, RBA, MLM | Definition-flag row, in-force definition per period, current-definition memo series |
-| Spin-offs / disc ops | DHR, STE, BWXT, XPO | Hybrid recast or post-spin history; recast cell comments; rebuild originally reported adjusted EPS in memo |
+| Spin-offs / disc ops | DHR, STE, BWXT, XPO, SPGI | Hybrid recast or post-spin history; recast cell comments; rebuild originally reported adjusted EPS in memo; spin after the last reported quarter → Article 11 pro forma base (SPGI) |
 | IFRS / foreign currency | ONON, RMS, BC, TFI | Reporting currency; constant-currency + FX build; price × FX input; IFRS 16 lease schedule; rent-as-opex DCF option |
 | Half-year reporters | RMS, BC | H1 / H2 / FY columns (H2 = FY − H1); quarterly revenue memo |
 | Recent IPO | LOAR, ONON, KRMN | Annual columns from the prospectus; P&L-only years flagged; BS / CF start when available |
@@ -275,7 +275,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -289,6 +289,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Recast Q4 = FY recast − 9M recast; quarters that were never recast stay blank. [LECO]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
+- **Release vs 10-Q cash flow:** a release can print a cash-flow statement the 10-Q later reclassifies. Compare published FCF only where the release CFO equals the statement the model uses, and log the rest. [SPGI]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
 
 ### 5.2 Basis
@@ -298,6 +299,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **After a spin:** start the BS at the first post-spin balance sheet even if the P&L uses earlier recast comparatives, and fill earlier y/y with company-reported change % memos. Spin-cos put carve-out (Form 10) years in the main columns, with the former parent's segment history as a flagged memo under the parent's CIK. [XPO, ESAB]
 - **Half-year reporters:** carry quarterly revenue as "1st / 2nd quarter of the half" memo rows inside the half-year columns, with a Σ check. [RMS, BC]
 - **Two builds of one company:** diff their dated facts (split dates, deconsolidation quarter, label cut-overs) and resolve each from the filing. [LECO]
+- **Spin completed after the last reported quarter:** take the guidance base year and the YTD quarters from the company's Article 11 pro forma recast (8-K/A), show reported − pro forma net income as discontinued operations so EPS still ties, keep BS / CF as reported, and remove the spun net assets in the next quarter's BS roll from the latest pro forma BS (flag "replace with the 10-Q"). [SPGI]
 
 ### 5.3 Operating build
 - **When a segment or product table changes revenue basis** (net sales → ex-freight → total revenue; pre-ASC 606), add a derived "outside the lines" row (consolidated − Σ lines) so the build check ties in every period. [MLM, VMC]
@@ -338,6 +340,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Don't force FY = Σ quarters** for adjusted measures the company computes annually (annual tax effect, FY cc rates), or for a measure whose definition changed mid-year. Exempt them from the quarter-sum check with a comment. [ONON, VMC]
 - **Known, explained source differences** (a restated starting NI, a release issued before a 10-Q impairment) can stay as documented check exceptions rather than plugs. [WCN]
 - **Long-term target base years** stay "as first published", with a note that definitions have since changed. [XPO]
+- **Adjusted figures published only pro forma after a merger** (target's pre-acquisition results included): rebuild the actual scope from the published after-tax totals, FY = Σ quarters, and set the check to n/p. [SPGI]
 - **Two-class / participating preferred:** the adjusted-NI bridge needs an "allocation to preferred" line, and the preferred is deducted in the EV bridge. [RBA]
 
 ### 5.5 Calibration
@@ -353,6 +356,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
 - **Apply the Δ only to genuinely uncommitted lines** (retail rather than order-book wholesale). Constant-FX guidance needs a separate FX-translation Δ for the reporting-currency figure. EPS guidance made stale by post-guidance buybacks becomes an information row. [BC, ONON, BWXT]
 - **No guidance:** leave targets as optional blank inputs; don't invent them. [HEI, BC]
+- **Two or more estimate quarters:** keep the calibration helpers and Δs in the FY column and reference them absolutely from each estimate quarter. [SPGI]
 
 ### 5.6 Balance sheet, cash and capital
 - **Current year with actual quarters:**
@@ -375,8 +379,9 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Add a revolver-headroom memo.
   - After a debt-funded deal, sweep surplus cash to prepayable debt before buybacks resume.
   - Calibrate a fees / capitalized-interest row to YTD interest when coupons overstate actual expense.
+  - With a CP / revolver plug and leverage-target buybacks, term out prior-year CP above a threshold into notes so the plug stays inside the facility.
 
-  [KRMN, MLM, WWD, BWXT]
+  [KRMN, MLM, WWD, BWXT, SPGI]
 - **Convertibles and preferred:**
   - Convertibles: treasury-stock dilution above the conversion price, driven by the forecast share price; capped calls ignored; counted at face in net debt.
   - Mandatory convertible preferred: if-converted shares until conversion, with dividends added back in adjusted EPS.

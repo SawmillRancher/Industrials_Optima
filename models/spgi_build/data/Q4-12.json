@@ -1,0 +1,383 @@
+{
+ "period": "Q4-12",
+ "fy": 2012,
+ "q": 4,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000114420413007556/v334572_ex99-1.htm",
+  "release_date": "2013-02-12",
+  "doc": "2013-02-12_8-K_0001144204-13-007556_v334572_ex99-1.txt"
+ },
+ "notes": [
+  "The McGraw-Hill Companies (MHP). McGraw-Hill Education reclassified to discontinued operations from this release; figures are continuing operations (McGraw Hill Financial).",
+  "First release with S&P Capital IQ and S&P Dow Jones Indices as separate segments (previously S&P Capital IQ / S&P Indices).",
+  "is.gain_disp = the printed operating line \"Other income\" (52) = vacation accrual reversal gain (Q4-12), NOT a disposition gain; mapped to gain_disp so rev-exp+other = OP ties. Also in other_lines.",
+  "is.nci = 23 computed (21 continuing + 2 discontinued, as printed). ni_attr_cont = 190.",
+  "S&P DJI adjusted operating profit attributable to the Company (after NCI) = 50 (Exhibit 11; reported 48). seg adj_op is the full 67.",
+  "Unallocated non-GAAP adjustment (3) nets Growth and Value Plan costs and the 52 vacation accrual reversal; G&V cost in unallocated = 55 (computed 3 + 52). Text: Q4 one-time G&V charges $77m (~$44m professional fees, ~$29m restructuring) less $52m vacation gain = 25.",
+  "Segment items (8/5/3/6) are restructuring charges (Exhibit 12 notes Q3 and Q4 exclude restructuring charges).",
+  "Adjusted NI from continuing ops before NCI = 227; NCI adjustment (1); attributable adjusted NI 205. Adjusted diluted EPS total (incl. disc ops) = 0.75.",
+  "Release prints only aggregate pre-tax / after-tax non-GAAP adjustments; per-item after-tax amounts are not published, so items[].net is null and check_rec start_ni + items_net = adj_ni cannot tie from items. Aggregates are in items_total_pre/net/ps.",
+  "Cash-flow signs as printed (outflows negative). corp/adj_corp are positive costs; corp_nongaap is the add-back to unallocated expense."
+ ],
+ "is": {
+  "rev": 1226,
+  "exp": 931,
+  "gain_disp": 52,
+  "op": 347,
+  "int": 18,
+  "ebt": 329,
+  "tax": 118,
+  "ni_cont": 211,
+  "disc": -404,
+  "ni": -193,
+  "nci": 23,
+  "ni_attr": -216,
+  "ni_attr_cont": 190,
+  "eps_b": -0.78,
+  "eps_d": -0.76,
+  "eps_d_cont": 0.67,
+  "sh_b": 277.9,
+  "sh_d": 284.7,
+  "other_lines": [
+   [
+    "Other income (operating; vacation accrual reversal)",
+    52
+   ],
+   [
+    "Less: net income attributable to noncontrolling interests - continuing",
+    -21
+   ],
+   [
+    "Less: net income attributable to noncontrolling interests - discontinued",
+    -2
+   ],
+   [
+    "(Loss) income from discontinued operations attributable to MHP",
+    -406
+   ],
+   [
+    "Basic EPS - continuing operations",
+    0.68
+   ],
+   [
+    "Basic EPS - discontinued operations",
+    -1.46
+   ],
+   [
+    "Diluted EPS - discontinued operations",
+    -1.43
+   ],
+   [
+    "Dividend per common share",
+    0.255
+   ],
+   [
+    "Special dividend per common share",
+    2.5
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "S&P Ratings",
+   "code": "RAT",
+   "rev": 584,
+   "exp": 338,
+   "op": 246,
+   "nongaap": 8,
+   "adj_op": 254
+  },
+  {
+   "name": "S&P Capital IQ",
+   "code": "CIQ",
+   "rev": 290,
+   "exp": 242,
+   "op": 48,
+   "nongaap": 5,
+   "adj_op": 53
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 110,
+   "exp": 46,
+   "op": 64,
+   "nongaap": 3,
+   "adj_op": 67
+  },
+  {
+   "name": "Commodities & Commercial",
+   "code": "CC",
+   "rev": 260,
+   "exp": 206,
+   "op": 54,
+   "nongaap": 6,
+   "adj_op": 59
+  }
+ ],
+ "seg_other": {
+  "elim": -18,
+  "corp": 65,
+  "corp_nongaap": 3,
+  "adj_corp": 62,
+  "seg_op_total": 412,
+  "adj_seg_op_total": 433
+ },
+ "ngaap": {
+  "adj_op": 371,
+  "adj_ni": 205,
+  "adj_eps": 0.72,
+  "start_ni": 190,
+  "start_eps": 0.67,
+  "start_basis": "cont",
+  "definition": "adjusted diluted EPS from continuing operations",
+  "adj_tax": 126,
+  "adj_int": 18,
+  "items_total_pre": 25,
+  "items_total_net": 15,
+  "items_total_ps": 0.05,
+  "adj_eps_total": 0.75,
+  "nci_adj": -1,
+  "items": [
+   {
+    "label": "Growth and Value Plan related costs - restructuring charges (S&P Ratings)",
+    "seg": "RAT",
+    "pre": 8,
+    "net": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Growth and Value Plan related costs - restructuring charges (S&P Capital IQ)",
+    "seg": "CIQ",
+    "pre": 5,
+    "net": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Growth and Value Plan related costs - restructuring charges (S&P Dow Jones Indices)",
+    "seg": "IDX",
+    "pre": 3,
+    "net": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Growth and Value Plan related costs - restructuring charges (Commodities & Commercial)",
+    "seg": "CC",
+    "pre": 6,
+    "net": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Growth and Value Plan related costs in unallocated expense (professional fees and restructuring to enable separation; computed 3 + 52)",
+    "seg": "CORP",
+    "pre": 55,
+    "net": null,
+    "cat": "DISP"
+   },
+   {
+    "label": "Vacation accrual reversal (gain from modification of vacation policy)",
+    "seg": "CORP",
+    "pre": -52,
+    "net": null,
+    "cat": "OTHER"
+   }
+  ]
+ },
+ "cfpub": {
+  "ytd_months": 12,
+  "cfo": 747,
+  "capex": -97,
+  "nci_dist": -24,
+  "fcf_pub": 626,
+  "fcf_items": [
+   [
+    "Cash provided by operating activities",
+    747
+   ],
+   [
+    "Capital expenditures",
+    -97
+   ],
+   [
+    "Dividends and other payments paid to noncontrolling interests",
+    -24
+   ]
+  ],
+  "fcf_label": "Free cash flow from continuing operations",
+  "dep": 93,
+  "amort": 48,
+  "sbc": 93
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and short-term investments",
+    761
+   ],
+   [
+    "Other current assets",
+    1198
+   ],
+   [
+    "Assets held for sale (a)",
+    1940
+   ],
+   [
+    "Total current assets",
+    3899
+   ],
+   [
+    "Property and equipment, net",
+    368
+   ],
+   [
+    "Goodwill and other intangible assets, net (b)",
+    2519
+   ],
+   [
+    "Other non-current assets",
+    266
+   ],
+   [
+    "Total assets",
+    7052
+   ],
+   [
+    "Short-term debt",
+    457
+   ],
+   [
+    "Unearned revenue",
+    1229
+   ],
+   [
+    "Liabilities held for sale (a)",
+    664
+   ],
+   [
+    "Other current liabilities",
+    1317
+   ],
+   [
+    "Long-term debt",
+    799
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    936
+   ],
+   [
+    "Total liabilities",
+    5402
+   ],
+   [
+    "Redeemable noncontrolling interest (b)",
+    810
+   ],
+   [
+    "Total equity",
+    840
+   ],
+   [
+    "Total liabilities and equity",
+    7052
+   ]
+  ],
+  "ta": 7052,
+  "tl": 5402,
+  "rnci": 810,
+  "te": 840,
+  "tle": 7052
+ },
+ "organic": {
+  "note": "No total organic table; segment adjusted revenue (Exhibit 11).",
+  "seg": {
+   "CIQ": {
+    "rev": 290,
+    "adjustments": [
+     [
+      "Acquisitions (R2, QuantHouse, CMA)",
+      -9,
+      0
+     ]
+    ],
+    "organic_rev": 281,
+    "organic_rev_base": 268,
+    "growth_pct": 5
+   },
+   "IDX": {
+    "rev": 110,
+    "adjustments": [
+     [
+      "Dow Jones Indices",
+      -26,
+      0
+     ]
+    ],
+    "organic_rev": 84,
+    "organic_rev_base": 80,
+    "growth_pct": 5
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Transaction": 292,
+   "Non-transaction": 292
+  },
+  "CIQ": {
+   "Subscription": 260,
+   "Non-subscription": 30
+  },
+  "IDX": {
+   "Subscription": 26,
+   "Non-subscription": 84
+  },
+  "CC": {
+   "Commodities": 129,
+   "Commercial": 131,
+   "Subscription": 163,
+   "Non-subscription": 97
+  },
+  "TOTAL": {
+   "Subscription / Non-transaction": 741,
+   "Non-subscription / Transaction": 485
+  }
+ },
+ "rev_geo": {
+  "RAT": {
+   "Domestic": 318,
+   "International": 266
+  },
+  "CIQ": {
+   "Domestic": 190,
+   "International": 99
+  },
+  "IDX": {
+   "Domestic": 87,
+   "International": 23
+  },
+  "CC": {
+   "Domestic": 148,
+   "International": 112
+  },
+  "TOTAL": {
+   "Domestic": 736,
+   "International": 490
+  }
+ },
+ "guidance": [
+  {
+   "item": "2013 adjusted diluted EPS (McGraw Hill Financial)",
+   "low": 3.1,
+   "high": 3.2,
+   "basis": "adjusted diluted EPS from continuing operations"
+  },
+  {
+   "item": "2013 revenue growth",
+   "low": null,
+   "high": null,
+   "basis": "high single-digit growth"
+  }
+ ]
+}

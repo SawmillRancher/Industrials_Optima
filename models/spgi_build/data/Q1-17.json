@@ -1,0 +1,286 @@
+{
+ "period": "Q1-17",
+ "fy": 2017,
+ "q": 1,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404017000029/spgi1q2017earningsrelease.htm",
+  "release_date": "2017-04-25",
+  "doc": "2017-04-25_8-K_0000064040-17-000029_spgi1q2017earningsrelease.txt"
+ },
+ "notes": [
+  "No adjusted unallocated expense line in Exhibit 5 for Q1-17 (no corporate adjustments); adj_corp not printed (= 29 implied: 718 - 689).",
+  "S&P DJI operating profit attributable to the Company $85m; adjusted OP attributable (Adjusted Net Operating Profit) $86m (NCI share $30m).",
+  "MI and CI organic entries are the Market Intelligence and Platts sub-lines of the MCI segment (Exhibit 7), not reportable segments.",
+  "Q1-17 MCI subscription/non-subscription split was later reclassified ($18m non-subscription -> subscription) per the Q3-17 release.",
+  "Intersegment royalty charged by Ratings to MCI: $24m.",
+  "Item category: non-cash acquisition and disposition-related adjustments -> OTHER. Q4-17 Exhibit 10 splits it as MI $4m ($4m after-tax) disposition-related and Platts $11m ($3m after-tax) acquisition-related.",
+  "cfpub capex and nci_dist recorded as positive cash costs (release prints them in brackets). fcf_items signed as printed (added to FCF to reach FCF excluding certain items).",
+  "rev_type key ELIM = intersegment elimination; CORP = Corporate revenue.",
+  "mci_split = Market Intelligence / Platts revenue as printed in the organic revenue exhibit (sub-lines of MCI)."
+ ],
+ "is": {
+  "rev": 1453,
+  "exp": 805,
+  "op": 648,
+  "int": 37,
+  "ebt": 611,
+  "tax": 181,
+  "ni": 430,
+  "nci": 31,
+  "ni_attr": 399,
+  "eps_b": 1.54,
+  "eps_d": 1.53,
+  "sh_b": 258.2,
+  "sh_d": 260.8,
+  "sh_end": 257.8
+ },
+ "seg": [
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 714,
+   "exp": 338,
+   "op": 376,
+   "nongaap": 2,
+   "deal_amort": 1,
+   "adj_op": 379
+  },
+  {
+   "name": "Market and Commodities Intelligence",
+   "code": "MCI",
+   "rev": 593,
+   "exp": 407,
+   "op": 186,
+   "nongaap": 15,
+   "deal_amort": 22,
+   "adj_op": 223
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 171,
+   "exp": 56,
+   "op": 115,
+   "deal_amort": 1,
+   "adj_op": 116
+  }
+ ],
+ "seg_other": {
+  "elim": -25,
+  "corp": 29,
+  "seg_op_total": 677,
+  "adj_seg_op_total": 718
+ },
+ "ngaap": {
+  "adj_op": 689,
+  "adj_ni": 422,
+  "adj_eps": 1.62,
+  "start_ni": 399,
+  "start_eps": 1.53,
+  "start_basis": "total",
+  "items": [
+   {
+    "label": "Legal settlement expenses",
+    "seg": "RAT",
+    "pre": 2,
+    "net": 1,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Non-cash acquisition and disposition-related adjustments",
+    "seg": "MCI",
+    "pre": 15,
+    "net": 7,
+    "cat": "OTHER"
+   }
+  ],
+  "items_total_pre": 17,
+  "items_total_net": 8,
+  "items_total_ps": 0.03,
+  "items_total_tax": 9,
+  "deal_amort_pre": 24,
+  "deal_amort_net": 15,
+  "deal_amort_ps": 0.06,
+  "deal_amort_tax": 9,
+  "adj_tax": 199,
+  "definition": "adjusted diluted EPS (Adjusted Net Income attributable to SPGI and Adjusted Diluted EPS)"
+ },
+ "cfpub": {
+  "ytd_months": 3,
+  "cfo": 353,
+  "capex": 23,
+  "nci_dist": 24,
+  "fcf_pub": 306,
+  "fcf_items": [
+   [
+    "Payment of legal settlements",
+    1
+   ]
+  ],
+  "adj_fcf_pub": 307
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and cash equivalents",
+    2411
+   ],
+   [
+    "Other current assets",
+    1252
+   ],
+   [
+    "Total current assets",
+    3663
+   ],
+   [
+    "Property and equipment, net",
+    265
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    4434
+   ],
+   [
+    "Other non-current assets",
+    292
+   ],
+   [
+    "Total assets",
+    8654
+   ],
+   [
+    "Unearned revenue",
+    1510
+   ],
+   [
+    "Other current liabilities",
+    959
+   ],
+   [
+    "Long-term debt",
+    3565
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    696
+   ],
+   [
+    "Total liabilities",
+    6730
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    1080
+   ],
+   [
+    "Total equity",
+    844
+   ],
+   [
+    "Total liabilities and equity",
+    8654
+   ]
+  ],
+  "ta": 8654,
+  "tl": 6730,
+  "rnci": 1080,
+  "te": 844,
+  "tle": 8654
+ },
+ "organic": {
+  "organic_rev": 1441,
+  "organic_rev_cc": 1449,
+  "organic_rev_base": 1223,
+  "organic_growth_pct": 18,
+  "organic_cc_growth_pct": 18,
+  "seg": {
+   "MCI": {
+    "rev": 593,
+    "organic_rev": 582,
+    "organic_rev_base": 543
+   },
+   "MI": {
+    "rev": 402,
+    "organic_rev": 402,
+    "organic_rev_base": 369
+   },
+   "CI": {
+    "rev": 191,
+    "organic_rev": 180,
+    "organic_rev_base": 174
+   },
+   "IDX": {
+    "rev": 171,
+    "organic_rev": 170,
+    "organic_rev_base": 151
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Subscription / Non-Transaction": 341,
+   "Asset Linked Fees": 0,
+   "Non-Subscription / Transaction": 373
+  },
+  "MCI": {
+   "Subscription / Non-Transaction": 540,
+   "Asset Linked Fees": 0,
+   "Non-Subscription / Transaction": 53
+  },
+  "IDX": {
+   "Subscription / Non-Transaction": 31,
+   "Asset Linked Fees": 108,
+   "Non-Subscription / Transaction": 32
+  },
+  "ELIM": {
+   "Subscription / Non-Transaction": -25,
+   "Asset Linked Fees": 0,
+   "Non-Subscription / Transaction": 0
+  }
+ },
+ "guidance": [
+  {
+   "item": "GAAP diluted EPS",
+   "low": 5.72,
+   "high": 5.92,
+   "basis": "FY2017 (raised from 5.65-5.90)"
+  },
+  {
+   "item": "Non-GAAP adjustments (per share)",
+   "low": 0.03,
+   "high": 0.03,
+   "basis": "FY2017"
+  },
+  {
+   "item": "Deal-related amortization (per share)",
+   "low": 0.25,
+   "high": 0.25,
+   "basis": "FY2017"
+  },
+  {
+   "item": "Adjusted diluted EPS",
+   "low": 6.0,
+   "high": 6.2,
+   "basis": "FY2017 (raised from 5.90-6.15)"
+  },
+  {
+   "item": "Reported revenue growth",
+   "low": null,
+   "high": null,
+   "basis": "FY2017",
+   "text": "low single-digit growth (from flat)"
+  },
+  {
+   "item": "Organic revenue growth",
+   "low": null,
+   "high": null,
+   "basis": "FY2017",
+   "text": "mid-to-high single-digit growth"
+  }
+ ],
+ "mci_split": {
+  "MI_rev": 402,
+  "CI_rev": 191
+ }
+}

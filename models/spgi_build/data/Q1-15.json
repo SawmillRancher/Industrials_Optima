@@ -1,0 +1,250 @@
+{
+ "period": "Q1-15",
+ "fy": 2015,
+ "q": 1,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000114420415025401/v408414_ex99.htm",
+  "release_date": "2015-04-28",
+  "doc": "2015-04-28_8-K_0001144204-15-025401_v408414_ex99.txt"
+ },
+ "notes": [
+  "Non-GAAP adjustments are printed per segment (pre-tax) and only in aggregate after tax (items_total_*); per-item after-tax amounts are not published, so item 'net' is omitted and check_rec's start_ni + items_net check differs by exactly items_total_net.",
+  "Segment expense table total (739) excludes unallocated expense (33); income-statement expenses 772 = 739 + 33.",
+  "Adjusted provision for taxes printed 153 (156 - 2 = 154; company rounding).",
+  "S&P Dow Jones Indices operating profit attributable to the Company (Adjusted Net Operating Profit) = 70 (OP 95 less NCI 25).",
+  "No deal-related amortization adjustment in 2015 as originally reported; recast 2015 figures with deal amortization are in the Q4-15 release (see Q4-15.json 'recast_deal_amort_2015').",
+  "Organic revenue: Total Adjusted Revenue 1,272 vs 1,195 prior (+6%); excludes C&C Eclipse acquisition (1) and S&P Capital IQ product closures/divestitures (prior-year 1).",
+  "Free cash flow excluding items not published this quarter (adj_fcf_pub omitted).",
+  "Income from discontinued operations '\u2014' in 2015 (McGraw Hill Construction sold in Q4-2014; prior-year only)."
+ ],
+ "is": {
+  "rev": 1273,
+  "exp": 772,
+  "op": 501,
+  "int": 16,
+  "ebt": 485,
+  "tax": 156,
+  "ni_cont": 329,
+  "disc": 0,
+  "ni": 329,
+  "nci": 26,
+  "ni_attr": 303,
+  "ni_attr_cont": 303,
+  "eps_b": 1.11,
+  "eps_d": 1.1,
+  "eps_d_cont": 1.1,
+  "sh_b": 273.5,
+  "sh_d": 276.3,
+  "other_lines": [
+   [
+    "Basic EPS - continuing operations",
+    1.11
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "S&P Ratings Services",
+   "code": "RAT",
+   "rev": 606,
+   "exp": 315,
+   "op": 291,
+   "nongaap": -6,
+   "adj_op": 285
+  },
+  {
+   "name": "S&P Capital IQ",
+   "code": "CIQ",
+   "rev": 320,
+   "exp": 257,
+   "op": 63,
+   "nongaap": 0,
+   "adj_op": 63
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 143,
+   "exp": 48,
+   "op": 95,
+   "nongaap": 0,
+   "adj_op": 95
+  },
+  {
+   "name": "Commodities & Commercial Markets",
+   "code": "CC",
+   "rev": 225,
+   "exp": 140,
+   "op": 85,
+   "nongaap": 0,
+   "adj_op": 85
+  }
+ ],
+ "seg_other": {
+  "elim": -21,
+  "corp": 33,
+  "corp_nongaap": 0,
+  "adj_corp": 33,
+  "seg_op_total": 534,
+  "adj_seg_op_total": 528
+ },
+ "ngaap": {
+  "adj_op": 495,
+  "adj_ni": 299,
+  "adj_eps": 1.09,
+  "start_ni": 303,
+  "start_eps": 1.1,
+  "start_basis": "cont",
+  "items": [
+   {
+    "label": "Legal settlement insurance recoveries",
+    "seg": "RAT",
+    "pre": -35,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Legal settlement charges",
+    "seg": "RAT",
+    "pre": 29,
+    "cat": "LEGAL"
+   }
+  ],
+  "items_total_pre": -6,
+  "items_total_net": -4,
+  "items_total_ps": -0.01,
+  "adj_tax": 153,
+  "adj_int": 16,
+  "definition": "adjusted diluted EPS from continuing operations"
+ },
+ "cfpub": {
+  "ytd_months": 3,
+  "cfo": -1349,
+  "capex": 16,
+  "nci_dist": 30,
+  "fcf_pub": -1395,
+  "fcf_items": []
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and equivalents",
+    1176
+   ],
+   [
+    "Other current assets",
+    1512
+   ],
+   [
+    "Total current assets",
+    2688
+   ],
+   [
+    "Property and equipment, net",
+    200
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    2351
+   ],
+   [
+    "Other non-current assets",
+    209
+   ],
+   [
+    "Total assets",
+    5448
+   ],
+   [
+    "Short-term debt",
+    365
+   ],
+   [
+    "Unearned revenue",
+    1356
+   ],
+   [
+    "Other current liabilities",
+    858
+   ],
+   [
+    "Long-term debt",
+    799
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    671
+   ],
+   [
+    "Total liabilities",
+    4049
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    810
+   ],
+   [
+    "Total equity",
+    589
+   ],
+   [
+    "Total liabilities and equity",
+    5448
+   ]
+  ],
+  "ta": 5448,
+  "tl": 4049,
+  "rnci": 810,
+  "te": 589,
+  "tle": 5448
+ },
+ "organic": {
+  "organic_rev": 1272,
+  "organic_rev_base": 1195,
+  "seg": {
+   "CIQ": {
+    "rev": 320,
+    "organic_rev": 320,
+    "organic_rev_base": 300
+   },
+   "CC": {
+    "rev": 225,
+    "organic_rev": 224,
+    "organic_rev_base": 211
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Subscription / Non-Transaction": 317,
+   "Non-Subscription / Transaction": 289
+  },
+  "CIQ": {
+   "Subscription / Non-Transaction": 287,
+   "Non-Subscription / Transaction": 33
+  },
+  "IDX": {
+   "Subscription / Non-Transaction": 29,
+   "Non-Subscription / Transaction": 114
+  },
+  "CC": {
+   "Subscription / Non-Transaction": 149,
+   "Non-Subscription / Transaction": 76
+  },
+  "ELIM": {
+   "Subscription / Non-Transaction": -21,
+   "Non-Subscription / Transaction": 0
+  },
+  "TOTAL": {
+   "Subscription / Non-Transaction": 761,
+   "Non-Subscription / Transaction": 512
+  }
+ },
+ "guidance": [
+  {
+   "item": "Adjusted diluted EPS",
+   "low": 4.35,
+   "high": 4.45,
+   "basis": "FY2015; no change to guidance"
+  }
+ ]
+}

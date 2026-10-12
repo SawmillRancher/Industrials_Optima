@@ -1,0 +1,380 @@
+{
+ "period": "Q2-18",
+ "fy": 2018,
+ "q": 2,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404018000160/spgi2q2018earningsrelease.htm",
+  "release_date": "2018-07-26",
+  "doc": "2018-07-26_8-K_0000064040-18-000160_spgi2q2018earningsrelease.txt"
+ },
+ "notes": [
+  "From Q2-18 a \"Corporate\" revenue line (Kensho) is printed in the segment table and Corporate Unallocated is shown net of it. seg_other.corp = Corporate Unallocated operating loss as printed (net of corporate revenue, positive cost); corp_rev = Corporate revenue; corp_exp = Corporate Unallocated expense. check_rec \"sum seg rev + elim = rev\" therefore differs by corp_rev (not a transcription error): segments + elim + corp_rev = total revenue.",
+  "Footnote items after tax sum to 64 (55 + 9) vs printed aggregate 63 (rounding); items_total_net keeps 63. Six-month aggregate is 64.",
+  "Kensho retention related expense categorised ACQ (acquisition/integration).",
+  "Adjusted Corporate Unallocated Expense excluding adjusted Kensho expense ($11m): $33m (Exhibit 8).",
+  "Indices operating profit attributable to the Company $99m; adjusted OP attributable (Adjusted Net Operating Profit) $101m (NCI $37m).",
+  "Prior-year (Q2-17) columns restated for ASU 2017-07 (pension); balance-sheet cash line now includes restricted cash.",
+  "Organic: Ratings acquisition (1), MI acquisitions (3), Corporate acquisition (5).",
+  "Intersegment royalty charged by Ratings to Market Intelligence: $26m.",
+  "cfpub capex and nci_dist recorded as positive cash costs (release prints them in brackets). fcf_items signed as printed (added to FCF to reach FCF excluding certain items).",
+  "rev_type key ELIM = intersegment elimination; CORP = Corporate revenue.",
+  "py_seg = Q2-17 comparative on the 2018 basis: total OP 668 vs 677 as reported (pension reclass); unallocated 36 vs 30; adjusted OP 706 vs 715."
+ ],
+ "is": {
+  "rev": 1609,
+  "exp": 937,
+  "op": 672,
+  "oth_inc": 11,
+  "int": 26,
+  "ebt": 657,
+  "tax": 156,
+  "ni": 501,
+  "nci": 40,
+  "ni_attr": 461,
+  "eps_b": 1.83,
+  "eps_d": 1.82,
+  "sh_b": 251.1,
+  "sh_d": 253.3,
+  "sh_end": 251.4
+ },
+ "seg": [
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 775,
+   "exp": 406,
+   "op": 369,
+   "nongaap": 73,
+   "deal_amort": 1,
+   "adj_op": 443
+  },
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 447,
+   "exp": 319,
+   "op": 128,
+   "nongaap": 0,
+   "deal_amort": 18,
+   "adj_op": 146
+  },
+  {
+   "name": "Platts",
+   "code": "CI",
+   "rev": 205,
+   "exp": 107,
+   "op": 98,
+   "nongaap": 0,
+   "deal_amort": 4,
+   "adj_op": 102
+  },
+  {
+   "name": "Indices",
+   "code": "IDX",
+   "rev": 209,
+   "exp": 73,
+   "op": 136,
+   "deal_amort": 2,
+   "adj_op": 138
+  }
+ ],
+ "seg_other": {
+  "elim": -32,
+  "corp": 59,
+  "corp_rev": 5,
+  "corp_exp": 64,
+  "corp_nongaap": 12,
+  "corp_deal_amort": 8,
+  "adj_corp": 39,
+  "adj_corp_exp_ex_kensho": 33,
+  "adj_kensho_exp": 11,
+  "seg_op_total": 731,
+  "adj_seg_op_total": 829
+ },
+ "ngaap": {
+  "adj_op": 790,
+  "adj_ni": 549,
+  "adj_eps": 2.17,
+  "start_ni": 461,
+  "start_eps": 1.82,
+  "start_basis": "total",
+  "items": [
+   {
+    "label": "Legal settlement expenses",
+    "seg": "RAT",
+    "pre": 73,
+    "net": 55,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Kensho retention related expense",
+    "seg": "CORP",
+    "pre": 12,
+    "net": 9,
+    "cat": "ACQ"
+   }
+  ],
+  "items_total_pre": 85,
+  "items_total_net": 63,
+  "items_total_ps": 0.25,
+  "items_total_tax": 21,
+  "deal_amort_pre": 33,
+  "deal_amort_net": 25,
+  "deal_amort_ps": 0.1,
+  "deal_amort_tax": 8,
+  "adj_tax": 185,
+  "adj_oth_inc": 11,
+  "adj_int": 26,
+  "adj_ebt": 775,
+  "adj_etr_pct": 23.9,
+  "definition": "adjusted diluted EPS (Adjusted Net Income attributable to SPGI and Adjusted Diluted EPS)"
+ },
+ "cfpub": {
+  "ytd_months": 6,
+  "cfo": 903,
+  "capex": 60,
+  "nci_dist": 78,
+  "fcf_pub": 765,
+  "fcf_items": [
+   [
+    "Tax on gain from sale of SPSE and CMA",
+    0
+   ],
+   [
+    "Payment of legal settlements",
+    29
+   ],
+   [
+    "Tax benefit from legal settlements",
+    -7
+   ]
+  ],
+  "adj_fcf_pub": 787
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash, cash equivalents, and restricted cash",
+    1935
+   ],
+   [
+    "Other current assets",
+    1533
+   ],
+   [
+    "Total current assets",
+    3468
+   ],
+   [
+    "Property and equipment, net",
+    273
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    4991
+   ],
+   [
+    "Other non-current assets",
+    485
+   ],
+   [
+    "Total assets",
+    9217
+   ],
+   [
+    "Short-term debt",
+    0
+   ],
+   [
+    "Unearned revenue",
+    1689
+   ],
+   [
+    "Other current liabilities",
+    1035
+   ],
+   [
+    "Long-term debt",
+    3660
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    766
+   ],
+   [
+    "Total liabilities",
+    7150
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    1431
+   ],
+   [
+    "Total equity",
+    636
+   ],
+   [
+    "Total liabilities and equity",
+    9217
+   ]
+  ],
+  "ta": 9217,
+  "tl": 7150,
+  "rnci": 1431,
+  "te": 636,
+  "tle": 9217
+ },
+ "organic": {
+  "organic_rev": 1600,
+  "organic_rev_cc": 1586,
+  "organic_rev_base": 1509,
+  "organic_growth_pct": 6,
+  "organic_cc_growth_pct": 5,
+  "seg": {
+   "RAT": {
+    "rev": 775,
+    "organic_rev": 774,
+    "organic_rev_base": 747
+   },
+   "MI": {
+    "rev": 447,
+    "organic_rev": 444,
+    "organic_rev_base": 414
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-Subscription / Transaction": 397,
+   "Non-Transaction": 378,
+   "Subscription": 0,
+   "Asset-Linked Fees": 0,
+   "Sales Usage-Based Royalties": 0
+  },
+  "MI": {
+   "Non-Subscription / Transaction": 11,
+   "Non-Transaction": 0,
+   "Subscription": 431,
+   "Asset-Linked Fees": 5,
+   "Sales Usage-Based Royalties": 0
+  },
+  "CI": {
+   "Non-Subscription / Transaction": 4,
+   "Non-Transaction": 0,
+   "Subscription": 188,
+   "Asset-Linked Fees": 0,
+   "Sales Usage-Based Royalties": 13
+  },
+  "IDX": {
+   "Non-Subscription / Transaction": 0,
+   "Non-Transaction": 0,
+   "Subscription": 36,
+   "Asset-Linked Fees": 135,
+   "Sales Usage-Based Royalties": 38
+  },
+  "CORP": {
+   "Non-Subscription / Transaction": 0,
+   "Non-Transaction": 0,
+   "Subscription": 5,
+   "Asset-Linked Fees": 0,
+   "Sales Usage-Based Royalties": 0
+  },
+  "ELIM": {
+   "Non-Subscription / Transaction": 0,
+   "Non-Transaction": -32,
+   "Subscription": 0,
+   "Asset-Linked Fees": 0,
+   "Sales Usage-Based Royalties": 0
+  }
+ },
+ "guidance": [
+  {
+   "item": "GAAP diluted EPS",
+   "low": 7.75,
+   "high": 7.9,
+   "basis": "FY2018 (maintained)"
+  },
+  {
+   "item": "Deal-related amortization (per share)",
+   "low": 0.4,
+   "high": 0.4,
+   "basis": "FY2018"
+  },
+  {
+   "item": "Compensation for replacement equity awards and retention plans (per share)",
+   "low": 0.09,
+   "high": 0.09,
+   "basis": "FY2018"
+  },
+  {
+   "item": "Integration costs (per share)",
+   "low": 0.01,
+   "high": 0.01,
+   "basis": "FY2018"
+  },
+  {
+   "item": "Legal settlement (per share)",
+   "low": 0.2,
+   "high": 0.2,
+   "basis": "FY2018"
+  },
+  {
+   "item": "Adjusted diluted EPS",
+   "low": 8.45,
+   "high": 8.6,
+   "basis": "FY2018 (maintained)"
+  }
+ ],
+ "py_seg": [
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 747,
+   "exp": 352,
+   "op": 395,
+   "nongaap": 0,
+   "deal_amort": 1,
+   "adj_op": 396
+  },
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 414,
+   "exp": 302,
+   "op": 112,
+   "nongaap": 4,
+   "deal_amort": 18,
+   "adj_op": 134
+  },
+  {
+   "name": "Platts",
+   "code": "CI",
+   "rev": 192,
+   "exp": 114,
+   "op": 78,
+   "nongaap": 9,
+   "deal_amort": 5,
+   "adj_op": 92
+  },
+  {
+   "name": "Indices",
+   "code": "IDX",
+   "rev": 184,
+   "exp": 65,
+   "op": 119,
+   "deal_amort": 1,
+   "adj_op": 120
+  }
+ ],
+ "py_seg_other": {
+  "elim": -28,
+  "corp": 36,
+  "corp_rev": 0,
+  "corp_exp": 36,
+  "corp_nongaap": 0,
+  "corp_deal_amort": 0,
+  "adj_corp": 36,
+  "seg_op_total": 704,
+  "adj_seg_op_total": 742
+ }
+}

@@ -1,0 +1,317 @@
+{
+ "period": "2011",
+ "fy": 2011,
+ "q": null,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000114420413007556/v334572_ex99-1.htm",
+  "release_date": "2013-02-12",
+  "doc": "2013-02-12_8-K_0001144204-13-007556_v334572_ex99-1.txt"
+ },
+ "notes": [
+  "FY2011 = twelve-month PRIOR-YEAR column of the Q4-12 release: recast continuing-operations comparative (McGraw-Hill Education in discontinued operations; segments recast to S&P Ratings / S&P Capital IQ / S&P Dow Jones Indices / Commodities & Commercial). Not the originally reported FY2011.",
+  "is.gain_disp = printed operating line \"Other income\" (13); nature not described in the release.",
+  "is.nci = 23 computed (19 continuing + 4 discontinued).",
+  "Discontinued operations include the Broadcasting Group sale gain ($0.25 per diluted share; footnote d).",
+  "Non-GAAP items per footnote b: restructuring charges and $10m of Growth and Value Plan costs within unallocated expense; unallocated restructuring 17 computed (27 - 10). No NCI adjustment.",
+  "Adjusted diluted EPS total (incl. disc ops) = 3.16.",
+  "Release prints only aggregate pre-tax / after-tax non-GAAP adjustments; per-item after-tax amounts are not published, so items[].net is null and check_rec start_ni + items_net = adj_ni cannot tie from items. Aggregates are in items_total_pre/net/ps.",
+  "Cash-flow signs as printed (outflows negative). corp/adj_corp are positive costs; corp_nongaap is the add-back to unallocated expense."
+ ],
+ "is": {
+  "rev": 3954,
+  "exp": 2890,
+  "gain_disp": 13,
+  "op": 1077,
+  "int": 77,
+  "ebt": 1000,
+  "tax": 374,
+  "ni_cont": 626,
+  "disc": 308,
+  "ni": 934,
+  "nci": 23,
+  "ni_attr": 911,
+  "ni_attr_cont": 607,
+  "eps_b": 3.05,
+  "eps_d": 3.0,
+  "eps_d_cont": 2.0,
+  "sh_b": 298.1,
+  "sh_d": 303.6,
+  "other_lines": [
+   [
+    "Other income (operating)",
+    13
+   ],
+   [
+    "Less: net income attributable to noncontrolling interests - continuing",
+    -19
+   ],
+   [
+    "Less: net income attributable to noncontrolling interests - discontinued",
+    -4
+   ],
+   [
+    "Income from discontinued operations attributable to MHP",
+    304
+   ],
+   [
+    "Basic EPS - continuing operations",
+    2.03
+   ],
+   [
+    "Basic EPS - discontinued operations",
+    1.02
+   ],
+   [
+    "Diluted EPS - discontinued operations",
+    1.0
+   ],
+   [
+    "Dividend per common share",
+    1.0
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "S&P Ratings",
+   "code": "RAT",
+   "rev": 1767,
+   "exp": 1047,
+   "op": 720,
+   "nongaap": 9,
+   "adj_op": 728
+  },
+  {
+   "name": "S&P Capital IQ",
+   "code": "CIQ",
+   "rev": 1031,
+   "exp": 817,
+   "op": 214,
+   "nongaap": 0,
+   "adj_op": 214
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 323,
+   "exp": 134,
+   "op": 189,
+   "nongaap": 0,
+   "adj_op": 189
+  },
+  {
+   "name": "Commodities & Commercial",
+   "code": "CC",
+   "rev": 896,
+   "exp": 716,
+   "op": 180,
+   "nongaap": 6,
+   "adj_op": 186
+  }
+ ],
+ "seg_other": {
+  "elim": -63,
+  "corp": 226,
+  "corp_nongaap": 27,
+  "adj_corp": 198,
+  "seg_op_total": 1303,
+  "adj_seg_op_total": 1317
+ },
+ "ngaap": {
+  "adj_op": 1119,
+  "adj_ni": 634,
+  "adj_eps": 2.09,
+  "start_ni": 607,
+  "start_eps": 2.0,
+  "start_basis": "cont",
+  "definition": "adjusted diluted EPS from continuing operations",
+  "adj_tax": 389,
+  "adj_int": 77,
+  "items_total_pre": 42,
+  "items_total_net": 27,
+  "items_total_ps": 0.09,
+  "adj_eps_total": 3.16,
+  "items": [
+   {
+    "label": "Restructuring charges (S&P Ratings)",
+    "seg": "RAT",
+    "pre": 9,
+    "net": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Restructuring charges (Commodities & Commercial)",
+    "seg": "CC",
+    "pre": 6,
+    "net": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Growth and Value Plan costs within unallocated expense",
+    "seg": "CORP",
+    "pre": 10,
+    "net": null,
+    "cat": "DISP"
+   },
+   {
+    "label": "Restructuring charges within unallocated expense (computed 27 - 10)",
+    "seg": "CORP",
+    "pre": 17,
+    "net": null,
+    "cat": "SEVER"
+   }
+  ]
+ },
+ "cfpub": {
+  "ytd_months": 12,
+  "cfo": 924,
+  "capex": -92,
+  "nci_dist": -23,
+  "fcf_pub": 809,
+  "fcf_items": [
+   [
+    "Cash provided by operating activities",
+    924
+   ],
+   [
+    "Capital expenditures",
+    -92
+   ],
+   [
+    "Dividends and other payments paid to noncontrolling interests",
+    -23
+   ]
+  ],
+  "fcf_label": "Free cash flow from continuing operations",
+  "dep": 93,
+  "amort": 33,
+  "sbc": 77
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and short-term investments",
+    864
+   ],
+   [
+    "Other current assets",
+    940
+   ],
+   [
+    "Assets held for sale (a)",
+    2508
+   ],
+   [
+    "Total current assets",
+    4312
+   ],
+   [
+    "Property and equipment, net",
+    373
+   ],
+   [
+    "Goodwill and other intangible assets, net (b)",
+    1531
+   ],
+   [
+    "Other non-current assets",
+    404
+   ],
+   [
+    "Total assets",
+    6620
+   ],
+   [
+    "Short-term debt",
+    400
+   ],
+   [
+    "Unearned revenue",
+    1187
+   ],
+   [
+    "Liabilities held for sale (a)",
+    719
+   ],
+   [
+    "Other current liabilities",
+    1063
+   ],
+   [
+    "Long-term debt",
+    798
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    869
+   ],
+   [
+    "Total liabilities",
+    5036
+   ],
+   [
+    "Redeemable noncontrolling interest (b)",
+    0
+   ],
+   [
+    "Total equity",
+    1584
+   ],
+   [
+    "Total liabilities and equity",
+    6620
+   ]
+  ],
+  "ta": 6620,
+  "tl": 5036,
+  "rnci": 0,
+  "te": 1584,
+  "tle": 6620
+ },
+ "rev_type": {
+  "RAT": {
+   "Transaction": 651,
+   "Non-transaction": 1116
+  },
+  "CIQ": {
+   "Subscription": 922,
+   "Non-subscription": 109
+  },
+  "IDX": {
+   "Subscription": 71,
+   "Non-subscription": 252
+  },
+  "CC": {
+   "Commodities": 419,
+   "Commercial": 477,
+   "Subscription": 562,
+   "Non-subscription": 334
+  },
+  "TOTAL": {
+   "Subscription / Non-transaction": 2672,
+   "Non-subscription / Transaction": 1282
+  }
+ },
+ "rev_geo": {
+  "RAT": {
+   "Domestic": 910,
+   "International": 857
+  },
+  "CIQ": {
+   "Domestic": 693,
+   "International": 338
+  },
+  "IDX": {
+   "Domestic": 248,
+   "International": 75
+  },
+  "CC": {
+   "Domestic": 551,
+   "International": 345
+  },
+  "TOTAL": {
+   "Domestic": 2373,
+   "International": 1581
+  }
+ }
+}

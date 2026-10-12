@@ -1,0 +1,303 @@
+{
+ "period": "Q1-14",
+ "fy": 2014,
+ "q": 1,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000114420414025518/v376210_ex99-1.htm",
+  "release_date": "2014-04-29",
+  "doc": "2014-04-29_8-K_0001144204-14-025518_v376210_ex99-1.txt"
+ },
+ "notes": [
+  "DEFINITION CHANGE: from 2014 all shared operating services are fully allocated to segments; unallocated expense now corporate center costs only. 2013 recast: $75m reallocated to segments (RAT -42, CIQ -23, IDX -12, CC +2) per Exhibit 7. Prior-year segment comparatives in this release are recast; this record holds 2014 values only.",
+  "No non-GAAP adjustments in Q1-14 (release: \"There were no adjustments in the first quarter of 2014\"); adjusted = reported, so seg nongaap = 0 and adj_op = op; ngaap.adj_op = 430 (= reported, not separately printed).",
+  "Adjusted unallocated expense $30m (text).",
+  "S&P DJI adjusted net operating profit attributable to the Company = 67 (NCI 24). Text: half of IDX revenue increase from a revenue-recognition refinement.",
+  "Exhibit headings in the text are offset (labels printed after tables); values taken by table content.",
+  "Cash-flow signs as printed (outflows negative). corp/adj_corp are positive costs; corp_nongaap is the add-back to unallocated expense."
+ ],
+ "is": {
+  "rev": 1236,
+  "exp": 806,
+  "op": 430,
+  "int": 14,
+  "ebt": 416,
+  "tax": 141,
+  "ni_cont": 275,
+  "disc": 0,
+  "ni": 275,
+  "nci": 27,
+  "ni_attr": 248,
+  "ni_attr_cont": 248,
+  "eps_b": 0.91,
+  "eps_d": 0.89,
+  "eps_d_cont": 0.89,
+  "sh_b": 271.8,
+  "sh_d": 277.2,
+  "other_lines": [
+   [
+    "Less: net income attributable to noncontrolling interests - continuing",
+    -27
+   ],
+   [
+    "Basic EPS - continuing operations",
+    0.91
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "S&P Ratings Services",
+   "code": "RAT",
+   "rev": 569,
+   "exp": 329,
+   "op": 240,
+   "nongaap": 0,
+   "adj_op": 240
+  },
+  {
+   "name": "S&P Capital IQ",
+   "code": "CIQ",
+   "rev": 301,
+   "exp": 248,
+   "op": 53,
+   "nongaap": 0,
+   "adj_op": 53
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 137,
+   "exp": 46,
+   "op": 91,
+   "nongaap": 0,
+   "adj_op": 91
+  },
+  {
+   "name": "Commodities & Commercial Markets",
+   "code": "CC",
+   "rev": 251,
+   "exp": 175,
+   "op": 76,
+   "nongaap": 0,
+   "adj_op": 76
+  }
+ ],
+ "seg_other": {
+  "elim": -22,
+  "corp": 30,
+  "corp_nongaap": 0,
+  "adj_corp": 30,
+  "seg_op_total": 460,
+  "adj_seg_op_total": 460
+ },
+ "ngaap": {
+  "adj_op": 430,
+  "adj_ni": 248,
+  "adj_eps": 0.89,
+  "start_ni": 248,
+  "start_eps": 0.89,
+  "start_basis": "cont",
+  "definition": "adjusted diluted EPS from continuing operations",
+  "items": []
+ },
+ "cfpub": {
+  "ytd_months": 3,
+  "cfo": 120,
+  "capex": -20,
+  "nci_dist": -15,
+  "fcf_pub": 85,
+  "fcf_items": [
+   [
+    "Cash provided by operating activities",
+    120
+   ],
+   [
+    "Capital expenditures",
+    -20
+   ],
+   [
+    "Dividends and other payments paid to noncontrolling interests",
+    -15
+   ]
+  ],
+  "dep": 21,
+  "amort": 12,
+  "sbc": 18
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and equivalents",
+    1531
+   ],
+   [
+    "Other current assets",
+    1333
+   ],
+   [
+    "Total current assets",
+    2864
+   ],
+   [
+    "Property and equipment, net",
+    242
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    2449
+   ],
+   [
+    "Asset for pension benefits",
+    277
+   ],
+   [
+    "Other non-current assets",
+    179
+   ],
+   [
+    "Total assets",
+    6011
+   ],
+   [
+    "Unearned revenue",
+    1310
+   ],
+   [
+    "Other current liabilities",
+    944
+   ],
+   [
+    "Long-term debt",
+    799
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    741
+   ],
+   [
+    "Total liabilities",
+    3794
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    810
+   ],
+   [
+    "Total equity",
+    1407
+   ],
+   [
+    "Total liabilities and equity",
+    6011
+   ]
+  ],
+  "ta": 6011,
+  "tl": 3794,
+  "rnci": 810,
+  "te": 1407,
+  "tle": 6011
+ },
+ "organic": {
+  "organic_rev": 1235,
+  "organic_rev_base": 1167,
+  "growth_pct": 6,
+  "label": "Total Adjusted Revenue",
+  "adjustments": [
+   [
+    "Aviation Week",
+    0,
+    -8
+   ],
+   [
+    "S&P Capital IQ product closures and divestitures",
+    -1,
+    -6
+   ]
+  ],
+  "seg": {
+   "CIQ": {
+    "rev": 301,
+    "organic_rev": 300,
+    "organic_rev_base": 282,
+    "growth_pct": 6
+   },
+   "CC": {
+    "rev": 251,
+    "organic_rev": 251,
+    "organic_rev_base": 228,
+    "growth_pct": 10
+   },
+   "CC_Commercial_Markets": {
+    "rev": 103,
+    "organic_rev": 103,
+    "organic_rev_base": 98,
+    "growth_pct": 5
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-transaction": 324,
+   "Transaction": 245
+  },
+  "CIQ": {
+   "Subscription": 274,
+   "Non-subscription": 27
+  },
+  "IDX": {
+   "Subscription": 26,
+   "Non-subscription": 111
+  },
+  "CC": {
+   "Commodities Markets - Subscription": 136,
+   "Commodities Markets - Non-subscription": 12,
+   "Commercial Markets - Subscription": 37,
+   "Commercial Markets - Non-subscription": 66
+  },
+  "ELIM": {
+   "Subscription / Non-transaction": -22
+  },
+  "TOTAL": {
+   "Subscription / Non-transaction": 775,
+   "Non-subscription / Transaction": 461
+  }
+ },
+ "rev_geo": {
+  "RAT": {
+   "Domestic": 305,
+   "International": 264
+  },
+  "CIQ": {
+   "Domestic": 199,
+   "International": 102
+  },
+  "IDX": {
+   "Domestic": 108,
+   "International": 29
+  },
+  "Commodities Markets": {
+   "Domestic": 57,
+   "International": 91
+  },
+  "Commercial Markets": {
+   "Domestic": 77,
+   "International": 26
+  },
+  "ELIM": {
+   "Domestic": -12,
+   "International": -10
+  },
+  "TOTAL": {
+   "Domestic": 734,
+   "International": 502
+  }
+ },
+ "guidance": [
+  {
+   "item": "2014 adjusted diluted EPS",
+   "low": 3.75,
+   "high": 3.85,
+   "basis": "adjusted earnings per share guidance remains unchanged"
+  }
+ ]
+}

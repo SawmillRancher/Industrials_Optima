@@ -1,0 +1,365 @@
+{
+ "period": "Q4-16",
+ "fy": 2016,
+ "q": 4,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404017000009/spgi4q2016earningsreleaset.htm",
+  "release_date": "2017-02-07",
+  "doc": "2017-02-07_8-K_0000064040-17-000009_spgi4q2016earningsreleaset.txt"
+ },
+ "notes": [
+  "Non-GAAP adjustments are printed per segment (pre-tax) and only in aggregate after tax (items_total_*); per-item after-tax amounts are not published, so item 'net' is omitted and check_rec's start_ni + items_net check differs by exactly items_total_net.",
+  "Q4-16 segment structure: Ratings (RAT), Market and Commodities Intelligence (MCI = Market Intelligence + Platts), S&P Dow Jones Indices (IDX); prior-year comparatives recast by the company.",
+  "IS 'Gain on dispositions' (379): SPSE and CMA 364, Equity Research 9, J.D. Power 6 (IS footnote a) -> gain_disp 379.",
+  "Segment expense table total (507) excludes unallocated and nets the gains; IS expenses 921.",
+  "MCI -347 = gains -379 + disposition-related costs 31 (= -348; rounding).",
+  "Non-operating item: $21m redemption fee for the early payment of senior notes in interest expense; adjusted interest expense printed 38 (60 - 21 = 39; rounding).",
+  "Market Intelligence / Platts split given only in the organic revenue table (MI 407, Platts 188).",
+  "S&P Dow Jones Indices OP attributable 76 (text); Adjusted Net Operating Profit 77 (adj OP 105 less NCI 28).",
+  "Organic revenue: Total adjusted revenue 1,387 vs 1,244 (+11%); constant currency 1,397 vs 1,244 (+12%). Indices acquisition (1).",
+  "Cash flow is full-year (ytd 12). FCF items include tax on the J.D. Power gain (200).",
+  "ASR completed in Q4: 6.1m shares in total (5.3m received in Q3).",
+  "py_seg: Q4-2015 comparative recast to the new segment basis (MCI = S&P Capital IQ and SNL + Commodities & Commercial Markets: rev 405 + 264 = 669, OP 50 + 92 = 142) with deal-related amortization.",
+  "mci_split: Market Intelligence and Platts revenue from the organic revenue exhibit (Exhibit 8); adjusted OP split by MI/Platts is not printed."
+ ],
+ "is": {
+  "rev": 1399,
+  "exp": 921,
+  "gain_disp": 379,
+  "op": 857,
+  "int": 60,
+  "ebt": 797,
+  "tax": 228,
+  "ni": 569,
+  "nci": 32,
+  "ni_attr": 537,
+  "eps_b": 2.07,
+  "eps_d": 2.05,
+  "sh_b": 258.9,
+  "sh_d": 261.6,
+  "sh_end": 258.3,
+  "other_lines": []
+ },
+ "seg": [
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 658,
+   "exp": 400,
+   "op": 258,
+   "nongaap": 54,
+   "deal_amort": 1,
+   "adj_op": 313
+  },
+  {
+   "name": "Market and Commodities Intelligence",
+   "code": "MCI",
+   "rev": 595,
+   "exp": 65,
+   "op": 530,
+   "nongaap": -347,
+   "deal_amort": 23,
+   "adj_op": 206
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 171,
+   "exp": 67,
+   "op": 104,
+   "nongaap": 0,
+   "deal_amort": 1,
+   "adj_op": 105
+  }
+ ],
+ "seg_other": {
+  "elim": -25,
+  "corp": 35,
+  "corp_nongaap": 0,
+  "corp_deal_amort": 0,
+  "adj_corp": 35,
+  "seg_op_total": 892,
+  "adj_seg_op_total": 624
+ },
+ "ngaap": {
+  "adj_op": 589,
+  "adj_ni": 334,
+  "adj_eps": 1.28,
+  "start_ni": 537,
+  "start_eps": 2.05,
+  "start_basis": "total",
+  "items": [
+   {
+    "label": "Legal settlement expenses net of legal settlement insurance recoveries",
+    "seg": "RAT",
+    "pre": 54,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Gain on sale of Standard & Poor's Securities Evaluations, Inc. and Credit Market Analysis",
+    "seg": "MCI",
+    "pre": -364,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Gain on sale of Equity Research",
+    "seg": "MCI",
+    "pre": -9,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Gain on sale of J.D. Power",
+    "seg": "MCI",
+    "pre": -6,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Disposition-related costs",
+    "seg": "MCI",
+    "pre": 31,
+    "cat": "DISP"
+   },
+   {
+    "label": "Redemption fee related to the early payment of senior notes",
+    "seg": "NONOP",
+    "pre": 21,
+    "cat": "NONOP"
+   }
+  ],
+  "items_total_pre": -272,
+  "items_total_op": -293,
+  "items_total_net": -219,
+  "items_total_ps": -0.84,
+  "deal_amort_pre": 25,
+  "deal_amort_net": 16,
+  "deal_amort_ps": 0.06,
+  "adj_tax": 185,
+  "adj_int": 38,
+  "definition": "adjusted diluted EPS"
+ },
+ "cfpub": {
+  "ytd_months": 12,
+  "cfo": 1464,
+  "capex": 115,
+  "nci_dist": 116,
+  "fcf_pub": 1233,
+  "fcf_items": [
+   [
+    "Tax on gain from sale of J.D. Power",
+    200
+   ],
+   [
+    "Payment of legal and regulatory settlements",
+    150
+   ],
+   [
+    "Legal settlement insurance recoveries",
+    -77
+   ],
+   [
+    "Tax benefit from legal settlements",
+    -24
+   ]
+  ],
+  "adj_fcf_pub": 1482
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and cash equivalents",
+    2392
+   ],
+   [
+    "Other current assets",
+    1272
+   ],
+   [
+    "Assets of a business held for sale",
+    7
+   ],
+   [
+    "Total current assets",
+    3671
+   ],
+   [
+    "Property and equipment, net",
+    271
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    4455
+   ],
+   [
+    "Other non-current assets",
+    272
+   ],
+   [
+    "Total assets",
+    8669
+   ],
+   [
+    "Short-term debt",
+    0
+   ],
+   [
+    "Unearned revenue",
+    1509
+   ],
+   [
+    "Other current liabilities",
+    1057
+   ],
+   [
+    "Liabilities of a business held for sale",
+    45
+   ],
+   [
+    "Long-term debt",
+    3564
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    713
+   ],
+   [
+    "Total liabilities",
+    6888
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    1080
+   ],
+   [
+    "Total equity",
+    701
+   ],
+   [
+    "Total liabilities and equity",
+    8669
+   ]
+  ],
+  "ta": 8669,
+  "tl": 6888,
+  "rnci": 1080,
+  "te": 701,
+  "tle": 8669
+ },
+ "organic": {
+  "organic_rev": 1387,
+  "organic_rev_base": 1244,
+  "organic_rev_cc": 1397,
+  "organic_rev_cc_base": 1244,
+  "seg": {
+   "MCI": {
+    "rev": 595,
+    "organic_rev": 584,
+    "organic_rev_base": 539
+   },
+   "MI": {
+    "rev": 407,
+    "organic_rev": 406,
+    "organic_rev_base": 371
+   },
+   "CI": {
+    "rev": 188,
+    "organic_rev": 178,
+    "organic_rev_base": 168
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Subscription / Non-Transaction": 347,
+   "Asset Linked Fees": 0,
+   "Non-Subscription / Transaction": 311
+  },
+  "MCI": {
+   "Subscription / Non-Transaction": 560,
+   "Asset Linked Fees": 0,
+   "Non-Subscription / Transaction": 35
+  },
+  "IDX": {
+   "Subscription / Non-Transaction": 37,
+   "Asset Linked Fees": 104,
+   "Non-Subscription / Transaction": 30
+  },
+  "ELIM": {
+   "Subscription / Non-Transaction": -25,
+   "Asset Linked Fees": 0,
+   "Non-Subscription / Transaction": 0
+  },
+  "TOTAL": {
+   "Subscription / Non-Transaction": 919,
+   "Asset Linked Fees": 104,
+   "Non-Subscription / Transaction": 376
+  }
+ },
+ "guidance": [
+  {
+   "item": "GAAP diluted EPS",
+   "low": 5.65,
+   "high": 5.9,
+   "basis": "FY2017"
+  },
+  {
+   "item": "Deal-related amortization (per share)",
+   "low": 0.25,
+   "high": 0.25,
+   "basis": "FY2017"
+  },
+  {
+   "item": "Adjusted diluted EPS",
+   "low": 5.9,
+   "high": 6.15,
+   "basis": "FY2017; excludes amortization of intangibles related to acquisitions"
+  },
+  {
+   "item": "Reported revenue",
+   "low": null,
+   "high": null,
+   "basis": "FY2017; 'expected to be unchanged from the prior year' (divestitures)"
+  },
+  {
+   "item": "Organic revenue growth",
+   "low": null,
+   "high": null,
+   "basis": "FY2017; 'mid single-digits'"
+  }
+ ],
+ "py_seg": [
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 578,
+   "exp": 346,
+   "op": 232,
+   "nongaap": 20,
+   "deal_amort": 2,
+   "adj_op": 254
+  },
+  {
+   "name": "Market and Commodities Intelligence",
+   "code": "MCI",
+   "rev": 669,
+   "exp": 527,
+   "op": 142,
+   "nongaap": 25,
+   "deal_amort": 24,
+   "adj_op": 190
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 151,
+   "exp": 57,
+   "op": 94,
+   "nongaap": 0,
+   "deal_amort": 1,
+   "adj_op": 96
+  }
+ ],
+ "mci_split": {
+  "MI_rev": 407,
+  "CI_rev": 188
+ }
+}

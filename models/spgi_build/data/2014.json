@@ -1,0 +1,374 @@
+{
+ "period": "2014",
+ "fy": 2014,
+ "q": null,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000114420415008134/v401217_ex99.htm",
+  "release_date": "2015-02-12",
+  "doc": "2015-02-12_8-K_0001144204-15-008134_v401217_ex99.txt"
+ },
+ "notes": [
+  "Twelve-month 2014 column of the Q4-14 release (McGraw Hill Construction in discontinued operations).",
+  "is.gain_disp = -9: printed \"Other loss\" 9 (Q2 corporate aircraft / data center items, left in adjusted results).",
+  "ADJUSTED EPS SHARE COUNT: adjusted diluted EPS 3.88 uses 276.2m diluted shares (footnote f); GAAP diluted 271.5m, so check_rec adj_ni/sh_d does not tie. ngaap.adj_sh_d = 276.2.",
+  "S&P Ratings FY adjustment 1,657 split: legal/regulatory 1,612 (Q3 60 + Q4 1,552; computed) and restructuring 45 (computed 1,657 - 1,612). Unallocated 16 printed (Q3 7 + Q4 10 = 17; rounding).",
+  "Effective tax rate 453.7% (non-deductible settlements); adjusted ETR 33.1% (text).",
+  "S&P DJI adjusted net operating profit attributable to the Company = 259 (NCI 92).",
+  "Release prints only aggregate pre-tax / after-tax non-GAAP adjustments; per-item after-tax amounts are not published, so items[].net is null and check_rec start_ni + items_net = adj_ni cannot tie from items. Aggregates are in items_total_pre/net/ps.",
+  "Cash-flow signs as printed (outflows negative). corp/adj_corp are positive costs; corp_nongaap is the add-back to unallocated expense."
+ ],
+ "is": {
+  "rev": 5051,
+  "exp": 4929,
+  "gain_disp": -9,
+  "op": 113,
+  "int": 59,
+  "ebt": 54,
+  "tax": 245,
+  "ni_cont": -191,
+  "disc": 178,
+  "ni": -13,
+  "nci": 102,
+  "ni_attr": -115,
+  "ni_attr_cont": -293,
+  "eps_b": -0.42,
+  "eps_d": -0.42,
+  "eps_d_cont": -1.08,
+  "sh_b": 271.5,
+  "sh_d": 271.5,
+  "other_lines": [
+   [
+    "Other loss",
+    9
+   ],
+   [
+    "Income from discontinued operations",
+    18
+   ],
+   [
+    "Gain on sale of discontinued operations",
+    160
+   ],
+   [
+    "Less: net income attributable to noncontrolling interests - continuing",
+    -102
+   ],
+   [
+    "Income from discontinued operations attributable to MHFI",
+    178
+   ],
+   [
+    "Basic EPS - continuing operations",
+    -1.08
+   ],
+   [
+    "Basic EPS - discontinued operations",
+    0.66
+   ],
+   [
+    "Diluted EPS - discontinued operations",
+    0.66
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "S&P Ratings Services",
+   "code": "RAT",
+   "rev": 2455,
+   "exp": 3038,
+   "op": -583,
+   "nongaap": 1657,
+   "adj_op": 1074
+  },
+  {
+   "name": "S&P Capital IQ",
+   "code": "CIQ",
+   "rev": 1237,
+   "exp": 1009,
+   "op": 228,
+   "nongaap": 9,
+   "adj_op": 237
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 552,
+   "exp": 205,
+   "op": 347,
+   "nongaap": 4,
+   "adj_op": 351
+  },
+  {
+   "name": "Commodities & Commercial Markets",
+   "code": "CC",
+   "rev": 893,
+   "exp": 603,
+   "op": 290,
+   "nongaap": 16,
+   "adj_op": 306
+  }
+ ],
+ "seg_other": {
+  "elim": -86,
+  "corp": 169,
+  "corp_nongaap": 16,
+  "adj_corp": 152,
+  "seg_op_total": 282,
+  "adj_seg_op_total": 1968
+ },
+ "ngaap": {
+  "adj_op": 1815,
+  "adj_ni": 1073,
+  "adj_eps": 3.88,
+  "adj_sh_d": 276.2,
+  "start_ni": -293,
+  "start_eps": -1.08,
+  "start_basis": "cont",
+  "definition": "adjusted diluted EPS from continuing operations",
+  "adj_tax": 581,
+  "adj_int": 59,
+  "items_total_pre": 1702,
+  "items_total_net": 1366,
+  "items_total_ps": 4.96,
+  "adj_eps_total": 3.88,
+  "items": [
+   {
+    "label": "Legal and regulatory settlements (Q3 regulatory charge 60 + Q4 settlements 1,552; computed)",
+    "seg": "RAT",
+    "pre": 1612,
+    "net": null,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Restructuring charges (S&P Ratings Services; computed residual)",
+    "seg": "RAT",
+    "pre": 45,
+    "net": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Restructuring charges (S&P Capital IQ)",
+    "seg": "CIQ",
+    "pre": 9,
+    "net": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Professional fees largely related to corporate development activities (S&P Dow Jones Indices)",
+    "seg": "IDX",
+    "pre": 4,
+    "net": null,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Restructuring charges (Commodities & Commercial Markets)",
+    "seg": "CC",
+    "pre": 16,
+    "net": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Restructuring charges (unallocated expense)",
+    "seg": "CORP",
+    "pre": 16,
+    "net": null,
+    "cat": "SEVER"
+   }
+  ]
+ },
+ "cfpub": {
+  "ytd_months": 12,
+  "cfo": 1209,
+  "capex": -92,
+  "nci_dist": -84,
+  "fcf_pub": 1033,
+  "fcf_items": [
+   [
+    "Cash provided by operating activities",
+    1209
+   ],
+   [
+    "Capital expenditures",
+    -92
+   ],
+   [
+    "Dividends and other payments paid to noncontrolling interests",
+    -84
+   ]
+  ],
+  "dep": 86,
+  "amort": 48,
+  "sbc": 100
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and equivalents",
+    2497
+   ],
+   [
+    "Other current assets",
+    1469
+   ],
+   [
+    "Total current assets",
+    3966
+   ],
+   [
+    "Property and equipment, net",
+    206
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    2391
+   ],
+   [
+    "Asset for pension benefits",
+    28
+   ],
+   [
+    "Other non-current assets",
+    180
+   ],
+   [
+    "Total assets",
+    6771
+   ],
+   [
+    "Unearned revenue",
+    1323
+   ],
+   [
+    "Other current liabilities (a)",
+    2644
+   ],
+   [
+    "Long-term debt",
+    799
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    656
+   ],
+   [
+    "Total liabilities",
+    5422
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    810
+   ],
+   [
+    "Total equity",
+    539
+   ],
+   [
+    "Total liabilities and equity",
+    6771
+   ]
+  ],
+  "ta": 6771,
+  "tl": 5422,
+  "rnci": 810,
+  "te": 539,
+  "tle": 6771
+ },
+ "organic": {
+  "organic_rev": 5046,
+  "organic_rev_base": 4661,
+  "growth_pct": 8,
+  "label": "Total Adjusted Revenue",
+  "adjustments": [
+   [
+    "C&C acquisitions and divestitures (Eclipse and Aviation Week)",
+    -3,
+    -26
+   ],
+   [
+    "S&P Capital IQ product closures and divestitures",
+    -2,
+    -15
+   ]
+  ],
+  "seg": {
+   "CIQ": {
+    "rev": 1237,
+    "organic_rev": 1235,
+    "organic_rev_base": 1155,
+    "growth_pct": 7
+   },
+   "CC": {
+    "rev": 893,
+    "organic_rev": 890,
+    "organic_rev_base": 815,
+    "growth_pct": 9
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-transaction": 1326,
+   "Transaction": 1129
+  },
+  "CIQ": {
+   "Subscription": 1118,
+   "Non-subscription": 119
+  },
+  "IDX": {
+   "Subscription": 111,
+   "Non-subscription": 441
+  },
+  "CC": {
+   "Subscription": 576,
+   "Non-subscription": 317
+  },
+  "ELIM": {
+   "Subscription / Non-transaction": -86
+  },
+  "TOTAL": {
+   "Subscription / Non-transaction": 3045,
+   "Non-subscription / Transaction": 2006
+  }
+ },
+ "rev_geo": {
+  "RAT": {
+   "Domestic": 1305,
+   "International": 1150
+  },
+  "CIQ": {
+   "Domestic": 809,
+   "International": 428
+  },
+  "IDX": {
+   "Domestic": 440,
+   "International": 112
+  },
+  "CC": {
+   "Domestic": 401,
+   "International": 492
+  },
+  "ELIM": {
+   "Domestic": -44,
+   "International": -42
+  },
+  "TOTAL": {
+   "Domestic": 2911,
+   "International": 2140
+  }
+ },
+ "guidance": [
+  {
+   "item": "2015 adjusted diluted EPS",
+   "low": 4.35,
+   "high": 4.45,
+   "basis": "adjusted diluted EPS"
+  },
+  {
+   "item": "2015 revenue growth",
+   "low": null,
+   "high": null,
+   "basis": "mid single-digit growth"
+  }
+ ]
+}

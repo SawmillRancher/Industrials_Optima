@@ -1,0 +1,332 @@
+{
+ "period": "Q2-20",
+ "fy": 2020,
+ "q": 2,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404020000140/spgi2q2020-earningsrel.htm",
+  "release_date": "2020-07-28",
+  "doc": "2020-07-28_8-K_0000064040-20-000140_spgi2q2020-earningsrel.txt"
+ },
+ "notes": [
+  "Income statement prints 'Gain on disposition' (1) -> gain_disp = +1 (MI). 'Other (income) expense, net' (10) -> income -> oth_inc = +10 (includes $3m pension related charge).",
+  "Segment-table total expenses 838 = income-statement expenses 839 less gain 1.",
+  "Prior-year (Q2-19) segment expenses/OP in this release are recast vs the Q2-19 release (e.g. Ratings OP 460 vs 455, MI 137 vs 147); total segment OP 871 unchanged.",
+  "Non-GAAP adjustments: OP 4 (MI (1) gain; Corporate 5 = severance 3 + Kensho 2), other income (3) pension, tax 1, after tax 5 ($0.02). Pre-tax total 7 (4 + 3) computed, not printed as one line.",
+  "Indices Adjusted Net Operating Profit (attributable to the Company) = 126 (adj OP 172 less NCI 46).",
+  "Guidance 'Tax rate' line prints a single value 0.04 (in the Low column only); recorded as low, high left null.",
+  "Guidance raised: GAAP EPS $10.25-$10.45 (from $9.50-$9.70); adjusted $10.75-$10.95 (from $9.95-$10.15); 'late 3Q recovery' baseline scenario."
+ ],
+ "is": {
+  "rev": 1943,
+  "exp": 839,
+  "gain_disp": 1,
+  "op": 1105,
+  "oth_inc": 10,
+  "int": 40,
+  "ebt": 1075,
+  "tax": 233,
+  "ni": 842,
+  "nci": 50,
+  "ni_attr": 792,
+  "eps_b": 3.29,
+  "eps_d": 3.28,
+  "sh_b": 240.9,
+  "sh_d": 241.9,
+  "sh_end": 241.0,
+  "other_lines": []
+ },
+ "seg": [
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 1006,
+   "exp": 313,
+   "op": 693,
+   "nongaap": 0,
+   "deal_amort": 2,
+   "adj_op": 695
+  },
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 516,
+   "exp": 357,
+   "op": 159,
+   "nongaap": -1,
+   "deal_amort": 20,
+   "adj_op": 177
+  },
+  {
+   "name": "Platts",
+   "code": "CI",
+   "rev": 217,
+   "exp": 93,
+   "op": 124,
+   "nongaap": 0,
+   "deal_amort": 2,
+   "adj_op": 127
+  },
+  {
+   "name": "Indices",
+   "code": "IDX",
+   "rev": 240,
+   "exp": 69,
+   "op": 171,
+   "nongaap": 0,
+   "deal_amort": 1,
+   "adj_op": 172
+  }
+ ],
+ "seg_other": {
+  "elim": -36,
+  "corp": 42,
+  "corp_nongaap": 5,
+  "corp_deal_amort": 7,
+  "adj_corp": 30,
+  "seg_op_total": 1147,
+  "adj_seg_op_total": 1171
+ },
+ "ngaap": {
+  "adj_op": 1141,
+  "adj_ni": 822,
+  "adj_eps": 3.4,
+  "start_ni": 792,
+  "start_eps": 3.28,
+  "start_basis": "total",
+  "items": [
+   {
+    "label": "Gain on disposition",
+    "seg": "MI",
+    "pre": -1,
+    "net": -1,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "CORP",
+    "pre": 3,
+    "net": 2,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Kensho retention related expense",
+    "seg": "CORP",
+    "pre": 2,
+    "net": 2,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Pension related charge",
+    "seg": "NONOP",
+    "pre": 3,
+    "net": 2,
+    "cat": "NONOP"
+   }
+  ],
+  "items_total_net": 5,
+  "items_total_ps": 0.02,
+  "deal_amort_pre": 32,
+  "deal_amort_net": 25,
+  "deal_amort_ps": 0.1,
+  "adj_tax": 242,
+  "adj_int": 40,
+  "adj_oth_inc": 13,
+  "definition": "adjusted diluted EPS"
+ },
+ "cfpub": {
+  "ytd_months": 6,
+  "cfo": 1617,
+  "capex": 18,
+  "nci_dist": 92,
+  "fcf_pub": 1507,
+  "fcf_items": [
+   [
+    "Settlements of prior-year tax audits",
+    0
+   ],
+   [
+    "Payment of legal settlements",
+    0
+   ]
+  ],
+  "adj_fcf_pub": 1507
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash, cash equivalents, and restricted cash",
+    2684
+   ],
+   [
+    "Other current assets",
+    1775
+   ],
+   [
+    "Total current assets",
+    4459
+   ],
+   [
+    "Property and equipment, net",
+    299
+   ],
+   [
+    "Right of use assets",
+    626
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    5107
+   ],
+   [
+    "Other non-current assets",
+    614
+   ],
+   [
+    "Total assets",
+    11105
+   ],
+   [
+    "Unearned revenue",
+    1850
+   ],
+   [
+    "Other current liabilities",
+    1190
+   ],
+   [
+    "Long-term debt",
+    3950
+   ],
+   [
+    "Lease liabilities — non-current",
+    578
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    866
+   ],
+   [
+    "Total liabilities",
+    8434
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    2403
+   ],
+   [
+    "Total equity",
+    268
+   ],
+   [
+    "Total liabilities and equity",
+    11105
+   ]
+  ],
+  "ta": 11105,
+  "tl": 8434,
+  "rnci": 2403,
+  "te": 268,
+  "tle": 11105
+ },
+ "organic": {
+  "organic_rev": 1926,
+  "organic_rev_base": 1694,
+  "organic_rev_cc": 1933,
+  "organic_rev_cc_base": 1694,
+  "seg": {
+   "RAT": {
+    "rev": 1006,
+    "organic_rev": 999,
+    "organic_rev_base": 801
+   },
+   "MI": {
+    "rev": 516,
+    "organic_rev": 506,
+    "organic_rev_base": 479
+   },
+   "CI": {
+    "rev": 217,
+    "organic_rev": 217,
+    "organic_rev_base": 211
+   },
+   "IDX": {
+    "rev": 240,
+    "organic_rev": 240,
+    "organic_rev_base": 235
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-Subscription / Transaction": 624,
+   "Non-Transaction": 382,
+   "Total revenue": 1006
+  },
+  "MI": {
+   "Non-Subscription / Transaction": 13,
+   "Subscription": 503,
+   "Asset-Linked Fees": 0,
+   "Total revenue": 516
+  },
+  "CI": {
+   "Non-Subscription / Transaction": 1,
+   "Subscription": 201,
+   "Sales Usage-Based Royalties": 15,
+   "Total revenue": 217
+  },
+  "IDX": {
+   "Subscription": 43,
+   "Asset-Linked Fees": 153,
+   "Sales Usage-Based Royalties": 44,
+   "Total revenue": 240
+  },
+  "ELIM": {
+   "Non-Transaction": -36,
+   "Total revenue": -36
+  }
+ },
+ "guidance": [
+  {
+   "item": "GAAP diluted EPS",
+   "low": 10.25,
+   "high": 10.45,
+   "basis": "FY2020 (increased from $9.50-$9.70)"
+  },
+  {
+   "item": "Deal-related amortization",
+   "low": 0.4,
+   "high": 0.4,
+   "basis": "FY2020 per share"
+  },
+  {
+   "item": "Compensation for replacement equity awards and retention plans",
+   "low": 0.04,
+   "high": 0.04,
+   "basis": "FY2020 per share"
+  },
+  {
+   "item": "Restructuring",
+   "low": 0.05,
+   "high": 0.05,
+   "basis": "FY2020 per share"
+  },
+  {
+   "item": "Gain on disposition",
+   "low": -0.03,
+   "high": -0.03,
+   "basis": "FY2020 per share"
+  },
+  {
+   "item": "Tax rate",
+   "low": 0.04,
+   "high": null,
+   "basis": "FY2020 per share (single value printed)"
+  },
+  {
+   "item": "Non-GAAP diluted EPS",
+   "low": 10.75,
+   "high": 10.95,
+   "basis": "FY2020 (increased from $9.95-$10.15)"
+  }
+ ]
+}

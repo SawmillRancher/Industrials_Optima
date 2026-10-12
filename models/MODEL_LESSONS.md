@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -12,14 +12,14 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 
 | Situation | Read |
 |---|---|
-| Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
+| Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW, SPGI |
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
-| Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
-| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
-| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
+| Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO, SPGI (IHS Markit, history) |
+| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM, SPGI (spin completed after the last reported quarter) |
+| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO, SPGI |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
@@ -30,6 +30,7 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
 | Private company, LBO | R&Y |
+| Financial data, ratings & index providers (subscription + transaction revenue, negative working capital) | SPGI, CSGP |
 
 ---
 
@@ -698,6 +699,55 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [bridges] If the company computes adjusted tax annually, the FY column uses the FY table rather than Σ Q.
   - [BS/CF] The cash check must net overdrafts the CF statement nets.
   - [QA] Template residue survived here: the Bull-Base-Bear N26 comment cites MLM; the P40 comment cites "Model rows 290–292 / Model!CF2" (another build's rows) with author "User"; DCF headers say "USDm" / "($)" in a CHF model.
+
+## Financial data, ratings & benchmarks
+
+### SPGI — S&P Global Inc. (MLM template via WWD kit; US GAAP / USD m / Dec FY)
+- **Coverage & basis:** FY2010–12 annual and Q1/13–Q2/26 quarterly (CIK 64040; McGraw Hill Financial 2013–16, The McGraw-Hill Companies before).
+  - History is re-based to FY2010, the earliest year the FY2012 10-K recasts after the McGraw-Hill Education sale (Mar-2013). FY2010–11 have no BS / CF on that basis.
+  - The basis is a hybrid. FY2012–2024 are as originally reported (Mobility, Engineering Solutions, J.D. Power, Construction inside while owned).
+  - 2025 quarters, FY2025 and 1H-26 are Regulation S-X Article 11 pro forma continuing operations excluding Mobility. Mobility was spun off on 1-Jul-2026, the day after the last reported quarter end; the 8-K/A of 6-Jul-2026 and the Q2-26 release Exhibits 5–6 supply these figures.
+  - Reported − pro forma net income is a "discontinued operations" line, so net income and EPS still tie. BS and CF stay as reported.
+  - Q1–Q2/14 include McGraw Hill Construction but FY2014 does not (Σ Q ≠ FY, a documented exception).
+- **Operating build:**
+  - Four divisions × revenue by type: Ratings transaction / non-transaction; Indices asset-linked fees / ETD / subscriptions; Energy and Market Intelligence subscription / non-subscription / royalties or recurring variable. A "not split" row covers periods without a type table.
+  - Divisions map by lineage: Capital IQ → MI; Commodities & Commercial → Platts → Commodity Insights → Energy.
+  - The combined MCI segment (Q4/16–2017) is a legacy row, with MI / Platts revenue split from the organic-revenue table. Mobility and Engineering Solutions are legacy rows.
+  - The 2025+ recast moved 451 Research and Maritime & Trade from MI to Energy; the recast type tables are in the 8-K/A.
+  - Margins are division adjusted OP margins. NCI is driven as a ratio to Indices adjusted OP (CME Group's 27% of S&P DJI).
+- **Bridges & definitions:**
+  - OP → adjusted OP: seven item categories plus deal amortization. Amortization is added back only from 2016; FY2011–15 adjusted OP included it (flag).
+  - Model adjusted EBITDA = adjusted OP + depreciation (no company EBITDA).
+  - Adjusted EPS starts from total net income (continuing in 2011–13 and 2025+). The tax effect is derived from published adjusted net income. Q4-14 uses the company's 276.2m adjusted share count.
+  - Q1-22 and FY2022 adjusted measures were published only pro forma for the IHS Markit merger. The model rebuilds the actual scope from the published after-tax totals (FY = Σ quarters) and the check reads n/p.
+  - From Q1-23, the premium amortization benefit on assumed IHS Markit notes is removed from adjusted interest.
+- **Data quirks & corrections:**
+  - 2013–15 10-Qs tag continuing and discontinued cash flows separately; the model sums them.
+  - Distributions to NCI are untagged in the 2018–21 10-Qs, so the release values are used.
+  - Debt-extinguishment lines (2019–22) are folded into other income using the EBT identity, because sign conventions differ between releases.
+  - Published FCF is compared only where the release CFO equals the 10-Q CFO.
+  - Release footnote item sums often miss the printed aggregates by $1–30m; the aggregates are kept and the residual sits in "other".
+- **Deals & special blocks:**
+  - IHS Markit PPA (Q1-22, preliminary): $43.5bn consideration, $18.6bn intangibles, $31.5bn goodwill.
+  - Mobility spin in Q3/26E: 31-Mar-26 pro forma net assets and the $1,981m Mobility notes are removed, with equity as the balancing figure. The $1,974m distribution was already in 30-Jun cash.
+  - The geoscience sale (SLB) gain is implied from the guidance (~$250m). The M&A lever runs at 8x revenue.
+- **Calibration & scenarios:** two estimate quarters (Q3/Q4), so the helper rows and Δs live in the FY2026E column.
+  - Revenue Δ is solved to FY2025 pro forma × (1 + 5.9–7.9%). Base needs −7.6pp vs 1H trends: the guidance implies ~3% 2H growth.
+  - Margin Δ is solved in closed form to adjusted EPS $17.50–17.75, with NCI linear in Indices OP.
+  - GAAP EPS (−$0.04 vs mid) and margin expansion (+48 bp vs +47.5 bp) are information rows.
+- **Balance sheet, cash & capital:** 2H-26 buybacks of $5.5–6.0bn follow ">$7bn in 2026". The other choices:
+  - CP plugs to a $1.5bn minimum cash, and prior-year CP above $500m is termed out into notes so CP stays inside the $2bn facility.
+  - Leverage-plug buybacks for 2027E+ (1.25–1.75x).
+  - Redeemable NCI is held flat and NCI income is distributed.
+  - Working-capital ratios are year-end ex-Mobility; unearned revenue is 29% of revenue, so NWC is negative.
+- **Valuation:** $415 user price (12-Oct-2026). DCF NOPAT on adjusted EBITA after SBC less cash adjusting costs, with depreciation-only add-back. EV deducts redeemable NCI ($5.0bn). The implied terminal RONIC is n/m (negative reinvestment from negative NWC); this is commented. BBB P/E is 26x / 30x / 20x.
+- **Reusable lessons:**
+  - [basis] When a spin completes after the last reported quarter, use the company's Article 11 pro forma recast (8-K/A) for the guidance base year and the YTD quarters. Carry reported − pro forma net income as discontinued operations, and remove the spun net assets in the next quarter's BS roll from the latest pro forma BS, flagged "replace with the 10-Q".
+  - [extraction] Parallel agent extraction works when every agent gets the same schema *and* a self-check script it must run before finishing (`check_rec.py`). The failures it reports become the issuer-rounding exceptions to document, not silent fixes.
+  - [bridges] After a merger, if adjusted figures are published only pro forma (including the target's pre-acquisition results), rebuild the actual scope from the published after-tax totals and flag the check n/p rather than mixing scopes.
+  - [extraction] Release cash-flow statements can differ from the 10-Q filed later (reclassifications, disc ops). Compare published FCF only where the release CFO matches the statement the model uses.
+  - [calibration] With two estimate quarters, put the calibration helper rows and Δs in the FY column and reference them absolutely from both quarters.
+  - [BS/CF] With a CP / revolver plug and a leverage-target buyback, term out prior-year CP above a threshold into notes, or the plug outgrows the facility in the out-years.
 
 ## Private company / LBO
 

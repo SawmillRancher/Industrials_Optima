@@ -1,0 +1,633 @@
+{
+ "period": "Q1-18",
+ "fy": 2018,
+ "q": 1,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404018000122/spgi1q2018earningsrelease.htm",
+  "release_date": "2018-04-26",
+  "doc": "2018-04-26_8-K_0000064040-18-000122_spgi1q2018earningsrelease.txt"
+ },
+ "notes": [
+  "New segment presentation from Q1-18: Market and Commodities Intelligence split into Market Intelligence (MI) and Platts (CI); S&P Dow Jones Indices shown as \"Indices\".",
+  "Adopted ASU 2017-07 in Q1-18: pension/postretirement non-service cost moved from operating expense to \"Other (income) expense, net\"; prior-year column restated (Q1-17 OP 639 vs 648 originally). Recast of all 2017 quarters stored in recast_pension_2017. Q4-17 Unallocated non-GAAP adjustment falls from 32 to 24 (pension charge $8m moved below OP).",
+  "Other (income) expense, net printed (4) = income of 4 -> oth_inc +4.",
+  "No non-GAAP adjusting items in Q1-18 other than deal-related amortization. Exhibit 5 shows no Unallocated adjustment rows; adj_corp not printed (= 46 implied: 781 - 735).",
+  "Ratings deal-related amortization printed \"\u2014\" (0) in Q1-18.",
+  "Indices operating profit attributable to the Company $107m; adjusted OP attributable (Adjusted Net Operating Profit) $109m (NCI $40m).",
+  "Organic: Ratings acquisition (1), Market Intelligence acquisition (1). No Platts/Indices organic tables in this release.",
+  "Intersegment royalty charged by Ratings to Market Intelligence: $26m.",
+  "cfpub capex and nci_dist recorded as positive cash costs (release prints them in brackets). fcf_items signed as printed (added to FCF to reach FCF excluding certain items).",
+  "rev_type key ELIM = intersegment elimination; CORP = Corporate revenue.",
+  "py_seg = Q1-17 comparative on the 2018 basis (new segments + ASU 2017-07 pension reclass): total OP 639 vs 648 as reported; Ratings OP 374 vs 376, unallocated 36 vs 29. Revenue totals unchanged (1,453). adj_corp not printed (implied 36 = 716 - 680)."
+ ],
+ "is": {
+  "rev": 1567,
+  "exp": 856,
+  "op": 711,
+  "oth_inc": 4,
+  "int": 34,
+  "ebt": 681,
+  "tax": 147,
+  "ni": 534,
+  "nci": 43,
+  "ni_attr": 491,
+  "eps_b": 1.94,
+  "eps_d": 1.93,
+  "sh_b": 252.4,
+  "sh_d": 254.4,
+  "sh_end": 249.4
+ },
+ "seg": [
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 748,
+   "exp": 340,
+   "op": 408,
+   "nongaap": 0,
+   "deal_amort": 0,
+   "adj_op": 408
+  },
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 437,
+   "exp": 325,
+   "op": 112,
+   "nongaap": 0,
+   "deal_amort": 17,
+   "adj_op": 129
+  },
+  {
+   "name": "Platts",
+   "code": "CI",
+   "rev": 196,
+   "exp": 106,
+   "op": 90,
+   "nongaap": 0,
+   "deal_amort": 5,
+   "adj_op": 95
+  },
+  {
+   "name": "Indices",
+   "code": "IDX",
+   "rev": 214,
+   "exp": 67,
+   "op": 147,
+   "deal_amort": 2,
+   "adj_op": 149
+  }
+ ],
+ "seg_other": {
+  "elim": -28,
+  "corp": 46,
+  "seg_op_total": 757,
+  "adj_seg_op_total": 781
+ },
+ "ngaap": {
+  "adj_op": 735,
+  "adj_ni": 509,
+  "adj_eps": 2.0,
+  "start_ni": 491,
+  "start_eps": 1.93,
+  "start_basis": "total",
+  "items": [],
+  "items_total_pre": 0,
+  "items_total_net": 0,
+  "items_total_ps": 0,
+  "items_total_tax": 0,
+  "deal_amort_pre": 24,
+  "deal_amort_net": 18,
+  "deal_amort_ps": 0.07,
+  "deal_amort_tax": 6,
+  "adj_tax": 153,
+  "adj_oth_inc": 4,
+  "adj_int": 34,
+  "adj_ebt": 705,
+  "adj_etr_pct": 21.7,
+  "definition": "adjusted diluted EPS (Adjusted Net Income attributable to SPGI and Adjusted Diluted EPS)"
+ },
+ "cfpub": {
+  "ytd_months": 3,
+  "cfo": 360,
+  "capex": 33,
+  "nci_dist": 50,
+  "fcf_pub": 277,
+  "fcf_items": [
+   [
+    "Payment of legal settlements",
+    29
+   ],
+   [
+    "Tax benefit from legal settlements",
+    -7
+   ]
+  ],
+  "adj_fcf_pub": 299
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and cash equivalents",
+    1756
+   ],
+   [
+    "Other current assets",
+    1528
+   ],
+   [
+    "Total current assets",
+    3284
+   ],
+   [
+    "Property and equipment, net",
+    270
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    4435
+   ],
+   [
+    "Other non-current assets",
+    508
+   ],
+   [
+    "Total assets",
+    8497
+   ],
+   [
+    "Short-term debt",
+    400
+   ],
+   [
+    "Unearned revenue",
+    1679
+   ],
+   [
+    "Other current liabilities",
+    1056
+   ],
+   [
+    "Long-term debt",
+    3170
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    774
+   ],
+   [
+    "Total liabilities",
+    7079
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    1350
+   ],
+   [
+    "Total equity",
+    68
+   ],
+   [
+    "Total liabilities and equity",
+    8497
+   ]
+  ],
+  "ta": 8497,
+  "tl": 7079,
+  "rnci": 1350,
+  "te": 68,
+  "tle": 8497
+ },
+ "organic": {
+  "organic_rev": 1565,
+  "organic_rev_cc": 1540,
+  "organic_rev_base": 1453,
+  "organic_growth_pct": 8,
+  "organic_cc_growth_pct": 6,
+  "seg": {
+   "RAT": {
+    "rev": 748,
+    "organic_rev": 747,
+    "organic_rev_base": 714
+   },
+   "MI": {
+    "rev": 437,
+    "organic_rev": 436,
+    "organic_rev_base": 402
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-Subscription / Transaction": 368,
+   "Non-Transaction": 380,
+   "Subscription": 0,
+   "Asset-Linked Fees": 0,
+   "Sales Usage-Based Royalties": 0
+  },
+  "MI": {
+   "Non-Subscription / Transaction": 8,
+   "Non-Transaction": 0,
+   "Subscription": 424,
+   "Asset-Linked Fees": 5,
+   "Sales Usage-Based Royalties": 0
+  },
+  "CI": {
+   "Non-Subscription / Transaction": 2,
+   "Non-Transaction": 0,
+   "Subscription": 181,
+   "Asset-Linked Fees": 0,
+   "Sales Usage-Based Royalties": 13
+  },
+  "IDX": {
+   "Non-Subscription / Transaction": 0,
+   "Non-Transaction": 0,
+   "Subscription": 33,
+   "Asset-Linked Fees": 131,
+   "Sales Usage-Based Royalties": 50
+  },
+  "ELIM": {
+   "Non-Subscription / Transaction": 0,
+   "Non-Transaction": -28,
+   "Subscription": 0,
+   "Asset-Linked Fees": 0,
+   "Sales Usage-Based Royalties": 0
+  }
+ },
+ "guidance": [
+  {
+   "item": "GAAP diluted EPS",
+   "low": 7.95,
+   "high": 8.1,
+   "basis": "FY2018 (reduced ~$0.20 on Kensho acquisition, 6-Mar-2018; reaffirmed)"
+  },
+  {
+   "item": "Deal-related amortization (per share)",
+   "low": 0.4,
+   "high": 0.4,
+   "basis": "FY2018"
+  },
+  {
+   "item": "Compensation for replacement equity awards and retention plans (per share)",
+   "low": 0.09,
+   "high": 0.09,
+   "basis": "FY2018"
+  },
+  {
+   "item": "Integration costs (per share)",
+   "low": 0.01,
+   "high": 0.01,
+   "basis": "FY2018"
+  },
+  {
+   "item": "Adjusted diluted EPS",
+   "low": 8.45,
+   "high": 8.6,
+   "basis": "FY2018 (unchanged)"
+  }
+ ],
+ "recast_pension_2017": {
+  "_source": "Q1-18 release Exhibit 9: 2017 recast for new presentation of net periodic pension / postretirement benefit cost (ASU 2017-07; non-service cost moved to other (income) expense, net). Signs as printed: reclass and Unallocated values negative = reduce OP.",
+  "RAT": {
+   "Q1": {
+    "op_prev": 376,
+    "reclass": -2,
+    "op": 374,
+    "nongaap": 2,
+    "deal_amort": 1,
+    "adj_op": 377
+   },
+   "Q2": {
+    "op_prev": 397,
+    "reclass": -2,
+    "op": 395,
+    "nongaap": 0,
+    "deal_amort": 1,
+    "adj_op": 396
+   },
+   "Q3": {
+    "op_prev": 376,
+    "reclass": -1,
+    "op": 375,
+    "nongaap": 15,
+    "deal_amort": 1,
+    "adj_op": 391
+   },
+   "Q4": {
+    "op_prev": 374,
+    "reclass": -2,
+    "op": 372,
+    "nongaap": 64,
+    "deal_amort": 1,
+    "adj_op": 437
+   },
+   "FY": {
+    "op_prev": 1524,
+    "reclass": -7,
+    "op": 1517,
+    "nongaap": 80,
+    "deal_amort": 4,
+    "adj_op": 1601
+   }
+  },
+  "MI": {
+   "Q1": {
+    "op_prev": 104,
+    "reclass": 0,
+    "op": 104,
+    "nongaap": 4,
+    "deal_amort": 17,
+    "adj_op": 125
+   },
+   "Q2": {
+    "op_prev": 113,
+    "reclass": -1,
+    "op": 112,
+    "nongaap": 4,
+    "deal_amort": 18,
+    "adj_op": 134
+   },
+   "Q3": {
+    "op_prev": 124,
+    "reclass": -1,
+    "op": 123,
+    "nongaap": 0,
+    "deal_amort": 17,
+    "adj_op": 140
+   },
+   "Q4": {
+    "op_prev": 127,
+    "reclass": -1,
+    "op": 126,
+    "nongaap": 3,
+    "deal_amort": 17,
+    "adj_op": 146
+   },
+   "FY": {
+    "op_prev": 467,
+    "reclass": -3,
+    "op": 464,
+    "nongaap": 12,
+    "deal_amort": 69,
+    "adj_op": 545
+   }
+  },
+  "CI": {
+   "Q1": {
+    "op_prev": 82,
+    "reclass": 0,
+    "op": 82,
+    "nongaap": 11,
+    "deal_amort": 5,
+    "adj_op": 98
+   },
+   "Q2": {
+    "op_prev": 78,
+    "reclass": 0,
+    "op": 78,
+    "nongaap": 9,
+    "deal_amort": 5,
+    "adj_op": 92
+   },
+   "Q3": {
+    "op_prev": 84,
+    "reclass": 0,
+    "op": 84,
+    "nongaap": 0,
+    "deal_amort": 5,
+    "adj_op": 89
+   },
+   "Q4": {
+    "op_prev": 81,
+    "reclass": 0,
+    "op": 81,
+    "nongaap": 0,
+    "deal_amort": 5,
+    "adj_op": 86
+   },
+   "FY": {
+    "op_prev": 326,
+    "reclass": 0,
+    "op": 326,
+    "nongaap": 21,
+    "deal_amort": 18,
+    "adj_op": 365
+   }
+  },
+  "IDX": {
+   "Q1": {
+    "op_prev": 115,
+    "reclass": 0,
+    "op": 115,
+    "nongaap": null,
+    "deal_amort": 1,
+    "adj_op": 116
+   },
+   "Q2": {
+    "op_prev": 119,
+    "reclass": 0,
+    "op": 119,
+    "nongaap": null,
+    "deal_amort": 1,
+    "adj_op": 120
+   },
+   "Q3": {
+    "op_prev": 119,
+    "reclass": 0,
+    "op": 119,
+    "nongaap": null,
+    "deal_amort": 1,
+    "adj_op": 120
+   },
+   "Q4": {
+    "op_prev": 119,
+    "reclass": 0,
+    "op": 119,
+    "nongaap": null,
+    "deal_amort": 3,
+    "adj_op": 122
+   },
+   "FY": {
+    "op_prev": 471,
+    "reclass": 0,
+    "op": 471,
+    "nongaap": null,
+    "deal_amort": 7,
+    "adj_op": 478
+   }
+  },
+  "SEG_TOTAL": {
+   "Q1": {
+    "op_prev": 677,
+    "reclass": -2,
+    "op": 675,
+    "nongaap": 17,
+    "deal_amort": 24,
+    "adj_op": 716
+   },
+   "Q2": {
+    "op_prev": 707,
+    "reclass": -3,
+    "op": 704,
+    "nongaap": 13,
+    "deal_amort": 25,
+    "adj_op": 742
+   },
+   "Q3": {
+    "op_prev": 703,
+    "reclass": -2,
+    "op": 701,
+    "nongaap": 15,
+    "deal_amort": 24,
+    "adj_op": 740
+   },
+   "Q4": {
+    "op_prev": 701,
+    "reclass": -3,
+    "op": 698,
+    "nongaap": 67,
+    "deal_amort": 25,
+    "adj_op": 790
+   },
+   "FY": {
+    "op_prev": 2788,
+    "reclass": -10,
+    "op": 2778,
+    "nongaap": 112,
+    "deal_amort": 98,
+    "adj_op": 2988
+   }
+  },
+  "UNALLOC": {
+   "Q1": {
+    "op_prev": -29,
+    "reclass": -7,
+    "op": -36,
+    "nongaap": 0,
+    "deal_amort": null,
+    "adj_op": -36
+   },
+   "Q2": {
+    "op_prev": -30,
+    "reclass": -6,
+    "op": -36,
+    "nongaap": 0,
+    "deal_amort": null,
+    "adj_op": -36
+   },
+   "Q3": {
+    "op_prev": -45,
+    "reclass": -7,
+    "op": -52,
+    "nongaap": 4,
+    "deal_amort": null,
+    "adj_op": -48
+   },
+   "Q4": {
+    "op_prev": -73,
+    "reclass": 2,
+    "op": -71,
+    "nongaap": 24,
+    "deal_amort": null,
+    "adj_op": -47
+   },
+   "FY": {
+    "op_prev": -178,
+    "reclass": -17,
+    "op": -195,
+    "nongaap": 29,
+    "deal_amort": null,
+    "adj_op": -166
+   }
+  },
+  "TOTAL": {
+   "Q1": {
+    "op_prev": 648,
+    "reclass": -9,
+    "op": 639,
+    "nongaap": 17,
+    "deal_amort": 24,
+    "adj_op": 680
+   },
+   "Q2": {
+    "op_prev": 677,
+    "reclass": -9,
+    "op": 668,
+    "nongaap": 13,
+    "deal_amort": 25,
+    "adj_op": 706
+   },
+   "Q3": {
+    "op_prev": 658,
+    "reclass": -9,
+    "op": 649,
+    "nongaap": 19,
+    "deal_amort": 24,
+    "adj_op": 692
+   },
+   "Q4": {
+    "op_prev": 628,
+    "reclass": -1,
+    "op": 627,
+    "nongaap": 92,
+    "deal_amort": 25,
+    "adj_op": 744
+   },
+   "FY": {
+    "op_prev": 2610,
+    "reclass": -27,
+    "op": 2583,
+    "nongaap": 141,
+    "deal_amort": 98,
+    "adj_op": 2822
+   }
+  }
+ },
+ "py_seg": [
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 714,
+   "exp": 340,
+   "op": 374,
+   "nongaap": 2,
+   "deal_amort": 1,
+   "adj_op": 377
+  },
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 402,
+   "exp": 298,
+   "op": 104,
+   "nongaap": 4,
+   "deal_amort": 17,
+   "adj_op": 125
+  },
+  {
+   "name": "Platts",
+   "code": "CI",
+   "rev": 191,
+   "exp": 109,
+   "op": 82,
+   "nongaap": 11,
+   "deal_amort": 5,
+   "adj_op": 98
+  },
+  {
+   "name": "Indices",
+   "code": "IDX",
+   "rev": 171,
+   "exp": 56,
+   "op": 115,
+   "deal_amort": 1,
+   "adj_op": 116
+  }
+ ],
+ "py_seg_other": {
+  "elim": -25,
+  "corp": 36,
+  "seg_op_total": 675,
+  "adj_seg_op_total": 716
+ }
+}

@@ -1,0 +1,290 @@
+{
+ "period": "Q2-15",
+ "fy": 2015,
+ "q": 2,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000114420415044191/v416265_ex99-1.htm",
+  "release_date": "2015-07-27",
+  "doc": "2015-07-27_8-K_0001144204-15-044191_v416265_ex99-1.txt"
+ },
+ "notes": [
+  "Non-GAAP adjustments are printed per segment (pre-tax) and only in aggregate after tax (items_total_*); per-item after-tax amounts are not published, so item 'net' is omitted and check_rec's start_ni + items_net check differs by exactly items_total_net.",
+  "Income statement line 'Other (income) loss' = (11), i.e. income of 11 inside operating profit: gain of $11m on the sale of the interest in a legacy McGraw Hill Construction investment -> gain_disp = 11.",
+  "Segment expense table total (735) excludes unallocated expense; IS expenses 771.",
+  "Ratings: footnote (a) gives insurance recoveries 45 and legal settlement charges 4 plus restructuring charges (amount not printed); segment adjustment -33 printed, so Ratings restructuring is ~8 by difference (computed, not published). Ratings op + adj = 328 vs printed adj OP 329 (rounding).",
+  "S&P Capital IQ adjustment 12 and C&C adjustment 1 are restructuring only (footnote b), taken from the segment table. CIQ 63 + 12 = 75 vs printed 74 (rounding).",
+  "Unallocated adjustment -10 = gain 11 (reversed) + restructuring (~1 by difference, computed). corp_nongaap uses the add-back sign (-10); adj_corp 35 = 25 + 10.",
+  "S&P Dow Jones Indices Adjusted Net Operating Profit (attributable to the Company) = 71 (OP 96 less NCI 25).",
+  "Organic revenue: Total Adjusted Revenue 1,340 vs 1,301 prior (+3%). Text: excluding FX, revenue growth 6%.",
+  "Guidance maintained at $4.35-$4.45 despite anticipated $0.05-$0.07 dilution from the SNL Financial acquisition."
+ ],
+ "is": {
+  "rev": 1342,
+  "exp": 771,
+  "gain_disp": 11,
+  "op": 582,
+  "int": 16,
+  "ebt": 566,
+  "tax": 185,
+  "ni_cont": 381,
+  "disc": 0,
+  "ni": 381,
+  "nci": 28,
+  "ni_attr": 353,
+  "ni_attr_cont": 353,
+  "eps_b": 1.29,
+  "eps_d": 1.28,
+  "eps_d_cont": 1.28,
+  "sh_b": 273.1,
+  "sh_d": 275.7,
+  "other_lines": [
+   [
+    "Other (income) loss",
+    -11
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "S&P Ratings Services",
+   "code": "RAT",
+   "rev": 658,
+   "exp": 297,
+   "op": 361,
+   "nongaap": -33,
+   "adj_op": 329
+  },
+  {
+   "name": "S&P Capital IQ",
+   "code": "CIQ",
+   "rev": 324,
+   "exp": 261,
+   "op": 63,
+   "nongaap": 12,
+   "adj_op": 74
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 148,
+   "exp": 52,
+   "op": 96,
+   "nongaap": 0,
+   "adj_op": 96
+  },
+  {
+   "name": "Commodities & Commercial Markets",
+   "code": "CC",
+   "rev": 234,
+   "exp": 147,
+   "op": 87,
+   "nongaap": 1,
+   "adj_op": 88
+  }
+ ],
+ "seg_other": {
+  "elim": -22,
+  "corp": 25,
+  "corp_nongaap": -10,
+  "adj_corp": 35,
+  "seg_op_total": 607,
+  "adj_seg_op_total": 587
+ },
+ "ngaap": {
+  "adj_op": 552,
+  "adj_ni": 335,
+  "adj_eps": 1.21,
+  "start_ni": 353,
+  "start_eps": 1.28,
+  "start_basis": "cont",
+  "items": [
+   {
+    "label": "Legal settlement insurance recoveries",
+    "seg": "RAT",
+    "pre": -45,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Legal settlement charges",
+    "seg": "RAT",
+    "pre": 4,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Restructuring charges (amount not disclosed)",
+    "seg": "RAT",
+    "pre": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Restructuring charges",
+    "seg": "CIQ",
+    "pre": 12,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Restructuring charges",
+    "seg": "CC",
+    "pre": 1,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Gain on the sale of our interest in a legacy McGraw Hill Construction investment",
+    "seg": "CORP",
+    "pre": -11,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Restructuring charges (amount not disclosed)",
+    "seg": "CORP",
+    "pre": null,
+    "cat": "SEVER"
+   }
+  ],
+  "items_total_pre": -30,
+  "items_total_net": -18,
+  "items_total_ps": -0.07,
+  "adj_tax": 173,
+  "adj_int": 16,
+  "definition": "adjusted diluted EPS from continuing operations"
+ },
+ "cfpub": {
+  "ytd_months": 6,
+  "cfo": -897,
+  "capex": 42,
+  "nci_dist": 49,
+  "fcf_pub": -988,
+  "fcf_items": [
+   [
+    "Payment of legal and regulatory settlements",
+    1609
+   ]
+  ],
+  "adj_fcf_pub": 621
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and equivalents",
+    1720
+   ],
+   [
+    "Other current assets",
+    1493
+   ],
+   [
+    "Total current assets",
+    3213
+   ],
+   [
+    "Property and equipment, net",
+    208
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    2360
+   ],
+   [
+    "Other non-current assets",
+    232
+   ],
+   [
+    "Total assets",
+    6013
+   ],
+   [
+    "Unearned revenue",
+    1387
+   ],
+   [
+    "Other current liabilities",
+    853
+   ],
+   [
+    "Long-term debt",
+    1494
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    654
+   ],
+   [
+    "Total liabilities",
+    4388
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    810
+   ],
+   [
+    "Total equity",
+    815
+   ],
+   [
+    "Total liabilities and equity",
+    6013
+   ]
+  ],
+  "ta": 6013,
+  "tl": 4388,
+  "rnci": 810,
+  "te": 815,
+  "tle": 6013
+ },
+ "organic": {
+  "organic_rev": 1340,
+  "organic_rev_base": 1301,
+  "seg": {
+   "CIQ": {
+    "rev": 324,
+    "organic_rev": 324,
+    "organic_rev_base": 306
+   },
+   "CC": {
+    "rev": 234,
+    "organic_rev": 232,
+    "organic_rev_base": 219
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Subscription / Non-Transaction": 329,
+   "Non-Subscription / Transaction": 329
+  },
+  "CIQ": {
+   "Subscription / Non-Transaction": 292,
+   "Non-Subscription / Transaction": 32
+  },
+  "IDX": {
+   "Subscription / Non-Transaction": 30,
+   "Non-Subscription / Transaction": 118
+  },
+  "CC": {
+   "Subscription / Non-Transaction": 154,
+   "Non-Subscription / Transaction": 80
+  },
+  "ELIM": {
+   "Subscription / Non-Transaction": -22,
+   "Non-Subscription / Transaction": 0
+  },
+  "TOTAL": {
+   "Subscription / Non-Transaction": 783,
+   "Non-Subscription / Transaction": 559
+  }
+ },
+ "guidance": [
+  {
+   "item": "Adjusted diluted EPS",
+   "low": 4.35,
+   "high": 4.45,
+   "basis": "FY2015; maintained"
+  },
+  {
+   "item": "Anticipated dilution from the SNL Financial acquisition (per share)",
+   "low": 0.05,
+   "high": 0.07,
+   "basis": "FY2015; absorbed within maintained guidance"
+  }
+ ]
+}

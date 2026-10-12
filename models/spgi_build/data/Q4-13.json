@@ -1,0 +1,404 @@
+{
+ "period": "Q4-13",
+ "fy": 2013,
+ "q": 4,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000114420414005713/v367061_ex99.htm",
+  "release_date": "2014-02-04",
+  "doc": "2014-02-04_8-K_0001144204-14-005713_v367061_ex99.txt"
+ },
+ "notes": [
+  "is.gain_disp = -36: printed operating line \"Other loss (income)\" 36 = non-cash impairment related to the pending sale of a data center (loss, so negative).",
+  "S&P DJI Q4 operating profit includes a $26m non-cash impairment of an intangible asset from the S&P DJI JV formation which was NOT excluded from adjusted results (IDX non-GAAP adjustment \"\u2014\").",
+  "S&P DJI adjusted net operating profit attributable to the Company = 37 (NCI 13).",
+  "Q4 adjustments ($77m): $36m data-center impairment, $28m restructuring (26 in segments + 2 in unallocated, computed), $13m lease terminations.",
+  "The Q4-14 release later recast Q4-13 for McGraw Hill Construction (discontinued Q3-14); this record is as originally reported.",
+  "Release prints only aggregate pre-tax / after-tax non-GAAP adjustments; per-item after-tax amounts are not published, so items[].net is null and check_rec start_ni + items_net = adj_ni cannot tie from items. Aggregates are in items_total_pre/net/ps.",
+  "Cash-flow signs as printed (outflows negative). corp/adj_corp are positive costs; corp_nongaap is the add-back to unallocated expense."
+ ],
+ "is": {
+  "rev": 1250,
+  "exp": 930,
+  "gain_disp": -36,
+  "op": 284,
+  "int": 14,
+  "ebt": 270,
+  "tax": 80,
+  "ni_cont": 190,
+  "disc": -2,
+  "ni": 188,
+  "nci": 17,
+  "ni_attr": 171,
+  "ni_attr_cont": 173,
+  "eps_b": 0.63,
+  "eps_d": 0.62,
+  "eps_d_cont": 0.62,
+  "sh_b": 270.4,
+  "sh_d": 278.0,
+  "other_lines": [
+   [
+    "Other loss (income)",
+    36
+   ],
+   [
+    "Less: net income attributable to noncontrolling interests - continuing",
+    -17
+   ],
+   [
+    "(Loss) income from discontinued operations attributable to MHFI",
+    -2
+   ],
+   [
+    "Basic EPS - continuing operations",
+    0.64
+   ],
+   [
+    "Basic EPS - discontinued operations",
+    -0.01
+   ],
+   [
+    "Diluted EPS - discontinued operations",
+    -0.01
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "S&P Ratings",
+   "code": "RAT",
+   "rev": 574,
+   "exp": 353,
+   "op": 221,
+   "nongaap": 10,
+   "adj_op": 231
+  },
+  {
+   "name": "S&P Capital IQ",
+   "code": "CIQ",
+   "rev": 301,
+   "exp": 255,
+   "op": 46,
+   "nongaap": 8,
+   "adj_op": 54
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 130,
+   "exp": 80,
+   "op": 50,
+   "nongaap": 0,
+   "adj_op": 50
+  },
+  {
+   "name": "Commodities & Commercial Markets",
+   "code": "CC",
+   "rev": 264,
+   "exp": 188,
+   "op": 76,
+   "nongaap": 8,
+   "adj_op": 84
+  }
+ ],
+ "seg_other": {
+  "elim": -19,
+  "corp": 109,
+  "corp_nongaap": 51,
+  "adj_corp": 58,
+  "seg_op_total": 393,
+  "adj_seg_op_total": 419
+ },
+ "ngaap": {
+  "adj_op": 361,
+  "adj_ni": 223,
+  "adj_eps": 0.81,
+  "start_ni": 173,
+  "start_eps": 0.62,
+  "start_basis": "cont",
+  "definition": "adjusted diluted EPS from continuing operations",
+  "adj_tax": 107,
+  "adj_int": 14,
+  "items_total_pre": 77,
+  "items_total_net": 50,
+  "items_total_ps": 0.18,
+  "adj_eps_total": 0.81,
+  "items": [
+   {
+    "label": "Restructuring charges (S&P Ratings)",
+    "seg": "RAT",
+    "pre": 10,
+    "net": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Restructuring charges (S&P Capital IQ)",
+    "seg": "CIQ",
+    "pre": 8,
+    "net": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Restructuring charges (Commodities & Commercial Markets)",
+    "seg": "CC",
+    "pre": 8,
+    "net": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Non-cash impairment charge related to the pending sale of a data center",
+    "seg": "CORP",
+    "pre": 36,
+    "net": null,
+    "cat": "IMPAIR"
+   },
+   {
+    "label": "Charge related to terminating various leases (real estate footprint reduction)",
+    "seg": "CORP",
+    "pre": 13,
+    "net": null,
+    "cat": "OTHER"
+   },
+   {
+    "label": "Restructuring charges in unallocated expense (computed 51 - 36 - 13)",
+    "seg": "CORP",
+    "pre": 2,
+    "net": null,
+    "cat": "SEVER"
+   }
+  ]
+ },
+ "cfpub": {
+  "ytd_months": 12,
+  "cfo": 816,
+  "capex": -117,
+  "nci_dist": -75,
+  "fcf_pub": 624,
+  "fcf_items": [
+   [
+    "Cash provided by operating activities",
+    816
+   ],
+   [
+    "Capital expenditures",
+    -117
+   ],
+   [
+    "Dividends and other payments paid to noncontrolling interests",
+    -75
+   ]
+  ],
+  "dep": 86,
+  "amort": 51,
+  "sbc": 99
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and short-term investments",
+    1560
+   ],
+   [
+    "Other current assets",
+    1315
+   ],
+   [
+    "Assets held for sale (a)",
+    61
+   ],
+   [
+    "Total current assets",
+    2936
+   ],
+   [
+    "Property and equipment, net",
+    249
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    2445
+   ],
+   [
+    "Asset for pension benefits",
+    261
+   ],
+   [
+    "Other non-current assets",
+    170
+   ],
+   [
+    "Total assets",
+    6061
+   ],
+   [
+    "Short-term debt",
+    0
+   ],
+   [
+    "Unearned revenue",
+    1309
+   ],
+   [
+    "Other current liabilities",
+    1063
+   ],
+   [
+    "Liabilities held for sale (a)",
+    0
+   ],
+   [
+    "Long-term debt",
+    799
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    736
+   ],
+   [
+    "Total liabilities",
+    3907
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    810
+   ],
+   [
+    "Total equity",
+    1344
+   ],
+   [
+    "Total liabilities and equity",
+    6061
+   ]
+  ],
+  "ta": 6061,
+  "tl": 3907,
+  "rnci": 810,
+  "te": 1344,
+  "tle": 6061
+ },
+ "organic": {
+  "organic_rev": 1250,
+  "organic_rev_base": 1208,
+  "growth_pct": 3,
+  "label": "Total Adjusted Revenue",
+  "adjustments": [
+   [
+    "S&P Capital IQ Acquisitions",
+    0,
+    0
+   ],
+   [
+    "Dow Jones Indices",
+    0,
+    0
+   ],
+   [
+    "Aviation Week",
+    0,
+    -14
+   ],
+   [
+    "S&P Capital IQ product closures and divestitures",
+    0,
+    -4
+   ]
+  ],
+  "seg": {
+   "CIQ": {
+    "rev": 301,
+    "organic_rev": 301,
+    "organic_rev_base": 286,
+    "growth_pct": 5
+   },
+   "CC": {
+    "rev": 264,
+    "organic_rev": 264,
+    "organic_rev_base": 246,
+    "growth_pct": 7
+   },
+   "CC_Commercial_Markets": {
+    "rev": 123,
+    "organic_rev": 123,
+    "organic_rev_base": 117,
+    "growth_pct": 4
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-transaction": 317,
+   "Transaction": 257
+  },
+  "CIQ": {
+   "Subscription": 270,
+   "Non-subscription": 31
+  },
+  "IDX": {
+   "Subscription": 27,
+   "Non-subscription": 103
+  },
+  "CC": {
+   "Commodities Markets - Subscription": 130,
+   "Commodities Markets - Non-subscription": 11,
+   "Commercial Markets - Subscription": 38,
+   "Commercial Markets - Non-subscription": 85
+  },
+  "ELIM": {
+   "Subscription / Non-transaction": -19
+  },
+  "TOTAL": {
+   "Subscription / Non-transaction": 763,
+   "Non-subscription / Transaction": 487
+  }
+ },
+ "rev_geo": {
+  "RAT": {
+   "Domestic": 287,
+   "International": 287
+  },
+  "CIQ": {
+   "Domestic": 194,
+   "International": 107
+  },
+  "IDX": {
+   "Domestic": 99,
+   "International": 31
+  },
+  "Commodities Markets": {
+   "Domestic": 56,
+   "International": 85
+  },
+  "Commercial Markets": {
+   "Domestic": 90,
+   "International": 33
+  },
+  "ELIM": {
+   "Domestic": -9,
+   "International": -10
+  },
+  "TOTAL": {
+   "Domestic": 717,
+   "International": 533
+  }
+ },
+ "guidance": [
+  {
+   "item": "2014 adjusted diluted EPS",
+   "low": 3.75,
+   "high": 3.85,
+   "basis": "adjusted diluted EPS (mid-teen growth target)"
+  },
+  {
+   "item": "2014 revenue growth",
+   "low": null,
+   "high": null,
+   "basis": "mid single-digit growth"
+  },
+  {
+   "item": "2014 free cash flow",
+   "low": null,
+   "high": null,
+   "basis": "approximately $1 billion"
+  }
+ ]
+}

@@ -1,0 +1,390 @@
+{
+ "period": "2019",
+ "fy": 2019,
+ "q": null,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404020000052/a4q2019earningsrelease.htm",
+  "release_date": "2020-02-06",
+  "doc": "2020-02-06_8-K_0000064040-20-000052_a4q2019earningsrelease.txt"
+ },
+ "notes": [
+  "Exhibit 5 is titled 'Operating Results by Segment - Reported vs. Performance'.",
+  "Revenue-by-type rows reordered (Subscription first) from Q4-2019; labels unchanged.",
+  "Exhibit 4 shows a 'Corporate' revenue line: 0 in 2019 (5 in Q4-18, 15 in FY2018); not recorded as a segment.",
+  "Twelve-month column of the Q4-2019 release.",
+  "Gain on dispositions (49) printed as a reduction of cost -> gain_disp = +49 (SPIAS $22m, RigData $27m). Other expense (income), net = 98 expense -> oth_inc = -98 (includes $113m pension charge).",
+  "Segment-table total expenses 3,473 = income-statement expenses 3,522 less gain 49.",
+  "Non-GAAP adjustments printed in aggregate: OP 12, other expense (113), interest 57, tax 45, after tax 136 ($0.55). Footnote after-tax items sum to 137 (computed) vs 136 printed: company rounding; start_ni + item nets + amort = 2,352 = adjusted NI published.",
+  "Corporate footnote items sum to 39 (21+11+7, computed) = 39 printed. Segment items: RAT 11; MI (13) = 6+4-22 (computed -12, printed -13); Platts (26) = -27+1.",
+  "MI op 607 + items (13) + amort 75 = 669 computed vs adjusted 670 published; Indices 630 + 6 = 636 vs 635 published (company rounding).",
+  "Adjusted total expense (company note) 3,339 for FY2019.",
+  "Indices Adjusted Net Operating Profit (attributable to the Company) = 465 (adj OP 635 less NCI 170).",
+  "Organic revenue: no constant-currency line in this release."
+ ],
+ "is": {
+  "rev": 6699,
+  "exp": 3522,
+  "gain_disp": 49,
+  "op": 3226,
+  "oth_inc": -98,
+  "int": 198,
+  "ebt": 2930,
+  "tax": 627,
+  "ni": 2303,
+  "nci": 180,
+  "ni_attr": 2123,
+  "eps_b": 8.65,
+  "eps_d": 8.6,
+  "sh_b": 245.4,
+  "sh_d": 246.9,
+  "sh_end": 244.0,
+  "other_lines": []
+ },
+ "seg": [
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 3106,
+   "exp": 1343,
+   "op": 1763,
+   "nongaap": 11,
+   "deal_amort": 2,
+   "adj_op": 1776
+  },
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 1959,
+   "exp": 1352,
+   "op": 607,
+   "nongaap": -13,
+   "deal_amort": 75,
+   "adj_op": 670
+  },
+  {
+   "name": "Platts",
+   "code": "CI",
+   "rev": 844,
+   "exp": 406,
+   "op": 438,
+   "nongaap": -26,
+   "deal_amort": 12,
+   "adj_op": 424
+  },
+  {
+   "name": "Indices",
+   "code": "IDX",
+   "rev": 918,
+   "exp": 288,
+   "op": 630,
+   "nongaap": 0,
+   "deal_amort": 6,
+   "adj_op": 635
+  }
+ ],
+ "seg_other": {
+  "elim": -128,
+  "corp": 212,
+  "corp_nongaap": 39,
+  "corp_deal_amort": 28,
+  "adj_corp": 145,
+  "seg_op_total": 3438,
+  "adj_seg_op_total": 3505
+ },
+ "ngaap": {
+  "adj_op": 3360,
+  "adj_ni": 2352,
+  "adj_eps": 9.53,
+  "start_ni": 2123,
+  "start_eps": 8.6,
+  "start_basis": "total",
+  "items": [
+   {
+    "label": "Employee severance charges",
+    "seg": "RAT",
+    "pre": 11,
+    "net": 9,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "MI",
+    "pre": 6,
+    "net": 4,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Acquisition-related costs",
+    "seg": "MI",
+    "pre": 4,
+    "net": 3,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Gain on the sale of SPIAS",
+    "seg": "MI",
+    "pre": -22,
+    "net": -12,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Gain on the sale of RigData",
+    "seg": "CI",
+    "pre": -27,
+    "net": -26,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "CI",
+    "pre": 1,
+    "net": 1,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Kensho retention related expense",
+    "seg": "CORP",
+    "pre": 21,
+    "net": 16,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Lease impairments",
+    "seg": "CORP",
+    "pre": 11,
+    "net": 8,
+    "cat": "IMPAIR"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "CORP",
+    "pre": 7,
+    "net": 6,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Pension related charge",
+    "seg": "NONOP",
+    "pre": 113,
+    "net": 85,
+    "cat": "NONOP"
+   },
+   {
+    "label": "Costs associated with early repayment of our Senior Notes",
+    "seg": "NONOP",
+    "pre": 57,
+    "net": 43,
+    "cat": "NONOP"
+   }
+  ],
+  "items_total_net": 136,
+  "items_total_ps": 0.55,
+  "deal_amort_pre": 122,
+  "deal_amort_net": 92,
+  "deal_amort_ps": 0.37,
+  "adj_tax": 702,
+  "adj_int": 141,
+  "adj_oth_inc": 14,
+  "definition": "adjusted diluted EPS"
+ },
+ "cfpub": {
+  "ytd_months": 12,
+  "cfo": 2776,
+  "capex": 115,
+  "nci_dist": 143,
+  "fcf_pub": 2518,
+  "fcf_items": [
+   [
+    "Settlement of prior-year tax audits",
+    51
+   ],
+   [
+    "Tax on gain from sale of SPIAS and RigData",
+    13
+   ],
+   [
+    "Payment of legal settlements",
+    1
+   ],
+   [
+    "Tax benefit from legal settlements",
+    0
+   ]
+  ],
+  "adj_fcf_pub": 2583
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash, cash equivalents, and restricted cash",
+    2886
+   ],
+   [
+    "Other current assets",
+    1826
+   ],
+   [
+    "Total current assets",
+    4712
+   ],
+   [
+    "Property and equipment, net",
+    320
+   ],
+   [
+    "Right of use assets",
+    676
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    4999
+   ],
+   [
+    "Other non-current assets",
+    641
+   ],
+   [
+    "Total assets",
+    11348
+   ],
+   [
+    "Unearned revenue",
+    1928
+   ],
+   [
+    "Other current liabilities",
+    1165
+   ],
+   [
+    "Long-term debt",
+    3948
+   ],
+   [
+    "Lease liabilities — non-current",
+    620
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    883
+   ],
+   [
+    "Total liabilities",
+    8544
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    2268
+   ],
+   [
+    "Total equity",
+    536
+   ],
+   [
+    "Total liabilities and equity",
+    11348
+   ]
+  ],
+  "ta": 11348,
+  "tl": 8544,
+  "rnci": 2268,
+  "te": 536,
+  "tle": 11348
+ },
+ "organic": {
+  "organic_rev": 6669,
+  "organic_rev_base": 6226,
+  "seg": {
+   "RAT": {
+    "rev": 3106,
+    "organic_rev": 3104,
+    "organic_rev_base": 2882
+   },
+   "MI": {
+    "rev": 1959,
+    "organic_rev": 1935,
+    "organic_rev_base": 1812
+   },
+   "CI": {
+    "rev": 844,
+    "organic_rev": 838,
+    "organic_rev_base": 805
+   },
+   "IDX": {
+    "rev": 918,
+    "organic_rev": 918,
+    "organic_rev_base": 837
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-Subscription / Transaction": 1577,
+   "Non-Transaction": 1529,
+   "Total revenue": 3106
+  },
+  "MI": {
+   "Subscription": 1904,
+   "Non-Subscription / Transaction": 45,
+   "Asset-Linked Fees": 10,
+   "Total revenue": 1959
+  },
+  "CI": {
+   "Subscription": 774,
+   "Non-Subscription / Transaction": 10,
+   "Sales Usage-Based Royalties": 60,
+   "Total revenue": 844
+  },
+  "IDX": {
+   "Subscription": 165,
+   "Asset-Linked Fees": 613,
+   "Sales Usage-Based Royalties": 140,
+   "Total revenue": 918
+  },
+  "CORP": {
+   "Subscription": 0,
+   "Total revenue": 0
+  },
+  "ELIM": {
+   "Non-Transaction": -128,
+   "Total revenue": -128
+  }
+ },
+ "guidance": [
+  {
+   "item": "GAAP diluted EPS",
+   "low": 10.0,
+   "high": 10.2,
+   "basis": "FY2020"
+  },
+  {
+   "item": "Deal-related amortization",
+   "low": 0.37,
+   "high": 0.37,
+   "basis": "FY2020 per share"
+  },
+  {
+   "item": "Compensation for replacement equity awards and retention plans",
+   "low": 0.03,
+   "high": 0.03,
+   "basis": "FY2020 per share"
+  },
+  {
+   "item": "Non-GAAP diluted EPS",
+   "low": 10.4,
+   "high": 10.6,
+   "basis": "FY2020"
+  },
+  {
+   "item": "Reported revenue growth",
+   "low": null,
+   "high": null,
+   "basis": "FY2020: 'expected to increase mid to high single-digits' (no numeric range)"
+  },
+  {
+   "item": "Free cash flow excluding certain items ($m)",
+   "low": 2600,
+   "high": 2700,
+   "basis": "FY2020: '$2.6 billion to $2.7 billion'"
+  }
+ ]
+}

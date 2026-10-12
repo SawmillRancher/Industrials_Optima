@@ -1,0 +1,394 @@
+{
+ "period": "Q4-14",
+ "fy": 2014,
+ "q": 4,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000114420415008134/v401217_ex99.htm",
+  "release_date": "2015-02-12",
+  "doc": "2015-02-12_8-K_0001144204-15-008134_v401217_ex99.txt"
+ },
+ "notes": [
+  "Legal and regulatory settlements of ~$1.6bn charged in Q4-14 (DOJ / states / CalPERS / SEC etc.), at S&P Ratings Services; restructuring $41m (about half at S&P Ratings).",
+  "Gain on sale of discontinued operations (McGraw Hill Construction) 160; disc = 163.",
+  "ADJUSTED EPS SHARE COUNT: adjusted diluted EPS uses 276.2m diluted shares (footnote f, includes securities antidilutive to the reported loss); GAAP diluted shares 271.7m. check_rec adj_ni/sh_d uses 271.7 and so does not tie (264/276.2 = 0.956 -> 0.95). Recorded ngaap.adj_sh_d = 276.2.",
+  "S&P DJI adjusted net operating profit attributable to the Company = 64 (NCI 23).",
+  "Dec-2013 balance-sheet comparative in this release reflects the Construction recast (e.g. OCL 1,104 vs 1,063 originally).",
+  "Release prints only aggregate pre-tax / after-tax non-GAAP adjustments; per-item after-tax amounts are not published, so items[].net is null and check_rec start_ni + items_net = adj_ni cannot tie from items. Aggregates are in items_total_pre/net/ps.",
+  "Cash-flow signs as printed (outflows negative). corp/adj_corp are positive costs; corp_nongaap is the add-back to unallocated expense."
+ ],
+ "is": {
+  "rev": 1290,
+  "exp": 2438,
+  "gain_disp": 0,
+  "op": -1148,
+  "int": 19,
+  "ebt": -1167,
+  "tax": -183,
+  "ni_cont": -984,
+  "disc": 163,
+  "ni": -821,
+  "nci": 25,
+  "ni_attr": -846,
+  "ni_attr_cont": -1009,
+  "eps_b": -3.11,
+  "eps_d": -3.11,
+  "eps_d_cont": -3.71,
+  "sh_b": 271.7,
+  "sh_d": 271.7,
+  "other_lines": [
+   [
+    "Other loss",
+    0
+   ],
+   [
+    "Income from discontinued operations",
+    3
+   ],
+   [
+    "Gain on sale of discontinued operations",
+    160
+   ],
+   [
+    "Less: net income attributable to noncontrolling interests - continuing",
+    -25
+   ],
+   [
+    "Income from discontinued operations attributable to MHFI",
+    163
+   ],
+   [
+    "Basic EPS - continuing operations",
+    -3.71
+   ],
+   [
+    "Basic EPS - discontinued operations",
+    0.6
+   ],
+   [
+    "Diluted EPS - discontinued operations",
+    0.6
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "S&P Ratings Services",
+   "code": "RAT",
+   "rev": 618,
+   "exp": 1931,
+   "op": -1313,
+   "nongaap": 1574,
+   "adj_op": 261
+  },
+  {
+   "name": "S&P Capital IQ",
+   "code": "CIQ",
+   "rev": 318,
+   "exp": 262,
+   "op": 56,
+   "nongaap": 5,
+   "adj_op": 62
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 140,
+   "exp": 53,
+   "op": 87,
+   "nongaap": 0,
+   "adj_op": 87
+  },
+  {
+   "name": "Commodities & Commercial Markets",
+   "code": "CC",
+   "rev": 236,
+   "exp": 164,
+   "op": 72,
+   "nongaap": 4,
+   "adj_op": 76
+  }
+ ],
+ "seg_other": {
+  "elim": -22,
+  "corp": 50,
+  "corp_nongaap": 10,
+  "adj_corp": 41,
+  "seg_op_total": -1098,
+  "adj_seg_op_total": 485
+ },
+ "ngaap": {
+  "adj_op": 444,
+  "adj_ni": 264,
+  "adj_eps": 0.95,
+  "adj_sh_d": 276.2,
+  "start_ni": -1009,
+  "start_eps": -3.71,
+  "start_basis": "cont",
+  "definition": "adjusted diluted EPS from continuing operations",
+  "adj_tax": 136,
+  "adj_int": 19,
+  "items_total_pre": 1593,
+  "items_total_net": 1273,
+  "items_total_ps": 4.66,
+  "adj_eps_total": 0.95,
+  "items": [
+   {
+    "label": "Legal settlement with the U.S. Department of Justice",
+    "seg": "RAT",
+    "pre": 687.5,
+    "net": null,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Legal settlement with the Attorneys General of 19 states and the District of Columbia",
+    "seg": "RAT",
+    "pre": 687.5,
+    "net": null,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Settlement of the CalPERS lawsuit",
+    "seg": "RAT",
+    "pre": 125,
+    "net": null,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Additional charges for settlements with the SEC and the Attorneys General of New York and Massachusetts",
+    "seg": "RAT",
+    "pre": 17,
+    "net": null,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Settlements of other private litigation stemming from the financial crisis",
+    "seg": "RAT",
+    "pre": 35,
+    "net": null,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Restructuring charges (S&P Ratings Services; computed 1,574 - 1,552)",
+    "seg": "RAT",
+    "pre": 22,
+    "net": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Restructuring charges (S&P Capital IQ)",
+    "seg": "CIQ",
+    "pre": 5,
+    "net": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Restructuring charges (Commodities & Commercial Markets)",
+    "seg": "CC",
+    "pre": 4,
+    "net": null,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Restructuring charges (unallocated expense)",
+    "seg": "CORP",
+    "pre": 10,
+    "net": null,
+    "cat": "SEVER"
+   }
+  ]
+ },
+ "cfpub": {
+  "ytd_months": 12,
+  "cfo": 1209,
+  "capex": -92,
+  "nci_dist": -84,
+  "fcf_pub": 1033,
+  "fcf_items": [
+   [
+    "Cash provided by operating activities",
+    1209
+   ],
+   [
+    "Capital expenditures",
+    -92
+   ],
+   [
+    "Dividends and other payments paid to noncontrolling interests",
+    -84
+   ]
+  ],
+  "dep": 86,
+  "amort": 48,
+  "sbc": 100
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and equivalents",
+    2497
+   ],
+   [
+    "Other current assets",
+    1469
+   ],
+   [
+    "Total current assets",
+    3966
+   ],
+   [
+    "Property and equipment, net",
+    206
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    2391
+   ],
+   [
+    "Asset for pension benefits",
+    28
+   ],
+   [
+    "Other non-current assets",
+    180
+   ],
+   [
+    "Total assets",
+    6771
+   ],
+   [
+    "Unearned revenue",
+    1323
+   ],
+   [
+    "Other current liabilities (a)",
+    2644
+   ],
+   [
+    "Long-term debt",
+    799
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    656
+   ],
+   [
+    "Total liabilities",
+    5422
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    810
+   ],
+   [
+    "Total equity",
+    539
+   ],
+   [
+    "Total liabilities and equity",
+    6771
+   ]
+  ],
+  "ta": 6771,
+  "tl": 5422,
+  "rnci": 810,
+  "te": 539,
+  "tle": 6771
+ },
+ "organic": {
+  "organic_rev": 1289,
+  "organic_rev_base": 1204,
+  "growth_pct": 7,
+  "label": "Total Adjusted Revenue",
+  "adjustments": [
+   [
+    "C&C acquisitions and divestitures (Eclipse and Aviation Week)",
+    -1,
+    0
+   ],
+   [
+    "S&P Capital IQ product closures and divestitures",
+    0,
+    -2
+   ]
+  ],
+  "seg": {
+   "CIQ": {
+    "rev": 318,
+    "organic_rev": 318,
+    "organic_rev_base": 299,
+    "growth_pct": 6
+   },
+   "CC": {
+    "rev": 236,
+    "organic_rev": 235,
+    "organic_rev_base": 220,
+    "growth_pct": 7
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-transaction": 330,
+   "Transaction": 288
+  },
+  "CIQ": {
+   "Subscription": 286,
+   "Non-subscription": 32
+  },
+  "IDX": {
+   "Subscription": 29,
+   "Non-subscription": 111
+  },
+  "CC": {
+   "Subscription": 148,
+   "Non-subscription": 88
+  },
+  "ELIM": {
+   "Subscription / Non-transaction": -22
+  },
+  "TOTAL": {
+   "Subscription / Non-transaction": 771,
+   "Non-subscription / Transaction": 519
+  }
+ },
+ "rev_geo": {
+  "RAT": {
+   "Domestic": 328,
+   "International": 290
+  },
+  "CIQ": {
+   "Domestic": 206,
+   "International": 112
+  },
+  "IDX": {
+   "Domestic": 113,
+   "International": 27
+  },
+  "CC": {
+   "Domestic": 105,
+   "International": 131
+  },
+  "ELIM": {
+   "Domestic": -11,
+   "International": -11
+  },
+  "TOTAL": {
+   "Domestic": 741,
+   "International": 549
+  }
+ },
+ "guidance": [
+  {
+   "item": "2015 adjusted diluted EPS",
+   "low": 4.35,
+   "high": 4.45,
+   "basis": "adjusted diluted EPS"
+  },
+  {
+   "item": "2015 revenue growth",
+   "low": null,
+   "high": null,
+   "basis": "mid single-digit growth"
+  }
+ ]
+}

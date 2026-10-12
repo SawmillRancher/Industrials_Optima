@@ -1,0 +1,340 @@
+{
+ "period": "Q1-16",
+ "fy": 2016,
+ "q": 1,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404016000055/mhfi1q2016earningsrelease.htm",
+  "release_date": "2016-04-26",
+  "doc": "2016-04-26_8-K_0000064040-16-000055_mhfi1q2016earningsrelease.txt"
+ },
+ "notes": [
+  "Non-GAAP adjustments are printed per segment (pre-tax) and only in aggregate after tax (items_total_*); per-item after-tax amounts are not published, so item 'net' is omitted and check_rec's start_ni + items_net check differs by exactly items_total_net.",
+  "First quarter on the new adjusted definition: adjusted results exclude deal-related amortization (deal_amort_*). Prior-year comparative recast to 1.11.",
+  "Segment 'S&P Capital IQ and SNL' renamed 'Market Intelligence' (code MI). Segment expense table total (795) excludes unallocated; IS expenses 829.",
+  "Segment adj OP rounding: MI 81 + 24 + 19 = 124 vs printed 123; C&C 102 + 3 + 3 = 108 vs printed 107.",
+  "Narrative 'adjusted net income increased 5% to $349 million' is adjusted net income before NCI (Exhibit 5 net income line); adjusted NI attributable = 320 used here.",
+  "Adjusted effective tax rate 31.7% (text).",
+  "S&P Dow Jones Indices Adjusted Net Operating Profit (attributable) = 76 (adj OP 102 less NCI 26).",
+  "Organic revenue: Total Adjusted Revenue 1,264 vs 1,272 (-1%); constant currency 1,272 vs 1,272 (0%).",
+  "Announced sales: SPSE and CMA to ICE (1-Mar-2016) and J.D. Power to XIO Group (15-Apr-2016, $1.1bn); guidance includes these businesses until close.",
+  "py_seg: 2015 comparative as presented in this release - same revenue/expense/OP as the Q1-15 release but segment renamed (S&P Capital IQ -> Market Intelligence) and adjusted OP recast to exclude deal-related amortization."
+ ],
+ "is": {
+  "rev": 1341,
+  "exp": 829,
+  "op": 512,
+  "int": 40,
+  "ebt": 472,
+  "tax": 149,
+  "ni": 323,
+  "nci": 29,
+  "ni_attr": 294,
+  "eps_b": 1.11,
+  "eps_d": 1.1,
+  "sh_b": 265.0,
+  "sh_d": 267.2,
+  "sh_end": 264.5,
+  "other_lines": []
+ },
+ "seg": [
+  {
+   "name": "S&P Ratings Services",
+   "code": "RAT",
+   "rev": 552,
+   "exp": 290,
+   "op": 262,
+   "nongaap": -12,
+   "deal_amort": 1,
+   "adj_op": 252
+  },
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 407,
+   "exp": 326,
+   "op": 81,
+   "nongaap": 24,
+   "deal_amort": 19,
+   "adj_op": 123
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 151,
+   "exp": 50,
+   "op": 101,
+   "nongaap": 0,
+   "deal_amort": 1,
+   "adj_op": 102
+  },
+  {
+   "name": "Commodities & Commercial Markets",
+   "code": "CC",
+   "rev": 254,
+   "exp": 152,
+   "op": 102,
+   "nongaap": 3,
+   "deal_amort": 3,
+   "adj_op": 107
+  }
+ ],
+ "seg_other": {
+  "elim": -23,
+  "corp": 34,
+  "corp_nongaap": 0,
+  "corp_deal_amort": 0,
+  "adj_corp": 34,
+  "seg_op_total": 546,
+  "adj_seg_op_total": 584
+ },
+ "ngaap": {
+  "adj_op": 550,
+  "adj_ni": 320,
+  "adj_eps": 1.2,
+  "start_ni": 294,
+  "start_eps": 1.1,
+  "start_basis": "total",
+  "items": [
+   {
+    "label": "Legal settlement insurance recoveries",
+    "seg": "RAT",
+    "pre": -15,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Legal settlement charges",
+    "seg": "RAT",
+    "pre": 3,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Technology related impairment charge",
+    "seg": "MI",
+    "pre": 24,
+    "cat": "IMPAIR"
+   },
+   {
+    "label": "Disposition-related costs",
+    "seg": "CC",
+    "pre": 3,
+    "cat": "DISP"
+   }
+  ],
+  "items_total_pre": 15,
+  "items_total_net": 10,
+  "items_total_ps": 0.04,
+  "deal_amort_pre": 24,
+  "deal_amort_net": 16,
+  "deal_amort_ps": 0.06,
+  "adj_tax": 161,
+  "adj_int": 40,
+  "definition": "adjusted diluted EPS"
+ },
+ "cfpub": {
+  "ytd_months": 3,
+  "cfo": 133,
+  "capex": 16,
+  "nci_dist": 33,
+  "fcf_pub": 84,
+  "fcf_items": [
+   [
+    "Payment of legal and regulatory settlements",
+    108
+   ],
+   [
+    "Legal settlement insurance recoveries",
+    0
+   ],
+   [
+    "Tax benefit from legal settlements",
+    0
+   ]
+  ],
+  "adj_fcf_pub": 192
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and cash equivalents",
+    1600
+   ],
+   [
+    "Other current assets",
+    1277
+   ],
+   [
+    "Assets of businesses held for sale",
+    571
+   ],
+   [
+    "Total current assets",
+    3448
+   ],
+   [
+    "Property and equipment, net",
+    251
+   ],
+   [
+    "Goodwill",
+    2869
+   ],
+   [
+    "Other intangible assets, net",
+    1488
+   ],
+   [
+    "Other non-current assets",
+    205
+   ],
+   [
+    "Total assets",
+    8261
+   ],
+   [
+    "Short-term debt",
+    472
+   ],
+   [
+    "Unearned revenue",
+    1458
+   ],
+   [
+    "Other current liabilities",
+    849
+   ],
+   [
+    "Liabilities of businesses held for sale",
+    203
+   ],
+   [
+    "Long-term debt",
+    3469
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    620
+   ],
+   [
+    "Total liabilities",
+    7071
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    920
+   ],
+   [
+    "Total equity",
+    270
+   ],
+   [
+    "Total liabilities and equity",
+    8261
+   ]
+  ],
+  "ta": 8261,
+  "tl": 7071,
+  "rnci": 920,
+  "te": 270,
+  "tle": 8261
+ },
+ "organic": {
+  "organic_rev": 1264,
+  "organic_rev_base": 1272,
+  "organic_rev_cc": 1272,
+  "organic_rev_cc_base": 1272,
+  "seg": {
+   "MI": {
+    "rev": 407,
+    "organic_rev": 340,
+    "organic_rev_base": 319
+   },
+   "CC": {
+    "rev": 254,
+    "organic_rev": 244,
+    "organic_rev_base": 225
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Subscription / Non-Transaction": 327,
+   "Asset Linked Fees": 0,
+   "Non-Subscription / Transaction": 225
+  },
+  "MI": {
+   "Subscription / Non-Transaction": 375,
+   "Asset Linked Fees": 0,
+   "Non-Subscription / Transaction": 32
+  },
+  "IDX": {
+   "Subscription / Non-Transaction": 32,
+   "Asset Linked Fees": 86,
+   "Non-Subscription / Transaction": 33
+  },
+  "CC": {
+   "Subscription / Non-Transaction": 172,
+   "Asset Linked Fees": 0,
+   "Non-Subscription / Transaction": 82
+  },
+  "ELIM": {
+   "Subscription / Non-Transaction": -23,
+   "Asset Linked Fees": 0,
+   "Non-Subscription / Transaction": 0
+  },
+  "TOTAL": {
+   "Subscription / Non-Transaction": 883,
+   "Asset Linked Fees": 86,
+   "Non-Subscription / Transaction": 372
+  }
+ },
+ "guidance": [
+  {
+   "item": "Adjusted diluted EPS",
+   "low": 5.0,
+   "high": 5.15,
+   "basis": "FY2016; no change"
+  }
+ ],
+ "py_seg": [
+  {
+   "name": "S&P Ratings Services",
+   "code": "RAT",
+   "rev": 606,
+   "exp": 315,
+   "op": 291,
+   "nongaap": -6,
+   "deal_amort": 1,
+   "adj_op": 286
+  },
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 320,
+   "exp": 257,
+   "op": 63,
+   "nongaap": 0,
+   "deal_amort": 6,
+   "adj_op": 68
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 143,
+   "exp": 48,
+   "op": 95,
+   "nongaap": 0,
+   "deal_amort": 1,
+   "adj_op": 97
+  },
+  {
+   "name": "Commodities & Commercial Markets",
+   "code": "CC",
+   "rev": 225,
+   "exp": 140,
+   "op": 85,
+   "nongaap": 0,
+   "deal_amort": 3,
+   "adj_op": 89
+  }
+ ]
+}

@@ -1,0 +1,501 @@
+{
+ "period": "Q1-26",
+ "fy": 2026,
+ "q": 1,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000019/spgi1q2026-earningsrelease.htm",
+  "release_date": "2026-04-28",
+  "doc": "2026-04-28_8-K_0000064040-26-000019_spgi1q2026-earningsrelease.txt"
+ },
+ "notes": [
+  "Segment formerly 'Commodity Insights' is published as 'Energy' (code CI). Mobility still reported as a segment (spin not yet completed).",
+  "Exhibit 1 'Expenses' (2,344) excludes gain on dispositions (175); segment exhibit 'Total expenses' (2,169) nets the gain (172 in Market Intelligence, 3 in corporate).",
+  "Equity in income on unconsolidated subsidiaries is '—' (OSTTRA sold in Q4-25).",
+  "Exhibit 1 prints 'Other (income) expense, net' = (2), i.e. income -> oth_inc = 2.",
+  "Exhibit 5 adjusted net income prints only an aggregate 'Non-GAAP adjustments' line (-121 after tax, $(0.41)/share). Footnote items after tax sum to -122 (computed). Pre-tax: operating -119, interest -6 (premium amortization benefit); tax on non-GAAP adjustments -4.",
+  "Energy footnote (c) items sum to 2 pre-tax vs Non-GAAP adjustments 3 printed; Indices footnote (e) sums to 2 vs 1 printed (company rounding).",
+  "Adjusted interest expense printed 103 vs 96 + 6 = 102 (computed; rounding).",
+  "Deal-related amortization pre-tax 276 = segments 275 + corporate 1; tax 70; after tax 206.",
+  "FCF adjusting items are relabelled from 2026: 'Employee severance and transition costs' and 'Acquisition and disposition-related costs' (2025 comparative restated to 70 / 15).",
+  "Balance sheet: assets / liabilities held for sale relate to the anticipated divestiture of Energy's geoscience and petroleum engineering software portfolio and the Centennial, Colorado facility.",
+  "Capex and NCI distributions recorded as positive costs; fcf_items as printed.",
+  "2026 outlook adjusted only (except reported revenue growth and capex); guidance assumes Mobility for the full year. Adjusted free cash flow excluding certain items expected to grow mid-single digits."
+ ],
+ "is": {
+  "rev": 4171,
+  "exp": 2344,
+  "gain_disp": 175,
+  "eq_inc": 0,
+  "op": 2002,
+  "oth_inc": 2,
+  "int": 96,
+  "ebt": 1908,
+  "tax": 404,
+  "ni": 1504,
+  "nci": 109,
+  "ni_attr": 1395,
+  "eps_b": 4.69,
+  "eps_d": 4.69,
+  "sh_b": 297.3,
+  "sh_d": 297.6,
+  "sh_end": 296.0,
+  "other_lines": []
+ },
+ "seg": [
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 1296,
+   "exp": 856,
+   "op": 440,
+   "nongaap": -160,
+   "deal_amort": 156,
+   "adj_op": 436
+  },
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 1302,
+   "exp": 421,
+   "op": 881,
+   "nongaap": 0,
+   "deal_amort": 1,
+   "adj_op": 882
+  },
+  {
+   "name": "Energy",
+   "code": "CI",
+   "rev": 652,
+   "exp": 365,
+   "op": 287,
+   "nongaap": 3,
+   "deal_amort": 32,
+   "adj_op": 322
+  },
+  {
+   "name": "Mobility",
+   "code": "MOB",
+   "rev": 454,
+   "exp": 361,
+   "op": 93,
+   "nongaap": 13,
+   "deal_amort": 76,
+   "adj_op": 182
+  },
+  {
+   "name": "Indices",
+   "code": "IDX",
+   "rev": 519,
+   "exp": 147,
+   "op": 372,
+   "nongaap": 1,
+   "deal_amort": 10,
+   "adj_op": 383
+  }
+ ],
+ "seg_other": {
+  "elim": -52,
+  "corp": 71,
+  "corp_nongaap": 25,
+  "corp_deal_amort": 1,
+  "adj_corp": 46,
+  "eq_inc": 0,
+  "eq_deal_amort": 0,
+  "adj_eq_inc": 0,
+  "seg_op_total": 2073,
+  "adj_seg_op_total": 2205
+ },
+ "ngaap": {
+  "adj_op": 2159,
+  "adj_ni": 1479,
+  "adj_eps": 4.97,
+  "start_ni": 1395,
+  "start_eps": 4.69,
+  "start_basis": "total",
+  "items": [
+   {
+    "label": "Gain on disposition",
+    "seg": "MI",
+    "pre": -172,
+    "net": -168,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Acquisition-related costs",
+    "seg": "MI",
+    "pre": 9,
+    "net": 9,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Disposition-related costs",
+    "seg": "MI",
+    "pre": 3,
+    "net": 2,
+    "cat": "DISP"
+   },
+   {
+    "label": "Disposition-related costs",
+    "seg": "CI",
+    "pre": 1,
+    "net": 1,
+    "cat": "DISP"
+   },
+   {
+    "label": "Acquisition-related costs",
+    "seg": "CI",
+    "pre": 1,
+    "net": 1,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Disposition-related costs",
+    "seg": "MOB",
+    "pre": 13,
+    "net": 13,
+    "cat": "DISP"
+   },
+   {
+    "label": "Employee-related costs",
+    "seg": "IDX",
+    "pre": 1,
+    "net": 1,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Acquisition-related costs",
+    "seg": "IDX",
+    "pre": 1,
+    "net": 1,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Disposition-related costs",
+    "seg": "CORP",
+    "pre": 23,
+    "net": 23,
+    "cat": "DISP"
+   },
+   {
+    "label": "Lease impairments",
+    "seg": "CORP",
+    "pre": 5,
+    "net": 3,
+    "cat": "IMPAIR"
+   },
+   {
+    "label": "Gain on disposition",
+    "seg": "CORP",
+    "pre": -3,
+    "net": -3,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Premium amortization benefit (interest expense)",
+    "seg": "NONOP",
+    "pre": -6,
+    "net": -5,
+    "cat": "NONOP"
+   }
+  ],
+  "items_total_net": -121,
+  "items_total_ps": -0.41,
+  "items_total_tax": -4,
+  "deal_amort_pre": 276,
+  "deal_amort_net": 206,
+  "deal_amort_ps": 0.69,
+  "deal_amort_tax": 70,
+  "adj_tax": 470,
+  "adj_int": 103,
+  "adj_oth_inc": 2,
+  "adj_ebt": 2059,
+  "adj_etr": 22.8,
+  "gaap_etr": 21.2,
+  "definition": "adjusted diluted EPS"
+ },
+ "cfpub": {
+  "ytd_months": 3,
+  "cfo": 1037,
+  "capex": 27,
+  "nci_dist": 91,
+  "fcf_pub": 919,
+  "fcf_items": [
+   [
+    "Employee severance and transition costs",
+    56
+   ],
+   [
+    "Acquisition and disposition-related costs",
+    17
+   ]
+  ],
+  "adj_fcf_pub": 992
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash, cash equivalents, and restricted cash",
+    1810
+   ],
+   [
+    "Other current assets",
+    4382
+   ],
+   [
+    "Assets held for sale",
+    128
+   ],
+   [
+    "Total current assets",
+    6320
+   ],
+   [
+    "Property and equipment, net",
+    261
+   ],
+   [
+    "Right of use assets",
+    388
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    52334
+   ],
+   [
+    "Equity investments in unconsolidated subsidiaries",
+    605
+   ],
+   [
+    "Other non-current assets",
+    884
+   ],
+   [
+    "Total assets",
+    60792
+   ],
+   [
+    "Short-term debt",
+    2697
+   ],
+   [
+    "Unearned revenue",
+    3980
+   ],
+   [
+    "Other current liabilities",
+    2631
+   ],
+   [
+    "Liabilities held for sale",
+    27
+   ],
+   [
+    "Long-term debt",
+    10621
+   ],
+   [
+    "Lease liabilities — non-current",
+    458
+   ],
+   [
+    "Deferred tax liability — non-current",
+    3226
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    947
+   ],
+   [
+    "Total liabilities",
+    24587
+   ],
+   [
+    "Redeemable noncontrolling interests",
+    4917
+   ],
+   [
+    "Total equity",
+    31288
+   ],
+   [
+    "Total liabilities and equity",
+    60792
+   ]
+  ],
+  "ta": 60792,
+  "tl": 24587,
+  "rnci": 4917,
+  "te": 31288,
+  "tle": 60792
+ },
+ "organic": {
+  "organic_rev": 4125,
+  "organic_rev_cc": 4091,
+  "prior_rev": 3777,
+  "prior_organic_rev": 3748,
+  "prior_organic_rev_cc": 3748,
+  "items": [
+   [
+    "Market Intelligence acquisitions and divestitures",
+    -45
+   ],
+   [
+    "Indices acquisition",
+    -1
+   ],
+   [
+    "Fx impact (favorable)",
+    34
+   ]
+  ],
+  "seg": {
+   "MI": {
+    "rev": 1296,
+    "organic_rev": 1251,
+    "organic_rev_cc": 1244,
+    "prior_organic": 1170
+   },
+   "RAT": {
+    "rev": 1302,
+    "organic_rev_cc": 1281,
+    "prior_organic": 1149
+   },
+   "CI": {
+    "rev": 652,
+    "organic_rev_cc": 651,
+    "prior_organic": 612
+   },
+   "MOB": {
+    "rev": 454,
+    "organic_rev_cc": 450,
+    "prior_organic": 420
+   },
+   "IDX": {
+    "rev": 519,
+    "organic_rev": 518,
+    "organic_rev_cc": 516,
+    "prior_organic": 445
+   }
+  }
+ },
+ "rev_type": {
+  "MI": {
+   "Subscription": 1052,
+   "Non-subscription / Transaction": 75,
+   "Non-transaction": 0,
+   "Asset-linked fees": 0,
+   "Sales usage-based royalties": 0,
+   "Recurring variable": 169
+  },
+  "RAT": {
+   "Subscription": 0,
+   "Non-subscription / Transaction": 712,
+   "Non-transaction": 590,
+   "Asset-linked fees": 0,
+   "Sales usage-based royalties": 0,
+   "Recurring variable": 0
+  },
+  "CI": {
+   "Subscription": 506,
+   "Non-subscription / Transaction": 109,
+   "Non-transaction": 0,
+   "Asset-linked fees": 0,
+   "Sales usage-based royalties": 37,
+   "Recurring variable": 0
+  },
+  "MOB": {
+   "Subscription": 372,
+   "Non-subscription / Transaction": 82,
+   "Non-transaction": 0,
+   "Asset-linked fees": 0,
+   "Sales usage-based royalties": 0,
+   "Recurring variable": 0
+  },
+  "IDX": {
+   "Subscription": 84,
+   "Non-subscription / Transaction": 0,
+   "Non-transaction": 0,
+   "Asset-linked fees": 339,
+   "Sales usage-based royalties": 96,
+   "Recurring variable": 0
+  },
+  "ELIM": {
+   "Subscription": 0,
+   "Non-subscription / Transaction": 0,
+   "Non-transaction": -52,
+   "Asset-linked fees": 0,
+   "Sales usage-based royalties": 0,
+   "Recurring variable": 0
+  },
+  "TOTAL": {
+   "Subscription": 2014,
+   "Non-subscription / Transaction": 978,
+   "Non-transaction": 538,
+   "Asset-linked fees": 339,
+   "Sales usage-based royalties": 133,
+   "Recurring variable": 169
+  }
+ },
+ "guidance": [
+  {
+   "item": "Reported revenue growth (%)",
+   "low": 6.3,
+   "high": 8.3,
+   "basis": "GAAP"
+  },
+  {
+   "item": "Organic, constant currency revenue growth (%)",
+   "low": 6.0,
+   "high": 8.0,
+   "basis": "adjusted"
+  },
+  {
+   "item": "Corporate unallocated expense ($m)",
+   "low": 220,
+   "high": 230,
+   "basis": "adjusted"
+  },
+  {
+   "item": "Deal-related amortization ($bn, ~)",
+   "low": 1.11,
+   "high": 1.11,
+   "basis": "adjusted"
+  },
+  {
+   "item": "Operating profit margin expansion (bps)",
+   "low": 10,
+   "high": 35,
+   "basis": "adjusted"
+  },
+  {
+   "item": "Operating profit margin expansion, excluding OSTTRA (bps)",
+   "low": 50,
+   "high": 75,
+   "basis": "adjusted"
+  },
+  {
+   "item": "Interest expense, net ($m)",
+   "low": 405,
+   "high": 415,
+   "basis": "adjusted"
+  },
+  {
+   "item": "Tax rate (%)",
+   "low": 22.0,
+   "high": 23.0,
+   "basis": "adjusted"
+  },
+  {
+   "item": "Diluted EPS ($)",
+   "low": 19.4,
+   "high": 19.65,
+   "basis": "adjusted"
+  },
+  {
+   "item": "Capital expenditures ($m)",
+   "low": 215,
+   "high": 225,
+   "basis": "GAAP"
+  }
+ ]
+}

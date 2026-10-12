@@ -1,0 +1,267 @@
+{
+ "period": "Q3-15",
+ "fy": 2015,
+ "q": 3,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000114420415062339/v423467_ex99.htm",
+  "release_date": "2015-11-03",
+  "doc": "2015-11-03_8-K_0001144204-15-062339_v423467_ex99.txt"
+ },
+ "notes": [
+  "Non-GAAP adjustments are printed per segment (pre-tax) and only in aggregate after tax (items_total_*); per-item after-tax amounts are not published, so item 'net' is omitted and check_rec's start_ni + items_net check differs by exactly items_total_net.",
+  "Segment renamed 'S&P Capital IQ and SNL' (SNL Financial acquired Sep-2015) -> code CIQ.",
+  "IS 'Other (income) loss' = '\u2014' this quarter (gain_disp 0).",
+  "Segment expense table total (878) excludes unallocated expense; IS expenses 914.",
+  "Ratings adjustment 86 = legal settlement charges partially offset by insurance recoveries (printed net only). CIQ & SNL 32 = SNL acquisition-related costs.",
+  "Exhibit 9 (supplemental, not part of the headline measure): Adjusted EBITDA 565 = adjusted OP 528 + depreciation 20 + amortization 17; adjusted diluted EPS excluding amortization expense 1.22 (after-tax amortization 11; total 336).",
+  "S&P Dow Jones Indices Adjusted Net Operating Profit (attributable) = 80 (adjusted OP 106 less NCI 26).",
+  "Organic revenue: Total Adjusted Revenue 1,293 vs 1,263 prior (+2%).",
+  "FCF excluding items 776 = FCF -497 + legal/regulatory settlement payments 1,624 - insurance recoveries 101 - tax benefit 250."
+ ],
+ "is": {
+  "rev": 1324,
+  "exp": 914,
+  "gain_disp": 0,
+  "op": 410,
+  "int": 30,
+  "ebt": 380,
+  "tax": 99,
+  "ni_cont": 281,
+  "disc": 0,
+  "ni": 281,
+  "nci": 29,
+  "ni_attr": 252,
+  "ni_attr_cont": 252,
+  "eps_b": 0.93,
+  "eps_d": 0.92,
+  "eps_d_cont": 0.92,
+  "sh_b": 271.3,
+  "sh_d": 274.4,
+  "sh_end": 270.3,
+  "other_lines": [
+   [
+    "Other (income) loss",
+    0
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "S&P Ratings Services",
+   "code": "RAT",
+   "rev": 587,
+   "exp": 393,
+   "op": 194,
+   "nongaap": 86,
+   "adj_op": 280
+  },
+  {
+   "name": "S&P Capital IQ and SNL",
+   "code": "CIQ",
+   "rev": 356,
+   "exp": 303,
+   "op": 53,
+   "nongaap": 32,
+   "adj_op": 85
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 156,
+   "exp": 50,
+   "op": 106,
+   "nongaap": 0,
+   "adj_op": 106
+  },
+  {
+   "name": "Commodities & Commercial Markets",
+   "code": "CC",
+   "rev": 248,
+   "exp": 155,
+   "op": 93,
+   "nongaap": 0,
+   "adj_op": 93
+  }
+ ],
+ "seg_other": {
+  "elim": -23,
+  "corp": 36,
+  "corp_nongaap": 0,
+  "adj_corp": 36,
+  "seg_op_total": 446,
+  "adj_seg_op_total": 564
+ },
+ "ngaap": {
+  "adj_op": 528,
+  "adj_ni": 325,
+  "adj_eps": 1.19,
+  "start_ni": 252,
+  "start_eps": 0.92,
+  "start_basis": "cont",
+  "items": [
+   {
+    "label": "Legal settlement charges partially offset by legal settlement insurance recoveries",
+    "seg": "RAT",
+    "pre": 86,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Acquisition-related costs related to the acquisition of SNL",
+    "seg": "CIQ",
+    "pre": 32,
+    "cat": "ACQ"
+   }
+  ],
+  "items_total_pre": 118,
+  "items_total_net": 73,
+  "items_total_ps": 0.27,
+  "adj_tax": 144,
+  "adj_int": 30,
+  "definition": "adjusted diluted EPS from continuing operations"
+ },
+ "cfpub": {
+  "ytd_months": 9,
+  "cfo": -356,
+  "capex": 74,
+  "nci_dist": 67,
+  "fcf_pub": -497,
+  "fcf_items": [
+   [
+    "Payment of legal and regulatory settlements",
+    1624
+   ],
+   [
+    "Legal settlement insurance recoveries",
+    -101
+   ],
+   [
+    "Tax benefit from legal settlements",
+    -250
+   ]
+  ],
+  "adj_fcf_pub": 776
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and cash equivalents",
+    1441
+   ],
+   [
+    "Other current assets",
+    1395
+   ],
+   [
+    "Total current assets",
+    2836
+   ],
+   [
+    "Property and equipment, net",
+    237
+   ],
+   [
+    "Goodwill",
+    2968
+   ],
+   [
+    "Other intangible assets, net",
+    1881
+   ],
+   [
+    "Other non-current assets",
+    241
+   ],
+   [
+    "Total assets",
+    8163
+   ],
+   [
+    "Unearned revenue",
+    1453
+   ],
+   [
+    "Other current liabilities",
+    1052
+   ],
+   [
+    "Long-term debt",
+    3489
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    655
+   ],
+   [
+    "Total liabilities",
+    6649
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    810
+   ],
+   [
+    "Total equity",
+    704
+   ],
+   [
+    "Total liabilities and equity",
+    8163
+   ]
+  ],
+  "ta": 8163,
+  "tl": 6649,
+  "rnci": 810,
+  "te": 704,
+  "tle": 8163
+ },
+ "organic": {
+  "organic_rev": 1293,
+  "organic_rev_base": 1263,
+  "seg": {
+   "CIQ": {
+    "rev": 356,
+    "organic_rev": 335,
+    "organic_rev_base": 311
+   },
+   "CC": {
+    "rev": 248,
+    "organic_rev": 238,
+    "organic_rev_base": 227
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Subscription / Non-Transaction": 343,
+   "Non-Subscription / Transaction": 244
+  },
+  "CIQ": {
+   "Subscription / Non-Transaction": 322,
+   "Non-Subscription / Transaction": 34
+  },
+  "IDX": {
+   "Subscription / Non-Transaction": 32,
+   "Non-Subscription / Transaction": 124
+  },
+  "CC": {
+   "Subscription / Non-Transaction": 165,
+   "Non-Subscription / Transaction": 83
+  },
+  "ELIM": {
+   "Subscription / Non-Transaction": -23,
+   "Non-Subscription / Transaction": 0
+  },
+  "TOTAL": {
+   "Subscription / Non-Transaction": 839,
+   "Non-Subscription / Transaction": 485
+  }
+ },
+ "guidance": [
+  {
+   "item": "Adjusted diluted EPS",
+   "low": 4.45,
+   "high": 4.5,
+   "basis": "FY2015; increased"
+  }
+ ]
+}

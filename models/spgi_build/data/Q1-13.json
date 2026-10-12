@@ -1,0 +1,356 @@
+{
+ "period": "Q1-13",
+ "fy": 2013,
+ "q": 1,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000114420413024851/v343076_ex99.htm",
+  "release_date": "2013-04-30",
+  "doc": "2013-04-30_8-K_0001144204-13-024851_v343076_ex99.txt"
+ },
+ "notes": [
+  "Gain on sale of McGraw-Hill Education (612) in discontinued operations; disc = 581 (loss 31 + gain 612).",
+  "is.nci = 20 computed (21 continuing less 1 NCI loss in discontinued).",
+  "Segment name \"Commodities & Commercial Markets\" (was \"Commodities & Commercial\").",
+  "S&P DJI net operating profit attributable to the Company = 49 (Exhibit 7; NCI 18). No segment adjustments this quarter.",
+  "Adjustments all in unallocated expense: legal settlements ~77 (Abu Dhabi / King County) and 44 separation costs (about half non-cash; incl. $21m professional fees).",
+  "Adjusted diluted EPS total = 2.85.",
+  "Release prints only aggregate pre-tax / after-tax non-GAAP adjustments; per-item after-tax amounts are not published, so items[].net is null and check_rec start_ni + items_net = adj_ni cannot tie from items. Aggregates are in items_total_pre/net/ps.",
+  "Cash-flow signs as printed (outflows negative). corp/adj_corp are positive costs; corp_nongaap is the add-back to unallocated expense."
+ ],
+ "is": {
+  "rev": 1181,
+  "exp": 903,
+  "op": 278,
+  "int": 15,
+  "ebt": 263,
+  "tax": 89,
+  "ni_cont": 174,
+  "disc": 581,
+  "ni": 755,
+  "nci": 20,
+  "ni_attr": 735,
+  "ni_attr_cont": 153,
+  "eps_b": 2.62,
+  "eps_d": 2.59,
+  "eps_d_cont": 0.54,
+  "sh_b": 280.5,
+  "sh_d": 284.3,
+  "other_lines": [
+   [
+    "Loss from discontinued operations",
+    -31
+   ],
+   [
+    "Gain on sale of discontinued operations",
+    612
+   ],
+   [
+    "Less: net income attributable to noncontrolling interests - continuing",
+    -21
+   ],
+   [
+    "Less: net loss attributable to noncontrolling interests - discontinued",
+    1
+   ],
+   [
+    "Income from discontinued operations attributable to MHP",
+    582
+   ],
+   [
+    "Basic EPS - continuing operations",
+    0.55
+   ],
+   [
+    "Basic EPS - discontinued operations",
+    2.07
+   ],
+   [
+    "Diluted EPS - discontinued operations",
+    2.05
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "S&P Ratings",
+   "code": "RAT",
+   "rev": 561,
+   "exp": 302,
+   "op": 259,
+   "nongaap": 0,
+   "adj_op": 259
+  },
+  {
+   "name": "S&P Capital IQ",
+   "code": "CIQ",
+   "rev": 288,
+   "exp": 232,
+   "op": 56,
+   "nongaap": 0,
+   "adj_op": 56
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 115,
+   "exp": 48,
+   "op": 67,
+   "nongaap": 0,
+   "adj_op": 67
+  },
+  {
+   "name": "Commodities & Commercial Markets",
+   "code": "CC",
+   "rev": 236,
+   "exp": 174,
+   "op": 62,
+   "nongaap": 0,
+   "adj_op": 62
+  }
+ ],
+ "seg_other": {
+  "elim": -19,
+  "corp": 166,
+  "corp_nongaap": 121,
+  "adj_corp": 45,
+  "seg_op_total": 444,
+  "adj_seg_op_total": 444
+ },
+ "ngaap": {
+  "adj_op": 399,
+  "adj_ni": 228,
+  "adj_eps": 0.8,
+  "start_ni": 153,
+  "start_eps": 0.54,
+  "start_basis": "cont",
+  "definition": "adjusted diluted EPS from continuing operations",
+  "adj_tax": 135,
+  "adj_int": 15,
+  "items_total_pre": 121,
+  "items_total_net": 75,
+  "items_total_ps": 0.26,
+  "adj_eps_total": 2.85,
+  "items": [
+   {
+    "label": "Pre-tax legal settlements (approximately $77 million)",
+    "seg": "CORP",
+    "pre": 77,
+    "net": null,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Costs necessary to enable the separation of MHE (professional fees and other non-recurring costs)",
+    "seg": "CORP",
+    "pre": 44,
+    "net": null,
+    "cat": "DISP"
+   }
+  ]
+ },
+ "cfpub": {
+  "ytd_months": 3,
+  "cfo": -47,
+  "capex": -22,
+  "nci_dist": -17,
+  "fcf_pub": -86,
+  "fcf_items": [
+   [
+    "Cash provided by operating activities",
+    -47
+   ],
+   [
+    "Capital expenditures",
+    -22
+   ],
+   [
+    "Dividends and other payments paid to noncontrolling interests",
+    -17
+   ]
+  ],
+  "dep": 23,
+  "amort": 12,
+  "sbc": 21
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and equivalents",
+    1905
+   ],
+   [
+    "Other current assets",
+    1276
+   ],
+   [
+    "Assets held for sale (a)",
+    0
+   ],
+   [
+    "Total current assets",
+    3181
+   ],
+   [
+    "Property and equipment, net",
+    345
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    2483
+   ],
+   [
+    "Other non-current assets",
+    261
+   ],
+   [
+    "Total assets",
+    6270
+   ],
+   [
+    "Short-term debt",
+    0
+   ],
+   [
+    "Unearned revenue",
+    1279
+   ],
+   [
+    "Other current liabilities",
+    1409
+   ],
+   [
+    "Liabilities held for sale (a)",
+    0
+   ],
+   [
+    "Long-term debt",
+    799
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    891
+   ],
+   [
+    "Total liabilities",
+    4378
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    810
+   ],
+   [
+    "Total equity",
+    1082
+   ],
+   [
+    "Total liabilities and equity",
+    6270
+   ]
+  ],
+  "ta": 6270,
+  "tl": 4378,
+  "rnci": 810,
+  "te": 1082,
+  "tle": 6270
+ },
+ "organic": {
+  "note": "No total organic table; segment adjusted revenue (Exhibit 7). Text: CIQ organic growth 3%.",
+  "seg": {
+   "CIQ": {
+    "rev": 288,
+    "adjustments": [
+     [
+      "Acquisitions (QuantHouse and CMA)",
+      -8,
+      0
+     ],
+     [
+      "Divestitures",
+      -2,
+      -5
+     ]
+    ],
+    "organic_rev": 278,
+    "organic_rev_base": 269,
+    "growth_pct": 3
+   },
+   "IDX": {
+    "rev": 115,
+    "adjustments": [
+     [
+      "Dow Jones Indices",
+      -29,
+      0
+     ]
+    ],
+    "organic_rev": 86,
+    "organic_rev_base": 79,
+    "growth_pct": 9
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-transaction": 297,
+   "Transaction": 264
+  },
+  "CIQ": {
+   "Subscription": 260,
+   "Non-subscription": 28
+  },
+  "IDX": {
+   "Subscription": 25,
+   "Non-subscription": 90
+  },
+  "CC": {
+   "Commodities Markets - Subscription": 125,
+   "Commodities Markets - Non-subscription": 5,
+   "Commercial Markets - Subscription": 38,
+   "Commercial Markets - Non-subscription": 68
+  },
+  "ELIM": {
+   "Subscription / Non-transaction": -19
+  },
+  "TOTAL": {
+   "Subscription / Non-transaction": 726,
+   "Non-subscription / Transaction": 455
+  }
+ },
+ "rev_geo": {
+  "RAT": {
+   "Domestic": 313,
+   "International": 248
+  },
+  "CIQ": {
+   "Domestic": 190,
+   "International": 98
+  },
+  "IDX": {
+   "Domestic": 88,
+   "International": 27
+  },
+  "Commodities Markets": {
+   "Domestic": 78,
+   "International": 52
+  },
+  "Commercial Markets": {
+   "Domestic": 102,
+   "International": 4
+  },
+  "ELIM": {
+   "Domestic": -10,
+   "International": -9
+  },
+  "TOTAL": {
+   "Domestic": 761,
+   "International": 420
+  }
+ },
+ "guidance": [
+  {
+   "item": "2013 adjusted diluted EPS",
+   "low": 3.1,
+   "high": 3.2,
+   "basis": "adjusted earnings per share guidance remains unchanged"
+  }
+ ]
+}

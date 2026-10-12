@@ -1,0 +1,500 @@
+{
+ "period": "Q4-22",
+ "fy": 2022,
+ "q": 4,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404023000055/a4q2022earningsrelease.htm",
+  "release_date": "2023-02-09",
+  "doc": "2023-02-09_8-K_0000064040-23-000055_a4q2022earningsrelease.txt"
+ },
+ "notes": [
+  "Post IHS Markit merger (closed 28-Feb-2022). Segments: MI, Ratings, Commodity Insights (CI), Mobility (MOB), Indices, Engineering Solutions (ES) + Equity in Income on Unconsolidated Subsidiaries line.",
+  "ENGINEERING SOLUTIONS classified as held for sale at 31-Dec-2022 (sale to KKR for ~$975m agreed 17-Jan-2023, expected close by end of Q2-2023); results remain in continuing operations (no discontinued operations). Balance sheet shows 'Assets/Liabilities of businesses held for sale' (2021 column re-presented for CGS/LCD).",
+  "Balance sheet line renamed 'Equity investments in unconsolidated subsidiaries'.",
+  "corp_nongaap / corp_deal_amort in add-back sign (reduce unallocated expense).",
+  "cfpub twelve months; capex and nci_dist recorded as positive outflows; adjusted FCF = 'Non-GAAP pro forma adjusted free cash flow excluding certain items' 3,955.",
+  "Three-month 2022 column is 'Adjusted' (actual scope; Divestitures line OP +1, NI +1); 2021 comparatives are non-GAAP pro forma adjusted.",
+  "IS 'Other expense (income), net' printed 17 = EXPENSE: oth_inc = -17. '(Gain) loss on extinguishment of debt, net' (7) = gain, kept in other_lines as +7; EBT 621 = 717 - 17 - 86 + 7; check_rec 'op+oth-int = ebt' fails by 7 for this reason.",
+  "Gain on dispositions printed (1) = gain: gain_disp = +1.",
+  "Segment expense table total 2,220 vs IS expenses 2,227.",
+  "MI deal amortization: Exhibit 4 footnote says $143m, Exhibit 5 prints 144 (used). Mobility 48 + 5 + 65 = 118 vs adjusted 117; Mobility footnote items sum 4 vs printed 5 (rounding).",
+  "Other expense (income) non-GAAP adjustment (13) (adjusted other expense 3; 17 - 13 = 4, rounding) has no footnote; recorded as item pre +13 (add-back), after-tax not printed.",
+  "RELEASE DOES NOT TIE: footnote after-tax items (incl. divestitures +1) sum to 154 vs aggregate 'Adjusted non-GAAP adjustments' 184 (+0.56/sh) + divestitures 1; difference 31 not explained by footnotes (the unfootnoted other-expense item and tax effects). 433 + 154 + 210 = 797 vs adjusted NI 827; 433 + 184 + 210 + 1 = 828 ~ 827. Footnote (i) Q4 tax benefit of $10m (annualized ETR differences) recorded as -10 (consistent with Q3-22 sign).",
+  "Indices adjusted operating profit attributable to the Company: 159 (adjusted NCI share 55).",
+  "Adjusted revenue -6% vs Q4-21 non-GAAP pro forma adjusted revenue, -5% constant currency (narrative)."
+ ],
+ "is": {
+  "rev": 2937,
+  "exp": 2227,
+  "gain_disp": 1,
+  "eq_inc": 6,
+  "op": 717,
+  "oth_inc": -17,
+  "int": 86,
+  "ebt": 621,
+  "tax": 127,
+  "ni": 494,
+  "nci": 61,
+  "ni_attr": 433,
+  "eps_b": 1.34,
+  "eps_d": 1.33,
+  "sh_b": 323.9,
+  "sh_d": 325.2,
+  "sh_end": 321.9,
+  "other_lines": [
+   [
+    "(Gain) loss on extinguishment of debt, net",
+    7
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 1037,
+   "exp": 915,
+   "op": 122,
+   "nongaap": 59,
+   "deal_amort": 144,
+   "adj_op": 326,
+   "divest": 1
+  },
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 705,
+   "exp": 385,
+   "op": 320,
+   "nongaap": 16,
+   "deal_amort": 2,
+   "adj_op": 338
+  },
+  {
+   "name": "Commodity Insights",
+   "code": "CI",
+   "rev": 451,
+   "exp": 301,
+   "op": 150,
+   "nongaap": 17,
+   "deal_amort": 34,
+   "adj_op": 201
+  },
+  {
+   "name": "Mobility",
+   "code": "MOB",
+   "rev": 345,
+   "exp": 297,
+   "op": 48,
+   "nongaap": 5,
+   "deal_amort": 65,
+   "adj_op": 117
+  },
+  {
+   "name": "Indices",
+   "code": "IDX",
+   "rev": 344,
+   "exp": 149,
+   "op": 195,
+   "nongaap": 10,
+   "deal_amort": 9,
+   "adj_op": 214
+  },
+  {
+   "name": "Engineering Solutions",
+   "code": "ES",
+   "rev": 99,
+   "exp": 86,
+   "op": 13,
+   "nongaap": 0,
+   "deal_amort": 2,
+   "adj_op": 15
+  }
+ ],
+ "seg_other": {
+  "elim": -44,
+  "corp": 137,
+  "corp_nongaap": 114,
+  "corp_deal_amort": 3,
+  "adj_corp": 20,
+  "eq_inc": 6,
+  "eq_nongaap": 0,
+  "eq_deal_amort": 13,
+  "adj_eq_inc": 19,
+  "seg_op_total": 848,
+  "adj_seg_op_total": 1212,
+  "seg_divest": 1
+ },
+ "ngaap": {
+  "basis": "adjusted (actual scope, excluding divested businesses)",
+  "adj_op": 1211,
+  "adj_ni": 827,
+  "adj_eps": 2.54,
+  "start_ni": 433,
+  "start_eps": 1.33,
+  "start_basis": "total",
+  "items": [
+   {
+    "label": "Employee severance charges",
+    "seg": "MI",
+    "pre": 46,
+    "net": 35,
+    "cat": "SEVER"
+   },
+   {
+    "label": "IHS Markit merger costs",
+    "seg": "MI",
+    "pre": 14,
+    "net": 11,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Gain on dispositions",
+    "seg": "MI",
+    "pre": -1,
+    "net": -1,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "RAT",
+    "pre": 11,
+    "net": 8,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Legal costs",
+    "seg": "RAT",
+    "pre": 5,
+    "net": 4,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "IHS Markit merger costs",
+    "seg": "CI",
+    "pre": 10,
+    "net": 7,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "CI",
+    "pre": 7,
+    "net": 5,
+    "cat": "SEVER"
+   },
+   {
+    "label": "IHS Markit merger costs",
+    "seg": "MOB",
+    "pre": 2,
+    "net": 2,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "MOB",
+    "pre": 1,
+    "net": 1,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Acquisition-related cost",
+    "seg": "MOB",
+    "pre": 1,
+    "net": 1,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "IDX",
+    "pre": 10,
+    "net": 8,
+    "cat": "SEVER"
+   },
+   {
+    "label": "IHS Markit merger costs",
+    "seg": "CORP",
+    "pre": 69,
+    "net": 53,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "CORP",
+    "pre": 20,
+    "net": 15,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Acquisition-related costs",
+    "seg": "CORP",
+    "pre": 1,
+    "net": 1,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Disposition-related costs",
+    "seg": "CORP",
+    "pre": 24,
+    "net": 18,
+    "cat": "DISP"
+   },
+   {
+    "label": "Gain on the extinguishment of debt",
+    "seg": "NONOP",
+    "pre": -7,
+    "net": -5,
+    "cat": "NONOP"
+   },
+   {
+    "label": "Non-GAAP adjustment to other expense (income), net (no footnote)",
+    "seg": "NONOP",
+    "pre": 13,
+    "cat": "NONOP"
+   },
+   {
+    "label": "Tax benefit due to annualized effective tax rate differences for GAAP",
+    "seg": "TAX",
+    "net": -10,
+    "cat": "TAX"
+   },
+   {
+    "label": "Divestitures (contribution of divested businesses excluded)",
+    "seg": "OTHER",
+    "pre": 1,
+    "net": 1,
+    "cat": "OTHER"
+   }
+  ],
+  "items_total_pre": 221,
+  "items_total_net": 184,
+  "items_total_ps": 0.56,
+  "deal_amort_pre": 272,
+  "deal_amort_net": 210,
+  "deal_amort_ps": 0.64,
+  "adj_tax": 234,
+  "adj_tax_items": 44,
+  "adj_tax_deal_amort": 62,
+  "adj_oth_inc": -3,
+  "adj_int": 86,
+  "adj_nci": 61,
+  "definition": "adjusted diluted EPS (non-GAAP pro forma adjusted for comparatives)"
+ },
+ "cfpub": {
+  "ytd_months": 12,
+  "cfo": 2603,
+  "capex": 89,
+  "nci_dist": 270,
+  "fcf_pub": 2244,
+  "fcf_items": [
+   [
+    "IHS Markit merger costs",
+    727
+   ],
+   [
+    "Tax on gain from sale of divestitures",
+    704
+   ],
+   [
+    "S&P Global Foundation grant",
+    200
+   ],
+   [
+    "Debt financing derivative",
+    85
+   ],
+   [
+    "IHS Markit operating cash outflow prior to acquisition",
+    -15
+   ],
+   [
+    "Russia suspension costs",
+    10
+   ]
+  ],
+  "adj_fcf_pub": 3955
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash, cash equivalents, and restricted cash",
+    1287
+   ],
+   [
+    "Other current assets",
+    3082
+   ],
+   [
+    "Assets of businesses held for sale",
+    1298
+   ],
+   [
+    "Total current assets",
+    5667
+   ],
+   [
+    "Property and equipment, net",
+    297
+   ],
+   [
+    "Right of use assets",
+    423
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    52851
+   ],
+   [
+    "Equity investments in unconsolidated subsidiaries",
+    1752
+   ],
+   [
+    "Other non-current assets",
+    794
+   ],
+   [
+    "Total assets",
+    61784
+   ],
+   [
+    "Short-term debt",
+    226
+   ],
+   [
+    "Unearned revenue",
+    3126
+   ],
+   [
+    "Other current liabilities",
+    2413
+   ],
+   [
+    "Liabilities of businesses held for sale",
+    234
+   ],
+   [
+    "Long-term debt",
+    10730
+   ],
+   [
+    "Lease liabilities \u2014 non-current",
+    577
+   ],
+   [
+    "Deferred tax liability \u2014 non-current",
+    4065
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    669
+   ],
+   [
+    "Total liabilities",
+    22040
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    3267
+   ],
+   [
+    "Total equity",
+    36477
+   ],
+   [
+    "Total liabilities and equity",
+    61784
+   ]
+  ],
+  "ta": 61784,
+  "tl": 22040,
+  "rnci": 3267,
+  "te": 36477,
+  "tle": 61784
+ },
+ "organic": {
+  "basis": "adjusted revenue vs prior-year non-GAAP pro forma adjusted revenue (no organic table published)",
+  "rev": 2937,
+  "divest_rev": 0,
+  "adj_rev": 2937,
+  "prior_pf_rev": 3124,
+  "prior_adj_rev_pf": 3138,
+  "rev_cc_organic_growth_pct": -5,
+  "seg": {
+   "MI": {
+    "rev": 1037,
+    "adj_rev": 1037,
+    "prior_adj_rev_pf": 1009
+   },
+   "RAT": {
+    "rev": 705,
+    "adj_rev": 705,
+    "prior_adj_rev_pf": 990
+   },
+   "CI": {
+    "rev": 451,
+    "adj_rev": 451,
+    "prior_adj_rev_pf": 433
+   },
+   "MOB": {
+    "rev": 345,
+    "adj_rev": 345,
+    "prior_adj_rev_pf": 316
+   },
+   "IDX": {
+    "rev": 344,
+    "adj_rev": 344,
+    "prior_adj_rev_pf": 330
+   },
+   "ES": {
+    "rev": 99,
+    "adj_rev": 99,
+    "prior_adj_rev_pf": 103
+   },
+   "ELIM": {
+    "rev": -44,
+    "adj_rev": -44,
+    "prior_adj_rev_pf": -43
+   }
+  }
+ },
+ "rev_type": {
+  "MI": {
+   "Subscription": 876,
+   "Non-subscription / Transaction": 52,
+   "Recurring variable": 109
+  },
+  "RAT": {
+   "Non-subscription / Transaction": 249,
+   "Non-transaction": 456
+  },
+  "CI": {
+   "Subscription": 404,
+   "Non-subscription / Transaction": 31,
+   "Sales usage-based royalties": 16
+  },
+  "MOB": {
+   "Subscription": 270,
+   "Non-subscription / Transaction": 75
+  },
+  "IDX": {
+   "Subscription": 68,
+   "Asset-linked fees": 220,
+   "Sales usage-based royalties": 56
+  },
+  "ES": {
+   "Subscription": 91,
+   "Non-subscription / Transaction": 8
+  },
+  "ELIM": {
+   "Non-transaction": -44
+  }
+ },
+ "guidance": [
+  {
+   "item": "2023 non-GAAP adjusted diluted EPS",
+   "low": 12.35,
+   "high": 12.55,
+   "basis": "adjusted; no 2023 GAAP guidance (timing of Engineering Solutions divestiture)"
+  }
+ ]
+}

@@ -1,0 +1,301 @@
+{
+ "period": "Q2-21",
+ "fy": 2021,
+ "q": 2,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404021000151/spgi2q2021-earningsrelease.htm",
+  "release_date": "2021-07-29",
+  "doc": "2021-07-29_8-K_0000064040-21-000151_spgi2q2021-earningsrelease.txt"
+ },
+ "notes": [
+  "Three-month column used. 'Other income, net' printed (22) = income: oth_inc = +22. Gain on dispositions \u2014 in Q2-21 (6M: 2).",
+  "Platts: OP 135 + 2 amortization = 137 vs published adjusted OP 136; Indices: 196 + 1 = 197 vs 198 (company rounding).",
+  "Indices adjusted operating profit attributable to the Company (Adjusted Indices Net Operating Profit): 146; NCI share 52.",
+  "IHS Markit merger costs: after-tax amount (53) printed larger than pre-tax (50) \u2014 as published.",
+  "UK tax rate change: $5m tax expense on revaluation of deferred tax liabilities (tax-only item, no pre-tax amount).",
+  "corp_nongaap / corp_deal_amort in add-back sign: adj_corp = corp - corp_nongaap - corp_deal_amort (86 - 53 - 0 = 33).",
+  "cfpub (six months YTD); capex and nci_dist recorded as positive outflows.",
+  "Guidance is adjusted only, stand-alone basis excluding IHS Markit merger; no GAAP guidance given."
+ ],
+ "is": {
+  "rev": 2106,
+  "exp": 952,
+  "gain_disp": 0,
+  "op": 1154,
+  "oth_inc": 22,
+  "int": 32,
+  "ebt": 1144,
+  "tax": 287,
+  "ni": 857,
+  "nci": 59,
+  "ni_attr": 798,
+  "eps_b": 3.31,
+  "eps_d": 3.3,
+  "sh_b": 240.8,
+  "sh_d": 241.8,
+  "sh_end": 241.0,
+  "other_lines": []
+ },
+ "seg": [
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 1073,
+   "exp": 344,
+   "op": 729,
+   "deal_amort": 2,
+   "adj_op": 731
+  },
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 555,
+   "exp": 375,
+   "op": 180,
+   "nongaap": 0,
+   "deal_amort": 16,
+   "adj_op": 196
+  },
+  {
+   "name": "Platts",
+   "code": "CI",
+   "rev": 236,
+   "exp": 101,
+   "op": 135,
+   "deal_amort": 2,
+   "adj_op": 136
+  },
+  {
+   "name": "Indices",
+   "code": "IDX",
+   "rev": 278,
+   "exp": 82,
+   "op": 196,
+   "deal_amort": 1,
+   "adj_op": 198
+  }
+ ],
+ "seg_other": {
+  "elim": -36,
+  "corp": 86,
+  "corp_nongaap": 53,
+  "corp_deal_amort": 0,
+  "adj_corp": 33,
+  "seg_op_total": 1240,
+  "adj_seg_op_total": 1262
+ },
+ "ngaap": {
+  "adj_op": 1228,
+  "adj_ni": 875,
+  "adj_eps": 3.62,
+  "start_ni": 798,
+  "start_eps": 3.3,
+  "start_basis": "total",
+  "items": [
+   {
+    "label": "IHS Markit merger costs",
+    "seg": "CORP",
+    "pre": 50,
+    "net": 53,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Lease impairment",
+    "seg": "CORP",
+    "pre": 3,
+    "net": 2,
+    "cat": "IMPAIR"
+   },
+   {
+    "label": "Tax expense on re-valuation of deferred tax liabilities related to a UK income tax rate change",
+    "seg": "TAX",
+    "net": 5,
+    "cat": "TAX"
+   }
+  ],
+  "items_total_pre": 53,
+  "items_total_net": 60,
+  "items_total_ps": 0.25,
+  "deal_amort_pre": 22,
+  "deal_amort_net": 17,
+  "deal_amort_ps": 0.07,
+  "adj_tax": 284,
+  "adj_tax_items": -8,
+  "adj_tax_deal_amort": 5,
+  "adj_oth_inc": 22,
+  "definition": "adjusted diluted EPS"
+ },
+ "cfpub": {
+  "ytd_months": 6,
+  "cfo": 1691,
+  "capex": 25,
+  "nci_dist": 118,
+  "fcf_pub": 1548,
+  "fcf_items": [
+   [
+    "IHS Markit merger costs",
+    77
+   ]
+  ],
+  "adj_fcf_pub": 1625
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash, cash equivalents, and restricted cash",
+    5221
+   ],
+   [
+    "Other current assets",
+    1711
+   ],
+   [
+    "Total current assets",
+    6932
+   ],
+   [
+    "Property and equipment, net",
+    268
+   ],
+   [
+    "Right of use assets",
+    446
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    5030
+   ],
+   [
+    "Other non-current assets",
+    722
+   ],
+   [
+    "Total assets",
+    13398
+   ],
+   [
+    "Unearned revenue",
+    2099
+   ],
+   [
+    "Other current liabilities",
+    1216
+   ],
+   [
+    "Long-term debt",
+    4112
+   ],
+   [
+    "Lease liabilities \u2014 non-current",
+    496
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    1039
+   ],
+   [
+    "Total liabilities",
+    8962
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    3105
+   ],
+   [
+    "Total equity",
+    1331
+   ],
+   [
+    "Total liabilities and equity",
+    13398
+   ]
+  ],
+  "ta": 13398,
+  "tl": 8962,
+  "rnci": 3105,
+  "te": 1331,
+  "tle": 13398
+ },
+ "organic": {
+  "rev": 2106,
+  "adjustments": [
+   [
+    "Ratings acquisitions",
+    0
+   ],
+   [
+    "Market Intelligence divestitures",
+    0
+   ]
+  ],
+  "organic_rev": 2106,
+  "organic_rev_cc": 2079,
+  "prior_rev": 1943,
+  "prior_organic_rev": 1941,
+  "seg": {
+   "RAT": {
+    "rev": 1073,
+    "organic_rev": 1073,
+    "prior_organic_rev": 1006
+   },
+   "MI": {
+    "rev": 555,
+    "organic_rev": 555,
+    "prior_organic_rev": 514
+   },
+   "CI": {
+    "rev": 236,
+    "organic_rev": 236,
+    "prior_organic_rev": 217
+   },
+   "IDX": {
+    "rev": 278,
+    "organic_rev": 278,
+    "prior_organic_rev": 240
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-Subscription / Transaction": 615,
+   "Non-Transaction": 458
+  },
+  "MI": {
+   "Non-Subscription / Transaction": 15,
+   "Subscription": 540
+  },
+  "CI": {
+   "Non-Subscription / Transaction": 3,
+   "Subscription": 217,
+   "Sales Usage-Based Royalties": 16
+  },
+  "IDX": {
+   "Subscription": 48,
+   "Asset-Linked Fees": 195,
+   "Sales Usage-Based Royalties": 35
+  },
+  "ELIM": {
+   "Non-Transaction": -36
+  }
+ },
+ "guidance": [
+  {
+   "item": "Adjusted diluted EPS (stand-alone, excl. merger)",
+   "low": 12.95,
+   "high": 13.15,
+   "basis": "adjusted"
+  },
+  {
+   "item": "Free cash flow excluding certain items ($bn)",
+   "low": 3.5,
+   "high": 3.6,
+   "basis": "adjusted"
+  },
+  {
+   "item": "Reported revenue growth",
+   "low": null,
+   "high": null,
+   "basis": "GAAP; \"increase high single-digits\""
+  }
+ ]
+}

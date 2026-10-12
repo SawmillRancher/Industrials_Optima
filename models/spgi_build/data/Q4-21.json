@@ -1,0 +1,375 @@
+{
+ "period": "Q4-21",
+ "fy": 2021,
+ "q": 4,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404022000051/a4q2021earningsrelease.htm",
+  "release_date": "2022-02-08",
+  "doc": "2022-02-08_8-K_0000064040-22-000051_a4q2021earningsrelease.txt"
+ },
+ "notes": [
+  "Three-month column used. Gain on dispositions printed (7) = gain: gain_disp = +7; 'Other income, net' (11) = income: oth_inc = +11.",
+  "Segment expense table total (1,184) is net of the 7 gain on dispositions (IS expenses 1,191).",
+  "Market Intelligence: footnote items (gain -1, severance 3, acquisition-related 2, lease-related 1) sum to 5 vs 'Non-GAAP adjustments' printed 6 (rounding).",
+  "Indices adjusted operating profit attributable to the Company ('Adjusted Net Operating Profit'): 145; NCI share 54.",
+  "Footnote after-tax items sum to 70 vs aggregate 'Non-GAAP adjustments' line 73 ($0.30/sh) \u2014 company rounding of many small items; 675 + 70 + 15 = 760 vs adjusted NI 762 (check_rec tolerance 1.5 exceeded by rounding only; 675 + 73 + 15 = 763 ~ 762).",
+  "IHS Markit merger costs Q4: $96m pre-tax, $60m after-tax (FY $249m / $204m; Q1-Q3 after-tax 41+53+51 = 145).",
+  "corp_nongaap / corp_deal_amort in add-back sign: adj_corp = corp - corp_nongaap - corp_deal_amort.",
+  "cfpub twelve months (FY); capex and nci_dist recorded as positive outflows. Adjusted FCF line printed as 'Free cash flow excluding above items'.",
+  "'Lease-related costs' / 'recovery of lease-related costs' categorised OTHER (not impairments); 'lease impairment' categorised IMPAIR.",
+  "No guidance in this release: 'The Company will provide 2022 guidance for the combined company after the merger is completed.'",
+  "Q4-21 release prints no constant-currency organic revenue line."
+ ],
+ "is": {
+  "rev": 2088,
+  "exp": 1191,
+  "gain_disp": 7,
+  "op": 904,
+  "oth_inc": 11,
+  "int": 25,
+  "ebt": 890,
+  "tax": 153,
+  "ni": 737,
+  "nci": 62,
+  "ni_attr": 675,
+  "eps_b": 2.8,
+  "eps_d": 2.79,
+  "sh_b": 241.0,
+  "sh_d": 242.1,
+  "sh_end": 241.0,
+  "other_lines": [
+   [
+    "Loss on extinguishment of debt",
+    0
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "Ratings",
+   "code": "RAT",
+   "rev": 989,
+   "exp": 414,
+   "op": 575,
+   "nongaap": -7,
+   "deal_amort": 2,
+   "adj_op": 570
+  },
+  {
+   "name": "Market Intelligence",
+   "code": "MI",
+   "rev": 584,
+   "exp": 415,
+   "op": 169,
+   "nongaap": 6,
+   "deal_amort": 16,
+   "adj_op": 191
+  },
+  {
+   "name": "Platts",
+   "code": "CI",
+   "rev": 249,
+   "exp": 124,
+   "op": 125,
+   "nongaap": -2,
+   "deal_amort": 2,
+   "adj_op": 125
+  },
+  {
+   "name": "Indices",
+   "code": "IDX",
+   "rev": 303,
+   "exp": 104,
+   "op": 199,
+   "nongaap": -1,
+   "deal_amort": 1,
+   "adj_op": 199
+  }
+ ],
+ "seg_other": {
+  "elim": -37,
+  "corp": 164,
+  "corp_nongaap": 115,
+  "corp_deal_amort": 0,
+  "adj_corp": 49,
+  "seg_op_total": 1068,
+  "adj_seg_op_total": 1085
+ },
+ "ngaap": {
+  "adj_op": 1036,
+  "adj_ni": 762,
+  "adj_eps": 3.15,
+  "start_ni": 675,
+  "start_eps": 2.79,
+  "start_basis": "total",
+  "items": [
+   {
+    "label": "Gain on disposition",
+    "seg": "RAT",
+    "pre": -6,
+    "net": -5,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Recovery of lease-related costs",
+    "seg": "RAT",
+    "pre": -4,
+    "net": -3,
+    "cat": "OTHER"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "RAT",
+    "pre": 3,
+    "net": 2,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Gain on disposition",
+    "seg": "MI",
+    "pre": -1,
+    "net": -1,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "MI",
+    "pre": 3,
+    "net": 2,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Acquisition-related costs",
+    "seg": "MI",
+    "pre": 2,
+    "net": 1,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Lease-related costs",
+    "seg": "MI",
+    "pre": 1,
+    "net": 1,
+    "cat": "OTHER"
+   },
+   {
+    "label": "Recovery of lease-related costs",
+    "seg": "CI",
+    "pre": -2,
+    "net": -1,
+    "cat": "OTHER"
+   },
+   {
+    "label": "Recovery of lease-related costs",
+    "seg": "IDX",
+    "pre": -1,
+    "net": -1,
+    "cat": "OTHER"
+   },
+   {
+    "label": "IHS Markit merger costs",
+    "seg": "CORP",
+    "pre": 96,
+    "net": 60,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Employee severance charges",
+    "seg": "CORP",
+    "pre": 13,
+    "net": 10,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Lease-related costs",
+    "seg": "CORP",
+    "pre": 4,
+    "net": 2,
+    "cat": "OTHER"
+   },
+   {
+    "label": "Acquisition-related costs",
+    "seg": "CORP",
+    "pre": 2,
+    "net": 2,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Tax expense on re-valuation of deferred tax liabilities related to a UK income tax rate change",
+    "seg": "TAX",
+    "net": 2,
+    "cat": "TAX"
+   },
+   {
+    "label": "Tax benefit related to prior year divestitures",
+    "seg": "TAX",
+    "net": -1,
+    "cat": "TAX"
+   }
+  ],
+  "items_total_pre": 110,
+  "items_total_net": 73,
+  "items_total_ps": 0.3,
+  "deal_amort_pre": 21,
+  "deal_amort_net": 15,
+  "deal_amort_ps": 0.06,
+  "adj_tax": 197,
+  "adj_tax_items": 37,
+  "adj_tax_deal_amort": 7,
+  "adj_oth_inc": 11,
+  "definition": "adjusted diluted EPS"
+ },
+ "cfpub": {
+  "ytd_months": 12,
+  "cfo": 3598,
+  "capex": 35,
+  "nci_dist": 227,
+  "fcf_pub": 3336,
+  "fcf_items": [
+   [
+    "IHS Markit merger costs",
+    178
+   ]
+  ],
+  "adj_fcf_pub": 3514
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash, cash equivalents, and restricted cash",
+    6505
+   ],
+   [
+    "Other current assets",
+    2305
+   ],
+   [
+    "Total current assets",
+    8810
+   ],
+   [
+    "Property and equipment, net",
+    241
+   ],
+   [
+    "Right of use assets",
+    426
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    4791
+   ],
+   [
+    "Other non-current assets",
+    758
+   ],
+   [
+    "Total assets",
+    15026
+   ],
+   [
+    "Unearned revenue",
+    2217
+   ],
+   [
+    "Other current liabilities",
+    1598
+   ],
+   [
+    "Long-term debt",
+    4114
+   ],
+   [
+    "Lease liabilities \u2014 non-current",
+    492
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    1069
+   ],
+   [
+    "Total liabilities",
+    9490
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    3429
+   ],
+   [
+    "Total equity",
+    2107
+   ],
+   [
+    "Total liabilities and equity",
+    15026
+   ]
+  ],
+  "ta": 15026,
+  "tl": 9490,
+  "rnci": 3429,
+  "te": 2107,
+  "tle": 15026
+ },
+ "organic": {
+  "rev": 2088,
+  "adjustments": [
+   [
+    "Ratings acquisitions",
+    0
+   ],
+   [
+    "Market Intelligence divestitures",
+    0
+   ]
+  ],
+  "organic_rev": 2088,
+  "prior_rev": 1867,
+  "prior_organic_rev": 1867,
+  "seg": {
+   "RAT": {
+    "rev": 989,
+    "organic_rev": 989,
+    "prior_organic_rev": 881
+   },
+   "MI": {
+    "rev": 584,
+    "organic_rev": 584,
+    "prior_organic_rev": 542
+   },
+   "CI": {
+    "rev": 249,
+    "organic_rev": 249,
+    "prior_organic_rev": 223
+   },
+   "IDX": {
+    "rev": 303,
+    "organic_rev": 303,
+    "prior_organic_rev": 257
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-Subscription / Transaction": 504,
+   "Non-Transaction": 485
+  },
+  "MI": {
+   "Non-Subscription / Transaction": 16,
+   "Subscription": 568
+  },
+  "CI": {
+   "Non-Subscription / Transaction": 7,
+   "Subscription": 226,
+   "Sales Usage-Based Royalties": 16
+  },
+  "IDX": {
+   "Subscription": 51,
+   "Asset-Linked Fees": 210,
+   "Sales Usage-Based Royalties": 42
+  },
+  "ELIM": {
+   "Non-Transaction": -37
+  }
+ },
+ "guidance": []
+}

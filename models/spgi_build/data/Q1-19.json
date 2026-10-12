@@ -1,0 +1,94 @@
+{
+  "period": "Q1-19",
+  "fy": 2019,
+  "q": 1,
+  "sources": {
+    "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404019000127/spgi1q2019earningsrelease.htm",
+    "release_date": "2019-05-02",
+    "doc": "2019-05-02_8-K_0000064040-19-000127_spgi1q2019earningsrelease.txt"
+  },
+  "notes": [
+    "Income statement prints 'Other expense (income), net' = 103 (expense) -> oth_inc = -103; it includes the $113m pre-tax pension settlement charge.",
+    "Segment OP note: in Q4-2018 Trucost moved from Indices to Market Intelligence; history revised by the company.",
+    "Indices adjusted operating profit attributable to the Company (Adjusted Net Operating Profit) = 111 (adj OP 151 less NCI 40); GAAP OP attributable to the Company = 109 (text).",
+    "Non-GAAP adjustments printed only in aggregate: OP 7 (Kensho retention), other expense -113 (pension) -> pre-tax total 120 is computed (7 + 113), not printed as one line; tax on non-GAAP adjustments 29; after tax 90 ($0.36). Footnote after-tax amounts: Kensho $5m, pension $85m.",
+    "Free cash flow excluding certain items 306 = FCF 255 + settlement of prior-year tax audits 50 + payment of legal settlements 1.",
+    "Organic revenue: total adjusted revenue (ex acquisitions) 1,561 vs 1,565 prior; organic revenue constant currency 1,575 vs 1,565 (+1%)."
+  ],
+  "is": {
+    "rev": 1571, "exp": 866, "op": 705, "oth_inc": -103, "int": 36, "ebt": 566, "tax": 113,
+    "ni": 453, "nci": 43, "ni_attr": 410, "eps_b": 1.66, "eps_d": 1.65,
+    "sh_b": 246.7, "sh_d": 248.3, "sh_end": 246.1,
+    "other_lines": []
+  },
+  "seg": [
+    {"name": "Ratings", "code": "RAT", "rev": 696, "exp": 333, "op": 363, "nongaap": 0, "deal_amort": 1, "adj_op": 364},
+    {"name": "Market Intelligence", "code": "MI", "rev": 482, "exp": 337, "op": 145, "nongaap": 0, "deal_amort": 18, "adj_op": 163},
+    {"name": "Platts", "code": "CI", "rev": 207, "exp": 113, "op": 94, "nongaap": 0, "deal_amort": 3, "adj_op": 98},
+    {"name": "Indices", "code": "IDX", "rev": 217, "exp": 68, "op": 149, "nongaap": 0, "deal_amort": 1, "adj_op": 151}
+  ],
+  "seg_other": {
+    "elim": -31, "corp": 46, "corp_nongaap": 7, "corp_deal_amort": 8, "adj_corp": 32,
+    "seg_op_total": 751, "adj_seg_op_total": 775
+  },
+  "ngaap": {
+    "adj_op": 743, "adj_ni": 524, "adj_eps": 2.11, "start_ni": 410, "start_eps": 1.65, "start_basis": "total",
+    "items": [
+      {"label": "Kensho retention related expense", "seg": "CORP", "pre": 7, "net": 5, "cat": "ACQ"},
+      {"label": "Pension related charge", "seg": "NONOP", "pre": 113, "net": 85, "cat": "NONOP"}
+    ],
+    "items_total_net": 90, "items_total_ps": 0.36,
+    "deal_amort_pre": 32, "deal_amort_net": 24, "deal_amort_ps": 0.10,
+    "adj_tax": 150, "adj_int": 36, "adj_oth_inc": 10,
+    "definition": "adjusted diluted EPS"
+  },
+  "cfpub": {
+    "ytd_months": 3, "cfo": 293, "capex": 20, "nci_dist": 18, "fcf_pub": 255,
+    "fcf_items": [["Settlement of prior-year tax audits", 50], ["Payment of legal settlements", 1], ["Tax benefit from legal settlements", 0]],
+    "adj_fcf_pub": 306
+  },
+  "bs": {
+    "lines": [
+      ["Cash, cash equivalents, and restricted cash", 1436],
+      ["Other current assets", 1746],
+      ["Total current assets", 3182],
+      ["Property and equipment, net", 268],
+      ["Right of use assets", 675],
+      ["Goodwill and other intangible assets, net", 5025],
+      ["Other non-current assets", 570],
+      ["Total assets", 9720],
+      ["Unearned revenue", 1689],
+      ["Other current liabilities", 966],
+      ["Long-term debt", 3663],
+      ["Lease liabilities — non-current", 617],
+      ["Pension, other postretirement benefits and other non-current liabilities", 750],
+      ["Total liabilities", 7685],
+      ["Redeemable noncontrolling interest", 1647],
+      ["Total equity", 388],
+      ["Total liabilities and equity", 9720]
+    ],
+    "ta": 9720, "tl": 7685, "rnci": 1647, "te": 388, "tle": 9720
+  },
+  "organic": {
+    "organic_rev": 1561, "organic_rev_base": 1565,
+    "organic_rev_cc": 1575, "organic_rev_cc_base": 1565,
+    "seg": {
+      "RAT": {"rev": 696, "organic_rev": 694, "organic_rev_base": 747},
+      "MI": {"rev": 482, "organic_rev": 474, "organic_rev_base": 438}
+    }
+  },
+  "rev_type": {
+    "RAT": {"Non-Subscription / Transaction": 331, "Non-Transaction": 365, "Total revenue": 696},
+    "MI": {"Non-Subscription / Transaction": 10, "Subscription": 467, "Asset-Linked Fees": 5, "Total revenue": 482},
+    "CI": {"Non-Subscription / Transaction": 2, "Subscription": 191, "Sales Usage-Based Royalties": 14, "Total revenue": 207},
+    "IDX": {"Subscription": 40, "Asset-Linked Fees": 143, "Sales Usage-Based Royalties": 34, "Total revenue": 217},
+    "ELIM": {"Non-Transaction": -31, "Total revenue": -31}
+  },
+  "guidance": [
+    {"item": "GAAP diluted EPS", "low": 8.16, "high": 8.36, "basis": "FY2019 (changed from $8.50-$8.70)"},
+    {"item": "Deal-related amortization", "low": 0.38, "high": 0.38, "basis": "FY2019 per share"},
+    {"item": "Pension settlement charge", "low": 0.34, "high": 0.34, "basis": "FY2019 per share"},
+    {"item": "Compensation for replacement equity awards and retention plans", "low": 0.07, "high": 0.07, "basis": "FY2019 per share"},
+    {"item": "Non-GAAP diluted EPS", "low": 8.95, "high": 9.15, "basis": "FY2019 (unchanged)"}
+  ]
+}

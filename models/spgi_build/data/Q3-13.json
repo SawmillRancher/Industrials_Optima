@@ -1,0 +1,373 @@
+{
+ "period": "Q3-13",
+ "fy": 2013,
+ "q": 3,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000114420413056172/v357739_ex99.htm",
+  "release_date": "2013-10-22",
+  "doc": "2013-10-22_8-K_0001144204-13-056172_v357739_ex99.txt"
+ },
+ "notes": [
+  "is.gain_disp = printed operating line \"Other income\" (24): gains on the sale of Aviation Week and of India Index Services (CRISIL equity investment) net of the loss on sale of Financial Communications (text: $27m of gains).",
+  "(Loss) on sale of discontinued operations (20) = MHE sale adjustment; disc = -20.",
+  "S&P DJI net operating profit attributable to the Company = 58 (Exhibit 8; NCI 22).",
+  "NCI adjustment +4 (NCI share of the CRISIL gain): adjusted NI continuing before NCI 248, attributable 222. Items: pre-tax -11, tax +6, continuing -17, attributable -13, per share (0.04).",
+  "Organic revenue first published at total level (Exhibit 8): 1,191 vs 1,102 (+8%).",
+  "Release prints only aggregate pre-tax / after-tax non-GAAP adjustments; per-item after-tax amounts are not published, so items[].net is null and check_rec start_ni + items_net = adj_ni cannot tie from items. Aggregates are in items_total_pre/net/ps.",
+  "Cash-flow signs as printed (outflows negative). corp/adj_corp are positive costs; corp_nongaap is the add-back to unallocated expense."
+ ],
+ "is": {
+  "rev": 1194,
+  "exp": 811,
+  "gain_disp": 24,
+  "op": 407,
+  "int": 14,
+  "ebt": 393,
+  "tax": 128,
+  "ni_cont": 265,
+  "disc": -20,
+  "ni": 245,
+  "nci": 30,
+  "ni_attr": 215,
+  "ni_attr_cont": 235,
+  "eps_b": 0.79,
+  "eps_d": 0.77,
+  "eps_d_cont": 0.84,
+  "sh_b": 272.8,
+  "sh_d": 278.8,
+  "other_lines": [
+   [
+    "Other income (operating)",
+    24
+   ],
+   [
+    "Income (loss) from discontinued operations",
+    0
+   ],
+   [
+    "(Loss) gain on sale of discontinued operations",
+    -20
+   ],
+   [
+    "Less: net income attributable to noncontrolling interests - continuing",
+    -30
+   ],
+   [
+    "(Loss) income from discontinued operations attributable to MHFI",
+    -20
+   ],
+   [
+    "Basic EPS - continuing operations",
+    0.86
+   ],
+   [
+    "Basic EPS - discontinued operations",
+    -0.07
+   ],
+   [
+    "Diluted EPS - discontinued operations",
+    -0.07
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "S&P Ratings",
+   "code": "RAT",
+   "rev": 540,
+   "exp": 297,
+   "op": 243,
+   "nongaap": -16,
+   "adj_op": 227
+  },
+  {
+   "name": "S&P Capital IQ",
+   "code": "CIQ",
+   "rev": 293,
+   "exp": 239,
+   "op": 54,
+   "nongaap": 5,
+   "adj_op": 59
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 124,
+   "exp": 44,
+   "op": 80,
+   "nongaap": 0,
+   "adj_op": 80
+  },
+  {
+   "name": "Commodities & Commercial Markets",
+   "code": "CC",
+   "rev": 255,
+   "exp": 164,
+   "op": 91,
+   "nongaap": -9,
+   "adj_op": 82
+  }
+ ],
+ "seg_other": {
+  "elim": -18,
+  "corp": 61,
+  "corp_nongaap": 9,
+  "adj_corp": 52,
+  "seg_op_total": 468,
+  "adj_seg_op_total": 448
+ },
+ "ngaap": {
+  "adj_op": 396,
+  "adj_ni": 222,
+  "adj_eps": 0.8,
+  "start_ni": 235,
+  "start_eps": 0.84,
+  "start_basis": "cont",
+  "definition": "adjusted diluted EPS from continuing operations",
+  "adj_tax": 134,
+  "adj_int": 14,
+  "items_total_pre": -11,
+  "items_total_net": -13,
+  "items_total_ps": -0.04,
+  "adj_eps_total": 0.8,
+  "nci_adj": 4,
+  "items": [
+   {
+    "label": "Gain on the sale of an equity investment held by CRISIL (India Index Services)",
+    "seg": "RAT",
+    "pre": -16,
+    "net": null,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Loss on the sale of Financial Communications and restructuring charges",
+    "seg": "CIQ",
+    "pre": 5,
+    "net": null,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Gain on the sale of Aviation Week and restructuring charges",
+    "seg": "CC",
+    "pre": -9,
+    "net": null,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Growth and Value Plan related costs (professional fees, restructuring and other non-recurring costs)",
+    "seg": "CORP",
+    "pre": 9,
+    "net": null,
+    "cat": "DISP"
+   }
+  ]
+ },
+ "cfpub": {
+  "ytd_months": 9,
+  "cfo": 499,
+  "capex": -55,
+  "nci_dist": -56,
+  "fcf_pub": 388,
+  "fcf_items": [
+   [
+    "Cash provided by operating activities",
+    499
+   ],
+   [
+    "Capital expenditures",
+    -55
+   ],
+   [
+    "Dividends and other payments paid to noncontrolling interests",
+    -56
+   ]
+  ],
+  "dep": 65,
+  "amort": 38,
+  "sbc": 73
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and equivalents",
+    1577
+   ],
+   [
+    "Other current assets",
+    1251
+   ],
+   [
+    "Assets held for sale (a)",
+    0
+   ],
+   [
+    "Total current assets",
+    2828
+   ],
+   [
+    "Property and equipment, net",
+    336
+   ],
+   [
+    "Goodwill and other intangible assets, net",
+    2429
+   ],
+   [
+    "Other non-current assets",
+    255
+   ],
+   [
+    "Total assets",
+    5848
+   ],
+   [
+    "Short-term debt",
+    0
+   ],
+   [
+    "Unearned revenue",
+    1240
+   ],
+   [
+    "Other current liabilities",
+    1119
+   ],
+   [
+    "Liabilities held for sale (a)",
+    0
+   ],
+   [
+    "Long-term debt",
+    799
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    865
+   ],
+   [
+    "Total liabilities",
+    4023
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    810
+   ],
+   [
+    "Total equity",
+    1015
+   ],
+   [
+    "Total liabilities and equity",
+    5848
+   ]
+  ],
+  "ta": 5848,
+  "tl": 4023,
+  "rnci": 810,
+  "te": 1015,
+  "tle": 5848
+ },
+ "organic": {
+  "organic_rev": 1191,
+  "organic_rev_base": 1102,
+  "growth_pct": 8,
+  "label": "Total Organic Revenue",
+  "adjustments": [
+   [
+    "Aviation Week",
+    -2,
+    -9
+   ],
+   [
+    "Product closures at S&P Capital IQ",
+    -1,
+    -5
+   ]
+  ],
+  "seg": {
+   "CIQ": {
+    "rev": 293,
+    "organic_rev": 292,
+    "organic_rev_base": 279,
+    "growth_pct": 5
+   },
+   "CC": {
+    "rev": 255,
+    "organic_rev": 253,
+    "organic_rev_base": 230,
+    "growth_pct": 10
+   },
+   "CC_Commercial_Markets": {
+    "rev": 113,
+    "organic_rev": 111,
+    "organic_rev_base": 109,
+    "growth_pct": 1
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Non-transaction": 313,
+   "Transaction": 227
+  },
+  "CIQ": {
+   "Subscription": 265,
+   "Non-subscription": 28
+  },
+  "IDX": {
+   "Subscription": 25,
+   "Non-subscription": 99
+  },
+  "CC": {
+   "Commodities Markets - Subscription": 128,
+   "Commodities Markets - Non-subscription": 14,
+   "Commercial Markets - Subscription": 36,
+   "Commercial Markets - Non-subscription": 77
+  },
+  "ELIM": {
+   "Subscription / Non-transaction": -18
+  },
+  "TOTAL": {
+   "Subscription / Non-transaction": 749,
+   "Non-subscription / Transaction": 445
+  }
+ },
+ "rev_geo": {
+  "RAT": {
+   "Domestic": 290,
+   "International": 250
+  },
+  "CIQ": {
+   "Domestic": 193,
+   "International": 100
+  },
+  "IDX": {
+   "Domestic": 99,
+   "International": 25
+  },
+  "Commodities Markets": {
+   "Domestic": 57,
+   "International": 85
+  },
+  "Commercial Markets": {
+   "Domestic": 82,
+   "International": 31
+  },
+  "ELIM": {
+   "Domestic": -9,
+   "International": -9
+  },
+  "TOTAL": {
+   "Domestic": 712,
+   "International": 482
+  }
+ },
+ "guidance": [
+  {
+   "item": "2013 adjusted diluted EPS",
+   "low": 3.25,
+   "high": 3.3,
+   "basis": "adjusted earnings per share guidance increased from $3.15 to $3.25"
+  }
+ ]
+}

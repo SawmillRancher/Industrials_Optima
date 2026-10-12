@@ -1,0 +1,362 @@
+{
+ "period": "Q2-16",
+ "fy": 2016,
+ "q": 2,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404016000088/spgi2q2016earningsrelease.htm",
+  "release_date": "2016-07-28",
+  "doc": "2016-07-28_8-K_0000064040-16-000088_spgi2q2016earningsrelease.txt"
+ },
+ "notes": [
+  "Non-GAAP adjustments are printed per segment (pre-tax) and only in aggregate after tax (items_total_*); per-item after-tax amounts are not published, so item 'net' is omitted and check_rec's start_ni + items_net check differs by exactly items_total_net.",
+  "Company renamed S&P Global Inc. (Apr-2016). Segments renamed: S&P Global Ratings (RAT), S&P Global Market Intelligence (MI), S&P Global Platts (CI; former Commodities & Commercial Markets, includes J.D. Power).",
+  "IS 'Other income' = '\u2014' this quarter (prior-year (11)). Segment expense table total (800) excludes unallocated; IS expenses 831.",
+  "Ratings adj -29 = insurance recoveries -37 + legal charges 3 + restructuring 6 (= -28; rounding); 396 - 29 + 1 = 368 vs printed adj OP 369. MI 93 + 8 + 18 = 119 vs printed 118 (rounding).",
+  "Platts disposition-related costs 2 (Exhibit 4 footnote d; Exhibit 5 footnote c gives no amount). Unallocated -3 = disposition-related reserve release; corp_nongaap add-back sign -3, adj_corp 34.",
+  "Adjusted effective tax rate 32.1% (text).",
+  "S&P Dow Jones Indices OP attributable to the Company 73 (text); Adjusted Net Operating Profit 74 (adj OP 101 less NCI 27).",
+  "Organic revenue: Total Adjusted Revenue 1,402 vs 1,341 (+4%); constant currency 1,403 vs 1,341 (+5%).",
+  "py_seg: 2015 comparative as presented here - same GAAP values as Q2-15 release; segments renamed (S&P Global Ratings / Market Intelligence / Platts) and adjusted OP recast to exclude deal-related amortization."
+ ],
+ "is": {
+  "rev": 1482,
+  "exp": 831,
+  "op": 651,
+  "int": 42,
+  "ebt": 609,
+  "tax": 197,
+  "ni": 412,
+  "nci": 29,
+  "ni_attr": 383,
+  "eps_b": 1.45,
+  "eps_d": 1.44,
+  "sh_b": 264.5,
+  "sh_d": 266.7,
+  "sh_end": 263.9,
+  "other_lines": [
+   [
+    "Other income",
+    0
+   ]
+  ]
+ },
+ "seg": [
+  {
+   "name": "S&P Global Ratings",
+   "code": "RAT",
+   "rev": 682,
+   "exp": 286,
+   "op": 396,
+   "nongaap": -29,
+   "deal_amort": 1,
+   "adj_op": 369
+  },
+  {
+   "name": "S&P Global Market Intelligence",
+   "code": "MI",
+   "rev": 416,
+   "exp": 323,
+   "op": 93,
+   "nongaap": 8,
+   "deal_amort": 18,
+   "adj_op": 118
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 153,
+   "exp": 53,
+   "op": 100,
+   "nongaap": 0,
+   "deal_amort": 1,
+   "adj_op": 101
+  },
+  {
+   "name": "S&P Global Platts",
+   "code": "CI",
+   "rev": 255,
+   "exp": 162,
+   "op": 93,
+   "nongaap": 2,
+   "deal_amort": 3,
+   "adj_op": 98
+  }
+ ],
+ "seg_other": {
+  "elim": -24,
+  "corp": 31,
+  "corp_nongaap": -3,
+  "corp_deal_amort": 0,
+  "adj_corp": 34,
+  "seg_op_total": 682,
+  "adj_seg_op_total": 686
+ },
+ "ngaap": {
+  "adj_op": 652,
+  "adj_ni": 385,
+  "adj_eps": 1.44,
+  "start_ni": 383,
+  "start_eps": 1.44,
+  "start_basis": "total",
+  "items": [
+   {
+    "label": "Legal settlement insurance recoveries",
+    "seg": "RAT",
+    "pre": -37,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Legal settlement charges",
+    "seg": "RAT",
+    "pre": 3,
+    "cat": "LEGAL"
+   },
+   {
+    "label": "Restructuring charges",
+    "seg": "RAT",
+    "pre": 6,
+    "cat": "SEVER"
+   },
+   {
+    "label": "Disposition-related costs",
+    "seg": "MI",
+    "pre": 8,
+    "cat": "DISP"
+   },
+   {
+    "label": "Disposition-related costs",
+    "seg": "CI",
+    "pre": 2,
+    "cat": "DISP"
+   },
+   {
+    "label": "Disposition-related reserve release",
+    "seg": "CORP",
+    "pre": -3,
+    "cat": "DISP"
+   }
+  ],
+  "items_total_pre": -22,
+  "items_total_net": -13,
+  "items_total_ps": -0.05,
+  "deal_amort_pre": 23,
+  "deal_amort_net": 15,
+  "deal_amort_ps": 0.06,
+  "adj_tax": 196,
+  "adj_int": 42,
+  "definition": "adjusted diluted EPS"
+ },
+ "cfpub": {
+  "ytd_months": 6,
+  "cfo": 571,
+  "capex": 36,
+  "nci_dist": 57,
+  "fcf_pub": 478,
+  "fcf_items": [
+   [
+    "Payment of legal and regulatory settlements",
+    108
+   ],
+   [
+    "Legal settlement insurance recoveries",
+    -52
+   ],
+   [
+    "Tax benefit from legal settlements",
+    -21
+   ]
+  ],
+  "adj_fcf_pub": 513
+ },
+ "bs": {
+  "lines": [
+   [
+    "Cash and cash equivalents",
+    1567
+   ],
+   [
+    "Other current assets",
+    1318
+   ],
+   [
+    "Assets of businesses held for sale",
+    574
+   ],
+   [
+    "Total current assets",
+    3459
+   ],
+   [
+    "Property and equipment, net",
+    242
+   ],
+   [
+    "Goodwill",
+    2882
+   ],
+   [
+    "Other intangible assets, net",
+    1483
+   ],
+   [
+    "Other non-current assets",
+    225
+   ],
+   [
+    "Total assets",
+    8291
+   ],
+   [
+    "Short-term debt",
+    309
+   ],
+   [
+    "Unearned revenue",
+    1460
+   ],
+   [
+    "Other current liabilities",
+    869
+   ],
+   [
+    "Liabilities of businesses held for sale",
+    207
+   ],
+   [
+    "Long-term debt",
+    3470
+   ],
+   [
+    "Pension, other postretirement benefits and other non-current liabilities",
+    631
+   ],
+   [
+    "Total liabilities",
+    6946
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    920
+   ],
+   [
+    "Total equity",
+    425
+   ],
+   [
+    "Total liabilities and equity",
+    8291
+   ]
+  ],
+  "ta": 8291,
+  "tl": 6946,
+  "rnci": 920,
+  "te": 425,
+  "tle": 8291
+ },
+ "organic": {
+  "organic_rev": 1402,
+  "organic_rev_base": 1341,
+  "organic_rev_cc": 1403,
+  "organic_rev_cc_base": 1341,
+  "seg": {
+   "MI": {
+    "rev": 416,
+    "organic_rev": 348,
+    "organic_rev_base": 323
+   },
+   "CI": {
+    "rev": 255,
+    "organic_rev": 243,
+    "organic_rev_base": 234
+   }
+  }
+ },
+ "rev_type": {
+  "RAT": {
+   "Subscription / Non-Transaction": 339,
+   "Asset Linked Fees": 0,
+   "Non-Subscription / Transaction": 343
+  },
+  "MI": {
+   "Subscription / Non-Transaction": 382,
+   "Asset Linked Fees": 0,
+   "Non-Subscription / Transaction": 34
+  },
+  "IDX": {
+   "Subscription / Non-Transaction": 32,
+   "Asset Linked Fees": 92,
+   "Non-Subscription / Transaction": 29
+  },
+  "CI": {
+   "Subscription / Non-Transaction": 175,
+   "Asset Linked Fees": 0,
+   "Non-Subscription / Transaction": 80
+  },
+  "ELIM": {
+   "Subscription / Non-Transaction": -24,
+   "Asset Linked Fees": 0,
+   "Non-Subscription / Transaction": 0
+  },
+  "TOTAL": {
+   "Subscription / Non-Transaction": 904,
+   "Asset Linked Fees": 92,
+   "Non-Subscription / Transaction": 486
+  }
+ },
+ "guidance": [
+  {
+   "item": "Adjusted diluted EPS",
+   "low": 5.05,
+   "high": 5.2,
+   "basis": "FY2016; increased by $0.05; reflects pending J.D. Power sale"
+  },
+  {
+   "item": "Revenue growth",
+   "low": null,
+   "high": null,
+   "basis": "FY2016; reduced to 'mid single-digit growth' due to J.D. Power sale"
+  }
+ ],
+ "py_seg": [
+  {
+   "name": "S&P Global Ratings",
+   "code": "RAT",
+   "rev": 658,
+   "exp": 297,
+   "op": 361,
+   "nongaap": -33,
+   "deal_amort": 1,
+   "adj_op": 330
+  },
+  {
+   "name": "S&P Global Market Intelligence",
+   "code": "MI",
+   "rev": 324,
+   "exp": 261,
+   "op": 63,
+   "nongaap": 12,
+   "deal_amort": 6,
+   "adj_op": 80
+  },
+  {
+   "name": "S&P Dow Jones Indices",
+   "code": "IDX",
+   "rev": 148,
+   "exp": 52,
+   "op": 96,
+   "nongaap": 0,
+   "deal_amort": 1,
+   "adj_op": 97
+  },
+  {
+   "name": "S&P Global Platts",
+   "code": "CI",
+   "rev": 234,
+   "exp": 147,
+   "op": 87,
+   "nongaap": 1,
+   "deal_amort": 3,
+   "adj_op": 91
+  }
+ ]
+}

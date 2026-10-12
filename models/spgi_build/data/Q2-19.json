@@ -1,0 +1,102 @@
+{
+  "period": "Q2-19",
+  "fy": 2019,
+  "q": 2,
+  "sources": {
+    "release": "https://www.sec.gov/Archives/edgar/data/64040/000006404019000159/spgi2q2019earningsrelease.htm",
+    "release_date": "2019-08-01",
+    "doc": "2019-08-01_8-K_0000064040-19-000159_spgi2q2019earningsrelease.txt"
+  },
+  "notes": [
+    "Income statement prints 'Other (income) expense, net' = (6) -> income -> oth_inc = +6.",
+    "Segment revenue table includes a 'Corporate' revenue line: 0 in Q2-19 (5 in Q2-18); not recorded as a segment.",
+    "Indices Adjusted Net Operating Profit (attributable to the Company) = 120 (adj OP 164 less NCI 44).",
+    "Non-GAAP adjustments printed in aggregate: OP 30 (Ratings 11, MI 1, Platts 1, Corporate 16), tax 7, after-tax 23 ($0.09). Sum of footnote after-tax amounts = 24 (9+1+1+4+5+4, computed) vs printed 23: company rounding; start_ni + item nets + amort = 602 vs adjusted 601 published.",
+    "Corporate non-GAAP adjustments 16 = Kensho retention 5 + severance 7 + lease impairment 5 = 17 computed vs 16 printed (rounding in release).",
+    "Market Intelligence organic table shows acquisitions (3) while the total organic table shows MI acquisitions (2); both as printed.",
+    "FCF and CF are six months year to date."
+  ],
+  "is": {
+    "rev": 1704, "exp": 891, "op": 813, "oth_inc": 6, "int": 37, "ebt": 782, "tax": 180,
+    "ni": 602, "nci": 47, "ni_attr": 555, "eps_b": 2.25, "eps_d": 2.24,
+    "sh_b": 246.1, "sh_d": 247.4, "sh_end": 246.3,
+    "other_lines": []
+  },
+  "seg": [
+    {"name": "Ratings", "code": "RAT", "rev": 801, "exp": 346, "op": 455, "nongaap": 11, "deal_amort": 1, "adj_op": 467},
+    {"name": "Market Intelligence", "code": "MI", "rev": 487, "exp": 340, "op": 147, "nongaap": 1, "deal_amort": 19, "adj_op": 167},
+    {"name": "Platts", "code": "CI", "rev": 213, "exp": 106, "op": 107, "nongaap": 1, "deal_amort": 3, "adj_op": 111},
+    {"name": "Indices", "code": "IDX", "rev": 235, "exp": 73, "op": 162, "nongaap": 0, "deal_amort": 1, "adj_op": 164}
+  ],
+  "seg_other": {
+    "elim": -32, "corp": 58, "corp_nongaap": 16, "corp_deal_amort": 7, "adj_corp": 35,
+    "seg_op_total": 871, "adj_seg_op_total": 909
+  },
+  "ngaap": {
+    "adj_op": 874, "adj_ni": 601, "adj_eps": 2.43, "start_ni": 555, "start_eps": 2.24, "start_basis": "total",
+    "items": [
+      {"label": "Employee severance charges", "seg": "RAT", "pre": 11, "net": 9, "cat": "SEVER"},
+      {"label": "Employee severance charges", "seg": "MI", "pre": 1, "net": 1, "cat": "SEVER"},
+      {"label": "Employee severance charges", "seg": "CI", "pre": 1, "net": 1, "cat": "SEVER"},
+      {"label": "Kensho retention related expense", "seg": "CORP", "pre": 5, "net": 4, "cat": "ACQ"},
+      {"label": "Employee severance charges", "seg": "CORP", "pre": 7, "net": 5, "cat": "SEVER"},
+      {"label": "Lease impairments", "seg": "CORP", "pre": 5, "net": 4, "cat": "IMPAIR"}
+    ],
+    "items_total_pre": 30, "items_total_net": 23, "items_total_ps": 0.09,
+    "deal_amort_pre": 31, "deal_amort_net": 23, "deal_amort_ps": 0.09,
+    "adj_tax": 195, "adj_int": 37, "adj_oth_inc": 6,
+    "definition": "adjusted diluted EPS"
+  },
+  "cfpub": {
+    "ytd_months": 6, "cfo": 1010, "capex": 46, "nci_dist": 59, "fcf_pub": 905,
+    "fcf_items": [["Settlement of prior-year tax audits", 50], ["Payment of legal settlements", 1], ["Tax benefit from legal settlements", 0]],
+    "adj_fcf_pub": 956
+  },
+  "bs": {
+    "lines": [
+      ["Cash, cash equivalents, and restricted cash", 1920],
+      ["Other current assets", 1774],
+      ["Total current assets", 3694],
+      ["Property and equipment, net", 280],
+      ["Right of use assets", 669],
+      ["Goodwill and other intangible assets, net", 4972],
+      ["Other non-current assets", 570],
+      ["Total assets", 10185],
+      ["Unearned revenue", 1709],
+      ["Other current liabilities", 990],
+      ["Long-term debt", 3664],
+      ["Lease liabilities — non-current", 621],
+      ["Pension, other postretirement benefits and other non-current liabilities", 741],
+      ["Total liabilities", 7725],
+      ["Redeemable noncontrolling interest", 1890],
+      ["Total equity", 570],
+      ["Total liabilities and equity", 10185]
+    ],
+    "ta": 10185, "tl": 7725, "rnci": 1890, "te": 570, "tle": 10185
+  },
+  "organic": {
+    "organic_rev": 1702, "organic_rev_base": 1609,
+    "organic_rev_cc": 1713, "organic_rev_cc_base": 1609,
+    "seg": {
+      "RAT": {"rev": 801, "organic_rev": 801, "organic_rev_base": 775},
+      "MI": {"rev": 487, "organic_rev": 484, "organic_rev_base": 449}
+    }
+  },
+  "rev_type": {
+    "RAT": {"Non-Subscription / Transaction": 429, "Non-Transaction": 372, "Total revenue": 801},
+    "MI": {"Non-Subscription / Transaction": 12, "Subscription": 471, "Asset-Linked Fees": 4, "Total revenue": 487},
+    "CI": {"Non-Subscription / Transaction": 3, "Subscription": 195, "Sales Usage-Based Royalties": 15, "Total revenue": 213},
+    "IDX": {"Subscription": 40, "Asset-Linked Fees": 159, "Sales Usage-Based Royalties": 36, "Total revenue": 235},
+    "CORP": {"Subscription": 0, "Total revenue": 0},
+    "ELIM": {"Non-Transaction": -32, "Total revenue": -32}
+  },
+  "guidance": [
+    {"item": "GAAP diluted EPS", "low": 8.20, "high": 8.35, "basis": "FY2019 (raised from $8.16-$8.36)"},
+    {"item": "Deal-related amortization", "low": 0.38, "high": 0.38, "basis": "FY2019 per share"},
+    {"item": "Pension settlement charge", "low": 0.35, "high": 0.35, "basis": "FY2019 per share"},
+    {"item": "Compensation for replacement equity awards and retention plans", "low": 0.08, "high": 0.08, "basis": "FY2019 per share"},
+    {"item": "Restructuring", "low": 0.07, "high": 0.07, "basis": "FY2019 per share"},
+    {"item": "Lease impairment", "low": 0.02, "high": 0.02, "basis": "FY2019 per share"},
+    {"item": "Non-GAAP diluted EPS", "low": 9.10, "high": 9.25, "basis": "FY2019 (raised from $8.95-$9.15)"}
+  ]
+}
