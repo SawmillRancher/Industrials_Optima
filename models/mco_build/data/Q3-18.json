@@ -1,0 +1,571 @@
+{
+ "period": "Q3-18",
+ "period_end": "2018-09-30",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1059556/000115752318002164/a51889491ex99_1.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1059556/000119312518314004/d603526d10q.htm"
+ },
+ "is": {
+  "rev": 1080.8,
+  "opex_operating": 306.3,
+  "sga": 260.3,
+  "dna": 46.1,
+  "restr": null,
+  "tot_exp": 614.0,
+  "oi": 466.8,
+  "int_net": -56.4,
+  "oth_nonop": 2.4,
+  "nonop_tot": -54.0,
+  "ebt": 412.8,
+  "tax": 100.8,
+  "ni_tot": 312.0,
+  "nci": 1.8,
+  "ni": 310.2,
+  "disc_ops": null,
+  "eps_b": 1.62,
+  "eps_d": 1.59,
+  "sh_b": 191.8,
+  "sh_d": 194.5,
+  "dps_decl": 0.44,
+  "other_op_lines": [
+   [
+    "Acquisition-Related Expenses",
+    1.3
+   ]
+  ],
+  "nonop_lines": [
+   [
+    "CCXI Gain",
+    0.0
+   ],
+   [
+    "Purchase price hedge gain",
+    0.0
+   ]
+  ]
+ },
+ "seg": {
+  "mis_lines": {
+   "Corporate Finance": 296.1,
+   "Structured Finance": 125.4,
+   "Financial Institutions": 119.5,
+   "Public, Project and Infrastructure Finance": 99.0,
+   "MIS Other": 4.8
+  },
+  "mis_ratings_total": null,
+  "mis_ext": 644.8,
+  "mis_interseg": 31.6,
+  "mis_recurring": 254.3,
+  "mis_transaction": 390.5,
+  "ma_lines": {
+   "Research, Data and Analytics": 282.6,
+   "Enterprise Risk Solutions": 113.0,
+   "Professional Services": 40.4
+  },
+  "ma_ext": 436.0,
+  "ma_interseg": 2.6,
+  "ma_recurring": 365.0,
+  "ma_transaction": 71.0,
+  "ma_arr": null,
+  "ma_arr_lines": {},
+  "elim": -34.2,
+  "mis_adj_oi": 388.7,
+  "ma_adj_oi": 125.5,
+  "mis_adj_om": 57.5,
+  "ma_adj_om": 28.6,
+  "mis_dna": 15.8,
+  "ma_dna": 30.3,
+  "mis_restr": null,
+  "ma_restr": null,
+  "mis_oi": 372.9,
+  "ma_oi": 93.9,
+  "seg_other_items": [
+   [
+    "Acquisition-Related Expenses",
+    0.0,
+    1.3
+   ]
+  ],
+  "us_rev": 559.6,
+  "intl_rev": 521.2,
+  "legacy": {
+   "Bureau van Dijk Stand-alone Performance - Revenue": 83.7,
+   "Bureau van Dijk Stand-alone Performance - Direct expenses": 60.8,
+   "Bureau van Dijk Stand-alone Performance - Operating income": 22.9,
+   "Bureau van Dijk Stand-alone Performance - Depreciation and amortization": 18.1,
+   "Bureau van Dijk Stand-alone Performance - Adjusted operating income": 41.0,
+   "Bureau van Dijk Stand-alone Performance - Operating margin": 27.4,
+   "Bureau van Dijk Stand-alone Performance - Adjusted operating margin": 49.0
+  },
+  "seg_note": "Two reportable segments: MIS (LOBs CFG, SFG, FIG, PPIF, MIS Other) and MA (LOBs RD&A, ERS, PS). Revenue by LOB = external revenue (release Table 2); MIS intersegment = royalty charged to MA; MA intersegment = fees charged to MIS; elim = Eliminations column of the release segment table (revenue row). Segment Adjusted Operating Income, adjusted margins, D&A, restructuring, other items and segment operating income from the release \"Financial Information by Segment\" table (segment revenue there includes intersegment). mis_recurring / ma_recurring = \"Relationship\" revenue and *_transaction = \"Transaction\" revenue from release \"Transaction and Relationship Revenue\" table. mis_ratings_total not shown (null). ASC 606 adopted 1-Jan-2018 (modified retrospective; prior periods not restated; impact immaterial)."
+ },
+ "ngaap": {
+  "adj_oi_pub": 514.2,
+  "adj_om_pub": 47.6,
+  "adj_oi_items": [
+   [
+    "Depreciation & amortization",
+    46.1
+   ],
+   [
+    "Acquisition-Related Expenses",
+    1.3
+   ]
+  ],
+  "adj_ni_pub": 329.4,
+  "adj_eps_pub": 1.69,
+  "eps_bridge_start": 1.59,
+  "eps_bridge": [
+   [
+    "Pre-Tax Acquisition-Related Expenses",
+    0.01
+   ],
+   [
+    "Tax on Acquisition-Related Expenses",
+    -0.01
+   ],
+   [
+    "Pre-Tax Acquisition-Related Intangible Amortization Expenses",
+    0.13
+   ],
+   [
+    "Tax on Acquisition-Related Intangible Amortization Expenses",
+    -0.03
+   ],
+   [
+    "Impact of U.S. tax reform",
+    -0.33
+   ],
+   [
+    "Increase to non-U.S. UTPs",
+    0.33
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Acquisition-Related Expenses",
+    1.3,
+    0.9,
+    "op",
+    "ACQ"
+   ],
+   [
+    "Acquisition-Related Intangible Amortization Expenses",
+    24.6,
+    19.1,
+    "op",
+    "AMORT"
+   ],
+   [
+    "Impact of U.S. tax reform",
+    null,
+    -64.7,
+    "tax",
+    "TAXD"
+   ],
+   [
+    "Increase to non-U.S. UTPs",
+    null,
+    63.9,
+    "tax",
+    "TAXD"
+   ]
+  ],
+  "tax_items": [
+   [
+    "Impact of U.S. tax reform",
+    -64.7
+   ],
+   [
+    "Increase to non-U.S. UTPs",
+    63.9
+   ]
+  ],
+  "fcf_pub": 1021.7,
+  "occ": {
+   "mco": null,
+   "mis": null,
+   "ma": null
+  },
+  "guidance": "Table 13 - 2018 Outlook\nMoody's outlook for 2018 is based on assumptions about many\nmacroeconomic and capital market factors, including interest rates,\nforeign currency exchange rates, corporate profitability and business\ninvestment spending, merger and acquisitions, consumer borrowing and\nsecuritization, and the amount of debt issued. These assumptions are\nsubject to uncertainty, and results for the year could differ materially\nfrom our current outlook. Our guidance assumes foreign currency\ntranslation at end-of-quarter exchange rates. Specifically, our forecast\nreflects exchange rates for the British pound (£) of $1.30 to £1 and for\nthe euro (€) of $1.16 to €1.\nFull Year 2018 Moody's Corporation Guidance as of October 26, 2018\nMOODY'S CORPORATION | Current guidance | Last publicly disclosed guidance\nRevenue | increase in the high-single-digit percent range | NC\nOperating expenses | increase in the high-single-digit percent range | NC\nRestructuring | approximately $30 million - $40 million | N/A\nDepreciation & amortization | approximately $195 million | NC\nOperating margin | approximately 43% | approximately 44%\nAdjusted operating margin (1) | approximately 48% | 48% - 49%\nEffective tax rate | 22% - 23% | NC\nDiluted EPS | $6.95 to $7.10 | $7.20 to $7.40\nAdjusted Diluted EPS (1) | $7.50 to $7.65 | $7.65 to $7.85\nCapital expenditures | approximately $85 million | approximately $105 million\nOperating cash flow | approximately $1.6 billion | approximately $1.7 billion\nFree cash flow (1) | approximately $1.5 billion | approximately $1.6 billion\nShare repurchases | approximately $200 million (subject to available cash, market\nconditions and other ongoing capital allocation decisions) | NC\nN/A - Not applicable. Not previously disclosed.\nNC - There is no difference between the Company's current guidance\nand the last publicly disclosed guidance for this item.\nNote: All last publicly disclosed guidance is as of July 27, 2018.\n(1) These metrics are adjusted measures. See below for\nreconciliation of these measures to their comparable GAAP measure.\nFull Year 2018 Moody's Corporation Guidance as of October 26, 2018\nMIS | Current guidance | Last publicly disclosed guidance\nMIS global | increase in the low-single-digit percent range | increase in the mid-single-digit percent range\nMIS U.S. | approximately flat | increase in the low-single-digit percent range\nMIS non-U.S. | increase in the mid-single-digit percent range | NC\nCFG | approximately flat | increase in the low-single-digit percent range\nSFG | increase in the high-single-digit percent range | increase in the low-double-digit percent range\nFIG | increase in the mid-single-digit percent range | NC\nPPIF | decrease in the mid-single-digit percent range | NC\nMA\nMA global (2) | increase in the low-twenties percent range | NC\nMA U.S. | approximately 10% | increase in the high-single-digit percent range\nMA non-U.S. | increase in the low-thirties percent range | NC\nRD&A (2) | increase in the high-thirties percent range | NC\nERS | decrease in the low-single-digit percent range | NC\nPS | increase in the high-single-digit percent range | NC\nNC - There is no difference between the Company's current guidance\nand the last publicly disclosed guidance for this item.\nNote: All last publicly disclosed guidance is as of July 27, 2018.\n(2) Organic MA global revenue is still expected to increase in the\nhigh-single-digit percent range and organic RD&A revenue is still\nexpected to increase in the low-teens percent range.\nTable 13 - 2018 Outlook Continued\nThe following are reconciliations of the Company's adjusted forward\nlooking measures to their comparable GAAP measure:\nProjected for the Year Ended\nDecember 31, 2018\nOperating margin guidance | Approximately 43%\nDepreciation and amortization | Approximately 4%\nRestructuring | Approximately 1%\nAcquisition-Related Expenses | Negligible\nAdjusted operating margin guidance | Approximately 48%\nProjected for the Year Ended\nDecember 31, 2018\nOperating cash flow guidance | Approximately $1.6 billion\nLess: Capital expenditures | Approximately $85 million\nFree cash flow guidance | Approximately $1.5 billion\nProjected for the Year Ended\nDecember 31, 2018\nMA global revenue | Increase in the low-twenties percent range\n(Partial year impact of Bureau van Dijk)\nOrganic MA global revenue | Increase in the high-single-digit percent range\nProjected for the Year Ended\nDecember 31, 2018\nRD&A revenue | Increase in the high-thirties percent range\n(Partial year impact of Bureau van Dijk)\nOrganic RD&A revenue | Increase in the low-teens percent range\nProjected for the Year Ended\nDecember 31, 2018\nDiluted EPS | $6.95 to $7.10\nAcquisition-Related Intangible Amortization Expenses | Approximately $0.40\nRestructuring | $0.10 to $0.15\nAcquisition-Related Expenses | $0.02 to $0.03\nNet impact of U.S. tax reform | ($0.33)\nIncrease to non-U.S. UTPs | 0.33\nAdjusted diluted EPS | $7.50 to $7.65",
+  "notes": "Adjusted Operating Income excludes depreciation and amortization and Acquisition-Related Expenses. Adjusted Net Income and Adjusted Diluted EPS exclude the impact of amortization of acquired intangible assets, Acquisition-Related Expenses, the Purchase Price Hedge Gain, the CCXI Gain, the effects of U.S. tax reform and certain adjustments relating to the Company's non-U.S. uncertain tax positions (UTPs). The Company defines free cash flow as net cash provided by operating activities minus payments for capital additions. Organic (non-constant-currency) measures published: Organic MA revenue 399.1 vs 368.7 prior year, growth 8.0%; Organic RD&A revenue 246.1 vs 218.4, growth 13.0%. Adjusted EPS begins to exclude \"Impact of U.S. tax reform\" (-64.7) and \"Increase to non-U.S. UTPs\" (+63.9) in Q3-18. BvD stand-alone table published (Table 8). Adjusted Operating Income definition: OI excluding D&A and Acquisition-Related Expenses."
+ },
+ "cf": {
+  "ytd_months": 9,
+  "ni_tot": 1066.7,
+  "dna": 143.6,
+  "sbc": 100.0,
+  "deferred_tax": -75.3,
+  "cfo": 1084.6,
+  "capex": -62.9,
+  "acquisitions": -35.0,
+  "divest": 5.7,
+  "cfi": -113.8,
+  "debt_proceeds": 299.6,
+  "debt_repay": -750.0,
+  "buyback": -147.2,
+  "sbc_tax_withholding": -62.0,
+  "stock_plan_proceeds": 42.9,
+  "dividends": -252.9,
+  "div_nci": -4.0,
+  "cff": -980.2,
+  "fx": -27.3,
+  "net_change": -36.7,
+  "cash_begin": 1071.5,
+  "cash_end": 1034.8,
+  "cp_net": -104.8,
+  "lines_raw": [
+   [
+    "Net income",
+    1066.7
+   ],
+   [
+    "Depreciation and amortization",
+    143.6
+   ],
+   [
+    "Stock-based compensation",
+    100.0
+   ],
+   [
+    "CCXI Gain",
+    0.0
+   ],
+   [
+    "Purchase Price Hedge Gain",
+    0.0
+   ],
+   [
+    "Deferred income taxes",
+    -75.3
+   ],
+   [
+    "Accounts receivable",
+    22.5
+   ],
+   [
+    "Other current assets",
+    36.6
+   ],
+   [
+    "Other assets",
+    -7.4
+   ],
+   [
+    "Accounts payable and accrued liabilities",
+    -176.5
+   ],
+   [
+    "Deferred revenue",
+    -35.3
+   ],
+   [
+    "Unrecognized tax benefits and other non-current tax liabilities",
+    42.8
+   ],
+   [
+    "Other liabilities",
+    -33.1
+   ],
+   [
+    "Net cash provided by operating activities",
+    1084.6
+   ],
+   [
+    "Capital additions",
+    -62.9
+   ],
+   [
+    "Purchases of investments",
+    -142.5
+   ],
+   [
+    "Sales and maturities of investments",
+    120.9
+   ],
+   [
+    "Cash received upon disposal of a subsidiary, net of cash transferred to purchaser",
+    5.7
+   ],
+   [
+    "Cash paid for acquisitions, net of cash acquired",
+    -35.0
+   ],
+   [
+    "Receipts from Purchase Price Hedge",
+    0.0
+   ],
+   [
+    "Receipts from settlements of net investment hedges",
+    0.0
+   ],
+   [
+    "Net cash used in investing activities",
+    -113.8
+   ],
+   [
+    "Issuance of notes",
+    299.6
+   ],
+   [
+    "Repayment of notes",
+    -750.0
+   ],
+   [
+    "Issuance of commercial paper",
+    434.4
+   ],
+   [
+    "Repayment of commercial paper",
+    -539.2
+   ],
+   [
+    "Proceeds from stock-based compensation plans",
+    42.9
+   ],
+   [
+    "Repurchase of shares related to stock-based compensation",
+    -62.0
+   ],
+   [
+    "Treasury shares",
+    -147.2
+   ],
+   [
+    "Dividends",
+    -252.9
+   ],
+   [
+    "Dividends to noncontrolling interests",
+    -4.0
+   ],
+   [
+    "Payment for noncontrolling interest",
+    0.0
+   ],
+   [
+    "Debt issuance costs, extinguishment costs and related fees",
+    -1.8
+   ],
+   [
+    "Net cash (used in) provided by financing activities",
+    -980.2
+   ],
+   [
+    "Effect of exchange rate changes on cash and cash equivalents",
+    -27.3
+   ],
+   [
+    "Decrease in cash and cash equivalents",
+    -36.7
+   ],
+   [
+    "Cash and cash equivalents, beginning of period",
+    1071.5
+   ],
+   [
+    "Cash and cash equivalents, end of period",
+    1034.8
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 1034.8,
+  "sti": 110.7,
+  "ar": 1131.8,
+  "oca": 238.9,
+  "tca": 2516.2,
+  "ppe": 311.1,
+  "rou": null,
+  "goodwill": 3661.3,
+  "intang": 1517.6,
+  "dta": 189.3,
+  "onca": 243.6,
+  "ta": 8439.1,
+  "ap_accr": 581.6,
+  "cp": 24.9,
+  "cltd": 445.6,
+  "lease_cur": null,
+  "defrev": 771.5,
+  "ocl": 0.0,
+  "tcl": 1823.6,
+  "defrev_nc": 123.9,
+  "ltd": 4484.0,
+  "dtl": 354.8,
+  "utp": 471.8,
+  "lease_nc": null,
+  "ol": 574.9,
+  "tl": 7833.0,
+  "redeemable_nci": null,
+  "eq": 400.1,
+  "nci": 206.0,
+  "te": 606.1,
+  "tle": 8439.1,
+  "shares_out": 191.6,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    1034.8
+   ],
+   [
+    "Short-term investments",
+    110.7
+   ],
+   [
+    "Accounts receivable, net of allowances of $36.9 in 2018 and $36.6 in 2017",
+    1131.8
+   ],
+   [
+    "Other current assets",
+    238.9
+   ],
+   [
+    "Total current assets",
+    2516.2
+   ],
+   [
+    "Property and equipment, net of accumulated depreciation of $767.9 in 2018 and $706.0 in 2017",
+    311.1
+   ],
+   [
+    "Goodwill",
+    3661.3
+   ],
+   [
+    "Intangible assets, net",
+    1517.6
+   ],
+   [
+    "Deferred tax assets, net",
+    189.3
+   ],
+   [
+    "Other assets",
+    243.6
+   ],
+   [
+    "Total assets",
+    8439.1
+   ],
+   [
+    "Accounts payable and accrued liabilities",
+    581.6
+   ],
+   [
+    "Commercial paper",
+    24.9
+   ],
+   [
+    "Current portion of long-term debt",
+    445.6
+   ],
+   [
+    "Deferred revenue",
+    771.5
+   ],
+   [
+    "Total current liabilities",
+    1823.6
+   ],
+   [
+    "Non-current portion of deferred revenue",
+    123.9
+   ],
+   [
+    "Long-term debt",
+    4484.0
+   ],
+   [
+    "Deferred tax liabilities, net",
+    354.8
+   ],
+   [
+    "Uncertain tax positions",
+    471.8
+   ],
+   [
+    "Other liabilities",
+    574.9
+   ],
+   [
+    "Total liabilities",
+    7833.0
+   ],
+   [
+    "Contingencies (Note 16)",
+    0.0
+   ],
+   [
+    "Preferred stock, par value $.01 per share; 10,000,000 shares authorized; no shares issued and outstanding",
+    0.0
+   ],
+   [
+    "Series common stock, par value $.01 per share; 10,000,000 shares authorized; no shares issued and outstanding",
+    0.0
+   ],
+   [
+    "Common stock, par value $.01 per share; 1,000,000,000 shares authorized; 342,902,272 shares issued at September 30, 2018 and December 31, 2017, respectively.",
+    3.4
+   ],
+   [
+    "Capital surplus",
+    569.7
+   ],
+   [
+    "Retained earnings",
+    8429.1
+   ],
+   [
+    "Treasury stock, at cost; 151,293,579 and 151,932,157 shares of common stock at September 30, 2018 and December 31, 2017, respectively",
+    -8260.1
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -342.0
+   ],
+   [
+    "Total Moody's shareholders' equity (deficit)",
+    400.1
+   ],
+   [
+    "Noncontrolling interests",
+    206.0
+   ],
+   [
+    "Total shareholders' equity (deficit)",
+    606.1
+   ],
+   [
+    "Total liabilities, noncontrolling interests and shareholders' equity (deficit)",
+    8439.1
+   ]
+  ]
+ },
+ "py": {
+  "restated": true,
+  "notes": "Prior-year (2017) segment Adjusted Operating Income restated in the 2018 releases for ASU 2017-07 (pension non-service cost moved to non-operating; MIS/MA operating and SG&A expense reduced). Prior-year LOB revenue not restated (ASC 606 modified retrospective).",
+  "mis_lines": {
+   "Corporate Finance": 350.2,
+   "Structured Finance": 128.3,
+   "Financial Institutions": 102.1,
+   "Public, Project and Infrastructure Finance": 109.2,
+   "MIS Other": 4.4
+  },
+  "ma_lines": {
+   "Research, Data and Analytics": 218.4,
+   "Enterprise Risk Solutions": 112.6,
+   "Professional Services": 37.7
+  },
+  "mis_adj_oi": 405.9,
+  "ma_adj_oi": 95.7
+ },
+ "extra": {
+  "employees": null,
+  "acquisitions": [],
+  "divestitures": [],
+  "debt_maturities": [],
+  "amort_schedule": [],
+  "notes": null
+ },
+ "notes": "BS \"other\" buckets are sums of: oca=[Other current assets]; onca=[Other assets]; ol=[Other liabilities] cf.cp_net = Issuance of commercial paper + Repayment of commercial paper (computed). No Restructuring line on the IS face this period (restr null). dps_decl from 10-Q income statement (\"Dividends declared per share attributable to Moody's common shareholders\", three months). shares_out = release Table 3 \"Actual number of shares outstanding\" (191.6). cf.buyback = \"Treasury shares\" line only. All schema self-checks pass. XBRL cross-check (rev, oi, ni, eps_d, cfo, ta, as first filed): all match."
+}

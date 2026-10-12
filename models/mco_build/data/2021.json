@@ -1,0 +1,671 @@
+{
+ "period": "2021",
+ "period_end": "2021-12-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1059556/000115752322000174/a52577033ex99_1.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1059556/000105955622000012/mco-20211231.htm"
+ },
+ "is": {
+  "rev": 6218.0,
+  "opex_operating": 1637.0,
+  "sga": 1480.0,
+  "dna": 257.0,
+  "restr": 0.0,
+  "other_op_lines": [
+   [
+    "Loss pursuant to the divestiture of MAKS",
+    0.0
+   ]
+  ],
+  "tot_exp": 3374.0,
+  "oi": 2844.0,
+  "int_net": -171.0,
+  "oth_nonop": 82.0,
+  "nonop_lines": [],
+  "nonop_tot": -89.0,
+  "ebt": 2755.0,
+  "tax": 541.0,
+  "ni_tot": 2214.0,
+  "nci": 0.0,
+  "ni": 2214.0,
+  "disc_ops": null,
+  "eps_b": 11.88,
+  "eps_d": 11.78,
+  "sh_b": 186.4,
+  "sh_d": 187.9,
+  "dps_decl": 2.48
+ },
+ "seg": {
+  "mis_lines": {
+   "Corporate Finance": 2087.0,
+   "Financial Institutions": 602.0,
+   "Public, Project and Infrastructure Finance": 521.0,
+   "Structured Finance": 560.0,
+   "MIS Other": 42.0
+  },
+  "mis_ratings_total": null,
+  "mis_ext": 3812.0,
+  "mis_interseg": 165.0,
+  "mis_recurring": 1172.0,
+  "mis_transaction": 2640.0,
+  "ma_lines": {
+   "Research, Data and Analytics": 1745.0,
+   "Enterprise Risk Solutions": 661.0
+  },
+  "ma_ext": 2406.0,
+  "ma_interseg": 7.0,
+  "ma_recurring": 2236.0,
+  "ma_transaction": 170.0,
+  "ma_arr": null,
+  "ma_arr_lines": {},
+  "elim": -172.0,
+  "us_rev": 3416.0,
+  "intl_rev": 2802.0,
+  "legacy": {},
+  "mis_adj_oi": 2474.0,
+  "ma_adj_oi": 627.0,
+  "mis_adj_om": 62.2,
+  "ma_adj_om": 26.0,
+  "mis_dna": 72.0,
+  "ma_dna": 185.0,
+  "mis_restr": -1.0,
+  "ma_restr": 1.0,
+  "mis_oi": null,
+  "ma_oi": null,
+  "seg_other_items": [
+   [
+    "Loss pursuant to the divestiture of MAKS",
+    0.0,
+    0.0
+   ]
+  ],
+  "seg_note": "Two reportable segments, MIS and MA. MIS lines CFG / SFG / FIG / PPIF / MIS Other. MA lines RD&A / ERS (Professional Services no longer presented from Q1-21). Revenue lines, intersegment revenue and US / non-US from release Table 2; segment revenue elimination, Adjusted Operating Income, margins, D&A, restructuring, other items and segment operating income from release Table 6 (twelve-month block); transaction / recurring revenue from release Table 7 (mis/ma_recurring = \"Recurring\" column). ARR not published in 2020-2021 (null). mis_interseg = MIS intersegment royalty from MA; ma_interseg = MA intersegment revenue; elim = Table 6 revenue Eliminations column (both)."
+ },
+ "ngaap": {
+  "adj_oi_pub": 3101.0,
+  "adj_om_pub": 49.9,
+  "adj_oi_items": [
+   [
+    "Depreciation and amortization",
+    257.0
+   ],
+   [
+    "Restructuring",
+    0.0
+   ],
+   [
+    "Loss pursuant to the divestiture of MAKS",
+    0.0
+   ]
+  ],
+  "fcf_pub": 1866.0,
+  "fcf_cfo_pub": 2005.0,
+  "occ": {
+   "mco": null,
+   "mis": null,
+   "ma": null,
+   "ma_organic_growth_pct": 9.0,
+   "organic_detail": {
+    "MA revenue": {
+     "rev": 2406.0,
+     "py": 2079.0,
+     "growth_pct": 16.0
+    },
+    "Organic MA revenue": {
+     "rev": 2270.0,
+     "py": 2079.0,
+     "growth_pct": 9.0
+    },
+    "MA recurring revenue": {
+     "rev": 2236.0,
+     "py": 1882.0,
+     "growth_pct": 19.0
+    },
+    "Organic MA recurring revenue": {
+     "rev": 2106.0,
+     "py": 1882.0,
+     "growth_pct": 12.0
+    }
+   },
+   "note": "Moody's publishes organic (acquisition/divestiture-adjusted) MA revenue growth, not constant-currency growth; occ.mco/mis/ma left null."
+  },
+  "adj_ni_pub": 2309.0,
+  "adj_eps_pub": 12.29,
+  "eps_bridge_start": 11.78,
+  "eps_bridge": [
+   [
+    "Net Acquisition-Related Intangible Amortization Expenses",
+    0.65
+   ],
+   [
+    "Net restructuring",
+    0.0
+   ],
+   [
+    "Loss pursuant to the divestiture of MAKS",
+    0.0
+   ],
+   [
+    "Net non-cash gain relating to minority investment in BitSight",
+    -0.14
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Acquisition-Related Intangible Amortization Expenses",
+    158.0,
+    122.0,
+    "op",
+    "AMORT"
+   ],
+   [
+    "Restructuring",
+    0.0,
+    0.0,
+    "op",
+    "RESTR"
+   ],
+   [
+    "Loss pursuant to the divestiture of MAKS",
+    0.0,
+    0.0,
+    "op",
+    "GAIN"
+   ],
+   [
+    "Non-cash gain relating to minority investment in BitSight",
+    -36.0,
+    -27.0,
+    "nonop",
+    "GAIN"
+   ]
+  ],
+  "item_tax_effects": [
+   [
+    "Acquisition-Related Intangible Amortization Expenses",
+    -36.0
+   ],
+   [
+    "Restructuring",
+    0.0
+   ],
+   [
+    "Non-cash gain relating to minority investment in BitSight",
+    9.0
+   ]
+  ],
+  "tax_items": [],
+  "guidance": "Full Year 2022 Moody's Corporation Guidance as of February 10, 2022\nMOODY'S CORPORATION\nRevenue | Increase in the high-single-digit percent range\nOperating expenses | Increase in the low-double-digit percent range\nOperating margin | 44% to 45%\nAdjusted Operating Margin (1) | 49% to 50%\nInterest expense, net | $200 to $220 million\nEffective tax rate | 20.5% to 22.5%\nDiluted EPS | $11.50 to $12.00\nAdjusted Diluted EPS (1) | $12.40 to $12.90\nOperating cash flow | $2.45 to $2.65 billion\nFree Cash Flow (1) | $2.3 to $2.5 billion\nShare repurchases | At least $1.5 billion (subject to available cash, market conditions, M&A opportunities and other ongoing capital allocation\ndecisions)\nMoody's Investors Service (MIS)\nMIS global revenue | Increase in the low-single-digit percent range\nMIS Adjusted Operating Margin | Approximately 62%\nMoody's Analytics (MA)\nMA global revenue | Increase in the high-teens percent range\nMA Adjusted Operating Margin | Approximately 29%\n(1) These metrics are adjusted measures. See below for reconciliation of these measures to their comparable U.S. GAAP measure.\nTable 12 - 2022 Outlook Continued\nThe following are reconciliations of the Company's adjusted forward looking measures to their comparable U.S. GAAP measure:\nProjected for the Year Ended December 31, 2022\nOperating margin guidance | 44% to 45%\nDepreciation and amortization | Approximately 5.0%\nAdjusted Operating Margin guidance | 49% to 50%\nProjected for the Year Ended December 31, 2022\nOperating cash flow guidance | $2.45 to $2.65 billion\nLess: Capital expenditures | Approximately $150 million\nFree Cash Flow guidance | $2.3 to $2.5 billion\nProjected for the Year Ended December 31, 2022\nDiluted EPS guidance | $11.50 to $12.00\nAcquisition-Related Intangible Amortization | Approximately $0.90\nAdjusted Diluted EPS guidance | $12.40 to $12.90",
+  "notes": "Adjusted Operating Income excludes the impact of: i) depreciation and amortization; ii) restructuring; and iii) a loss pursuant to the divestiture of MAKS. Adjusted Net Income and Adjusted Diluted EPS exclude the impact of: i) amortization of acquired intangible assets; ii) restructuring charges; iii) a loss pursuant to the divestiture of MAKS; and iv) a non-cash gain relating to the Company’s minority investment in BitSight."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "ni_tot": 2214.0,
+  "dna": 257.0,
+  "sbc": 175.0,
+  "deferred_tax": -218.0,
+  "cfo": 2005.0,
+  "capex": -139.0,
+  "acquisitions": -2179.0,
+  "divest": 0.0,
+  "cfi": -2619.0,
+  "debt_proceeds": 1672.0,
+  "debt_repay": -500.0,
+  "cp_net": 0.0,
+  "buyback": -750.0,
+  "sbc_tax_withholding": -83.0,
+  "stock_plan_proceeds": 38.0,
+  "dividends": -463.0,
+  "div_nci": -5.0,
+  "cff": -122.0,
+  "fx": -50.0,
+  "net_change": -786.0,
+  "cash_begin": 2597.0,
+  "cash_end": 1811.0,
+  "lines_raw": [
+   [
+    "Net income",
+    2214.0
+   ],
+   [
+    "Depreciation and amortization",
+    257.0
+   ],
+   [
+    "Stock-based compensation",
+    175.0
+   ],
+   [
+    "Deferred income taxes",
+    -218.0
+   ],
+   [
+    "Prepayment penalty relating to early redemption of debt",
+    13.0
+   ],
+   [
+    "Non-cash gain related to minority interest in BitSight",
+    -36.0
+   ],
+   [
+    "Settlement of treasury rate lock",
+    0.0
+   ],
+   [
+    "ROU asset impairment & other non-cash restructuring/impairment charges",
+    0.0
+   ],
+   [
+    "Loss pursuant to the divestiture of MAKS",
+    0.0
+   ],
+   [
+    "Accounts receivable",
+    -257.0
+   ],
+   [
+    "Other current assets",
+    -12.0
+   ],
+   [
+    "Other assets",
+    -26.0
+   ],
+   [
+    "Lease obligations",
+    -11.0
+   ],
+   [
+    "Accounts payable and accrued liabilities",
+    80.0
+   ],
+   [
+    "Deferred revenue",
+    65.0
+   ],
+   [
+    "Unrecognized tax positions and other non-current tax liabilities",
+    -184.0
+   ],
+   [
+    "Other liabilities",
+    -55.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    2005.0
+   ],
+   [
+    "Capital additions",
+    -139.0
+   ],
+   [
+    "Purchases of investments",
+    -437.0
+   ],
+   [
+    "Sales and maturities of investments",
+    147.0
+   ],
+   [
+    "Cash received upon disposal of a business, net of cash transferred to purchaser",
+    0.0
+   ],
+   [
+    "Cash paid for acquisitions, net of cash acquired",
+    -2179.0
+   ],
+   [
+    "Receipts from settlements of net investment hedges",
+    37.0
+   ],
+   [
+    "Payments for settlements of net investment hedges",
+    -48.0
+   ],
+   [
+    "Net cash (used in) provided by investing activities",
+    -2619.0
+   ],
+   [
+    "Issuance of notes",
+    1672.0
+   ],
+   [
+    "Repayment of notes",
+    -500.0
+   ],
+   [
+    "Issuance of commercial paper",
+    0.0
+   ],
+   [
+    "Repayment of commercial paper",
+    0.0
+   ],
+   [
+    "Proceeds from stock-based compensation plans",
+    38.0
+   ],
+   [
+    "Repurchase of shares related to stock-based compensation",
+    -83.0
+   ],
+   [
+    "Treasury shares",
+    -750.0
+   ],
+   [
+    "Dividends",
+    -463.0
+   ],
+   [
+    "Dividends to noncontrolling interests",
+    -5.0
+   ],
+   [
+    "Payment for noncontrolling interest",
+    0.0
+   ],
+   [
+    "Debt issuance costs, extinguishment costs and related fees",
+    -31.0
+   ],
+   [
+    "Net cash used in financing activities",
+    -122.0
+   ],
+   [
+    "Effect of exchange rate changes on cash and cash equivalents",
+    -50.0
+   ],
+   [
+    "(Decrease) increase in cash and cash equivalents",
+    -786.0
+   ],
+   [
+    "Cash and cash equivalents, beginning of period",
+    2597.0
+   ],
+   [
+    "Cash and cash equivalents, end of period",
+    1811.0
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 1811.0,
+  "sti": 91.0,
+  "ar": 1720.0,
+  "oca": 389.0,
+  "tca": 4011.0,
+  "ppe": 347.0,
+  "rou": 438.0,
+  "goodwill": 5999.0,
+  "intang": 2467.0,
+  "dta": 384.0,
+  "onca": 1034.0,
+  "ta": 14680.0,
+  "ap_accr": 1142.0,
+  "cp": null,
+  "cltd": null,
+  "lease_cur": 105.0,
+  "defrev": 1249.0,
+  "ocl": null,
+  "tcl": 2496.0,
+  "defrev_nc": 86.0,
+  "ltd": 7413.0,
+  "dtl": 488.0,
+  "utp": 388.0,
+  "lease_nc": 455.0,
+  "ol": 438.0,
+  "tl": 11764.0,
+  "redeemable_nci": null,
+  "eq": 2727.0,
+  "nci": 189.0,
+  "te": 2916.0,
+  "tle": 14680.0,
+  "shares_out": 185.6,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    1811.0
+   ],
+   [
+    "Short-term investments",
+    91.0
+   ],
+   [
+    "Accounts receivable, net of allowances for credit losses of $ 32 in 2021 and $ 34 in 2020",
+    1720.0
+   ],
+   [
+    "Other current assets",
+    389.0
+   ],
+   [
+    "Total current assets",
+    4011.0
+   ],
+   [
+    "Property and equipment, net",
+    347.0
+   ],
+   [
+    "Operating lease right-of-use assets",
+    438.0
+   ],
+   [
+    "Goodwill",
+    5999.0
+   ],
+   [
+    "Intangible assets, net",
+    2467.0
+   ],
+   [
+    "Deferred tax assets, net",
+    384.0
+   ],
+   [
+    "Other assets",
+    1034.0
+   ],
+   [
+    "Total assets",
+    14680.0
+   ],
+   [
+    "Accounts payable and accrued liabilities",
+    1142.0
+   ],
+   [
+    "Current portion of operating lease liabilities",
+    105.0
+   ],
+   [
+    "Deferred revenue",
+    1249.0
+   ],
+   [
+    "Total current liabilities",
+    2496.0
+   ],
+   [
+    "Non-current portion of deferred revenue",
+    86.0
+   ],
+   [
+    "Long-term debt",
+    7413.0
+   ],
+   [
+    "Deferred tax liabilities, net",
+    488.0
+   ],
+   [
+    "Uncertain tax positions",
+    388.0
+   ],
+   [
+    "Operating lease liabilities",
+    455.0
+   ],
+   [
+    "Other liabilities",
+    438.0
+   ],
+   [
+    "Total liabilities",
+    11764.0
+   ],
+   [
+    "Series common stock, par value $ .01 per share; 10,000,000 shares authorized; no shares issued and outstanding",
+    0.0
+   ],
+   [
+    "Common stock, par value $ .01 per share; 1,000,000,000 shares authorized; 342,902,272 shares issued at December 31, 2021 and December 31, 2020, respectively.",
+    3.0
+   ],
+   [
+    "Capital surplus",
+    885.0
+   ],
+   [
+    "Retained earnings",
+    12762.0
+   ],
+   [
+    "Treasury stock, at cost; 157,262,484 and 155,808,563 shares of common stock at December 31, 2021 and December 31, 2020, respectively",
+    -10513.0
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -410.0
+   ],
+   [
+    "Total Moody’s shareholders’ equity",
+    2727.0
+   ],
+   [
+    "Noncontrolling interests",
+    189.0
+   ],
+   [
+    "Total shareholders’ equity",
+    2916.0
+   ],
+   [
+    "Total liabilities and shareholders’ equity",
+    14680.0
+   ]
+  ]
+ },
+ "py": {
+  "restated": false,
+  "notes": "Prior-year column agrees with the 2020 release as originally reported (MIS line order may differ).",
+  "mis_lines": {
+   "Corporate Finance": 1857.0,
+   "Financial Institutions": 530.0,
+   "Public, Project and Infrastructure Finance": 496.0,
+   "Structured Finance": 362.0,
+   "MIS Other": 47.0
+  },
+  "ma_lines": {
+   "Research, Data and Analytics": 1514.0,
+   "Enterprise Risk Solutions": 565.0
+  },
+  "mis_adj_oi": 2053.0,
+  "ma_adj_oi": 614.0
+ },
+ "extra": {
+  "employees": 13460,
+  "acquisitions": [
+   [
+    "Cortera",
+    "2021-03-19",
+    139,
+    "MA (RD&A)"
+   ],
+   [
+    "RMS (Risk Management Solutions)",
+    "2021-09-15",
+    1927,
+    "MA (ERS); goodwill $1,286m MA / $90m MIS"
+   ],
+   [
+    "RealXData",
+    "2021-09-17",
+    null,
+    "MA"
+   ],
+   [
+    "PassFort",
+    "2021-11-30",
+    158,
+    "MA (KYC)"
+   ],
+   [
+    "Bogard AB",
+    "2021-11",
+    null,
+    "MA (KYC)"
+   ]
+  ],
+  "divestitures": [],
+  "debt_maturities": [
+   [
+    "2022",
+    0.0
+   ],
+   [
+    "2023",
+    500.0
+   ],
+   [
+    "2024",
+    500.0
+   ],
+   [
+    "2025",
+    700.0
+   ],
+   [
+    "2026",
+    0.0
+   ],
+   [
+    "Thereafter",
+    5821.0
+   ]
+  ],
+  "amort_schedule": [
+   [
+    "2022",
+    191.0
+   ],
+   [
+    "2023",
+    189.0
+   ],
+   [
+    "2024",
+    185.0
+   ],
+   [
+    "2025",
+    180.0
+   ],
+   [
+    "2026",
+    177.0
+   ],
+   [
+    "Thereafter",
+    1545.0
+   ]
+  ],
+  "notes": "Cortera $139m = $138m cash + $1m adjustment; RMS $1,927m = $1,922m cash at closing + $5m replacement equity awards (RMS transaction costs $22m in SG&A); PassFort $158m = $157m cash + $1m to be paid in 2022. RealXData and Bogard consideration not disclosed. FY21 CF cash paid for acquisitions net of cash acquired 2,179. BitSight: Oct-2021 minority investment ($250m cash + VisibleRisk stake; $36m non-cash gain) - investment, not a business combination. 2021 notes: issued 2.00% 2031 ($600m) and 2.75% 2041 ($600m) on 19-Aug-2021, and 3.10% 2061 ($500m) in Q4-21; repaid $500m 4.50% 2012 notes due 2022 (make-whole ~$13m; $8m swap-termination benefit). New $1.25bn 2021 revolving credit facility (17-Dec-2021, expires Dec-2026) replaced the $1.0bn 2018 facility. Debt maturities = principal schedule at 31-Dec-2021 (total 7,521). Employees: 10-K Human Capital table total 13,460 at 31-Dec-2021 (11,487 prior year as re-presented). Amortization schedule: 10-K (total 2,467)."
+ },
+ "notes": "Guidance in the Q4-21 release is the FY2022 outlook (as of 10-Feb-2022). FY21 other non-operating includes: $13m RMS purchase price hedge loss, $8m pension settlement loss, $36m BitSight gain (only the BitSight gain is adjusted). Interest expense includes a $45m benefit from reversal of tax-related interest accruals (not adjusted). Annual segment D&A / restructuring from the Q4 release twelve-month segment table; 10-K segment note agrees (MIS Adj OI 2,474, MA 627). Segment GAAP OI not published in the Q4-21 release format (null). Q4-21 release / FY21 10-K recast FY2020 transaction/recurring split (MA 197/1,882 vs originally 192/1,887); FY2021 values are as published. dps_decl 2.48 = FY dividends per share from the 10-K statement of shareholders' equity. Q4-release twelve-month IS agrees line-for-line with the 10-K income statement. cf.cp_net = issuance of commercial paper 0.0 + repayment of commercial paper 0.0 (computed). bs.oca = Other current assets 389.0; bs.onca = Other assets 1034.0; bs.ol = Other liabilities 438.0. bs.shares_out = release \"Actual number of shares outstanding\". Self-checks: all pass. XBRL cross-check (as first filed): rev, oi, ni, eps_d, cfo, ta match. Values in USD millions as printed (2020-2021 releases and filings print whole millions); per-share and shares as printed."
+}

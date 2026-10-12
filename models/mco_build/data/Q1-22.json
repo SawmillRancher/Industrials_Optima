@@ -1,0 +1,609 @@
+{
+ "period": "Q1-22",
+ "period_end": "2022-03-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1059556/000115752322000521/a52702931ex99_1.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1059556/000105955622000024/mco-20220331.htm"
+ },
+ "is": {
+  "rev": 1522.0,
+  "opex_operating": 417.0,
+  "sga": 371.0,
+  "dna": 78.0,
+  "restr": 0.0,
+  "other_op_lines": [],
+  "tot_exp": 866.0,
+  "oi": 656.0,
+  "int_net": -53.0,
+  "oth_nonop": 6.0,
+  "nonop_lines": [],
+  "nonop_tot": -47.0,
+  "ebt": 609.0,
+  "tax": 111.0,
+  "ni_tot": null,
+  "nci": null,
+  "ni": 498.0,
+  "disc_ops": null,
+  "eps_b": 2.69,
+  "eps_d": 2.68,
+  "sh_b": 185.1,
+  "sh_d": 186.1,
+  "dps_decl": 0.7
+ },
+ "seg": {
+  "mis_lines": {
+   "Corporate Finance": 417.0,
+   "Structured Finance": 144.0,
+   "Financial Institutions": 131.0,
+   "Public, Project and Infrastructure Finance": 123.0,
+   "MIS Other": 12.0
+  },
+  "mis_ratings_total": 815.0,
+  "mis_ext": 827.0,
+  "mis_interseg": 43.0,
+  "mis_recurring": 298.0,
+  "mis_transaction": 529.0,
+  "ma_lines": {
+   "Decision Solutions": 334.0,
+   "Research and Insights": 183.0,
+   "Data and Information": 178.0
+  },
+  "ma_ext": 695.0,
+  "ma_interseg": 2.0,
+  "ma_recurring": 651.0,
+  "ma_transaction": 44.0,
+  "ma_arr": 2573.0,
+  "ma_arr_lines": {},
+  "elim": -45.0,
+  "mis_adj_oi": 510.0,
+  "ma_adj_oi": 224.0,
+  "mis_adj_om": 58.6,
+  "ma_adj_om": 32.1,
+  "mis_dna": 18.0,
+  "ma_dna": 60.0,
+  "mis_restr": 0.0,
+  "ma_restr": 0.0,
+  "mis_oi": null,
+  "ma_oi": null,
+  "seg_other_items": [],
+  "us_rev": 862.0,
+  "intl_rev": 660.0,
+  "legacy": {
+   "CFG: Investment-grade": 114.0,
+   "CFG: High-yield": 39.0,
+   "CFG: Bank loans": 113.0,
+   "CFG: Other accounts": 151.0,
+   "SFG: Asset-backed securities": 32.0,
+   "SFG: RMBS": 35.0,
+   "SFG: CMBS": 38.0,
+   "SFG: Structured credit": 39.0,
+   "SFG: Other accounts": 0.0,
+   "FIG: Banking": 89.0,
+   "FIG: Insurance": 34.0,
+   "FIG: Managed investments": 5.0,
+   "FIG: Other accounts": 3.0,
+   "PPIF: Public finance / sovereign": 58.0,
+   "PPIF: Project and infrastructure": 65.0
+  },
+  "seg_note": "Two reportable segments: Moody's Investors Service (MIS) and Moody's Analytics (MA). From 1-Jan-2022 MA revenue is reported by Decision Solutions (DS) / Research and Insights (R&I) / Data and Information (D&I), replacing RD&A / ERS; prior-year (2021) LOB revenue recast by the company. MIS LOBs: Corporate Finance, Structured Finance, Financial Institutions, Public, Project and Infrastructure Finance, MIS Other. Segment Adjusted Operating Income (release segment table) = total segment revenue incl. intersegment less Operating + SG&A; it excludes D&A and restructuring. MIS intersegment revenue = royalty charged to MA (10-K: 'Intersegment royalty'). mis_dna/ma_dna/mis_restr/ma_restr from the release segment table. Recurring/transaction split and LOB revenue from the release Table 'Transaction and Recurring Revenue'. seg.legacy holds the 10-Q/10-K sub-LOB detail (CFG/SFG/FIG/PPIF sub-lines).",
+  "trans_rec_lines": {
+   "Corporate Finance": {
+    "transaction": 293.0,
+    "recurring": 124.0
+   },
+   "Structured Finance": {
+    "transaction": 93.0,
+    "recurring": 51.0
+   },
+   "Financial Institutions": {
+    "transaction": 61.0,
+    "recurring": 70.0
+   },
+   "Public, Project and Infrastructure Finance": {
+    "transaction": 79.0,
+    "recurring": 44.0
+   },
+   "MIS Other": {
+    "transaction": 3.0,
+    "recurring": 9.0
+   },
+   "Total MIS": {
+    "transaction": 529.0,
+    "recurring": 298.0
+   },
+   "Decision Solutions": {
+    "transaction": 43.0,
+    "recurring": 291.0
+   },
+   "Research and Insights": {
+    "transaction": 1.0,
+    "recurring": 182.0
+   },
+   "Data and Information": {
+    "transaction": 0.0,
+    "recurring": 178.0
+   },
+   "Total MA": {
+    "transaction": 44.0,
+    "recurring": 651.0
+   }
+  },
+  "ma_arr_organic": 2246.0
+ },
+ "ngaap": {
+  "adj_oi_pub": 734.0,
+  "adj_om_pub": 48.2,
+  "adj_oi_items": [
+   [
+    "Depreciation and amortization",
+    78.0
+   ],
+   [
+    "Restructuring",
+    0.0
+   ]
+  ],
+  "adj_ni_pub": 537.0,
+  "adj_eps_pub": 2.89,
+  "eps_bridge_start": 2.68,
+  "eps_bridge": [
+   [
+    "Net Acquisition-Related Intangible Amortization Expenses",
+    0.21
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Pre-tax Acquisition-Related Intangible Amortization Expenses",
+    51.0,
+    39.0,
+    "op",
+    "AMORT"
+   ]
+  ],
+  "tax_items": [],
+  "adj_ni_table_raw": [
+   [
+    "Net income attributable to Moody's common shareholders",
+    498.0
+   ],
+   [
+    "Pre-tax Acquisition-Related Intangible Amortization Expenses",
+    51.0
+   ],
+   [
+    "Tax on Acquisition-Related Intangible Amortization Expenses",
+    -12.0
+   ],
+   [
+    "Net Acquisition-Related Intangible Amortization Expenses",
+    39.0
+   ],
+   [
+    "Pre-tax restructuring",
+    0.0
+   ],
+   [
+    "Tax on restructuring",
+    0.0
+   ],
+   [
+    "Net restructuring",
+    0.0
+   ],
+   [
+    "Adjusted Net Income",
+    537.0
+   ]
+  ],
+  "adj_eps_table_raw": [
+   [
+    "Diluted earnings per share attributable to Moody's common shareholders",
+    2.68
+   ],
+   [
+    "Pre-tax Acquisition-Related Intangible Amortization Expenses",
+    0.27
+   ],
+   [
+    "Tax on Acquisition-Related Intangible Amortization Expenses",
+    -0.06
+   ],
+   [
+    "Net Acquisition-Related Intangible Amortization Expenses",
+    0.21
+   ],
+   [
+    "Pre-tax restructuring",
+    0.0
+   ],
+   [
+    "Tax on restructuring",
+    0.0
+   ],
+   [
+    "Net restructuring",
+    0.0
+   ],
+   [
+    "Adjusted Diluted EPS",
+    2.89
+   ]
+  ],
+  "fcf_pub": 411.0,
+  "fcf_ytd_months": 3,
+  "occ": {
+   "mco": null,
+   "mis": null,
+   "ma": null,
+   "basis": "organic only (excludes acquisitions, not FX-adjusted); MA only",
+   "lines": {
+    "Organic MA revenue": 9.0,
+    "Organic Decision Solutions revenue": 14.0,
+    "Organic Data and Information revenue": 5.0,
+    "Organic MA recurring revenue": 11.0
+   }
+  },
+  "guidance": "Full Year 2022 Moody's Corporation Guidance as of May 2, 2022\nMOODY'S CORPORATION | Current guidance | Last publicly disclosed guidance\nRevenue | Approximately flat | Increase in the high-single-digit percent range\nOperating expenses | Increase in the high-single-digit percent range | Increase in the low-double-digit percent range\nOperating margin | 41% to 42% | 44% to 45%\nAdjusted Operating Margin (1) | Approximately 47% | 49% to 50%\nInterest expense, net | $200 to $220 million | NC\nEffective tax rate | 20.5% to 22.5% | NC\nDiluted EPS | $9.85 to $10.35 | $11.50 to $12.00\nAdjusted Diluted EPS (1) | $10.75 to $11.25 | $12.40 to $12.90\nOperating cash flow | $2.1 to $2.3 billion | $2.45 to $2.65 billion\nFree Cash Flow (1) | $1.8 to $2.0 billion | $2.3 to $2.5 billion\nShare repurchases | At least $1.5 billion (subject to available cash, market conditions, M&A opportunities and other ongoing capital allocation\ndecisions) | NC\nMoody's Investors Service (MIS) | Current guidance | Last publicly disclosed guidance\nMIS global revenue | Decrease in the low-double-digit percent range | Increase in the low-single-digit percent range\nMIS Adjusted Operating Margin | Approximately 59% | Approximately 62%\nMoody's Analytics (MA) | Current guidance | Last publicly disclosed guidance\nMA global revenue | Increase in the high-teens percent range | NC\nOrganic MA ARR (2) | Increase in the low-double-digit percent range | -\nMA Adjusted Operating Margin | Approximately 29% | NC\nNC - There is no difference between the Company’s current guidance and the last publicly disclosed guidance for this item. Note: All current guidance as of May 2, 2022. All last publicly disclosed guidance is as of February 10, 2022. The Company had not previously disclosed guidance for the Organic MA ARR\nmetric. (1) These metrics are adjusted measures. See below for reconciliation of these measures to their comparable U.S. GAAP measure. (2) Refer to Table 11 within this press release for the definition of and further information on the Organic MA ARR metric.\nTable 13 - 2022 Outlook Continued\nThe following are reconciliations of the Company's adjusted forward looking measures to their comparable U.S. GAAP measure:\nProjected for the Year Ended December 31, 2022\nOperating margin guidance | 41% to 42%\nDepreciation and amortization | 5% to 6%\nAdjusted Operating Margin guidance | Approximately 47%\nProjected for the Year Ended December 31, 2022\nOperating cash flow guidance | $2.1 to $2.3 billion\nLess: Capital expenditures | $250 to $300 million\nFree Cash Flow guidance | $1.8 to $2.0 billion\nProjected for the Year Ended December 31, 2022\nDiluted EPS guidance | $9.85 to $10.35\nAcquisition-Related Intangible Amortization | Approximately $0.90\nAdjusted Diluted EPS guidance | $10.75 to $11.25",
+  "guidance_assumptions": "This outlook incorporates various specific macroeconomic assumptions, including: (a) 2022 U.S. and Euro area GDPs to expand by approximately 3.5% - 4.5% and 2.5% - 3.5%, respectively; (b) global benchmark rates to increase from historic lows; (c) U.S. high yield interest rate spreads to widen, moving slightly above the historical average of approximately 500 bps; (d) inflation rates to remain elevated and above central bank targets in many countries; (e) U.S. unemployment to remain low at approximately 3.5%; and (f) the global high yield default rate to initially decline before gradually rising to approximately 2.7% by the end of 2022. MIS’s revenue guidance assumes that full year 2022 global rated issuance will decrease in the mid-teens percent range. In addition, Moody’s guidance assumes foreign currency translation. Specifically, our forecast for the remainder of 2022 reflects exchange rates for the British pound (£) of $1.32 to £1 and for the euro (€) of $1.11 to €1. Full year 2022 guidance assumes share repurchases of at least $1.5 billion, subject to available cash, market conditions, M&A opportunities and other ongoing capital allocation decisions. Full year 2022 diluted EPS is projected to be $9.85 to $10.35. The Company expects full year 2022 adjusted diluted EPS 1 to be $10.75 to $11.25.",
+  "notes": "Adjusted Operating Income excludes the impact of: i) depreciation and amortization; and ii) restructuring. The Company defines adjusted operating income as operating income excluding: i) depreciation and amortization; and ii) restructuring. Adjusted Net Income and Adjusted Diluted EPS exclude the impact of: i) amortization of acquired intangible assets; and ii) restructuring charges. The Company defines free cash flow as net cash provided by operating activities minus payments for capital additions."
+ },
+ "bs": {
+  "cash": 1750.0,
+  "sti": 103.0,
+  "ar": 1824.0,
+  "oca": 385.0,
+  "tca": 4062.0,
+  "ppe": 381.0,
+  "rou": 427.0,
+  "goodwill": 6039.0,
+  "intang": 2422.0,
+  "dta": 347.0,
+  "onca": 1061.0,
+  "ta": 14739.0,
+  "ap_accr": 856.0,
+  "cp": null,
+  "cltd": 501.0,
+  "lease_cur": 106.0,
+  "defrev": 1525.0,
+  "ocl": null,
+  "tcl": 2988.0,
+  "defrev_nc": 86.0,
+  "ltd": 7285.0,
+  "dtl": 498.0,
+  "utp": 368.0,
+  "lease_nc": 440.0,
+  "ol": 492.0,
+  "tl": 12157.0,
+  "redeemable_nci": null,
+  "eq": 2394.0,
+  "nci": 188.0,
+  "te": 2582.0,
+  "tle": 14739.0,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    1750.0
+   ],
+   [
+    "Short-term investments",
+    103.0
+   ],
+   [
+    "Accounts receivable, net of allowance for credit losses of $ 44 in 2022 and $ 32 in 2021",
+    1824.0
+   ],
+   [
+    "Other current assets",
+    385.0
+   ],
+   [
+    "Total current assets",
+    4062.0
+   ],
+   [
+    "Property and equipment, net of accumulated depreciation of $ 1,035 in 2022 and $ 1,010 in 2021",
+    381.0
+   ],
+   [
+    "Operating lease right-of-use assets",
+    427.0
+   ],
+   [
+    "Goodwill",
+    6039.0
+   ],
+   [
+    "Intangible assets, net",
+    2422.0
+   ],
+   [
+    "Deferred tax assets, net",
+    347.0
+   ],
+   [
+    "Other assets",
+    1061.0
+   ],
+   [
+    "Total assets",
+    14739.0
+   ],
+   [
+    "Accounts payable and accrued liabilities",
+    856.0
+   ],
+   [
+    "Current portion of operating lease liabilities",
+    106.0
+   ],
+   [
+    "Current portion of long-term debt",
+    501.0
+   ],
+   [
+    "Deferred revenue",
+    1525.0
+   ],
+   [
+    "Total current liabilities",
+    2988.0
+   ],
+   [
+    "Non-current portion of deferred revenue",
+    86.0
+   ],
+   [
+    "Long-term debt",
+    7285.0
+   ],
+   [
+    "Deferred tax liabilities, net",
+    498.0
+   ],
+   [
+    "Uncertain tax positions",
+    368.0
+   ],
+   [
+    "Operating lease liabilities",
+    440.0
+   ],
+   [
+    "Other liabilities",
+    492.0
+   ],
+   [
+    "Total liabilities",
+    12157.0
+   ],
+   [
+    "Preferred stock, par value $ 0.01 per share; 10,000,000 shares authorized; no shares issued and outstanding",
+    0.0
+   ],
+   [
+    "Series common stock, par value $ 0.01 per share; 10,000,000 shares authorized; no shares issued and outstanding",
+    0.0
+   ],
+   [
+    "Common stock, par value $ 0.01 per share; 1,000,000,000 shares authorized; 342,902,272 shares issued at March 31, 2022 and December 31, 2021, respectively.",
+    3.0
+   ],
+   [
+    "Capital surplus",
+    826.0
+   ],
+   [
+    "Retained earnings",
+    13132.0
+   ],
+   [
+    "Treasury stock, at cost; 158,363,386 and 157,262,484 shares of common stock at March 31, 2022 and December 31, 2021",
+    -11096.0
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -471.0
+   ],
+   [
+    "Total Moody's shareholders' equity",
+    2394.0
+   ],
+   [
+    "Noncontrolling interests",
+    188.0
+   ],
+   [
+    "Total shareholders' equity",
+    2582.0
+   ],
+   [
+    "Total liabilities, noncontrolling interests and shareholders' equity",
+    14739.0
+   ]
+  ],
+  "shares_out": 184.5
+ },
+ "cf": {
+  "ytd_months": 3,
+  "ni_tot": 498.0,
+  "dna": 78.0,
+  "sbc": 46.0,
+  "deferred_tax": 30.0,
+  "cfo": 470.0,
+  "capex": -59.0,
+  "acquisitions": -83.0,
+  "divest": null,
+  "cfi": -161.0,
+  "debt_proceeds": 491.0,
+  "debt_repay": null,
+  "cp_net": null,
+  "buyback": -560.0,
+  "sbc_tax_withholding": -58.0,
+  "stock_plan_proceeds": 8.0,
+  "dividends": -130.0,
+  "div_nci": null,
+  "cff": -352.0,
+  "fx": -18.0,
+  "net_change": -61.0,
+  "cash_begin": 1811.0,
+  "cash_end": 1750.0,
+  "lines_raw": [
+   [
+    "Net income",
+    498.0
+   ],
+   [
+    "Depreciation and amortization",
+    78.0
+   ],
+   [
+    "Stock-based compensation",
+    46.0
+   ],
+   [
+    "Deferred income taxes",
+    30.0
+   ],
+   [
+    "Accounts receivable",
+    -117.0
+   ],
+   [
+    "Other current assets",
+    -11.0
+   ],
+   [
+    "Other assets",
+    -21.0
+   ],
+   [
+    "Lease obligations",
+    -2.0
+   ],
+   [
+    "Accounts payable and accrued liabilities",
+    -296.0
+   ],
+   [
+    "Deferred revenue",
+    290.0
+   ],
+   [
+    "Unrecognized tax benefits and other non-current tax liabilities",
+    -18.0
+   ],
+   [
+    "Other liabilities",
+    -7.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    470.0
+   ],
+   [
+    "Capital additions",
+    -59.0
+   ],
+   [
+    "Purchases of investments",
+    -46.0
+   ],
+   [
+    "Sales and maturities of investments",
+    27.0
+   ],
+   [
+    "Cash paid for acquisitions, net of cash acquired",
+    -83.0
+   ],
+   [
+    "Receipts from settlements of net investment hedges",
+    0.0
+   ],
+   [
+    "Payments for settlements of net investment hedges",
+    0.0
+   ],
+   [
+    "Net cash used in investing activities",
+    -161.0
+   ],
+   [
+    "Issuance of notes",
+    491.0
+   ],
+   [
+    "Proceeds from stock-based compensation plans",
+    8.0
+   ],
+   [
+    "Repurchase of shares related to stock-based compensation",
+    -58.0
+   ],
+   [
+    "Treasury shares",
+    -560.0
+   ],
+   [
+    "Cash paid for ASR contract relating to shares retained by counterparty until final settlement",
+    -98.0
+   ],
+   [
+    "Dividends",
+    -130.0
+   ],
+   [
+    "Debt issuance costs and related fees",
+    -5.0
+   ],
+   [
+    "Net cash used in financing activities",
+    -352.0
+   ],
+   [
+    "Effect of exchange rate changes on cash and cash equivalents",
+    -18.0
+   ],
+   [
+    "(Decrease) increase in cash and cash equivalents",
+    -61.0
+   ],
+   [
+    "Cash and cash equivalents, beginning of period",
+    1811.0
+   ],
+   [
+    "Cash and cash equivalents, end of period",
+    1750.0
+   ]
+  ]
+ },
+ "py": {
+  "restated": true,
+  "notes": "2021 MA LOB revenue shown recast to the 2022 DS / R&I / D&I structure (originally reported as RD&A / ERS); MIS LOB revenue and 2021 segment Adjusted Operating Income agree with the 2021 releases as originally reported.",
+  "mis_lines": {
+   "Corporate Finance": 605.0,
+   "Structured Finance": 116.0,
+   "Financial Institutions": 162.0,
+   "Public, Project and Infrastructure Finance": 143.0,
+   "MIS Other": 10.0
+  },
+  "ma_lines": {
+   "Decision Solutions": 225.0,
+   "Research and Insights": 171.0,
+   "Data and Information": 168.0
+  },
+  "mis_adj_oi": 728.0,
+  "ma_adj_oi": 186.0
+ },
+ "extra": {
+  "employees": null,
+  "acquisitions": [],
+  "divestitures": [],
+  "debt_maturities": [],
+  "amort_schedule": [],
+  "notes": null
+ },
+ "notes": "IS face (release and 10-Q) presents only 'Net income attributable to Moody's' with no NCI line: ni_tot and nci left null (not presented). Q1-22 release segment table shows only total segment revenue (MIS 870 / MA 697 incl. intersegment, eliminations (45)); external and intersegment revenue and U.S./Non-U.S. from release Table 2 Supplemental Revenue Information. seg.legacy (sub-LOB revenue), mis_ratings_total and us_rev/intl_rev from the 10-Q revenue note. ngaap.fcf_pub is the year-to-date (3M) Free Cash Flow as published (release FCF table is YTD only). bs.shares_out: release 'Outstanding shares as of March 31, 2022 totaled 184.5 million'. ARR basis Q1/Q2-22: 'MA ARR' includes acquisitions (constant currency at operating-budget rates) and 'Organic MA ARR' excludes acquisitions (stored in seg.ma_arr_organic); no by-line ARR published. From Q3-22 ARR is presented only on a constant currency organic basis by LOB, so Q1/Q2-22 ma_arr is not comparable with Q3-22 onward. DS / R&I here are on the 2022 basis (before the 2Q23 reclassification of structured-finance-solutions revenue from DS to R&I); 2023 releases show restated 2022 comparatives (Q2-22 DS 294 / R&I 203; Q3-22 308 / 201; Q4-22 329 / 205; FY 1,245 / 812). cf: financing also includes \"Cash paid for ASR contract relating to shares retained by counterparty until final settlement\" (98) not included in cf.buyback (= Treasury shares line only); see cf.lines_raw. kompany acquired 28-Feb-2022 (shares issued 44 non-cash + cash). XBRL cross-check (as first filed): rev ok (1522.0); oi ok (656.0); ni ok (498.0); eps_d ok (2.68); cfo ok (470.0); ta ok (14739.0). Self-checks: all pass"
+}

@@ -1,0 +1,503 @@
+{
+ "period": "Q4-25",
+ "period_end": "2025-12-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026008788/a4q25earningsrelease.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026009136/mco-20251231.htm"
+ },
+ "is": {
+  "other_op_lines": [
+   [
+    "Charges related to asset abandonment",
+    -1.0
+   ]
+  ],
+  "nonop_lines": [
+   [
+    "Gain on divestiture of business",
+    23.0
+   ]
+  ],
+  "rev": 1889.0,
+  "opex_operating": 502.0,
+  "sga": 467.0,
+  "dna": 124.0,
+  "restr": 27.0,
+  "tot_exp": 1119.0,
+  "oi": 770.0,
+  "int_net": -33.0,
+  "oth_nonop": -73.0,
+  "nonop_tot": -83.0,
+  "ebt": 687.0,
+  "tax": 76.0,
+  "ni_tot": 611.0,
+  "nci": 1.0,
+  "ni": 610.0,
+  "eps_b": 3.43,
+  "eps_d": 3.41,
+  "sh_b": 177.9,
+  "sh_d": 178.7,
+  "disc_ops": null,
+  "dps_decl": 0.94
+ },
+ "seg": {
+  "mis_lines": {
+   "Corporate Finance": 480.0,
+   "Structured Finance": 139.0,
+   "Financial Institutions": 169.0,
+   "Public, Project and Infrastructure Finance": 149.0,
+   "MIS Other": 9.0
+  },
+  "mis_ext": 946.0,
+  "mis_interseg": 49.0,
+  "mis_transaction": 593.0,
+  "mis_recurring": 353.0,
+  "ma_lines": {
+   "Total Decision Solutions": 450.0,
+   "Research & Insights": 258.0,
+   "Data & Information": 235.0
+  },
+  "ma_ext": 943.0,
+  "ma_interseg": 3.0,
+  "ma_transaction": 30.0,
+  "ma_recurring": 913.0,
+  "ma_ds_lines": {
+   "Banking": 150.0,
+   "Insurance": 183.0,
+   "KYC": 117.0
+  },
+  "mis_ratings_total": null,
+  "rec_trans_lines": {
+   "Banking": [
+    17.0,
+    133.0,
+    150.0
+   ],
+   "Insurance": [
+    6.0,
+    177.0,
+    183.0
+   ],
+   "KYC": [
+    2.0,
+    115.0,
+    117.0
+   ],
+   "Total Decision Solutions": [
+    25.0,
+    425.0,
+    450.0
+   ],
+   "Research & Insights": [
+    3.0,
+    255.0,
+    258.0
+   ],
+   "Data & Information": [
+    2.0,
+    233.0,
+    235.0
+   ],
+   "Total MA": [
+    30.0,
+    913.0,
+    943.0
+   ],
+   "Corporate Finance": [
+    334.0,
+    146.0,
+    480.0
+   ],
+   "Structured Finance": [
+    77.0,
+    62.0,
+    139.0
+   ],
+   "Financial Institutions": [
+    82.0,
+    87.0,
+    169.0
+   ],
+   "Public, Project and Infrastructure Finance": [
+    98.0,
+    51.0,
+    149.0
+   ],
+   "MIS Other": [
+    2.0,
+    7.0,
+    9.0
+   ],
+   "Total MIS": [
+    593.0,
+    353.0,
+    946.0
+   ],
+   "Total Moody's Corporation": [
+    623.0,
+    1266.0,
+    1889.0
+   ]
+  },
+  "ma_arr": 3498.0,
+  "ma_arr_lines": {
+   "Banking": 494.0,
+   "Insurance": 649.0,
+   "KYC": 436.0,
+   "Total Decision Solutions": 1579.0,
+   "Research and Insights": 1002.0,
+   "Data and Information": 917.0,
+   "Total MA ARR": 3498.0
+  },
+  "elim": -52.0,
+  "ma_adj_oi": 338.0,
+  "mis_adj_oi": 582.0,
+  "ma_adj_om": 35.7,
+  "mis_adj_om": 58.5,
+  "ma_dna": 101.0,
+  "mis_dna": 23.0,
+  "ma_restr": 18.0,
+  "mis_restr": 9.0,
+  "mis_oi": null,
+  "ma_oi": null,
+  "seg_other_items": [
+   [
+    "Charges related to asset abandonment",
+    0.0,
+    -1.0
+   ]
+  ],
+  "seg_expense_lines": {
+   "Compensation expense": [
+    369.0,
+    293.0,
+    0.0,
+    662.0
+   ],
+   "Non-compensation expense": [
+    190.0,
+    117.0,
+    0.0,
+    307.0
+   ],
+   "Intersegment expense": [
+    49.0,
+    3.0,
+    -52.0,
+    0.0
+   ],
+   "Operating, SG&A": [
+    608.0,
+    413.0,
+    -52.0,
+    969.0
+   ]
+  },
+  "us_rev": null,
+  "intl_rev": null,
+  "legacy": {},
+  "seg_note": "Two reportable segments, MA and MIS. Segment measure = Adjusted Operating Income (CODM measure; segment revenue includes intersegment revenue, expenses include intersegment expense). Revenue lines, external totals, intersegment revenue, Adjusted Operating Income / margin, D&A, restructuring and asset-abandonment charges by segment: release Table \"Financial Information by Segment\" (three-month column). MIS lines (CFG / SFG / FIG / PPIF / MIS Other) and MA lines from release Table \"Transaction and Recurring Revenue\" (Total column); rec_trans_lines = [transaction, recurring, total]. ma_lines holds the three MA lines of business (Decision Solutions total, Research & Insights, Data & Information) so that they sum to ma_ext; the Decision Solutions sub-lines (Banking / Insurance / KYC) are in ma_ds_lines (source: release Table 6 (Transaction and Recurring Revenue) rows Banking / Insurance / KYC under Decision Solutions). mis_ratings_total, us_rev, intl_rev: not published for the fourth quarter (FY in annual record); null. ma_arr / ma_arr_lines: release ARR table (constant-currency organic basis, at budget FX rates of the current year). seg_expense_lines = [MA, MIS, Eliminations, Consolidated] (Compensation / Non-compensation / Intersegment expense first shown in the Q4-24 release, ASU 2023-07)."
+ },
+ "ngaap": {
+  "adj_oi_pub": 920.0,
+  "adj_om_pub": 48.7,
+  "adj_oi_items": [
+   [
+    "Depreciation and amortization",
+    124.0
+   ],
+   [
+    "Restructuring",
+    27.0
+   ],
+   [
+    "Charges related to asset abandonment",
+    -1.0
+   ]
+  ],
+  "adj_ni_pub": 651.0,
+  "adj_eps_pub": 3.64,
+  "eps_bridge_start": 3.41,
+  "eps_bridge": [
+   [
+    "Net Acquisition-Related Intangible Amortization Expenses",
+    0.23
+   ],
+   [
+    "Net restructuring",
+    0.11
+   ],
+   [
+    "Net charges related to asset abandonment",
+    -0.01
+   ],
+   [
+    "Net gain on previously held equity method investments",
+    0.0
+   ],
+   [
+    "Net gain on divestiture of business and related costs",
+    -0.1
+   ]
+  ],
+  "eps_bridge_detail": [
+   [
+    "Diluted earnings per share attributable to Moody's common shareholders",
+    3.41
+   ],
+   [
+    "Pre-tax Acquisition-Related Intangible Amortization Expenses",
+    0.29
+   ],
+   [
+    "Tax on Acquisition-Related Intangible Amortization Expenses",
+    -0.06
+   ],
+   [
+    "Net Acquisition-Related Intangible Amortization Expenses",
+    0.23
+   ],
+   [
+    "Pre-tax restructuring",
+    0.15
+   ],
+   [
+    "Tax on restructuring",
+    -0.04
+   ],
+   [
+    "Net restructuring",
+    0.11
+   ],
+   [
+    "Pre-tax charges related to asset abandonment",
+    -0.01
+   ],
+   [
+    "Tax on charges related to asset abandonment",
+    0.0
+   ],
+   [
+    "Net charges related to asset abandonment",
+    -0.01
+   ],
+   [
+    "Pre-tax gain on previously held equity method investments",
+    0.0
+   ],
+   [
+    "Tax on gain on previously held equity method investments",
+    0.0
+   ],
+   [
+    "Net gain on previously held equity method investments",
+    0.0
+   ],
+   [
+    "Pre-tax gain on divestiture of business",
+    -0.13
+   ],
+   [
+    "Pre-tax costs to transact divestiture",
+    0.01
+   ],
+   [
+    "Tax on gain on divestiture and related costs",
+    0.02
+   ],
+   [
+    "Net gain on divestiture of business and related costs",
+    -0.1
+   ],
+   [
+    "Adjusted Diluted EPS",
+    3.64
+   ]
+  ],
+  "adj_ni_bridge_detail": [
+   [
+    "Net Income attributable to Moody's common shareholders",
+    610.0
+   ],
+   [
+    "Pre-tax Acquisition-Related Intangible Amortization Expenses",
+    52.0
+   ],
+   [
+    "Tax on Acquisition-Related Intangible Amortization Expenses",
+    -12.0
+   ],
+   [
+    "Net Acquisition-Related Intangible Amortization Expenses",
+    40.0
+   ],
+   [
+    "Pre-tax restructuring",
+    27.0
+   ],
+   [
+    "Tax on restructuring",
+    -7.0
+   ],
+   [
+    "Net restructuring",
+    20.0
+   ],
+   [
+    "Pre-tax charges related to asset abandonment",
+    -1.0
+   ],
+   [
+    "Tax on charges related to asset abandonment",
+    0.0
+   ],
+   [
+    "Net charges related to asset abandonment",
+    -1.0
+   ],
+   [
+    "Pre-tax gain on previously held equity method investments",
+    0.0
+   ],
+   [
+    "Tax on gain on previously held equity method investments",
+    0.0
+   ],
+   [
+    "Net gain on previously held equity method investments",
+    0.0
+   ],
+   [
+    "Pre-tax gain on divestiture of business",
+    -23.0
+   ],
+   [
+    "Pre-tax costs to transact divestiture",
+    2.0
+   ],
+   [
+    "Tax on gain on divestiture and related costs",
+    3.0
+   ],
+   [
+    "Net gain on divestiture of business and related costs",
+    -18.0
+   ],
+   [
+    "Adjusted Net Income",
+    651.0
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Acquisition-Related Intangible Amortization Expenses",
+    52.0,
+    40.0,
+    "op",
+    "AMORT"
+   ],
+   [
+    "Restructuring",
+    27.0,
+    20.0,
+    "op",
+    "RESTR"
+   ],
+   [
+    "Charges related to asset abandonment",
+    -1.0,
+    -1.0,
+    "op",
+    "RESTR"
+   ],
+   [
+    "Gain on previously held equity method investments",
+    0.0,
+    0.0,
+    "nonop",
+    "GAIN"
+   ],
+   [
+    "Gain on divestiture of business and related costs",
+    -21.0,
+    -18.0,
+    "nonop/unspecified",
+    "GAIN"
+   ]
+  ],
+  "tax_items": [],
+  "fcf_pub": null,
+  "fcf_ytd_months": null,
+  "occ": {
+   "mco": 11.0,
+   "mis": null,
+   "ma": 6.0,
+   "basis": "organic constant currency",
+   "lines": {
+    "Organic constant currency MCO revenue": 11.0,
+    "Organic constant currency MA revenue": 6.0,
+    "Organic constant currency Decision Solutions revenue": 9.0,
+    "Organic constant currency Banking revenue": 5.0,
+    "Organic constant currency Insurance revenue": 8.0,
+    "Organic constant currency KYC revenue": 16.0,
+    "Constant currency Research and Insights revenue": 5.0,
+    "Constant currency Data and Information revenue": 4.0,
+    "Organic constant currency MA recurring revenue": 8.0,
+    "Organic constant currency Decision Solutions recurring revenue": 11.0,
+    "Organic constant currency Banking recurring revenue": 10.0,
+    "Organic constant currency Insurance recurring revenue": 8.0,
+    "Organic constant currency KYC recurring revenue": 16.0,
+    "Organic constant currency Research & Insights recurring revenue": 5.0,
+    "Organic constant currency Data & Information revenue": 6.0
+   }
+  },
+  "guidance": "[Operating expenses section] Full Year 2025 | Full Year 2026 Forecast 1 :: • Operating expenses projected to increase in the mid-single-digit percent range in 2026, remaining below the expected rate of revenue growth and reflecting operating leverage. • The increase is primarily driven by annual compensation increases and investments to improve efficiency and support long-term strategic initiatives. These cost increases are expected to be partially offset by expense reductions following the divestiture of the Learning Solutions business.\n\nASSUMPTIONS AND OUTLOOK\nMoody’s updated outlook for full year 2026, as of February 18, 2026,\nreflects assumptions about numerous factors that could affect its business and is based on currently available information reviewed by management through, and as of, today’s date. These assumptions include, but are not limited to, the effects of current economic conditions, including tariff and trade policies, the effects of interest rates, inflation, foreign currency exchange rates, capital markets’ liquidity, and activity in different sectors of the debt markets. Except to the extent specifically stated otherwise\n, this outlook does not take into account any acquisitions or dispositions that have not closed prior to the date of this release. This outlook also reflects uncertainties about global GDP growth and could be affected by the impact of changes in international economic conditions, geopolitical events, and international trade and economic policies. Actual full year 2026 results could differ materially from Moody’s current outlook.\nThis outlook incorporates various specific macroeconomic assumptions, including:\nForecasted Item | Current Assumption\nU.S. GDP (1) growth | 1.5% - 2.5%\nEuro area GDP (1) growth | 1.0% - 2.0%\nGlobal GDP (1) growth | 2.0% - 3.0%\nGlobal policy rates | Monetary policy is close to neutral. Expecting one to two cuts to the Federal Funds Rate in 2026. The European Central Bank (ECB) will maintain its current policy stance\nU.S. high yield spreads | To widen to around 470 bps over the next 12 months, close to historical average of around 500 bps\nU.S. inflation rate | 2.0% to 3.0%\nEuro area inflation rate | Around 2.0%\nU.S. unemployment rate | 4.0% to 5.0% during 2026\nGlobal high yield default rate | To fall below 3% by year-end\nGlobal MIS rated issuance | Increase in the low-single-digit percent range\nGBP/USD exchange rate | $1.35 for the full year\nEUR/USD exchange rate | $1.17 for the full year\nNote: All current assumptions are as of February 18, 2026. (1) GDP growth represents real GDP.\nA full summary of Moody's full year 2026 guidance as of February 18, 2026, is included in Table 12\n2026 Outlook\nat the end of this press release.\n\nTable 12 - 2026 Outlook\nMoody’s updated outlook for full year 2026, as of February 18, 2026, reflects assumptions about numerous factors that could affect its business and is based on currently available information reviewed by management through, and as of, today’s date. For a complete list of these assumptions, please refer to “Assumptions and Outlook” on page\nof this earnings release.\nFull Year 2026 Moody's Corporation Guidance as of February 18, 2026\nMoody's Corporation (MCO) | Current Guidance\nRevenue | Increase in the high-single-digit percent range\nOperating Expenses | Increase in the mid-single-digit percent range\nOperating Margin | 45% to 46%\nAdjusted Operating Margin (1) | 52% to 53%\nInterest Expense, Net | $210 to $230 million\nNon-operating Expense (2) | $180 to $200 million\nEffective Tax Rate | 23% to 25%\nDiluted EPS | $15.00 to $15.60\nAdjusted Diluted EPS (1) | $16.40 to $17.00\nOperating Cash Flow | $3.25 to $3.45 billion\nFree Cash Flow (1) | $2.8 to $3.0 billion\nShare Repurchases | Approximately $2.0 billion (subject to available cash, market conditions, M&A opportunities and other ongoing capital allocation decisions)\nMoody's Analytics (MA) | Current Guidance\nMA Revenue | Increase in the mid-single-digit percent range\nMA Organic Constant Currency Revenue (3) | Increase in the high-single-digit percent range\nARR (4) | Increase in the high-single-digit percent range\nMA Adjusted Operating Margin | 34% to 35%\nMoody's Investors Service (MIS) | Current Guidance\nMIS Revenue | Increase in the high-single-digit percent range\nMIS Adjusted Operating Margin | Approximately 65%\nNote: All current guidance as of February 18, 2026. (1) These metrics are adjusted measures. See below for reconciliation of these measures to their comparable U.S. GAAP measure. (2) Non-operating expense is inclusive of net interest expense. (3) Refer to Table 9 within this earnings release for the definition of organic constant currency revenue. See below for reconciliation of this measure to its comparable U.S. GAAP measure. (4) Refer to Table 10 within this earnings release for the definition of and further information on the ARR metric.\nThe following are reconciliations of the Company's adjusted forward-looking measures to their comparable U.S. GAAP measure:\nProjected for the Year Ended December 31, 2026\nOperating margin guidance | 45% to 46%\nDepreciation and amortization | Approximately 6%\nRestructuring | Approximately 1%\nAdjusted Operating Margin guidance | 52% to 53%\nProjected for the Year Ended December 31, 2026\nOperating cash flow guidance | $3.25 to $3.45 billion\nLess: Capital expenditures (5) | Approximately $450 million\nFree Cash Flow guidance | $2.8 to $3.0 billion\nProjected for the Year Ended December 31, 2026\nDiluted EPS guidance | $15.00 to $15.60\nAcquisition-Related Intangible Amortization | Approximately $0.90\nRestructuring | Approximately $0.40\nDuplicative Rent - NY HQ (6) | Approximately $0.10\nAdjusted Diluted EPS guidance | $16.40 to $17.00\nProjected for the Year Ended December 31, 2026\nMA Revenue | Increase in the mid-single-digit percent range\nFX impact | Approximately (1%)\nInorganic revenue from acquisitions and divestitures (7) | Approximately 2%\nMA Organic Constant Currency Revenue | Increase in the high-single-digit percent range\n(5) ~$100 million in incremental capital expenditures is associated with office relocations in New York and London. (6) Reflects duplicative rent expense related to the transition to Moody’s new global headquarters. Relocations of Moody’s global headquarters have been infrequent, and accordingly, this duplicative rent does not reflect the Company’s ongoing operating cost structure. (7) Primarily relates to the impact from the divestiture of the MA Learning Solutions business.",
+  "notes": "Adjusted Operating Income / Margin (release Table 7): The Company presents Adjusted Operating Income and Adjusted Operating Margin because management deems these metrics to be useful measures to provide additional perspective on Moody's operating performance. Adjusted Operating Income excludes the impact of: i) depreciation and amortization; ii) restructuring charges/adjustments; and iii) charges related to asset abandonment. Depreciation and amortization are excluded because companies utilize productive assets of different estimated useful lives and use different methods of acquiring and depreciating productive assets. Restructuring charges/adjustments and charges related to asset abandonment, which the Company believes are not reflective of its ongoing operating cost structure, are excluded as the frequency and magnitude of these charges may vary widely across periods and companies. || Adjusted Net Income / Adjusted Diluted EPS: The Company presents Adjusted Net Income and Adjusted Diluted EPS because management deems these metrics to be useful measures to provide additional perspective on Moody's operating performance. Adjusted Net Income and Adjusted Diluted EPS exclude the impact of: i) amortization of acquired intangible assets; ii) restructuring charges/adjustments; iii) charges related to asset abandonment; iv) gains on previously held equity method investments and v) gain on the divestiture of a business and certain direct costs to transact the divestiture. The Company excludes the impact of amortization of acquired intangible assets as companies utilize intangible assets with different estimated useful lives and have different methods of acquiring and amortizing intangible assets. These intangible assets were recorded as part of acquisition accounting and contribute to revenue generation. The amortization of intangible assets related to acquisitions will recur in future periods until such intangible assets have been fully amortized. Furthermore, the timing and magnitude of business combination transactions are not predictable and the purchase price allocated to amortizable intangible assets and the related amortization period are unique to each acquisition and can vary significantly from period to period. The impact of restructuring charges/adjustments and charges related to asset abandonment, which the Company believes are not reflective of its ongoing operating cost structure are also excluded. Similarly, gains on previously held equity method investments and the gain pursuant to the divestiture of the MA Learning Solutions business along with certain related direct costs to transact the divestiture are excluded due to their infrequent nature and because they do not reflect the Company's ongoing operations. The frequency and magnitude of all of the aforementioned items may vary widely across periods and companies. The Company excludes the aforementioned items to provide additional perspective when comparing net income and diluted EPS from period to period and across companies as the frequency and magnitude of similar transactions may vary widely across periods. || Free Cash Flow: The Company defines Free Cash Flow as net cash provided by operating activities minus cash paid for capital additions. Management believes that Free Cash Flow is a useful metric in assessing the Company’s cash flows to service debt, pay dividends and to fund acquisitions and share repurchases. Management deems capital expenditures essential to the Company’s product and service innovations and maintenance of Moody’s operational capabilities. Accordingly, capital expenditures are deemed to be a recurring use of Moody’s cash flow. || Constant-currency / organic definition: The Company presents organic constant currency revenue growth (decline) as its non-GAAP measure of revenue growth (decline). Management deems this measure to be useful in providing additional perspective in assessing the Company's revenue growth (decline) excluding both the inorganic revenue impacts from certain acquisition and divestiture activity completed within the last 12 months and the impacts of changes in foreign exchange rates. The Company calculates the dollar impact of foreign exchange as the difference between the translation of its current period non-USD functional currency results using comparative prior period weighted average foreign exchange translation rates and current year reported results. Below is a reconciliation of the Company's reported revenue and growth (decline) rates to its organic constant currency revenue growth (decline) measures: || Q4 three-month FCF not published; FY value in the annual record. || item_amounts \"Gain on divestiture of business and related costs\": pretax -21 is computed (= pre-tax gain on divestiture of business -23 + pre-tax costs to transact divestiture 2, both as printed); after-tax -18 as printed; the gain is the IS non-operating line \"Gain on divestiture of business\"; the IS location of the $2m transaction costs is not disclosed (kind \"nonop/unspecified\"). Adjusted Operating Income adds back ALL depreciation and amortization (not only acquired-intangible amortization), restructuring and (from Q2-24) charges related to asset abandonment; Adjusted Net Income / Adjusted Diluted EPS add back only acquisition-related intangible amortization, restructuring, asset-abandonment charges and (Q3-24 / FY24) the gain on previously held equity method investments and (Q4-25 / FY25) the gain on divestiture of the MA Learning Solutions business and related costs, each net of tax.",
+  "guidance_year": 2026,
+  "guidance_as_of": "February 18, 2026"
+ },
+ "py": {
+  "restated": false,
+  "notes": "Revenue lines and segment Adjusted Operating Income in the prior-year column equal the originally reported Q4-24 figures. Other prior-year differences (not revenue-line or segment AOI recasts): MA transaction / recurring split of the prior-year column recast: transaction 43.0 / recurring 820.0 vs originally 42.0 / 821.0 (line totals unchanged); prior-year ARR 3233.0 vs originally reported 3278.0 (ARR is recalculated each year at the current-year budget FX rates and excludes acquisitions / divestitures). Decision Solutions sub-lines (Banking / Insurance / KYC) in the prior-year column equal those originally reported for Q4-24.",
+  "mis_lines": {
+   "Corporate Finance": 381.0,
+   "Structured Finance": 138.0,
+   "Financial Institutions": 167.0,
+   "Public, Project and Infrastructure Finance": 115.0,
+   "MIS Other": 8.0
+  },
+  "ma_lines": {
+   "Total Decision Solutions": 402.0,
+   "Research & Insights": 243.0,
+   "Data & Information": 218.0
+  },
+  "ma_ds_lines": {
+   "Banking": 146.0,
+   "Insurance": 159.0,
+   "KYC": 97.0
+  },
+  "mis_adj_oi": 440.0,
+  "ma_adj_oi": 293.0,
+  "ma_transaction": 43.0,
+  "ma_recurring": 820.0,
+  "ma_arr": 3233.0,
+  "ma_arr_lines": {
+   "Banking": 458.0,
+   "Insurance": 604.0,
+   "KYC": 380.0,
+   "Total Decision Solutions": 1442.0,
+   "Research and Insights": 932.0,
+   "Data and Information": 859.0,
+   "Total MA ARR": 3233.0
+  }
+ },
+ "extra": {
+  "employees": null,
+  "acquisitions": [],
+  "divestitures": [],
+  "debt_maturities": [],
+  "amort_schedule": [],
+  "notes": null
+ },
+ "notes": "Units: USD millions as printed. Every 2024-2025 release and filing prints whole USD millions (no rounding switch inside 2024-2025: the releases were already in whole millions in 2022-2023, e.g. the Feb-2022 Q4-21 release), so the self-check tolerance is +/-1.5. dps_decl from the 10-K Note 17 dividend table (fourth quarter declared). XBRL cross-check (company facts, earliest-filed fact): all match (rev, oi, ni, eps_d) [Q4 compared with XBRL FY - 9M (no three-month Q4 fact is tagged); eps_d FY-9M is not strictly additive] All schema self-checks pass (IS, revenue, segments, non-GAAP, no CF/BS in Q4 record)."
+}

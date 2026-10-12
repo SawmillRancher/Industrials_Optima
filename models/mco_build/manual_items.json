@@ -1,0 +1,1762 @@
+{
+ "meta": {
+  "company": "Moody's Corporation (MCO)",
+  "units": "USD millions unless stated; per-share USD",
+  "prepared": "2026-10-12",
+  "sources": "SEC EDGAR filings only; never estimated. null = not published."
+ },
+ "guidance_fy26": {
+  "src": "8-K Ex. 99.1 Q2-26 earnings release, 22-Jul-2026 (Full Year 2026 guidance as of July 22, 2026)",
+  "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026049104/a2q26earningsrelease.htm",
+  "as_of": "2026-07-22",
+  "current": {
+   "mco_revenue": {
+    "text": "Increase in the high-single-digit percent range",
+    "low": null,
+    "high": null,
+    "unit": "% growth",
+    "changed_vs_apr22": false
+   },
+   "operating_expenses": {
+    "text": "Increase in the mid-single-digit percent range",
+    "low": null,
+    "high": null,
+    "unit": "% growth",
+    "changed_vs_apr22": false
+   },
+   "operating_margin": {
+    "text": "44% to 45%",
+    "low": 44.0,
+    "high": 45.0,
+    "unit": "%",
+    "changed_vs_apr22": true,
+    "prior": "Approximately 45%"
+   },
+   "adjusted_operating_margin": {
+    "text": "52% to 53%",
+    "low": 52.0,
+    "high": 53.0,
+    "unit": "%",
+    "changed_vs_apr22": false
+   },
+   "interest_expense_net": {
+    "text": "$220 to $240 million",
+    "low": 220.0,
+    "high": 240.0,
+    "unit": "USD m (expense)",
+    "changed_vs_apr22": false
+   },
+   "non_operating_expense_income": {
+    "text": "$70 to $90 million",
+    "low": 70.0,
+    "high": 90.0,
+    "unit": "USD m",
+    "changed_vs_apr22": false,
+    "sign_note": "Labelled 'Non-operating (Expense)/Income'; footnote (2): includes net interest expense, the pre-tax gain on the MA Regulatory Solutions divestiture recorded in Q2-26 and the forecasted contingent gain in H2-26. Shown without parentheses, i.e. net income of $70-90m (the Feb-26 guidance was '($180 to $200 million)' expense). Sign interpretation is ours."
+   },
+   "effective_tax_rate": {
+    "text": "23% to 25%",
+    "low": 23.0,
+    "high": 25.0,
+    "unit": "%",
+    "changed_vs_apr22": false
+   },
+   "diluted_eps": {
+    "text": "$16.00 to $16.50",
+    "low": 16.0,
+    "high": 16.5,
+    "unit": "USD/share",
+    "changed_vs_apr22": true,
+    "prior": "$16.00 to $16.60"
+   },
+   "adjusted_diluted_eps": {
+    "text": "$16.50 to $17.00",
+    "low": 16.5,
+    "high": 17.0,
+    "unit": "USD/share",
+    "changed_vs_apr22": true,
+    "prior": "$16.40 to $17.00"
+   },
+   "operating_cash_flow": {
+    "text": "$3.15 to $3.35 billion",
+    "low": 3150.0,
+    "high": 3350.0,
+    "unit": "USD m",
+    "changed_vs_apr22": true,
+    "prior": "$3.25 to $3.45 billion"
+   },
+   "free_cash_flow": {
+    "text": "$2.7 to $2.9 billion",
+    "low": 2700.0,
+    "high": 2900.0,
+    "unit": "USD m",
+    "changed_vs_apr22": true,
+    "prior": "$2.8 to $3.0 billion"
+   },
+   "share_repurchases": {
+    "text": "Up to $3.0 billion (subject to available cash, market conditions, M&A opportunities and other ongoing capital allocation decisions)",
+    "low": null,
+    "high": 3000.0,
+    "unit": "USD m",
+    "changed_vs_apr22": true,
+    "prior": "Approximately $2.5 billion (subject to available cash, market conditions, M&A opportunities and other ongoing capital allocation decisions)"
+   },
+   "ma_revenue": {
+    "text": "Increase in the mid-single-digit percent range",
+    "low": null,
+    "high": null,
+    "unit": "% growth",
+    "changed_vs_apr22": false
+   },
+   "ma_organic_cc_revenue": {
+    "text": "Increase in the high-single-digit percent range",
+    "low": null,
+    "high": null,
+    "unit": "% growth",
+    "changed_vs_apr22": false
+   },
+   "ma_arr": {
+    "text": "Increase in the high-single-digit percent range",
+    "low": null,
+    "high": null,
+    "unit": "% growth",
+    "changed_vs_apr22": false
+   },
+   "ma_adjusted_operating_margin": {
+    "text": "34% to 35%",
+    "low": 34.0,
+    "high": 35.0,
+    "unit": "%",
+    "changed_vs_apr22": false
+   },
+   "mis_revenue": {
+    "text": "Increase in the high-single-digit percent range",
+    "low": null,
+    "high": null,
+    "unit": "% growth",
+    "changed_vs_apr22": false
+   },
+   "mis_adjusted_operating_margin": {
+    "text": "Approximately 65%",
+    "low": 65.0,
+    "high": 65.0,
+    "unit": "%",
+    "changed_vs_apr22": false
+   }
+  },
+  "reconciliation": {
+   "operating_margin_bridge": {
+    "operating_margin": {
+     "text": "44% to 45%",
+     "low": 44.0,
+     "high": 45.0,
+     "unit": "% of revenue"
+    },
+    "depreciation_and_amortization": {
+     "text": "Approximately 6%",
+     "low": 6.0,
+     "high": 6.0,
+     "unit": "% of revenue"
+    },
+    "restructuring": {
+     "text": "Approximately 1.5%",
+     "low": 1.5,
+     "high": 1.5,
+     "unit": "% of revenue"
+    },
+    "reserve_international_non_income_tax": {
+     "text": "Approximately 0.5%",
+     "low": 0.5,
+     "high": 0.5,
+     "unit": "% of revenue"
+    },
+    "duplicate_rent_ny_hq": {
+     "text": "Negligible",
+     "low": null,
+     "high": null,
+     "unit": "% of revenue"
+    },
+    "adjusted_operating_margin": {
+     "text": "52% to 53%",
+     "low": 52.0,
+     "high": 53.0,
+     "unit": "% of revenue"
+    }
+   },
+   "fcf_bridge": {
+    "operating_cash_flow": {
+     "text": "$3.15 to $3.35 billion",
+     "low": 3150.0,
+     "high": 3350.0,
+     "unit": "USD m"
+    },
+    "capital_expenditures": {
+     "text": "Approximately $450 million",
+     "low": 450.0,
+     "high": 450.0,
+     "unit": "USD m",
+     "note": "(6) Approximately $100 million in incremental capital expenditures is associated with office relocations in New York and London."
+    },
+    "free_cash_flow": {
+     "text": "$2.7 to $2.9 billion",
+     "low": 2700.0,
+     "high": 2900.0,
+     "unit": "USD m"
+    }
+   },
+   "eps_bridge": {
+    "diluted_eps": {
+     "text": "$16.00 to $16.50",
+     "low": 16.0,
+     "high": 16.5,
+     "unit": "USD/share"
+    },
+    "acquisition_related_intangible_amortization": {
+     "text": "Approximately $0.90",
+     "low": 0.9,
+     "high": 0.9,
+     "unit": "USD/share"
+    },
+    "restructuring": {
+     "text": "Approximately $0.50",
+     "low": 0.5,
+     "high": 0.5,
+     "unit": "USD/share"
+    },
+    "reserve_international_non_income_tax": {
+     "text": "Approximately $0.25",
+     "low": 0.25,
+     "high": 0.25,
+     "unit": "USD/share"
+    },
+    "duplicate_rent_ny_hq": {
+     "text": "Approximately $0.10",
+     "low": 0.1,
+     "high": 0.1,
+     "unit": "USD/share"
+    },
+    "gain_on_business_divestitures": {
+     "text": "Approximately ($1.25)",
+     "low": -1.25,
+     "high": -1.25,
+     "unit": "USD/share"
+    },
+    "adjusted_diluted_eps": {
+     "text": "$16.50 to $17.00",
+     "low": 16.5,
+     "high": 17.0,
+     "unit": "USD/share"
+    }
+   },
+   "ma_revenue_bridge": {
+    "ma_revenue": {
+     "text": "Increase in the mid-single-digit percent range",
+     "low": null,
+     "high": null,
+     "unit": "% growth"
+    },
+    "inorganic_revenue_from_acquisitions_and_divestitures": {
+     "text": "Approximately 4%",
+     "low": 4.0,
+     "high": 4.0,
+     "unit": "% points",
+     "note": "(7) Primarily relates to the impact from the divestitures of MA's Learning and Regulatory Solutions businesses."
+    },
+    "fx_impact": {
+     "text": "Approximately (0.5)%",
+     "low": -0.5,
+     "high": -0.5,
+     "unit": "% points"
+    },
+    "ma_organic_cc_revenue": {
+     "text": "Increase in the high-single-digit percent range",
+     "low": null,
+     "high": null,
+     "unit": "% growth"
+    }
+   },
+   "opex_growth_bridge": {
+    "fy2026_operating_expenses": {
+     "text": "Increase in the mid-single-digit percent range",
+     "low": null,
+     "high": null,
+     "unit": "% growth"
+    },
+    "operating_growth": {
+     "text": "2.5 to 3.5%",
+     "low": 2.5,
+     "high": 3.5,
+     "unit": "% points"
+    },
+    "incentive_and_stock_based_compensation": {
+     "text": "Approximately 1%",
+     "low": 1.0,
+     "high": 1.0,
+     "unit": "% points"
+    },
+    "depreciation_and_amortization": {
+     "text": "Approximately 1%",
+     "low": 1.0,
+     "high": 1.0,
+     "unit": "% points"
+    },
+    "reserve_and_duplicate_rent": {
+     "text": "Approximately 1%",
+     "low": 1.0,
+     "high": 1.0,
+     "unit": "% points",
+     "label": "Reserve for international non-income tax obligation and duplicate rent"
+    },
+    "restructuring_charges": {
+     "text": "Approximately 0.5%",
+     "low": 0.5,
+     "high": 0.5,
+     "unit": "% points"
+    },
+    "acquired_and_divested_companies": {
+     "text": "Approximately (1.5)%",
+     "low": -1.5,
+     "high": -1.5,
+     "unit": "% points"
+    }
+   }
+  },
+  "footnotes": "NC - no difference vs last publicly disclosed guidance. (1) Adjusted measures. (2) Non-operating expense includes net interest expense. Also included is the pre-tax gain on the divestiture of the MA Regulatory Solutions business recorded in the second quarter of 2026 and the forecasted contingent gain related to the transaction in the second half of 2026. (5) Duplicate rent relates to the transition to the new global headquarters. (6) ~$100m incremental capex for office relocations in New York and London. (7) Inorganic: primarily the divestitures of MA's Learning and Regulatory Solutions businesses.",
+  "history": {
+   "2026-02-18": {
+    "src": "8-K Ex. 99.1 Q4-25 earnings release, 18-Feb-2026 (Table 12 - 2026 Outlook, guidance as of February 18, 2026)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026008788/a4q25earningsrelease.htm",
+    "items": {
+     "mco_revenue": "Increase in the high-single-digit percent range",
+     "operating_expenses": "Increase in the mid-single-digit percent range",
+     "operating_margin": "45% to 46%",
+     "adjusted_operating_margin": "52% to 53%",
+     "interest_expense_net": "$210 to $230 million",
+     "non_operating_expense": "$180 to $200 million (labelled 'Non-operating Expense'; inclusive of net interest expense)",
+     "effective_tax_rate": "23% to 25%",
+     "diluted_eps": "$15.00 to $15.60",
+     "adjusted_diluted_eps": "$16.40 to $17.00",
+     "operating_cash_flow": "$3.25 to $3.45 billion",
+     "free_cash_flow": "$2.8 to $3.0 billion",
+     "share_repurchases": "Approximately $2.0 billion (subject to available cash, market conditions, M&A opportunities and other ongoing capital allocation decisions)",
+     "ma_revenue": "Increase in the mid-single-digit percent range",
+     "ma_organic_cc_revenue": "Increase in the high-single-digit percent range",
+     "ma_arr": "Increase in the high-single-digit percent range",
+     "ma_adjusted_operating_margin": "34% to 35%",
+     "mis_revenue": "Increase in the high-single-digit percent range",
+     "mis_adjusted_operating_margin": "Approximately 65%"
+    },
+    "reconciliations": {
+     "operating_margin_bridge": [
+      [
+       "Operating margin guidance",
+       "45% to 46%"
+      ],
+      [
+       "Depreciation and amortization",
+       "Approximately 6%"
+      ],
+      [
+       "Restructuring",
+       "Approximately 1%"
+      ],
+      [
+       "Adjusted Operating Margin guidance",
+       "52% to 53%"
+      ]
+     ],
+     "fcf_bridge": [
+      [
+       "Operating cash flow guidance",
+       "$3.25 to $3.45 billion"
+      ],
+      [
+       "Less: Capital expenditures (5)",
+       "Approximately $450 million"
+      ],
+      [
+       "Free Cash Flow guidance",
+       "$2.8 to $3.0 billion"
+      ]
+     ],
+     "eps_bridge": [
+      [
+       "Diluted EPS guidance",
+       "$15.00 to $15.60"
+      ],
+      [
+       "Acquisition-Related Intangible Amortization",
+       "Approximately $0.90"
+      ],
+      [
+       "Restructuring",
+       "Approximately $0.40"
+      ],
+      [
+       "Duplicative Rent - NY HQ (6)",
+       "Approximately $0.10"
+      ],
+      [
+       "Adjusted Diluted EPS guidance",
+       "$16.40 to $17.00"
+      ]
+     ],
+     "ma_revenue_bridge": [
+      [
+       "MA Revenue",
+       "Increase in the mid-single-digit percent range"
+      ],
+      [
+       "FX impact",
+       "Approximately (1%)"
+      ],
+      [
+       "Inorganic revenue from acquisitions and divestitures (7)",
+       "Approximately 2%"
+      ],
+      [
+       "MA Organic Constant Currency Revenue",
+       "Increase in the high-single-digit percent range"
+      ]
+     ],
+     "opex_growth_bridge": null,
+     "footnotes": "(5) ~$100 million in incremental capital expenditures is associated with office relocations in New York and London. (6) Reflects duplicative rent expense related to the transition to Moody's new global headquarters. (7) Primarily relates to the impact from the divestiture of the MA Learning Solutions business. No opex growth bridge was published in the Q4-25 release."
+    },
+    "assumptions": [
+     [
+      "U.S. GDP growth",
+      "1.5% - 2.5%"
+     ],
+     [
+      "Euro area GDP growth",
+      "1.0% - 2.0%"
+     ],
+     [
+      "Global GDP growth",
+      "2.0% - 3.0%"
+     ],
+     [
+      "Global policy rates",
+      "Monetary policy is close to neutral. Expecting one to two cuts to the Federal Funds Rate in 2026. The European Central Bank (ECB) will maintain its current policy stance"
+     ],
+     [
+      "U.S. high yield spreads",
+      "To widen to around 470 bps over the next 12 months, close to historical average of around 500 bps"
+     ],
+     [
+      "U.S. inflation rate",
+      "2.0% to 3.0%"
+     ],
+     [
+      "Euro area inflation rate",
+      "Around 2.0%"
+     ],
+     [
+      "U.S. unemployment rate",
+      "4.0% to 5.0% during 2026"
+     ],
+     [
+      "Global high yield default rate",
+      "To fall below 3% by year-end"
+     ],
+     [
+      "Global MIS rated issuance",
+      "Increase in the low-single-digit percent range"
+     ],
+     [
+      "GBP/USD exchange rate",
+      "$1.35 for the full year"
+     ],
+     [
+      "EUR/USD exchange rate",
+      "$1.17 for the full year"
+     ]
+    ]
+   },
+   "2026-04-22": {
+    "src": "8-K Ex. 99.1 Q1-26 earnings release, 22-Apr-2026 (guidance as of April 22, 2026)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026026383/a1q26earningsrelease.htm",
+    "items": {
+     "mco_revenue": "Increase in the high-single-digit percent range (NC)",
+     "operating_expenses": "Increase in the mid-single-digit percent range (NC)",
+     "operating_margin": "Approximately 45% (from 45% to 46%)",
+     "adjusted_operating_margin": "52% to 53% (NC)",
+     "interest_expense_net": "$220 to $240 million (from $210 to $230 million)",
+     "non_operating_expense_income": "$70 to $90 million (from ($180 to $200 million)); includes expected gain from the anticipated MA Regulatory Solutions divestiture",
+     "effective_tax_rate": "23% to 25% (NC)",
+     "diluted_eps": "$16.00 to $16.60 (from $15.00 to $15.60)",
+     "adjusted_diluted_eps": "$16.40 to $17.00 (NC)",
+     "operating_cash_flow": "$3.25 to $3.45 billion (NC)",
+     "free_cash_flow": "$2.8 to $3.0 billion (NC)",
+     "share_repurchases": "Approximately $2.5 billion (subject to available cash, market conditions, M&A opportunities and other ongoing capital allocation decisions) (from approximately $2.0 billion)",
+     "ma_revenue": "Increase in the mid-single-digit percent range (NC)",
+     "ma_organic_cc_revenue": "Increase in the high-single-digit percent range (NC)",
+     "ma_arr": "Increase in the high-single-digit percent range (NC)",
+     "ma_adjusted_operating_margin": "34% to 35% (NC)",
+     "mis_revenue": "Increase in the high-single-digit percent range (NC)",
+     "mis_adjusted_operating_margin": "Approximately 65% (NC)"
+    },
+    "reconciliations": {
+     "operating_margin_bridge": [
+      [
+       "Operating margin guidance",
+       "Approximately 45%"
+      ],
+      [
+       "Depreciation and amortization",
+       "Approximately 6%"
+      ],
+      [
+       "Restructuring",
+       "Approximately 1%"
+      ],
+      [
+       "Reserve for international non-income tax obligation",
+       "Approximately 0.5%"
+      ],
+      [
+       "Adjusted Operating Margin guidance",
+       "52% to 53%"
+      ]
+     ],
+     "fcf_bridge": [
+      [
+       "Operating cash flow guidance",
+       "$3.25 to $3.45 billion"
+      ],
+      [
+       "Less: Capital expenditures (5)",
+       "Approximately $450 million"
+      ],
+      [
+       "Free Cash Flow guidance",
+       "$2.8 to $3.0 billion"
+      ]
+     ],
+     "eps_bridge": [
+      [
+       "Diluted EPS guidance",
+       "$16.00 to $16.60"
+      ],
+      [
+       "Acquisition-related intangible amortization",
+       "Approximately $0.90"
+      ],
+      [
+       "Restructuring",
+       "Approximately $0.40"
+      ],
+      [
+       "Reserve for international non-income tax obligation",
+       "Approximately $0.25"
+      ],
+      [
+       "Duplicative rent - NY HQ (6)",
+       "Approximately $0.10"
+      ],
+      [
+       "Gain on divestiture of business",
+       "Approximately ($1.25)"
+      ],
+      [
+       "Adjusted Diluted EPS guidance",
+       "$16.40 to $17.00"
+      ]
+     ],
+     "ma_revenue_bridge": [
+      [
+       "MA Revenue",
+       "Increase in the mid-single-digit percent range"
+      ],
+      [
+       "Inorganic revenue from acquisitions and divestitures (7)",
+       "Approximately 4%"
+      ],
+      [
+       "FX impact",
+       "Approximately (0.5)%"
+      ],
+      [
+       "MA Organic Constant Currency Revenue",
+       "Increase in the high-single-digit percent range"
+      ]
+     ],
+     "opex_growth_bridge": [
+      [
+       "FY 2026 Operating Expenses",
+       "Increase in the mid-single-digit percent range"
+      ],
+      [
+       "Operating Growth",
+       "2.5 to 3.5%"
+      ],
+      [
+       "Incentive and Stock-Based Compensation",
+       "Approximately 1%"
+      ],
+      [
+       "Depreciation and Amortization",
+       "Approximately 1%"
+      ],
+      [
+       "Reserve for international non-income tax obligation and duplicative rent",
+       "Approximately 1%"
+      ],
+      [
+       "Acquired and Divested Companies",
+       "Approximately (1.5)%"
+      ]
+     ],
+     "footnotes": "Guidance included the expected impact of the pending MA Regulatory Solutions divestiture. (7) Primarily relates to the impact from the divestitures of MA's Learning and Regulatory Solutions businesses."
+    },
+    "assumptions": "See assumptions_fy26.history['2026-04-22']"
+   },
+   "2026-07-22": {
+    "src": "8-K Ex. 99.1 Q2-26 earnings release, 22-Jul-2026 (Full Year 2026 guidance as of July 22, 2026)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026049104/a2q26earningsrelease.htm",
+    "items": "see current (guidance_fy26.current)"
+   }
+  }
+ },
+ "assumptions_fy26": {
+  "src": "8-K Ex. 99.1 Q2-26 earnings release, 22-Jul-2026 (Full Year 2026 guidance as of July 22, 2026), page 7 'Assumptions'",
+  "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026049104/a2q26earningsrelease.htm",
+  "as_of": "2026-07-22",
+  "columns": [
+   "Forecasted Item",
+   "Last Publicly Disclosed Assumption (22-Apr-2026)",
+   "Current Assumption (22-Jul-2026)"
+  ],
+  "items": {
+   "us_gdp_growth": [
+    "1.5% - 2.5% (2)",
+    "NC",
+    {
+     "low": 1.5,
+     "high": 2.5
+    }
+   ],
+   "euro_area_gdp_growth": [
+    "1.0% - 2.0% (2)",
+    "0.5% - 1.5%",
+    {
+     "low": 0.5,
+     "high": 1.5
+    }
+   ],
+   "global_gdp_growth": [
+    "2.0% - 3.0% (2)",
+    "NC",
+    {
+     "low": 2.0,
+     "high": 3.0
+    }
+   ],
+   "global_policy_rates": [
+    "U.S. rate cut expectations pushed out to end of year or beyond; chance of a hike if conflict extends and spurs inflation",
+    "Central banks will maintain a tightening bias, with one U.S. Fed rate increase and a further ECB hike likely in 2026",
+    null
+   ],
+   "us_high_yield_spreads": [
+    "To widen to around 460 bps over the next 12 months, close to historical average of around 500 bps",
+    "To widen to around 330 bps in the coming 2 quarters, below the historical average of around 500 bps",
+    {
+     "bps": 330
+    }
+   ],
+   "us_inflation_rate": [
+    "2.0% to 3.0% (3)",
+    "2.5% - 3.5%",
+    {
+     "low": 2.5,
+     "high": 3.5
+    }
+   ],
+   "euro_area_inflation_rate": [
+    "Above 2.0% (3)",
+    "2.0% - 3.0%",
+    {
+     "low": 2.0,
+     "high": 3.0
+    }
+   ],
+   "us_unemployment_rate": [
+    "4.0% to 5.0% during 2026",
+    "NC",
+    {
+     "low": 4.0,
+     "high": 5.0
+    }
+   ],
+   "global_speculative_grade_default_rate": [
+    "To finish at around 3% by year-end",
+    "NC",
+    {
+     "approx": 3.0
+    }
+   ],
+   "global_mis_rated_issuance": [
+    "Increase in the low-single-digit percent range",
+    "Increase in the mid-single-digit percent range",
+    null
+   ],
+   "gbp_usd": [
+    "$1.32 for the remainder of the year",
+    "$1.33 for the remainder of the year",
+    {
+     "rate": 1.33
+    }
+   ],
+   "eur_usd": [
+    "$1.15 for the remainder of the year",
+    "$1.14 for the remainder of the year",
+    {
+     "rate": 1.14
+    }
+   ]
+  },
+  "footnotes": "NC = no change. (1) GDP growth represents real GDP. (2) Downside risk from the conflict in the Middle East to undermine the ongoing economic expansion. (3) Upside risk from sustained high energy prices.",
+  "history": {
+   "2026-02-18": {
+    "src": "8-K Ex. 99.1 Q4-25 earnings release, 18-Feb-2026 (Table 12 - 2026 Outlook, guidance as of February 18, 2026)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026008788/a4q25earningsrelease.htm",
+    "items": [
+     [
+      "U.S. GDP growth",
+      "1.5% - 2.5%"
+     ],
+     [
+      "Euro area GDP growth",
+      "1.0% - 2.0%"
+     ],
+     [
+      "Global GDP growth",
+      "2.0% - 3.0%"
+     ],
+     [
+      "Global policy rates",
+      "Monetary policy is close to neutral. Expecting one to two cuts to the Federal Funds Rate in 2026. The European Central Bank (ECB) will maintain its current policy stance"
+     ],
+     [
+      "U.S. high yield spreads",
+      "To widen to around 470 bps over the next 12 months, close to historical average of around 500 bps"
+     ],
+     [
+      "U.S. inflation rate",
+      "2.0% to 3.0%"
+     ],
+     [
+      "Euro area inflation rate",
+      "Around 2.0%"
+     ],
+     [
+      "U.S. unemployment rate",
+      "4.0% to 5.0% during 2026"
+     ],
+     [
+      "Global high yield default rate",
+      "To fall below 3% by year-end"
+     ],
+     [
+      "Global MIS rated issuance",
+      "Increase in the low-single-digit percent range"
+     ],
+     [
+      "GBP/USD exchange rate",
+      "$1.35 for the full year"
+     ],
+     [
+      "EUR/USD exchange rate",
+      "$1.17 for the full year"
+     ]
+    ]
+   },
+   "2026-04-22": {
+    "src": "8-K Ex. 99.1 Q1-26 earnings release, 22-Apr-2026 (guidance as of April 22, 2026)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026026383/a1q26earningsrelease.htm",
+    "items": [
+     [
+      "U.S. GDP growth",
+      "1.5% - 2.5% (NC; downside risk from Middle East conflict)"
+     ],
+     [
+      "Euro area GDP growth",
+      "1.0% - 2.0% (NC)"
+     ],
+     [
+      "Global GDP growth",
+      "2.0% - 3.0% (NC)"
+     ],
+     [
+      "Global policy rates",
+      "U.S. rate cut expectations pushed out to end of year or beyond; chance of a hike if conflict extends and spurs inflation"
+     ],
+     [
+      "U.S. high yield spreads",
+      "To widen to around 460 bps over the next 12 months, close to historical average of around 500 bps"
+     ],
+     [
+      "U.S. inflation rate",
+      "2.0% to 3.0% (NC; upside risk from sustained high energy prices)"
+     ],
+     [
+      "Euro area inflation rate",
+      "Above 2.0%"
+     ],
+     [
+      "U.S. unemployment rate",
+      "4.0% to 5.0% during 2026 (NC)"
+     ],
+     [
+      "Global speculative grade default rate",
+      "To finish at around 3% by year-end"
+     ],
+     [
+      "Global MIS rated issuance",
+      "Increase in the low-single-digit percent range (NC)"
+     ],
+     [
+      "GBP/USD exchange rate",
+      "$1.32 for the remainder of the year"
+     ],
+     [
+      "EUR/USD exchange rate",
+      "$1.15 for the remainder of the year"
+     ]
+    ]
+   }
+  }
+ },
+ "debt": {
+  "src": "10-Q for the quarter ended 30-Jun-2026 (filed 23-Jul-2026), Note 13 Indebtedness, Note 7 (swaps / net investment hedges), MD&A Liquidity; facility terms from FY2025 10-K (filed 18-Feb-2026) Note 16",
+  "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026049398/mco-20260630.htm",
+  "as_of": "2026-06-30",
+  "units": "USD millions",
+  "instruments": [
+   {
+    "name": "5.25% 2014 Senior Notes, due 2044",
+    "currency": "USD",
+    "principal": 600.0,
+    "coupon_pct": 5.25,
+    "maturity_date": "2044-07-15",
+    "fair_value_of_interest_rate_swaps": -19.0,
+    "unamortized_discount_premium": 3.0,
+    "unamortized_issuance_costs": -4.0,
+    "carrying_value": 580.0,
+    "pay_floating_swap_notional": 300.0
+   },
+   {
+    "name": "1.75% 2015 Senior Notes, due 2027",
+    "currency": "EUR (EUR 500m)",
+    "principal": 571.0,
+    "coupon_pct": 1.75,
+    "maturity_date": "2027-03-09",
+    "fair_value_of_interest_rate_swaps": 0.0,
+    "unamortized_discount_premium": 0.0,
+    "unamortized_issuance_costs": 0.0,
+    "carrying_value": 571.0,
+    "pay_floating_swap_notional": 0.0
+   },
+   {
+    "name": "3.25% 2017 Senior Notes, due 2028",
+    "currency": "USD",
+    "principal": 500.0,
+    "coupon_pct": 3.25,
+    "maturity_date": "2028-01-15",
+    "fair_value_of_interest_rate_swaps": 0.0,
+    "unamortized_discount_premium": -1.0,
+    "unamortized_issuance_costs": -1.0,
+    "carrying_value": 498.0,
+    "pay_floating_swap_notional": 0.0
+   },
+   {
+    "name": "4.25% 2018 Senior Notes, due 2029",
+    "currency": "USD",
+    "principal": 400.0,
+    "coupon_pct": 4.25,
+    "maturity_date": "2029-02-01",
+    "fair_value_of_interest_rate_swaps": -22.0,
+    "unamortized_discount_premium": -1.0,
+    "unamortized_issuance_costs": -1.0,
+    "carrying_value": 376.0,
+    "pay_floating_swap_notional": 400.0
+   },
+   {
+    "name": "4.875% 2018 Senior Notes, due 2048",
+    "currency": "USD",
+    "principal": 400.0,
+    "coupon_pct": 4.875,
+    "maturity_date": "2048-12-17",
+    "fair_value_of_interest_rate_swaps": -22.0,
+    "unamortized_discount_premium": -6.0,
+    "unamortized_issuance_costs": -3.0,
+    "carrying_value": 369.0,
+    "pay_floating_swap_notional": 300.0
+   },
+   {
+    "name": "0.950% 2019 Senior Notes, due 2030",
+    "currency": "EUR (EUR 750m)",
+    "principal": 857.0,
+    "coupon_pct": 0.95,
+    "maturity_date": "2030-02-25",
+    "fair_value_of_interest_rate_swaps": 0.0,
+    "unamortized_discount_premium": -1.0,
+    "unamortized_issuance_costs": -2.0,
+    "carrying_value": 854.0,
+    "pay_floating_swap_notional": 0.0
+   },
+   {
+    "name": "3.25% 2020 Senior Notes, due 2050",
+    "currency": "USD",
+    "principal": 300.0,
+    "coupon_pct": 3.25,
+    "maturity_date": "2050-05-20",
+    "fair_value_of_interest_rate_swaps": 0.0,
+    "unamortized_discount_premium": -4.0,
+    "unamortized_issuance_costs": -2.0,
+    "carrying_value": 294.0,
+    "pay_floating_swap_notional": 0.0
+   },
+   {
+    "name": "2.55% 2020 Senior Notes, due 2060",
+    "currency": "USD",
+    "principal": 300.0,
+    "coupon_pct": 2.55,
+    "maturity_date": "2060-08-18",
+    "fair_value_of_interest_rate_swaps": 0.0,
+    "unamortized_discount_premium": -2.0,
+    "unamortized_issuance_costs": -3.0,
+    "carrying_value": 295.0,
+    "pay_floating_swap_notional": 0.0
+   },
+   {
+    "name": "2.00% 2021 Senior Notes, due 2031",
+    "currency": "USD",
+    "principal": 600.0,
+    "coupon_pct": 2.0,
+    "maturity_date": "2031-08-19",
+    "fair_value_of_interest_rate_swaps": 0.0,
+    "unamortized_discount_premium": -4.0,
+    "unamortized_issuance_costs": -3.0,
+    "carrying_value": 593.0,
+    "pay_floating_swap_notional": 0.0
+   },
+   {
+    "name": "2.75% 2021 Senior Notes, due 2041",
+    "currency": "USD",
+    "principal": 600.0,
+    "coupon_pct": 2.75,
+    "maturity_date": "2041-08-19",
+    "fair_value_of_interest_rate_swaps": 0.0,
+    "unamortized_discount_premium": -11.0,
+    "unamortized_issuance_costs": -4.0,
+    "carrying_value": 585.0,
+    "pay_floating_swap_notional": 0.0
+   },
+   {
+    "name": "3.10% 2021 Senior Notes, due 2061",
+    "currency": "USD",
+    "principal": 500.0,
+    "coupon_pct": 3.1,
+    "maturity_date": "2061-11-15",
+    "fair_value_of_interest_rate_swaps": 0.0,
+    "unamortized_discount_premium": -6.0,
+    "unamortized_issuance_costs": -5.0,
+    "carrying_value": 489.0,
+    "pay_floating_swap_notional": 0.0
+   },
+   {
+    "name": "3.75% 2022 Senior Notes, due 2052",
+    "currency": "USD",
+    "principal": 500.0,
+    "coupon_pct": 3.75,
+    "maturity_date": "2052-02-25",
+    "fair_value_of_interest_rate_swaps": -31.0,
+    "unamortized_discount_premium": -8.0,
+    "unamortized_issuance_costs": -4.0,
+    "carrying_value": 457.0,
+    "pay_floating_swap_notional": 500.0
+   },
+   {
+    "name": "4.25% 2022 Senior Notes, due 2032",
+    "currency": "USD",
+    "principal": 500.0,
+    "coupon_pct": 4.25,
+    "maturity_date": "2032-01-15",
+    "fair_value_of_interest_rate_swaps": -4.0,
+    "unamortized_discount_premium": -1.0,
+    "unamortized_issuance_costs": -2.0,
+    "carrying_value": 493.0,
+    "pay_floating_swap_notional": 250.0
+   },
+   {
+    "name": "5.00% 2024 Senior Notes, due 2034",
+    "currency": "USD",
+    "principal": 500.0,
+    "coupon_pct": 5.0,
+    "maturity_date": "2034",
+    "fair_value_of_interest_rate_swaps": 0.0,
+    "unamortized_discount_premium": -4.0,
+    "unamortized_issuance_costs": -4.0,
+    "carrying_value": 492.0,
+    "pay_floating_swap_notional": 0.0
+   }
+  ],
+  "maturity_date_src": "Exact maturity dates from the key-terms tables of prior 10-Ks / 8-Ks (e.g. FY2022-FY2024 10-K indebtedness notes, 8-K note issuances); the 2024 Senior Notes due 2034 exact day is not in the downloaded documents (issued 5-Aug-2024).",
+  "total_debt": {
+   "principal": 7128.0,
+   "fair_value_of_interest_rate_swaps": -98.0,
+   "unamortized_discount_premium": -46.0,
+   "unamortized_issuance_costs": -38.0,
+   "carrying_value": 6946.0,
+   "current_portion": 571.0,
+   "long_term_debt": 6375.0
+  },
+  "fair_value": {
+   "carrying_value": 6946.0,
+   "estimated_fair_value": 6127.0,
+   "level": "Level 1",
+   "dec_31_2025": {
+    "carrying_value": 6994.0,
+    "estimated_fair_value": 6245.0
+   }
+  },
+  "commercial_paper_program": {
+   "size": 1000.0,
+   "drawn": 0.0,
+   "established": "2016-08-03",
+   "max_maturity_days": 397,
+   "text": "At June 30, 2026, Moody's had $7.1 billion of outstanding principal on debt and $1 billion of additional capacity available under the Company's CP Program, which is backstopped by the $1.25 billion 2024 Facility.",
+   "src": "Q2-26 10-Q MD&A Liquidity; FY2025 10-K Note 16",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026049398/mco-20260630.htm"
+  },
+  "revolving_credit_facility": {
+   "name": "2024 Credit Facility",
+   "size": 1250.0,
+   "issue_date": "2024-05-06",
+   "maturity": "2029-05-06",
+   "drawn": 0.0,
+   "pricing": "adjusted term SOFR + 80.5 to 122.5 bps; quarterly fee 7 to 15 bps (by index debt ratings)",
+   "covenant": "total debt to EBITDA not more than 4.0x (4.5x for the first three quarters after an acquisition with consideration > $500m)",
+   "drawn_note": "Undrawn at 31-Dec-2025 (10-K); Q2-26 10-Q states $1bn CP capacity backstopped by the facility and no borrowings are shown on the balance sheet.",
+   "src": "FY2025 10-K (18-Feb-2026) Note 16 Indebtedness; Q2-26 10-Q MD&A",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026009136/mco-20251231.htm"
+  },
+  "scheduled_maturities": {
+   "2026 (after June 30)": 0.0,
+   "2027": 571.0,
+   "2028": 500.0,
+   "2029": 400.0,
+   "2030": 857.0,
+   "Thereafter": 4800.0,
+   "Total": 7128.0
+  },
+  "net_investment_hedges": "EUR 500m of the 2015 Notes due 2027 and EUR 750m of the 2019 Notes due 2030 designated as net investment hedges; cross-currency swaps: pay EUR 2,197m fixed (2.63%) / receive $2,353m (4.11%); pay EUR 1,688m ESTR / receive $1,750m SOFR; HKD/USD and SGD/HKD swaps.",
+  "interest_rate_swaps_total_notional": 1750.0,
+  "future_interest_payments": "Future interest payments and fees associated with the Company's debt and credit facility are expected to be $3.4 billion, of which approximately $200 million is expected to be paid in each of the next five years.",
+  "interest_paid_6m": 107.0,
+  "notes": "2017 Senior Notes due 2028 swap ($500m notional at 31-Dec-2025) no longer outstanding at 30-Jun-2026. Euro note principal translated at 30-Jun-2026 rates as shown (571 / 857).",
+  "summary": "30-Jun-2026 (Q2-26 10-Q Note 13): 14 senior notes, $7,128m principal / $6,946m carrying value (current portion $571m = €500m 1.75% due Mar-2027); commercial paper programme $1.0bn undrawn; 2024 Credit Facility $1.25bn to May-2029 undrawn (covenant total debt / EBITDA ≤ 4.0x).",
+  "cp_note": "Commercial paper ($1.0bn programme, backstopped by the $1.25bn 2024 Credit Facility; nil at 30-Jun-2026) is drawn when cash would fall below the minimum balance and repaid from surplus cash."
+ },
+ "amort_sched": {
+  "src": "FY2025 10-K (filed 18-Feb-2026), Note 9 Goodwill and Other Acquired Intangible Assets: 'Estimated future annual amortization expense for intangible assets subject to amortization'. Neither the Q1-26 nor the Q2-26 10-Q gives a schedule.",
+  "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026009136/mco-20251231.htm",
+  "as_of": "2025-12-31",
+  "units": "USD millions",
+  "schedule": {
+   "2026": 207.0,
+   "2027": 195.0,
+   "2028": 182.0,
+   "2029": 150.0,
+   "2030": 126.0,
+   "Thereafter": 1006.0,
+   "Total": 1866.0
+  },
+  "remainder_2026": null,
+  "notes": "Schedule is for full-year 2026 at 31-Dec-2025 (no 'remainder of 2026' schedule published). Actual acquired-intangible amortization: 53 (Q1-26), 53 (Q2-26), 106 (6M-26) per Q2-26 10-Q Note 8; net acquired intangibles 1,749 at 30-Jun-2026. FY2025 amortization expense 215."
+ },
+ "buyback": {
+  "src": "10-Q Q2-26 (filed 23-Jul-2026) Part II Item 2 and MD&A; 10-Q Q1-26 (filed 23-Apr-2026) Part II Item 2; FY2025 10-K Note 17; Q2-26 release",
+  "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026049398/mco-20260630.htm",
+  "authorization_remaining_2026_06_30": {
+   "value": 1795.0,
+   "text": "At June 30, 2026 there was approximately $1.8 billion of share repurchase authority remaining under this authorization. There is no established expiration date for the remaining authorization.",
+   "note": "1,795 = 'Approximate Dollar Value of Shares That May Yet be Purchased' at end of June 2026"
+  },
+  "authorization_history": [
+   {
+    "date": "2024-02-05",
+    "amount": 1000.0,
+    "src": "FY2024 10-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000105955625000025/mco-20241231.htm"
+   },
+   {
+    "date": "2024-10-15",
+    "amount": 1500.0,
+    "src": "FY2024 10-K; remaining ~$1.6bn at 31-Dec-2024 (1,567 total); ~$0.4bn remaining at 30-Sep-2025 (Q3-25 10-Q)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000105955625000025/mco-20241231.htm"
+   },
+   {
+    "date": "2025-10-21",
+    "amount": 4000.0,
+    "remaining": {
+     "2025-12-31": 3960.0,
+     "2026-03-31": 2489.0,
+     "2026-06-30": 1795.0
+    },
+    "src": "FY2025 10-K Note 17; Q1-26 / Q2-26 10-Q Part II Item 2",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026009136/mco-20251231.htm"
+   }
+  ],
+  "monthly_q2_26": [
+   {
+    "period": "April 1-30, 2026",
+    "total_shares": 80910,
+    "avg_price": 461.67,
+    "program_shares": 77960,
+    "remaining_usd_m": 2453.0
+   },
+   {
+    "period": "May 1-31, 2026",
+    "total_shares": 786430,
+    "avg_price": 446.36,
+    "program_shares": 785454,
+    "remaining_usd_m": 2103.0
+   },
+   {
+    "period": "June 1-30, 2026",
+    "total_shares": 682610,
+    "avg_price": 450.64,
+    "program_shares": 682235,
+    "remaining_usd_m": 1795.0
+   },
+   {
+    "period": "Total Q2-26",
+    "total_shares": 1549950,
+    "avg_price": 449.02,
+    "program_shares": 1545649,
+    "remaining_usd_m": null
+   }
+  ],
+  "monthly_q2_26_note": "Total shares include surrender of 2,950; 976; and 375 shares in April, May and June to satisfy tax withholding. Q2-26 net 50 thousand shares issued under employee plans.",
+  "monthly_q1_26": [
+   {
+    "period": "January 1-31, 2026",
+    "total_shares": 236102,
+    "avg_price": 526.15,
+    "program_shares": 235831,
+    "remaining_usd_m": 3836.0
+   },
+   {
+    "period": "February 1-28, 2026",
+    "total_shares": 693319,
+    "avg_price": 450.2,
+    "program_shares": 692653,
+    "remaining_usd_m": 3525.0
+   },
+   {
+    "period": "March 1-31, 2026",
+    "total_shares": 2559104,
+    "avg_price": 443.94,
+    "program_shares": 2331610,
+    "remaining_usd_m": 2489.0
+   },
+   {
+    "period": "Total Q1-26",
+    "total_shares": 3488525,
+    "avg_price": 451.22,
+    "program_shares": 3260094,
+    "remaining_usd_m": null
+   }
+  ],
+  "monthly_q1_26_src": {
+   "src": "10-Q Q1-26 (filed 23-Apr-2026) Part II Item 2",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026026848/mco-20260331.htm"
+  },
+  "ytd_6m_2026": {
+   "treasury_shares_cash_usd_m": 2165.0,
+   "treasury_shares_repurchased_m": 4.7,
+   "treasury_repurchased_incl_excise_usd_m": 2184.0,
+   "excise_tax_usd_m": 19.0,
+   "program_shares_q1_plus_q2": 4805743,
+   "program_shares_note": "3,260,094 + 1,545,649 (computed)",
+   "release_text": "Repurchased approximately $2.2 billion of shares year-to-date and raised full-year repurchase guidance to up to $3.0 billion.",
+   "q2_equity_statement": "Treasury shares repurchased, inclusive of excise tax of $7 million: 1.5m shares, $701m (Q2-26)",
+   "q1_equity_statement": "Treasury shares repurchased, inclusive of excise tax: 3.2m shares, $1,483m (Q1-26)"
+  },
+  "price_reference": {
+   "text": "Latest SEC-filed repurchase price: June 2026 average price paid $450.64 (Q2-26 10-Q Part II Item 2, filed 23-Jul-2026); Q2-26 average $449.02. Update to market.",
+   "value": 450.64
+  }
+ },
+ "dividends": {
+  "src": "FY2025 10-K Note 17 (dividends per share table); Q4-25, Q1-26, Q2-26 releases; Q2-26 10-Q MD&A",
+  "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026009136/mco-20251231.htm",
+  "2025": [
+   {
+    "quarter": "Q1",
+    "declared": 0.94,
+    "paid": 0.94
+   },
+   {
+    "quarter": "Q2",
+    "declared": 0.94,
+    "paid": 0.94
+   },
+   {
+    "quarter": "Q3",
+    "declared": 0.94,
+    "paid": 0.94
+   },
+   {
+    "quarter": "Q4",
+    "declared": 0.94,
+    "paid": 0.94
+   },
+   {
+    "quarter": "Total",
+    "declared": 3.76,
+    "paid": 3.76
+   }
+  ],
+  "2026": [
+   {
+    "quarter": "Q1",
+    "dps": 1.03,
+    "declared": "2026-02-10",
+    "payable": "2026-03-13",
+    "record": "2026-03-02",
+    "src": "Q4-25 release / FY2025 10-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026008788/a4q25earningsrelease.htm"
+   },
+   {
+    "quarter": "Q2",
+    "dps": 1.03,
+    "declared": "2026-04-20",
+    "payable": "2026-06-05",
+    "record": "2026-05-15",
+    "src": "Q1-26 release (22-Apr-2026)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026026383/a1q26earningsrelease.htm"
+   },
+   {
+    "quarter": "Q3",
+    "dps": 1.03,
+    "declared": "2026-07-21",
+    "payable": "2026-09-04",
+    "record": "2026-08-14",
+    "src": "Q2-26 release (22-Jul-2026) and Q2-26 10-Q MD&A",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026049104/a2q26earningsrelease.htm"
+   }
+  ],
+  "notes": "2024: $0.85 per quarter ($3.40); 2023: $0.77 ($3.08). Dividends paid 6M-26 $365m (cash flow)."
+ },
+ "deals": {
+  "src": "FY2025 10-K; Q3-25, Q1-26, Q2-26 10-Qs; Q4-25 / Q2-26 releases; 8-Ks 12-Jan-2026, 15-Apr-2026, 12-Aug-2026",
+  "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026049398/mco-20260630.htm",
+  "divestitures": [
+   {
+    "name": "MA Regulatory Solutions business",
+    "segment": "MA (Decision Solutions - Banking)",
+    "agreement": "December 2025",
+    "closed": "Q2 2026",
+    "buyer": null,
+    "buyer_note": "Buyer not named in the 10-K / 10-Qs / releases.",
+    "cash_proceeds": 200.0,
+    "cash_proceeds_note": "Cash received upon business divestitures, net of cash transferred to purchaser, $200m in 6M-26, 'primarily relating to the sale of the MA Regulatory Solutions business' (Q2-26 10-Q MD&A); separate amount not disclosed",
+    "pre_tax_gain": 179.0,
+    "tax_on_gains": 55.0,
+    "tax_note": "Tax on gain on business divestitures $55m covers Regulatory Solutions (179) and Learning Solutions (2); net (126) / ($0.72) per share",
+    "contingent_consideration": "As of June 30, 2026, the transaction agreement provides for up to $119 million of remaining contingent consideration, payable upon the achievement of certain post-closing conditions in the second half of 2026; recognised as a gain contingency when realizable. Contingent consideration receivable of $40m (portion that became realizable in Q2-26) in other current assets at 30-Jun-2026.",
+    "contingent_remaining_max": 119.0,
+    "contingent_receivable_recognised": 40.0,
+    "held_for_sale_2025_12_31": {
+     "assets": 98.0,
+     "liabilities": 36.0,
+     "goodwill_reclassified": 89.0
+    },
+    "revenue_disclosed": null,
+    "revenue_note": "Revenue of the business not disclosed separately. OCC tables: divestiture adjustment to prior-year MA revenue $36m in Q2-25 (Learning + Regulatory Solutions; recurring $18m) vs $14m in Q1-25 (Learning only). FY26 guidance: inorganic impact on MA revenue ~4% (Learning and Regulatory Solutions). Restructuring 'personnel and related costs' include costs associated with this divestiture.",
+    "guidance_effect": "FY26 EPS bridge 'Gain on business divestitures approximately ($1.25)' includes the recorded Q2 gain and the forecasted H2-26 contingent gain.",
+    "src": "Q2-26 10-Q Note 11 and MD&A; FY2025 10-K Note 12; Q2-26 release Table 11",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026049398/mco-20260630.htm"
+   },
+   {
+    "name": "MA Learning Solutions business",
+    "segment": "MA (Banking transactional)",
+    "agreement": "August 2025",
+    "closed": "Q4 2025",
+    "buyer": null,
+    "cash_proceeds": 40.0,
+    "cash_proceeds_note": "Cash received upon divestiture of business, net of cash transferred to purchaser, $40m in FY2025 (FY2025 10-K cash flow)",
+    "pre_tax_gain": 23.0,
+    "pre_tax_gain_total": 25.0,
+    "gain_note": "$23m pre-tax gain in Q4-25 plus incremental $2m in Q2-26 from post-close purchase price adjustments = $25m total. Q4-25 adjusted NI bridge: costs to transact $2m, tax $3m, net gain $(18)m.",
+    "goodwill_derecognised": 9.0,
+    "revenue_disclosed": null,
+    "revenue_note": "Not disclosed; OCC divestiture adjustment $14m in Q1-25 prior-year MA revenue (Learning only).",
+    "src": "Q3-25 10-Q Note 12; FY2025 10-K Note 22 and cash flow; Q4-25 release; Q2-26 10-Q Note 11",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026009136/mco-20251231.htm"
+   }
+  ],
+  "acquisitions": [
+   {
+    "name": "CAPE Analytics",
+    "description": "AI-powered property risk intelligence",
+    "segment": "MA (Insurance)",
+    "closed": "January 2025",
+    "price": null,
+    "price_note": "Consideration not disclosed. Cash paid for acquisitions, net of cash acquired, $223m in Q1-25 ('higher cash paid ... of $211 million due to the acquisition of CAPE Analytics'); Q1-25 goodwill additions $135m (MA) 'relate to the acquisition of CAPE Analytics'. No PPA table disclosed.",
+    "cash_paid_q1_25": 223.0,
+    "goodwill_added_q1_25": 135.0,
+    "src": "Q1-25 10-Q Note (goodwill) and MD&A",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000105955625000121/mco-20250331.htm"
+   },
+   {
+    "name": "ICR Chile",
+    "description": "domestic credit rating agency, Chile",
+    "segment": "MIS",
+    "closed": "Q3 2025",
+    "price": null,
+    "note": "FY2025 goodwill additions $143m (MA 135, MIS 8) relate primarily to CAPE Analytics and ICR Chile; FY2025 cash paid for acquisitions $227m.",
+    "src": "FY2025 10-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026009136/mco-20251231.htm"
+   },
+   {
+    "name": "Fintellix",
+    "description": "data-driven risk and analytics for banks; acquired by ICRA",
+    "segment": "MIS",
+    "closed": "October 2025 per glossary; listed in 2026 goodwill additions",
+    "price": null,
+    "src": "Q1-26 / Q2-26 10-Q glossary and Note 8",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026049398/mco-20260630.htm"
+   },
+   {
+    "name": "MERIS (Middle East Rating & Investors Service)",
+    "description": "Egypt-based domestic credit rating agency",
+    "segment": "MIS",
+    "closed": "Q1 2026",
+    "price": null,
+    "note": "6M-26 goodwill additions $32m (MIS) relate to Fintellix and MERIS; cash paid for acquisitions, net of cash acquired, $23m in 6M-26; Q2-26 equity statement shows $6m 'Noncontrolling interest resulting from majority acquisition'.",
+    "src": "Q2-26 10-Q Note 8 / cash flow / equity statement",
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026049398/mco-20260630.htm"
+   }
+  ],
+  "other_8ks_reviewed": [
+   {
+    "date": "2026-01-12",
+    "items": "5.02, 7.01",
+    "event": "Lisa P. Sawicki elected to the Board effective 16-Mar-2026",
+    "material_for_model": false,
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000105955626000004/pressreleasejan12.htm"
+   },
+   {
+    "date": "2026-04-15",
+    "items": "7.01",
+    "event": "Christina Kosmowski named CEO of Moody's Analytics effective June 2026",
+    "material_for_model": false,
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000105955626000028/pressreleaseapril2026.htm"
+   },
+   {
+    "date": "2026-08-12",
+    "items": "5.02, 7.01",
+    "event": "Keith Demmings elected to the Board effective 1-Nov-2026",
+    "material_for_model": false,
+    "url": "https://www.sec.gov/Archives/edgar/data/1059556/000105955626000038/augustpressrelease.htm"
+   }
+  ],
+  "no_8k_after": "No other 8-K after 22-Jul-2026 besides 12-Aug-2026 in the EDGAR submissions list through 12-Oct-2026 (S-8 filed 24-Jul-2026; Forms 4/144 only)."
+ },
+ "restructuring": {
+  "src": "10-Q Q2-26 (filed 23-Jul-2026) Note 9 Restructuring, Note 16 and MD&A",
+  "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026049398/mco-20260630.htm",
+  "program": "Strategic and Operational Efficiency Restructuring Program",
+  "approved": "2024-12-19 (approved by the CEO); scope expanded in July 2026",
+  "annualized_savings": {
+   "low": 300.0,
+   "high": 350.0,
+   "prior_q1_26": "250-300"
+  },
+  "expected_charges": {
+   "personnel_and_related_pre_tax": {
+    "low": 285.0,
+    "high": 330.0
+   },
+   "non_cash_lease_exit": 5.0,
+   "non_cash_software_amortization": {
+    "low": 10.0,
+    "high": 15.0
+   },
+   "total": {
+    "low": 300.0,
+    "high": 350.0
+   },
+   "total_note": "Total computed (285+5+10 = 300; 330+5+15 = 350); equals segment ranges MA $215-240m + MIS $85-110m.",
+   "by_segment": {
+    "MA": {
+     "low": 215.0,
+     "high": 240.0
+    },
+    "MIS": {
+     "low": 85.0,
+     "high": 110.0
+    }
+   }
+  },
+  "cash_outlays": {
+   "low": 285.0,
+   "high": 330.0,
+   "paid_through": "2028",
+   "future_cash_outlays": {
+    "low": 130.0,
+    "high": 175.0
+   }
+  },
+  "charges_to_date": {
+   "cumulative": 212.0,
+   "personnel": 203.0,
+   "real_estate": 5.0,
+   "software": 4.0,
+   "MA": 158.0,
+   "MIS": 54.0,
+   "q2_26": 32.0,
+   "6m_26": 59.0,
+   "q1_26": 27.0
+  },
+  "liability": {
+   "2025-12-31": 41.0,
+   "costs_incurred_6m": 57.0,
+   "cash_payments_6m": -55.0,
+   "2026-06-30": 43.0
+  },
+  "expected_completion": "substantially complete by the end of 2027 (Q1-26 10-Q: end of 2026)",
+  "scope": "reduction in staff, rationalization and exit of certain leased office spaces, retirement of certain legacy software applications, and the exit of certain businesses and product offerings, including the divestiture of the MA Regulatory Solutions business",
+  "prior_terms_q1_26": {
+   "src": "10-Q Q1-26 Note 9",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026026848/mco-20260331.htm",
+   "personnel": "210-230",
+   "non_cash_lease": 5,
+   "non_cash_software": "10-15",
+   "cash": "210-230 paid through 2027",
+   "completion": "end of 2026"
+  },
+  "fy26_guidance": "Restructuring approximately 1.5% of revenue (operating margin bridge) / approximately $0.50 per share (EPS bridge), raised from ~1% / ~$0.40 (22-Jul-2026 release)."
+ },
+ "shares": {
+  "latest_10q_cover": {
+   "date": "2026-06-30",
+   "shares_m": 173.2,
+   "text": "Shares Outstanding at June 30, 2026: 173.2 million",
+   "src": "10-Q Q2-26 cover (filed 23-Jul-2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026049398/mco-20260630.htm"
+  },
+  "2026-06-30": {
+   "shares_m": 173.2,
+   "computed_from_bs": 173.180984,
+   "note": "342,902,272 issued - 169,721,288 treasury (computed)",
+   "src": "10-Q Q2-26 cover and balance sheet",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026049398/mco-20260630.htm"
+  },
+  "2026-03-31": {
+   "shares_m": 174.7,
+   "src": "10-Q Q1-26 cover",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026026848/mco-20260331.htm"
+  },
+  "2025-12-31": {
+   "shares_m": 177.5,
+   "src": "Q4-25 release",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026008788/a4q25earningsrelease.htm"
+  },
+  "weighted_q2_26": {
+   "basic": 174.1,
+   "diluted": 174.5
+  }
+ },
+ "ppa": {
+  "Q3-17": {
+   "name": "Bureau van Dijk",
+   "closing": "2017-08-10",
+   "consideration": 3542.0,
+   "cash_acquired": 36.0,
+   "current_assets": 158.0,
+   "ppe": 4.0,
+   "intangibles": 1353.0,
+   "intangibles_detail": {
+    "customer_relationships": 999.0,
+    "product_technology": 259.0,
+    "trade_name": 82.0,
+    "database": 13.0
+   },
+   "goodwill": 2615.0,
+   "other_assets": 6.0,
+   "liabilities_current": 145.0,
+   "liabilities_current_detail": {
+    "deferred_revenue": 101.0,
+    "ap_accrued": 44.0
+   },
+   "deferred_tax_liab": 330.0,
+   "other_liab": 119.0,
+   "total_liabilities": 594.0,
+   "debt_assumed": null,
+   "segment": "MA",
+   "note": "Final allocation. Accounts receivable ~$88m in current assets; other liabilities include assumed UTPs. liabilities_current = deferred revenue + AP/accrued (computed).",
+   "src": "FY2019 10-K (filed 24-Feb-2020) Acquisitions note (final PPA; also FY2018 10-K with one decimal)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000105955620000005/mco-20191231.htm"
+  },
+  "Q4-18": {
+   "name": "Reis, Inc.",
+   "closing": "2018-10-15",
+   "consideration": 278.0,
+   "cash_acquired": 24.0,
+   "current_assets": 32.0,
+   "ppe": 4.0,
+   "intangibles": 104.0,
+   "intangibles_detail": {
+    "customer_relationships": 77.0,
+    "database": 13.0,
+    "product_technology": 10.0,
+    "trade_name": 4.0
+   },
+   "goodwill": 183.0,
+   "other_assets": 13.0,
+   "other_assets_note": "deferred tax assets 13",
+   "liabilities_current": 34.0,
+   "liabilities_current_detail": {
+    "deferred_revenue": 14.0,
+    "ap_accrued": 20.0
+   },
+   "deferred_tax_liab": 24.0,
+   "other_liab": 0.0,
+   "total_liabilities": 58.0,
+   "debt_assumed": null,
+   "segment": "MA",
+   "note": "Final allocation (FY2018 10-K preliminary: goodwill 186.0).",
+   "src": "FY2019 10-K (filed 24-Feb-2020) Acquisitions note",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000105955620000005/mco-20191231.htm"
+  },
+  "Q1-20": {
+   "name": "RDC (Regulatory DataCorp)",
+   "closing": "2020-02-13",
+   "consideration": 702.0,
+   "consideration_detail": {
+    "cash_at_closing": 700.0,
+    "additional_2020": 2.0
+   },
+   "cash_acquired": 6.0,
+   "current_assets": 24.0,
+   "ppe": 0.0,
+   "intangibles": 280.0,
+   "intangibles_detail": {
+    "customer_relationships": 174.0,
+    "database": 86.0,
+    "product_technology": 17.0,
+    "trade_name": 3.0
+   },
+   "goodwill": 494.0,
+   "other_assets": 2.0,
+   "liabilities_current": 25.0,
+   "liabilities_current_detail": {
+    "ap_accrued": 5.0,
+    "deferred_revenue": 20.0
+   },
+   "deferred_tax_liab": 71.0,
+   "other_liab": 2.0,
+   "total_liabilities": 98.0,
+   "debt_assumed": null,
+   "segment": "MA",
+   "note": "Allocation as presented (not labelled preliminary) in FY2020 and FY2021 10-Ks; unchanged.",
+   "src": "FY2021 10-K (filed 22-Feb-2022) Acquisitions note",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000105955622000012/mco-20211231.htm"
+  },
+  "Q4-20": {
+   "name": "Aggregate: Catylist, ZM Financial Systems, Acquire Media (Oct-Dec 2020)",
+   "closing": "2020-10 to 2020-12",
+   "consideration": 205.0,
+   "cash_acquired": null,
+   "current_assets": 5.0,
+   "ppe": null,
+   "intangibles": 82.0,
+   "intangibles_detail": {
+    "customer_relationships": 47.0,
+    "product_technology": 23.0,
+    "database": 8.0,
+    "trade_name": 4.0
+   },
+   "goodwill": 131.0,
+   "other_assets": 3.0,
+   "liabilities_current": 8.0,
+   "deferred_tax_liab": null,
+   "other_liab": 8.0,
+   "other_liab_note": "long-term liabilities",
+   "total_liabilities": 16.0,
+   "debt_assumed": null,
+   "segment": "MA",
+   "src": "FY2022 10-K (filed 15-Feb-2023) Acquisitions note",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000105955623000016/mco-20221231.htm"
+  },
+  "Q1-21": {
+   "name": "Cortera",
+   "closing": "2021-03-19",
+   "consideration": 139.0,
+   "consideration_detail": {
+    "cash_at_closing": 138.0,
+    "additional_2021": 1.0
+   },
+   "cash_acquired": 4.0,
+   "current_assets": 7.0,
+   "ppe": 0.0,
+   "intangibles": 57.0,
+   "intangibles_detail": {
+    "database": 38.0,
+    "customer_relationships": 9.0,
+    "product_technology": 9.0,
+    "trade_name": 1.0
+   },
+   "goodwill": 79.0,
+   "other_assets": 18.0,
+   "other_assets_note": "deferred tax assets 16 + other assets 2",
+   "liabilities_current": 5.0,
+   "liabilities_current_detail": {
+    "ap_accrued": 1.0,
+    "deferred_revenue": 4.0
+   },
+   "deferred_tax_liab": 15.0,
+   "other_liab": 2.0,
+   "total_liabilities": 22.0,
+   "debt_assumed": null,
+   "segment": "MA",
+   "src": "FY2022 10-K (filed 15-Feb-2023) Acquisitions note (final)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000105955623000016/mco-20221231.htm"
+  },
+  "Q3-21": {
+   "name": "RMS (Risk Management Solutions)",
+   "closing": "2021-09-15",
+   "consideration": 1927.0,
+   "consideration_detail": {
+    "cash_at_closing": 1922.0,
+    "replacement_equity_awards": 5.0
+   },
+   "cash_acquired": 55.0,
+   "current_assets": 105.0,
+   "current_assets_detail": {
+    "cash": 55.0,
+    "accounts_receivable": 38.0,
+    "other_current_assets": 12.0
+   },
+   "ppe": 13.0,
+   "rou": 64.0,
+   "intangibles": 779.0,
+   "intangibles_detail": {
+    "customer_relationships": 518.0,
+    "product_technology": 212.0,
+    "trade_name": 49.0
+   },
+   "goodwill": 1357.0,
+   "goodwill_by_segment": {
+    "MA": 1267.0,
+    "MIS": 90.0
+   },
+   "other_assets": 149.0,
+   "other_assets_note": "deferred tax assets, net 50 + other assets 99 (incl. $95m indemnification asset)",
+   "liabilities_current": 185.0,
+   "liabilities_current_detail": {
+    "ap_accrued": 96.0,
+    "deferred_revenue": 89.0
+   },
+   "deferred_tax_liab": 214.0,
+   "other_liab": 141.0,
+   "other_liab_detail": {
+    "operating_lease_liabilities": 68.0,
+    "uncertain_tax_positions": 71.0,
+    "other": 2.0
+   },
+   "total_liabilities": 540.0,
+   "debt_assumed": null,
+   "segment": "MA / MIS",
+   "transaction_costs": 22.0,
+   "note": "Final allocation after Q3-22 measurement-period adjustments (UTPs -25, goodwill -19). Sums computed: current assets, liabilities_current, other_liab.",
+   "src": "FY2022 10-K (filed 15-Feb-2023) Acquisitions note",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000105955623000016/mco-20221231.htm"
+  },
+  "Q4-21": {
+   "name": "PassFort",
+   "closing": "2021-11-30",
+   "consideration": 158.0,
+   "consideration_detail": {
+    "cash_at_closing": 157.0,
+    "additional_2022": 1.0
+   },
+   "cash_acquired": 10.0,
+   "current_assets": 11.0,
+   "current_assets_detail": {
+    "cash": 10.0,
+    "accounts_receivable": 1.0
+   },
+   "ppe": 0.0,
+   "intangibles": 23.0,
+   "intangibles_detail": {
+    "product_technology": 14.0,
+    "customer_relationships": 8.0,
+    "trade_name": 1.0
+   },
+   "goodwill": 138.0,
+   "other_assets": 0.0,
+   "liabilities_current": 8.0,
+   "liabilities_current_detail": {
+    "ap_accrued": 7.0,
+    "deferred_revenue": 1.0
+   },
+   "deferred_tax_liab": 6.0,
+   "other_liab": 0.0,
+   "total_liabilities": 14.0,
+   "debt_assumed": null,
+   "segment": "MA",
+   "src": "FY2022 10-K (filed 15-Feb-2023) Acquisitions note (final)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000105955623000016/mco-20221231.htm"
+  },
+  "Q1-25": {
+   "name": "CAPE Analytics",
+   "closing": "2025-01",
+   "consideration": null,
+   "cash_acquired": null,
+   "current_assets": null,
+   "ppe": null,
+   "intangibles": null,
+   "goodwill": 135.0,
+   "goodwill_note": "Q1-25 goodwill additions (MA) 'relate to the acquisition of CAPE Analytics'",
+   "other_assets": null,
+   "liabilities_current": null,
+   "deferred_tax_liab": null,
+   "other_liab": null,
+   "debt_assumed": null,
+   "segment": "MA",
+   "note": "No PPA disclosed (immaterial). Cash paid for acquisitions, net of cash acquired, $223m in Q1-25; deferred revenue increase due to acquisitions $15m in 6M-25.",
+   "src": "10-Q Q1-25 (filed 23-Apr-2025) goodwill note and cash flow",
+   "url": "https://www.sec.gov/Archives/edgar/data/1059556/000105955625000121/mco-20250331.htm"
+  },
+  "not_disclosed": "No PPA tables for 2019 (Vigeo Eiris, Four Twenty Seven, RiskFirst, ABS Suite), 2022 (kompany), 2024 (GCR, Praedicat, Numerated) or 2025-26 (ICR Chile, Fintellix, MERIS): purchase prices described as not material."
+ },
+ "pension": {
+  "src": "FY2025 10-K (filed 18-Feb-2026) Note 13 Pension and Other Retirement Benefits",
+  "url": "https://www.sec.gov/Archives/edgar/data/1059556/000162828026009136/mco-20251231.htm",
+  "as_of": "2025-12-31",
+  "us_pension_plans": {
+   "benefit_obligation": -492.0,
+   "plan_assets": 500.0,
+   "funded_status": 8.0,
+   "abo": -464.0,
+   "bs": {
+    "asset_noncurrent": 75.0,
+    "liability_current": -7.0,
+    "liability_noncurrent": -60.0
+   }
+  },
+  "us_other_retirement_plans": {
+   "benefit_obligation": -44.0,
+   "plan_assets": 0.0,
+   "funded_status": -44.0
+  },
+  "non_us_plans": "The non-U.S. defined benefit pension plans are immaterial (no funded status disclosed).",
+  "q2_26": "Funded plan overfunded at June 30, 2026; no significant contributions expected (Q2-26 10-Q MD&A). Other assets: pension 81; other liabilities: pension 212; accrued: 9 (30-Jun-2026)."
+ }
+}

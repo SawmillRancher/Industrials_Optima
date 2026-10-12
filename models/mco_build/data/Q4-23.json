@@ -1,0 +1,316 @@
+{
+ "period": "Q4-23",
+ "period_end": "2023-12-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1059556/000105955624000012/a4q23earningsrelease.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1059556/000105955624000017/mco-20231231.htm"
+ },
+ "is": {
+  "rev": 1480.0,
+  "opex_operating": 421.0,
+  "sga": 428.0,
+  "dna": 97.0,
+  "restr": 36.0,
+  "other_op_lines": [],
+  "tot_exp": 982.0,
+  "oi": 498.0,
+  "int_net": -66.0,
+  "oth_nonop": 18.0,
+  "nonop_lines": [
+   [
+    "Gain on extinguishment of debt",
+    0.0
+   ]
+  ],
+  "nonop_tot": -48.0,
+  "ebt": 450.0,
+  "tax": 110.0,
+  "ni_tot": 340.0,
+  "nci": 0.0,
+  "ni": 340.0,
+  "disc_ops": null,
+  "eps_b": 1.86,
+  "eps_d": 1.85,
+  "sh_b": 182.7,
+  "sh_d": 183.6,
+  "dps_decl": 0.77
+ },
+ "seg": {
+  "mis_lines": {
+   "Corporate Finance": 337.0,
+   "Structured Finance": 102.0,
+   "Financial Institutions": 132.0,
+   "Public, Project and Infrastructure Finance": 105.0,
+   "MIS Other": 8.0
+  },
+  "mis_ratings_total": null,
+  "mis_ext": 684.0,
+  "mis_interseg": 48.0,
+  "mis_recurring": 309.0,
+  "mis_transaction": 375.0,
+  "ma_lines": {
+   "Decision Solutions": 361.0,
+   "Research and Insights": 230.0,
+   "Data and Information": 205.0
+  },
+  "ma_ext": 796.0,
+  "ma_interseg": 3.0,
+  "ma_recurring": 748.0,
+  "ma_transaction": 48.0,
+  "ma_arr": 2962.0,
+  "ma_arr_lines": {
+   "Decision Solutions": 1277.0,
+   "Research and Insights": 879.0,
+   "Data and Information": 806.0
+  },
+  "elim": -51.0,
+  "mis_adj_oi": 380.0,
+  "ma_adj_oi": 251.0,
+  "mis_adj_om": 51.9,
+  "ma_adj_om": 31.4,
+  "mis_dna": 19.0,
+  "ma_dna": 78.0,
+  "mis_restr": 15.0,
+  "ma_restr": 21.0,
+  "mis_oi": null,
+  "ma_oi": null,
+  "seg_other_items": [],
+  "us_rev": null,
+  "intl_rev": null,
+  "legacy": {},
+  "seg_note": "Two reportable segments; from 1Q23 the release lists MA before MIS. MA LOBs DS / R&I / D&I. In 2Q23 the company expanded DS disclosure into Banking / Insurance / KYC (10-Q revenue note; recorded in seg.legacy as 'DS: ...') and reclassified certain immaterial structured-finance-solutions revenue from DS to R&I, recasting prior periods (2Q23+ releases show restated 2022 DS/R&I comparatives; 1Q23 release comparatives are not restated). Segment Adjusted Operating Income = segment revenue incl. intersegment less Operating + SG&A (excludes D&A and restructuring). seg.legacy also holds the CFG/SFG/FIG/PPIF sub-lines.",
+  "trans_rec_lines": {
+   "Corporate Finance": {
+    "transaction": 205.0,
+    "recurring": 132.0
+   },
+   "Structured Finance": {
+    "transaction": 48.0,
+    "recurring": 54.0
+   },
+   "Financial Institutions": {
+    "transaction": 59.0,
+    "recurring": 73.0
+   },
+   "Public, Project and Infrastructure Finance": {
+    "transaction": 61.0,
+    "recurring": 44.0
+   },
+   "MIS Other": {
+    "transaction": 2.0,
+    "recurring": 6.0
+   },
+   "Total MIS": {
+    "transaction": 375.0,
+    "recurring": 309.0
+   },
+   "Decision Solutions": {
+    "transaction": 43.0,
+    "recurring": 318.0
+   },
+   "Research and Insights": {
+    "transaction": 4.0,
+    "recurring": 226.0
+   },
+   "Data and Information": {
+    "transaction": 1.0,
+    "recurring": 204.0
+   },
+   "Total MA": {
+    "transaction": 48.0,
+    "recurring": 748.0
+   }
+  },
+  "ma_arr_ds_lines": {
+   "Banking": 418.0,
+   "Insurance": 533.0,
+   "KYC": 326.0
+  }
+ },
+ "ngaap": {
+  "adj_oi_pub": 631.0,
+  "adj_om_pub": 42.6,
+  "adj_oi_items": [
+   [
+    "Depreciation and amortization",
+    97.0
+   ],
+   [
+    "Restructuring",
+    36.0
+   ]
+  ],
+  "adj_ni_pub": 402.0,
+  "adj_eps_pub": 2.19,
+  "eps_bridge_start": 1.85,
+  "eps_bridge": [
+   [
+    "Net Acquisition-Related Intangible Amortization Expenses",
+    0.2
+   ],
+   [
+    "Net restructuring",
+    0.14
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Pre-tax Acquisition-Related Intangible Amortization Expenses",
+    48.0,
+    36.0,
+    "op",
+    "AMORT"
+   ],
+   [
+    "Pre-tax restructuring",
+    36.0,
+    26.0,
+    "op",
+    "RESTR"
+   ]
+  ],
+  "tax_items": [],
+  "adj_ni_table_raw": [
+   [
+    "Net income attributable to Moody's common shareholders",
+    340.0
+   ],
+   [
+    "Pre-tax Acquisition-Related Intangible Amortization Expenses",
+    48.0
+   ],
+   [
+    "Tax on Acquisition-Related Intangible Amortization Expenses",
+    -12.0
+   ],
+   [
+    "Net Acquisition-Related Intangible Amortization Expenses",
+    36.0
+   ],
+   [
+    "Pre-tax restructuring",
+    36.0
+   ],
+   [
+    "Tax on restructuring",
+    -10.0
+   ],
+   [
+    "Net restructuring",
+    26.0
+   ],
+   [
+    "Pre-tax gain on extinguishment of debt",
+    0.0
+   ],
+   [
+    "Tax on gain on extinguishment of debt",
+    0.0
+   ],
+   [
+    "Net gain on extinguishment of debt",
+    0.0
+   ],
+   [
+    "FX losses resulting from the Company no longer conducting commercial operations in Russia",
+    0.0
+   ],
+   [
+    "Adjusted Net Income",
+    402.0
+   ]
+  ],
+  "adj_eps_table_raw": [
+   [
+    "Diluted earnings per share attributable to Moody's common shareholders",
+    1.85
+   ],
+   [
+    "Pre-tax Acquisition-Related Intangible Amortization Expenses",
+    0.26
+   ],
+   [
+    "Tax on Acquisition-Related Intangible Amortization Expenses",
+    -0.06
+   ],
+   [
+    "Net Acquisition-Related Intangible Amortization Expenses",
+    0.2
+   ],
+   [
+    "Pre-tax restructuring",
+    0.2
+   ],
+   [
+    "Tax on restructuring",
+    -0.06
+   ],
+   [
+    "Net restructuring",
+    0.14
+   ],
+   [
+    "Pre-tax gain on extinguishment of debt",
+    0.0
+   ],
+   [
+    "Tax on gain on extinguishment of debt",
+    0.0
+   ],
+   [
+    "Net gain on extinguishment of debt",
+    0.0
+   ],
+   [
+    "FX losses resulting from the Company no longer conducting commercial operations in Russia",
+    0.0
+   ],
+   [
+    "Adjusted Diluted EPS",
+    2.19
+   ]
+  ],
+  "fcf_pub": null,
+  "occ": {
+   "mco": 13.0,
+   "mis": 17.0,
+   "ma": 10.0,
+   "basis": "constant currency only (organic adjustment dropped from 1Q23)",
+   "lines": {
+    "Constant currency Decision Solutions revenue": 8.0,
+    "Constant currency Research and Insights revenue": 11.0,
+    "Constant currency Data and Information revenue": 11.0
+   }
+  },
+  "guidance": "Full Year 2024 Moody's Corporation Guidance as of February 13, 2024\nMOODY'S CORPORATION | Current guidance\nRevenue | Increase in the high-single-digit to low-double-digit percent range\nOperating Expenses | Increase in the mid-to-high-single-digit percent range\nOperating Margin | 37% to 39%\nAdjusted Operating Margin (1) | 44% to 46%\nInterest Expense, Net | $240 - $260 million\nEffective Tax Rate | 22% to 24%\nDiluted EPS | $9.45 to $10.20\nAdjusted Diluted EPS (1) | $10.25 to $11.00\nOperating Cash Flow | $2.3 to $2.5 billion\nFree Cash Flow (1) | $1.9 to $2.1 billion\nShare Repurchases | Approximately $1.0 billion (subject to available cash, market conditions, M&A opportunities, and other ongoing capital allocation decisions)\nMoody's Analytics (MA) | Current guidance\nMA Revenue | Increase of approximately 10%\nARR (2) | Increase in the low-double-digit percent range\nMA Adjusted Operating Margin | 30% to 31%\nMoody's Investors Service (MIS) | Current guidance\nMIS Revenue | Increase in the high-single-digit to low-double-digit percent range\nMIS Adjusted Operating Margin | 55.5% to 57.5%\n(1) These metrics are adjusted measures. See below for reconciliation of these measures to their comparable U.S. GAAP measure. (2) Refer to Table 10 within this earnings release for the definition of and further information on the ARR metric.\nThe following are reconciliations of the Company's adjusted forward looking measures to their comparable U.S. GAAP measure:\nProjected for the Year Ended December 31, 2024\nOperating margin guidance | 37% to 39%\nDepreciation and amortization | Approximately 7%\nAdjusted Operating Margin guidance | 44% to 46%\nProjected for the Year Ended December 31, 2024\nOperating cash flow guidance | $2.3 to $2.5 billion\nLess: Capital expenditures | Approximately $0.4 billion\nFree Cash Flow guidance | $1.9 to $2.1 billion\nProjected for the Year Ended December 31, 2024\nDiluted EPS guidance | $9.45 to $10.20\nAcquisition-Related Intangible Amortization | Approximately $0.80\nAdjusted Diluted EPS guidance | $10.25 to $11.00",
+  "guidance_assumptions": "Forecasted Item | Current assumption\nU.S. GDP (1) growth | 1.0% - 2.0%\nEuro area GDP (1) growth | 0.5% - 1.5%\nGlobal benchmark rates | Gradual rate reductions starting in 2Q 2024\nU.S. high yield spreads | To fluctuate around 400 - 500 bps, with periodic volatility\nU.S. inflation rate | To decline to 2.0% by year-end\nEuro area inflation rate | Large economies to decline to around 2.0% by year-end\nU.S. unemployment rate | To average between 4.0% - 4.5% for the full year\nGlobal high yield default rate | Rise towards 5.0% in 1H 2024 and then ease to around 4.0% by year-end\nGlobal MIS rated issuance | Increase in the mid-to-high-single-digit percent range\nGBP/USD exchange rate | $1.27 for the full year\nEUR/USD exchange rate | $1.10 for the full year\nNote: All current assumptions are as of February 13, 2024. (1) GDP growth represents real GDP.",
+  "notes": "Adjusted Operating Income excludes the impact of: i) depreciation and amortization; and ii) restructuring charges/adjustments. Adjusted Net Income and Adjusted Diluted EPS exclude the impact of: i) amortization of acquired intangible assets; ii) restructuring charges/adjustments; iii) a gain on the extinguishment of debt; and iv) FX translation losses reclassified to earnings resulting from the Company no longer conducting commercial operations in Russia. The Company defines Free Cash Flow as net cash provided by operating activities minus cash paid for capital additions."
+ },
+ "py": {
+  "restated": true,
+  "notes": "2022 comparative DS / R&I revenue restated for the 2Q23 reclassification of structured-finance-solutions revenue from Decision Solutions to Research & Insights; MIS lines and segment Adjusted Operating Income unchanged.",
+  "mis_lines": {
+   "Corporate Finance": 253.0,
+   "Structured Finance": 94.0,
+   "Financial Institutions": 123.0,
+   "Public, Project and Infrastructure Finance": 94.0,
+   "MIS Other": 12.0
+  },
+  "ma_lines": {
+   "Decision Solutions": 329.0,
+   "Research and Insights": 205.0,
+   "Data and Information": 180.0
+  },
+  "mis_adj_oi": 274.0,
+  "ma_adj_oi": 203.0
+ },
+ "extra": {
+  "employees": null,
+  "acquisitions": [],
+  "divestitures": [],
+  "debt_maturities": [],
+  "amort_schedule": [],
+  "notes": null
+ },
+ "notes": "Q4: no three-month sub-LOB, ratings-total or geographic revenue published (10-K is full-year only): seg.legacy, mis_ratings_total, us_rev, intl_rev null/empty; see annual record. ngaap.fcf_pub null: Q4 release publishes only full-year FCF (see annual record). ARR is on a constant-currency organic basis (budget FX rates of the current year, excludes acquisitions); prior-year ARR is restated each year at the new budget rates, so year-end ARR here differs from the same date shown as a comparative a year later. seg.ma_arr_ds_lines = Decision Solutions ARR by Banking / Insurance / KYC (sum = DS ARR in ma_arr_lines). Q4-23 release guidance is the FY2024 outlook (Table 12) as of 13-Feb-2024. XBRL cross-check (as first filed): rev ok (1480.0 = FY-9M); oi ok (498.0 = FY-9M); ni ok (340.0 = FY-9M). Self-checks: all pass"
+}

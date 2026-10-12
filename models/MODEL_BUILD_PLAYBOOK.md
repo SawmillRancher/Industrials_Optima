@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, MCO). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -272,10 +272,11 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 - Saving with openpyxl drops chart formatting. Re-inject the template chart XML after every save.
 - Files without cached values look blank in viewers. Store calculated values.
 - `libreoffice-core` cannot open .xlsx; install `libreoffice-calc`.
+- The template Bull-Base-Bear Base / Bull panels lack a 2028E P/E, so the 2028E implied-EV block reads zero (fixed in MCO).
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -290,6 +291,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
+- **Index every Ex. 99 document type.** 2007–08 releases can be plain-text `.txt` exhibits that an `.htm`-only index misses. Pre-announcement Item 2.02 8-Ks are short: take the largest Ex. 99 in the window after the quarter end as the earnings release. [MCO]
 
 ### 5.2 Basis
 - **Segment re-presentation with a short recast history:** model an aggregate the re-presentation doesn't change and keep the old split as memo. Prove where an absorbed segment went using the restated comparative Δ. [RBA, TFI]
@@ -298,6 +300,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **After a spin:** start the BS at the first post-spin balance sheet even if the P&L uses earlier recast comparatives, and fill earlier y/y with company-reported change % memos. Spin-cos put carve-out (Form 10) years in the main columns, with the former parent's segment history as a flagged memo under the parent's CIK. [XPO, ESAB]
 - **Half-year reporters:** carry quarterly revenue as "1st / 2nd quarter of the half" memo rows inside the half-year columns, with a Σ check. [RMS, BC]
 - **Two builds of one company:** diff their dated facts (split dates, deconsolidation quarter, label cut-overs) and resolve each from the filing. [LECO]
+- **Restated comparatives for a line re-presentation** are used only where the restated lines sum to the originally reported segment total; otherwise the recast also moved revenue between segments. [MCO]
 
 ### 5.3 Operating build
 - **When a segment or product table changes revenue basis** (net sales → ex-freight → total revenue; pre-ASC 606), add a derived "outside the lines" row (consolidated − Σ lines) so the build check ties in every period. [MLM, VMC]
@@ -353,6 +356,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
 - **Apply the Δ only to genuinely uncommitted lines** (retail rather than order-book wholesale). Constant-FX guidance needs a separate FX-translation Δ for the reporting-currency figure. EPS guidance made stale by post-guidance buybacks becomes an information row. [BC, ONON, BWXT]
 - **No guidance:** leave targets as optional blank inputs; don't invent them. [HEI, BC]
+- **Qualitative ranges** ("high-single-digit"): state the numeric reading per scenario (e.g. 9 / 8 / 7%) in the outlook note as a model interpretation. Show what it implies for the remaining quarters and flag a discontinuity instead of overriding the guide. [MCO, LECO]
 
 ### 5.6 Balance sheet, cash and capital
 - **Current year with actual quarters:**
@@ -405,9 +409,12 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   [ESAB, BWXT, HEI, UBER]
 - **Deal tabs** show accretion both vs the standalone with buybacks and on the company's comparison basis, and solve for the synergies or margin needed to meet the stated accretion. [CHRW]
 - **Historical average share prices** come from 10-K Item 5 only where disclosed; leave later years blank. [HII]
+- **Shareholders' deficit after debt-funded buybacks:** show book ROIC as n/m below an invested-capital threshold, and chart a measure that is always defined (FCF conversion), since `#N/A` cells fail the 0-error gate. [MCO]
 
 ### 5.8 QA
 - **Template residue is the most common defect.** At least 10 builds shipped MLM text in Bull-Base-Bear N26 / P40 comments or DCF rationale, and TFI kept Moog comments. `tools/residue_scan.py` is a hard gate. [CLH, WAB, SAIA, ODFL, WCN, LOAR, ONON, LECO, ESAB, STE, CTAS, UBER, TFI, CPRT]
 - **Check also:** foreign row numbers and switch-cell addresses in comments, the wrong currency symbol on non-USD models, and modelling-note dates that contradict the definition flags. [ONON, DHR]
 - **Check tolerances** are set by period when the issuer changes rounding units, and stated in the label. [STE, TMO, CSGP, ONON, DHR]
 - **Private-company implied CF:** related-party balances are financing; explain the sign of implied capex; leave first-year ratios n/a when there is no opening BS. [R&Y]
+- **Template Bull-Base-Bear 2028E column:** the MLM template's Base and Bull panels carry P/E rows for 2029E–30E only, so F47:F50 and R47:R50 read zero. Add the 2028E P/E rows (or clear the block). [MCO]
+- **Parallel extraction agents** each need their own scripts subdirectory; agents sharing one overwrote each other's files. [MCO]

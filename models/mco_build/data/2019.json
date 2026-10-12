@@ -1,0 +1,734 @@
+{
+ "period": "2019",
+ "period_end": "2019-12-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1059556/000115752320000190/a52172350_ex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1059556/000105955620000005/mco-20191231.htm"
+ },
+ "is": {
+  "rev": 4829.0,
+  "opex_operating": 1387.0,
+  "sga": 1167.0,
+  "dna": 200.0,
+  "restr": 60.0,
+  "tot_exp": 2831.0,
+  "oi": 1998.0,
+  "int_net": -208.0,
+  "oth_nonop": 20.0,
+  "nonop_tot": -188.0,
+  "ebt": 1810.0,
+  "tax": 381.0,
+  "ni_tot": 1429.0,
+  "nci": 7.0,
+  "ni": 1422.0,
+  "disc_ops": null,
+  "eps_b": 7.51,
+  "eps_d": 7.42,
+  "sh_b": 189.3,
+  "sh_d": 191.6,
+  "dps_decl": 2.0,
+  "other_op_lines": [
+   [
+    "Acquisition-Related Expenses",
+    3.0
+   ],
+   [
+    "Loss pursuant to the divestiture of MAKS",
+    14.0
+   ]
+  ],
+  "nonop_lines": [
+   [
+    "Purchase Price Hedge Gain",
+    0.0
+   ],
+   [
+    "CCXI Gain",
+    0.0
+   ]
+  ]
+ },
+ "seg": {
+  "mis_lines": {
+   "Corporate Finance": 1497.0,
+   "Structured Finance": 427.0,
+   "Financial Institutions": 476.0,
+   "Public, Project and Infrastructure Finance": 446.0,
+   "MIS Other": 29.0
+  },
+  "mis_ratings_total": null,
+  "mis_ext": 2875.0,
+  "mis_interseg": 134.0,
+  "mis_recurring": 1066.0,
+  "mis_transaction": 1809.0,
+  "ma_lines": {
+   "Research, Data and Analytics": 1273.0,
+   "Enterprise Risk Solutions": 522.0,
+   "Professional Services": 159.0
+  },
+  "ma_ext": 1954.0,
+  "ma_interseg": 9.0,
+  "ma_recurring": 1661.0,
+  "ma_transaction": 293.0,
+  "ma_arr": null,
+  "ma_arr_lines": {},
+  "elim": -143.0,
+  "mis_adj_oi": 1745.0,
+  "ma_adj_oi": 546.0,
+  "mis_adj_om": 58.0,
+  "ma_adj_om": 27.8,
+  "mis_dna": 71.0,
+  "ma_dna": 129.0,
+  "mis_restr": 31.0,
+  "ma_restr": 29.0,
+  "mis_oi": 1633.0,
+  "ma_oi": 365.0,
+  "seg_other_items": [
+   [
+    "Acquisition-Related Expenses",
+    0.0,
+    3.0
+   ],
+   [
+    "Loss pursuant to the divestiture of MAKS",
+    0.0,
+    14.0
+   ],
+   [
+    "Captive insurance company settlement",
+    10.0,
+    6.0
+   ]
+  ],
+  "us_rev": 2544.0,
+  "intl_rev": 2285.0,
+  "legacy": {},
+  "seg_note": "Two reportable segments: MIS (LOBs CFG, SFG, FIG, PPIF, MIS Other) and MA (LOBs RD&A, ERS, PS). Revenue by LOB = external revenue (release Table 2); MIS intersegment = royalty charged to MA; MA intersegment = fees charged to MIS; elim = Eliminations column of the release segment table (revenue row). Segment Adjusted Operating Income, adjusted margins, D&A, restructuring, other items and segment operating income from the release \"Financial Information by Segment\" table (segment revenue there includes intersegment). mis_recurring / ma_recurring = \"Relationship\" revenue and *_transaction = \"Transaction\" revenue from release \"Transaction and Relationship Revenue\" table. mis_ratings_total not shown (null). Annual: twelve-month block of the Q4 release; the 10-K segment note gives identical Adjusted Operating Income, D&A, restructuring and other items (10-K wins; no differences). 2019 LOB realignments (Q1-19): REIT revenue moved from SFG to CFG; Bureau van Dijk FACT product moved from RD&A to ERS (prior-year LOB revenue reclassified in 2019 releases). ASC 842 adopted 1-Jan-2019 (operating lease ROU assets and lease liabilities on BS). From 2019 overhead allocation uses a fixed \"Baseline Pool\" (10-K). Q4-19 / FY19 release transaction-relationship table splits MA into RD&A / ERS / PS; ma_recurring/transaction use the \"Total MA\" row."
+ },
+ "ngaap": {
+  "adj_oi_pub": 2291.0,
+  "adj_om_pub": 47.4,
+  "adj_oi_items": [
+   [
+    "Restructuring",
+    60.0
+   ],
+   [
+    "Depreciation and amortization",
+    200.0
+   ],
+   [
+    "Acquisition-Related Expenses",
+    3.0
+   ],
+   [
+    "Loss pursuant to the divestiture of MAKS",
+    14.0
+   ],
+   [
+    "Captive insurance company settlement",
+    16.0
+   ]
+  ],
+  "adj_ni_pub": 1588.0,
+  "adj_eps_pub": 8.29,
+  "eps_bridge_start": 7.42,
+  "eps_bridge": [
+   [
+    "Pre-Tax Acquisition-Related Expenses",
+    0.02
+   ],
+   [
+    "Pre-Tax Acquisition-Related Intangible Amortization Expenses",
+    0.54
+   ],
+   [
+    "Tax on Acquisition-Related Intangible Amortization Expenses",
+    -0.12
+   ],
+   [
+    "Pre-Tax Restructuring",
+    0.31
+   ],
+   [
+    "Tax on Restructuring",
+    -0.08
+   ],
+   [
+    "Loss pursuant to the divestiture of MAKS",
+    0.07
+   ],
+   [
+    "Tax charge pursuant to the divestiture of MAKS",
+    0.07
+   ],
+   [
+    "Pre-Tax captive insurance company settlement",
+    0.08
+   ],
+   [
+    "Tax on captive insurance company settlement",
+    -0.02
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Acquisition-Related Expenses",
+    3.0,
+    3.0,
+    "op",
+    "ACQ"
+   ],
+   [
+    "Acquisition-Related Intangible Amortization Expenses",
+    103.0,
+    79.0,
+    "op",
+    "AMORT"
+   ],
+   [
+    "Restructuring",
+    60.0,
+    45.0,
+    "op",
+    "RESTR"
+   ],
+   [
+    "Loss pursuant to the divestiture of MAKS",
+    14.0,
+    14.0,
+    "op",
+    "GAIN"
+   ],
+   [
+    "Tax charge pursuant to the divestiture of MAKS",
+    null,
+    13.0,
+    "tax",
+    "TAXD"
+   ],
+   [
+    "captive insurance company settlement",
+    16.0,
+    12.0,
+    "op",
+    "OTHER"
+   ]
+  ],
+  "tax_items": [
+   [
+    "Tax charge pursuant to the divestiture of MAKS",
+    13.0
+   ]
+  ],
+  "fcf_pub": 1606.0,
+  "occ": {
+   "mco": null,
+   "mis": null,
+   "ma": null
+  },
+  "guidance": "Table 12 - 2020 Outlook\nMoody's outlook for 2020 is based on assumptions about many geopolitical conditions and macroeconomic and capital market factors, including interest rates, foreign currency exchange rates, corporate profitability and business investment\nspending, mergers and acquisitions, consumer borrowing and securitization, and the amount of debt issued. These assumptions are subject to uncertainty, and results for the year could differ materially from our current outlook. Our guidance\nassumes timely closing of the recently announced acquisition of Regulatory DataCorp and assumes foreign currency translation at end-of-quarter exchange rates. Specifically, our forecast reflects exchange rates for the British pound (£) of $1.31\nto £1 and for the euro (€) of $1.11 to €1.\nFull Year 2020 Moody's Corporation Guidance as of February 12, 2020\nMOODY'S CORPORATION\nRevenue | increase in the mid-single-digit percent range\nOperating expenses | increase in the low-single-digit percent range\nOperating margin | approximately 44%\nAdjusted operating margin (1) | 48% - 49%\nInterest expense, net | $180 - $200 million\nEffective tax rate | 20% - 22%\nDiluted EPS | $8.60 to $8.80\nAdjusted Diluted EPS (1) | $9.10 to $9.30\nOperating cash flow | $1.8 to $1.9 billion\nFree cash flow (1) | $1.7 to $1.8 billion\nShare repurchases | approximately $1.3 billion (subject to available cash, market conditions and other ongoing capital allocation decisions)\nMoody's Investors Service (MIS)\nMIS global revenue | increase in the mid-single-digit percent range\nMIS adjusted operating margin | 58% - 59%\nMoody's Analytics (MA)\nMA global revenue | increase in the high-single-digit percent range\nMA adjusted operating margin | approximately 30%\n(1) These metrics are adjusted measures. See below for reconciliation of these measures to their comparable GAAP measure.\nTable 12 - 2020 Outlook Continued\nThe following are reconciliations of the Company's adjusted forward looking measures to their comparable GAAP measure:\nProjected for the Year Ended December 31, 2020\nOperating margin guidance | Approximately 44%\nDepreciation and amortization | Approximately 4.5%\nAdjusted operating margin guidance | 48% - 49%\nProjected for the Year Ended December 31, 2020\nOperating cash flow guidance | $1.8 to $1.9 billion\nLess: Capital expenditures | Approximately $100 million\nFree cash flow guidance | $1.7 to $1.8 billion\nProjected for the Year Ended December 31, 2020\nDiluted EPS | $8.60 to $8.80\nAcquisition-related intangible amortization | Approximately $0.50\nAdjusted Diluted EPS | $9.10 to $9.30",
+  "notes": "Adjusted Operating Income excludes the impact of: i) restructuring charges; ii) depreciation and amortization; iii) Acquisition-Related Expenses; iv) a loss pursuant to the divestiture of MAKS; and v) a captive insurance company settlement. Adjusted Net Income and Adjusted Diluted EPS exclude the impact of: i) amortization of acquired intangible assets; ii) Acquisition-Related Expenses; iii) restructuring charges; iv) a loss and tax charge pursuant to the divestiture of MAKS; and v) a captive insurance company settlement. The Company defines free cash flow as net cash provided by operating activities minus payments for capital additions. Organic (non-constant-currency) measures published: Organic MA revenue (full year) 1912.0 vs 1715.0 prior year, growth 11.0%. Whole USD millions (Q4-19 release and 2019 10-K). Adjusted Operating Income: OI excluding restructuring, D&A, Acquisition-Related Expenses, loss pursuant to the divestiture of MAKS and captive insurance company settlement."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "ni_tot": 1429.0,
+  "dna": 200.0,
+  "sbc": 136.0,
+  "deferred_tax": -38.0,
+  "cfo": 1675.0,
+  "capex": -69.0,
+  "acquisitions": -162.0,
+  "divest": 226.0,
+  "cfi": 36.0,
+  "debt_proceeds": 824.0,
+  "debt_repay": -950.0,
+  "buyback": -991.0,
+  "sbc_tax_withholding": -77.0,
+  "stock_plan_proceeds": 45.0,
+  "dividends": -378.0,
+  "div_nci": -3.0,
+  "cff": -1563.0,
+  "fx": -1.0,
+  "net_change": 147.0,
+  "cash_begin": 1685.0,
+  "cash_end": 1832.0,
+  "cp_net": -3.0,
+  "lines_raw": [
+   [
+    "Net income",
+    1429.0
+   ],
+   [
+    "Depreciation and amortization",
+    200.0
+   ],
+   [
+    "Stock-based compensation",
+    136.0
+   ],
+   [
+    "Deferred income taxes",
+    -38.0
+   ],
+   [
+    "CCXI Gain",
+    0.0
+   ],
+   [
+    "Purchase Price Hedge Gain",
+    0.0
+   ],
+   [
+    "ROU Asset impairment & other non-cash restructuring/impairment charges",
+    38.0
+   ],
+   [
+    "Loss pursuant to the divestiture of MAKS",
+    14.0
+   ],
+   [
+    "Accounts receivable",
+    -134.0
+   ],
+   [
+    "Other current assets",
+    -88.0
+   ],
+   [
+    "Other assets",
+    -69.0
+   ],
+   [
+    "Lease obligations",
+    -16.0
+   ],
+   [
+    "Accounts payable and accrued liabilities",
+    77.0
+   ],
+   [
+    "Restructuring liability",
+    0.0
+   ],
+   [
+    "Deferred revenue",
+    76.0
+   ],
+   [
+    "Unrecognized tax positions and other non-current tax liabilities",
+    8.0
+   ],
+   [
+    "Other liabilities",
+    42.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    1675.0
+   ],
+   [
+    "Capital additions",
+    -69.0
+   ],
+   [
+    "Purchases of investments",
+    -138.0
+   ],
+   [
+    "Sales and maturities of investments",
+    174.0
+   ],
+   [
+    "Receipts from Purchase Price Hedge",
+    0.0
+   ],
+   [
+    "Cash received upon disposal of a business, net of cash transferred to purchaser",
+    226.0
+   ],
+   [
+    "Cash paid for acquisitions, net of cash acquired",
+    -162.0
+   ],
+   [
+    "Receipts from settlements of net investment hedges",
+    12.0
+   ],
+   [
+    "Payments for settlements of net investment hedges",
+    -7.0
+   ],
+   [
+    "Net cash provided by (used in) investing activities",
+    36.0
+   ],
+   [
+    "Issuance of notes",
+    824.0
+   ],
+   [
+    "Repayment of notes",
+    -950.0
+   ],
+   [
+    "Issuance of commercial paper",
+    1317.0
+   ],
+   [
+    "Repayment of commercial paper",
+    -1320.0
+   ],
+   [
+    "Proceeds from stock-based compensation plans",
+    45.0
+   ],
+   [
+    "Repurchase of shares related to stock-based compensation",
+    -77.0
+   ],
+   [
+    "Treasury shares",
+    -991.0
+   ],
+   [
+    "Dividends",
+    -378.0
+   ],
+   [
+    "Dividends to noncontrolling interests",
+    -3.0
+   ],
+   [
+    "Payment for noncontrolling interest",
+    -12.0
+   ],
+   [
+    "Debt issuance costs, extinguishment costs and related fees",
+    -18.0
+   ],
+   [
+    "Net cash used in financing activities",
+    -1563.0
+   ],
+   [
+    "Effect of exchange rate changes on cash and cash equivalents",
+    -1.0
+   ],
+   [
+    "Increase (decrease) in cash and cash equivalents",
+    147.0
+   ],
+   [
+    "Cash and cash equivalents, beginning of period",
+    1685.0
+   ],
+   [
+    "Cash and cash equivalents, end of period",
+    1832.0
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 1832.0,
+  "sti": 98.0,
+  "ar": 1419.0,
+  "oca": 330.0,
+  "tca": 3679.0,
+  "ppe": 292.0,
+  "rou": 456.0,
+  "goodwill": 3722.0,
+  "intang": 1498.0,
+  "dta": 229.0,
+  "onca": 389.0,
+  "ta": 10265.0,
+  "ap_accr": 773.0,
+  "cp": null,
+  "cltd": 0.0,
+  "lease_cur": 89.0,
+  "defrev": 1050.0,
+  "ocl": 0.0,
+  "tcl": 1912.0,
+  "defrev_nc": 112.0,
+  "ltd": 5581.0,
+  "dtl": 357.0,
+  "utp": 477.0,
+  "lease_nc": 485.0,
+  "ol": 504.0,
+  "tl": 9428.0,
+  "redeemable_nci": 6.0,
+  "eq": 612.0,
+  "nci": 219.0,
+  "te": 831.0,
+  "tle": 10265.0,
+  "shares_out": 187.7,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    1832.0
+   ],
+   [
+    "Short-term investments",
+    98.0
+   ],
+   [
+    "Accounts receivable, net of allowances of $ 43 in 2019 and $ 43 in 2018",
+    1419.0
+   ],
+   [
+    "Other current assets",
+    330.0
+   ],
+   [
+    "Total current assets",
+    3679.0
+   ],
+   [
+    "Property and equipment, net",
+    292.0
+   ],
+   [
+    "Operating lease right-of-use assets",
+    456.0
+   ],
+   [
+    "Goodwill",
+    3722.0
+   ],
+   [
+    "Intangible assets, net",
+    1498.0
+   ],
+   [
+    "Deferred tax assets, net",
+    229.0
+   ],
+   [
+    "Other assets",
+    389.0
+   ],
+   [
+    "Total assets",
+    10265.0
+   ],
+   [
+    "Accounts payable and accrued liabilities",
+    773.0
+   ],
+   [
+    "Current portion of operating lease liabilities",
+    89.0
+   ],
+   [
+    "Current portion of long-term debt",
+    0.0
+   ],
+   [
+    "Deferred revenue",
+    1050.0
+   ],
+   [
+    "Total current liabilities",
+    1912.0
+   ],
+   [
+    "Non-current portion of deferred revenue",
+    112.0
+   ],
+   [
+    "Long-term debt",
+    5581.0
+   ],
+   [
+    "Deferred tax liabilities, net",
+    357.0
+   ],
+   [
+    "Uncertain tax positions",
+    477.0
+   ],
+   [
+    "Operating lease liabilities",
+    485.0
+   ],
+   [
+    "Other liabilities",
+    504.0
+   ],
+   [
+    "Total liabilities",
+    9428.0
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    6.0
+   ],
+   [
+    "Preferred stock, par value $ .01 per share; 10,000,000 shares authorized; no shares issued and outstanding",
+    0.0
+   ],
+   [
+    "Series common stock, par value $ .01 per share; 10,000,000 shares authorized; no shares issued and outstanding",
+    0.0
+   ],
+   [
+    "Common stock, par value $ .01 per share; 1,000,000,000 shares authorized; 342,902,272 shares issued at December 31, 2019 and December 31, 2018, respectively.",
+    3.0
+   ],
+   [
+    "Capital surplus",
+    642.0
+   ],
+   [
+    "Retained earnings",
+    9656.0
+   ],
+   [
+    "Treasury stock, at cost; 155,215,143 and 151,598,695 shares of common stock at December 31, 2019 and December 31, 2018, respectively",
+    -9250.0
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -439.0
+   ],
+   [
+    "Total Moody's shareholders' equity",
+    612.0
+   ],
+   [
+    "Noncontrolling interests",
+    219.0
+   ],
+   [
+    "Total shareholders' equity",
+    831.0
+   ],
+   [
+    "Total liabilities, redeemable noncontrolling interest and shareholders' equity",
+    10265.0
+   ]
+  ]
+ },
+ "py": {
+  "restated": true,
+  "notes": "Prior-year (2018) LOB revenue reclassified in 2019 releases: REIT revenue SFG -> CFG; BvD FACT RD&A -> ERS (amounts \"not material\" per release, but e.g. Q1-18 CFG 377.7 -> 389.6 and SFG 129.7 -> 117.8; RD&A 269.2 -> 267.1, ERS 100.1 -> 102.2). Prior-year segment Adjusted Operating Income as originally reported. Prior-year values in whole millions as printed.",
+  "mis_lines": {
+   "Corporate Finance": 1379.0,
+   "Structured Finance": 481.0,
+   "Financial Institutions": 442.0,
+   "Public, Project and Infrastructure Finance": 391.0,
+   "MIS Other": 19.0
+  },
+  "ma_lines": {
+   "Research, Data and Analytics": 1121.0,
+   "Enterprise Risk Solutions": 451.0,
+   "Professional Services": 159.0
+  },
+  "mis_adj_oi": 1657.0,
+  "ma_adj_oi": 460.0
+ },
+ "extra": {
+  "employees": 11081,
+  "acquisitions": [
+   [
+    "RiskFirst",
+    "2019-07 (25-Jul-2019 per organic table)",
+    null,
+    "MA (ERS LOB); purchase price not material"
+   ],
+   [
+    "ABS Suite business",
+    "2019-10 (from 1-Oct-2019 per organic table)",
+    null,
+    "MA (RD&A LOB); purchase price not material"
+   ],
+   [
+    "Vigeo Eiris (majority stake)",
+    "2019-04",
+    null,
+    "MIS (MIS Other LOB); purchase price not material"
+   ],
+   [
+    "Four Twenty Seven, Inc. (majority stake)",
+    "2019-07",
+    null,
+    "MIS (MIS Other LOB); redeemable NCI recognised (not material)"
+   ],
+   [
+    "SynTao Green Finance (minority stake)",
+    "2019-10",
+    null,
+    "MIS (equity stake, China ESG)"
+   ]
+  ],
+  "divestitures": [
+   [
+    "Moody's Analytics Knowledge Services (MAKS) to Equistone Partners Europe",
+    "2019-11-08",
+    "Net cash proceeds 226 (CF: cash received upon disposal of a business 226); loss on divestiture 14 incl. 32 of CTA reclassified from AOCI (IS line \"Loss pursuant to the divestiture of MAKS\" 14 = Q2 impairment 8.7 + Q3 2.0 + Q4 3, as reported per quarter); $43m indemnification liability recorded; MAKS goodwill removed 163"
+   ]
+  ],
+  "debt_maturities": [
+   [
+    "2020",
+    0.0
+   ],
+   [
+    "2021",
+    800.0
+   ],
+   [
+    "2022",
+    500.0
+   ],
+   [
+    "2023",
+    500.0
+   ],
+   [
+    "2024",
+    500.0
+   ],
+   [
+    "Thereafter",
+    3303.0
+   ],
+   [
+    "Total",
+    5603.0
+   ]
+  ],
+  "amort_schedule": [
+   [
+    "2020",
+    99.0
+   ],
+   [
+    "2021",
+    99.0
+   ],
+   [
+    "2022",
+    99.0
+   ],
+   [
+    "2023",
+    96.0
+   ],
+   [
+    "2024",
+    94.0
+   ],
+   [
+    "Thereafter",
+    1011.0
+   ],
+   [
+    "Total",
+    1498.0
+   ]
+  ],
+  "notes": "Employees = global staffing at 31-Dec-2019 (10-K MD&A table: U.S. 3,908, non-U.S. 7,173); MAKS divestiture removed ~2,700 employees, 2019 acquisitions added ~400. Item 1 text: approximately 11,000 FTE. Debt maturities = principal by year (10-K Note 19); the 5.50% 2010 Senior Notes due 2020 were redeemed during 2019 (Repayment of notes 950 = 450 2014 notes + 500 2010 notes); new 0.950% 2019 Senior Notes due 2030 (EUR 750m, principal 842). Goodwill additions 2019: MIS 53 (Vigeo Eiris, Four Twenty Seven), MA 61 (RiskFirst, ABS Suite); MAKS goodwill removed 163. Acquired-intangible amortization expense 2019: 103. Cash paid for acquisitions, net of cash acquired 162. Cumulative 2018 Restructuring Program charges: MIS 63, MA 46. Acquisition dates for RiskFirst / ABS Suite from the 10-K text (month) and Q4-19 release organic table."
+ },
+ "notes": "10-K income statement agrees with the Q4 release twelve-month columns. us_rev / intl_rev for FY2019 from 2019 10-K Note 23 geographic table (U.S. 2,544; Total Non-U.S. 2,285); the Q4-19 release has no geographic table. BS \"other\" buckets are sums of: oca=[Other current assets]; onca=[Other assets]; ol=[Other liabilities] cf.cp_net = Issuance of commercial paper + Repayment of commercial paper (computed). dps_decl source: ngaap.guidance holds the full-year 2020 outlook table issued with the Q4 release (the release carries no 2019 outlook; the final 2019 guidance is in the Q3-19 record). 2019 10-K Note 20 (declared total 2.00). shares_out = release Table 3 \"Actual number of shares outstanding\" (187.7). cf.buyback = \"Treasury shares\" line only. Captive insurance company settlement (Q3-19) is embedded in operating/SG&A expense; it appears only in the non-GAAP bridges. FY2019 statements in whole USD millions as printed in the 10-K and Q4 release (self-check tolerance +/-1.5). Redeemable noncontrolling interest 6 (Four Twenty Seven) is mezzanine; tle = tl + redeemable_nci + te. All schema self-checks pass. XBRL cross-check (rev, oi, ni, eps_d, cfo, ta, as first filed): all match."
+}

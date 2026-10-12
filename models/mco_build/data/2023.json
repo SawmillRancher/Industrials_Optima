@@ -1,0 +1,749 @@
+{
+ "period": "2023",
+ "period_end": "2023-12-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1059556/000105955624000012/a4q23earningsrelease.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1059556/000105955624000017/mco-20231231.htm"
+ },
+ "is": {
+  "rev": 5916.0,
+  "opex_operating": 1687.0,
+  "sga": 1632.0,
+  "dna": 373.0,
+  "restr": 87.0,
+  "other_op_lines": [],
+  "tot_exp": 3779.0,
+  "oi": 2137.0,
+  "int_net": -251.0,
+  "oth_nonop": 49.0,
+  "nonop_lines": [
+   [
+    "Gain on extinguishment of debt",
+    0.0
+   ]
+  ],
+  "nonop_tot": -202.0,
+  "ebt": 1935.0,
+  "tax": 327.0,
+  "ni_tot": 1608.0,
+  "nci": 1.0,
+  "ni": 1607.0,
+  "disc_ops": null,
+  "eps_b": 8.77,
+  "eps_d": 8.73,
+  "sh_b": 183.2,
+  "sh_d": 184.0,
+  "dps_decl": 3.08
+ },
+ "seg": {
+  "mis_lines": {
+   "Corporate Finance": 1404.0,
+   "Structured Finance": 405.0,
+   "Financial Institutions": 545.0,
+   "Public, Project and Infrastructure Finance": 476.0,
+   "MIS Other": 30.0
+  },
+  "mis_ratings_total": 2830.0,
+  "mis_ext": 2860.0,
+  "mis_interseg": 186.0,
+  "mis_recurring": 1222.0,
+  "mis_transaction": 1638.0,
+  "ma_lines": {
+   "Decision Solutions": 1383.0,
+   "Research and Insights": 884.0,
+   "Data and Information": 789.0
+  },
+  "ma_ext": 3056.0,
+  "ma_interseg": 13.0,
+  "ma_recurring": 2868.0,
+  "ma_transaction": 188.0,
+  "ma_arr": 2962.0,
+  "ma_arr_lines": {
+   "Decision Solutions": 1277.0,
+   "Research and Insights": 879.0,
+   "Data and Information": 806.0
+  },
+  "elim": -199.0,
+  "mis_adj_oi": 1660.0,
+  "ma_adj_oi": 937.0,
+  "mis_adj_om": 54.5,
+  "ma_adj_om": 30.5,
+  "mis_dna": 75.0,
+  "ma_dna": 298.0,
+  "mis_restr": 28.0,
+  "ma_restr": 59.0,
+  "mis_oi": null,
+  "ma_oi": null,
+  "seg_other_items": [],
+  "us_rev": 3098.0,
+  "intl_rev": 2818.0,
+  "legacy": {
+   "DS: Banking": 521.0,
+   "DS: Insurance": 550.0,
+   "DS: KYC": 312.0,
+   "CFG: Investment-grade": 335.0,
+   "CFG: High-yield": 150.0,
+   "CFG: Bank loans": 292.0,
+   "CFG: Other accounts": 627.0,
+   "SFG: Asset-backed securities": 121.0,
+   "SFG: RMBS": 92.0,
+   "SFG: CMBS": 60.0,
+   "SFG: Structured credit": 129.0,
+   "SFG: Other accounts": 3.0,
+   "FIG: Banking": 378.0,
+   "FIG: Insurance": 123.0,
+   "FIG: Managed investments": 32.0,
+   "FIG: Other accounts": 12.0,
+   "PPIF: Public finance / sovereign": 205.0,
+   "PPIF: Project and infrastructure": 271.0
+  },
+  "seg_note": "Two reportable segments; from 1Q23 the release lists MA before MIS. MA LOBs DS / R&I / D&I. In 2Q23 the company expanded DS disclosure into Banking / Insurance / KYC (10-Q revenue note; recorded in seg.legacy as 'DS: ...') and reclassified certain immaterial structured-finance-solutions revenue from DS to R&I, recasting prior periods (2Q23+ releases show restated 2022 DS/R&I comparatives; 1Q23 release comparatives are not restated). Segment Adjusted Operating Income = segment revenue incl. intersegment less Operating + SG&A (excludes D&A and restructuring). seg.legacy also holds the CFG/SFG/FIG/PPIF sub-lines.",
+  "trans_rec_lines": {
+   "Corporate Finance": {
+    "transaction": 887.0,
+    "recurring": 517.0
+   },
+   "Structured Finance": {
+    "transaction": 190.0,
+    "recurring": 215.0
+   },
+   "Financial Institutions": {
+    "transaction": 254.0,
+    "recurring": 291.0
+   },
+   "Public, Project and Infrastructure Finance": {
+    "transaction": 301.0,
+    "recurring": 175.0
+   },
+   "MIS Other": {
+    "transaction": 6.0,
+    "recurring": 24.0
+   },
+   "Total MIS": {
+    "transaction": 1638.0,
+    "recurring": 1222.0
+   },
+   "Decision Solutions": {
+    "transaction": 169.0,
+    "recurring": 1214.0
+   },
+   "Research and Insights": {
+    "transaction": 16.0,
+    "recurring": 868.0
+   },
+   "Data and Information": {
+    "transaction": 3.0,
+    "recurring": 786.0
+   },
+   "Total MA": {
+    "transaction": 188.0,
+    "recurring": 2868.0
+   }
+  },
+  "ma_arr_ds_lines": {
+   "Banking": 418.0,
+   "Insurance": 533.0,
+   "KYC": 326.0
+  }
+ },
+ "ngaap": {
+  "adj_oi_pub": 2597.0,
+  "adj_om_pub": 43.9,
+  "adj_oi_items": [
+   [
+    "Depreciation and amortization",
+    373.0
+   ],
+   [
+    "Restructuring",
+    87.0
+   ]
+  ],
+  "adj_ni_pub": 1822.0,
+  "adj_eps_pub": 9.9,
+  "eps_bridge_start": 8.73,
+  "eps_bridge": [
+   [
+    "Net Acquisition-Related Intangible Amortization Expenses",
+    0.82
+   ],
+   [
+    "Net restructuring",
+    0.35
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Pre-tax Acquisition-Related Intangible Amortization Expenses",
+    198.0,
+    150.0,
+    "op",
+    "AMORT"
+   ],
+   [
+    "Pre-tax restructuring",
+    87.0,
+    65.0,
+    "op",
+    "RESTR"
+   ]
+  ],
+  "tax_items": [],
+  "adj_ni_table_raw": [
+   [
+    "Net income attributable to Moody's common shareholders",
+    1607.0
+   ],
+   [
+    "Pre-tax Acquisition-Related Intangible Amortization Expenses",
+    198.0
+   ],
+   [
+    "Tax on Acquisition-Related Intangible Amortization Expenses",
+    -48.0
+   ],
+   [
+    "Net Acquisition-Related Intangible Amortization Expenses",
+    150.0
+   ],
+   [
+    "Pre-tax restructuring",
+    87.0
+   ],
+   [
+    "Tax on restructuring",
+    -22.0
+   ],
+   [
+    "Net restructuring",
+    65.0
+   ],
+   [
+    "Pre-tax gain on extinguishment of debt",
+    0.0
+   ],
+   [
+    "Tax on gain on extinguishment of debt",
+    0.0
+   ],
+   [
+    "Net gain on extinguishment of debt",
+    0.0
+   ],
+   [
+    "FX losses resulting from the Company no longer conducting commercial operations in Russia",
+    0.0
+   ],
+   [
+    "Adjusted Net Income",
+    1822.0
+   ]
+  ],
+  "adj_eps_table_raw": [
+   [
+    "Diluted earnings per share attributable to Moody's common shareholders",
+    8.73
+   ],
+   [
+    "Pre-tax Acquisition-Related Intangible Amortization Expenses",
+    1.08
+   ],
+   [
+    "Tax on Acquisition-Related Intangible Amortization Expenses",
+    -0.26
+   ],
+   [
+    "Net Acquisition-Related Intangible Amortization Expenses",
+    0.82
+   ],
+   [
+    "Pre-tax restructuring",
+    0.47
+   ],
+   [
+    "Tax on restructuring",
+    -0.12
+   ],
+   [
+    "Net restructuring",
+    0.35
+   ],
+   [
+    "Pre-tax gain on extinguishment of debt",
+    0.0
+   ],
+   [
+    "Tax on gain on extinguishment of debt",
+    0.0
+   ],
+   [
+    "Net gain on extinguishment of debt",
+    0.0
+   ],
+   [
+    "FX losses resulting from the Company no longer conducting commercial operations in Russia",
+    0.0
+   ],
+   [
+    "Adjusted Diluted EPS",
+    9.9
+   ]
+  ],
+  "fcf_pub": 1880.0,
+  "fcf_ytd_months": 12,
+  "occ": {
+   "mco": null,
+   "mis": null,
+   "ma": null,
+   "basis": "not published in this release (text: FX impact immaterial)",
+   "lines": {}
+  },
+  "guidance": "Full Year 2024 Moody's Corporation Guidance as of February 13, 2024\nMOODY'S CORPORATION | Current guidance\nRevenue | Increase in the high-single-digit to low-double-digit percent range\nOperating Expenses | Increase in the mid-to-high-single-digit percent range\nOperating Margin | 37% to 39%\nAdjusted Operating Margin (1) | 44% to 46%\nInterest Expense, Net | $240 - $260 million\nEffective Tax Rate | 22% to 24%\nDiluted EPS | $9.45 to $10.20\nAdjusted Diluted EPS (1) | $10.25 to $11.00\nOperating Cash Flow | $2.3 to $2.5 billion\nFree Cash Flow (1) | $1.9 to $2.1 billion\nShare Repurchases | Approximately $1.0 billion (subject to available cash, market conditions, M&A opportunities, and other ongoing capital allocation decisions)\nMoody's Analytics (MA) | Current guidance\nMA Revenue | Increase of approximately 10%\nARR (2) | Increase in the low-double-digit percent range\nMA Adjusted Operating Margin | 30% to 31%\nMoody's Investors Service (MIS) | Current guidance\nMIS Revenue | Increase in the high-single-digit to low-double-digit percent range\nMIS Adjusted Operating Margin | 55.5% to 57.5%\n(1) These metrics are adjusted measures. See below for reconciliation of these measures to their comparable U.S. GAAP measure. (2) Refer to Table 10 within this earnings release for the definition of and further information on the ARR metric.\nThe following are reconciliations of the Company's adjusted forward looking measures to their comparable U.S. GAAP measure:\nProjected for the Year Ended December 31, 2024\nOperating margin guidance | 37% to 39%\nDepreciation and amortization | Approximately 7%\nAdjusted Operating Margin guidance | 44% to 46%\nProjected for the Year Ended December 31, 2024\nOperating cash flow guidance | $2.3 to $2.5 billion\nLess: Capital expenditures | Approximately $0.4 billion\nFree Cash Flow guidance | $1.9 to $2.1 billion\nProjected for the Year Ended December 31, 2024\nDiluted EPS guidance | $9.45 to $10.20\nAcquisition-Related Intangible Amortization | Approximately $0.80\nAdjusted Diluted EPS guidance | $10.25 to $11.00",
+  "guidance_assumptions": "Forecasted Item | Current assumption\nU.S. GDP (1) growth | 1.0% - 2.0%\nEuro area GDP (1) growth | 0.5% - 1.5%\nGlobal benchmark rates | Gradual rate reductions starting in 2Q 2024\nU.S. high yield spreads | To fluctuate around 400 - 500 bps, with periodic volatility\nU.S. inflation rate | To decline to 2.0% by year-end\nEuro area inflation rate | Large economies to decline to around 2.0% by year-end\nU.S. unemployment rate | To average between 4.0% - 4.5% for the full year\nGlobal high yield default rate | Rise towards 5.0% in 1H 2024 and then ease to around 4.0% by year-end\nGlobal MIS rated issuance | Increase in the mid-to-high-single-digit percent range\nGBP/USD exchange rate | $1.27 for the full year\nEUR/USD exchange rate | $1.10 for the full year\nNote: All current assumptions are as of February 13, 2024. (1) GDP growth represents real GDP.",
+  "notes": "Adjusted Operating Income excludes the impact of: i) depreciation and amortization; and ii) restructuring charges/adjustments. Adjusted Net Income and Adjusted Diluted EPS exclude the impact of: i) amortization of acquired intangible assets; ii) restructuring charges/adjustments; iii) a gain on the extinguishment of debt; and iv) FX translation losses reclassified to earnings resulting from the Company no longer conducting commercial operations in Russia. The Company defines Free Cash Flow as net cash provided by operating activities minus cash paid for capital additions."
+ },
+ "bs": {
+  "cash": 2130.0,
+  "sti": 63.0,
+  "ar": 1659.0,
+  "oca": 489.0,
+  "tca": 4341.0,
+  "ppe": 603.0,
+  "rou": 277.0,
+  "goodwill": 5956.0,
+  "intang": 2049.0,
+  "dta": 258.0,
+  "onca": 1138.0,
+  "ta": 14622.0,
+  "ap_accr": 1076.0,
+  "cp": null,
+  "cltd": null,
+  "lease_cur": 108.0,
+  "defrev": 1316.0,
+  "ocl": null,
+  "tcl": 2500.0,
+  "defrev_nc": 65.0,
+  "ltd": 7001.0,
+  "dtl": 402.0,
+  "utp": 196.0,
+  "lease_nc": 306.0,
+  "ol": 676.0,
+  "tl": 11146.0,
+  "redeemable_nci": null,
+  "eq": 3318.0,
+  "nci": 158.0,
+  "te": 3476.0,
+  "tle": 14622.0,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    2130.0
+   ],
+   [
+    "Short-term investments",
+    63.0
+   ],
+   [
+    "Accounts receivable, net of allowances for credit losses of $ 35 in 2023 and $ 40 in 2022",
+    1659.0
+   ],
+   [
+    "Other current assets",
+    489.0
+   ],
+   [
+    "Total current assets",
+    4341.0
+   ],
+   [
+    "Property and equipment, net of accumulated depreciation of $ 1,272 in 2023 and $ 1,123 in 2022",
+    603.0
+   ],
+   [
+    "Operating lease right-of-use assets",
+    277.0
+   ],
+   [
+    "Goodwill",
+    5956.0
+   ],
+   [
+    "Intangible assets, net",
+    2049.0
+   ],
+   [
+    "Deferred tax assets, net",
+    258.0
+   ],
+   [
+    "Other assets",
+    1138.0
+   ],
+   [
+    "Total assets",
+    14622.0
+   ],
+   [
+    "Accounts payable and accrued liabilities",
+    1076.0
+   ],
+   [
+    "Current portion of operating lease liabilities",
+    108.0
+   ],
+   [
+    "Deferred revenue",
+    1316.0
+   ],
+   [
+    "Total current liabilities",
+    2500.0
+   ],
+   [
+    "Non-current portion of deferred revenue",
+    65.0
+   ],
+   [
+    "Long-term debt",
+    7001.0
+   ],
+   [
+    "Deferred tax liabilities, net",
+    402.0
+   ],
+   [
+    "Uncertain tax positions",
+    196.0
+   ],
+   [
+    "Operating lease liabilities",
+    306.0
+   ],
+   [
+    "Other liabilities",
+    676.0
+   ],
+   [
+    "Total liabilities",
+    11146.0
+   ],
+   [
+    "Preferred stock, par value $ .01 per share; 10,000,000 shares authorized; no shares issued and outstanding",
+    0.0
+   ],
+   [
+    "Series common stock, par value $ .01 per share; 10,000,000 shares authorized; no shares issued and outstanding",
+    0.0
+   ],
+   [
+    "Common stock, par value $ .01 per share; 1,000,000,000 shares authorized; 342,902,272 shares issued at December 31, 2023 and December 31, 2022, respectively.",
+    3.0
+   ],
+   [
+    "Capital surplus",
+    1228.0
+   ],
+   [
+    "Retained earnings",
+    14659.0
+   ],
+   [
+    "Treasury stock, at cost; 160,430,754 and 159,702,362 shares of common stock at December 31, 2023 and December 31, 2022, respectively",
+    -12005.0
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -567.0
+   ],
+   [
+    "Total Moody’s shareholders’ equity",
+    3318.0
+   ],
+   [
+    "Noncontrolling interests",
+    158.0
+   ],
+   [
+    "Total shareholders’ equity",
+    3476.0
+   ],
+   [
+    "Total liabilities and shareholders’ equity",
+    14622.0
+   ]
+  ],
+  "shares_out": 182.5
+ },
+ "cf": {
+  "ytd_months": 12,
+  "ni_tot": 1608.0,
+  "dna": 373.0,
+  "sbc": 193.0,
+  "deferred_tax": -38.0,
+  "cfo": 2151.0,
+  "capex": -271.0,
+  "acquisitions": -3.0,
+  "divest": null,
+  "cfi": -247.0,
+  "debt_proceeds": 0.0,
+  "debt_repay": -500.0,
+  "cp_net": null,
+  "buyback": -490.0,
+  "sbc_tax_withholding": -71.0,
+  "stock_plan_proceeds": 50.0,
+  "dividends": -564.0,
+  "div_nci": -9.0,
+  "cff": -1584.0,
+  "fx": 41.0,
+  "net_change": 361.0,
+  "cash_begin": 1769.0,
+  "cash_end": 2130.0,
+  "lines_raw": [
+   [
+    "Net income",
+    1608.0
+   ],
+   [
+    "Depreciation and amortization",
+    373.0
+   ],
+   [
+    "Stock-based compensation",
+    193.0
+   ],
+   [
+    "Deferred income taxes",
+    -38.0
+   ],
+   [
+    "Provision for credit losses on accounts receivable",
+    22.0
+   ],
+   [
+    "ROU Asset impairment & other non-cash restructuring/impairment charges",
+    35.0
+   ],
+   [
+    "FX translation losses reclassified to net income",
+    0.0
+   ],
+   [
+    "(Gain)/loss on extinguishment of debt",
+    0.0
+   ],
+   [
+    "Gain on sale/non-cash exchange of investments in non-consolidated affiliates",
+    -4.0
+   ],
+   [
+    "Accounts receivable",
+    -12.0
+   ],
+   [
+    "Other current assets",
+    119.0
+   ],
+   [
+    "Other assets",
+    -69.0
+   ],
+   [
+    "Lease obligations",
+    -26.0
+   ],
+   [
+    "Accounts payable and accrued liabilities",
+    76.0
+   ],
+   [
+    "Deferred revenue",
+    24.0
+   ],
+   [
+    "Unrecognized tax positions and other non-current tax liabilities",
+    -129.0
+   ],
+   [
+    "Other liabilities",
+    -21.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    2151.0
+   ],
+   [
+    "Capital additions",
+    -271.0
+   ],
+   [
+    "Purchases of investments",
+    -143.0
+   ],
+   [
+    "Sales and maturities of investments",
+    162.0
+   ],
+   [
+    "Purchases of investments in non-consolidated affiliates",
+    -5.0
+   ],
+   [
+    "Sales of investments in non-consolidated affiliates",
+    13.0
+   ],
+   [
+    "Cash paid for acquisitions, net of cash acquired",
+    -3.0
+   ],
+   [
+    "Receipts from settlements of net investment hedges",
+    0.0
+   ],
+   [
+    "Payments for settlements of net investment hedges",
+    0.0
+   ],
+   [
+    "Net cash used in investing activities",
+    -247.0
+   ],
+   [
+    "Issuance of notes",
+    0.0
+   ],
+   [
+    "Repayment of notes",
+    -500.0
+   ],
+   [
+    "Proceeds from stock-based compensation plans",
+    50.0
+   ],
+   [
+    "Repurchase of shares related to stock-based compensation",
+    -71.0
+   ],
+   [
+    "Treasury shares",
+    -490.0
+   ],
+   [
+    "Dividends",
+    -564.0
+   ],
+   [
+    "Dividends to noncontrolling interests",
+    -9.0
+   ],
+   [
+    "Debt issuance costs, extinguishment costs and related fees",
+    0.0
+   ],
+   [
+    "Net cash used in financing activities",
+    -1584.0
+   ],
+   [
+    "Effect of exchange rate changes on cash and cash equivalents",
+    41.0
+   ],
+   [
+    "Increase (decrease) in cash and cash equivalents",
+    361.0
+   ],
+   [
+    "Cash and cash equivalents, beginning of period",
+    1769.0
+   ],
+   [
+    "Cash and cash equivalents, end of period",
+    2130.0
+   ]
+  ]
+ },
+ "py": {
+  "restated": true,
+  "notes": "FY2022 comparative DS / R&I revenue restated for the 2Q23 DS->R&I reclassification (originally DS 1,324 / R&I 733; now 1,245 / 812); MIS lines and segment Adjusted Operating Income as originally reported.",
+  "mis_lines": {
+   "Corporate Finance": 1269.0,
+   "Structured Finance": 462.0,
+   "Financial Institutions": 491.0,
+   "Public, Project and Infrastructure Finance": 431.0,
+   "MIS Other": 46.0
+  },
+  "ma_lines": {
+   "Decision Solutions": 1245.0,
+   "Research and Insights": 812.0,
+   "Data and Information": 712.0
+  },
+  "mis_adj_oi": 1488.0,
+  "ma_adj_oi": 840.0
+ },
+ "extra": {
+  "employees": 15151,
+  "acquisitions": [],
+  "divestitures": [],
+  "debt_maturities": [
+   [
+    "2024",
+    0.0
+   ],
+   [
+    "2025",
+    700.0
+   ],
+   [
+    "2026",
+    0.0
+   ],
+   [
+    "2027",
+    552.0
+   ],
+   [
+    "2028",
+    500.0
+   ],
+   [
+    "Thereafter",
+    5529.0
+   ],
+   [
+    "Total",
+    7281.0
+   ]
+  ],
+  "amort_schedule": [
+   [
+    "2024",
+    193.0
+   ],
+   [
+    "2025",
+    190.0
+   ],
+   [
+    "2026",
+    186.0
+   ],
+   [
+    "2027",
+    170.0
+   ],
+   [
+    "2028",
+    158.0
+   ],
+   [
+    "Thereafter",
+    1152.0
+   ],
+   [
+    "Total",
+    2049.0
+   ]
+  ],
+  "notes": "Employees 15,151 at 31-Dec-2023 (MA 7,853; MIS 5,345; MSS 1,953). No material acquisitions in 2023 (cash paid for acquisitions 3). Debt 2023: fully repaid 500 4.875% 2013 Senior Notes due 2024 early (200 in 2Q23, 300 in 3Q23); no issuance. Restructuring: 2022-2023 Geolocation Restructuring Program FY2023 charge 87 (employee termination 51, real estate 36 mainly ROU asset impairment); cumulative 200; program substantially complete at 31-Dec-2023; annualized savings now 145-165. No goodwill impairment. Revolver 1,250 undrawn."
+ },
+ "notes": "IS from the 10-K; Q4 release twelve-month column agrees on every line. sh_b/sh_d from the Q4 release twelve-month column (10-K IS face ends at EPS). seg.legacy (sub-LOB revenue), mis_ratings_total and us_rev/intl_rev from the 10-K revenue note. bs.shares_out: computed from 10-K BS face: 342,902,272 issued - 160,430,754 treasury = 182,471,518 (release rounds to '182 million'; equity statement 342.9 - 160.4). ARR is on a constant-currency organic basis (budget FX rates of the current year, excludes acquisitions); prior-year ARR is restated each year at the new budget rates, so year-end ARR here differs from the same date shown as a comparative a year later. MA LOB revenue is on the post-2Q23 basis (DS->R&I reclassification); the Q1-23 record is on the old basis (see Q1-23 notes). FY2023 ETR 16.9% reflects 1Q23 UTP resolutions, not excluded from Adjusted EPS. DS sub-lines (Banking/Insurance/KYC) in seg.legacy from the 2023 10-K revenue note. Annual guidance field = FY2024 outlook from the Q4-23 release (13-Feb-2024). Q4-23 release also prints a condensed cash flow statement (Table 3) that agrees with the 10-K. XBRL cross-check (as first filed): rev ok (5916.0); oi ok (2137.0); ni ok (1607.0); eps_d ok (8.73); cfo ok (2151.0); ta ok (14622.0). Self-checks: all pass"
+}

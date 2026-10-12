@@ -1,0 +1,597 @@
+{
+ "period": "2007",
+ "period_end": "2007-12-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1059556/000115752308001033/a5604739ex991.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1059556/000119312508042583/d10k.htm",
+  "py_recast_filing": "https://www.sec.gov/Archives/edgar/data/1059556/000119312509041352/d10k.htm",
+  "next_release": "https://www.sec.gov/Archives/edgar/data/1059556/000115752309000884/a5887772_ex991.htm",
+  "next_filing": "https://www.sec.gov/Archives/edgar/data/1059556/000119312509041352/d10k.htm"
+ },
+ "is": {
+  "rev": 2259.0,
+  "opex_operating": 584.0,
+  "sga": 451.1,
+  "dna": 42.9,
+  "restr": 50.0,
+  "other_op_lines": [
+   [
+    "Gain on sale of building",
+    0.0
+   ]
+  ],
+  "tot_exp": 1128.0,
+  "oi": 1131.0,
+  "int_net": -24.3,
+  "oth_nonop": 10.0,
+  "nonop_lines": [],
+  "nonop_tot": -14.3,
+  "ebt": 1116.7,
+  "tax": 415.2,
+  "ni_tot": 701.5,
+  "nci": null,
+  "ni": 701.5,
+  "disc_ops": null,
+  "eps_b": 2.63,
+  "eps_d": 2.58,
+  "sh_b": 266.4,
+  "sh_d": 272.2,
+  "dps_decl": 0.34
+ },
+ "seg": {
+  "mis_lines": {
+   "Structured finance": 890.6,
+   "Corporate finance": 465.4,
+   "Financial institutions and sovereign risk": 303.1,
+   "Public finance": 120.8,
+   "Research revenue": 324.3
+  },
+  "mis_ratings_total": 1779.9,
+  "mis_ext": 2104.2,
+  "mis_interseg": null,
+  "mis_recurring": null,
+  "mis_transaction": null,
+  "ma_lines": {
+   "Moody's KMV": 154.8
+  },
+  "ma_ext": 154.8,
+  "ma_interseg": null,
+  "ma_recurring": null,
+  "ma_transaction": null,
+  "ma_arr": null,
+  "ma_arr_lines": {},
+  "elim": null,
+  "mis_adj_oi": null,
+  "ma_adj_oi": null,
+  "mis_adj_om": null,
+  "ma_adj_om": null,
+  "mis_dna": 31.1,
+  "ma_dna": 11.8,
+  "mis_restr": 45.6,
+  "ma_restr": 4.4,
+  "mis_oi": 1105.4,
+  "ma_oi": 25.6,
+  "seg_other_items": [],
+  "us_rev": 1361.8,
+  "intl_rev": 897.2,
+  "legacy": {
+   "Moody's Investors Service (old segment) revenue": 2104.2,
+   "Moody's KMV revenue": 154.8,
+   "Moody's Investors Service operating expenses": 922.1,
+   "Moody's KMV operating expenses": 113.0,
+   "Moody's Investors Service total assets at Dec 31": 1474.0,
+   "Moody's KMV total assets at Dec 31": 240.6,
+   "Revenue International: Europe": 659.3,
+   "Revenue International: Other": 237.9,
+   "Recast 2008 basis (FY2008 10-K): MIS Structured finance": 873.3,
+   "Recast 2008 basis (FY2008 10-K): MIS Corporate finance": 411.5,
+   "Recast 2008 basis (FY2008 10-K): MIS Financial institutions": 274.3,
+   "Recast 2008 basis (FY2008 10-K): MIS Public, project and infrastructure finance": 220.8,
+   "Recast 2008 basis (FY2008 10-K): MIS Total external revenue": 1779.9,
+   "Recast 2008 basis (FY2008 10-K): MIS Intersegment royalty": 55.5,
+   "Recast 2008 basis (FY2008 10-K): MIS Total revenue": 1835.4,
+   "Recast 2008 basis (FY2008 10-K): MA Subscriptions": 421.5,
+   "Recast 2008 basis (FY2008 10-K): MA Software": 39.5,
+   "Recast 2008 basis (FY2008 10-K): MA Consulting": 18.1,
+   "Recast 2008 basis (FY2008 10-K): MA Total": 479.1,
+   "Recast 2008 basis (FY2008 10-K): Eliminations": -55.5,
+   "Recast 2008 basis (FY2008 10-K): MIS Operating and SG&A": 759.4,
+   "Recast 2008 basis (FY2008 10-K): MA Operating and SG&A": 331.2,
+   "Recast 2008 basis (FY2008 10-K): MIS Restructuring": 41.3,
+   "Recast 2008 basis (FY2008 10-K): MA Restructuring": 8.7,
+   "Recast 2008 basis (FY2008 10-K): MIS Depreciation and amortization": 24.0,
+   "Recast 2008 basis (FY2008 10-K): MA Depreciation and amortization": 18.9,
+   "Recast 2008 basis (FY2008 10-K): MIS Operating income": 1010.7,
+   "Recast 2008 basis (FY2008 10-K): MA Operating income": 120.3,
+   "Recast first cut (FY2007 release / FY2007 10-K MD&A): MIS Structured finance": 885.9,
+   "Recast first cut (FY2007 release / FY2007 10-K MD&A): MIS Corporate finance": 411.5,
+   "Recast first cut (FY2007 release / FY2007 10-K MD&A): MIS Financial institutions": 261.7,
+   "Recast first cut (FY2007 release / FY2007 10-K MD&A): MIS Public, project and infrastructure finance": 220.8,
+   "Recast 2009 MA basis (FY2009 10-K): MIS Structured finance": 868.4,
+   "Recast 2009 MA basis (FY2009 10-K): MIS Corporate finance": 416.4,
+   "Recast 2009 MA basis (FY2009 10-K): MIS Financial institutions": 274.3,
+   "Recast 2009 MA basis (FY2009 10-K): MIS Public, project and infrastructure finance": 220.8,
+   "Recast 2009 MA basis (FY2009 10-K): MA RD&A": 370.3,
+   "Recast 2009 MA basis (FY2009 10-K): MA RMS": 92.4,
+   "Recast 2009 MA basis (FY2009 10-K): MA Professional services": 16.4
+  },
+  "seg_note": "STRUCTURE IN FORCE: two reportable segments 'Moody's Investors Service' (old MIS: four rating groups + Research, and ALL corporate expenses) and 'Moody's KMV' (MKMV). In this record mis_* = the OLD Moody's Investors Service segment (mis_lines = the four ratings lines plus 'Research revenue'; mis_ratings_total = ratings only) and ma_* = Moody's KMV (ma_lines = {'Moody's KMV'}). These are NOT comparable with the 2008+ MIS / MA segments: in January 2008 Research and MKMV were combined into Moody's Analytics, overhead/corporate costs were allocated by revenue split, an intersegment royalty (MIS revenue / MA expense) was introduced, and MIS lines were realigned (sovereign/sub-sovereign from FIG, infrastructure/utilities from CFG and project finance from SFG into new PPIF; REITs to SFG; Aug-2008 managed investments SFG->FIG). Reorganised (recast) figures are given in seg.legacy with labels starting 'Recast' and, for the prior year, in py. Inter-segment sales were 'insignificant' under the old structure (mis_interseg / elim null). Segment OI, D&A and restructuring: 10-K segment note (GAAP); no adjusted segment OI published. 2007 lines as originally reported (FY2007 release = FY2007 10-K Note 18). Reorganised 2007 figures: the FY2008 10-K / FY2008 release (incl. Aug-2008 managed-investments move SFG->FIG) are the basis used for 2008 py; an earlier first-cut recast (FY2007 release 'Summary Impact of Reorganization' and FY2007 10-K MD&A) and the FY2009 10-K recast (MA realigned to RD&A/RMS/PS; SF/CF re-split) are also in legacy. Recast segment OI 2007 (MIS 1,010.7 incl. 55.5 intersegment royalty revenue; MA 120.3) is identical in FY2007 10-K MD&A, FY2008 10-K and FY2009 10-K. US/international revenue from 10-K (release showed 1,361.4 / 897.6)."
+ },
+ "ngaap": {
+  "adj_oi_pub": 1181.0,
+  "adj_om_pub": null,
+  "adj_oi_items": [
+   [
+    "Restructuring charge",
+    50.0
+   ]
+  ],
+  "adj_ni_pub": 679.2,
+  "adj_eps_pub": 2.5,
+  "eps_bridge_start": 2.58,
+  "eps_bridge": [
+   [
+    "Benefit from the settlement of a legacy tax matter (per release text)",
+    -0.19
+   ],
+   [
+    "Restructuring charge (per release text)",
+    0.11
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Restructuring charge",
+    50.0,
+    null,
+    "op",
+    "RESTR"
+   ],
+   [
+    "Earnings benefit relating to the resolution of certain legacy tax matters (Interest and other non-operating)",
+    -31.9,
+    null,
+    "nonop",
+    "TAXD"
+   ],
+   [
+    "Income tax benefit related to the resolution of certain legacy tax matters",
+    null,
+    -20.4,
+    "tax",
+    "TAXD"
+   ],
+   [
+    "Income tax impacts related to the restructuring adjustment (computed: published provision adjustment +40.4 less the 20.4 legacy tax benefit exclusion)",
+    null,
+    -20.0,
+    "tax",
+    "TAX"
+   ]
+  ],
+  "tax_items": [
+   [
+    "Income tax benefit related to the resolution of certain legacy tax matters",
+    -20.4
+   ]
+  ],
+  "fcf_pub": null,
+  "occ": {
+   "mco": null,
+   "mis": null,
+   "ma": null
+  },
+  "guidance": {
+   "Moody's overall revenue": "full-year 2008 revenue is expected to decline in the low double-digit percent range. This decline assumes foreign currency translation in 2008 at current exchange rates.",
+   "Operating margin": "Excluding the 2007 restructuring charge, we expect the full-year 2008 operating margin to decline to the mid- to high-forties percent range",
+   "Expenses": "Full-year expenses are expected to be about flat to full year 2007, excluding the restructuring charge",
+   "Diluted EPS": "Earnings per share for 2008 are projected in a range from $2.17 to $2.25.",
+   "Global MIS revenue": "decline in the mid-to high-teens percent range",
+   "U.S. MIS revenue": "decrease in the mid-twenties percent range",
+   "U.S. structured finance": "decline in the low- to mid-forties percent range",
+   "U.S. corporate finance": "decrease in the low-teens percent range",
+   "U.S. financial institutions and PPIF": "grow in the low single-digit percent range",
+   "Non-U.S. MIS revenue": "decrease in the low single-digit percent range",
+   "Moody's Analytics revenue": "growth in the mid-teens percent range (U.S. low-teens; non-U.S. high-teens)",
+   "MA subscriptions": "mid-teens range",
+   "MA consulting": "very strong growth",
+   "MA software": "flat versus 2007"
+  },
+  "notes": "FY2007 release non-GAAP measures exclude: (a) the restructuring charge ($50.0m FY; $47.8m Q4); (b) an earnings benefit of $31.9m relating to the resolution of certain legacy tax matters (non-operating: 17.5 reversal of accrued interest + 14.4 legacy tax in other non-operating); (c) income tax impacts of (a) and exclusion of a $20.4m income tax benefit related to legacy tax matters. Total legacy benefit to NI 52.3 (= CF 'Legacy tax' line). Published: Non-GAAP OI 1,181.0, NI 679.2, basic EPS 2.55, diluted EPS 2.50. Prior-year comparison in the same release: 2006 non-GAAP (excl. building gain and $2.4m legacy tax benefit only) OI 1,098.9, NI 657.4, diluted EPS 2.25. Stock-based compensation no longer excluded from 2007. TAX row computed."
+ },
+ "cf": {
+  "ni_tot": 701.5,
+  "dna": 42.9,
+  "sbc": 90.2,
+  "deferred_tax": -76.4,
+  "cfo": 984.0,
+  "capex": -181.8,
+  "acquisitions": -4.4,
+  "divest": null,
+  "cfi": -124.7,
+  "debt_proceeds": 300.0,
+  "debt_repay": 0.0,
+  "cp_net": 547.4,
+  "buyback": -1738.4,
+  "sbc_tax_withholding": null,
+  "stock_plan_proceeds": 65.9,
+  "dividends": -85.2,
+  "div_nci": null,
+  "cff": -861.5,
+  "fx": 20.4,
+  "net_change": 18.2,
+  "cash_begin": 408.1,
+  "cash_end": 426.3,
+  "ytd_months": 12,
+  "lines_raw": [
+   [
+    "Net income",
+    701.5
+   ],
+   [
+    "Depreciation and amortization",
+    42.9
+   ],
+   [
+    "Stock-based compensation expense",
+    90.2
+   ],
+   [
+    "Non-cash portion of restructuring charge",
+    7.0
+   ],
+   [
+    "Deferred income taxes",
+    -76.4
+   ],
+   [
+    "Excess tax benefits from exercise of stock options",
+    -52.2
+   ],
+   [
+    "Legacy tax",
+    -52.3
+   ],
+   [
+    "Gain on sale of building",
+    0.0
+   ],
+   [
+    "Other",
+    0.0
+   ],
+   [
+    "Accounts receivable",
+    36.7
+   ],
+   [
+    "Other current assets",
+    -58.3
+   ],
+   [
+    "Other assets and prepaid pension costs",
+    15.5
+   ],
+   [
+    "Accounts payable and accrued liabilities",
+    53.9
+   ],
+   [
+    "Restructuring liability",
+    33.1
+   ],
+   [
+    "Deferred revenue",
+    79.2
+   ],
+   [
+    "FIN No. 48 and other non-current tax and related liabilities",
+    91.9
+   ],
+   [
+    "Deferred rent",
+    53.1
+   ],
+   [
+    "Other liabilities",
+    18.2
+   ],
+   [
+    "Net cash provided by operating activities",
+    984.0
+   ],
+   [
+    "Capital additions",
+    -181.8
+   ],
+   [
+    "Purchases of marketable securities",
+    -191.4
+   ],
+   [
+    "Sales and maturities of marketable securities",
+    252.9
+   ],
+   [
+    "Net proceeds from sale of building",
+    0.0
+   ],
+   [
+    "Cash paid for acquisitions and investment in affiliates, net of cash acquired",
+    -4.4
+   ],
+   [
+    "Net cash (used in) provided by investing activities",
+    -124.7
+   ],
+   [
+    "Borrowings under revolving credit facilities",
+    1000.0
+   ],
+   [
+    "Repayments of borrowings under revolving credit facilities",
+    -1000.0
+   ],
+   [
+    "Issuance of commercial paper",
+    6684.1
+   ],
+   [
+    "Repayment of commercial paper",
+    -6136.7
+   ],
+   [
+    "Repayment of notes",
+    0.0
+   ],
+   [
+    "Issuance of notes",
+    300.0
+   ],
+   [
+    "Net proceeds from stock plans",
+    65.9
+   ],
+   [
+    "Excess tax benefits from exercise of stock options",
+    52.2
+   ],
+   [
+    "Cost of treasury shares repurchased",
+    -1738.4
+   ],
+   [
+    "Payment of dividends",
+    -85.2
+   ],
+   [
+    "Payments under capital lease obligations",
+    -2.0
+   ],
+   [
+    "Debt issuance costs and related fees",
+    -1.4
+   ],
+   [
+    "Net cash used in financing activities",
+    -861.5
+   ],
+   [
+    "Effect of exchange rate changes on cash and cash equivalents",
+    20.4
+   ],
+   [
+    "Increase (decrease) in cash and cash equivalents",
+    18.2
+   ],
+   [
+    "Cash and cash equivalents, beginning of the period",
+    408.1
+   ],
+   [
+    "Cash and cash equivalents, end of the period",
+    426.3
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 426.3,
+  "sti": 14.7,
+  "ar": 443.6,
+  "oca": 104.5,
+  "tca": 989.1,
+  "ppe": 214.6,
+  "rou": null,
+  "goodwill": 179.9,
+  "intang": 56.9,
+  "dta": null,
+  "onca": 274.1,
+  "ta": 1714.6,
+  "ap_accr": 371.3,
+  "cp": 551.9,
+  "cltd": null,
+  "lease_cur": null,
+  "defrev": 426.0,
+  "ocl": null,
+  "tcl": 1349.2,
+  "defrev_nc": 121.1,
+  "ltd": 600.0,
+  "dtl": null,
+  "utp": null,
+  "lease_nc": null,
+  "ol": 427.9,
+  "tl": 2498.2,
+  "redeemable_nci": null,
+  "eq": -783.6,
+  "nci": null,
+  "te": -783.6,
+  "tle": 1714.6,
+  "shares_out": 251.4,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    426.3
+   ],
+   [
+    "Short-term investments",
+    14.7
+   ],
+   [
+    "Accounts receivable, net of allowances of $16.2 in 2007 and $14.5 in 2006",
+    443.6
+   ],
+   [
+    "Other current assets",
+    104.5
+   ],
+   [
+    "Total current assets",
+    989.1
+   ],
+   [
+    "Property and equipment, net",
+    214.6
+   ],
+   [
+    "Goodwill",
+    179.9
+   ],
+   [
+    "Intangible assets, net",
+    56.9
+   ],
+   [
+    "Other assets",
+    274.1
+   ],
+   [
+    "Total assets",
+    1714.6
+   ],
+   [
+    "Commercial paper",
+    551.9
+   ],
+   [
+    "Deferred revenue",
+    426.0
+   ],
+   [
+    "Accounts payable and accrued liabilities",
+    371.3
+   ],
+   [
+    "Total current liabilities",
+    1349.2
+   ],
+   [
+    "Non-current portion of deferred revenue",
+    121.1
+   ],
+   [
+    "Notes payable",
+    600.0
+   ],
+   [
+    "Other liabilities",
+    427.9
+   ],
+   [
+    "Total liabilities",
+    2498.2
+   ],
+   [
+    "Common stock",
+    3.4
+   ],
+   [
+    "Capital surplus",
+    387.9
+   ],
+   [
+    "Retained earnings",
+    2661.1
+   ],
+   [
+    "Treasury stock, at cost; 91,495,426 shares",
+    -3851.6
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    15.6
+   ],
+   [
+    "Total shareholders' (deficit) equity",
+    -783.6
+   ],
+   [
+    "Total liabilities and shareholders' equity",
+    1714.6
+   ]
+  ]
+ },
+ "py": {
+  "restated": true,
+  "notes": "Per instructions, py holds the REORGANISED (2008-basis) 2006 figures as recast in the FY2008 10-K Note 18 (latest 2008-basis recast, incl. Aug-2008 managed investments SFG->FIG move), not the FY2007 release's own prior-year column. Recast 2006 segment OI (FY2008 10-K): MIS 1,002.2 (incl. 45.8 intersegment royalty revenue), MA 96.7, Corporate items 160.6 (building gain); MIS total revenue 1,685.6 incl. royalty; eliminations -45.8. The FY2007 release prior-year column (OLD basis, reclassified): Structured finance 880.6, Corporate finance 380.1, Financial institutions and sovereign risk 266.8, Public finance 112.3, Total ratings 1,639.8, Research 254.5, Moody's KMV 142.8 (vs originally reported 886.7 / 396.2 / 266.8 / 85.9 / 1,635.6 / 258.7 / 142.8). Other 2006 recasts: FY2007 release 'Summary Impact of Reorganization' SF 883.6 / CF 377.6 / FI 222.1 / PPIF 156.5 / MA 397.3; FY2007 10-K MD&A SF 883.6 / CF 335.9 / FI 222.1 / PPIF 198.2, MA Subscription 347.5 / Consulting 13.5 / Software 36.3.",
+  "mis_lines": {
+   "Structured finance": 872.6,
+   "Corporate finance": 335.9,
+   "Financial institutions": 233.1,
+   "Public, project and infrastructure finance": 198.2
+  },
+  "ma_lines": {
+   "Subscriptions": 347.5,
+   "Software": 36.3,
+   "Consulting": 13.5
+  },
+  "mis_adj_oi": null,
+  "ma_adj_oi": null
+ },
+ "extra": {
+  "employees": 3600,
+  "acquisitions": [],
+  "divestitures": [],
+  "debt_maturities": [
+   [
+    "2008 (commercial paper, current; net of 0.7 discount)",
+    551.9
+   ],
+   [
+    "2015 (Series 2005-1 Notes, 4.98%)",
+    300.0
+   ],
+   [
+    "2017 (Series 2007-1 Notes, 6.06%)",
+    300.0
+   ]
+  ],
+  "amort_schedule": [
+   [
+    "2008",
+    8.5
+   ],
+   [
+    "2009",
+    7.6
+   ],
+   [
+    "2010",
+    7.6
+   ],
+   [
+    "2011",
+    7.3
+   ],
+   [
+    "2012",
+    7.1
+   ],
+   [
+    "Thereafter",
+    18.8
+   ]
+  ],
+  "notes": "No named acquisitions in 2007 (cash paid for acquisitions and investment in affiliates 4.4; goodwill additions 3.7). Q4-2007 restructuring plan: ~275 positions (~7.5% of workforce), charge 50.0 (45.9 employee termination + 4.1 contract termination). New debt in 2007: $300m 6.06% Series 2007-1 notes (Sep-2007), $1.0bn CP program (Oct-2007), $1.0bn 2007 Facility expiring Sep-2012 (undrawn at Dec-07). Intangible amortization expense 9.7. Subsequent event: Feb-2008 Canary Wharf 17.5-year lease (~$267m base rent). 2007 repurchases 31.3m shares, $1.7bn."
+ },
+ "notes": "10-K wins vs release: release BS table showed total current assets 939.4, non-current 704.3, total assets 1,643.7, current liabilities 1,310.4, other LT liabilities 516.9; the 10-K shows 989.1 / 1,714.6 / 1,349.2 / 427.9 (+121.1 non-current deferred revenue) -> 10-K used. Release US/intl revenue 1,361.4 / 897.6 vs 10-K 1,361.8 / 897.2 -> 10-K used. Shareholders' deficit -783.6 recorded negative. The FY2008 10-K re-presented the 2007 BS (deferred tax assets split out: current 13.1, other current assets 91.4, non-current DTA 166.3, other assets 107.8; UTBs 156.1 and other liabilities 271.8) - as-filed FY2007 presentation kept here. The FY2009 10-K restated 2007 for SFAS 160 (NCI): other non-operating 15.3, non-operating -9.0, EBT 1,122.0, net income 706.8, NCI 5.3, NI attributable 701.5; CFO 988.2, dividends to NCI -4.2, CFF -865.7. This record keeps the as-filed FY2007 10-K (nci null, ni_tot = ni). cp_net 547.4 computed = CP issuance 6,684.1 - repayment 6,136.7 (revolver borrowings 1,000.0 and repayments -1,000.0 net to 0; MD&A: 'borrowed $547.4 million under its commercial paper program'). dps_decl 0.34 per FY2007 10-K (0.08 x3 + 0.10); the FY2008 10-K re-presents 2007 declared by declaration date (-, 0.08, 0.08, 0.18 = 0.34) and paid 0.32. XBRL (FY2009 10-K) 2007: rev 2,259.0, OI 1,131.0, NI 701.5, EPS 2.58 match; CFO 988.2 is the SFAS-160-restated value (as-filed 984.0). All self-checks pass."
+}

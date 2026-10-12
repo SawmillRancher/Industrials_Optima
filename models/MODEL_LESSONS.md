@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -19,7 +19,7 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
-| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
+| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO, MCO |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
@@ -27,6 +27,9 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
 | Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
+| Recurring data / subscription revenue, ARR, issuer-pays ratings | MCO, CSGP |
+| Shareholders' deficit / debt-funded buybacks (book ROIC not meaningful) | MCO |
+| Qualitative guidance only ("high-single-digit" ranges) | MCO, LECO |
 | Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
 | Private company, LBO | R&Y |
@@ -635,6 +638,59 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [basis] Split-adjust per-share history. Leaving EPS as reported (v1) breaks every per-share trend; v2 restated for all four 2-for-1 splits.
   - [bridges] Start the non-GAAP bridge from NI *attributable*, not total NI, or EPS will not tie.
   - [extraction] Harvest the non-GAAP tables directly from 8-K Ex. 99.1 with a dedicated parser. XBRL does not carry them.
+
+## Financial information & ratings
+
+### MCO — Moody's Corporation (MLM template 6-Oct-26 via WWD kit; US GAAP / USD m / calendar FY)
+- **Coverage & basis:** FY2006–12 annual, Q1/13–Q2/26 quarterly, Q3/Q4-26E, 2026E, 2027E–30E. The template's column map fits as is (TSHIFT 0). All periods are as originally reported, with the 10-K winning over the Q4 release for annual columns. CIK 1059556, no predecessor registrant.
+  - 2006–07 used the old segments ("Moody's Investors Service" incl. research, and "Moody's KMV"). Their revenue lines come from the 2008-basis comparatives in the FY2007 / FY2008 documents. Moody's recast 2006–07 three different ways, and the FY2008 version is used.
+  - Releases print whole millions from Q4-19 (tolerance ±1.5).
+  - The 2007–08 releases are plain-text `.txt` exhibits, which the `.htm`-only filings index missed.
+- **Operating build:**
+  - MIS revenue by line of business (CFG / SFG / FIG / PPIF / MIS Other). MA by line on the current structure: Banking / Insurance / KYC / R&I / D&I.
+  - A "not split on the current lines" row carries history before each structure.
+  - MA lines for the year before each re-presentation (2021 for the 2022 DS / R&I / D&I structure; 2023 for the Banking / Insurance / KYC split) come from the following year's restated comparatives. They are used only where the restated lines sum to the originally reported MA revenue.
+  - Legacy MA structures are memo rows: Subscriptions / Software / Consulting; RD&A / RMS / PS; RD&A / ERS / PS.
+  - Segment Adjusted Operating Income = total segment revenue incl. intersegment × margin (the company basis). Σ segments = consolidated, since there is no corporate segment.
+  - MIS charges MA an intersegment royalty, held at % of external revenue.
+- **Bridges & definitions:**
+  - "Adjusted Operating Income" (OI excl. D&A, restructuring and other items; = model Adjusted EBITDA) has been published since Q3-12. For 2006–11 the model applies the same definition; the company's earlier "non-GAAP operating income" was before D&A and excluded the building-sale gain and SBC, and it is kept in cell comments.
+  - Adjusted EPS was published only when items existed until 2016 (restructuring, legacy tax, ICRA gain, litigation). It has been a full framework since Q3-16, with acquired-intangible amortization from Q3-17 and divestiture gains from Q4-25.
+  - 2013–15 bridges are per-share only: item $ = per-share × diluted shares, and adjusted NI = adjusted EPS × diluted shares (commented).
+  - The tax effect is derived as published adjusted NI − NI − pre-tax items.
+  - NOPAT basis: Adjusted EBITA = Adjusted Operating Income − depreciation, before acquired-intangible amortization from XBRL `AmortizationOfIntangibleAssets`.
+- **Data quirks & corrections:** documented exceptions, not plugged:
+  - FY2014 Σ quarters ≠ FY (the Q4-14 KIS realignment into MIS Other).
+  - FY2016 restructuring: the Q4-16 release kept $3.6m inside SG&A.
+  - Q4-16 diluted EPS: (2.22) as printed vs (2.25) in the 10-K.
+  - The 2019 MAKS held-for-sale cash reclassification is carried in the FX line.
+  - Free cash flow is published year-to-date; discrete quarters are derived.
+- **Deals & special blocks:**
+  - PPAs (final, net of cash acquired) for BvD, Reis, RDC, the Q4-20 aggregate, Cortera, RMS and PassFort.
+  - Regulatory Solutions sale (Q2-26): up to $119m of contingent consideration is booked as a Q4/26E gain, matching the guidance EPS bridge ($(1.25) FY vs $(0.72) in Q2).
+  - M&A lever: MA bolt-ons, $200m p.a. at 7x sales.
+- **Calibration & scenarios:**
+  - **Revenue:** guidance is qualitative ("high-single-digit" MIS, "mid-single-digit" MA), read as 9 / 8 / 7% and 6 / 5 / 4% and labelled as a model interpretation. One uniform Δ per segment on the 1H26 y/y line growth is solved to each segment end-point. The HSD MIS guide after +16% in 1H26 implies flat 2H MIS revenue (Δ −16.6 pp).
+  - **Margins:** one segment-margin Δ is solved to adjusted EPS of $16.50–17.00, using a closed-form helper (required 2H AOI = (target adjusted NI − 1H − Σ helper) ÷ (1 − t)).
+  - **Information rows:** adjusted operating margin, segment margins, GAAP EPS and FCF.
+  - **Base FY26E:** adjusted EPS $16.75, GAAP EPS $16.22, adjusted operating margin 52.5%, FCF $2.93bn (guidance $2.7–2.9bn).
+- **Balance sheet, cash & capital:**
+  - 14 senior notes (EUR notes at 30-Jun-26 FX) repaid at maturity and refinanced, plus ~$500m p.a. of incremental notes. Without that, the leverage-target buyback plug drew commercial paper above the $1.25bn backstop by 2029.
+  - Commercial paper to a $1.5bn minimum cash balance, with a headroom memo.
+  - Buybacks plug to net debt / Adjusted Operating Income of 1.50 / 1.25 / 1.00x (assumption: Moody's gives no numeric net-leverage target). The 2026E buyback row covers 2H only (guidance "up to $3.0bn", 1H $2.165bn).
+  - Shareholders' deficit in 2007–11 and 2014–17, so book ROIC is n/m where IC < 25% of revenue, and the chart shows FCF conversion instead.
+- **Valuation:**
+  - $470.00 per the user (12-Oct-26); cross-check: June-26 average repurchase price $450.64 (10-Q Item 2).
+  - WACC 9.3% (market inputs are assumptions); the DCF excludes 2026E UFCF because net debt is taken at YE2026E. Implied price ~$381; Mauboussin ~$440.
+  - P/E 31 / 35 / 24x on 2028E–30E adjusted EPS. The template's Base / Bull panels lacked a 2028E P/E, so their implied-EV cells read zero; the rows were added.
+- **Reusable lessons:**
+  - [calibration] When guidance is qualitative ("high-single-digit"), state the numeric reading per scenario in the outlook note. Check what it implies for the remaining quarters and flag a discontinuity rather than overriding the guide.
+  - [basis] Take restated comparatives for a line re-presentation only when the restated lines sum to the originally reported segment total. Otherwise the recast also moved revenue between segments, and the segment basis would be mixed.
+  - [sources] Some 2007–08 filers attached press releases as `.txt` exhibits; index every Ex. 99 document type, not just `.htm`. Pre-announcement Item 2.02 8-Ks (e.g. Jan-2011, Jan-2017) are short; pick the largest Ex. 99 in the 75-day window as the earnings release.
+  - [bridges] When a company introduces an "adjusted operating income before D&A" framework, apply it back to the start of history as a labelled model definition, and keep the older, differently defined non-GAAP figures in comments.
+  - [valuation] For companies with a shareholders' deficit after debt-funded buybacks, show book ROIC as n/m below an invested-capital threshold. Chart a measure that is always defined (FCF conversion), because `#N/A` cells now fail the 0-error gate.
+  - [QA] The MLM template's Bull-Base-Bear Base and Bull panels have no 2028E P/E (only Bear does), so F47:F50 / R47:R50 read zero. Add the 2028E P/E rows or clear the block.
+  - [tooling] Parallel extraction agents that share one scripts directory overwrite each other's files. Give each agent its own subdirectory.
 
 ## Consumer & luxury (IFRS, non-USD)
 
