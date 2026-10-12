@@ -1,0 +1,203 @@
+{
+ "is": {
+  "rev": 2654.486,
+  "cost_rev": 1251.916,
+  "bill": 812.304,
+  "ga": 314.001,
+  "da": 41.847,
+  "tot_costs": 2420.068,
+  "oi": 234.418,
+  "int_exp": 35.474,
+  "oth": 1.924,
+  "ebt": 200.868,
+  "tax": 39.48,
+  "ni": 161.388,
+  "nci": 0.0,
+  "ni_common": 161.388,
+  "eps_b": 1.22,
+  "eps_d": 1.22,
+  "sh_b": 131.031979,
+  "sh_d": 131.530633,
+  "earn_dil": 160.149
+ },
+ "bs": {
+  "cash": 209.64,
+  "ar": 2099.966,
+  "tca": 2407.756,
+  "ppe": 183.316,
+  "rou": 183.127,
+  "intang": 657.78,
+  "gw": 2343.789,
+  "ta": 6766.317,
+  "cltd": 116.25,
+  "ap": 1391.029,
+  "acc_comp": 372.506,
+  "tcl": 1992.455,
+  "ltd": 2761.333,
+  "lease_lt": 195.473,
+  "tl": 5749.246,
+  "apic": 805.24,
+  "re": 2150.361,
+  "aoci": 32.691,
+  "eq": 1017.071,
+  "teq": 1017.071,
+  "tle": 6766.317
+ },
+ "cf": {
+  "ni": 161.388,
+  "da": 41.847,
+  "sbc": 17.685,
+  "cfo": -71.532,
+  "capex": -10.488,
+  "cfi": -15.054,
+  "iss": 6.925,
+  "opt": 11.176,
+  "bb": -128.39,
+  "div": -63.034,
+  "cff": -108.636,
+  "net": -195.222,
+  "beg": 404.862,
+  "end": 209.64,
+  "ytd_months": 3
+ },
+ "ngaap": {
+  "rev_xb_pub": 1842.182,
+  "ebitda_bridge": {
+   "start": 161.388,
+   "items": [
+    [
+     "Income tax expense",
+     39.48
+    ],
+    [
+     "Interest and other, net",
+     33.55
+    ],
+    [
+     "Depreciation and amortization",
+     41.847
+    ]
+   ],
+   "total": 276.265
+  },
+  "ebitda_pub": 276.265,
+  "adj_ebitda": {
+   "start": 276.265,
+   "items": [
+    [
+     "Acquisition and divestiture costs",
+     3.268,
+     "ACQ"
+    ],
+    [
+     "Legal matter reserve",
+     27.453,
+     "LEGAL"
+    ]
+   ],
+   "total": 306.986
+  },
+  "adj_ebitda_pub": 306.986,
+  "adj_oi": {
+   "start": 234.418,
+   "items": [
+    [
+     "Acquisition and divestiture costs",
+     3.268,
+     "ACQ"
+    ],
+    [
+     "Significant acquisition amortization",
+     13.108,
+     "AMORT"
+    ],
+    [
+     "Legal matter reserve",
+     27.453,
+     "LEGAL"
+    ]
+   ],
+   "total": 278.247
+  },
+  "adj_ni": {
+   "start": 161.388,
+   "items": [
+    [
+     "Acquisition and divestiture costs",
+     3.268,
+     "ACQ"
+    ],
+    [
+     "Significant acquisition amortization",
+     13.108,
+     "AMORT"
+    ],
+    [
+     "Legal matter reserve",
+     27.453,
+     "LEGAL"
+    ],
+    [
+     "Amortization or write-off of debt issuance costs and debt discount",
+     0.782,
+     "DEBT"
+    ],
+    [
+     "Adjustments for tax effect",
+     -12.942,
+     "TAX"
+    ]
+   ],
+   "total": 193.05700000000002
+  },
+  "adj_ni_pub": 193.05700000000002,
+  "adj_sh": 131.530633,
+  "adj_eps_pub": 1.47,
+  "fcf_pub": -82.02,
+  "twoclass_note": 1.2
+ },
+ "op": {
+  "bl_funded": 4903.0,
+  "bl_unfunded": 9045.0,
+  "bl_options": 17329.0,
+  "bl_total": 31277.0,
+  "hc_total": 32574.0,
+  "hc_staff": 29747.0,
+  "b2b_q": 1.03,
+  "ct_cr": 0.55,
+  "ct_tm": 0.24,
+  "ct_fp": 0.21
+ },
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1443646/000144364623000173/bah063023exhibit991.htm",
+  "release_date": "2023-07-28",
+  "cust": "https://www.sec.gov/Archives/edgar/data/1443646/000144364623000174/bah-20230630.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1443646/000144364623000174/bah-20230630.htm"
+ },
+ "units": "USD thousands (converted to millions)",
+ "period": "Q1-24",
+ "fy": 2024,
+ "q": 1,
+ "notes": [
+  "Weighted shares and earnings for diluted EPS (two-class method): XBRL 10-Q."
+ ],
+ "x": {
+  "x_rev": 2654.486,
+  "x_oi": 234.418,
+  "x_ni": 161.388,
+  "x_eps_d": 1.22,
+  "x_cfo": -71.532,
+  "x_ta": 6766.317,
+  "x_sbc": 17.685,
+  "x_dps": 0.47,
+  "x_sh_out": 131.11637
+ },
+ "cust": {
+  "def": 1224.317,
+  "intel": 476.497,
+  "civ": 904.96,
+  "com": 48.712,
+  "ns": 1700.814,
+  "cc": 953.672
+ }
+}

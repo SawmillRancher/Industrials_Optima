@@ -1,0 +1,180 @@
+{
+ "is": {
+  "rev": 5405.738,
+  "cost_rev": 2580.026,
+  "bill": 1513.083,
+  "ga": 806.509,
+  "da": 61.536,
+  "tot_costs": 4961.154,
+  "oi": 444.584,
+  "int_exp": 70.815,
+  "oth": 5.693,
+  "ebt": 379.462,
+  "tax": 85.368,
+  "ni": 294.094,
+  "eps_b": 1.98,
+  "eps_d": 1.94,
+  "sh_b": 146.494407,
+  "sh_d": 149.719137,
+  "earn_dil": 290.596
+ },
+ "bs": {
+  "cash": 187.529,
+  "ar": 892.289,
+  "tca": 1189.771,
+  "ppe": 130.169,
+  "intang": 220.658,
+  "gw": 1361.913,
+  "ta": 3010.171,
+  "cltd": 112.813,
+  "ap": 484.769,
+  "acc_comp": 241.367,
+  "tcl": 939.913,
+  "ltd": 1484.448,
+  "tl": 2601.683,
+  "apic": 243.475,
+  "re": 318.537,
+  "aoci": -19.613,
+  "eq": 408.488,
+  "teq": 408.488,
+  "tle": 3010.171
+ },
+ "cf": {
+  "ni": 294.094,
+  "da": 61.536,
+  "sbc": 24.992,
+  "deftax": 3.549,
+  "cfo": 249.234,
+  "capex": -66.635,
+  "acq": -51.118,
+  "cfi": -117.753,
+  "iss": 5.977,
+  "opt": 7.962,
+  "bb": -63.152,
+  "div": -80.015,
+  "cff": -151.169,
+  "net": -19.688,
+  "beg": 207.217,
+  "end": 187.529,
+  "ytd_months": 12
+ },
+ "ngaap": {
+  "rev_xb_pub": null,
+  "ebitda_bridge": {
+   "start": 294.094,
+   "items": [
+    [
+     "Income tax expense",
+     85.368
+    ],
+    [
+     "Interest and other, net",
+     65.122
+    ],
+    [
+     "Depreciation and amortization",
+     61.536
+    ]
+   ],
+   "total": 506.12
+  },
+  "ebitda_pub": 506.12,
+  "adj_ebitda": {
+   "start": 506.12,
+   "items": [
+    [
+     "Transaction expenses",
+     0.0,
+     "ACQ"
+    ]
+   ],
+   "total": 506.12
+  },
+  "adj_ebitda_pub": 506.12,
+  "adj_oi": {
+   "start": 444.584,
+   "items": [
+    [
+     "Amortization of intangible assets",
+     4.225,
+     "AMORT"
+    ],
+    [
+     "Transaction expenses",
+     0.0,
+     "ACQ"
+    ]
+   ],
+   "total": 448.809
+  },
+  "adj_ni": {
+   "start": 294.094,
+   "items": [
+    [
+     "Amortization of intangible assets",
+     4.225,
+     "AMORT"
+    ],
+    [
+     "Transaction expenses",
+     0.0,
+     "ACQ"
+    ],
+    [
+     "Release of income tax reserves",
+     -53.301,
+     "TAXD"
+    ],
+    [
+     "Amortization or write-off of debt issuance costs and write-off of original issue discount",
+     5.201,
+     "DEBT"
+    ],
+    [
+     "Adjustments for tax effect",
+     -3.77,
+     "TAX"
+    ]
+   ],
+   "total": 246.449
+  },
+  "adj_ni_pub": 246.449,
+  "adj_sh": 149.719137,
+  "adj_eps_pub": 1.65,
+  "fcf_pub": 182.599
+ },
+ "op": {
+  "bl_funded": 2673.0,
+  "bl_unfunded": 2546.0,
+  "bl_options": 6595.0,
+  "bl_total": 11814.0,
+  "hc_total": 22583.0,
+  "hc_staff": 20329.0,
+  "b2b_q": 0.82,
+  "ct_cr": 0.51,
+  "ct_tm": 0.26,
+  "ct_fp": 0.23
+ },
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1443646/000144364616000135/bah033116exhibit991.htm",
+  "release_date": "2016-05-18",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1443646/000144364616000138/bah-20160331x10k.htm"
+ },
+ "units": "USD thousands (converted to millions)",
+ "period": "2016",
+ "fy": 2016,
+ "q": null,
+ "notes": [
+  "Weighted shares and earnings for diluted EPS (two-class method): XBRL 10-K."
+ ],
+ "x": {
+  "x_rev": 5405.738,
+  "x_oi": 444.584,
+  "x_ni": 294.094,
+  "x_eps_d": 1.94,
+  "x_cfo": 249.234,
+  "x_ta": 3010.171,
+  "x_sbc": 24.992,
+  "x_deftax": 3.549
+ }
+}

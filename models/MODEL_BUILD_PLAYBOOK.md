@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, BAH). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -275,7 +275,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -290,6 +290,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
+- **Release format changes mid-history** (HTML tables → PDF-rendered single text block): tokenise every release into (label, numbers) entries per exhibit section and match labels by their ending, so one parser reads both. Treat a dash between words as part of the label, and don't read small negatives such as "(6)" as footnote markers. [BAH]
+- **XBRL company facts can omit a period entirely.** Fall back to the following year's comparative and say so in `notes`. [BAH]
 
 ### 5.2 Basis
 - **Segment re-presentation with a short recast history:** model an aggregate the re-presentation doesn't change and keep the old split as memo. Prove where an absorbed segment went using the restated comparative Δ. [RBA, TFI]
@@ -339,6 +341,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Known, explained source differences** (a restated starting NI, a release issued before a 10-Q impairment) can stay as documented check exceptions rather than plugs. [WCN]
 - **Long-term target base years** stay "as first published", with a note that definitions have since changed. [XPO]
 - **Two-class / participating preferred:** the adjusted-NI bridge needs an "allocation to preferred" line, and the preferred is deducted in the EV bridge. [RBA]
+- **Two-class EPS with participating restricted stock:** take earnings for diluted EPS from XBRL `UndistributedEarningsDiluted` (Q4 = FY − 9M) so diluted EPS ties exactly. Forecast the allocation as a % of NI, and check whether the company's adjusted EPS applies the two-class method. [BAH]
+- **Bridge start line that switches between consolidated NI and NI attributable:** carry an explicit NCI start-line row, checked to NCI income, rather than a plug. [BAH]
 
 ### 5.5 Calibration
 - **Order of operations.** Apply every explicitly guided driver first, then solve one uniform Δ on the least-guided driver. Use a "sensitivity to +1.00" helper row for a closed-form linear solve, with no goal-seek and no circularity. [VMC, MLM, TDY, WAB, DHR, LOAR, CSGP]
@@ -351,6 +355,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Segment ranges that don't sum to the total:** drive segments from their own end-points and close to the total with one uniform Δ. Allocate aggregate guidance by 1H mix or prior-year quarter × 1H momentum. [CW, HII, RBA]
 - **Guided cost items** (D&A, interest, SBC) for the remaining halves = (FY mid − 1H) ÷ 2. Add post-guidance financing events (new notes) on top. Take point estimates from the company's own outlook reconciliation rather than guessing. [CLH, XPO, WAB, VMC, MLM, TDY]
 - **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
+- **Deals signed after guidance and closed after a reiteration** that says nothing about them: treat the guidance as excluding the deal, say so in the outlook note, and add the deal on top. When an acquisition in the last actual quarter brings accrued liabilities into working capital, calibrate FCF guidance through that line rather than unwinding it to year-end ratios. [BAH, KRMN]
 - **Apply the Δ only to genuinely uncommitted lines** (retail rather than order-book wholesale). Constant-FX guidance needs a separate FX-translation Δ for the reporting-currency figure. EPS guidance made stale by post-guidance buybacks becomes an information row. [BC, ONON, BWXT]
 - **No guidance:** leave targets as optional blank inputs; don't invent them. [HEI, BC]
 

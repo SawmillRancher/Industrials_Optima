@@ -1,0 +1,230 @@
+{
+ "is": {
+  "rev": 2277.074,
+  "cost_rev": 1043.474,
+  "bill": 710.526,
+  "ga": 422.388,
+  "da": 42.046,
+  "tot_costs": 2218.434,
+  "oi": 58.64,
+  "int_exp": 32.031,
+  "oth": 14.619,
+  "ebt": 41.228,
+  "tax": 10.539,
+  "ni": 30.689,
+  "ni_common": 30.997,
+  "eps_b": 0.23,
+  "eps_d": 0.23,
+  "sh_b": 132.224802,
+  "sh_d": 132.759877,
+  "earn_dil": 30.526
+ },
+ "bs": {
+  "cash": 370.939,
+  "ar": 1807.776,
+  "tca": 2285.366,
+  "ppe": 192.306,
+  "rou": 191.04,
+  "intang": 714.861,
+  "gw": 2337.584,
+  "ta": 6345.729,
+  "cltd": 41.25,
+  "ap": 986.58,
+  "acc_comp": 430.135,
+  "tcl": 1582.719,
+  "ltd": 2780.461,
+  "lease_lt": 199.439,
+  "tl": 5140.05,
+  "apic": 733.022,
+  "re": 2182.615,
+  "aoci": 22.079,
+  "eq": 1205.679,
+  "nci_bs": 0.0,
+  "teq": 1205.679,
+  "tle": 6345.729
+ },
+ "cf": {
+  "ni": 339.563,
+  "da": 121.2,
+  "sbc": 50.992,
+  "cfo": 365.674,
+  "capex": -51.398,
+  "acq": -440.069,
+  "cfi": -440.058,
+  "iss": 18.003,
+  "opt": 10.705,
+  "bb": -114.075,
+  "div": -173.216,
+  "cff": -250.587,
+  "net": -324.971,
+  "beg": 695.91,
+  "end": 370.939,
+  "ytd_months": 9
+ },
+ "ngaap": {
+  "rev_xb_pub": 1566.548,
+  "ebitda_bridge": {
+   "start": 30.997,
+   "items": [
+    [
+     "Income tax expense",
+     10.539
+    ],
+    [
+     "Interest and other, net",
+     17.412
+    ],
+    [
+     "Depreciation and amortization",
+     42.046
+    ]
+   ],
+   "total": 100.994
+  },
+  "ebitda_pub": 100.994,
+  "adj_ebitda": {
+   "start": 100.994,
+   "items": [
+    [
+     "Acquisition and divestiture costs",
+     19.096,
+     "ACQ"
+    ],
+    [
+     "Financing transaction costs",
+     0.0,
+     "DEBT"
+    ],
+    [
+     "Legal matter reserve",
+     124.0,
+     "LEGAL"
+    ]
+   ],
+   "total": 244.09
+  },
+  "adj_ebitda_pub": 244.09,
+  "adj_oi": {
+   "start": 58.64,
+   "items": [
+    [
+     "Acquisition and divestiture costs",
+     19.096,
+     "ACQ"
+    ],
+    [
+     "Financing transaction costs",
+     0.0,
+     "DEBT"
+    ],
+    [
+     "Significant acquisition amortization",
+     14.101,
+     "AMORT"
+    ],
+    [
+     "Legal matter reserve",
+     124.0,
+     "LEGAL"
+    ]
+   ],
+   "total": 215.83700000000002
+  },
+  "adj_ni": {
+   "start": 30.997,
+   "items": [
+    [
+     "Acquisition and divestiture costs",
+     19.096,
+     "ACQ"
+    ],
+    [
+     "Financing transaction costs",
+     0.0,
+     "DEBT"
+    ],
+    [
+     "Significant acquisition amortization",
+     14.101,
+     "AMORT"
+    ],
+    [
+     "Legal matter reserve",
+     124.0,
+     "LEGAL"
+    ],
+    [
+     "Gain associated with equity method investment activity",
+     0.0,
+     "GAIN"
+    ],
+    [
+     "Gains associated with divestitures or deconsolidation",
+     -13.472,
+     "GAIN"
+    ],
+    [
+     "Amortization and write-off of debt issuance costs and debt discount",
+     0.78,
+     "DEBT"
+    ],
+    [
+     "Adjustments for tax effect",
+     -33.02,
+     "TAX"
+    ]
+   ],
+   "total": 142.482
+  },
+  "adj_ni_pub": 142.482,
+  "adj_sh": 132.759877,
+  "adj_eps_pub": 1.07,
+  "fcf_pub": 116.918,
+  "twoclass_note": 0.5
+ },
+ "op": {
+  "bl_funded": 4544.0,
+  "bl_unfunded": 10131.0,
+  "bl_options": 15373.0,
+  "bl_total": 30048.0,
+  "hc_total": 31130.0,
+  "hc_staff": 28269.0,
+  "b2b_q": 0.09,
+  "b2b_ytd": 1.07,
+  "ct_cr": 0.53,
+  "ct_tm": 0.25,
+  "ct_fp": 0.22
+ },
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1443646/000144364623000020/bah123122exhibit991_fina.htm",
+  "release_date": "2023-01-27",
+  "cust": "https://www.sec.gov/Archives/edgar/data/1443646/000144364623000021/bah-20221231.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1443646/000144364623000021/bah-20221231.htm"
+ },
+ "units": "USD thousands (converted to millions)",
+ "period": "Q3-23",
+ "fy": 2023,
+ "q": 3,
+ "notes": [
+  "Weighted shares and earnings for diluted EPS (two-class method): XBRL 10-Q."
+ ],
+ "x": {
+  "x_rev": 2277.074,
+  "x_oi": 58.64,
+  "x_ni": 30.997,
+  "x_eps_d": 0.23,
+  "x_cfo": 365.674,
+  "x_ta": 6345.729,
+  "x_sbc": 50.992,
+  "x_dps": 0.43,
+  "x_sh_out": 132.355835
+ },
+ "cust": {
+  "def": 1043.535,
+  "intel": 419.22700000000003,
+  "civ": 758.4730000000001,
+  "com": 55.839,
+  "ns": 1462.762,
+  "cc": 814.312
+ }
+}

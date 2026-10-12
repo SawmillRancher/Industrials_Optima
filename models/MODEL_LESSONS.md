@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -13,11 +13,11 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Situation | Read |
 |---|---|
 | Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
-| Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
+| Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER, BAH (customer type) |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
-| Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
+| Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB, BAH (government services) |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
-| Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
+| Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO, BAH (Ultra, revenue undisclosed) |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
@@ -25,9 +25,9 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
-| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
+| Non-December fiscal year / 52–53-week years | STE (Mar), BAH (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
-| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
+| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), BAH (two-class EPS, participating restricted stock), ONON, HEI (share classes) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
 | Private company, LBO | R&Y |
 
@@ -210,6 +210,54 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [bridges] Store the company's line-item wording and amounts per period as a comment on the total-adjustments cell. Category rows can then stay few while the audit trail is kept.
   - [bridges] Narrative-only per-share bridges: input $/share as published (split-adjusted) and convert at diluted shares in a separately labelled row.
   - [build] Without published orders, derive implied orders from the backlog roll-forward and label what it includes (FX, acquired backlog).
+
+## Government & technology services
+
+### BAH — Booz Allen Hamilton Holding Corporation (MLM template via STE kit; US GAAP / USD m / FY ends 31-Mar)
+- **Coverage & basis:**
+  - FY2012–21 annual, Q1/22–Q1/27 quarterly, Q2–Q4/27E, FY28E–31E. All periods are as originally reported in their own releases (CIK 1443646).
+  - The releases switched from HTML tables (to FY2019) to a PDF-rendered single text block (from Q1 FY2020), and from USD thousands to USD millions in Q4 FY2025.
+  - One reportable segment. Revenue by customer type from the 10-Q / 10-K revenue note: Defense / Intelligence / Civil / Global Commercial (FY2017–24); Commercial inside Civil from FY2025; National Security / Civil & Commercial from Q1 FY2027. FY2017–18 come from the FY2019 10-K, which is on the ASC 606 full-retrospective basis, so a derived "outside the customer split" row ties the build.
+  - Q4 FY2025 moved interest income into "interest expense, net", which breaks Σ quarters = year for FY2025.
+- **Operating build:**
+  - National Security and Civil & Commercial revenue × a legacy adjusted EBITDA margin; G&A is the implied line.
+  - Backlog roll-forward on the company book-to-bill definition (net bookings = Δ backlog + revenue).
+  - Headcount and revenue ex-billables per customer-staff head; contract-type mix as memo.
+  - Billable expenses (subcontractor pass-through) and cost of revenue are % of revenue.
+- **Bridges & definitions:**
+  - (1) Adjusted operating income, published FY2012 – Q3 FY2025, then a flagged model continuation.
+  - (2) NI → EBITDA → adjusted EBITDA.
+  - (3) NI → adjusted NI → adjusted EPS.
+  - Each is rebuilt from its own release table; the operating items are checked to agree across the three.
+  - Items: Carlyle-acquisition option expense and intangible amortization (to FY2015 / FY2017); acquisition / "other corporate" costs; financing transaction costs (in G&A); the FY2023–24 $377m legal reserve; the Q2 FY25 claimed-costs release ($113m, booked in revenue) and insurance recoveries ($115m); significant acquisition amortization (from FY2022).
+  - Assumed tax rate on items: 40% to Q2 FY2018, 36.5% Q3–Q4 FY2018, 26% from FY2019 (release footnotes).
+  - FY2022 bridges start from consolidated NI (other periods from NI attributable), so an explicit NCI start-line row carries the $0.1–0.2m difference.
+  - Diluted EPS is two-class: earnings for diluted EPS come from XBRL `UndistributedEarningsDiluted` (Q4 = FY − 9M), with the allocation % as a forecast driver. Adjusted EPS uses no two-class adjustment.
+- **Data quirks & corrections:**
+  - In the millions-format releases a small negative "(6)" looks like a footnote marker "(1)". Footnote handling is restricted to the labels that carry numbered footnotes (backlog, contract type).
+  - "Cash — beginning of period" has a dash inside the label.
+  - The release sign of the NCI line flips between years; NCI = NI − NI attributable.
+  - Q1 FY22 weighted shares are missing from the XBRL company facts (later 10-Q comparative used; basic left blank).
+  - Q4 diluted shares come from the release; Q4 basic = 4 × FY − ΣQ1–Q3.
+  - 1,084 data checks pass.
+- **Deals & special blocks:**
+  - Defy Security ($235m, 6-Apr-2026) is inside Q1/27 actuals and its provisional PPA is in the schedules.
+  - Ultra I&C Mission Solutions ($720m) closed 24-Aug-2026 (38 of 91 days in Q2/27). Its revenue is undisclosed: the $180m run-rate (~4x EV/sales), the 25% margin ("well above 20%") and the PPA (40% intangibles over 10 years) are flagged assumptions to replace with the Q2 FY27 10-Q.
+  - $1.2bn of notes (Aug-2026) fund Ultra and repay the $714m Term Loan A-1 (424B2 use of proceeds).
+- **Calibration & scenarios:**
+  - FY27 guidance (22-May-2026) was reiterated unchanged on 24-Jul-2026, after the Ultra agreement and before the close, with no statement on Ultra; it is treated as excluding Ultra.
+  - A uniform growth Δ on both customer types solves legacy revenue to $11.2/11.45/11.7bn, a uniform margin Δ solves legacy adjusted EBITDA to $1,240/1,265/1,290m, and the FY2027E payables & accrued % (closed form) solves FCF to $825/875/925m.
+  - The Q1/27 payables include $172m of accrued expenses acquired with Defy, so holding the year-end ratio would have unwound them.
+  - Adjusted EPS (Base $6.40 incl. Ultra vs guided $6.00–6.35) and diluted shares are information rows.
+- **Balance sheet, cash & capital:** Term Loan A-2 amortization (0.625% then 1.25% a quarter); the 2028 / 2029 / 2030 notes and the A-2 balloon are refinanced; the revolver runs to a $400m minimum cash. Leverage-target buybacks from 2028E (3.25x / 3.0x / 2.5x; assumption, no target in the filings). DPS = $0.59 a quarter, +6%.
+- **Valuation:** $75.00 user-provided (12-Oct-2026). NOPAT = (adjusted EBITA − cash items adjusted out) × (1 − 22.5%), plus depreciation & other amortization; SBC is already expensed. Valuation net debt is at the FY2027E year end (after Ultra), so the FY2027E UFCF column is kept but its PV is zeroed. Beta 1.0 reflects Civil policy risk. Base DCF $131 per share.
+- **Reusable lessons:**
+  - [extraction] When releases change format mid-history (HTML tables → PDF-rendered text), tokenise both into (label, numbers) entries by exhibit section and look up labels by their ending. Watch dashes inside labels and small negatives that look like footnote markers.
+  - [bridges] For two-class EPS, take "earnings for diluted EPS" from XBRL `UndistributedEarningsDiluted` (Q4 = FY − 9M) and forecast the allocation as a % of NI. Check whether the company's adjusted EPS applies the two-class method; BAH's does not.
+  - [bridges] When the company bridge switches its start line between consolidated NI and NI attributable, carry an explicit NCI start-line row and check it equals NCI income, rather than a plug.
+  - [calibration] Guidance reiterated after a deal is signed but before it closes, with no statement on the deal, is treated as excluding it. Say so in the outlook note and add the deal on top.
+  - [calibration] When an acquisition in the last actual quarter brings accrued liabilities into working capital, year-end ratios will unwind them. Calibrate the FCF guidance through that line instead.
+  - [sources] XBRL company facts can omit a quarter entirely, not just tag it wrongly. Fall back to the following year's comparative and note it.
 
 ## Construction materials
 

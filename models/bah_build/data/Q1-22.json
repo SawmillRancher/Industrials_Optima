@@ -1,0 +1,222 @@
+{
+ "is": {
+  "rev": 1989.066,
+  "cost_rev": 962.719,
+  "bill": 555.545,
+  "ga": 301.8,
+  "da": 27.745,
+  "tot_costs": 1847.809,
+  "oi": 141.257,
+  "int_exp": 21.27,
+  "oth": -0.533,
+  "ebt": 119.454,
+  "tax": 27.352,
+  "ni": 92.102,
+  "eps_b": 0.68,
+  "eps_d": 0.67,
+  "sh_b": null,
+  "sh_d": 136.392343,
+  "earn_dil": 91.622
+ },
+ "bs": {
+  "cash": 621.862,
+  "ar": 1672.772,
+  "tca": 2476.815,
+  "ppe": 195.93,
+  "rou": 237.923,
+  "intang": 609.762,
+  "gw": 1925.151,
+  "ta": 5984.942,
+  "cltd": 77.865,
+  "ap": 823.178,
+  "acc_comp": 337.379,
+  "tcl": 1370.913,
+  "ltd": 2770.791,
+  "lease_lt": 259.707,
+  "tl": 4961.409,
+  "apic": 577.228,
+  "re": 1799.029,
+  "aoci": -26.758,
+  "eq": 1023.533,
+  "teq": 1023.533,
+  "tle": 5984.942
+ },
+ "cf": {
+  "ni": 92.102,
+  "da": 27.745,
+  "sbc": 12.444,
+  "cfo": -10.662,
+  "capex": -9.008,
+  "acq": -665.583,
+  "cfi": -676.591,
+  "iss": 5.758,
+  "opt": 1.794,
+  "bb": -123.805,
+  "div": -51.641,
+  "cff": 318.16,
+  "net": -369.093,
+  "beg": 990.955,
+  "end": 621.862,
+  "ytd_months": 3
+ },
+ "ngaap": {
+  "rev_xb_pub": 1433.521,
+  "ebitda_bridge": {
+   "start": 92.102,
+   "items": [
+    [
+     "Income tax expense",
+     27.352
+    ],
+    [
+     "Interest and other, net",
+     21.803
+    ],
+    [
+     "Depreciation and amortization",
+     27.745
+    ]
+   ],
+   "total": 169.002
+  },
+  "ebitda_pub": 169.002,
+  "adj_ebitda": {
+   "start": 169.002,
+   "items": [
+    [
+     "Acquisition costs",
+     66.789,
+     "ACQ"
+    ],
+    [
+     "Financing transaction costs",
+     2.348,
+     "DEBT"
+    ],
+    [
+     "COVID-19 supplemental employee benefits",
+     0.0,
+     "COVID"
+    ]
+   ],
+   "total": 238.139
+  },
+  "adj_ebitda_pub": 238.139,
+  "adj_oi": {
+   "start": 141.257,
+   "items": [
+    [
+     "Acquisition costs",
+     66.789,
+     "ACQ"
+    ],
+    [
+     "Financing transaction costs",
+     2.348,
+     "DEBT"
+    ],
+    [
+     "COVID-19 supplemental employee benefits",
+     0.0,
+     "COVID"
+    ],
+    [
+     "Significant acquisition amortization",
+     2.658,
+     "AMORT"
+    ]
+   ],
+   "total": 213.052
+  },
+  "adj_ni": {
+   "start": 92.102,
+   "items": [
+    [
+     "Acquisition costs",
+     66.789,
+     "ACQ"
+    ],
+    [
+     "Financing transaction costs",
+     2.348,
+     "DEBT"
+    ],
+    [
+     "COVID-19 supplemental employee benefits",
+     0.0,
+     "COVID"
+    ],
+    [
+     "Significant acquisition amortization",
+     2.658,
+     "AMORT"
+    ],
+    [
+     "Release of income tax reserves",
+     0.0,
+     "TAXD"
+    ],
+    [
+     "Amortization and write-off of debt issuance costs and debt discount",
+     0.887,
+     "DEBT"
+    ],
+    [
+     "Adjustments for tax effect",
+     -18.897,
+     "TAX"
+    ]
+   ],
+   "total": 145.887
+  },
+  "adj_ni_pub": 145.887,
+  "adj_sh": 136.392343,
+  "adj_eps_pub": 1.07,
+  "fcf_pub": -19.67,
+  "twoclass_note": 0.5
+ },
+ "op": {
+  "bl_funded": 3493.0,
+  "bl_unfunded": 9029.0,
+  "bl_options": 14295.0,
+  "bl_total": 26817.0,
+  "hc_total": 28558.0,
+  "hc_staff": 25466.0,
+  "b2b_q": 1.3,
+  "ct_cr": 0.56,
+  "ct_tm": 0.25,
+  "ct_fp": 0.19
+ },
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1443646/000144364621000130/bah063021exhibit991.htm",
+  "release_date": "2021-07-30",
+  "cust": "https://www.sec.gov/Archives/edgar/data/1443646/000144364621000131/bah-20210630.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1443646/000144364621000131/bah-20210630.htm"
+ },
+ "units": "USD thousands (converted to millions)",
+ "period": "Q1-22",
+ "fy": 2022,
+ "q": 1,
+ "notes": [
+  "Weighted shares and earnings for diluted EPS (two-class method): XBRL (not in the company facts as first filed; prior-year comparative of the following year's 10-Q)."
+ ],
+ "x": {
+  "x_rev": 1989.066,
+  "x_oi": 141.257,
+  "x_ni": 92.102,
+  "x_eps_d": 0.67,
+  "x_cfo": -10.662,
+  "x_ta": 5984.942,
+  "x_sbc": 12.444,
+  "x_dps": 0.37,
+  "x_sh_out": 135.429357
+ },
+ "cust": {
+  "def": 975.926,
+  "intel": 376.75600000000003,
+  "civ": 592.896,
+  "com": 43.488,
+  "ns": 1352.682,
+  "cc": 636.384
+ }
+}

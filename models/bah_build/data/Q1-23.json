@@ -1,0 +1,204 @@
+{
+ "is": {
+  "rev": 2249.6,
+  "cost_rev": 1074.973,
+  "bill": 674.266,
+  "ga": 253.064,
+  "da": 40.102,
+  "tot_costs": 2042.405,
+  "oi": 207.195,
+  "int_exp": 24.655,
+  "oth": -2.958,
+  "ebt": 179.582,
+  "tax": 41.489,
+  "ni": 138.093,
+  "ni_common": 138.284,
+  "eps_b": 1.04,
+  "eps_d": 1.03,
+  "sh_b": 132.371487,
+  "sh_d": 133.011088,
+  "earn_dil": 137.372
+ },
+ "bs": {
+  "cash": 497.828,
+  "ar": 1828.376,
+  "tca": 2421.153,
+  "ppe": 194.948,
+  "rou": 213.467,
+  "intang": 626.907,
+  "gw": 2021.931,
+  "ta": 5962.399,
+  "cltd": 68.379,
+  "ap": 898.329,
+  "acc_comp": 361.119,
+  "tcl": 1515.991,
+  "ltd": 2715.497,
+  "lease_lt": 229.998,
+  "tl": 4863.275,
+  "apic": 679.632,
+  "re": 2095.093,
+  "aoci": 14.342,
+  "eq": 1099.124,
+  "nci_bs": 1.419,
+  "teq": 1099.124,
+  "tle": 5962.399
+ },
+ "cf": {
+  "ni": 138.093,
+  "da": 40.102,
+  "sbc": 13.696,
+  "cfo": -45.634,
+  "capex": -13.734,
+  "acq": 0.0,
+  "cfi": -13.734,
+  "iss": 6.081,
+  "opt": 4.596,
+  "bb": -73.397,
+  "div": -58.899,
+  "cff": -138.714,
+  "net": -198.082,
+  "beg": 695.91,
+  "end": 497.828,
+  "ytd_months": 3
+ },
+ "ngaap": {
+  "rev_xb_pub": 1575.334,
+  "ebitda_bridge": {
+   "start": 138.284,
+   "items": [
+    [
+     "Income tax expense",
+     41.489
+    ],
+    [
+     "Interest and other, net",
+     27.613
+    ],
+    [
+     "Depreciation and amortization",
+     40.102
+    ]
+   ],
+   "total": 247.488
+  },
+  "ebitda_pub": 247.488,
+  "adj_ebitda": {
+   "start": 247.488,
+   "items": [
+    [
+     "Acquisition and divestiture costs",
+     5.093,
+     "ACQ"
+    ],
+    [
+     "Financing transaction costs",
+     0.0,
+     "DEBT"
+    ]
+   ],
+   "total": 252.58100000000002
+  },
+  "adj_ebitda_pub": 252.58100000000002,
+  "adj_oi": {
+   "start": 207.195,
+   "items": [
+    [
+     "Acquisition and divestiture costs",
+     5.093,
+     "ACQ"
+    ],
+    [
+     "Financing transaction costs",
+     0.0,
+     "DEBT"
+    ],
+    [
+     "Significant acquisition amortization",
+     11.087,
+     "AMORT"
+    ]
+   ],
+   "total": 223.375
+  },
+  "adj_ni": {
+   "start": 138.284,
+   "items": [
+    [
+     "Acquisition and divestiture costs",
+     5.093,
+     "ACQ"
+    ],
+    [
+     "Financing transaction costs",
+     0.0,
+     "DEBT"
+    ],
+    [
+     "Significant acquisition amortization",
+     11.087,
+     "AMORT"
+    ],
+    [
+     "Amortization and write-off of debt issuance costs and debt discount",
+     0.823,
+     "DEBT"
+    ],
+    [
+     "Adjustments for tax effect",
+     -4.421,
+     "TAX"
+    ]
+   ],
+   "total": 150.866
+  },
+  "adj_ni_pub": 150.866,
+  "adj_sh": 133.011088,
+  "adj_eps_pub": 1.13,
+  "fcf_pub": -59.368,
+  "twoclass_note": 0.9
+ },
+ "op": {
+  "bl_funded": 4020.0,
+  "bl_unfunded": 9991.0,
+  "bl_options": 14617.0,
+  "bl_total": 28628.0,
+  "hc_total": 29291.0,
+  "hc_staff": 26438.0,
+  "b2b_q": 0.72,
+  "ct_cr": 0.53,
+  "ct_tm": 0.24,
+  "ct_fp": 0.23
+ },
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1443646/000144364622000132/bah06.htm",
+  "release_date": "2022-07-29",
+  "cust": "https://www.sec.gov/Archives/edgar/data/1443646/000144364622000133/bah-20220630.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1443646/000144364622000133/bah-20220630.htm"
+ },
+ "units": "USD thousands (converted to millions)",
+ "period": "Q1-23",
+ "fy": 2023,
+ "q": 1,
+ "notes": [
+  "Weighted shares and earnings for diluted EPS (two-class method): XBRL 10-Q."
+ ],
+ "x": {
+  "x_rev": 2249.6,
+  "x_oi": 207.195,
+  "x_ni": 138.284,
+  "x_eps_d": 1.03,
+  "x_cfo": -45.634,
+  "x_ta": 5962.399,
+  "x_sbc": 13.696,
+  "x_dps": 0.43,
+  "x_sh_out": 132.423378
+ },
+ "cust": {
+  "def": 1019.991,
+  "intel": 408.883,
+  "civ": 757.714,
+  "com": 63.012,
+  "ns": 1428.874,
+  "cc": 820.726
+ }
+}

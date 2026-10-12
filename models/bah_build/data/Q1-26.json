@@ -1,0 +1,168 @@
+{
+ "is": {
+  "rev": 2924.0,
+  "cost_rev": 1423.0,
+  "bill": 881.0,
+  "ga": 323.0,
+  "da": 40.0,
+  "tot_costs": 2667.0,
+  "oi": 257.0,
+  "int_exp": 44.0,
+  "oth": 3.0,
+  "ebt": 216.0,
+  "tax": -55.0,
+  "ni": 271.0,
+  "eps_b": 2.17,
+  "eps_d": 2.16,
+  "sh_b": 124.114149,
+  "sh_d": 124.47567,
+  "earn_dil": 269.0
+ },
+ "bs": {
+  "cash": 711.0,
+  "ar": 2286.0,
+  "tca": 3135.0,
+  "ppe": 171.0,
+  "rou": 165.0,
+  "intang": 549.0,
+  "gw": 2405.0,
+  "ta": 7170.0,
+  "cltd": 83.0,
+  "ap": 949.0,
+  "acc_comp": 656.0,
+  "tcl": 1760.0,
+  "ltd": 3896.0,
+  "lease_lt": 164.0,
+  "tl": 6105.0,
+  "apic": 1071.0,
+  "re": 3271.0,
+  "eq": 1065.0,
+  "teq": 1065.0,
+  "tle": 7170.0
+ },
+ "cf": {
+  "ni": 271.0,
+  "da": 40.0,
+  "sbc": 19.0,
+  "cfo": 119.0,
+  "capex": -23.0,
+  "cfi": -32.0,
+  "iss": 11.0,
+  "bb": -181.0,
+  "div": -70.0,
+  "cff": -261.0,
+  "net": -174.0,
+  "beg": 885.0,
+  "end": 711.0,
+  "ytd_months": 3
+ },
+ "ngaap": {
+  "rev_xb_pub": 2043.0,
+  "ebitda_bridge": {
+   "start": 271.0,
+   "items": [
+    [
+     "Income tax (benefit) expense",
+     -55.0
+    ],
+    [
+     "Interest expense, net and other income (expense), net",
+     41.0
+    ],
+    [
+     "Depreciation and amortization",
+     40.0
+    ]
+   ],
+   "total": 297.0
+  },
+  "ebitda_pub": 297.0,
+  "adj_ebitda": {
+   "start": 297.0,
+   "items": [
+    [
+     "Other corporate expenses",
+     14.0,
+     "ACQ"
+    ]
+   ],
+   "total": 311.0
+  },
+  "adj_ebitda_pub": 311.0,
+  "adj_oi": null,
+  "adj_ni": {
+   "start": 271.0,
+   "items": [
+    [
+     "Other corporate expenses",
+     14.0,
+     "ACQ"
+    ],
+    [
+     "Acquisition amortization",
+     12.0,
+     "AMORT"
+    ],
+    [
+     "Amortization or write-off of debt issuance costs and debt discount",
+     0.0,
+     "DEBT"
+    ],
+    [
+     "Adjustments for tax effect",
+     -113.0,
+     "TAX"
+    ]
+   ],
+   "total": 184.0
+  },
+  "adj_ni_pub": 184.0,
+  "adj_sh": 124.47567,
+  "adj_eps_pub": 1.48,
+  "fcf_pub": 96.0
+ },
+ "op": {
+  "bl_funded": 4047.0,
+  "bl_unfunded": 10441.0,
+  "bl_options": 23777.0,
+  "bl_total": 38265.0,
+  "hc_total": 33400.0,
+  "hc_staff": 30400.0,
+  "b2b_q": 1.42,
+  "b2b_ytd": 1.31,
+  "ct_cr": 0.6,
+  "ct_tm": 0.22,
+  "ct_fp": 0.18
+ },
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1443646/000144364625000136/bahexhibit991q1fy26_fina.htm",
+  "release_date": "2025-07-25",
+  "cust": "https://www.sec.gov/Archives/edgar/data/1443646/000144364625000137/bah-20250630.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1443646/000144364625000137/bah-20250630.htm"
+ },
+ "units": "USD millions",
+ "period": "Q1-26",
+ "fy": 2026,
+ "q": 1,
+ "notes": [
+  "Weighted shares and earnings for diluted EPS (two-class method): XBRL 10-Q."
+ ],
+ "x": {
+  "x_rev": 2924.0,
+  "x_oi": 257.0,
+  "x_ni": 271.0,
+  "x_eps_d": 2.16,
+  "x_cfo": 119.0,
+  "x_ta": 7170.0,
+  "x_sbc": 19.0,
+  "x_dps": 0.55,
+  "x_sh_out": 123.708985
+ },
+ "cust": {
+  "def": 1517.0,
+  "intel": 484.0,
+  "civ": 923.0,
+  "ns": 2001.0,
+  "cc": 923.0
+ }
+}

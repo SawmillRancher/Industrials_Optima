@@ -1,0 +1,216 @@
+{
+ "is": {
+  "rev": 5859.218,
+  "cost_rev": 2934.378,
+  "bill": 1542.822,
+  "ga": 903.721,
+  "da": 75.205,
+  "restr": 15.66,
+  "tot_costs": 5471.786,
+  "oi": 387.432,
+  "int_exp": 48.078,
+  "oth": 4.52,
+  "ebt": 343.874,
+  "tax": 103.919,
+  "ni": 239.955,
+  "eps_b": 1.83,
+  "eps_d": 1.7,
+  "dps": 0.09,
+  "sh_b": 130.145689,
+  "sh_d": 140.812012,
+  "earn_dil": 238.761
+ },
+ "bs": {
+  "cash": 484.368,
+  "ar": 1077.315,
+  "tca": 1657.663,
+  "ppe": 191.079,
+  "intang": 223.834,
+  "gw": 1188.004,
+  "ta": 3314.791,
+  "cltd": 42.5,
+  "ap": 443.951,
+  "acc_comp": 357.872,
+  "tcl": 914.446,
+  "ltd": 922.925,
+  "tl": 2129.606,
+  "apic": 898.541,
+  "re": 299.379,
+  "aoci": -8.715,
+  "eq": 1185.185,
+  "teq": 1185.185,
+  "tle": 3314.791
+ },
+ "cf": {
+  "ni": 239.955,
+  "da": 75.205,
+  "sbc": 31.263,
+  "deftax": 74.785,
+  "cfo": 360.046,
+  "capex": -76.925,
+  "cfi": -53.593,
+  "iss": 8.757,
+  "opt": 7.349,
+  "bb": -5.377,
+  "div": -11.906,
+  "cff": -14.716,
+  "net": 291.737,
+  "beg": 192.631,
+  "end": 484.368,
+  "ytd_months": 12
+ },
+ "ngaap": {
+  "rev_xb_pub": null,
+  "ebitda_bridge": {
+   "start": 239.955,
+   "items": [
+    [
+     "Income tax expense",
+     103.919
+    ],
+    [
+     "Interest and other, net",
+     43.558
+    ],
+    [
+     "Depreciation and amortization",
+     75.205
+    ]
+   ],
+   "total": 462.637
+  },
+  "ebitda_pub": 462.637,
+  "adj_ebitda": {
+   "start": 462.637,
+   "items": [
+    [
+     "Certain stock-based compensation expense",
+     14.241,
+     "SBC"
+    ],
+    [
+     "Net restructuring charge",
+     11.182,
+     "RESTR"
+    ],
+    [
+     "Transaction expenses",
+     0.0,
+     "ACQ"
+    ]
+   ],
+   "total": 488.06
+  },
+  "adj_ebitda_pub": 488.06,
+  "adj_oi": {
+   "start": 387.432,
+   "items": [
+    [
+     "Certain stock-based compensation expense",
+     14.241,
+     "SBC"
+    ],
+    [
+     "Amortization of intangible assets",
+     16.364,
+     "AMORT"
+    ],
+    [
+     "Net restructuring charge",
+     11.182,
+     "RESTR"
+    ],
+    [
+     "Transaction expenses",
+     0.0,
+     "ACQ"
+    ]
+   ],
+   "total": 429.219
+  },
+  "adj_ni": {
+   "start": 239.955,
+   "items": [
+    [
+     "Certain stock-based compensation expense",
+     14.241,
+     "SBC"
+    ],
+    [
+     "Net restructuring charge",
+     11.182,
+     "RESTR"
+    ],
+    [
+     "Transaction expenses",
+     0.0,
+     "ACQ"
+    ],
+    [
+     "Amortization of intangible assets",
+     16.364,
+     "AMORT"
+    ],
+    [
+     "Amortization or write-off of debt issuance costs and write-off of original issue discount",
+     4.783,
+     "DEBT"
+    ],
+    [
+     "Net gain on sale of state and local transportation business",
+     -5.681,
+     "GAIN"
+    ],
+    [
+     "Release of income tax reserves",
+     -35.022,
+     "TAXD"
+    ],
+    [
+     "Adjustments for tax effect",
+     -18.628,
+     "TAX"
+    ]
+   ],
+   "total": 227.19400000000002
+  },
+  "adj_ni_pub": 227.19400000000002,
+  "adj_sh": 140.812012,
+  "adj_eps_pub": 1.61,
+  "fcf_pub": 283.121
+ },
+ "op": {
+  "bl_funded": 2898.0,
+  "bl_unfunded": 2681.0,
+  "bl_options": 5225.0,
+  "bl_total": 10804.0,
+  "hc_total": 24950.0,
+  "hc_staff": 22447.0,
+  "ct_cr": 0.54,
+  "ct_tm": 0.31,
+  "ct_fp": 0.15
+ },
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1443646/000119312512252148/d360661dex991.htm",
+  "release_date": "2012-05-30",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1443646/000119312512253723/d288735d10k.htm"
+ },
+ "units": "USD thousands (converted to millions)",
+ "period": "2012",
+ "fy": 2012,
+ "q": null,
+ "notes": [
+  "Weighted shares and earnings for diluted EPS (two-class method): XBRL 10-K."
+ ],
+ "x": {
+  "x_rev": 5859.218,
+  "x_oi": 387.432,
+  "x_ni": 239.955,
+  "x_eps_d": 1.7,
+  "x_cfo": 360.046,
+  "x_ta": 3314.791,
+  "x_sbc": 31.263,
+  "x_deftax": 74.785,
+  "x_dps": 0.09
+ }
+}
