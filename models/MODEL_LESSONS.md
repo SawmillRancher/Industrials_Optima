@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -14,19 +14,21 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 |---|---|
 | Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
+| Two disclosed revenue cuts (product groups × segments), heavy capex, large non-operating investment marks | AMZN |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
-| Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
+| Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA), AMZN (FCF only) |
+| One-quarter-ahead guidance (revenue / operating income ranges) | UBER, AMZN |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
 | Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
-| Net-cash balance sheet | RMS, CPRT, ODFL |
+| Net-cash balance sheet | RMS, CPRT, ODFL, AMZN (to 2025) |
 | Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
 | Private company, LBO | R&Y |
@@ -437,6 +439,56 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [valuation] Strip equity stakes out of IC and the EV bridge, and add them back at carrying value.
   - [BS/CF] Drive float-like liabilities from the volume metric (GB), not from revenue.
   - [basis] Apply a new face-statement presentation (interest income split out) to all history, using XBRL.
+
+## Internet, retail & cloud
+
+### AMZN — Amazon.com (MLM template 6-Oct-26, US GAAP / USD m / calendar FY; WWD pipeline + DHR column layout)
+- **Coverage & basis:**
+  - History: FY2006–12 annual, Q1/13–Q2/26 quarterly, all from the 8-K Ex. 99.1 releases, as originally reported. CIK 0001018724.
+  - Segments: NA / International to 2014, with AWS inside NA. AWS is a segment from Q1-15; FY2013 and Q1–Q4/FY2014 come from the recast in the 8-K Ex. 99.3 of 23-Apr-2015. FY2006–12 and the 2013 quarters sit in legacy memo rows plus a "not on the current segment basis" row.
+  - 2015: segment OI takes the restated comparatives in the 2016 releases, which allocated SBC and other operating items to segments (hybrid recast). The originals are memo rows.
+  - Shares: 20-for-1 split on 6-Jun-2022, applied by the release filing date.
+- **Operating build:**
+  - Seven product groups (online, physical, third-party seller services, subscriptions, advertising, AWS, other) from the latest release presenting each quarter. Amazon re-presented advertising out of "other" in the Q4-21 release, back to Q3-20. FY = Σ quarters.
+  - NA + International = the retail groups × NA share; AWS segment = AWS group, with a check row. Segment OI = revenue × margin.
+  - The seven groups (product view) and the segments (geographic view) are reconciled through one share driver.
+- **Bridges & definitions:**
+  - Amazon publishes no adjusted P&L measure. The adjusted OI bridge adds back only the special charges quantified in the release text (Q4-22 $2.7bn, Q1-23 $0.5bn, Q3-25 $4.3bn, Q4-25 $2.44bn) and the energy-contract derivative remeasurements quantified in the 10-Q (Q1-26 −$48m, Q2-26 −$551m).
+  - That bridge is checked against the two published "operating income without these charges" figures (Q3-25 $21.7bn, Q4-25 $27.4bn).
+  - EBITDA is model-defined (OI + total D&A as presented, which includes operating-lease ROU amortization from 2019).
+  - Adjusted EPS removes the whole "other income (expense)" line (Rivian 2021–24, Anthropic 2025–26: Q2-26 alone +$53.4bn pre-tax) and equity-method activity, tax-effected at the statutory rate.
+  - FCF is the company measure (TTM). The lease-adjusted variants were published Q4-14–Q4-24 and dropped in 2025.
+- **Data quirks & corrections:**
+  - From 2016 the releases print the prior year first.
+  - The printed signs of the tax and equity-method lines vary by era (2008 prints an equity-method loss unsigned).
+  - "Total operating expenses" excludes cost of sales in 2006–09 (gross-profit layout).
+  - The current portion of long-term debt is on the face only in 2008; otherwise it sits in accrued (taken from XBRL from 2011).
+  - Blank leading cells drop out of supplemental rows, so physical stores before Q3-17 has to be right-aligned.
+  - FY2022 D&A includes 9M other operating expense ($460m reclassification).
+  - Published TTM FCF in Q1–Q3/17 and Q1–Q3/18 uses prior-year quarters restated for ASU 2016-09 and ASU 2016-15/16-18. An explicit basis-difference row ties every quarter.
+  - The 2,008 data checks pass, with one documented exception.
+- **Deals & special blocks:** none pending. Whole Foods (Aug-17, $13.2bn), MGM (Mar-22, $6.1bn + $2.5bn debt) and One Medical (Feb-23, $3.5bn) are history only. The M&A lever covers acquisitions plus strategic investments (half assumed to carry no revenue).
+- **Calibration & scenarios:**
+  - Q3-26 guidance: net sales $197.0–202.0bn, operating income $22.5–26.5bn. Prime Day moved from Q3 (2025) to Q2 (2026), worth "nearly 400 bp" of Q3 growth.
+  - Retail groups grow at the Q1-26 y/y, which is clean of Prime Day, plus a −4 pp Prime Day shift on online / 3P / advertising, plus a uniform Δ solved to the guided net sales. AWS stays at its Q2 y/y, outside the Δ.
+  - A uniform segment-margin Δ is solved to guided OI. The prior-year base excludes the segment-disclosed FTC charge.
+  - Q4 (no guidance) carries the Δs. The margin Δ is adjusted for the prior-year special charges not disclosed by segment, so neither base's one-offs compound.
+  - The ~$200bn 2026 capex figure exists only on the call: it is an unverified information row.
+- **Balance sheet, cash & capital:**
+  - D&A is split into P&E depreciation (XBRL "Depreciation"), which drives the PP&E roll-forward, and other D&A (operating-lease ROU, content). The forecast cash flow offsets the other D&A with an explicit lease-payment / content-reinvestment line, so the balance sheet balances without modelling the operating-lease roll-forward.
+  - Debt: $66bn of 2026 issues in 1H plus $25bn (July) and £4.25bn (September) after quarter-end; maturities from the 10-K XBRL schedule plus the 8-K tranches; CP / revolver to minimum cash.
+  - No buybacks since 2022, and the 2026 capex wave takes FCF negative. The leverage floor is 0.0x Base (0.25x / −0.25x).
+- **Valuation:**
+  - $260.00, provided by the user.
+  - DCF: NOPAT on full-cost adjusted OI less cash special charges; P&E-depreciation-only add-back; finance-lease principal deducted with capex; 2026E UFCF excluded (net debt at YE2026E); Anthropic stake not added to EV.
+  - The DCF gives ~$134 at a 9.5% WACC with capex still ~17% of sales into the fade. The P/E panel (28x Base) gives $384–457 on 2029–30E.
+- **Reusable lessons:**
+  - [extraction] Resolve release columns from the year header, never by position. Amazon switched to prior-year-first in 2016, and positional parsing would silently swap years.
+  - [extraction] When a published TTM metric is computed on restated prior quarters (retrospective ASU adoption), keep the quarters as originally reported and add a commented basis-difference row equal to published TTM − Σ original quarters.
+  - [BS/CF] When the cash-flow D&A includes operating-lease ROU / content amortization, drive PP&E with P&E depreciation only and offset the rest in the forecast CFO. The DCF adds back P&E depreciation only.
+  - [calibration] Guidance that quantifies a calendar shift (Prime Day, "~400 bp") gets an explicit shift row on the affected lines, seeded from the clean quarter's y/y. Lines with their own strong momentum (AWS) stay outside the uniform Δ.
+  - [calibration] For one-quarter-ahead guidance, carry the solved margin Δ into the unguided quarter net of the difference in prior-year special charges (as % of revenue) between the two base quarters.
+  - [BS/CF] For a company with no buyback programme, check that the leverage-plug buybacks are not funded by revolver / CP draws. Set the target near the current leverage (here 0x) rather than at a generic level.
 
 ## Life sciences & healthcare
 

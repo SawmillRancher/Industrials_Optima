@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, AMZN). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -28,7 +28,7 @@ Each row is a change that is now part of the standard. The checklist in section 
 | RBA → TDY | TDY, KRMN, VMC | Segment P&L with GAAP OI → amortization → non-GAAP segment OI. Future-M&A lever. A current-definition memo series drives the valuation outputs. Uniform calibration Δ solves the current year to guided EPS / EBITDA. Debt: scheduled maturities plus a revolver to minimum cash, with interest on opening balances. LibreOffice Calc recalculation, then 0 errors and all checks tie. |
 | TDY → MLM template | MLM and every build since | Unit-economics build (shipments × ASP, price / volume bridge, fall-through). Pending / closed acquisitions modelled as their own block with a PPA and synergies. Legacy segments kept as memo rows. Leverage-targeted buybacks. DuPont ROIC and RONTA. Modelling Notes column, CAGR columns and the scenario table on the right of the forecast. |
 | MLM build-kit process | WAB, ODFL, SAIA, LOAR, ONON, STE, DHR | Standard kit: `fw.py` (column map, archetype-row style cloning, row registry), `spec.py` / `spec2.py` (row specs), `build.py` (inputs, compute, scenario table, definition flags), `other_sheets.py` (rewire BBB / DCF / Charts, re-inject chart XML), `extract.py` / `normalize.py` / `check_data.py`, `inspect_model.py`, `cyc.py`. Columns re-based to the company's history (template column − N). `--snap` fills Bull/Bear snapshots; `--recalc` stores values. |
-| MLM template update (6-Oct-26) | ONON, DHR, CTAS, STE, LECO, ESAB | DCF: live valuation date, 5-year fade, implied ROIC / RONIC, target-IRR max entry price, WACC × g grid, reverse DCF, Mauboussin EV/NOPAT. Bull-Base-Bear: buyback rows (40–42). `DCF_old` dropped. View: frozen at C8, quarterly columns grouped and collapsed. Cached values stored so the file reads correctly in any viewer. |
+| MLM template update (6-Oct-26) | ONON, DHR, CTAS, STE, LECO, ESAB, WWD, AMZN | DCF: live valuation date, 5-year fade, implied ROIC / RONIC, target-IRR max entry price, WACC × g grid, reverse DCF, Mauboussin EV/NOPAT. Bull-Base-Bear: buyback rows (40–42). `DCF_old` dropped. View: frozen at C8, quarterly columns grouped and collapsed. Cached values stored so the file reads correctly in any viewer. |
 | Special cases | RMS, BC, ONON, CHRW, UBER, CTAS, DHR, STE | Non-SEC / IFRS / foreign-currency reporters (half-year columns, constant-currency + FX build). Deal pro forma tabs (CHRW RXO PF: S&U, PPA, synergies, accretion). Pending deals behind a toggle (CTAS UniFirst, UBER Delivery Hero). Hybrid recast basis around spin-offs (DHR). Non-calendar fiscal years (STE March, CTAS May). |
 
 ---
@@ -258,6 +258,8 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | Pending / new acquisition | DHR, MLM, CTAS, ESAB, CSGP, UBER, CHRW | Separate block, PPA, financing, synergies, closing-date toggle; deal tab for large deals |
 | Dual-class / splits | ONON, HEI, CTAS, ODFL | Class-equivalent shares; split-adjust by source filing date |
 | Private company | R&Y | Compilation statements; implied CF from BS changes; LBO tab |
+| Capex-heavy, D&A incl. operating-lease amortization (ASC 842) | AMZN | P&E depreciation drives PP&E; other D&A offset in forecast CFO; DCF adds back P&E depreciation only |
+| One-quarter-ahead guidance with a quantified calendar shift | AMZN, UBER | Explicit shift row on affected lines; solve the guided quarter; carry Δs (net of prior-year one-offs) |
 
 ### 4.3 Pitfalls that have bitten before
 - Template-company constants left in forecast formulas or notes (Moog `888`, MLM LNA rows, MLM-specific DCF text).
@@ -271,6 +273,8 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 - Issuer sign flips between years (TFI FinanceCosts). Normalise signs in `normalize.py` and note them.
 - Saving with openpyxl drops chart formatting. Re-inject the template chart XML after every save.
 - Files without cached values look blank in viewers. Store calculated values.
+- Positional column parsing of releases: issuers switch between current-first and prior-first columns (AMZN from 2016). Resolve by the year header.
+- `h2t.py` drops blank cells, so a supplemental row with blank leading quarters shifts left. Right-align rows with fewer values than header columns (AMZN physical stores).
 - `libreoffice-core` cannot open .xlsx; install `libreoffice-calc`.
 
 ---
@@ -290,6 +294,9 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
+- **Resolve every release column from its year header,** never by position: issuers switch to prior-year-first columns (AMZN from 2016) and positional parsing silently swaps years. [AMZN]
+- **Published TTM metrics built on restated prior quarters** (retrospective ASU adoption): keep the quarters as originally reported and add a commented basis-difference row = published TTM − Σ original quarters, so the check row reads 0 and the restatement stays visible. [AMZN]
+- **Revenue disaggregations the issuer re-presents** (a group split out of "other" with recast history): take each quarter from the latest release that presents it, and keep FY = Σ quarters. [AMZN]
 
 ### 5.2 Basis
 - **Segment re-presentation with a short recast history:** model an aggregate the re-presentation doesn't change and keep the old split as memo. Prove where an absorbed segment went using the restated comparative Δ. [RBA, TFI]
@@ -351,6 +358,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Segment ranges that don't sum to the total:** drive segments from their own end-points and close to the total with one uniform Δ. Allocate aggregate guidance by 1H mix or prior-year quarter × 1H momentum. [CW, HII, RBA]
 - **Guided cost items** (D&A, interest, SBC) for the remaining halves = (FY mid − 1H) ÷ 2. Add post-guidance financing events (new notes) on top. Take point estimates from the company's own outlook reconciliation rather than guessing. [CLH, XPO, WAB, VMC, MLM, TDY]
 - **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
+- **Quantified calendar shifts in guidance** (AMZN Prime Day "~400 bp"): seed the remaining quarters from the clean quarter's y/y, add an explicit shift row on the affected lines, and keep lines with their own strong momentum outside the uniform Δ. When carrying a solved margin Δ into an unguided quarter, net out the difference in prior-year special charges (as % of revenue) between the two base quarters. [AMZN]
 - **Apply the Δ only to genuinely uncommitted lines** (retail rather than order-book wholesale). Constant-FX guidance needs a separate FX-translation Δ for the reporting-currency figure. EPS guidance made stale by post-guidance buybacks becomes an information row. [BC, ONON, BWXT]
 - **No guidance:** leave targets as optional blank inputs; don't invent them. [HEI, BC]
 
@@ -382,6 +390,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Mandatory convertible preferred: if-converted shares until conversion, with dividends added back in adjusted EPS.
 
   [BWXT, ESAB]
+- **D&A that includes operating-lease ROU / content amortization** (ASC 842 presentation): drive PP&E with P&E depreciation only (XBRL "Depreciation"), forecast the rest as % of revenue, and offset it in the forecast CFO with an explicit lease-payment / reinvestment line so lease and content balances stay flat and the balance sheet balances. The DCF then adds back P&E depreciation only. [AMZN]
+- **Buyback plugs for companies without a programme:** check that leverage-plug repurchases are not funded by revolver / CP draws, and set the target near the current leverage rather than at a generic level. [AMZN]
 - **Pension:** CAS / FAS and non-service pension income from overfunded plans are non-cash. Accrete the prepaid pension asset, reverse the income in CFO and exclude it from UFCF. [HII, CW]
 - **Leverage ratios use LTM EBITDA** (carried in the quarter columns), not annualised 1H. [VMC, HEI]
 - **Working-capital ratios** come from fiscal-year-end balances, not annualised quarters. [STE, CTAS]

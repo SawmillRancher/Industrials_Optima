@@ -1,0 +1,407 @@
+{
+ "period": "2024",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000002/amzn-20241231xex991.htm"
+ },
+ "filed": "2025-02-06",
+ "is": {
+  "rev_prod": 272311.0,
+  "rev_serv": 365648.0,
+  "rev": 637959.0,
+  "cogs": 326288.0,
+  "ful": 98505.0,
+  "mkt": 43907.0,
+  "tech": 88544.0,
+  "ga": 11359.0,
+  "othop": 763.0,
+  "opex_tot": 569366.0,
+  "oi": 68593.0,
+  "int_inc": 4677.0,
+  "int_exp": 2406.0,
+  "oth_inc": -2250.0,
+  "nonop_tot": 21.0,
+  "ebt": 68614.0,
+  "tax_printed": -9265.0,
+  "equity": -101.0,
+  "ni": 59248.0,
+  "eps_b": 5.66,
+  "eps_d": 5.53,
+  "sh_b": 10473.0,
+  "sh_d": 10721.0,
+  "tax": 9265.0
+ },
+ "py": {
+  "is": {
+   "rev_prod": 255887.0,
+   "rev_serv": 318898.0,
+   "rev": 574785.0,
+   "cogs": 304739.0,
+   "ful": 90619.0,
+   "mkt": 44370.0,
+   "tech": 85622.0,
+   "ga": 11816.0,
+   "othop": 767.0,
+   "opex_tot": 537933.0,
+   "oi": 36852.0,
+   "int_inc": 2949.0,
+   "int_exp": 3182.0,
+   "oth_inc": 938.0,
+   "nonop_tot": 705.0,
+   "ebt": 37557.0,
+   "tax_printed": -7120.0,
+   "equity": -12.0,
+   "ni": 30425.0,
+   "eps_b": 2.95,
+   "eps_d": 2.9,
+   "sh_b": 10304.0,
+   "sh_d": 10492.0,
+   "tax": 7120.0
+  },
+  "seg": {
+   "na_rev": 352828.0,
+   "na_oi": 14877.0,
+   "na_opex": 337951.0,
+   "intl_rev": 131200.0,
+   "intl_oi": -2656.0,
+   "intl_opex": 133856.0,
+   "aws_rev": 90757.0,
+   "aws_oi": 24631.0,
+   "aws_opex": 66126.0,
+   "tot_rev": 574785.0,
+   "tot_oi": 36852.0,
+   "tot_opex": 537933.0
+  }
+ },
+ "seg": {
+  "na_rev": 387497.0,
+  "na_oi": 24967.0,
+  "na_opex": 362530.0,
+  "intl_rev": 142906.0,
+  "intl_oi": 3792.0,
+  "intl_opex": 139114.0,
+  "aws_rev": 107556.0,
+  "aws_oi": 39834.0,
+  "aws_opex": 67722.0,
+  "tot_rev": 637959.0,
+  "tot_oi": 68593.0,
+  "tot_opex": 569366.0
+ },
+ "grp": {
+  "grp_online": 247029.0,
+  "grp_physical": 21215.0,
+  "grp_tp": 156146.0,
+  "grp_subs": 44374.0,
+  "grp_ads": 56214.0,
+  "grp_aws": 107556.0,
+  "grp_other": 5425.0
+ },
+ "grp_note": "FY = sum of the four quarters in the Q4 release supplemental table (computed; blank = 0, e.g. physical stores before Aug-2017)",
+ "cf": {
+  "lines_raw": [
+   [
+    "CASH, CASH EQUIVALENTS, AND RESTRICTED CASH, BEGINNING OF PERIOD",
+    73890.0
+   ],
+   [
+    "Net income",
+    59248.0
+   ],
+   [
+    "Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other",
+    52795.0
+   ],
+   [
+    "Stock-based compensation",
+    22011.0
+   ],
+   [
+    "Non-operating expense (income), net",
+    2012.0
+   ],
+   [
+    "Deferred income taxes",
+    -4648.0
+   ],
+   [
+    "Inventories",
+    -1884.0
+   ],
+   [
+    "Accounts receivable, net and other",
+    -3249.0
+   ],
+   [
+    "Other assets",
+    -14483.0
+   ],
+   [
+    "Accounts payable",
+    2972.0
+   ],
+   [
+    "Accrued expenses and other",
+    -2904.0
+   ],
+   [
+    "Unearned revenue",
+    4007.0
+   ],
+   [
+    "Net cash provided by (used in) operating activities",
+    115877.0
+   ],
+   [
+    "Purchases of property and equipment",
+    -82999.0
+   ],
+   [
+    "Proceeds from property and equipment sales and incentives",
+    5341.0
+   ],
+   [
+    "Acquisitions, net of cash acquired, non-marketable investments, and other",
+    -7082.0
+   ],
+   [
+    "Sales and maturities of marketable securities",
+    16403.0
+   ],
+   [
+    "Purchases of marketable securities",
+    -26005.0
+   ],
+   [
+    "Net cash provided by (used in) investing activities",
+    -94342.0
+   ],
+   [
+    "Proceeds from short-term debt, and other",
+    5142.0
+   ],
+   [
+    "Repayments of short-term debt, and other",
+    -5060.0
+   ],
+   [
+    "Repayments of long-term debt",
+    -9182.0
+   ],
+   [
+    "Principal repayments of finance leases",
+    -2043.0
+   ],
+   [
+    "Principal repayments of financing obligations",
+    -669.0
+   ],
+   [
+    "Net cash provided by (used in) financing activities",
+    -11812.0
+   ],
+   [
+    "Foreign currency effect on cash, cash equivalents, and restricted cash",
+    -1301.0
+   ],
+   [
+    "Net increase (decrease) in cash, cash equivalents, and restricted cash",
+    8422.0
+   ],
+   [
+    "CASH, CASH EQUIVALENTS, AND RESTRICTED CASH, END OF PERIOD",
+    82312.0
+   ],
+   [
+    "Cash paid for interest on debt, net of capitalized interest",
+    1858.0
+   ],
+   [
+    "Cash paid for operating leases",
+    12341.0
+   ],
+   [
+    "Cash paid for interest on finance leases",
+    287.0
+   ],
+   [
+    "Cash paid for interest on financing obligations",
+    219.0
+   ],
+   [
+    "Cash paid for income taxes, net of refunds",
+    12308.0
+   ],
+   [
+    "Assets acquired under operating leases",
+    15424.0
+   ],
+   [
+    "Property and equipment acquired under finance leases, net of remeasurements and modifications",
+    854.0
+   ],
+   [
+    "Property and equipment recognized during the construction period of build-to-suit lease arrangements",
+    97.0
+   ],
+   [
+    "Property and equipment derecognized after the construction period of build-to-suit lease arrangements, with the associated leases recognized as operating",
+    0.0
+   ]
+  ],
+  "beg": 73890.0,
+  "end": 82312.0,
+  "ni": 59248.0,
+  "dda": 52795.0,
+  "sbc": 22011.0,
+  "deftax": -4648.0,
+  "cfo": 115877.0,
+  "capex": -82999.0,
+  "capex_proc": 5341.0,
+  "acq": -7082.0,
+  "sec_sales": 16403.0,
+  "sec_purch": -26005.0,
+  "cfi": -94342.0,
+  "debt_net": -9100.0,
+  "lease_prin": -2712.0,
+  "fin_oblig": -669.0,
+  "cff": -11812.0,
+  "fx": -1301.0,
+  "net": 8422.0,
+  "months": 12
+ },
+ "bs": {
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    78779.0
+   ],
+   [
+    "Marketable securities",
+    22423.0
+   ],
+   [
+    "Inventories",
+    34214.0
+   ],
+   [
+    "Accounts receivable, net and other",
+    55451.0
+   ],
+   [
+    "Total current assets",
+    190867.0
+   ],
+   [
+    "Property and equipment, net",
+    252665.0
+   ],
+   [
+    "Operating leases",
+    76141.0
+   ],
+   [
+    "Goodwill",
+    23074.0
+   ],
+   [
+    "Other assets",
+    82147.0
+   ],
+   [
+    "Total assets",
+    624894.0
+   ],
+   [
+    "Accounts payable",
+    94363.0
+   ],
+   [
+    "Accrued expenses and other",
+    66965.0
+   ],
+   [
+    "Unearned revenue",
+    18103.0
+   ],
+   [
+    "Total current liabilities",
+    179431.0
+   ],
+   [
+    "Long-term lease liabilities",
+    78277.0
+   ],
+   [
+    "Long-term debt",
+    52623.0
+   ],
+   [
+    "Other long-term liabilities",
+    28593.0
+   ],
+   [
+    "Preferred stock ($0.01 par value; 500 shares authorized; no shares issued or outstanding)",
+    0.0
+   ],
+   [
+    "Common stock ($0.01 par value; 100,000 shares authorized; 10,898 and 11,108 shares issued; 10,383 and 10,593 shares outstanding)",
+    111.0
+   ],
+   [
+    "Treasury stock, at cost",
+    -7837.0
+   ],
+   [
+    "Additional paid-in capital",
+    120864.0
+   ],
+   [
+    "Accumulated other comprehensive income (loss)",
+    -34.0
+   ],
+   [
+    "Retained earnings",
+    172866.0
+   ],
+   [
+    "Total stockholders\u2019 equity",
+    285970.0
+   ],
+   [
+    "Total liabilities and stockholders\u2019 equity",
+    624894.0
+   ]
+  ],
+  "cash": 78779.0,
+  "msec": 22423.0,
+  "inv": 34214.0,
+  "ar": 55451.0,
+  "tca": 190867.0,
+  "ppe": 252665.0,
+  "oplease": 76141.0,
+  "gw": 23074.0,
+  "ta": 624894.0,
+  "ap": 94363.0,
+  "accr": 66965.0,
+  "unearned": 18103.0,
+  "tcl": 179431.0,
+  "ltlease": 78277.0,
+  "ltd": 52623.0,
+  "oltl": 28593.0,
+  "te": 285970.0,
+  "tle": 624894.0
+ },
+ "supp": {
+  "ocf_ttm": 115877.0,
+  "fcf_ttm": 38219.0,
+  "fcf_lease_ttm": 35507.0,
+  "fcf_eq_ttm": 36211.0,
+  "sh_awards": 10876.0,
+  "sh_out": 10593.0,
+  "fx_ww": 11.0,
+  "fx_na": 10.0,
+  "fx_intl": 9.0,
+  "fx_aws": 19.0,
+  "employees": 1556000.0
+ },
+ "notes": ""
+}

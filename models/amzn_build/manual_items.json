@@ -1,0 +1,43 @@
+{
+ "_note": "Facts not machine-extracted from the release tables, each with its SEC EDGAR source. Amounts USD millions unless stated.",
+ "guidance_q3_26": {
+  "source": "Form 8-K 30-Jul-2026, Ex. 99.1 (Second Quarter 2026 results), 'Third Quarter 2026 Guidance'; repeated in the Q2-26 Form 10-Q (31-Jul-2026)",
+  "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260630xex991.htm",
+  "net_sales": [202000.0, 199500.0, 197000.0],
+  "net_sales_growth_pct": [12, 9],
+  "fx_bp": -80,
+  "prime_day_note": "Excluding the impact of Prime Day in both 2025 and 2026, third quarter 2026 year-over-year growth would be nearly 400 basis points higher (Prime Day was held in Q3 in 2025 and in Q2 in 2026).",
+  "operating_income": [26500.0, 24500.0, 22500.0],
+  "assumptions": "No impact from energy derivative contract remeasurements; no additional business acquisitions, restructurings, or legal settlements concluded.",
+  "q3_25_oi": 17400.0
+ },
+ "unverified": {
+  "capex_2026": {"value": "approximately $200 billion of 2026 capital expenditures", "status": "UNVERIFIED — stated on the Q4-2025 earnings call (5-Feb-2026), not in any EDGAR filing; information only, not used to drive the model"}
+ },
+ "special_charges": {
+  "_note": "Operating-income charges Amazon quantified in its own release text (adjusted out in the model's adjusted operating income, which Amazon does not otherwise publish).",
+  "Q4-22": {"amount": 2700.0, "text": "Fourth quarter 2022 operating income includes approximately $2.7 billion of charges for changes in estimates related to self-insurance liabilities, impairments of property and equipment and operating leases, and estimated severance costs. These charges primarily impacted the North America segment.", "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/amzn-20221231xex991.htm"},
+  "Q1-23": {"amount": 500.0, "text": "First quarter 2023 operating income includes approximately $0.5 billion of charges related to estimated severance costs."},
+  "Q3-25": {"amount": 4300.0, "text": "Third quarter 2025 operating income includes two special charges — $2.5 billion related to a legal settlement with the Federal Trade Commission and $1.8 billion in estimated severance costs primarily related to planned role eliminations. Without these charges, operating income would have been $21.7 billion.", "na": 2500.0},
+  "Q4-25": {"amount": 2440.0, "text": "Fourth quarter 2025 operating income includes three special charges — $1.1 billion for the resolution of tax disputes associated with our stores business in Italy, and the settlement of a lawsuit, $730 million in estimated severance costs, and $610 million in asset impairments primarily related to physical stores. Without these charges, operating income would have been $27.4 billion."}
+ },
+ "energy_derivatives": {
+  "source": "Q2-26 Form 10-Q (31-Jul-2026), Note 1 'Derivatives and Hedging — Energy Contracts': net unrealized gains of $551 million in Q2 2026 and $599 million for the six months ended June 30, 2026, recorded within technology and infrastructure, primarily AWS; Q1-26 = 599 − 551 (computed). Q3-26 guidance assumes no impact.",
+  "Q1-26": -48.0, "Q2-26": -551.0
+ },
+ "nonop_highlights": {
+  "_note": "Pre-tax non-operating amounts quoted in the releases (information; the model adjusts out the whole 'other income (expense), net' line in its adjusted net income).",
+  "Q2-26": "Second quarter 2026 net income includes non-operating pre-tax other income of $53.4 billion, primarily from our investments in Anthropic.",
+  "Q3-25": "Pre-tax gain of $9.5 billion included in non-operating income (expense) from our investments in Anthropic, PBC (release text)."
+ },
+ "debt": {
+  "source_q2": "Q2-26 Form 10-Q Note 5 — Debt: total face value of long-term debt $132,995m at 30-Jun-2026 (unamortized discount $(771)m; current portion $3,330m; long-term debt $128,894m); no commercial paper or revolver borrowings at 30-Jun-2026.",
+  "maturities_existing_dec25": {"2026": 2752.0, "2027": 8832.0, "2028": 4752.0, "2029": 3000.0, "2030": 4500.0, "after": 45000.0, "src": "FY2025 Form 10-K, XBRL LongTermDebtMaturitiesRepaymentsOfPrincipal* (as of 31-Dec-2025)"},
+  "new_2026_due_2028_2030": {"2028": 7424.0, "2029": 10818.0, "2030": 2283.0, "src": "8-Ks 13-Mar-2026 (USD: 2028 FRN $1.75bn + 3.85% $2.25bn; 2029 FRN $1.0bn + 4.00% $3.0bn), 16-Mar-2026 (EUR: 2028 FRN €1.75bn + 2.80% €1.25bn; 2030 3.10% €2.0bn — at the 30-Jun-2026 carrying rate $16,550m / €14.5bn = 1.1414), 12-Jun-2026 (CAD 2029 3.40% C$1.25bn at $9,853m / C$14.0bn), 9-Jul-2026 (USD 2029 FRN $0.75bn + 4.60% $3.5bn), 14-Sep-2026 (GBP 2029 5.20% £1.25bn at an assumed 1.35 USD/GBP). The CHF notes (May-2026, CHF 2.8bn, 2029–2051) have no tranche detail on EDGAR: assumed to mature after 2030."},
+  "post_q2_issues": {"usd_jul": 25000.0, "gbp_sep_gbp": 4250.0, "gbp_fx_assumed": 1.35, "src": "8-K 9-Jul-2026 ($25.0bn: 2029 FRN $0.75bn, 4.60% 2029 $3.5bn, 4.80% 2031 $4.25bn, 5.10% 2033 $3.0bn, 5.30% 2036 $4.5bn, 6.00% 2046 $2.75bn, 6.10% 2056 $4.0bn, 6.25% 2066 $2.25bn); 8-K 14-Sep-2026 (£4.25bn: 5.20% 2029 £1.25bn, 5.55% 2032 £1.0bn, 6.25% 2038 £1.0bn, 6.65% 2045 £1.0bn)."},
+  "ddtl": "8-K 10-Jun-2026: $17.5bn senior unsecured delayed-draw term loan facility; commitments expire 30-Sep-2026 unless borrowed; loans mature three years after borrowing. Drawdown not disclosed on EDGAR by the build date — not modelled (flag).",
+  "facilities": "Q2-26 10-Q Note 5: $30.0bn USD / EUR commercial paper programs (none outstanding); $15.0bn revolving credit facility (to Nov-2028) and $5.0bn 364-day facility (undrawn)."
+ },
+ "buyback": "Board authorization of $10.0bn (9-Mar-2022); $6.0bn repurchased in 2022; no repurchases since (cash-flow statements 2023–Q2-26). Amazon pays no dividend.",
+ "price": {"px": 260.00, "date": "2026-10-12", "src": "Provided by the user (12-Oct-2026); update to market."}
+}
