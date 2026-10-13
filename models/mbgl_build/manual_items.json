@@ -1,0 +1,36 @@
+{
+ "_doc": "Items not machine-extracted from statements: guidance, debt terms, share facts, schedules, pro forma and price inputs. Each item cites its EDGAR source. Assumptions (not company-disclosed) are labelled 'assumption'.",
+ "guidance_fy26": {
+  "rev": [1870.0, 1885.0], "rev_growth": [0.069, 0.077], "adj_ebitda": [745.0, 760.0], "adj_ebitda_margin": "~40%",
+  "date": "2026-08-07",
+  "src": "Q2-26 earnings release, Outlook (8-K Ex. 99.1, 7-Aug-2026): revenue $1,870-1,885m (+6.9-7.7%), Adjusted EBITDA $745-760m (~40% margin); carve-out 1H + consolidated 2H. No GAAP, EPS, interest, tax, capex or FCF guidance (no forward reconciliation).",
+  "url": "https://www.sec.gov/Archives/edgar/data/2090312/000209031226000013/mbgl-20260807xexx991mobili.htm",
+  "medium_term_targets": "The release says the company 'reiterated medium-term financial targets'; the targets themselves are not in any EDGAR filing (not in the Form 10, 10-Q or 8-Ks). Unverified on EDGAR and not used in the model."
+ },
+ "dividend": {"dps_q": 0.06, "first_payable": "2026-09-10", "record": "2026-08-27",
+  "src": "Q2-26 release (declared $0.06 quarterly) and 10-Q MD&A 'Common Stockholder Dividends' (intention to pay $0.06 per share quarterly)."},
+ "shares": {"out_2026_07_01": 294.82132, "pro_forma_form10": 295.07716,
+  "src": "10-Q cover (294,821,320 shares outstanding at 1-Jul-2026) and Note 3 (EPS for all periods on 294,821,320 shares; distribution ratio 1:1 on SPGI shares held 15-Jun-2026). Form 10 pro forma EPS used 295,077,160 (SPGI shares at 15-May-2026)."},
+ "debt": {
+  "notes": [{"name": "5.050% senior notes due 2029", "face": 650.0, "coupon": 0.0505, "year": 2029},
+            {"name": "5.450% senior notes due 2031", "face": 650.0, "coupon": 0.0545, "year": 2031},
+            {"name": "6.050% senior notes due 2036", "face": 700.0, "coupon": 0.0605, "year": 2036}],
+  "unamortized_costs_2026_06_30": 19.0, "issued": "2026-05-29 (proceeds in escrow; released 30-Jun-2026)", "coupon_dates": "15-Jun / 15-Dec from 15-Dec-2026",
+  "revolver": "$500m revolving credit facility (6-May-2026, available 1-Jul-2026, matures 1-Jul-2031; SOFR + 1.0-1.625%; +$250m accordion); undrawn at 30-Jun-2026. Covenant: total net leverage <= 3.50x (4.00x after a material acquisition).",
+  "pro_forma_interest": "Form 10 pro forma: $114m p.a. interest incl. amortization of OID and issuance costs on $2.0bn of notes (weighted 5.74%); $29m for Q1-26.",
+  "src": "10-Q Note 4 (Debt); Form 10 Unaudited Pro Forma Condensed Combined Financial Information note (b), (h)."
+ },
+ "amort_sched": {"2026": 296.0, "2027": 296.0, "2028": 296.0, "2029": 296.0, "2030": 293.0,
+  "src": "Form 10 audited combined financial statements, Note 3 (expected amortization of intangible assets held at 31-Dec-2025, assuming no further acquisitions or dispositions)."},
+ "pro_forma_costs": {"tsa_fy25": 3.0, "rent_fy25": 9.0, "rent_q1_26": 2.0,
+  "src": "Form 10 pro forma notes (j)-(l): autonomous-entity adjustments to selling & general expenses ($12m for FY2025: TSA $3m + new corporate-office leases $9m). Other standalone public-company costs are not quantified by the company."},
+ "leases": "Form 10 Note (leases): $74m of future lease payments on leases not yet commenced at 31-Mar-2026 (2026-2037).",
+ "ex992": {"src": "8-K Ex. 99.2 (7-Aug-2026), 'Mobility Global Financial Data - FY2025': slide images (exhibit992002.jpg, exhibit992003.jpg) transcribed into extract.py (EX992, EX992_SEG). Q3-25 and Q4-25 are 'unaudited and preliminary' carve-out data. The company notes the amounts 'may not tie to amounts included in public filings due primarily to rounding'.",
+  "url": "https://www.sec.gov/Archives/edgar/data/2090312/000209031226000013/exhibit992.htm"},
+ "price": {"px": 18.00, "date": "2026-10-13",
+  "src": "Share price $18.00 provided by the user (13-Oct-2026). Latest SEC-filed reference: Form 4 tax-withholding price $19.83 (1-Sep-2026, filed 3-Sep-2026); director purchases $19.50-19.87 (11-13-Aug-2026, Form 4 filed 13-Aug-2026). Update to market."},
+ "separation": {"date": "2026-07-01", "dividend_to_spgi": 2000.0,
+  "src": "8-K 2-Jul-2026 (Items 2.01, 5.01); 10-Q Note 10. $2.0bn dividend to S&P Global from the senior-note proceeds as consideration for transferred assets; Canada Carfax related-party loan ($230m) settled/consolidated at separation."},
+ "spgi_mobility": {"cik": "0000064040", "first_period": "IHS Markit merger closed 28-Feb-2022; 2022 Mobility figures in S&P Global releases are reported (Mar-Dec) and non-GAAP pro forma (full year).",
+  "src": "S&P Global earnings releases (8-K Item 2.02 Ex. 99.1): segment revenue / expenses / operating profit tables, 'Adjusted Segment Operating Profit' reconciliations and revenue-by-type tables. 2026 releases show Mobility revenue / expenses / OP only (no non-GAAP schedule)."}
+}

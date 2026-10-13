@@ -1,0 +1,89 @@
+{
+ "period": "Q3-25",
+ "sources": [
+  "https://www.sec.gov/Archives/edgar/data/2090312/000209031226000013/exhibit992.htm",
+  "https://www.sec.gov/Archives/edgar/data/64040/000006404025000163/spgi3q2025-earningsrelease.htm"
+ ],
+ "notes": [
+  "Q3-25 / Q4-25: FY2025 quarterly financial data (8-K Ex. 99.2, 7-Aug-2026), \"unaudited and preliminary\", carve-out basis (depreciation and amortization shown combined)."
+ ],
+ "ex992": {
+  "rev": 445.0,
+  "opex": 129.0,
+  "sga": 135.0,
+  "da": 77.0,
+  "op": 104.0,
+  "int": 4.0,
+  "ebt": 100.0,
+  "tax": 29.0,
+  "ni": 71.0
+ },
+ "seg": {
+  "cfx": {
+   "rev": 291.0,
+   "sub": 235.0,
+   "nsub": 56.0,
+   "texp": 199.0,
+   "op": 92.0,
+   "da": 50.0,
+   "sbc": 4.0,
+   "trans": 0.0,
+   "sev": 0.0,
+   "legal": 0.0,
+   "other": 0.0,
+   "adj": 146.0
+  },
+  "b2b": {
+   "rev": 154.0,
+   "sub": 127.0,
+   "nsub": 27.0,
+   "texp": 131.0,
+   "op": 23.0,
+   "da": 27.0,
+   "sbc": 3.0,
+   "trans": 3.0,
+   "sev": 6.0,
+   "legal": -3.0,
+   "other": -4.0,
+   "adj": 55.0
+  },
+  "corp": {
+   "texp": 11.0,
+   "op": -11.0,
+   "da": 0.0,
+   "sbc": 0.0,
+   "trans": 0.0,
+   "sev": 0.0,
+   "legal": 0.0,
+   "other": 1.0,
+   "adj": -10.0
+  }
+ },
+ "is": {
+  "rev": 445.0,
+  "opex": 129.0,
+  "sga": 135.0,
+  "da": 77.0,
+  "op": 104.0,
+  "int": 4.0,
+  "ebt": 100.0,
+  "tax": 29.0,
+  "ni": 71.0
+ },
+ "ng": {
+  "adj_ebitda_ex992": 191.0,
+  "adj_ebitda": 191.0,
+  "labels": "Transaction costs +3; Employee severance charges +6; Legal settlement recovery -3; Other -3"
+ },
+ "spgi": {
+  "rev": 445.0,
+  "exp": 328.0,
+  "op": 117.0,
+  "op_ng": 117.0,
+  "ng_adj": 0.0,
+  "amort": 76.0,
+  "adj_op": 193.0,
+  "sub": 362.0,
+  "nsub": 83.0
+ }
+}

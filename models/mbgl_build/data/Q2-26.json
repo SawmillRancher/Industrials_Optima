@@ -1,0 +1,174 @@
+{
+ "period": "Q2-26",
+ "sources": [
+  "https://www.sec.gov/Archives/edgar/data/2090312/000209031226000014/mbgl-20260630.htm",
+  "https://www.sec.gov/Archives/edgar/data/2090312/000209031226000013/mbgl-20260807xexx991mobili.htm",
+  "https://www.sec.gov/Archives/edgar/data/64040/000006404026000040/spgi2q2026-earningsrelease.htm"
+ ],
+ "notes": [
+  "Weighted shares 294,821,320 basic and diluted: the 10-Q (Note 3) computes EPS for all periods presented on the shares distributed on 1-Jul-2026 (one MBGL share per SPGI share held on 15-Jun-2026).",
+  "Cash flow is six months year to date (10-Q); the discrete quarter is derived in normalize.py (Q2 = 1H \u2212 Q1).",
+  "S&P Global 2026 releases: Mobility segment shown until the 1-Jul-2026 spin (discontinued operations from Q3-26)."
+ ],
+ "is": {
+  "rev": 468.0,
+  "opex": 134.0,
+  "sga": 175.0,
+  "dep": 3.0,
+  "amort": 74.0,
+  "op": 82.0,
+  "int": 7.0,
+  "ebt": 75.0,
+  "tax": 22.0,
+  "ni": 53.0,
+  "eps_basic": 0.18,
+  "eps_dil": 0.18,
+  "sh_basic": 294.82132,
+  "sh_dil": 294.82132
+ },
+ "bs": {
+  "cash": 186.0,
+  "due_from_c": 17.0,
+  "ar": 216.0,
+  "prepaid": 47.0,
+  "tca": 466.0,
+  "ppe": 18.0,
+  "rou": 33.0,
+  "gw": 8845.0,
+  "intang": 3640.0,
+  "onca": 58.0,
+  "ta": 13060.0,
+  "ap": 63.0,
+  "due_to_c": 0.0,
+  "accr": 41.0,
+  "unearned": 102.0,
+  "ocl": 42.0,
+  "tcl": 248.0,
+  "lease": 27.0,
+  "dtl": 967.0,
+  "due_to_nc": 0.0,
+  "oncl": 2.0,
+  "tl": 3225.0,
+  "pci": 9833.0,
+  "aoci": 2.0,
+  "teq": 9835.0,
+  "tle": 13060.0,
+  "due_from_nc": 0.0,
+  "ltd": 1981.0
+ },
+ "cf": {
+  "ytd_months": 6,
+  "ni": 108.0,
+  "dep": 7.0,
+  "amort": 148.0,
+  "prov": 2.0,
+  "def_tax": -38.0,
+  "sbc": 9.0,
+  "restr": -1.0,
+  "cfo": 189.0,
+  "capex": -12.0,
+  "acq": 0.0,
+  "eqinv": -3.0,
+  "loan_in": 0.0,
+  "disp": 0.0,
+  "cfi": -15.0,
+  "notes": 1986.0,
+  "transfers": -2011.0,
+  "loan_out": 0.0,
+  "contingent": 0.0,
+  "cff": -25.0,
+  "fx": -1.0,
+  "net": 148.0,
+  "cash_begin": 38.0,
+  "cash_end": 186.0
+ },
+ "mix": {
+  "rev": 468.0,
+  "sub": 383.0,
+  "nsub": 85.0,
+  "us": 389.0,
+  "intl": 79.0
+ },
+ "seg": {
+  "cfx": {
+   "rev": 312.0,
+   "sub": 252.0,
+   "nsub": 60.0,
+   "us": 265.0,
+   "intl": 47.0,
+   "op": 101.0,
+   "amort": 48.0,
+   "dep": 2.0,
+   "sbc": 2.0,
+   "trans": 0.0,
+   "sev_oth": 0.0,
+   "adj": 153.0,
+   "opex": 68.0,
+   "sga": 93.0,
+   "da": 50.0,
+   "texp": 211.0
+  },
+  "b2b": {
+   "rev": 156.0,
+   "sub": 131.0,
+   "nsub": 25.0,
+   "us": 124.0,
+   "intl": 32.0,
+   "op": 3.0,
+   "amort": 26.0,
+   "dep": 1.0,
+   "sbc": 3.0,
+   "trans": 20.0,
+   "sev_oth": 0.0,
+   "adj": 53.0,
+   "opex": 66.0,
+   "sga": 60.0,
+   "da": 27.0,
+   "texp": 153.0
+  },
+  "corp": {
+   "op": -22.0,
+   "amort": 0.0,
+   "dep": 0.0,
+   "sbc": 0.0,
+   "trans": 16.0,
+   "sev_oth": 2.0,
+   "adj": -4.0,
+   "opex": 0.0,
+   "sga": 22.0,
+   "da": 0.0,
+   "texp": 22.0
+  }
+ },
+ "ng": {
+  "op_total": 82.0,
+  "adj_total": 202.0,
+  "labels": "Transaction costs +36; Employee severance charges and other +2",
+  "fcf": 129.0,
+  "fcf_h1": 177.0,
+  "adj_ebitda": 202.0
+ },
+ "guidance": {
+  "rev": [
+   1870.0,
+   1885.0
+  ],
+  "rev_growth": [
+   0.069,
+   0.077
+  ],
+  "adj_ebitda": [
+   745.0,
+   760.0
+  ],
+  "date": "2026-08-07",
+  "dps_q": 0.06
+ },
+ "spgi": {
+  "rev": 468.0,
+  "exp": 364.0,
+  "op": 104.0,
+  "sub": 383.0,
+  "nsub": 85.0
+ }
+}

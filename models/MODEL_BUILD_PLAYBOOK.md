@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, MBGL). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -250,7 +250,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | No guidance | ODFL, RMS | Mid-quarter updates; seasonality best / avg / worst; scenario-only forecast |
 | No non-GAAP published | ODFL, DHR (EBITDA), STE (EBITDA) | Model-defined bridges, clearly labelled, checked against XBRL / GAAP |
 | Definition changed over time | TDY, LOAR, RBA, MLM | Definition-flag row, in-force definition per period, current-definition memo series |
-| Spin-offs / disc ops | DHR, STE, BWXT, XPO | Hybrid recast or post-spin history; recast cell comments; rebuild originally reported adjusted EPS in memo |
+| Spin-offs / disc ops | DHR, STE, BWXT, XPO, ESAB, MBGL | Hybrid recast or post-spin history; recast cell comments; rebuild originally reported adjusted EPS in memo |
 | IFRS / foreign currency | ONON, RMS, BC, TFI | Reporting currency; constant-currency + FX build; price × FX input; IFRS 16 lease schedule; rent-as-opex DCF option |
 | Half-year reporters | RMS, BC | H1 / H2 / FY columns (H2 = FY − H1); quarterly revenue memo |
 | Recent IPO | LOAR, ONON, KRMN | Annual columns from the prospectus; P&L-only years flagged; BS / CF start when available |
@@ -275,7 +275,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -296,6 +296,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Partial standard recasts** (e.g. ASC 606 recast only at total revenue for an earlier year) get a memo row for that year rather than mixing bases in the main line. [RBA]
 - **Disc-ops recast published only in totals:** scale minor opex lines to the restated totals, with SG&A as the plug, and comment the cells. [STE]
 - **After a spin:** start the BS at the first post-spin balance sheet even if the P&L uses earlier recast comparatives, and fill earlier y/y with company-reported change % memos. Spin-cos put carve-out (Form 10) years in the main columns, with the former parent's segment history as a flagged memo under the parent's CIK. [XPO, ESAB]
+- **Patching spin-co history from the former parent:** test comparability in every overlap period first. Splice revenue into a separate "spliced history" row only when it ties (state the tolerance, e.g. ≤0.25%); keep segment profit as memo when allocations differ, with basis-difference rows. Look in the public Form 10 drafts (DRS) for periods the final Form 10 dropped, and in the first 8-K for a quarterly data exhibit. Image exhibits are transcribed from the image (not the hidden text layer) and validated by re-adding totals. [MBGL]
 - **Half-year reporters:** carry quarterly revenue as "1st / 2nd quarter of the half" memo rows inside the half-year columns, with a Σ check. [RMS, BC]
 - **Two builds of one company:** diff their dated facts (split dates, deconsolidation quarter, label cut-overs) and resolve each from the filing. [LECO]
 

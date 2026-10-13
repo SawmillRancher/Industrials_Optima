@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -16,9 +16,10 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
+| Data / information services, subscription revenue | MBGL, CSGP |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
-| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
+| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MBGL (spin-co with parent-segment splice), MLM |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
@@ -488,6 +489,43 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [QA] The BBB tab carries the same MLM N26 and P40 ("Model!CF2") comments as CTAS; the STE switch is AU2.
 
 ## Business, environmental & marketplace services
+
+### MBGL — Mobility Global (MLM template via WWD kit; US GAAP carve-out → consolidated / USD m whole millions / Dec FYE)
+- **Coverage & basis:** spun from S&P Global on 1-Jul-2026 (1:1 distribution, 294.8m shares); CIK 0002090312 ("S&P Global Mobility Holding Co" until Jan-2026). The carve-out (combined) statements cover FY2023–25 annual (Form 10), Q1-25 / Q1-26 (Form 10 interims), Q2-25 / Q2-26 (10-Q), and Q3-25 / Q4-25 from the FY2025 quarterly data file (8-K Ex. 99.2, "unaudited and preliminary"). The 31-Dec-2023 balance sheet exists only in the first Form 10 draft (DRS, public on EDGAR). Q3/Q4-25 cash flow and Mar/Jun/Sep-2025 balance sheets were never published, so they are left empty. Per-share data exists only for the 10-Q periods; the 10-Q applies the distributed share count to all periods it presents. FY2022 and the 2023–24 quarters carry the former parent's segment memo only.
+- **Operating build:** CARFAX / B2B revenue × Segment Adjusted EBITDA margin, plus corporate Adjusted EBITDA (Q3/Q4-26E input for standalone public-company costs, then % of revenue). Subscription / non-subscription and international are memo rows.
+- **Parent-segment splice (the user asked to patch history from SPGI):**
+  - The S&P Global "Mobility" segment (CIK 64040 releases, Q1-23–Q2-26; FY2022 non-GAAP pro forma) ties to carve-out revenue within $0–4m (≤0.25%) in every overlap, so a **spliced revenue history** is carried (S&P Global where the carve-out is silent; formula on the memo rows, with a basis text row).
+  - Profit is not comparable: the segment excludes corporate allocations and carries S&P Global's deal amortization ($303m vs $296m). It stays memo, with basis-difference rows.
+  - FY2025 carve-out segment Adjusted OP (CARFAX + B2B, $697m) equals S&P Global's adjusted OP exactly; FY2023–24 differ by $5m / $11m (the 2025 allocation refinement).
+- **Bridges & definitions:**
+  - Adjusted EBITDA (company): other income stays inside EBITDA.
+  - Adjusted operating profit (company): published in the Form 10 only (FY2023–25, Q1s); not in the first release.
+  - Adjusted EPS: a model definition (none published), tax-effected at the period ETR bounded 15–40%.
+  - Checks run at ±1 because the source is whole $m; the published total column is used where segments add to $1m more (FY2024 Adjusted OP $617m vs $618m).
+- **Data quirks & corrections:**
+  - Ex. 99.2 is slide images with a hidden 1-pt text layer that drops blank cells (token counting misaligns rows). Values were transcribed from the images and validated by re-adding every segment column to its published Adjusted EBITDA.
+  - Where filed detail exists, it wins over Ex. 99.2: Ex. 99.2 folds the ELT transition into "other" and splits Q2-25 "severance and other" differently, so using both double-counts.
+  - Form 10 labels carry footnote markers ("Other (1)") and non-breaking spaces; normalise them before matching.
+- **Calibration & scenarios:** FY26 guidance (revenue $1,870–1,885m, Adjusted EBITDA $745–760m; first release, 7-Aug-2026).
+  - A uniform growth Δ (vs 1H/26 y/y) solves revenue: Base −0.3pt.
+  - A uniform segment-margin Δ after the corporate input solves Adjusted EBITDA: Base −0.7pt, i.e. standalone dis-synergies.
+  - The "medium-term targets" the release mentions are not on EDGAR and are not used (unverified).
+- **Balance sheet, cash & capital:**
+  - $2.0bn notes (5.050% 2029 / 5.450% 2031 / 6.050% 2036) funded a $2.0bn dividend to S&P Global. Notes are carried at face and carrying value with accretion; 2029 / 2031 are refinanced at maturity (assumption).
+  - The $500m revolver plugs to $200m minimum cash (the Form 10 cash target).
+  - $0.06 quarterly dividend × beginning shares. Buybacks plug to a leverage target (2.0x Base; assumption — no company target; covenant 3.5x).
+  - Pre-spin related-party loan (Canada Carfax, $230m) and "net transfers to parent" lines are kept separate in BS / CF.
+- **Valuation:**
+  - Price $18.00 (user; Form 4 withholding $19.83 on 1-Sep-2026).
+  - DCF base year 2026E (valuation date in Q4), template columns rolled one year.
+  - NOPAT on pre-amortization EBITA less SBC and cash items, with a depreciation-only add-back. The $296m of IHS Markit purchase amortization is non-deductible, and taxing EBIT after it overstated UFCF by ~$80m p.a. (first pass $45 → $37).
+  - Book ROIC is ~3–5% because equity carries the purchase-accounting goodwill and intangibles.
+- **Reusable lessons:**
+  - [sources] Spin-co Form 10 drafts (DRS / DRS/A) become public on EDGAR. Earlier drafts hold balance sheets and periods the final Form 10 dropped (here 31-Dec-2023).
+  - [sources] A spin-co's first 8-K may carry a quarterly "financial data" exhibit that fills quarters the Form 10 skipped. Check whether it is an image and transcribe it from the image, not the hidden text layer; validate by re-adding the totals.
+  - [basis] Patch pre-spin quarters from the former parent's segment disclosures only after proving comparability in every overlap period. Splice revenue when it ties (state the tolerance); keep profit as memo when allocations differ, with basis-difference rows.
+  - [bridges] When two documents give the same period's adjusting items with different groupings, take one source per period (filed over supplementary) to avoid double counting.
+  - [valuation] For acquired-intangible-heavy spin-cos, tax NOPAT on EBITA and add back depreciation only; a full D&A add-back on taxed EBIT overstates value when amortization is non-deductible.
 
 ### CTAS — Cintas, incl. UniFirst block (MLM template, US GAAP as reported / USD m / FY ends 31-May)
 - **Coverage & basis:** FY2006–12 annual, Q1 FY13–Q1 FY27 quarterly, Q2–Q4 FY27E, FY28E–31E. Quarters as originally reported. Per-share data and shares are restated for the 4-for-1 split (11-Sep-2024). 86 releases were used. CIK 0000723254; UniFirst CIK 0000717954.
