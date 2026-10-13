@@ -1,0 +1,1279 @@
+{
+ "_doc": "Company GAAP -> non-GAAP (\"As Adjusted\") reconciliations transcribed from the earnings-release tables (8-K Ex. 99.1). Values: USD m / USD per share; items signed as added to GAAP. Columns gaap/adj = [revenue, operating income, net income, diluted EPS]; net income is null where the release gave per-share effects only (FY2012-Q1 FY14). Periods not listed published no adjusting items (adjusted = GAAP) or, for FY2006-FY2011, no adjusted measures at all. Basis: as first published, except periods first given adjusted figures by a later release (Q1-Q3 FY15 restructuring; FY2025 OpenAI impact), which take that later presentation.",
+ "cats": {
+  "REVDEF": "Revenue deferrals / recognition (Windows Upgrade Offer, Office offers, Windows 8/8.1 pre-sales, Windows 10)",
+  "RESTR": "Impairment, integration, restructuring, severance",
+  "IMPAIR": "Goodwill impairment",
+  "LEGAL": "European Commission fine",
+  "TAX": "Tax items (TCJA, intangible-property transfers, India withholding-tax decision)",
+  "OPENAI": "Impact from investments in OpenAI (other income (expense), net; after tax)"
+ },
+ "2012": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312513294305/d570922dex991.htm",
+  "release_date": "2013-07-18",
+  "basis": "first presented in the Q4 FY13 release (prior-year comparative; no FY2012 release reconciliation)",
+  "gaap": [
+   73723,
+   21763,
+   null,
+   2.0
+  ],
+  "items": [
+   {
+    "label": "Goodwill impairment",
+    "cat": "IMPAIR",
+    "rev": 0,
+    "oi": 6193,
+    "ni": null,
+    "eps": 0.73
+   },
+   {
+    "label": "Windows Upgrade Offer",
+    "cat": "REVDEF",
+    "rev": 540,
+    "oi": 540,
+    "ni": null,
+    "eps": 0.06
+   }
+  ],
+  "adj": [
+   74263,
+   28496,
+   null,
+   2.78
+  ]
+ },
+ "Q1-13": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312512427207/d416523dex991.htm",
+  "release_date": "2012-10-18",
+  "basis": "own release",
+  "gaap": [
+   16008,
+   5308,
+   null,
+   0.53
+  ],
+  "items": [
+   {
+    "label": "Revenue deferred for Windows Upgrade Offer, Windows 8 Pre-sales, and Office Offer",
+    "cat": "REVDEF",
+    "rev": 1356,
+    "oi": 1356,
+    "ni": null,
+    "eps": 0.13
+   }
+  ],
+  "adj": [
+   17364,
+   6664,
+   null,
+   0.65
+  ]
+ },
+ "Q2-13": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312513022190/d472137dex991.htm",
+  "release_date": "2013-01-24",
+  "basis": "own release",
+  "gaap": [
+   21456,
+   7771,
+   null,
+   0.76
+  ],
+  "items": [
+   {
+    "label": "Net revenue deferred for Windows Upgrade Offer, Office Upgrade Offer and Pre-sales, and Video Game Deferral",
+    "cat": "REVDEF",
+    "rev": 1329,
+    "oi": 1329,
+    "ni": null,
+    "eps": 0.13
+   },
+   {
+    "label": "Revenue recognized for Windows 8 Pre-sales",
+    "cat": "REVDEF",
+    "rev": -783,
+    "oi": -783,
+    "ni": null,
+    "eps": -0.08
+   }
+  ],
+  "adj": [
+   22002,
+   8317,
+   null,
+   0.81
+  ]
+ },
+ "Q3-13": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312513160734/d497278dex991.htm",
+  "release_date": "2013-04-18",
+  "basis": "own release",
+  "gaap": [
+   20489,
+   7612,
+   null,
+   0.72
+  ],
+  "items": [
+   {
+    "label": "Net revenue recognition for Windows Upgrade Offer, Office Upgrade Offer and Pre-Sales, and Video Game Deferral",
+    "cat": "REVDEF",
+    "rev": -1658,
+    "oi": -1658,
+    "ni": null,
+    "eps": -0.16
+   },
+   {
+    "label": "European Commission fine",
+    "cat": "LEGAL",
+    "rev": 0,
+    "oi": 733,
+    "ni": null,
+    "eps": 0.09
+   }
+  ],
+  "adj": [
+   18831,
+   6687,
+   null,
+   0.65
+  ]
+ },
+ "Q4-13": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312513294305/d570922dex991.htm",
+  "release_date": "2013-07-18",
+  "basis": "own release",
+  "gaap": [
+   19896,
+   6073,
+   null,
+   0.59
+  ],
+  "items": [
+   {
+    "label": "Office Upgrade Offer",
+    "cat": "REVDEF",
+    "rev": -782,
+    "oi": -782,
+    "ni": null,
+    "eps": -0.07
+   }
+  ],
+  "adj": [
+   19114,
+   5291,
+   null,
+   0.52
+  ]
+ },
+ "2013": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312513294305/d570922dex991.htm",
+  "release_date": "2013-07-18",
+  "basis": "own release (Q4 FY13, twelve months)",
+  "gaap": [
+   77849,
+   26764,
+   null,
+   2.58
+  ],
+  "items": [
+   {
+    "label": "Windows Upgrade Offer",
+    "cat": "REVDEF",
+    "rev": -540,
+    "oi": -540,
+    "ni": null,
+    "eps": -0.05
+   },
+   {
+    "label": "European Commission fine",
+    "cat": "LEGAL",
+    "rev": 0,
+    "oi": 733,
+    "ni": null,
+    "eps": 0.09
+   }
+  ],
+  "adj": [
+   77309,
+   26957,
+   null,
+   2.62
+  ]
+ },
+ "Q1-14": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312513409837/d616848dex991.htm",
+  "release_date": "2013-10-24",
+  "basis": "own release",
+  "gaap": [
+   18529,
+   6334,
+   null,
+   0.62
+  ],
+  "items": [
+   {
+    "label": "Revenue deferred primarily related to Windows 8.1 Pre-sales",
+    "cat": "REVDEF",
+    "rev": 113,
+    "oi": 113,
+    "ni": null,
+    "eps": 0.01
+   }
+  ],
+  "adj": [
+   18642,
+   6447,
+   null,
+   0.63
+  ]
+ },
+ "Q1-15": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312515350712/d33912dex991.htm",
+  "release_date": "2015-10-22",
+  "basis": "re-presented in the Q1 FY16 release (no adjusted figures in the Q1 FY15 release)",
+  "gaap": [
+   23201,
+   5844,
+   4540,
+   0.54
+  ],
+  "items": [
+   {
+    "label": "Integration and Restructuring Charges",
+    "cat": "RESTR",
+    "rev": 0,
+    "oi": 1140,
+    "ni": 909,
+    "eps": 0.11
+   }
+  ],
+  "adj": [
+   23201,
+   6984,
+   5449,
+   0.65
+  ]
+ },
+ "Q2-15": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312516441813/d121006dex991.htm",
+  "release_date": "2016-01-28",
+  "basis": "re-presented in the Q2 FY16 release (no adjusted figures in the Q2 FY15 release)",
+  "gaap": [
+   26470,
+   7776,
+   5863,
+   0.71
+  ],
+  "items": [
+   {
+    "label": "Net Impact from Revenue Deferrals",
+    "cat": "REVDEF",
+    "rev": -326,
+    "oi": -326,
+    "ni": -248,
+    "eps": -0.03
+   },
+   {
+    "label": "Integration and Restructuring Charges",
+    "cat": "RESTR",
+    "rev": 0,
+    "oi": 243,
+    "ni": 175,
+    "eps": 0.02
+   }
+  ],
+  "adj": [
+   26144,
+   7693,
+   5790,
+   0.7
+  ]
+ },
+ "Q3-15": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312516550250/d177964dex991.htm",
+  "release_date": "2016-04-21",
+  "basis": "re-presented in the Q3 FY16 release (no adjusted figures in the Q3 FY15 release)",
+  "gaap": [
+   21729,
+   6594,
+   4985,
+   0.61
+  ],
+  "items": [
+   {
+    "label": "Integration and Restructuring Charges",
+    "cat": "RESTR",
+    "rev": 0,
+    "oi": 190,
+    "ni": 119,
+    "eps": 0.01
+   }
+  ],
+  "adj": [
+   21729,
+   6784,
+   5104,
+   0.62
+  ]
+ },
+ "Q4-15": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312515258359/d89094dex991.htm",
+  "release_date": "2015-07-21",
+  "basis": "own release (net income effect from the Q4 FY16 release comparative: $8,262m; adjusted net income $5,067m)",
+  "gaap": [
+   22180,
+   -2053,
+   -3195,
+   -0.4
+  ],
+  "items": [
+   {
+    "label": "Impairment, Integration, and Restructuring Charges",
+    "cat": "RESTR",
+    "rev": 0,
+    "oi": 8438,
+    "ni": 8262,
+    "eps": 1.02
+   }
+  ],
+  "adj": [
+   22180,
+   6385,
+   5067,
+   0.62
+  ]
+ },
+ "2015": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312515258359/d89094dex991.htm",
+  "release_date": "2015-07-21",
+  "basis": "own release (Q4 FY15, twelve months; net income effect from the Q4 FY16 release comparative: $9,494m)",
+  "gaap": [
+   93580,
+   18161,
+   12193,
+   1.48
+  ],
+  "items": [
+   {
+    "label": "Impairment, Integration, and Restructuring Charges",
+    "cat": "RESTR",
+    "rev": 0,
+    "oi": 10011,
+    "ni": 9494,
+    "eps": 1.15
+   }
+  ],
+  "adj": [
+   93580,
+   28172,
+   21687,
+   2.63
+  ]
+ },
+ "Q1-16": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312515350712/d33912dex991.htm",
+  "release_date": "2015-10-22",
+  "basis": "own release",
+  "gaap": [
+   20379,
+   5793,
+   4620,
+   0.57
+  ],
+  "items": [
+   {
+    "label": "Net Impact from Windows 10 Revenue Deferrals",
+    "cat": "REVDEF",
+    "rev": 1281,
+    "oi": 1281,
+    "ni": 760,
+    "eps": 0.1
+   }
+  ],
+  "adj": [
+   21660,
+   7074,
+   5380,
+   0.67
+  ]
+ },
+ "Q2-16": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312516441813/d121006dex991.htm",
+  "release_date": "2016-01-28",
+  "basis": "own release",
+  "gaap": [
+   23796,
+   6026,
+   4998,
+   0.62
+  ],
+  "items": [
+   {
+    "label": "Net Impact from Revenue Deferrals",
+    "cat": "REVDEF",
+    "rev": 1897,
+    "oi": 1897,
+    "ni": 1277,
+    "eps": 0.16
+   }
+  ],
+  "adj": [
+   25693,
+   7923,
+   6275,
+   0.78
+  ]
+ },
+ "Q3-16": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312516550250/d177964dex991.htm",
+  "release_date": "2016-04-21",
+  "basis": "own release",
+  "gaap": [
+   20531,
+   5283,
+   3756,
+   0.47
+  ],
+  "items": [
+   {
+    "label": "Net Impact from Revenue Deferrals",
+    "cat": "REVDEF",
+    "rev": 1545,
+    "oi": 1545,
+    "ni": 1217,
+    "eps": 0.15
+   }
+  ],
+  "adj": [
+   22076,
+   6828,
+   4973,
+   0.62
+  ]
+ },
+ "Q4-16": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312516651176/d232602dex991.htm",
+  "release_date": "2016-07-19",
+  "basis": "own release",
+  "gaap": [
+   20614,
+   3080,
+   3122,
+   0.39
+  ],
+  "items": [
+   {
+    "label": "Net Impact from Windows 10 Revenue Deferrals",
+    "cat": "REVDEF",
+    "rev": 2028,
+    "oi": 2028,
+    "ni": 1467,
+    "eps": 0.19
+   },
+   {
+    "label": "Impairment, Integration, and Restructuring Expenses",
+    "cat": "RESTR",
+    "rev": 0,
+    "oi": 1110,
+    "ni": 895,
+    "eps": 0.11
+   }
+  ],
+  "adj": [
+   22642,
+   6218,
+   5484,
+   0.69
+  ]
+ },
+ "2016": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312516651176/d232602dex991.htm",
+  "release_date": "2016-07-19",
+  "basis": "own release (Q4 FY16, twelve months)",
+  "gaap": [
+   85320,
+   20182,
+   16798,
+   2.1
+  ],
+  "items": [
+   {
+    "label": "Net Impact from Windows 10 Revenue Deferrals",
+    "cat": "REVDEF",
+    "rev": 6643,
+    "oi": 6643,
+    "ni": 4635,
+    "eps": 0.58
+   },
+   {
+    "label": "Impairment, Integration, and Restructuring Expenses",
+    "cat": "RESTR",
+    "rev": 0,
+    "oi": 1110,
+    "ni": 895,
+    "eps": 0.11
+   }
+  ],
+  "adj": [
+   91963,
+   27935,
+   22328,
+   2.79
+  ]
+ },
+ "Q1-17": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312516742793/d274148dex991.htm",
+  "release_date": "2016-10-20",
+  "basis": "own release",
+  "gaap": [
+   20453,
+   5225,
+   4690,
+   0.6
+  ],
+  "items": [
+   {
+    "label": "Net Impact from Windows 10 Revenue Deferrals",
+    "cat": "REVDEF",
+    "rev": 1881,
+    "oi": 1881,
+    "ni": 1299,
+    "eps": 0.16
+   }
+  ],
+  "adj": [
+   22334,
+   7106,
+   5989,
+   0.76
+  ]
+ },
+ "Q2-17": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312517019726/d338385dex991.htm",
+  "release_date": "2017-01-26",
+  "basis": "own release",
+  "gaap": [
+   24090,
+   6177,
+   5200,
+   0.66
+  ],
+  "items": [
+   {
+    "label": "Net Impact from Windows 10 Revenue Deferrals",
+    "cat": "REVDEF",
+    "rev": 1976,
+    "oi": 1976,
+    "ni": 1315,
+    "eps": 0.17
+   }
+  ],
+  "adj": [
+   26066,
+   8153,
+   6515,
+   0.83
+  ]
+ },
+ "Q3-17": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312517142963/d373233dex991.htm",
+  "release_date": "2017-04-27",
+  "basis": "own release",
+  "gaap": [
+   22090,
+   5594,
+   4801,
+   0.61
+  ],
+  "items": [
+   {
+    "label": "Net Impact from Windows 10 Revenue Deferrals",
+    "cat": "REVDEF",
+    "rev": 1467,
+    "oi": 1467,
+    "ni": 914,
+    "eps": 0.12
+   }
+  ],
+  "adj": [
+   23557,
+   7061,
+   5715,
+   0.73
+  ]
+ },
+ "Q4-17": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312517232047/d425932dex991.htm",
+  "release_date": "2017-07-20",
+  "basis": "own release",
+  "gaap": [
+   23317,
+   5330,
+   6513,
+   0.83
+  ],
+  "items": [
+   {
+    "label": "Net Impact from Windows 10 Revenue Deferrals",
+    "cat": "REVDEF",
+    "rev": 1383,
+    "oi": 1383,
+    "ni": 909,
+    "eps": 0.12
+   },
+   {
+    "label": "Impairment and Restructuring Expenses",
+    "cat": "RESTR",
+    "rev": 0,
+    "oi": 306,
+    "ni": 243,
+    "eps": 0.03
+   }
+  ],
+  "adj": [
+   24700,
+   7019,
+   7665,
+   0.98
+  ]
+ },
+ "2017": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312517232047/d425932dex991.htm",
+  "release_date": "2017-07-20",
+  "basis": "own release (Q4 FY17, twelve months)",
+  "gaap": [
+   89950,
+   22326,
+   21204,
+   2.71
+  ],
+  "items": [
+   {
+    "label": "Net Impact from Windows 10 Revenue Deferrals",
+    "cat": "REVDEF",
+    "rev": 6707,
+    "oi": 6707,
+    "ni": 4437,
+    "eps": 0.57
+   },
+   {
+    "label": "Impairment and Restructuring Expenses",
+    "cat": "RESTR",
+    "rev": 0,
+    "oi": 306,
+    "ni": 243,
+    "eps": 0.03
+   }
+  ],
+  "adj": [
+   96657,
+   29339,
+   25884,
+   3.31
+  ]
+ },
+ "Q2-18": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312518027377/d468387dex991.htm",
+  "release_date": "2018-01-31",
+  "basis": "own release",
+  "gaap": [
+   28918,
+   8679,
+   -6302,
+   -0.82
+  ],
+  "items": [
+   {
+    "label": "Net TCJA Impact",
+    "cat": "TAX",
+    "rev": 0,
+    "oi": 0,
+    "ni": 13800,
+    "eps": 1.78
+   }
+  ],
+  "adj": [
+   28918,
+   8679,
+   7498,
+   0.96
+  ]
+ },
+ "Q4-18": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312518221458/d501766dex991.htm",
+  "release_date": "2018-07-19",
+  "basis": "own release",
+  "gaap": [
+   30085,
+   10379,
+   8873,
+   1.14
+  ],
+  "items": [
+   {
+    "label": "Net TCJA Impact",
+    "cat": "TAX",
+    "rev": 0,
+    "oi": 0,
+    "ni": -104,
+    "eps": -0.01
+   }
+  ],
+  "adj": [
+   30085,
+   10379,
+   8769,
+   1.13
+  ]
+ },
+ "2018": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312518221458/d501766dex991.htm",
+  "release_date": "2018-07-19",
+  "basis": "own release (Q4 FY18, twelve months)",
+  "gaap": [
+   110360,
+   35058,
+   16571,
+   2.13
+  ],
+  "items": [
+   {
+    "label": "Net TCJA Impact",
+    "cat": "TAX",
+    "rev": 0,
+    "oi": 0,
+    "ni": 13696,
+    "eps": 1.75
+   }
+  ],
+  "adj": [
+   110360,
+   35058,
+   30267,
+   3.88
+  ]
+ },
+ "Q2-19": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312519022553/d699806dex991.htm",
+  "release_date": "2019-01-30",
+  "basis": "own release",
+  "gaap": [
+   32471,
+   10258,
+   8420,
+   1.08
+  ],
+  "items": [
+   {
+    "label": "Net TCJA Impact",
+    "cat": "TAX",
+    "rev": 0,
+    "oi": 0,
+    "ni": 157,
+    "eps": 0.02
+   }
+  ],
+  "adj": [
+   32471,
+   10258,
+   8577,
+   1.1
+  ]
+ },
+ "Q4-19": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312519196501/d777737dex991.htm",
+  "release_date": "2019-07-18",
+  "basis": "own release",
+  "gaap": [
+   33717,
+   12405,
+   13187,
+   1.71
+  ],
+  "items": [
+   {
+    "label": "Net Tax Impact of Transfer of Intangible Properties",
+    "cat": "TAX",
+    "rev": 0,
+    "oi": 0,
+    "ni": -2567,
+    "eps": -0.34
+   }
+  ],
+  "adj": [
+   33717,
+   12405,
+   10620,
+   1.37
+  ]
+ },
+ "2019": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312519196501/d777737dex991.htm",
+  "release_date": "2019-07-18",
+  "basis": "own release (Q4 FY19, twelve months)",
+  "gaap": [
+   125843,
+   42959,
+   39240,
+   5.06
+  ],
+  "items": [
+   {
+    "label": "Net Tax Impact of Transfer of Intangible Properties",
+    "cat": "TAX",
+    "rev": 0,
+    "oi": 0,
+    "ni": -2567,
+    "eps": -0.33
+   },
+   {
+    "label": "Net Impact of the TCJA",
+    "cat": "TAX",
+    "rev": 0,
+    "oi": 0,
+    "ni": 157,
+    "eps": 0.02
+   }
+  ],
+  "adj": [
+   125843,
+   42959,
+   36830,
+   4.75
+  ]
+ },
+ "Q3-21": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312521134213/d179564dex991.htm",
+  "release_date": "2021-04-27",
+  "basis": "own release",
+  "gaap": [
+   41706,
+   17048,
+   15457,
+   2.03
+  ],
+  "items": [
+   {
+    "label": "Net income tax benefit related to India Supreme Court decision on withholding taxes",
+    "cat": "TAX",
+    "rev": 0,
+    "oi": 0,
+    "ni": -620,
+    "eps": -0.08
+   }
+  ],
+  "adj": [
+   41706,
+   17048,
+   14837,
+   1.95
+  ]
+ },
+ "2021": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312521225746/d200100dex991.htm",
+  "release_date": "2021-07-27",
+  "basis": "own release (Q4 FY21, twelve months)",
+  "gaap": [
+   168088,
+   69916,
+   61271,
+   8.05
+  ],
+  "items": [
+   {
+    "label": "Net income tax benefit related to India Supreme Court decision on withholding taxes",
+    "cat": "TAX",
+    "rev": 0,
+    "oi": 0,
+    "ni": -620,
+    "eps": -0.08
+   }
+  ],
+  "adj": [
+   168088,
+   69916,
+   60651,
+   7.97
+  ]
+ },
+ "Q1-22": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312521307941/d239488dex991.htm",
+  "release_date": "2021-10-26",
+  "basis": "own release",
+  "gaap": [
+   45317,
+   20238,
+   20505,
+   2.71
+  ],
+  "items": [
+   {
+    "label": "Net income tax benefit related to transfer of intangible properties",
+    "cat": "TAX",
+    "rev": 0,
+    "oi": 0,
+    "ni": -3291,
+    "eps": -0.44
+   }
+  ],
+  "adj": [
+   45317,
+   20238,
+   17214,
+   2.27
+  ]
+ },
+ "2022": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312522202034/d372382dex991.htm",
+  "release_date": "2022-07-26",
+  "basis": "own release (Q4 FY22, twelve months)",
+  "gaap": [
+   198270,
+   83383,
+   72738,
+   9.65
+  ],
+  "items": [
+   {
+    "label": "Net income tax benefit related to transfer of intangible properties",
+    "cat": "TAX",
+    "rev": 0,
+    "oi": 0,
+    "ni": -3291,
+    "eps": -0.44
+   }
+  ],
+  "adj": [
+   198270,
+   83383,
+   69447,
+   9.21
+  ]
+ },
+ "Q2-23": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312523014230/d406070dex991.htm",
+  "release_date": "2023-01-24",
+  "basis": "own release",
+  "gaap": [
+   52747,
+   20399,
+   16425,
+   2.2
+  ],
+  "items": [
+   {
+    "label": "Severance, hardware-related impairment, and lease consolidation costs",
+    "cat": "RESTR",
+    "rev": 0,
+    "oi": 1171,
+    "ni": 946,
+    "eps": 0.12
+   }
+  ],
+  "adj": [
+   52747,
+   21570,
+   17371,
+   2.32
+  ]
+ },
+ "2023": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000095017023034400/msft-ex99_1.htm",
+  "release_date": "2023-07-25",
+  "basis": "own release (Q4 FY23, twelve months)",
+  "gaap": [
+   211915,
+   88523,
+   72361,
+   9.68
+  ],
+  "items": [
+   {
+    "label": "Severance, hardware-related impairment, and lease consolidation costs",
+    "cat": "RESTR",
+    "rev": 0,
+    "oi": 1171,
+    "ni": 946,
+    "eps": 0.13
+   }
+  ],
+  "adj": [
+   211915,
+   89694,
+   73307,
+   9.81
+  ]
+ },
+ "Q1-25": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312525256310/msft-ex99_1.htm",
+  "release_date": "2025-10-29",
+  "basis": "re-presented in the Q1 FY26 release (OpenAI adjustment introduced in Q1 FY26; FY2025 releases published no adjusted figures)",
+  "gaap": [
+   65585,
+   30552,
+   24667,
+   3.3
+  ],
+  "items": [
+   {
+    "label": "Impact from investments in OpenAI",
+    "cat": "OPENAI",
+    "rev": 0,
+    "oi": 0,
+    "ni": 523,
+    "eps": 0.07
+   }
+  ],
+  "adj": [
+   65585,
+   30552,
+   25190,
+   3.37
+  ]
+ },
+ "Q2-25": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312526027198/msft-ex99_1.htm",
+  "release_date": "2026-01-28",
+  "basis": "re-presented in the Q2 FY26 release",
+  "gaap": [
+   69632,
+   31653,
+   24108,
+   3.23
+  ],
+  "items": [
+   {
+    "label": "Impact from investments in OpenAI",
+    "cat": "OPENAI",
+    "rev": 0,
+    "oi": 0,
+    "ni": 939,
+    "eps": 0.12
+   }
+  ],
+  "adj": [
+   69632,
+   31653,
+   25047,
+   3.35
+  ]
+ },
+ "Q3-25": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191457/msft-ex99_1.htm",
+  "release_date": "2026-04-29",
+  "basis": "re-presented in the Q3 FY26 release",
+  "gaap": [
+   70066,
+   32000,
+   25824,
+   3.46
+  ],
+  "items": [
+   {
+    "label": "Adjustment (impact from investments in OpenAI)",
+    "cat": "OPENAI",
+    "rev": 0,
+    "oi": 0,
+    "ni": 583,
+    "eps": 0.08
+   }
+  ],
+  "adj": [
+   70066,
+   32000,
+   26407,
+   3.54
+  ]
+ },
+ "Q4-25": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+  "release_date": "2026-07-29",
+  "basis": "re-presented in the Q4 FY26 release",
+  "gaap": [
+   76441,
+   34323,
+   27233,
+   3.65
+  ],
+  "items": [
+   {
+    "label": "Impact from OpenAI",
+    "cat": "OPENAI",
+    "rev": 0,
+    "oi": 0,
+    "ni": 1575,
+    "eps": 0.21
+   }
+  ],
+  "adj": [
+   76441,
+   34323,
+   28808,
+   3.86
+  ]
+ },
+ "2025": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+  "release_date": "2026-07-29",
+  "basis": "re-presented in the Q4 FY26 release (twelve months)",
+  "gaap": [
+   281724,
+   128528,
+   101832,
+   13.64
+  ],
+  "items": [
+   {
+    "label": "Impact from OpenAI",
+    "cat": "OPENAI",
+    "rev": 0,
+    "oi": 0,
+    "ni": 3620,
+    "eps": 0.49
+   }
+  ],
+  "adj": [
+   281724,
+   128528,
+   105452,
+   14.13
+  ]
+ },
+ "Q1-26": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312525256310/msft-ex99_1.htm",
+  "release_date": "2025-10-29",
+  "basis": "own release",
+  "gaap": [
+   77673,
+   37961,
+   27747,
+   3.72
+  ],
+  "items": [
+   {
+    "label": "Impact from investments in OpenAI",
+    "cat": "OPENAI",
+    "rev": 0,
+    "oi": 0,
+    "ni": 3086,
+    "eps": 0.41
+   }
+  ],
+  "adj": [
+   77673,
+   37961,
+   30833,
+   4.13
+  ]
+ },
+ "Q2-26": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312526027198/msft-ex99_1.htm",
+  "release_date": "2026-01-28",
+  "basis": "own release",
+  "gaap": [
+   81273,
+   38275,
+   38458,
+   5.16
+  ],
+  "items": [
+   {
+    "label": "Impact from investments in OpenAI",
+    "cat": "OPENAI",
+    "rev": 0,
+    "oi": 0,
+    "ni": -7583,
+    "eps": -1.02
+   }
+  ],
+  "adj": [
+   81273,
+   38275,
+   30875,
+   4.14
+  ]
+ },
+ "Q3-26": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191457/msft-ex99_1.htm",
+  "release_date": "2026-04-29",
+  "basis": "own release (\"Adjustment*\" column; footnote: impact from investments in OpenAI)",
+  "gaap": [
+   82886,
+   38398,
+   31778,
+   4.27
+  ],
+  "items": [
+   {
+    "label": "Adjustment (impact from investments in OpenAI)",
+    "cat": "OPENAI",
+    "rev": 0,
+    "oi": 0,
+    "ni": 14,
+    "eps": 0.0
+   }
+  ],
+  "adj": [
+   82886,
+   38398,
+   31792,
+   4.27
+  ]
+ },
+ "Q4-26": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+  "release_date": "2026-07-29",
+  "basis": "own release",
+  "gaap": [
+   90007,
+   40603,
+   35766,
+   4.81
+  ],
+  "items": [
+   {
+    "label": "Impact from OpenAI",
+    "cat": "OPENAI",
+    "rev": 0,
+    "oi": 0,
+    "ni": -480,
+    "eps": -0.07
+   }
+  ],
+  "adj": [
+   90007,
+   40603,
+   35286,
+   4.74
+  ]
+ },
+ "2026": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+  "release_date": "2026-07-29",
+  "basis": "own release (Q4 FY26, twelve months)",
+  "gaap": [
+   331839,
+   155237,
+   133749,
+   17.95
+  ],
+  "items": [
+   {
+    "label": "Impact from OpenAI",
+    "cat": "OPENAI",
+    "rev": 0,
+    "oi": 0,
+    "ni": -4963,
+    "eps": -0.67
+   }
+  ],
+  "adj": [
+   331839,
+   155237,
+   128786,
+   17.28
+  ]
+ }
+}

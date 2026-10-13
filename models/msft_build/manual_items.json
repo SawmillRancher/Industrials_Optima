@@ -1,0 +1,184 @@
+{
+ "price": {
+  "px": 541.0,
+  "date": "2026-10-12",
+  "src": "User-provided share price ($541, 12-Oct-2026); update to market."
+ },
+ "guidance_q1fy27": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965dex991.htm",
+  "filed": "2026-09-02",
+  "note": "Q1 FY27 outlook given on the 29-Jul-2026 earnings call and re-filed (with mechanical adjustments to the FY27 two-segment structure) in the 8-K of 2-Sep-2026, Item 7.01, Ex. 99.1 \"FY27 Segments and Investor Metrics\" - SEC-filed, so verified on EDGAR.",
+  "ai_rev": [
+   75750.0,
+   75450.0,
+   75150.0
+  ],
+  "dc_rev": [
+   15200.0,
+   14950.0,
+   14700.0
+  ],
+  "total_rev": [
+   90950.0,
+   90400.0,
+   89850.0
+  ],
+  "cogs": [
+   29600.0,
+   29700.0,
+   29800.0
+  ],
+  "opex": [
+   16800.0,
+   16850.0,
+   16900.0
+  ],
+  "other_inc": -100.0,
+  "etr": 0.2,
+  "capex_min": 50000.0,
+  "cases": "High / Mid / Low = Bull / Base / Bear; costs at the low end for Bull and the high end for Bear (cost ranges $29.6-29.8bn COGS, $16.8-16.9bn opex)."
+ },
+ "guidance_fy27_unverified": {
+  "status": "UNVERIFIED - not filed on EDGAR (earnings-call commentary, 29-Jul-2026, as reported by third parties)",
+  "text": "FY27: double-digit revenue and operating income growth; continued growth in capital expenditures.",
+  "src": [
+   "https://www.marketbeat.com/instant-alerts/microsoft-q4-earnings-call-highlights-2026-07-29/",
+   "https://www.nasdaq.com/articles/microsoft-q4-earnings-call-highlights",
+   "https://www.fool.com/earnings/call-transcripts/2026/08/07/microsoft-msft-q4-2026-earnings-call-transcript/"
+  ],
+  "rev_growth_min": 0.1,
+  "oi_growth_min": 0.1
+ },
+ "debt": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm (Note 10 - Debt; Note 14 - Leases)",
+  "face_total": 46136.0,
+  "carrying_total": 40294.0,
+  "carrying_current": 9227.0,
+  "carrying_lt": 31067.0,
+  "maturities_face": {
+   "2027": 9250.0,
+   "2028": 0.0,
+   "2029": 2001.0,
+   "2030": 0.0,
+   "2031": 500.0,
+   "thereafter": 34385.0
+  },
+  "note": "Long-term debt at 30-Jun-2026: face value $46,136m, carrying value $40,294m (current $9,227m; long-term $31,067m); the difference is unamortized discount and fair-value adjustments (mainly the Activision Blizzard notes assumed in Oct-2023). Maturities (face): FY27 $9,250m, FY28 nil, FY29 $2,001m, FY30 nil, FY31 $500m, thereafter $34,385m. No commercial paper outstanding.",
+  "int_exp_fy26": 3051.0,
+  "int_exp_fy25": 2385.0,
+  "fl_int_fy26": 2547.0,
+  "int_div_income_fy26": 3301.0,
+  "fl_liab": {
+   "2024": 27145.0,
+   "2025": 46172.0,
+   "2026": 66594.0
+  },
+  "fl_rou_added": {
+   "2024": 11633.0,
+   "2025": 20511.0,
+   "2026": 24608.0
+  },
+  "fl_principal": {
+   "2024": 1286.0,
+   "2025": 2283.0,
+   "2026": 3101.0
+  },
+  "fl_rate": 0.045,
+  "fl_note": "Finance leases (primarily datacenters): liabilities $66,594m at 30-Jun-2026 ($4,290m current, $62,304m in other long-term liabilities), weighted-average discount rate 4.5%, remaining term 13 years; right-of-use assets obtained $24,608m in FY26; principal repaid $3,101m; interest $2,547m. Leases signed but not yet commenced are disclosed separately in Note 14."
+ },
+ "amort_sched": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm (Note 9 - Intangible assets)",
+  "2027": 3097.0,
+  "2028": 2141.0,
+  "2029": 1944.0,
+  "2030": 1477.0,
+  "2031": 1128.0,
+  "thereafter": 8822.0
+ },
+ "ppe": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm (Note 7 - Property and equipment)",
+  "dep_fy26": 34300.0,
+  "dep_fy25": 22000.0,
+  "dep_fy24": 15200.0,
+  "gross_fy26": 431767.0,
+  "accdep_fy26": 118691.0,
+  "lives": "Software 3 years; servers and network equipment 2-6 years; buildings and improvements 5-15 years; leasehold improvements 3-20 years; furniture 1-10 years."
+ },
+ "buyback": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm (Note 15)",
+  "authorized": 60000.0,
+  "remaining_2026_06_30": 40600.0,
+  "fy26_program": 16719.0,
+  "fy26_withholding": 5600.0,
+  "note": "$60bn program approved 16-Sep-2024 (no expiry); $40.6bn remaining at 30-Jun-2026. FY26 repurchases $16.7bn under the program plus $5.6bn withholding for employee tax."
+ },
+ "dividend": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm (Note 15)",
+  "q_dps_declared_jun26": 0.91,
+  "fy26_dps": 3.64,
+  "fy25_dps": 3.32,
+  "note": "Quarterly dividend $0.91 declared 10-Jun-2026 (paid 10-Sep-2026). Microsoft raises the quarterly dividend each September (FY25 $0.83 -> FY26 $0.91, +9.6%)."
+ },
+ "shares": {
+  "src": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm (cover page)",
+  "out_2026_07_23": 7425.545491,
+  "out_2026_06_30": 7427.0
+ },
+ "ppa": {
+  "Q2-17": {
+   "deal": "LinkedIn (closed 8-Dec-2016)",
+   "src": "https://www.sec.gov/Archives/edgar/data/789019/000156459017014900/msft-10k_20170630.htm (Note - Business combinations)",
+   "cons": 25681.0,
+   "ca": 2807.0,
+   "ppe": 1529.0,
+   "intang": 7887.0,
+   "gw": 16803.0,
+   "onca": 0.0,
+   "cl": 1117.0,
+   "debt": 1323.0,
+   "ncl": 905.0,
+   "note": "Total purchase price $27,009m less cash acquired $1,328m; short-term investments $2,110m and other current assets $697m in current assets; deferred taxes $774m and other $131m in noncurrent liabilities."
+  },
+  "Q3-22": {
+   "deal": "Nuance Communications (closed 4-Mar-2022)",
+   "src": "https://www.sec.gov/Archives/edgar/data/789019/000095017024087843/msft-20240630.htm (Note - Business combinations; final Nuance allocation)",
+   "cons": 18761.0,
+   "ca": 0.0,
+   "ppe": 0.0,
+   "intang": 4365.0,
+   "gw": 16326.0,
+   "onca": 42.0,
+   "cl": 0.0,
+   "debt": 0.0,
+   "ncl": 1972.0,
+   "note": "Final allocation (FY2024 10-K): goodwill $16,326m, intangibles $4,365m, other assets $42m, other liabilities $(1,972)m incl. $986m of convertible notes (substantially redeemed)."
+  },
+  "Q2-24": {
+   "deal": "Activision Blizzard (closed 13-Oct-2023)",
+   "src": "https://www.sec.gov/Archives/edgar/data/789019/000095017024087843/msft-20240630.htm (Note - Business combinations)",
+   "cons": 62432.0,
+   "ca": 0.0,
+   "ppe": 0.0,
+   "intang": 21969.0,
+   "gw": 50969.0,
+   "onca": 2501.0,
+   "cl": 3617.0,
+   "debt": 2799.0,
+   "ncl": 6591.0,
+   "note": "Total purchase price $75,408m less cash acquired $12,976m; other assets $2,501m; long-term debt $2,799m; long-term income taxes $1,914m + deferred taxes $4,677m (noncurrent); other liabilities $3,617m (shown as current)."
+  }
+ },
+ "corrections": {
+  "Q1-26_cf": {
+   "dda": 8147.0,
+   "gains": -5921.0,
+   "note": "Q1 FY26 cash flow: the Q2 FY26 release six-month column reclassified $4,914m from \"Depreciation, amortization, and other\" to \"Net recognized losses (gains) on investments and derivatives\" (OpenAI equity-method results); CFO unchanged. Q1 is restated from the later year-to-date statement: D&A and other = H1 $17,345m - Q2 $9,198m = $8,147m (originally $13,061m); gains = $(1,007)m - $4,914m. Source: Q2 FY26 release (8-K 28-Jan-2026, Ex. 99.1)."
+  }
+ },
+ "exceptions": {
+  "FY2016": "Q1-Q3 FY16 as originally reported; the FY2016 10-K / Q4 release early-adopted ASU 2016-09 effective 1-Jul-2015 (excess tax benefits in the tax provision; cash-flow reclassification), so FY2016 tax, net income, CFO and CFF differ from the sum of the quarters by $302m.",
+  "FY2008_OI": "FY2008 operating income $22,492m as originally reported (FY2008 10-K); later 10-K comparatives (XBRL) show $22,271m. The model keeps the original.",
+  "FY2006_07_cash": "FY2006-07 10-K cash-flow statements present \"Net change in cash and equivalents\" before the effect of exchange rates."
+ },
+ "useful_life": "Q1 FY27 outlook: capital expenditures \"expected to be over $50 billion including the impact of the useful life update\" (8-K 2-Sep-2026). The update is not quantified in the filings reviewed."
+}

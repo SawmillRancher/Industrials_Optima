@@ -1,0 +1,367 @@
+{
+ "period": "2021",
+ "fy": 2021,
+ "q": null,
+ "period_end": "2021-06-30",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/789019/000119312521225746/d200100dex991.htm",
+  "release_date": "2021-07-27",
+  "filing": "https://www.sec.gov/Archives/edgar/data/789019/000156459021039151/msft-10k_20210630.htm"
+ },
+ "notes": [
+  "Annual figures from the Q4 release twelve-month columns (cross-checked to the 10-K XBRL facts in check_data.py)."
+ ],
+ "is": {
+  "rev_prod": 71074.0,
+  "rev_serv": 97014.0,
+  "rev": 168088.0,
+  "cogs_prod": 18219.0,
+  "cogs_serv": 34013.0,
+  "cogs": 52232.0,
+  "gp": 115856.0,
+  "rd": 20716.0,
+  "sm": 20117.0,
+  "ga": 5107.0,
+  "oi": 69916.0,
+  "oth": 1186.0,
+  "ebt": 71102.0,
+  "tax": 9831.0,
+  "ni": 61271.0,
+  "eps_b": 8.12,
+  "eps_d": 8.05,
+  "sh_b": 7547.0,
+  "sh_d": 7608.0,
+  "lines_raw": [
+   [
+    "Revenue: / Product",
+    71074.0
+   ],
+   [
+    "Revenue: / Service and other",
+    97014.0
+   ],
+   [
+    "Revenue: / Total revenue",
+    168088.0
+   ],
+   [
+    "Cost of revenue: / Product",
+    18219.0
+   ],
+   [
+    "Cost of revenue: / Service and other",
+    34013.0
+   ],
+   [
+    "Cost of revenue: / Total cost of revenue",
+    52232.0
+   ],
+   [
+    "Cost of revenue: / Gross margin",
+    115856.0
+   ],
+   [
+    "Cost of revenue: / Research and development",
+    20716.0
+   ],
+   [
+    "Cost of revenue: / Sales and marketing",
+    20117.0
+   ],
+   [
+    "Cost of revenue: / General and administrative",
+    5107.0
+   ],
+   [
+    "Cost of revenue: / Operating income",
+    69916.0
+   ],
+   [
+    "Cost of revenue: / Other income, net",
+    1186.0
+   ],
+   [
+    "Cost of revenue: / Income before income taxes",
+    71102.0
+   ],
+   [
+    "Cost of revenue: / Provision for income taxes",
+    9831.0
+   ],
+   [
+    "Cost of revenue: / Net income",
+    61271.0
+   ],
+   [
+    "Earnings per share: / Basic",
+    8.12
+   ],
+   [
+    "Earnings per share: / Diluted",
+    8.05
+   ],
+   [
+    "Weighted average shares outstanding: / Basic",
+    7547.0
+   ],
+   [
+    "Weighted average shares outstanding: / Diluted",
+    7608.0
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 14224.0,
+  "sti": 116110.0,
+  "ar": 38043.0,
+  "inv": 2636.0,
+  "tca": 184406.0,
+  "ppe": 59715.0,
+  "rou": 11088.0,
+  "eqinv": 5984.0,
+  "gw": 49711.0,
+  "intang": 7800.0,
+  "ta": 333779.0,
+  "ap": 15163.0,
+  "cltd": 8072.0,
+  "ucr": 41525.0,
+  "tcl": 88657.0,
+  "ltd": 50074.0,
+  "lucr": 2616.0,
+  "lease_ltl": 9629.0,
+  "tl": 191791.0,
+  "sh_out": 7519.0,
+  "eq": 141988.0,
+  "tle": 333779.0
+ },
+ "cf": {
+  "ni": 61271.0,
+  "dda": 11686.0,
+  "sbc": 6118.0,
+  "def": -150.0,
+  "cfo": 76740.0,
+  "debt_rep": -3750.0,
+  "iss": 1693.0,
+  "bb": -27385.0,
+  "div": -16521.0,
+  "cff": -48486.0,
+  "capex": -20622.0,
+  "acq": -8909.0,
+  "cfi": -27577.0,
+  "fx": -29.0,
+  "net": 648.0,
+  "beg": 13576.0,
+  "end": 14224.0,
+  "ytd_months": 12,
+  "lines_raw": [
+   [
+    "Operations / Net income",
+    61271.0
+   ],
+   [
+    "Adjustments to reconcile net income to net cash from operations: / Depreciation, amortization, and other",
+    11686.0
+   ],
+   [
+    "Adjustments to reconcile net income to net cash from operations: / Stock-based compensation expense",
+    6118.0
+   ],
+   [
+    "Adjustments to reconcile net income to net cash from operations: / Net recognized gains on investments and derivatives",
+    -1249.0
+   ],
+   [
+    "Adjustments to reconcile net income to net cash from operations: / Deferred income taxes",
+    -150.0
+   ],
+   [
+    "Changes in operating assets and liabilities: / Accounts receivable",
+    -6481.0
+   ],
+   [
+    "Changes in operating assets and liabilities: / Inventories",
+    -737.0
+   ],
+   [
+    "Changes in operating assets and liabilities: / Other current assets",
+    -932.0
+   ],
+   [
+    "Changes in operating assets and liabilities: / Other long-term assets",
+    -3459.0
+   ],
+   [
+    "Changes in operating assets and liabilities: / Accounts payable",
+    2798.0
+   ],
+   [
+    "Changes in operating assets and liabilities: / Unearned revenue",
+    4633.0
+   ],
+   [
+    "Changes in operating assets and liabilities: / Income taxes",
+    -2309.0
+   ],
+   [
+    "Changes in operating assets and liabilities: / Other current liabilities",
+    4149.0
+   ],
+   [
+    "Changes in operating assets and liabilities: / Other long-term liabilities",
+    1402.0
+   ],
+   [
+    "Changes in operating assets and liabilities: / Net cash from operations",
+    76740.0
+   ],
+   [
+    "Financing / Cash premium on debt exchange",
+    -1754.0
+   ],
+   [
+    "Financing / Repayments of debt",
+    -3750.0
+   ],
+   [
+    "Financing / Common stock issued",
+    1693.0
+   ],
+   [
+    "Financing / Common stock repurchased",
+    -27385.0
+   ],
+   [
+    "Financing / Common stock cash dividends paid",
+    -16521.0
+   ],
+   [
+    "Financing / Other, net",
+    -769.0
+   ],
+   [
+    "Financing / Net cash used in financing",
+    -48486.0
+   ],
+   [
+    "Investing / Additions to property and equipment",
+    -20622.0
+   ],
+   [
+    "Investing / Acquisition of companies, net of cash acquired, and purchases of intangible and other assets",
+    -8909.0
+   ],
+   [
+    "Investing / Purchases of investments",
+    -62924.0
+   ],
+   [
+    "Investing / Maturities of investments",
+    51792.0
+   ],
+   [
+    "Investing / Sales of investments",
+    14008.0
+   ],
+   [
+    "Investing / Other, net",
+    -922.0
+   ],
+   [
+    "Investing / Net cash used in investing",
+    -27577.0
+   ],
+   [
+    "Investing / Effect of foreign exchange rates on cash and cash equivalents",
+    -29.0
+   ],
+   [
+    "Investing / Net change in cash and cash equivalents",
+    648.0
+   ],
+   [
+    "Investing / Cash and cash equivalents, beginning of period",
+    13576.0
+   ],
+   [
+    "Investing / Cash and cash equivalents, end of period",
+    14224.0
+   ]
+  ]
+ },
+ "seg": {
+  "rev||Productivity and Business Processes": 53915.0,
+  "rev||Intelligent Cloud": 60080.0,
+  "rev||More Personal Computing": 54093.0,
+  "rev||Total": 168088.0,
+  "oi||Productivity and Business Processes": 24351.0,
+  "oi||Intelligent Cloud": 26126.0,
+  "oi||More Personal Computing": 19439.0,
+  "oi||Total": 69916.0
+ },
+ "seg_py": {
+  "rev||Productivity and Business Processes": 46398.0,
+  "rev||Intelligent Cloud": 48366.0,
+  "rev||More Personal Computing": 48251.0,
+  "rev||Total": 143015.0,
+  "oi||Productivity and Business Processes": 18724.0,
+  "oi||Intelligent Cloud": 18324.0,
+  "oi||More Personal Computing": 15911.0,
+  "oi||Total": 52959.0
+ },
+ "py": {
+  "is": {
+   "rev_prod": 68041.0,
+   "rev_serv": 74974.0,
+   "rev": 143015.0,
+   "cogs_prod": 16017.0,
+   "cogs_serv": 30061.0,
+   "cogs": 46078.0,
+   "gp": 96937.0,
+   "rd": 19269.0,
+   "sm": 19598.0,
+   "ga": 5111.0,
+   "oi": 52959.0,
+   "oth": 77.0,
+   "ebt": 53036.0,
+   "tax": 8755.0,
+   "ni": 44281.0,
+   "eps_b": 5.82,
+   "eps_d": 5.76,
+   "sh_b": 7610.0,
+   "sh_d": 7683.0
+  }
+ },
+ "ngaap": {
+  "ctx": "cial results for the fiscal year ended June 30, 2021, reported in accordance with GAAP to non-GAAP financial results. All growth comparisons relate to the corresponding period in the last fiscal year.",
+  "cols": [
+   "($ in millions, except per share amounts)",
+   "Revenue",
+   "Operating Income",
+   "Net Income",
+   "Diluted Earnings per Share"
+  ],
+  "gaap": [
+   168088.0,
+   69916.0,
+   61271.0,
+   8.05
+  ],
+  "items": [
+   [
+    "Net income tax benefit related to India Supreme Court decision on withholding taxes",
+    [
+     0.0,
+     0.0,
+     -620.0,
+     -0.08
+    ]
+   ]
+  ],
+  "adj": [
+   168088.0,
+   69916.0,
+   60651.0,
+   7.97
+  ]
+ }
+}
