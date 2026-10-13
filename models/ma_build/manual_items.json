@@ -1,0 +1,147 @@
+{
+ "price": {
+  "px": 595.0,
+  "date": "2026-10-13",
+  "src": "User-provided share price (13-Oct-2026); update to market. For reference: Q2-26 average repurchase price $498.97 (Q2-26 10-Q Part II Item 2)."
+ },
+ "guidance_fy26": {
+  "status": "UNVERIFIED \u2014 given on the Q2-26 earnings call (30-Jul-2026), not in any SEC filing (the 8-K Ex. 99.1 release has no outlook; slide decks are no longer furnished). Wording from third-party call transcripts (Yahoo Finance / Motley Fool / Globe and Mail / Investing.com) found by web search; investor.mastercard.com is not reachable from the build environment.",
+  "net_revenue": "FY26 net revenue growth at the high end of a low-double-digits rate (raised: higher within the range than prior expectations), currency-neutral, excluding acquisitions; FX ~1 ppt tailwind. Q3-26: high end of low double digits currency-neutral ex-acquisitions.",
+  "opex": "FY26 operating expense growth (adjusted, currency-neutral, ex-acquisitions) at a low-double-digits rate; FX 0.5\u20131 ppt headwind. Q3-26: low double digits.",
+  "other": "Q3-26 other income (expense) about $(125)m excluding equity-investment gains/losses (higher interest after the June-2026 notes).",
+  "tax": "Non-GAAP tax rate 20\u201321% for Q3 and Q4 2026.",
+  "model_rev_growth_reported": [
+   0.14,
+   0.135,
+   0.13
+  ],
+  "model_rev_note": "Model end-points (reported USD growth): currency-neutral 13.0 / 12.5 / 12.0% (high end of low double digits) + ~1 ppt FX = 14.0 / 13.5 / 13.0% (Bull / Base / Bear). H1-26 actual +15% reported, +12% currency-neutral.",
+  "model_opex_growth_reported": [
+   0.11,
+   0.115,
+   0.12
+  ],
+  "model_opex_note": "Model end-points for adjusted operating expense growth (reported USD): low double digits currency-neutral (~10\u201311%) + 0.5\u20131 ppt FX headwind = 11.0 / 11.5 / 12.0% (Bull = low end). H1-26 actual +11% reported, +9% currency-neutral.",
+  "q3_other": -125.0,
+  "tax_pt": 0.205
+ },
+ "revcat_recast": {
+  "2020": {
+   "rc_pn": 9897,
+   "rc_vas": 5404,
+   "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139123000020/ma-20221231.htm (MD&A net revenue table, 2020 comparative)"
+  },
+  "2021": {
+   "rc_pn": 11943,
+   "rc_vas": 6941,
+   "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139123000020/ma-20221231.htm (2021 comparative)"
+  },
+  "Q1-21": {
+   "rc_pn": 2648,
+   "rc_vas": 1507,
+   "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139123000131/ma-20230630.htm six months 2021 (5,523 / 3,160) \u2212 three months Q2-21 (2,875 / 1,653); derived"
+  },
+  "Q2-21": {
+   "rc_pn": 2875,
+   "rc_vas": 1653,
+   "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139123000131/ma-20230630.htm (three months 2021 column)"
+  },
+  "Q3-21": {
+   "rc_pn": 3234,
+   "rc_vas": 1751,
+   "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139123000157/ma-20230930.htm (three months 2021 column)"
+  },
+  "Q4-21": {
+   "rc_pn": 3186,
+   "rc_vas": 2030,
+   "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139123000020/ma-20221231.htm FY2021 \u2212 https://www.sec.gov/Archives/edgar/data/1141391/000114139123000157/ma-20230930.htm nine months 2021 (8,757 / 4,911); derived"
+  },
+  "Q1-22": {
+   "rc_pn": 3399,
+   "rc_vas": 1768,
+   "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139123000059/ma-20230331.htm (prior-year column)"
+  },
+  "Q2-22": {
+   "rc_pn": 3609,
+   "rc_vas": 1888,
+   "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139123000131/ma-20230630.htm (prior-year column)"
+  },
+  "Q3-22": {
+   "rc_pn": 3765,
+   "rc_vas": 1991,
+   "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139123000157/ma-20230930.htm (prior-year column)"
+  },
+  "Q4-22": {
+   "rc_pn": 3585,
+   "rc_vas": 2232,
+   "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139123000020/ma-20221231.htm FY2022 \u2212 https://www.sec.gov/Archives/edgar/data/1141391/000114139123000157/ma-20230930.htm nine months 2022 (10,773 / 5,647); derived"
+  }
+ },
+ "deals": {
+  "bvnk": {
+   "name": "BVNK Holdings Limited (stablecoin payments infrastructure)",
+   "consideration": 1500.0,
+   "contingent_max": 300.0,
+   "status": "Pending at 30-Jun-2026: agreement March 2026, 100% for $1.5bn plus up to $300m contingent consideration; expected to complete before the end of Q3-2026 (Q2-26 10-Q Note 2). Closing not yet reported in an SEC filing; the model assumes 30-Sep-2026 (assumption). Revenue, profit and PPA not disclosed.",
+   "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm"
+  },
+  "recorded_future": {
+   "name": "Recorded Future (RF Ultimate Parent, Inc.)",
+   "date": "2024-12",
+   "consideration": 2650.0,
+   "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm Note 2 (\u2248$2.7bn; goodwill \u2248$1.7bn)"
+  }
+ },
+ "debt": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm Note 9 (Debt)",
+  "at_2026_06_30": "Total debt $24,643m at 30-Jun-2026: senior notes $24,088m principal (29 USD / EUR tranches, 1.0\u20135.0% coupons, Nov-2026 to Mar-2051), commercial paper $710m (3.84%), less $134m discount / costs and $21m hedge adjustment. $8bn revolver to Nov-2030 undrawn; CP + revolver capacity $8bn combined.",
+  "maturities": {
+   "2026": 750.0,
+   "2027": 1912.0,
+   "2028": 4500.0,
+   "2029": 3005.0,
+   "2030": 1671.0
+  },
+  "maturity_note": "Principal by year (Q2-26 10-Q Note 9): Nov-2026 $750m (2.95%); 2027 $1,912m (Mar $1,000m 3.3%; Dec EUR $912m 2.1%); 2028 $4,500m (Jan $750m, Feb $500m, Mar $1,500m incl. $300m floating, Jun $1,750m incl. $500m floating); 2029 $3,005m (Feb EUR $855m 1.0%, Jun $1,000m 2.95% and $1,150m 4.425%); 2030 $1,671m (Mar $1,500m 3.35%, Dec EUR $171m 2.5%). EUR tranches at the 30-Jun-2026 USD carrying amounts.",
+  "cp": 710.0,
+  "notes_principal": 24088.0,
+  "coupon_wavg": 0.038,
+  "coupon_note": "Weighted-average coupon \u22483.8% on $24.1bn of notes (principal-weighted, floating tranches at ~SOFR + 0.4%); Q2-26 interest expense $218m (before the full quarter of the $5.0bn June-2026 notes)."
+ },
+ "amort_sched": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm Note 10 (estimated future amortization of finite-lived intangibles incl. capitalized software, at 31-Dec-2025)",
+  "2026": 801.0,
+  "2027": 765.0,
+  "2028": 692.0,
+  "2029": 647.0,
+  "2030": 569.0,
+  "thereafter": 1908.0
+ },
+ "buyback": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm Note 10; Q2-26 release",
+  "remaining_2026_07_27": 7800.0,
+  "q3_qtd": 700.0,
+  "note": "$14.0bn program (Dec-2025) in use from Mar-2026; $8,528m remaining at 30-Jun-2026, $7.8bn at 27-Jul-2026 after $0.7bn repurchased in July (1.3m shares). H1-26 repurchases $8,933m (cash flow)."
+ },
+ "shares": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm cover page and Note 10",
+  "jun30_2026": 877.2,
+  "cover_2026_07_27": 876.0,
+  "note": "Class A 870.7m + Class B 6.5m at 30-Jun-2026; cover page 27-Jul-2026: 869,464,115 Class A + 6,545,825 Class B."
+ },
+ "dividend": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm MD&A Dividends and Share Repurchases",
+  "q": 0.87,
+  "note": "Quarterly dividend $0.87 (declared 9-Dec-2025, 10-Feb-2026, 16-Jun-2026). Mastercard raises the dividend each December (declared for the following year)."
+ },
+ "restructuring": {
+  "q1_26": 202.0,
+  "src": "Q2-26 release (https://www.sec.gov/Archives/edgar/data/1141391/000114139126000081/ma06302026-exx991xearnings.htm): restructuring charge $202m in Q1-26, excluded from adjusted results."
+ },
+ "corrections": {
+  "Q1-26": {
+   "cf_end": 10764.0,
+   "src": "Q1-26 release (8-K 30-Apr-2026, Ex. 99.1) prints end-of-period cash, cash equivalents, restricted cash and restricted cash equivalents as 13,248 (= the beginning balance). The Q1-26 10-Q (https://www.sec.gov/Archives/edgar/data/1141391/000114139126000031/ma-20260331.htm) shows 10,764 = 13,248 \u2212 2,484 net decrease, which also ties to the 31-Mar-2026 balance sheet (cash + restricted cash + restricted security deposits). 10-Q figure used."
+  }
+ }
+}

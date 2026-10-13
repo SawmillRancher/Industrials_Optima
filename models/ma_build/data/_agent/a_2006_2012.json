@@ -1,0 +1,647 @@
+[
+ {
+  "period": "2006",
+  "sources": {
+   "release": "https://www.sec.gov/Archives/edgar/data/1141391/000119312507024963/dex991.htm",
+   "filing": "https://www.sec.gov/Archives/edgar/data/1141391/000119312507042384/d10k.htm"
+  },
+  "ngaap": {
+   "published": true,
+   "gaap": {
+    "opex": 3097,
+    "oth_inc": 65,
+    "ni": 50,
+    "eps_d": 0.37,
+    "etr": 82.9,
+    "op_margin": 6.9
+   },
+   "items": [
+    {
+     "label": "Litigation settlements",
+     "cat": "LEGAL",
+     "opex_pre": 25,
+     "oth_pre": null,
+     "ni": null,
+     "eps": null
+    },
+    {
+     "label": "Contribution of common stock to the MasterCard Foundation",
+     "cat": "FOUNDATION",
+     "opex_pre": 395,
+     "oth_pre": null,
+     "ni": 395,
+     "eps": null
+    },
+    {
+     "label": "Interest income on IPO proceeds which were used for redemption",
+     "cat": "OTHER",
+     "opex_pre": null,
+     "oth_pre": -7,
+     "ni": null,
+     "eps": null
+    }
+   ],
+   "adj": {
+    "rev": null,
+    "opex": 2677,
+    "oth_inc": 58,
+    "ni": 457,
+    "eps_d": 3.37,
+    "etr": 35.4,
+    "op_margin": 19.5
+   },
+   "def_note": "Full-year 2006 net income, EPS and total operating expenses 'each of which excludes special items': the $395 million non-deductible donation of Class A stock to the MasterCard Foundation, $25 million reserve for litigation settlements and $7 million interest income earned on IPO proceeds used for the Class B redemption."
+  },
+  "kpi": {
+   "rev_g": 13.2,
+   "rev_g_cn": null,
+   "gdv_g_local": 14.9,
+   "xb_g_local": null,
+   "xb_label": null,
+   "sw_g": null,
+   "sw_label": "Processed transactions",
+   "cards_bn": 0.817
+  },
+  "revcat": {
+   "basis": "operations_fees_assessments",
+   "fy": [
+    [
+     "Authorization, settlement and switch",
+     1169
+    ],
+    [
+     "Currency conversion and cross border",
+     622
+    ],
+    [
+     "Acceptance development fees",
+     217
+    ],
+    [
+     "Warning bulletin fees",
+     70
+    ],
+    [
+     "Connectivity",
+     84
+    ],
+    [
+     "Consulting and research fees",
+     76
+    ],
+    [
+     "Other operations fees",
+     449
+    ],
+    [
+     "Rebates",
+     -257
+    ],
+    [
+     "Gross assessments",
+     1790
+    ],
+    [
+     "Rebates and incentives",
+     -894
+    ]
+   ]
+  },
+  "notes": "Release in USD thousands; reconciliation table already in $ millions. ngaap: the reconciliation gives special items only in total below operating income (pre-tax 413, tax 6, net income +407, diluted EPS +3.00); no per-item after-tax split is published. Foundation stock contribution ni=395 is computed: the release states it was not tax deductible and the ETR reconciliation shows net income 50 -> 445 (+395) excluding only the stock donation. Litigation (25) and IPO interest income (-7) combined NI effect = 407 - 395 = +12 (computed, not split); their ni/eps left null, so the NI/EPS self-check cannot close at item level (total bridge 50 + 407 = 457 and 0.37 + 3.00 = 3.37 tie). opex self-check 3097 - 420 = 2677 OK; oth 65 - 7 = 58 OK. adj.etr 35.4 is from the separate 'Reconciliation to Effective Tax Rate', which excludes only the stock donation (also = 250/707 from the main table). kpi: rev_g_cn null (release says currency had a 'negligible impact' on full-year revenue; no FX-adjusted rate stated). gdv_g_local 14.9 is from the release's twelve-month operating-performance table (Worldwide, local), as the text gives GDV growth only for Q4 (13.8%). Full-year processed-transaction and cross-border growth not stated in the release text (Q4 processed transactions +17.4%); the 10-K states processed transactions +17.5% and cross-border volumes +14.7% for 2006 but these are not release figures, so left null. cards_bn 0.817 = 817 million MasterCard-branded cards at 31-Dec-2006 (excludes Maestro/Cirrus). revcat: the FY2006 10-K does not use the legacy five-category presentation; it presents operations fees (seven components less rebates) and assessments (gross assessments less rebates and incentives). Recorded as presented with basis 'operations_fees_assessments' (not one of the schema's two bases). Lines sum to 3,326 = net revenue. No 10-K recasts 2006 into the legacy categories (the FY2009 10-K recast covers 2007-2009 only)."
+ },
+ {
+  "period": "2007",
+  "sources": {
+   "release": "https://www.sec.gov/Archives/edgar/data/1141391/000119312508016247/dex991.htm",
+   "filing": "https://www.sec.gov/Archives/edgar/data/1141391/000119312508034694/d10k.htm"
+  },
+  "ngaap": {
+   "published": true,
+   "gaap": {
+    "opex": 2959,
+    "oth_inc": 563,
+    "ni": 1086,
+    "eps_d": 8.0,
+    "etr": 35.0,
+    "op_margin": 27.2
+   },
+   "items": [
+    {
+     "label": "Litigation settlements",
+     "cat": "LEGAL",
+     "opex_pre": 3,
+     "oth_pre": null,
+     "ni": null,
+     "eps": null
+    },
+    {
+     "label": "Other income related to a settlement agreement to discontinue the company's sponsorship of the 2010 and 2014 World Cup soccer events",
+     "cat": "OTHER",
+     "opex_pre": null,
+     "oth_pre": -90,
+     "ni": null,
+     "eps": null
+    }
+   ],
+   "adj": {
+    "rev": null,
+    "opex": 2956,
+    "oth_inc": 473,
+    "ni": 1029,
+    "eps_d": 7.58,
+    "etr": null,
+    "op_margin": 27.3
+   },
+   "def_note": "Full-year 2007 net income, EPS and total operating expenses 'each of which excludes special items': a $3.4 million litigation settlement reserve and $90 million other income from the settlement to discontinue sponsorship of the 2010 and 2014 World Cups. Redecard gains (after-tax $254 million, $1.87 per share) were NOT excluded."
+  },
+  "kpi": {
+   "rev_g": 22.3,
+   "rev_g_cn": null,
+   "gdv_g_local": 14.4,
+   "xb_g_local": null,
+   "xb_label": null,
+   "sw_g": null,
+   "sw_label": "Processed transactions",
+   "cards_bn": 0.916
+  },
+  "revcat": {
+   "basis": "operations_fees_assessments",
+   "fy": [
+    [
+     "Authorization, settlement and switch",
+     1382
+    ],
+    [
+     "Currency conversion and cross border",
+     868
+    ],
+    [
+     "Acceptance development fees",
+     271
+    ],
+    [
+     "Warning bulletin fees",
+     74
+    ],
+    [
+     "Connectivity",
+     101
+    ],
+    [
+     "Consulting and research fees",
+     88
+    ],
+    [
+     "Other operations fees",
+     551
+    ],
+    [
+     "Rebates",
+     -332
+    ],
+    [
+     "Gross assessments",
+     2056
+    ],
+    [
+     "Rebates and incentives",
+     -992
+    ]
+   ],
+   "fy_legacy_recast": {
+    "source": "https://www.sec.gov/Archives/edgar/data/1141391/000119312510034065/d10k.htm",
+    "basis": "legacy",
+    "fy": [
+     [
+      "Domestic assessments",
+      2099
+     ],
+     [
+      "Cross-border volume fees",
+      1180
+     ],
+     [
+      "Transaction processing fees",
+      1490
+     ],
+     [
+      "Other revenues",
+      622
+     ],
+     [
+      "Rebates and incentives (contra-revenues)",
+      -1324
+     ]
+    ]
+   }
+  },
+  "notes": "Release in USD thousands; reconciliation in $ millions. Litigation item shown as 3 in the table (3,400 thousand = $3.4m in the income statement and text). ngaap: only total special-item effects published: pre-tax -87, tax +30, net income -57, diluted EPS -0.42; per-item ni/eps not published, left null (item-level NI/EPS self-check cannot close; totals tie: 1086 - 57 = 1029, 8.00 - 0.42 = 7.58). opex 2959 - 3 = 2956 OK; oth 563 - 90 = 473 OK. adj.etr null: release gives no adjusted 2007 ETR (computed 556/1584 = 35.1%; the FY2008 release later shows a 2007 non-GAAP ETR of 35.0% excluding litigation only). kpi: rev_g_cn null - release says currency 'contributed 3.1% of the increase' (22.3 - 3.1 = 19.2 would be computed, not stated). gdv_g_local 14.4 from the twelve-month operating-performance table (text gives Q4 only: 15.2%). Full-year processed transactions and cross-border growth not stated (Q4: +17.2% and +27.7%). cards_bn 0.916 = 916 million MasterCard-branded cards. revcat: FY2007 10-K presents operations fees / assessments (basis 'operations_fees_assessments'); lines sum to 4,067 vs net revenue 4,068 (rounding, within +-1). Legacy five-category recast of 2007 from the FY2009 10-K added as fy_legacy_recast (sums to 4,067; within +-1)."
+ },
+ {
+  "period": "2008",
+  "sources": {
+   "release": "https://www.sec.gov/Archives/edgar/data/1141391/000119312509019441/dex991.htm",
+   "filing": "https://www.sec.gov/Archives/edgar/data/1141391/000119312509033062/d10k.htm"
+  },
+  "ngaap": {
+   "published": true,
+   "gaap": {
+    "opex": 5526,
+    "oth_inc": 151,
+    "ni": -254,
+    "eps_d": -1.95,
+    "etr": 33.7,
+    "op_margin": -10.7
+   },
+   "items": [
+    {
+     "label": "Litigation settlements",
+     "cat": "LEGAL",
+     "opex_pre": 2483,
+     "oth_pre": null,
+     "ni": 1542,
+     "eps": null
+    },
+    {
+     "label": "Gain from the termination of a customer business agreement",
+     "cat": "OTHER",
+     "opex_pre": null,
+     "oth_pre": -75,
+     "ni": -48,
+     "eps": null
+    }
+   ],
+   "adj": {
+    "rev": null,
+    "opex": 3043,
+    "oth_inc": 76,
+    "ni": 1239,
+    "eps_d": 9.45,
+    "etr": 38.7,
+    "op_margin": 39.0
+   },
+   "def_note": "Special items for full-year 2008: a $1.65 billion charge for the American Express antitrust settlement, an $827.5 million net charge for the Discover settlement, a $6 million charge for a California consumer protection settlement, and a $75 million gain in other income from the termination of a customer business agreement. Redecard gains ($0.42 per share) were not excluded."
+  },
+  "kpi": {
+   "rev_g": 22.7,
+   "rev_g_cn": null,
+   "gdv_g_local": 10.7,
+   "xb_g_local": null,
+   "xb_label": null,
+   "sw_g": null,
+   "sw_label": "Processed transactions",
+   "cards_bn": 0.981
+  },
+  "revcat": {
+   "basis": "operations_fees_assessments",
+   "fy": [
+    [
+     "Authorization, settlement and switch",
+     1655
+    ],
+    [
+     "Currency conversion and cross border",
+     1148
+    ],
+    [
+     "Acceptance development fees",
+     305
+    ],
+    [
+     "Warning bulletin fees",
+     75
+    ],
+    [
+     "Connectivity",
+     117
+    ],
+    [
+     "Consulting and research fees",
+     92
+    ],
+    [
+     "Other operations fees",
+     724
+    ],
+    [
+     "Rebates",
+     -357
+    ],
+    [
+     "Gross assessments",
+     2345
+    ],
+    [
+     "Rebates and incentives",
+     -1112
+    ]
+   ],
+   "fy_legacy_recast": {
+    "source": "https://www.sec.gov/Archives/edgar/data/1141391/000119312510034065/d10k.htm",
+    "basis": "legacy",
+    "fy": [
+     [
+      "Domestic assessments",
+      2386
+     ],
+     [
+      "Cross-border volume fees",
+      1547
+     ],
+     [
+      "Transaction processing fees",
+      1777
+     ],
+     [
+      "Other revenues",
+      751
+     ],
+     [
+      "Rebates and incentives (contra-revenues)",
+      -1469
+     ]
+    ]
+   }
+  },
+  "notes": "Release in USD thousands; reconciliation in $ millions. The reconciliation shows one 'Litigation settlements' row of 2,483 (income statement 2,482,845 thousand); the text splits it into American Express $1.65bn, Discover $827.5m (net) and California consumer case $6m (sum 2,483.5, rounding). Totals published: pre-tax 2,408, tax 914, net income +1,494, diluted EPS +11.40. Item ni COMPUTED: litigation 1,542 = 2,483 - 941 ('Impact of litigation settlements on income tax expense (benefit)' in the ETR reconciliation); gain -48 = 1,494 - 1,542 (residual). Per-item EPS not published (null). Self-checks: opex 5526 - 2483 = 3043 OK; oth 151 - 75 = 76 OK; ni -254 + 1542 - 48 = 1240 vs 1239 (rounding, OK); EPS -1.95 + 11.40 = 9.45 OK (total only). adj.etr 38.7 is the release's 'effective tax rate, excluding litigation settlements' (ETR reconciliation excludes litigation only; main-table adjusted tax 785/2025 = 38.8%, and the FY2009 release restates the 2008 non-GAAP ETR as 38.8%). The FY2009 release also revises 2008 EPS for the new share-based-payment EPS standard (GAAP -1.94, adjusted 9.41, special items 11.35); this record keeps the FY2008 release as originally reported. kpi: rev_g_cn null - currency 'contributed approximately 2.5 percentage points' (not stated as an FX-adjusted rate). gdv_g_local 10.7 from the twelve-month operating-performance table (text gives Q4 only: 3.4%). Full-year processed transactions / cross-border growth not stated in the release (Q4 processed transactions +6.0%). cards_bn 0.981 = 981 million MasterCard-branded cards. revcat: FY2008 10-K presents operations fees / assessments; lines sum to 4,992 = net revenue. Legacy recast of 2008 from the FY2009 10-K in fy_legacy_recast (sums to 4,992)."
+ },
+ {
+  "period": "2009",
+  "sources": {
+   "release": "https://www.sec.gov/Archives/edgar/data/1141391/000119312510021630/dex991.htm",
+   "filing": "https://www.sec.gov/Archives/edgar/data/1141391/000119312510034065/d10k.htm"
+  },
+  "ngaap": {
+   "published": true,
+   "gaap": {
+    "opex": 2839,
+    "oth_inc": -42,
+    "ni": 1463,
+    "eps_d": 11.16,
+    "etr": 34.1,
+    "op_margin": 44.3
+   },
+   "items": [
+    {
+     "label": "Litigation settlements",
+     "cat": "LEGAL",
+     "opex_pre": 7,
+     "oth_pre": null,
+     "ni": 4,
+     "eps": 0.03
+    }
+   ],
+   "adj": {
+    "rev": null,
+    "opex": 2832,
+    "oth_inc": -42,
+    "ni": 1467,
+    "eps_d": 11.19,
+    "etr": 34.1,
+    "op_margin": 44.5
+   },
+   "def_note": "Special items for the full-year 2009 included charges of $7 million related to litigation settlements (severance charges, $0.69 per share after tax, were not excluded)."
+  },
+  "kpi": {
+   "rev_g": 2.1,
+   "rev_g_cn": 3.9,
+   "gdv_g_local": 1.4,
+   "xb_g_local": null,
+   "xb_label": null,
+   "sw_g": 6.9,
+   "sw_label": "Processed transactions",
+   "cards_bn": 0.966
+  },
+  "revcat": {
+   "basis": "legacy",
+   "fy": [
+    [
+     "Domestic assessments",
+     2382
+    ],
+    [
+     "Cross-border volume fees",
+     1509
+    ],
+    [
+     "Transaction processing fees",
+     2042
+    ],
+    [
+     "Other revenues",
+     784
+    ],
+    [
+     "Rebates and incentives (contra-revenues)",
+     -1618
+    ]
+   ]
+  },
+  "notes": "Release statements in USD thousands; reconciliation in $ millions. Single special item, so the item ni/eps equal the published totals (tax effect shown as 2; 755 + 2 = 757 vs 758 rounding). Self-checks: opex 2839 - 7 = 2832 OK; oth -42 OK; ni 1463 + 4 = 1467 OK; EPS 11.16 + 0.03 = 11.19 OK. gaap.ni is net income attributable to MasterCard (1,462.5 rounded). etr: release text 'excluding special items, was 34.1% ... Including special items, the effective tax rate was 34.1%'. kpi: 'On a constant currency basis, net revenue increased 3.9%'; 'Increased processed transactions of 6.9%'. gdv_g_local 1.4 from the twelve-month operating-performance table (text gives Q4 only: 5.3%). Full-year cross-border growth not stated (Q4 +3.9%). cards_bn 0.966 = 966 million MasterCard-branded cards. revcat: FY2009 10-K, first legacy five-category presentation; sums to 5,099 = net revenue."
+ },
+ {
+  "period": "2010",
+  "sources": {
+   "release": "https://www.sec.gov/Archives/edgar/data/1141391/000119312511022578/dex991.htm",
+   "filing": "https://www.sec.gov/Archives/edgar/data/1141391/000119312511044721/d10k.htm"
+  },
+  "ngaap": {
+   "published": false,
+   "gaap": {
+    "opex": 2787,
+    "oth_inc": 5,
+    "ni": 1846,
+    "eps_d": 14.05,
+    "etr": 33.0,
+    "op_margin": 49.7
+   },
+   "items": [],
+   "adj": null,
+   "def_note": null
+  },
+  "kpi": {
+   "rev_g": 8.6,
+   "rev_g_cn": 9.5,
+   "gdv_g_local": 9.1,
+   "xb_g_local": 15.2,
+   "xb_label": "Cross-border volume",
+   "sw_g": null,
+   "sw_label": "Processed transactions",
+   "cards_bn": 1.6
+  },
+  "revcat": {
+   "basis": "legacy",
+   "fy": [
+    [
+     "Domestic assessments",
+     2642
+    ],
+    [
+     "Cross-border volume fees",
+     1927
+    ],
+    [
+     "Transaction processing fees",
+     2198
+    ],
+    [
+     "Other revenues",
+     791
+    ],
+    [
+     "Rebates and incentives (contra-revenues)",
+     -2019
+    ]
+   ]
+  },
+  "notes": "Release in USD millions. No special items / non-GAAP reconciliation in the FY2010 release (litigation settlements of $5m in opex were not treated as special). kpi: 'On a constant currency basis, net revenue increased 9.5%'; 'Cross-border volume growth of 15.2% and gross dollar volume growth of 9.1%' (table confirms 9.1% local). Full-year processed-transaction growth not stated (Q4 +6.3%). cards_bn 1.6 = '1.6 billion MasterCard and Maestro-branded cards' (basis change: earlier years are MasterCard-branded only; the table shows 975 million MasterCard-branded cards). revcat sums to 5,539 = net revenue."
+ },
+ {
+  "period": "2011",
+  "sources": {
+   "release": "https://www.sec.gov/Archives/edgar/data/1141391/000119312512035616/d287778dex991.htm",
+   "filing": "https://www.sec.gov/Archives/edgar/data/1141391/000114139112000003/ma12312011-10xk.htm"
+  },
+  "ngaap": {
+   "published": true,
+   "gaap": {
+    "opex": 4001,
+    "oth_inc": 33,
+    "ni": 1906,
+    "eps_d": 14.85,
+    "etr": 30.6,
+    "op_margin": 40.4
+   },
+   "items": [
+    {
+     "label": "Provision for U.S. merchant litigation settlement",
+     "cat": "LEGAL",
+     "opex_pre": 770,
+     "oth_pre": null,
+     "ni": 495,
+     "eps": 3.85
+    }
+   ],
+   "adj": {
+    "rev": null,
+    "opex": 3231,
+    "oth_inc": 33,
+    "ni": 2401,
+    "eps_d": 18.7,
+    "etr": 31.8,
+    "op_margin": 51.9
+   },
+   "def_note": "Total operating expenses, operating income, effective tax rate, net income and EPS excluding the special item: the $770 million pre-tax ($495 million after-tax) Q4-2011 charge related to the U.S. merchant litigations."
+  },
+  "kpi": {
+   "rev_g": 21.2,
+   "rev_g_cn": 19.5,
+   "gdv_g_local": 16.1,
+   "xb_g_local": 18.7,
+   "xb_label": "Cross-border volume",
+   "sw_g": 18.3,
+   "sw_label": "Processed transactions",
+   "cards_bn": 1.8
+  },
+  "revcat": {
+   "basis": "legacy",
+   "fy": [
+    [
+     "Domestic assessments",
+     3246
+    ],
+    [
+     "Cross-border volume fees",
+     2094
+    ],
+    [
+     "Transaction processing fees",
+     2595
+    ],
+    [
+     "Other revenues",
+     1000
+    ],
+    [
+     "Rebates and incentives (contra-revenues)",
+     -2221
+    ]
+   ]
+  },
+  "notes": "Release in USD millions. Single special item (tax effect 275). Self-checks: opex 4001 - 770 = 3231 OK; oth unchanged 33; ni 1906 + 495 = 2401 OK; EPS 14.85 + 3.85 = 18.70 OK. kpi: constant-currency net revenue +19.5%; 'Cross-border volume growth of 18.7%, gross dollar volume growth of 16.1% and processed transaction growth of 18.3%'. cards_bn 1.8 = MasterCard and Maestro-branded cards. revcat sums to 6,714 = net revenue."
+ },
+ {
+  "period": "2012",
+  "sources": {
+   "release": "https://www.sec.gov/Archives/edgar/data/1141391/000119312513031107/d472808dex991.htm",
+   "filing": "https://www.sec.gov/Archives/edgar/data/1141391/000114139113000003/ma12312012-10xk.htm"
+  },
+  "ngaap": {
+   "published": true,
+   "gaap": {
+    "opex": 3454,
+    "oth_inc": -5,
+    "ni": 2759,
+    "eps_d": 21.94,
+    "etr": 29.9,
+    "op_margin": 53.3
+   },
+   "items": [
+    {
+     "label": "Provision for litigation settlement",
+     "cat": "LEGAL",
+     "opex_pre": 20,
+     "oth_pre": null,
+     "ni": 13,
+     "eps": 0.1
+    }
+   ],
+   "adj": {
+    "rev": null,
+    "opex": 3434,
+    "oth_inc": -5,
+    "ni": 2772,
+    "eps_d": 22.04,
+    "etr": null,
+    "op_margin": 53.5
+   },
+   "def_note": "Total operating expenses, operating income, net income and EPS excluding special items; the 2012 special item was 'an incremental charge taken in the second quarter related to the U.S. merchant litigations'."
+  },
+  "kpi": {
+   "rev_g": 10,
+   "rev_g_cn": 13,
+   "gdv_g_local": 15,
+   "xb_g_local": 16,
+   "xb_label": "Cross-border volume",
+   "sw_g": 25,
+   "sw_label": "Processed transactions",
+   "cards_bn": 1.9
+  },
+  "revcat": {
+   "basis": "legacy",
+   "fy": [
+    [
+     "Domestic assessments",
+     3586
+    ],
+    [
+     "Cross-border volume fees",
+     2343
+    ],
+    [
+     "Transaction processing fees",
+     3017
+    ],
+    [
+     "Other revenues",
+     1154
+    ],
+    [
+     "Rebates and incentives (contra-revenues)",
+     -2709
+    ]
+   ]
+  },
+  "notes": "Release in USD millions. Single special item (tax effect 7; footnote 'Provision for litigation settlement'). Self-checks: opex 3454 - 20 = 3434 OK; oth -5 unchanged; ni 2759 + 13 = 2772 OK; EPS 21.94 + 0.10 = 22.04 OK. etr: the text gives 29.9% for 2012 without stating an adjusted rate; recorded as GAAP (1,174/3,932 = 29.9%); adj.etr left null (computed 1,181/3,952 = 29.9%). kpi: 'Adjusted for currency, net revenue increased 13%'; 'Processed transaction growth of 25%, gross dollar volume growth of 15% and cross-border volume growth of 16%' (rounded whole percents as published; table shows GDV local 15.4%). cards_bn 1.9 = MasterCard and Maestro-branded cards. revcat sums to 7,391 = net revenue."
+ }
+]
