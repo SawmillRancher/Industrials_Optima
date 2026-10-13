@@ -1,0 +1,163 @@
+{
+ "_note": "Items not machine-extractable, each with its source. One-off items are those Meta itself quantified in its earnings releases (8-K Ex. 99.1); amounts in USD millions (pre-tax operating items; discrete tax items as charges (+) / benefits (-) to the provision); adj_eps = the diluted EPS the company stated 'excluding' the item(s).",
+ "one_offs": {
+  "Q4-17": {
+   "tax": 2270.0,
+   "adj_eps": 2.21,
+   "label": "2017 Tax Cuts and Jobs Act: provision for income taxes increased by $2.27 billion and diluted EPS decreased by $0.77 (Q4 and FY2017).",
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000132680118000006/fb-12312017xex991.htm"
+  },
+  "2017": {
+   "tax": 2270.0,
+   "adj_eps": 6.16,
+   "label": "2017 Tax Cuts and Jobs Act: provision for income taxes increased by $2.27 billion and diluted EPS decreased by $0.77 for FY2017 (GAAP $5.39).",
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000132680118000006/fb-12312017xex991.htm"
+  },
+  "Q1-19": {
+   "legal": 3000.0,
+   "tax_effect": 0.0,
+   "adj_eps": 1.89,
+   "label": "FTC accrual $3.0 billion (G&A), not expected to be tax-deductible; diluted EPS would have been $1.04 higher (GAAP $0.85).",
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000132680119000035/fb-03312019xex991.htm"
+  },
+  "Q2-19": {
+   "legal": 2000.0,
+   "tax": 1110.0,
+   "tax_effect": 0.0,
+   "adj_eps": 1.99,
+   "label": "Additional $2.0 billion FTC settlement expense (not tax-deductible) and $1.11 billion income tax expense (Altera Corp. v. Commissioner); diluted EPS would have been $1.08 higher (GAAP $0.91).",
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000132680119000053/fb-06302019xex991.htm"
+  },
+  "Q3-20": {
+   "tax": -913.0,
+   "adj_eps": 2.4,
+   "label": "One-time income tax benefit of $913 million (election to capitalize and amortize certain R&D for U.S. tax); diluted EPS would have been $0.31 lower (GAAP $2.71).",
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000132680120000081/fb-09302020xexhibit991.htm"
+  },
+  "Q3-22": {
+   "restr": 413.0,
+   "label": "Impairment loss of $413 million for certain operating leases (office facilities footprint) - first restructuring-related charge; company did not state an 'excluding' EPS.",
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000105/meta09302022-exhibit991.htm"
+  },
+  "Q4-22": {
+   "restr": 4198.0,
+   "adj_eps": 3.0,
+   "label": "Restructuring charges $4,198 million (facilities consolidation $1,882m, severance $975m, data center assets $1,341m); diluted EPS would have been $1.24 higher (GAAP $1.76).",
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000008/meta-12312022xexhibit991.htm"
+  },
+  "Q1-23": {
+   "restr": 1144.0,
+   "label": "Restructuring charges $1,144 million (FoA $934m, RL $210m).",
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000063/meta03312023-exhibit991.htm"
+  },
+  "Q2-23": {
+   "legal": 1870.0,
+   "restr": 780.0,
+   "label": "Accrued legal expenses of $1.87 billion and restructuring charges of $780 million.",
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000089/meta06302023-exhibit991.htm"
+  },
+  "Q3-23": {
+   "restr": 380.0,
+   "label": "Restructuring charges $380 million (FoA $305m, RL $75m).",
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000100/meta09302023-exhibit991.htm"
+  },
+  "Q4-23": {
+   "restr": 1150.0,
+   "label": "Restructuring charges included in costs and expenses of $1.15 billion (FY2023 $3.45 billion).",
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000010/meta-12312023xexhibit991.htm"
+  },
+  "Q4-24": {
+   "legal": -1550.0,
+   "label": "Favorable impact of $1.55 billion due to a decrease in the accrued losses for certain legal proceedings (G&A).",
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000014/meta-12312024xexhibit991.htm"
+  },
+  "Q3-25": {
+   "tax": 15930.0,
+   "adj_eps": 7.25,
+   "label": "One-time, non-cash income tax charge of $15.93 billion (valuation allowance on U.S. federal deferred tax assets, Corporate Alternative Minimum Tax, One Big Beautiful Bill Act); diluted EPS would have been $7.25 (GAAP $1.05).",
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047114/meta-09302025xexhibit991.htm"
+  },
+  "Q1-26": {
+   "tax": -8030.0,
+   "adj_eps": 7.31,
+   "label": "$8.03 billion income tax benefit (U.S. Treasury Notice 2026-7; partial offset of the Q3-2025 charge); diluted EPS would have been $3.13 lower (GAAP $10.44).",
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/meta-03312026xexhibit991.htm"
+  },
+  "Q2-26": {
+   "legal": 2400.0,
+   "restr": 1180.0,
+   "label": "$2.40 billion of charges related to legal proceedings (G&A) and $1.18 billion of severance expenses (May 2026 headcount reduction); no 'excluding' EPS stated.",
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-06302026xexhibit991.htm"
+  }
+ },
+ "named_not_adjusted": "Items the company named but did not quantify (left in GAAP and adjusted figures): Q2-2024 State of Texas settlement charge (G&A; 'fully accrued as of June 30, 2024'); Q3-2022 / 2023 data-center and facilities items beyond the stated restructuring totals.",
+ "pre_ipo_eps": {
+  "_note": "IPO prospectus (424B4, 18-May-2012) Note 2, EPS: basic shares = Class A + Class B used for basic EPS; diluted = Class A diluted computation (Class B converted); ni_dil = net income attributable to common stockholders for diluted EPS (Class A, incl. reallocation of participating-securities income).",
+  "2009": {
+   "sh_b": 1020.0,
+   "sh_d": 1366.0,
+   "ni_dil": 134.0,
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000119312512240111/d287954d424b4.htm"
+  },
+  "2010": {
+   "sh_b": 1107.0,
+   "sh_d": 1414.0,
+   "ni_dil": 402.0,
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000119312512240111/d287954d424b4.htm"
+  },
+  "2011": {
+   "sh_b": 1294.0,
+   "sh_d": 1508.0,
+   "ni_dil": 699.0,
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000119312512240111/d287954d424b4.htm"
+  }
+ },
+ "guidance_2026": {
+  "q3_revenue": [
+   64000.0,
+   62500.0,
+   61000.0
+  ],
+  "expenses": [
+   165000.0,
+   167000.0,
+   169000.0
+  ],
+  "capex": [
+   130000.0,
+   145000.0
+  ],
+  "capex_mid": 137500.0,
+  "tax_rate": [
+   0.15,
+   0.17
+  ],
+  "text": "We expect third quarter 2026 total revenue to be in the range of $61-64 billion ... We now expect full year 2026 total expenses to be in the range of $165-169 billion. We continue to expect to deliver operating income this year that is above 2025 operating income. We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $130-145 billion ... we expect our tax rate for the remaining quarters of 2026 to be between 15-17%.",
+  "src": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-06302026xexhibit991.htm",
+  "verified": "SEC EDGAR 8-K Item 2.02 Ex. 99.1 (29-Jul-2026)"
+ },
+ "debt": {
+  "at_2026_06_30": "Senior notes face $84.0bn (carrying $83.66bn) at 30-Jun-2026: Aug-2022 $10.0bn (2027-2062, 3.50-4.65%), May-2023 $8.5bn (2028-2063), Aug-2024 $10.5bn (2029-2064), Nov-2025 $30.0bn (2030-2065, 4.20-5.75%), May-2026 $25.0bn (2031-2066, 4.55-6.45%). Maturities: 2027 $2,750m; 2028 $1,500m; 2029 $1,000m; 2030 $5,000m; thereafter $73,750m (Q2-26 10-Q Note 8). No financial covenants; no revolver drawn.",
+  "maturities": {
+   "2027": 2750.0,
+   "2028": 1500.0,
+   "2029": 1000.0,
+   "2030": 5000.0,
+   "thereafter": 73750.0
+  },
+  "src": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+  "interest_q2_26": {
+   "interest_income": 859.0,
+   "interest_expense": 783.0,
+   "notes_interest_net_of_capitalized": 754.0,
+   "h1_interest_income": 1603.0,
+   "h1_interest_expense": 1345.0,
+   "src": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm"
+  }
+ },
+ "price": {
+  "px": 745.0,
+  "date": "2026-10-12",
+  "source": "Provided by the user (12-Oct-2026); not an SEC-filed price. Update to market."
+ }
+}

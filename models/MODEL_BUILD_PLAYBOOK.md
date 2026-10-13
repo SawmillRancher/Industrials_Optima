@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, META). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -28,7 +28,7 @@ Each row is a change that is now part of the standard. The checklist in section 
 | RBA → TDY | TDY, KRMN, VMC | Segment P&L with GAAP OI → amortization → non-GAAP segment OI. Future-M&A lever. A current-definition memo series drives the valuation outputs. Uniform calibration Δ solves the current year to guided EPS / EBITDA. Debt: scheduled maturities plus a revolver to minimum cash, with interest on opening balances. LibreOffice Calc recalculation, then 0 errors and all checks tie. |
 | TDY → MLM template | MLM and every build since | Unit-economics build (shipments × ASP, price / volume bridge, fall-through). Pending / closed acquisitions modelled as their own block with a PPA and synergies. Legacy segments kept as memo rows. Leverage-targeted buybacks. DuPont ROIC and RONTA. Modelling Notes column, CAGR columns and the scenario table on the right of the forecast. |
 | MLM build-kit process | WAB, ODFL, SAIA, LOAR, ONON, STE, DHR | Standard kit: `fw.py` (column map, archetype-row style cloning, row registry), `spec.py` / `spec2.py` (row specs), `build.py` (inputs, compute, scenario table, definition flags), `other_sheets.py` (rewire BBB / DCF / Charts, re-inject chart XML), `extract.py` / `normalize.py` / `check_data.py`, `inspect_model.py`, `cyc.py`. Columns re-based to the company's history (template column − N). `--snap` fills Bull/Bear snapshots; `--recalc` stores values. |
-| MLM template update (6-Oct-26) | ONON, DHR, CTAS, STE, LECO, ESAB | DCF: live valuation date, 5-year fade, implied ROIC / RONIC, target-IRR max entry price, WACC × g grid, reverse DCF, Mauboussin EV/NOPAT. Bull-Base-Bear: buyback rows (40–42). `DCF_old` dropped. View: frozen at C8, quarterly columns grouped and collapsed. Cached values stored so the file reads correctly in any viewer. |
+| MLM template update (6-Oct-26) | ONON, DHR, CTAS, STE, LECO, ESAB, WWD, META | DCF: live valuation date, 5-year fade, implied ROIC / RONIC, target-IRR max entry price, WACC × g grid, reverse DCF, Mauboussin EV/NOPAT. Bull-Base-Bear: buyback rows (40–42). `DCF_old` dropped. View: frozen at C8, quarterly columns grouped and collapsed. Cached values stored so the file reads correctly in any viewer. |
 | Special cases | RMS, BC, ONON, CHRW, UBER, CTAS, DHR, STE | Non-SEC / IFRS / foreign-currency reporters (half-year columns, constant-currency + FX build). Deal pro forma tabs (CHRW RXO PF: S&U, PPA, synergies, accretion). Pending deals behind a toggle (CTAS UniFirst, UBER Delivery Hero). Hybrid recast basis around spin-offs (DHR). Non-calendar fiscal years (STE March, CTAS May). |
 
 ---
@@ -258,6 +258,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | Pending / new acquisition | DHR, MLM, CTAS, ESAB, CSGP, UBER, CHRW | Separate block, PPA, financing, synergies, closing-date toggle; deal tab for large deals |
 | Dual-class / splits | ONON, HEI, CTAS, ODFL | Class-equivalent shares; split-adjust by source filing date |
 | Private company | R&Y | Compilation statements; implied CF from BS changes; LBO tab |
+| Ad platform / cost-total guidance, capex-heavy | META | Advertising = impressions × price per ad; revenue guide solved on price, expense guide on cash opex; D&A from the PP&E roll-forward; capex incl. finance leases |
 
 ### 4.3 Pitfalls that have bitten before
 - Template-company constants left in forecast formulas or notes (Moog `888`, MLM LNA rows, MLM-specific DCF text).
@@ -275,7 +276,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -290,6 +291,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
+- **Resolve every release table's columns from its year header, never by position.** Issuers flip the order (prior year first to 2016, current year first after), add footnote markers to the years ("2016 (1)", "2019*"), and Q1 releases carry three-month columns only. When stripping footnote markers, a bare "(7)" is a negative value, not a footnote. [META]
+- **Where releases print three-month cash-flow statements,** take quarters directly and keep year-to-date derivation only as a fallback. [META]
 
 ### 5.2 Basis
 - **Segment re-presentation with a short recast history:** model an aggregate the re-presentation doesn't change and keep the old split as memo. Prove where an absorbed segment went using the restated comparative Δ. [RBA, TFI]
@@ -298,6 +301,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **After a spin:** start the BS at the first post-spin balance sheet even if the P&L uses earlier recast comparatives, and fill earlier y/y with company-reported change % memos. Spin-cos put carve-out (Form 10) years in the main columns, with the former parent's segment history as a flagged memo under the parent's CIK. [XPO, ESAB]
 - **Half-year reporters:** carry quarterly revenue as "1st / 2nd quarter of the half" memo rows inside the half-year columns, with a Σ check. [RMS, BC]
 - **Two builds of one company:** diff their dated facts (split dates, deconsolidation quarter, label cut-overs) and resolve each from the filing. [LECO]
+- **Pre-IPO two-class EPS:** take basic and diluted shares from the prospectus EPS note and carry a "reallocation for diluted EPS" row (participating-securities income reallocated to the converted class), so net income ÷ diluted shares reproduces every published EPS. [META]
 
 ### 5.3 Operating build
 - **When a segment or product table changes revenue basis** (net sales → ex-freight → total revenue; pre-ASC 606), add a derived "outside the lines" row (consolidated − Σ lines) so the build check ties in every period. [MLM, VMC]
@@ -339,6 +343,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Known, explained source differences** (a restated starting NI, a release issued before a 10-Q impairment) can stay as documented check exceptions rather than plugs. [WCN]
 - **Long-term target base years** stay "as first published", with a note that definitions have since changed. [XPO]
 - **Two-class / participating preferred:** the adjusted-NI bridge needs an "allocation to preferred" line, and the preferred is deducted in the EV bridge. [RBA]
+- **No non-GAAP framework, but stated "excluding" EPS:** when a company reports GAAP only yet says "diluted EPS would have been $x excluding …" for items it quantified, treat each stated figure as a published adjusted EPS. Build the model bridge from the quantified items only, check it against every stated figure, and derive the tax effect from it (company statements such as "not tax-deductible" override imputation). [META]
 
 ### 5.5 Calibration
 - **Order of operations.** Apply every explicitly guided driver first, then solve one uniform Δ on the least-guided driver. Use a "sensitivity to +1.00" helper row for a closed-form linear solve, with no goal-seek and no circularity. [VMC, MLM, TDY, WAB, DHR, LOAR, CSGP]
@@ -353,6 +358,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
 - **Apply the Δ only to genuinely uncommitted lines** (retail rather than order-book wholesale). Constant-FX guidance needs a separate FX-translation Δ for the reporting-currency figure. EPS guidance made stale by post-guidance buybacks becomes an information row. [BC, ONON, BWXT]
 - **No guidance:** leave targets as optional blank inputs; don't invent them. [HEI, BC]
+- **Cost-total guidance (total expenses) instead of margin / EPS:** make the least-guided cost (cash operating costs excluding D&A, SBC and one-offs) the balancing driver; D&A and SBC are point estimates. A one-quarter revenue guide is solved on the least-certain revenue driver (price per ad) and the Δ carried into the unguided quarter. Show "operating income above prior year"-type statements as information rows. [META]
 
 ### 5.6 Balance sheet, cash and capital
 - **Current year with actual quarters:**
@@ -386,7 +392,14 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Leverage ratios use LTM EBITDA** (carried in the quarter columns), not annualised 1H. [VMC, HEI]
 - **Working-capital ratios** come from fiscal-year-end balances, not annualised quarters. [STE, CTAS]
 - **Use the company's own capex / FCF definition** when it is guided, so guided and modelled figures are comparable. [RBA, HII]
-- **Reconcile BS cash vs CF ending cash with a memo line** when definitions differ (overdraft, restricted cash, disc-ops cash). [ONON, CSGP, DHR]
+- **Reconcile BS cash vs CF ending cash with a memo line** when definitions differ (overdraft, restricted cash, disc-ops cash). [ONON, CSGP, DHR, META]
+- **Capex-heavy forecasts:**
+  - Drive D&A from the PP&E roll-forward ((opening net PP&E + ½ capex) × rate), not as % of revenue.
+  - Include finance-lease principal in capex when the company's capex measure and FCF do.
+  - Calibrate the out-year capex intensity to a defensible steady state, because the template DCF carries the last explicit year's capex / D&A into the fade and terminal value.
+
+  [META]
+- **Net cash held mostly in marketable securities:** define net debt as debt − cash − marketable securities, hold the portfolio flat in the forecast, and plug CP / incremental notes to a minimum on cash and equivalents only. [META]
 
 ### 5.7 Valuation
 - **Standard NOPAT basis** (the builds diverged here; this is now the rule):
@@ -405,6 +418,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   [ESAB, BWXT, HEI, UBER]
 - **Deal tabs** show accretion both vs the standalone with buybacks and on the company's comparison basis, and solve for the synergies or margin needed to meet the stated accretion. [CHRW]
 - **Historical average share prices** come from 10-K Item 5 only where disclosed; leave later years blank. [HII]
+- **December year end valued mid-year (two estimate quarters left):** map the template's base column to the current-year E column and the template's forecast years one year later, add one year to every `DATE(…,12,31)` on the DCF and Bull-Base-Bear tabs, and take net debt at the current year end. A fifth forecast year then gives five explicit DCF years; the right-of-forecast block shifts by (annual-history columns removed − forecast years added). [META, WWD]
 
 ### 5.8 QA
 - **Template residue is the most common defect.** At least 10 builds shipped MLM text in Bull-Base-Bear N26 / P40 comments or DCF rationale, and TFI kept Moog comments. `tools/residue_scan.py` is a hard gate. [CLH, WAB, SAIA, ODFL, WCN, LOAR, ONON, LECO, ESAB, STE, CTAS, UBER, TFI, CPRT]

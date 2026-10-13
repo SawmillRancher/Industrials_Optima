@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -19,17 +19,18 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
-| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
-| Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
+| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO, META (company non-GAAP to 2016, model after) |
+| Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA), META (EBITDA; GAAP-only since 2017 with stated "excluding" EPS) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
-| Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
+| Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN, META (pre-IPO two-class EPS) |
 | Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
-| Net-cash balance sheet | RMS, CPRT, ODFL |
-| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
+| Net-cash balance sheet | RMS, CPRT, ODFL, META (to 2025; cash mostly in marketable securities) |
+| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes), META (Class A / B; pre-IPO two-class) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
 | Private company, LBO | R&Y |
+| Digital advertising platform; cost-total and capex guidance; AI capex cycle | META |
 
 ---
 
@@ -635,6 +636,61 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [basis] Split-adjust per-share history. Leaving EPS as reported (v1) breaks every per-share trend; v2 restated for all four 2-for-1 splits.
   - [bridges] Start the non-GAAP bridge from NI *attributable*, not total NI, or EPS will not tie.
   - [extraction] Harvest the non-GAAP tables directly from 8-K Ex. 99.1 with a dedicated parser. XBRL does not carry them.
+
+## Internet & digital advertising
+
+### META — Meta Platforms (MLM template 6-Oct-26 via the WWD kit; US GAAP / USD m / calendar FY)
+- **Coverage & basis:**
+  - FY2009–12 annual and Q1/13–Q2/26 quarterly, as originally reported (CIK 1326801; Facebook, Inc. until Oct-2021, ticker FB until Jun-2022).
+  - FY2009–11 come from the IPO prospectus (424B4, 18-May-2012), which has no 31-Dec-2009 balance sheet. Template columns are shifted −3 for history and a 2031E column is added (right block = template − 2).
+  - Re-presentations not recast (comments): FY2011 cost reclassification; ASU 2016-09 early-adopted in the Q4-16 release back to 1-Jan-2016 (FY2016 ≠ Σ quarters, tax −$720m, CFO/CFF shifted $1.42bn); restricted cash in the CF from 2018 (memo reconciliation row).
+  - Segments FoA / RL from the Q4-21 release (FY2019–20, Q4-20 and the 2021 quarters recast).
+  - Releases print three-month cash flows for every quarter. The 2012–16 releases put the prior year first and the 2017+ releases the current year first.
+- **Operating build:**
+  - Advertising = prior-year period × (1 + ad impressions) × (1 + average price per ad). Company % from the releases from Q4-21; before that from 10-Q / 10-K MD&A ("number of ads delivered"; price per ad 2014–18 and 2019–21 where stated; Q4 not published, so blank).
+  - Whole-% rounding shows in an "implied vs reported" residual memo, not a check.
+  - FoA other revenue and Reality Labs have their own growth; FoA income = consolidated OI − Reality Labs loss (lever).
+  - KPIs: DAP / MAP, Facebook DAU / MAU (to Q4-23), revenue per DAP, headcount.
+  - Geography is customer billing address (10-Q / 10-K, Q4 = year − 9M).
+  - Costs = D&A (PP&E roll-forward) + SBC + other cash costs + company-quantified one-offs; cost lines by 1H mix.
+- **Bridges & definitions:**
+  1. Adjusted OI: company non-GAAP IPO–2016 (excl. SBC, payroll tax, amortization from Q3-14; FY2014 applies it to the whole year, a documented Σ Q exception), all 21 published figures tie. From 2017 the model definition is GAAP + company-quantified one-offs (FTC 2019; restructuring Q3-22–Q4-23; legal Q2-23, Q4-24 release, Q2-26; severance Q2-26). A current-definition memo (SBC expensed) drives valuation.
+  2. EBITDA and adjusted EBITDA are model definitions (Meta publishes none).
+  3. Adjusted EPS: company non-GAAP IPO–2016 (participating-securities add-back, non-GAAP shares incl. preferred conversion). 2017+ adds the discrete tax items the company quantified (Tax Act, Altera, R&D election, OBBBA $15.93bn, Notice 2026-7 −$8.03bn).
+     - Checked against every "excluding" EPS the company stated (Q4-17, FY17, Q1-19, Q2-19, Q3-20, Q4-22, Q3-25, Q1-26).
+     - Tax effects are derived from those figures; the FTC accruals are non-deductible per the company; otherwise imputed at the period ETR bounded 15–40% (comments).
+  4. FCF: company definition in force (− capital-lease acquisitions 2013–14; − finance-lease principal from 2019; capex net of P&E proceeds 2022–23); all 66 published figures tie.
+- **Data quirks & corrections:**
+  - h2t keeps a footnote "(1)" after numbers; the parser must strip it only after a number, because a bare "(7)" is −7 (Q2-26 FX).
+  - Q2-13 captions "(Provision for) benefit from income taxes", so the sign flips by caption.
+  - 424B4 captions wrap over two lines (receivables, preferred stock).
+  - Pre-IPO diluted EPS is a Class A computation with a reallocated numerator: a reallocation row (+$12m / $30m / $31m) makes NI ÷ diluted shares tie.
+  - Class A + B shares come from the balance-sheet caption (no dimensional XBRL share counts in company facts).
+  - Interest income / expense are annual-only in XBRL; Q1/Q2-26 come from the 10-Q MD&A table.
+  - The Q2-24 Texas settlement was named but not quantified, so it is left in.
+- **Deals & special blocks:** no pending deals. M&A lever $1bn a year (goodwill and intangibles, no acquired revenue). Scale AI ($14.3bn, 2025) sits in non-marketable equity investments, held flat.
+- **Calibration & scenarios:**
+  - Guidance is in the Q2-26 8-K (no unverified guidance): Q3 revenue $61–64bn, FY26 expenses $165–169bn, capex incl. finance leases $130–145bn, tax 15–17%, OI above 2025.
+  - A uniform Δ on price-per-ad growth (impressions at Q2 y/y) solves Q3E revenue (−5.5pp Base) and is carried into Q4E.
+  - Other cash costs balance FY costs to the guide (Bull = low end $165bn).
+  - D&A (+7% q/q), SBC (Q2 level), tax 16% and capex (mid $137.5bn) are point estimates. OI vs 2025 and capex vs guide are information rows.
+- **Balance sheet, cash & capital:**
+  - Net debt = notes + CP − cash − marketable securities (net cash $22.8bn at YE25 → ~$6.6bn at Q2-26). The portfolio is held flat.
+  - Notes ladder from the 10-Q (2027 $2.75bn … 2030 $5.0bn, refinanced); a CP / incremental-notes plug to $15bn minimum cash (labelled assumption) reaches ~$69bn by 2031E.
+  - Buybacks plug to a net debt / adjusted EBITDA ceiling (0.5 / 0.25 / 0.0x), resuming 2029E Base.
+  - Taxes on net share settlement = 90% of SBC (FY25), a large financing outflow kept out of FCF as the company defines it.
+  - Restricted cash ($13.8bn, mostly long-term) is held flat with a BS-vs-CF check.
+- **Valuation:**
+  - $745.00 per the user (12-Oct-2026).
+  - DCF base year 2026E (template BV → 2026E, DATE + 1 year). NOPAT on adjusted EBIT (SBC expensed) less cash one-offs; capex includes finance-lease principal.
+  - DCF $532 at 9.9% WACC (beta 1.20 assumption) vs Mauboussin $685 and Base P/E exit ~$1,170 (2030E, 24x): the DCF is very sensitive to the capex intensity carried into the fade.
+- **Reusable lessons:**
+  - [extraction] Resolve each release table from its year header; footnote stripping must not eat a bare "(7)"; flip tax signs by caption.
+  - [bridges] For a GAAP-only reporter, treat stated "excluding" EPS as published adjusted figures and derive the tax effect from them; adjust only quantified items.
+  - [basis] Pre-IPO two-class EPS needs a diluted-numerator reallocation row from the prospectus EPS note.
+  - [calibration] Expense-total guidance: solve the least-guided cost (cash opex ex D&A / SBC / one-offs); solve a one-quarter revenue guide on price and carry the Δ forward.
+  - [BS/CF] Capex-heavy: D&A from the PP&E roll-forward; capex incl. finance-lease principal; set the terminal capex intensity deliberately because the template fade carries it.
+  - [valuation] December year end valued mid-year: shift the DCF mapping one year (2026E base) and add a fifth forecast year for five explicit DCF years.
 
 ## Consumer & luxury (IFRS, non-USD)
 
