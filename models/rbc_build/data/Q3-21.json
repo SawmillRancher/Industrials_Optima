@@ -1,0 +1,618 @@
+{
+ "period": "Q3-21",
+ "fy": 2021,
+ "q": 3,
+ "period_end": "2020-12-26",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1324948/000121390021005192/ea134177ex99-1_rbcbearing.htm",
+  "release_date": "2021-01-29",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1324948/000121390021005392/f10q1220_rbcbearings.htm",
+  "filing_form": "10-Q",
+  "filing_date": "2021-01-29"
+ },
+ "notes": [],
+ "is": {
+  "rev": 145.861,
+  "cogs": 90.273,
+  "gp": 55.588,
+  "sga": 25.739,
+  "oth": 3.308,
+  "opex": 29.047,
+  "oi": 26.541,
+  "int": 0.327,
+  "onop": -0.05,
+  "ebt": 26.264,
+  "tax": 4.695,
+  "ni": 21.569,
+  "eps_b": 0.87,
+  "eps_d": 0.86,
+  "sh_b": 24.861792,
+  "sh_d": 25.060812,
+  "_scale": 0.001
+ },
+ "ng": {
+  "gm": {
+   "rep": 55.588,
+   "items": [
+    [
+     "Inventory purchase accounting adjustment",
+     0.0,
+     "STEPUP"
+    ],
+    [
+     "Restructuring and consolidation",
+     0.835,
+     "RESTR"
+    ]
+   ],
+   "adj": 56.423
+  },
+  "oi": {
+   "rep": 26.541,
+   "items": [
+    [
+     "Inventory purchase accounting adjustment",
+     0.0,
+     "STEPUP"
+    ],
+    [
+     "Acquisition costs",
+     0.0,
+     "ACQ"
+    ],
+    [
+     "Restructuring and consolidation",
+     1.341,
+     "RESTR"
+    ]
+   ],
+   "adj": 27.882
+  },
+  "ni": {
+   "rep": 21.569,
+   "items": [
+    [
+     "Inventory purchase accounting adjustment",
+     0.0,
+     "STEPUP"
+    ],
+    [
+     "Acquisition costs",
+     0.0,
+     "ACQ"
+    ],
+    [
+     "Restructuring and consolidation",
+     1.101,
+     "RESTR"
+    ],
+    [
+     "Foreign exchange translation loss",
+     0.184,
+     "FX"
+    ],
+    [
+     "Discrete and other tax items benefit",
+     -0.176,
+     "TAX"
+    ]
+   ],
+   "adj": 22.678,
+   "end_label": "Adjusted net income",
+   "eps_b": 0.91,
+   "eps_d": 0.9,
+   "sh_b": 24.861792,
+   "sh_d": 25.060812
+  },
+  "proxy_ebitda": 41.034,
+  "sel": {
+   "dda": 7.979,
+   "sbc": 5.173,
+   "cfo": 36.107,
+   "capex": 2.801,
+   "debt": 20.493,
+   "backlog": 393.934,
+   "bb": 6.206
+  },
+  "backlog_text": 393.9,
+  "seg_sales": {
+   "plain": 69.321,
+   "roller": 22.408,
+   "ball": 20.675,
+   "eng": 33.457
+  },
+  "outlook": "Outlook for the Fourth Quarter Fiscal 2021: The Company expects net sales to be approximately $155.0 million to $160.0 million in the fourth quarter of fiscal 2021, compared to $185.8 million last year."
+ },
+ "bs": {
+  "cash": 126.192,
+  "sti": 75.539,
+  "ar": 106.506,
+  "inv": 372.104,
+  "tca": 692.342,
+  "ppe": 212.702,
+  "rou": 36.88,
+  "gw": 278.472,
+  "intang": 157.32,
+  "ta": 1408.982,
+  "ap": 39.936,
+  "accr": 36.386,
+  "cltd": 6.127,
+  "tcl": 88.412,
+  "ltd": 14.366,
+  "tl": 204.175,
+  "pref": 0.0,
+  "teq": 1204.807,
+  "tle": 1408.982,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    126.192
+   ],
+   [
+    "Marketable securities",
+    75.539
+   ],
+   [
+    "Accounts receivable, net of allowance for doubtful accounts of $ 1,874 at December 26, 2020 and $ 1,627 at March 28, 2020",
+    106.506
+   ],
+   [
+    "Inventory",
+    372.104
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    12.001
+   ],
+   [
+    "Total current assets",
+    692.342
+   ],
+   [
+    "Property, plant and equipment, net",
+    212.702
+   ],
+   [
+    "Operating lease assets, net",
+    36.88
+   ],
+   [
+    "Goodwill",
+    278.472
+   ],
+   [
+    "Intangible assets, net of accumulated amortization of $ 61,054 at December 26, 2020 and $ 55,732 at March 28, 2020",
+    157.32
+   ],
+   [
+    "Other assets",
+    31.266
+   ],
+   [
+    "Total assets",
+    1408.982
+   ],
+   [
+    "Accounts payable",
+    39.936
+   ],
+   [
+    "Accrued expenses and other current liabilities",
+    36.386
+   ],
+   [
+    "Current operating lease liabilities",
+    5.963
+   ],
+   [
+    "Current portion of long-term debt",
+    6.127
+   ],
+   [
+    "Total current liabilities",
+    88.412
+   ],
+   [
+    "Deferred income taxes",
+    19.391
+   ],
+   [
+    "Long-term debt, less current portion",
+    14.366
+   ],
+   [
+    "Long-term operating lease liabilities",
+    31.347
+   ],
+   [
+    "Other non-current liabilities",
+    50.659
+   ],
+   [
+    "Total liabilities",
+    204.175
+   ],
+   [
+    "Preferred stock, $ .01 par value; authorized shares: 10,000,000 at December 26, 2020 and March 28, 2020, respectively; none issued or outstanding",
+    0.0
+   ],
+   [
+    "Common stock, $ .01 par value; authorized shares: 60,000,000 at December 26, 2020 and March 28, 2020, respectively; issued shares: 26,011,098 and 25,881,415 at December 26, 2020 and March 28, 2020, respectively",
+    0.26
+   ],
+   [
+    "Additional paid-in capital",
+    434.346
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -0.51
+   ],
+   [
+    "Retained earnings",
+    833.898
+   ],
+   [
+    "Treasury stock, at cost, 881,096 shares and 838,982 shares at December 26, 2020 and March 28, 2020, respectively",
+    -63.187
+   ],
+   [
+    "Total stockholders' equity",
+    1204.807
+   ],
+   [
+    "Total liabilities and stockholders' equity",
+    1408.982
+   ]
+  ]
+ },
+ "cf": {
+  "ni": 64.679,
+  "dep": 17.129,
+  "amort": 7.683,
+  "sbc": 15.842,
+  "deftax": 2.58,
+  "cfo": 110.586,
+  "capex": -8.809,
+  "acq": 0.245,
+  "cfi": -83.621,
+  "bb": -6.206,
+  "cff": -4.54,
+  "fx": 0.512,
+  "net": 22.937,
+  "beg": 103.255,
+  "end": 126.192,
+  "lines_raw": [
+   [
+    "Net income",
+    64.679
+   ],
+   [
+    "Depreciation",
+    17.129
+   ],
+   [
+    "Deferred income taxes",
+    2.58
+   ],
+   [
+    "Amortization of intangible assets",
+    7.683
+   ],
+   [
+    "Amortization of deferred financing costs",
+    0.365
+   ],
+   [
+    "Share-based compensation",
+    15.842
+   ],
+   [
+    "Other non-cash charges",
+    3.278
+   ],
+   [
+    "Accounts receivable",
+    23.285
+   ],
+   [
+    "Inventory",
+    -4.717
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    -0.251
+   ],
+   [
+    "Other non-current assets",
+    -11.724
+   ],
+   [
+    "Accounts payable",
+    -11.4
+   ],
+   [
+    "Accrued expenses and other current liabilities",
+    -4.575
+   ],
+   [
+    "Other non-current liabilities",
+    8.412
+   ],
+   [
+    "Net cash provided by operating activities",
+    110.586
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -8.809
+   ],
+   [
+    "Proceeds from sale of assets",
+    0.018
+   ],
+   [
+    "Purchase of marketable securities",
+    -75.075
+   ],
+   [
+    "Acquisition of business",
+    0.245
+   ],
+   [
+    "Net cash used in investing activities",
+    -83.621
+   ],
+   [
+    "Proceeds received from revolving credit facilities",
+    0.0
+   ],
+   [
+    "Proceeds received from term loans",
+    0.0
+   ],
+   [
+    "Repayments of revolving credit facilities",
+    -0.773
+   ],
+   [
+    "Repayments of term loans",
+    -3.287
+   ],
+   [
+    "Repayments of notes payable",
+    -0.379
+   ],
+   [
+    "Finance fees paid in connection with credit facilities and term loans",
+    0.0
+   ],
+   [
+    "Exercise of stock options",
+    6.105
+   ],
+   [
+    "Repurchase of common stock",
+    -6.206
+   ],
+   [
+    "Net cash used in financing activities",
+    -4.54
+   ],
+   [
+    "Effect of exchange rate changes on cash",
+    0.512
+   ],
+   [
+    "Increase during the period",
+    22.937
+   ],
+   [
+    "Cash and cash equivalents, at beginning of period",
+    103.255
+   ],
+   [
+    "Cash and cash equivalents, at end of period",
+    126.192
+   ]
+  ],
+  "ytd_months": 9
+ },
+ "segn": {
+  "sales": {
+   "plain": 69.321,
+   "roller": 22.408,
+   "ball": 20.675,
+   "eng": 33.457
+  },
+  "gm": {
+   "plain": 27.841,
+   "roller": 7.626,
+   "ball": 9.183,
+   "eng": 10.938
+  },
+  "sga": {
+   "plain": 5.443,
+   "roller": 1.125,
+   "ball": 1.293,
+   "eng": 3.771,
+   "corp": 14.107
+  },
+  "oi": {
+   "plain": 20.83,
+   "roller": 6.339,
+   "ball": 7.835,
+   "eng": 6.341,
+   "corp": -14.804
+  }
+ },
+ "segn_ytd": {
+  "sales": {
+   "plain": 219.249,
+   "roller": 66.887,
+   "ball": 60.614,
+   "eng": 101.939
+  },
+  "gm": {
+   "plain": 89.668,
+   "roller": 22.269,
+   "ball": 26.239,
+   "eng": 33.461
+  },
+  "sga": {
+   "plain": 15.99,
+   "roller": 3.526,
+   "ball": 3.928,
+   "eng": 11.421,
+   "corp": 43.726
+  },
+  "oi": {
+   "plain": 69.703,
+   "roller": 17.919,
+   "ball": 22.189,
+   "eng": 18.434,
+   "corp": -46.527
+  }
+ },
+ "py": {
+  "segn": {
+   "sales": {
+    "aero": 93.267,
+    "ind": 52.594
+   },
+   "gm": {
+    "aero": 38.056,
+    "ind": 17.532
+   },
+   "sga": {
+    "aero": 7.116,
+    "ind": 4.396,
+    "corp": 14.227
+   },
+   "oi": {
+    "aero": 28.63,
+    "ind": 12.904,
+    "corp": -14.993
+   }
+  },
+  "segn_ytd": {
+   "sales": {
+    "aero": 299.833,
+    "ind": 148.856
+   },
+   "gm": {
+    "aero": 121.96,
+    "ind": 49.677
+   },
+   "sga": {
+    "aero": 21.483,
+    "ind": 13.019,
+    "corp": 44.089
+   },
+   "oi": {
+    "aero": 93.646,
+    "ind": 35.247,
+    "corp": -47.175
+   }
+  },
+  "seg_sales": {
+   "ind": 52.594,
+   "aero": 93.267
+  },
+  "ng": {
+   "oi": {
+    "rep": 26.541,
+    "items": [
+     [
+      "Transaction and related costs",
+      0.0,
+      "ACQ"
+     ],
+     [
+      "Restructuring and consolidation",
+      1.341,
+      "RESTR"
+     ]
+    ],
+    "adj": 27.882
+   },
+   "ni": {
+    "rep": 21.569,
+    "items": [
+     [
+      "Transaction and related costs",
+      0.0,
+      "ACQ"
+     ],
+     [
+      "Restructuring and consolidation",
+      1.341,
+      "RESTR"
+     ],
+     [
+      "Foreign exchange translation loss",
+      0.224,
+      "FX"
+     ],
+     [
+      "Tax impact of adjustments and other tax matters",
+      -0.456,
+      "TAX"
+     ]
+    ],
+    "adj": 22.678,
+    "end_label": "Adjusted net income",
+    "pref": 0.0,
+    "adj_c": 22.678,
+    "eps_b": 0.91,
+    "eps_d": 0.9,
+    "sh_b": 24.861792,
+    "sh_d": 25.060812
+   },
+   "adj_ebitda": 41.034,
+   "ebitda": 39.693,
+   "new": null,
+   "gm": {
+    "rep": 55.588,
+    "items": [
+     [
+      "Transaction and related costs",
+      0.0,
+      "ACQ"
+     ],
+     [
+      "Restructuring and consolidation",
+      0.835,
+      "RESTR"
+     ]
+    ],
+    "adj": 56.423
+   }
+  },
+  "is": {
+   "rev": 145.861,
+   "cogs": 90.273,
+   "gp": 55.588,
+   "sga": 25.739,
+   "oth": 3.308,
+   "opex": 29.047,
+   "oi": 26.541,
+   "int": 0.327,
+   "onop": -0.05,
+   "ebt": 26.264,
+   "tax": 4.695,
+   "ni": 21.569,
+   "pref": 0.0,
+   "ni_c": 21.569,
+   "eps_b": 0.87,
+   "eps_d": 0.86,
+   "sh_b": 24.861792,
+   "sh_d": 25.060812,
+   "_scale": 0.001
+  },
+  "source": {
+   "filing": "https://www.sec.gov/Archives/edgar/data/1324948/000121390022006497/f10q0122_rbcbearings.htm",
+   "release": "https://www.sec.gov/Archives/edgar/data/1324948/000121390022006267/ea155242ex99-1_rbcbearings.htm"
+  }
+ }
+}

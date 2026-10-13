@@ -1,0 +1,655 @@
+{
+ "period": "Q3-16",
+ "fy": 2016,
+ "q": 3,
+ "period_end": "2015-12-26",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1324948/000114420416078643/v430411_99-1.htm",
+  "release_date": "2016-02-03",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1324948/000114420416079011/v429459_10q.htm",
+  "filing_form": "10-Q",
+  "filing_date": "2016-02-04"
+ },
+ "notes": [],
+ "is": {
+  "rev": 144.216,
+  "cogs": 90.695,
+  "gp": 53.521,
+  "sga": 23.85,
+  "oth": 2.619,
+  "opex": 26.469,
+  "oi": 27.052,
+  "int": 2.238,
+  "onop": -0.054,
+  "ebt": 24.868,
+  "tax": 7.821,
+  "ni": 17.047,
+  "eps_b": 0.73,
+  "eps_d": 0.73,
+  "sh_b": 23.220707,
+  "sh_d": 23.492321,
+  "dps": 0.0,
+  "_scale": 0.001
+ },
+ "ng": {
+  "gm": {
+   "rep": 53.521,
+   "items": [
+    [
+     "Inventory purchase accounting adjustment",
+     0.562,
+     "STEPUP"
+    ],
+    [
+     "Integration and restructuring",
+     0.0,
+     "RESTR"
+    ]
+   ],
+   "adj": 54.083
+  },
+  "oi": {
+   "rep": 27.052,
+   "items": [
+    [
+     "Inventory purchase accounting adjustment",
+     0.562,
+     "STEPUP"
+    ],
+    [
+     "Integration and restructuring",
+     0.0,
+     "RESTR"
+    ],
+    [
+     "Acquisition costs",
+     0.025,
+     "ACQ"
+    ]
+   ],
+   "adj": 27.639
+  },
+  "ni": {
+   "rep": 17.047,
+   "items": [
+    [
+     "Inventory purchase accounting adjustment",
+     0.385,
+     "STEPUP"
+    ],
+    [
+     "Integration and restructuring",
+     0.0,
+     "RESTR"
+    ],
+    [
+     "Acquisition costs",
+     0.017,
+     "ACQ"
+    ],
+    [
+     "Loss on extinguishment of debt",
+     0.0,
+     "DEBT"
+    ],
+    [
+     "Foreign exchange translation loss (gain)",
+     -0.037,
+     "FX"
+    ],
+    [
+     "Discrete tax loss (benefit)",
+     -0.154,
+     "TAX"
+    ]
+   ],
+   "adj": 17.258,
+   "end_label": "Adjusted net income",
+   "eps_b": 0.74,
+   "eps_d": 0.73,
+   "sh_b": 23.220707,
+   "sh_d": 23.492321
+  },
+  "proxy_ebitda": 36.902,
+  "sel": {
+   "dda": 6.698,
+   "sbc": 2.565,
+   "cfo": 21.54,
+   "capex": 4.836,
+   "debt": 384.974,
+   "backlog": 351.297,
+   "bb": 10.47
+  },
+  "backlog_text": 351.3,
+  "seg_sales": {
+   "plain": 64.171,
+   "roller": 26.294,
+   "ball": 12.85,
+   "eng": 40.901
+  }
+ },
+ "bs": {
+  "cash": 44.403,
+  "ar": 90.332,
+  "inv": 274.522,
+  "tca": 428.459,
+  "ppe": 184.031,
+  "gw": 267.44,
+  "intang": 208.733,
+  "ta": 1098.894,
+  "ap": 34.764,
+  "accr": 29.199,
+  "cltd": 8.721,
+  "tcl": 72.684,
+  "ltd": 376.253,
+  "tl": 503.522,
+  "pref": 0.0,
+  "teq": 595.372,
+  "tle": 1098.894,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    44.403
+   ],
+   [
+    "Accounts receivable, net of allowance for doubtful accounts of $1,842 at December 26, 2015 and $860 at March 28, 2015",
+    90.332
+   ],
+   [
+    "Inventory",
+    274.522
+   ],
+   [
+    "Deferred income taxes",
+    10.808
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    8.394
+   ],
+   [
+    "Total current assets",
+    428.459
+   ],
+   [
+    "Property, plant and equipment, net",
+    184.031
+   ],
+   [
+    "Goodwill",
+    267.44
+   ],
+   [
+    "Intangible assets, net of accumulated amortization of $19,794 at December 26, 2015 and $13,185 at March 28, 2015",
+    208.733
+   ],
+   [
+    "Other assets",
+    10.231
+   ],
+   [
+    "Total assets",
+    1098.894
+   ],
+   [
+    "Accounts payable",
+    34.764
+   ],
+   [
+    "Accrued expenses and other current liabilities",
+    29.199
+   ],
+   [
+    "Current portion of long-term debt",
+    8.721
+   ],
+   [
+    "Total current liabilities",
+    72.684
+   ],
+   [
+    "Deferred income taxes",
+    23.214
+   ],
+   [
+    "Long-term debt, less current portion",
+    376.253
+   ],
+   [
+    "Other non-current liabilities",
+    31.371
+   ],
+   [
+    "Total liabilities",
+    503.522
+   ],
+   [
+    "Preferred stock, $.01 par value; authorized shares: 10,000,000 at December 26, 2015 and March 28, 2015; none issued and outstanding",
+    0.0
+   ],
+   [
+    "Common stock, $.01 par value; authorized shares: 60,000,000 at December 26, 2015 and March 28, 2015; issued and outstanding shares: 24,125,717 at December 26, 2015 and 23,833,185 at March 28, 2015",
+    0.241
+   ],
+   [
+    "Additional paid-in capital",
+    275.862
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -10.105
+   ],
+   [
+    "Retained earnings",
+    359.146
+   ],
+   [
+    "Treasury stock, at cost, 602,682 shares at December 26, 2015 and 439,864 shares at March 28, 2015",
+    -29.772
+   ],
+   [
+    "Total stockholders' equity",
+    595.372
+   ],
+   [
+    "Total liabilities and stockholders' equity",
+    1098.894
+   ]
+  ]
+ },
+ "cf": {
+  "ni": 44.97,
+  "dep": 12.549,
+  "amort": 6.621,
+  "sbc": 7.193,
+  "deftax": 1.88,
+  "cfo": 61.8,
+  "capex": -14.635,
+  "acq": -500.0,
+  "cfi": -514.571,
+  "div": 0.0,
+  "bb": -10.47,
+  "cff": 371.128,
+  "fx": 0.591,
+  "net": -81.052,
+  "beg": 125.455,
+  "end": 44.403,
+  "lines_raw": [
+   [
+    "Net income",
+    44.97
+   ],
+   [
+    "Depreciation",
+    12.549
+   ],
+   [
+    "Excess tax benefits from stock-based compensation",
+    -2.509
+   ],
+   [
+    "Deferred income taxes",
+    1.88
+   ],
+   [
+    "Amortization of intangible assets",
+    6.621
+   ],
+   [
+    "Amortization of deferred financing costs",
+    0.977
+   ],
+   [
+    "Consolidation and restructuring charges",
+    0.0
+   ],
+   [
+    "Stock-based compensation",
+    7.193
+   ],
+   [
+    "Other non-cash charges",
+    0.209
+   ],
+   [
+    "Accounts receivable",
+    10.806
+   ],
+   [
+    "Inventory",
+    -21.316
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    -3.001
+   ],
+   [
+    "Other non-current assets",
+    -1.332
+   ],
+   [
+    "Accounts payable",
+    -3.495
+   ],
+   [
+    "Accrued expenses and other current liabilities",
+    0.518
+   ],
+   [
+    "Other non-current liabilities",
+    7.73
+   ],
+   [
+    "Net cash provided by operating activities",
+    61.8
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -14.635
+   ],
+   [
+    "Proceeds from sale of short-term investments",
+    0.0
+   ],
+   [
+    "Proceeds from sale of assets",
+    0.064
+   ],
+   [
+    "Business acquisition",
+    -500.0
+   ],
+   [
+    "Net cash used in investing activities",
+    -514.571
+   ],
+   [
+    "Proceeds from revolving credit facility",
+    225.0
+   ],
+   [
+    "Repayments of revolving credit facility",
+    -37.5
+   ],
+   [
+    "Proceeds from term loans",
+    200.0
+   ],
+   [
+    "Repayments of term loans",
+    -5.361
+   ],
+   [
+    "Finance fees paid in connection with credit facility",
+    -7.122
+   ],
+   [
+    "Exercise of stock options",
+    4.072
+   ],
+   [
+    "Excess tax benefits from stock-based compensation",
+    2.509
+   ],
+   [
+    "Repurchase of common stock",
+    -10.47
+   ],
+   [
+    "Dividends paid to shareholders",
+    0.0
+   ],
+   [
+    "Other, net",
+    0.0
+   ],
+   [
+    "Net cash provided by (used in) financing activities",
+    371.128
+   ],
+   [
+    "Effect of exchange rate changes on cash",
+    0.591
+   ],
+   [
+    "Decrease during the period",
+    -81.052
+   ],
+   [
+    "Cash, at beginning of period",
+    125.455
+   ],
+   [
+    "Cash, at end of period",
+    44.403
+   ]
+  ],
+  "ytd_months": 9
+ },
+ "segn": {
+  "sales": {
+   "plain": 64.171,
+   "roller": 26.294,
+   "ball": 12.85,
+   "eng": 40.901
+  },
+  "gm": {
+   "plain": 22.69,
+   "roller": 11.517,
+   "ball": 5.202,
+   "eng": 14.112
+  },
+  "sga": {
+   "plain": 4.765,
+   "roller": 1.48,
+   "ball": 1.368,
+   "eng": 5.311,
+   "corp": 10.926
+  },
+  "oi": {
+   "plain": 13.737,
+   "roller": 10.016,
+   "ball": 3.634,
+   "eng": 10.585,
+   "corp": -10.92
+  }
+ },
+ "segn_ytd": {
+  "sales": {
+   "plain": 197.455,
+   "roller": 84.025,
+   "ball": 38.791,
+   "eng": 114.949
+  },
+  "gm": {
+   "plain": 75.401,
+   "roller": 35.767,
+   "ball": 15.677,
+   "eng": 31.558
+  },
+  "sga": {
+   "plain": 16.154,
+   "roller": 4.453,
+   "ball": 4.106,
+   "eng": 13.433,
+   "corp": 34.373
+  },
+  "oi": {
+   "plain": 54.826,
+   "roller": 31.08,
+   "ball": 11.081,
+   "eng": 15.448,
+   "corp": -39.423
+  }
+ },
+ "py": {
+  "segn": {
+   "sales": {
+    "plain": 64.171,
+    "roller": 26.294,
+    "ball": 12.85,
+    "eng": 40.901
+   },
+   "gm": {
+    "plain": 22.69,
+    "roller": 11.517,
+    "ball": 5.202,
+    "eng": 14.112
+   },
+   "sga": {
+    "plain": 4.765,
+    "roller": 1.48,
+    "ball": 1.368,
+    "eng": 5.311,
+    "corp": 10.926
+   },
+   "oi": {
+    "plain": 13.737,
+    "roller": 10.016,
+    "ball": 3.634,
+    "eng": 10.585,
+    "corp": -10.92
+   }
+  },
+  "segn_ytd": {
+   "sales": {
+    "plain": 197.455,
+    "roller": 84.025,
+    "ball": 38.791,
+    "eng": 114.949
+   },
+   "gm": {
+    "plain": 75.401,
+    "roller": 35.767,
+    "ball": 15.677,
+    "eng": 31.558
+   },
+   "sga": {
+    "plain": 16.154,
+    "roller": 4.453,
+    "ball": 4.106,
+    "eng": 13.433,
+    "corp": 34.373
+   },
+   "oi": {
+    "plain": 54.826,
+    "roller": 31.08,
+    "ball": 11.081,
+    "eng": 15.448,
+    "corp": -39.423
+   }
+  },
+  "seg_sales": {
+   "plain": 64.171,
+   "roller": 26.294,
+   "ball": 12.85,
+   "eng": 40.901
+  },
+  "ng": {
+   "oi": {
+    "rep": 27.052,
+    "items": [
+     [
+      "Inventory purchase accounting adjustment",
+      0.562,
+      "STEPUP"
+     ],
+     [
+      "Integration and restructuring",
+      0.0,
+      "RESTR"
+     ],
+     [
+      "Acquisition costs",
+      0.025,
+      "ACQ"
+     ]
+    ],
+    "adj": 27.639
+   },
+   "ni": {
+    "rep": 17.047,
+    "items": [
+     [
+      "Inventory purchase accounting adjustment",
+      0.385,
+      "STEPUP"
+     ],
+     [
+      "Integration and restructuring",
+      0.0,
+      "RESTR"
+     ],
+     [
+      "Acquisition costs",
+      0.017,
+      "ACQ"
+     ],
+     [
+      "Loss on extinguishment of debt",
+      0.0,
+      "DEBT"
+     ],
+     [
+      "Foreign exchange translation loss (gain)",
+      -0.037,
+      "FX"
+     ],
+     [
+      "Discrete tax loss (benefit)",
+      -0.154,
+      "TAX"
+     ]
+    ],
+    "adj": 17.258,
+    "end_label": "Adjusted net income",
+    "eps_b": 0.74,
+    "eps_d": 0.73,
+    "sh_b": 23.220707,
+    "sh_d": 23.492321
+   },
+   "adj_ebitda": null,
+   "ebitda": null,
+   "new": null,
+   "gm": {
+    "rep": 53.521,
+    "items": [
+     [
+      "Inventory purchase accounting adjustment",
+      0.562,
+      "STEPUP"
+     ],
+     [
+      "Integration and restructuring",
+      0.0,
+      "RESTR"
+     ]
+    ],
+    "adj": 54.083
+   }
+  },
+  "is": {
+   "rev": 144.216,
+   "cogs": 90.695,
+   "gp": 53.521,
+   "sga": 23.85,
+   "oth": 2.619,
+   "opex": 26.469,
+   "oi": 27.052,
+   "int": 2.238,
+   "onop": -0.054,
+   "ebt": 24.868,
+   "tax": 7.821,
+   "ni": 17.047,
+   "eps_b": 0.73,
+   "eps_d": 0.73,
+   "sh_b": 23.220707,
+   "sh_d": 23.492321,
+   "_scale": 0.001
+  },
+  "source": {
+   "filing": "https://www.sec.gov/Archives/edgar/data/1324948/000114420417006678/v457671_10q.htm",
+   "release": "https://www.sec.gov/Archives/edgar/data/1324948/000114420417006616/v458609_ex99-1.htm"
+  }
+ }
+}

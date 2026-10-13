@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -12,28 +12,67 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 
 | Situation | Read |
 |---|---|
-| Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
+| Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW, RBC |
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
-| Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
+| Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO, RBC (PSC after the outlook) |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
-| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
+| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO, RBC |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
-| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
+| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week), RBC (Mar, 53-week FY2027) |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
-| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
+| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBC (MCPS, converted Oct-2024), RBA (participating preferred), ONON, HEI (share classes) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
 | Private company, LBO | R&Y |
 
 ---
 
 ## Aerospace, defense & industrial technology
+
+### RBC — RBC Bearings (MLM template via WWD kit; US GAAP / USD m / FY ends Saturday nearest 31-Mar)
+- **Coverage & basis:** FY2006–12 annual, Q1/13–Q1/27 quarterly, Q2–Q4/27E, FY2027E, FY2028E–32E (CIK 1324948; IPO Aug-2005). As originally reported. The FY2022 10-K/A (5-Aug-2022) restated FY2020–22 and their quarters for stock-based compensation timing (SG&A); restated operating income and net income are memo rows. FY2027 has 53 weeks with the extra week in Q4 (Q1 had 13), handled by a sales week factor of 14/13 in Q4/27E.
+- **Operating build:** two segments from the Q3 FY22 release (Aerospace & Defense / Industrial, after Dodge). FY2021 and Q3 FY21–Q2 FY22 come from the re-presented comparatives; Q1–Q2 FY21 were never re-presented and stay blank, with a "not on the current segment basis" total row. Legacy Roller / Plain / Ball / Other (Engineered Products from FY2016) are memo rows with a Σ check. The ASC 606 aerospace / industrial end-market split (FY2019–Q2 FY22) is on a different basis from the segments (FY2021: $353m vs $396m) and is not used. Segment gross margin is the CODM measure, so the build is sales × segment gross margin, then SG&A % and other, net. Segment operating income is a memo row (presented FY2022–25 only); re-presented SG&A / OI for Q1–Q2 FY22 carry the restatement and are dropped.
+- **Bridges & definitions:**
+  - Adjusted operating income: published from FY2006 except FY2012 and Q1 FY15, when nothing was adjusted (adjusted = GAAP, flagged).
+  - Adjusted EBITDA = adjusted operating income + D&A + stock compensation in every era. It was published as "adjusted operating income plus D&A plus incentive stock compensation" (Q2 FY16–Q2 FY22) and as Adjusted EBITDA (Q3 FY22+), so one model series ties to both.
+  - Adjusted EPS:
+    - Old definition (items after tax) through Q1 FY23.
+    - Current definition from Q2 FY23: also adds back M&A amortization, stock compensation and deferred-fee amortization, pre-tax, with a tax line.
+    - Q1 FY22–Q1 FY23 were re-presented on the current definition, from a restated GAAP base; they are a memo series.
+    - Q3–Q4 FY22 also showed "adjusted cash net income" and Q1 FY23 "new adjusted" alongside the headline.
+  - The tax effect is derived as published adjusted net income − net income − items, which also absorbs the old after-tax item presentation. MCPS preferred dividends are deducted (FY2022–25).
+- **Data quirks & corrections:**
+  - Text conversion drops blank cells, so 4-column reconciliation rows with 2 values are ambiguous (Q2 FY15, Q2 FY19). They are resolved by the choice that closes the published reconciliation.
+  - Unit captions were unreliable in the FY2023–24 documents ("in thousands" captions over millions). The scale is set per document from the net-sales magnitude.
+  - The FY2006 10-K segment table runs oldest-first.
+  - check_data runs 1,387 checks and xbrl_check 341, all passing.
+- **Deals & special blocks:**
+  - PPAs: Dodge (1-Nov-2021, final allocation $2,880.8m net of cash) and VACCO (18-Jul-2025, $276.7m).
+  - VACCO's $34.4m Q1 FY27 sales (release text) are stripped from the organic trend; its ~3 pre-anniversary weeks are added in Q2/27E.
+  - PSC Couplings ($24.2m, ~$15.1m LTM sales) closed 10-Aug-2026, after the 31-Jul outlook. It is added on top of the calibration by days consolidated, with an assumed allocation.
+- **Calibration & scenarios:** RBC guides only the next quarter: sales, gross margin % and SG&A %.
+  - A uniform growth Δ solves Q2/27E sales to $505 / 510 / 515m.
+  - A uniform segment gross-margin Δ solves Q2 gross margin to 45.5–45.75%.
+  - SG&A uses the guided ratio.
+  - Both Δs carry into Q3–Q4/27E. FY2027E is an output (no full-year guidance).
+- **Balance sheet, cash & capital:**
+  - Term loan $96m repaid in FY2027 (maturity 2-Nov-2026).
+  - $500m 4.375% notes due Oct-2029, assumed refinanced.
+  - Revolver ($500m to Oct-2030; $200m drawn for VACCO) to a $75m minimum cash, with a headroom memo.
+  - No dividend. The $100m 2019 buyback authorization is unused, so leverage-floor buybacks (1.5x / 1.0x / 0.5x) after a $250m p.a. M&A lever are a flagged assumption.
+- **Valuation:** $510 per the user (13-Oct-2026). NOPAT on adjusted EBITA (after stock comp, before M&A amortization) less transaction and restructuring costs, with a D&A-excl.-M&A-amortization add-back. FY2027E (ends 3-Apr-2027) is the base year and FY2028E–32E are explicit. The base-case DCF gives ~$308 at a 9.2% WACC (market inputs are assumptions).
+- **Reusable lessons:**
+  - [extraction] When text conversion drops blank cells, a row with fewer values than the table has columns is ambiguous; resolve it by the choice that closes the published reconciliation, never by position.
+  - [extraction] Don't trust unit captions near tables; set the scale per document from a reference figure's magnitude and cross-check to XBRL.
+  - [basis] With a 10-K/A restatement, keep the original basis and carry restated lines as memo rows; drop re-presented segment SG&A / OI that embed the restatement while keeping lines it doesn't touch (sales, gross margin).
+  - [calibration] One-quarter-ahead guidance on sales / gross margin % / SG&A %: solve the guided quarter, apply the guided ratio directly, carry the Δs; scale a 53-week quarter with a week factor.
+  - [bridges] When a company re-labels the same economic measure (adjusted OI + D&A + SBC → "Adjusted EBITDA"), one model series can tie to both published names.
 
 ### TDY — Teledyne Technologies (RBA template → became the TDY template; US GAAP / USD m / 52-53-week FY ending Sunday nearest 31-Dec)
 - **Coverage & basis:** FY2006–12 annual, Q1/13–Q2/26 quarterly, Q3–Q4/26E calibrated. 53-week years are FY2009, FY2015 and FY2020, each with a 14-week Q4 ending 3-Jan of the next calendar year. Period keys follow the fiscal year, not the calendar date. Basis is "latest filing presenting the period", with one exception: FY2006–07 segments exist only on the legacy four-segment basis and sit in memo rows; FY2008–09 use the FY2010 10-K recast. Continental Motors (sold Apr-2011) is in FY2006–07 continuing ops and became disc ops from the FY2010 10-K. ASU 2017-07 recast 2017; ASC 606 did not restate 2017. Acquired-intangible amortization has been its own IS line since Q2-21 (Q1/21 and FY2019–20 reclassified); earlier periods are not re-presented.

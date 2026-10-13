@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, RBC). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -28,7 +28,7 @@ Each row is a change that is now part of the standard. The checklist in section 
 | RBA → TDY | TDY, KRMN, VMC | Segment P&L with GAAP OI → amortization → non-GAAP segment OI. Future-M&A lever. A current-definition memo series drives the valuation outputs. Uniform calibration Δ solves the current year to guided EPS / EBITDA. Debt: scheduled maturities plus a revolver to minimum cash, with interest on opening balances. LibreOffice Calc recalculation, then 0 errors and all checks tie. |
 | TDY → MLM template | MLM and every build since | Unit-economics build (shipments × ASP, price / volume bridge, fall-through). Pending / closed acquisitions modelled as their own block with a PPA and synergies. Legacy segments kept as memo rows. Leverage-targeted buybacks. DuPont ROIC and RONTA. Modelling Notes column, CAGR columns and the scenario table on the right of the forecast. |
 | MLM build-kit process | WAB, ODFL, SAIA, LOAR, ONON, STE, DHR | Standard kit: `fw.py` (column map, archetype-row style cloning, row registry), `spec.py` / `spec2.py` (row specs), `build.py` (inputs, compute, scenario table, definition flags), `other_sheets.py` (rewire BBB / DCF / Charts, re-inject chart XML), `extract.py` / `normalize.py` / `check_data.py`, `inspect_model.py`, `cyc.py`. Columns re-based to the company's history (template column − N). `--snap` fills Bull/Bear snapshots; `--recalc` stores values. |
-| MLM template update (6-Oct-26) | ONON, DHR, CTAS, STE, LECO, ESAB | DCF: live valuation date, 5-year fade, implied ROIC / RONIC, target-IRR max entry price, WACC × g grid, reverse DCF, Mauboussin EV/NOPAT. Bull-Base-Bear: buyback rows (40–42). `DCF_old` dropped. View: frozen at C8, quarterly columns grouped and collapsed. Cached values stored so the file reads correctly in any viewer. |
+| MLM template update (6-Oct-26) | ONON, DHR, CTAS, STE, LECO, ESAB, WWD, RBC | DCF: live valuation date, 5-year fade, implied ROIC / RONIC, target-IRR max entry price, WACC × g grid, reverse DCF, Mauboussin EV/NOPAT. Bull-Base-Bear: buyback rows (40–42). `DCF_old` dropped. View: frozen at C8, quarterly columns grouped and collapsed. Cached values stored so the file reads correctly in any viewer. |
 | Special cases | RMS, BC, ONON, CHRW, UBER, CTAS, DHR, STE | Non-SEC / IFRS / foreign-currency reporters (half-year columns, constant-currency + FX build). Deal pro forma tabs (CHRW RXO PF: S&U, PPA, synergies, accretion). Pending deals behind a toggle (CTAS UniFirst, UBER Delivery Hero). Hybrid recast basis around spin-offs (DHR). Non-calendar fiscal years (STE March, CTAS May). |
 
 ---
@@ -254,7 +254,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | IFRS / foreign currency | ONON, RMS, BC, TFI | Reporting currency; constant-currency + FX build; price × FX input; IFRS 16 lease schedule; rent-as-opex DCF option |
 | Half-year reporters | RMS, BC | H1 / H2 / FY columns (H2 = FY − H1); quarterly revenue memo |
 | Recent IPO | LOAR, ONON, KRMN | Annual columns from the prospectus; P&L-only years flagged; BS / CF start when available |
-| Non-December fiscal year | STE (Mar), CTAS (May), HEI (Oct) | Column labels by fiscal year; DCF discount dates moved to FY ends |
+| Non-December fiscal year | STE (Mar), CTAS (May), HEI (Oct), RBC (Mar, 52/53-week) | Column labels by fiscal year; DCF discount dates moved to FY ends; a 53-week quarter gets a week factor |
 | Pending / new acquisition | DHR, MLM, CTAS, ESAB, CSGP, UBER, CHRW | Separate block, PPA, financing, synergies, closing-date toggle; deal tab for large deals |
 | Dual-class / splits | ONON, HEI, CTAS, ODFL | Class-equivalent shares; split-adjust by source filing date |
 | Private company | R&Y | Compilation statements; implied CF from BS changes; LBO tab |
@@ -275,7 +275,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -290,6 +290,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
+- **Text conversion drops blank cells.** A table row with fewer values than the table has columns is ambiguous (current vs prior-year columns); resolve it by the choice that closes the published reconciliation, never by position, and log it. [RBC]
+- **Don't trust unit captions near tables.** Set the scale per document from the magnitude of a reference figure (net sales, total assets) and cross-check to XBRL; RBC's FY2023–24 filings carry "in thousands" captions over millions. [RBC]
 
 ### 5.2 Basis
 - **Segment re-presentation with a short recast history:** model an aggregate the re-presentation doesn't change and keep the old split as memo. Prove where an absorbed segment went using the restated comparative Δ. [RBA, TFI]
@@ -298,6 +300,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **After a spin:** start the BS at the first post-spin balance sheet even if the P&L uses earlier recast comparatives, and fill earlier y/y with company-reported change % memos. Spin-cos put carve-out (Form 10) years in the main columns, with the former parent's segment history as a flagged memo under the parent's CIK. [XPO, ESAB]
 - **Half-year reporters:** carry quarterly revenue as "1st / 2nd quarter of the half" memo rows inside the half-year columns, with a Σ check. [RMS, BC]
 - **Two builds of one company:** diff their dated facts (split dates, deconsolidation quarter, label cut-overs) and resolve each from the filing. [LECO]
+- **10-K/A restatements:** keep the originally reported basis and carry the restated lines as memo rows. Drop re-presented comparatives that embed the restatement (segment SG&A / OI) while keeping lines it doesn't touch (sales, gross margin). [RBC]
 
 ### 5.3 Operating build
 - **When a segment or product table changes revenue basis** (net sales → ex-freight → total revenue; pre-ASC 606), add a derived "outside the lines" row (consolidated − Σ lines) so the build check ties in every period. [MLM, VMC]
@@ -343,7 +346,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 ### 5.5 Calibration
 - **Order of operations.** Apply every explicitly guided driver first, then solve one uniform Δ on the least-guided driver. Use a "sensitivity to +1.00" helper row for a closed-form linear solve, with no goal-seek and no circularity. [VMC, MLM, TDY, WAB, DHR, LOAR, CSGP]
 - **EPS guidance → operating target:** required adjusted OI = EPS × guidance share count (ex future buybacks) ÷ (1 − guided ETR) + net interest − adjusted other income, less the actual YTD. Then solve margins to it. [DHR, CTAS, STE, WAB, WWD]
-- **Two anchors in one year:** if a quarterly guide and a FY guide both exist, solve Q3 to the quarter and Q4 to the year with separate Δs and checks. For one-quarter-ahead guidance only, carry the solved Δ forward. [DHR, ONON, TDY, UBER]
+- **Two anchors in one year:** if a quarterly guide and a FY guide both exist, solve Q3 to the quarter and Q4 to the year with separate Δs and checks. For one-quarter-ahead guidance only, carry the solved Δ forward; guided cost ratios (SG&A %) are applied directly in the guided quarter and carried as a change vs the prior-year quarter. [DHR, ONON, TDY, UBER, RBC]
+- **53-week years:** put the extra week in the quarter the company names and scale that quarter's sales by a week factor (14/13) rather than letting it distort the y/y trend. [RBC]
 - **Guidance that excludes a deal or one-off:** calibrate a legacy / guidance-basis memo series with its own check, and add the deal block and excluded items on top. Deals already inside guidance go inside segment acquisition %. Check the deal close date against the outlook date. [MLM, KRMN, CLH, CSGP, CTAS, UBER, TMO, ONON, DHR]
 - **Incremental-margin guidance:** target = prior-year half + incremental % × Δ sales. [LECO]
 - **Operating-ratio guidance:** solve the remaining quarters on OR, with the largest controllable cost line balancing, and show the implied shift vs run-rate. [SAIA]
