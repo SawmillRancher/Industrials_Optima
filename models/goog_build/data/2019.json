@@ -1,0 +1,191 @@
+{
+ "dims": {
+  "segoi_new": {
+   "filed": "2022-02-02",
+   "source": "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm",
+   "values": {
+    "alpha": -5299.0,
+    "cloud": -4645.0,
+    "ob": -4824.0,
+    "svc": 48999.0
+   }
+  },
+  "segoi_old": {
+   "filed": "2020-02-04",
+   "source": "https://www.sec.gov/Archives/edgar/data/1652044/000165204420000008/goog10-k2019.htm",
+   "values": {
+    "alpha": -2618.0,
+    "google": 41673.0,
+    "ob": -4824.0
+   }
+  },
+  "segrev_new": {
+   "filed": "2022-02-02",
+   "source": "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm",
+   "values": {
+    "cloud": 8918.0,
+    "ob": 659.0,
+    "svc": 151825.0
+   }
+  },
+  "segrev_old": {
+   "filed": "2020-02-04",
+   "source": "https://www.sec.gov/Archives/edgar/data/1652044/000165204420000008/goog10-k2019.htm",
+   "values": {
+    "google": 160743.0,
+    "ob": 659.0
+   }
+  },
+  "streams": {
+   "filed": "2022-02-02",
+   "source": "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm",
+   "values": {
+    "network": 21547.0,
+    "search": 98115.0,
+    "subs": 17014.0,
+    "youtube": 15149.0
+   }
+  }
+ },
+ "filed": "2020-02-04",
+ "legacy": {
+  "leg_net": 21547.0,
+  "leg_ob": 659.0,
+  "leg_web": 113264.0
+ },
+ "period": "2019",
+ "period_end": "2019-12-31",
+ "sources": {
+  "filing": "https://www.sec.gov/Archives/edgar/data/1652044/000165204420000008/goog10-k2019.htm"
+ },
+ "xbrl": {
+  "concepts": {
+   "bs_ap": "AccountsPayableCurrent",
+   "bs_ar": "AccountsReceivableNetCurrent",
+   "bs_cash": "CashAndCashEquivalentsAtCarryingValue",
+   "bs_cp": "CommercialPaper",
+   "bs_eq": "StockholdersEquity",
+   "bs_gw": "Goodwill",
+   "bs_int": "IntangibleAssetsNetExcludingGoodwill",
+   "bs_ltd": "LongTermDebtNoncurrent",
+   "bs_msec": "MarketableSecuritiesCurrent",
+   "bs_nmsec": "OtherLongTermInvestments",
+   "bs_oll": "OperatingLeaseLiabilityNoncurrent",
+   "bs_ppe": "PropertyPlantandEquipmentandFinanceLeaseRightofUseAssetafterAccumulatedDepreciationandAmortization",
+   "bs_rou": "OperatingLeaseRightOfUseAsset",
+   "bs_sh": "CommonStockSharesOutstanding",
+   "bs_ta": "Assets",
+   "bs_tca": "AssetsCurrent",
+   "bs_tcl": "LiabilitiesCurrent",
+   "bs_tl": "Liabilities",
+   "bs_tle": "LiabilitiesAndStockholdersEquity",
+   "cf_acq": "AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets",
+   "cf_amort": "AmortizationAndImpairmentOfIntangibleAssets",
+   "cf_bb": "PaymentsForRepurchaseOfCommonStock",
+   "cf_capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cf_cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+   "cf_cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cf_cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cf_cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "cf_debt_iss": "ProceedsFromDebtNetOfIssuanceCosts",
+   "cf_debt_rep": "RepaymentsOfDebtAndCapitalLeaseObligations",
+   "cf_def": "DeferredIncomeTaxExpenseBenefit",
+   "cf_dep": "DepreciationAndImpairmentOnDispositionOfPropertyAndEquipment",
+   "cf_fx": "EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+   "cf_gain": "DebtAndEquitySecuritiesGainLoss",
+   "cf_minority": "ProceedsFromMinorityShareholders",
+   "cf_sbc": "ShareBasedCompensation",
+   "cf_sbcnet": "NetProceedsPaymentsRelatedToStockBasedAwardActivities",
+   "cor": "CostOfRevenue",
+   "ebt": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+   "eps_b": "EarningsPerShareBasic",
+   "eps_d": "EarningsPerShareDiluted",
+   "eq_gain": "EquitySecuritiesFvNiGainLoss",
+   "ga": "GeneralAndAdministrativeExpense",
+   "int_exp": "InterestExpense",
+   "int_inc": "InterestIncomeOther",
+   "ni": "NetIncomeLoss",
+   "oi": "OperatingIncomeLoss",
+   "oie": "NonoperatingIncomeExpense",
+   "opex_tot": "CostsAndExpenses",
+   "rd": "ResearchAndDevelopmentExpense",
+   "rev": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sbc_is": "AllocatedShareBasedCompensationExpense",
+   "sm": "SellingAndMarketingExpense",
+   "tax": "IncomeTaxExpenseBenefit"
+  },
+  "q": {
+   "bs_ap": 5561.0,
+   "bs_ar": 25326.0,
+   "bs_cash": 18498.0,
+   "bs_cltd": null,
+   "bs_cp": 0.0,
+   "bs_eq": 201442.0,
+   "bs_gw": 20624.0,
+   "bs_int": 1979.0,
+   "bs_ltd": 3958.0,
+   "bs_msec": 101177.0,
+   "bs_nmsec": 13078.0,
+   "bs_oll": 10214.0,
+   "bs_ppe": 73646.0,
+   "bs_pref": null,
+   "bs_rou": 10941.0,
+   "bs_sh": 688.335,
+   "bs_ta": 275909.0,
+   "bs_tca": 152578.0,
+   "bs_tcl": 45221.0,
+   "bs_tl": 74467.0,
+   "bs_tle": 275909.0,
+   "cf_cash": 18498.0,
+   "cf_cash_beg": 16701.0
+  },
+  "ytd": {
+   "amort_int": null,
+   "cf_acq": -2515.0,
+   "cf_amort": 925.0,
+   "cf_bb": -18396.0,
+   "cf_capex": -23548.0,
+   "cf_cff": -23209.0,
+   "cf_cfi": -29491.0,
+   "cf_cfo": 54520.0,
+   "cf_debt_iss": 317.0,
+   "cf_debt_rep": -585.0,
+   "cf_def": 145.0,
+   "cf_dep": 10856.0,
+   "cf_div": null,
+   "cf_div_pref": null,
+   "cf_divest": null,
+   "cf_eq_iss": null,
+   "cf_fx": -23.0,
+   "cf_gain": 2798.0,
+   "cf_minority": 220.0,
+   "cf_pref_iss": null,
+   "cf_sbc": 10794.0,
+   "cf_sbcnet": 4765.0,
+   "cor": 71896.0,
+   "disc": null,
+   "dps": null,
+   "ebt": 39625.0,
+   "eps_b": 49.59,
+   "eps_d": 49.16,
+   "eq_gain": 2649.0,
+   "ga": 9551.0,
+   "int_exp": 100.0,
+   "int_inc": 2427.0,
+   "ni": 34343.0,
+   "ni_cont": null,
+   "oi": 34231.0,
+   "oie": 5394.0,
+   "opex_tot": 127626.0,
+   "pref_div": null,
+   "rd": 26018.0,
+   "rev": 161857.0,
+   "sbc_is": 11700.0,
+   "sh_b": 692.596,
+   "sh_d": 698.556,
+   "sm": 18464.0,
+   "tax": 5282.0
+  }
+ },
+ "ytd_months": 12
+}

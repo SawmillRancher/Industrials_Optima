@@ -1,0 +1,163 @@
+{
+ "_doc": "Hand-collected items for the GOOG model, each with its EDGAR source. Amounts USD millions unless stated. Not machine-extracted: company-quantified adjusting items, company-published adjusted figures, Google Inc. non-GAAP definitions, guidance (call-only guidance flagged UNVERIFIED), capital structure, deals and the share price.",
+ "splits": {
+  "2014-04-02": {
+   "ratio": 2,
+   "note": "Class C capital stock dividend (one Class C share per Class A / Class B share), distributed 2-Apr-2014 (Google Inc. 8-K and Q1-2014 10-Q). Filings dated on or after 3-Apr-2014 are post-split."
+  },
+  "2022-07-15": {
+   "ratio": 20,
+   "note": "20-for-1 stock split effected as a stock dividend, distributed after close on 15-Jul-2022 (8-K 1-Feb-2022 announcement; Q2-2022 10-Q filed 27-Jul-2022 is post-split)."
+  },
+  "rule": "Per-share data and share counts are multiplied / divided by the product of the split ratios dated after the filing date of the source document (x40 before 3-Apr-2014; x20 before 15-Jul-2022)."
+ },
+ "items": {
+  "_doc": "Pre-tax operating items the company quantified in a published non-GAAP reconciliation (Ex. 99.1); the model's adjusted operating income adds them back. tax = model tax effect (fines are not tax-deductible: company 'net income excluding the EC fine' = GAAP net income + the full fine).",
+  "fine": {
+   "Q2-17": {
+    "v": 2736.0,
+    "label": "European Commission fine (Google Shopping), separate income-statement line",
+    "src": "https://www.sec.gov/Archives/edgar/data/1652044/000165204417000024/googexhibit991q22017.htm"
+   },
+   "Q2-18": {
+    "v": 5071.0,
+    "label": "European Commission fine (Android), separate income-statement line",
+    "src": "https://www.sec.gov/Archives/edgar/data/1652044/000165204418000025/googexhibit991q22018.htm"
+   },
+   "Q1-19": {
+    "v": 1697.0,
+    "label": "European Commission fine (AdSense), separate income-statement line",
+    "src": "https://www.sec.gov/Archives/edgar/data/1652044/000165204419000011/googexhibit991q12019.htm"
+   },
+   "Q3-25": {
+    "v": 3457.0,
+    "label": "European Commission fine (adtech) accrued in general & administrative (release: operating income excluding the EC fine $34,685m vs GAAP $31,228m)",
+    "src": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000087/googexhibit991q32025.htm"
+   }
+  },
+  "restr": {
+   "Q1-23": {
+    "v": 2558.0,
+    "label": "Employee severance and related charges and office space charges (Q1-24 release: Q1-23 operating income excluding these charges $19,973m vs GAAP $17,415m)",
+    "src": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000047/googexhibit991q12024.htm"
+   },
+   "Q1-24": {
+    "v": 716.0,
+    "label": "Employee severance and related charges (Q1-24 release: operating income excluding severance and office space charges $26,188m vs GAAP $25,472m)",
+    "src": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000047/googexhibit991q12024.htm"
+   }
+  },
+  "taxd": {
+   "Q4-17": {
+    "v": 9857.0,
+    "label": "Tax Act (TCJA) impact on the provision for income taxes: GAAP $11,038m vs $1,181m excluding the Tax Act (company non-GAAP)",
+    "src": "https://www.sec.gov/Archives/edgar/data/1652044/000165204418000004/googexhibit991q42017.htm"
+   }
+  },
+  "eq_impair": {
+   "2008": {
+    "v": -1094.757,
+    "label": "Impairment of equity investments (Clearwire, AOL), separate line in other income; excluded from Google's 2008 non-GAAP net income",
+    "src": "https://www.sec.gov/Archives/edgar/data/1288776/000119312509029448/d10k.htm"
+   }
+  },
+  "named_not_adjusted": "Items Alphabet named or quantified in MD&A but did not reconcile in a published non-GAAP table, left in adjusted figures (model choice): 2023 Q2-Q4 workforce-reduction and office-space charges ($70m Q2, $102m Q3; FY2023 total $3.9bn), 2024 severance (FY $1.0bn, of which Q1 $716m adjusted) and office space charges (FY $796m, incl. Q3 $607m), the $1.4bn legal accrual in Q2-2025, Q1-2026 office space impairment ($300m), the 2011 $500m DOJ forfeiture, Google Inc. 2012-14 Motorola restructuring.",
+  "c_alloc": {
+   "Q2-15": {
+    "v": 522.0,
+    "label": "Adjustment Payment to Class C capital stockholders (deducted from net income available to Class A / B; Class C EPS includes it)",
+    "src": "https://www.sec.gov/Archives/edgar/data/1288776/000128877615000046/goog10-qq32015.htm"
+   }
+  }
+ },
+ "company_adjusted": {
+  "_doc": "Company-published adjusted figures (definition in force in that release). oi = operating income excluding the items; ni / eps = net income / diluted EPS excluding the items (as published, pre-split where applicable).",
+  "Q2-17": {
+   "oi": 6868.0,
+   "ni": 6260.0,
+   "eps": 8.9,
+   "def": "excluding the EC fine",
+   "items": 2736.0
+  },
+  "Q4-17": {
+   "eps": 9.7,
+   "def": "excluding the impact of the Tax Act (provision for income taxes $1,181m vs $11,038m GAAP); only EPS and the tax line are published",
+   "items": 9857.0
+  },
+  "Q2-18": {
+   "oi": 7878.0,
+   "ni": 8266.0,
+   "eps": 11.75,
+   "def": "excluding the EC fines",
+   "items": 5071.0
+  },
+  "Q1-19": {
+   "oi": 8305.0,
+   "ni": 8339.0,
+   "eps": 11.9,
+   "def": "excluding the EC fine",
+   "items": 1697.0
+  },
+  "Q1-23": {
+   "oi": 19973.0,
+   "def": "excluding severance and related and office space charges (published in the Q1-24 release)"
+  },
+  "Q1-24": {
+   "oi": 26188.0,
+   "def": "excluding severance and related and office space charges"
+  },
+  "Q3-25": {
+   "oi": 34685.0,
+   "def": "excluding the EC fine"
+  }
+ },
+ "google_nongaap": "Google Inc. / Alphabet published non-GAAP operating income, net income and diluted EPS excluding stock-based compensation (net of the related tax benefit), net income (loss) from discontinued operations and, as applicable, other special items (e.g. the 2008 equity-investment impairments) from 2005 to the Q4-2016 release (Ex. 99.1 'Reconciliations of non-GAAP results of operations'); dropped from the Q1-2017 release. Quarterly values parsed by parse_release.py.",
+ "guidance": {
+  "_doc": "Alphabet gives no revenue, margin or EPS guidance in its releases or 10-Qs. Capital-expenditure guidance is given on the earnings call only (not filed on EDGAR) and is UNVERIFIED.",
+  "capex_2026": {
+   "low": 195000.0,
+   "high": 205000.0,
+   "date": "2026-07-22",
+   "prior": "180,000-190,000 (Q1-26 call)",
+   "status": "UNVERIFIED - Q2-2026 earnings call (CFO), reported by secondary sources (w.media, Nasdaq/Motley Fool); not in any EDGAR filing. The Q2-26 10-Q states only that 2026 investment in technical infrastructure will 'significantly increase, relative to 2025'."
+  },
+  "capex_2027": {
+   "text": "Capex expected to 'increase significantly in 2027' (Q2-2026 call; UNVERIFIED, no figure)."
+  },
+  "edgar_capex_1h26": {
+   "v": 80588.0,
+   "src": "Q2-26 10-Q MD&A: $80.6bn of capital expenditures in the six months ended 30-Jun-2026 (vs $39.6bn)"
+  }
+ },
+ "capital": {
+  "debt_2026_06_30": "Total face value of long-term debt $101,085m at 30-Jun-2026 (Q2-26 10-Q Note 6): 2016 USD notes $2,000m due 2026 (2.00%); 2020 USD $9,000m 2027-60 (0.80-2.25%); 2025 USD $22,500m 2028-75 (3.88-5.70%, incl. $500m SOFR+0.52% FRN 2028); 2025 EUR $15,074m 2028-64 (2.38-4.38%); 2026 USD $20,000m 2029-66 (3.70-5.75%, w.a. 4.80%); 2026 GBP $7,263m 2029-2126 (w.a. 5.31%); 2026 CHF $3,772m 2029-51 (w.a. 1.06%); 2026 EUR $10,239m 2030-63 (w.a. 3.90%); 2026 CAD $5,985m 2031-56 (w.a. 4.35%); 2026 JPY $3,566m 2029-66 (w.a. 2.65%); other long-term debt $1,686m (incl. Intersect project debt). Credit facilities $11.7bn, $1.3bn drawn (SOFR + 1.5-2.25%). Commercial paper program $25bn, nil outstanding.",
+  "maturities_10k_2025": {
+   "2026": 2000.0,
+   "2027": 1000.0,
+   "2028": 2676.0,
+   "2029": 1764.0,
+   "2030": 5500.0,
+   "thereafter": 36145.0,
+   "src": "FY2025 10-K debt note (face value maturities at 31-Dec-2025, before the 2026 issues)"
+  },
+  "mcps": "6.25% Series A / B Mandatory Convertible Preferred Stock issued 5-Jun-2026: 19m shares ($1,000 liquidation preference; 385m depositary shares of 1/20th), net proceeds $19.0bn ($19,063m in the cash-flow statement; $18,023m carried after the $1,011m capped-call premium). Dividends 6.25% p.a. (~$1,190m p.a.; $12.15 per preferred share declared Jul-2026), payable quarterly from 15-Aug-2026 to 15-May-2029, cash or shares. Mandatory conversion ~15-May-2029 at 2.2520-2.8160 Class A shares (Series A) / 2.2740-2.8420 Class C shares (Series B) per preferred share depending on the 20-day VWAP; capped calls with cap prices $532.67 (A) / $527.80 (C). If-converted method in diluted EPS. Q2-26 10-Q Note 11.",
+  "common_offering_2026": "4-Jun-2026: public offering of 29m Class A at $355.1982 and 29m Class C at $351.8018 (net $20.5bn) and private placement of 14m Class A + 14m Class C to an affiliate of Berkshire Hathaway (net $10.0bn). ATM program up to $40.0bn (1-Jun-2026; nil sold at 30-Jun-2026), primarily to meet tax obligations on employee equity grants. Q2-26 10-Q Note 11.",
+  "buyback": "$70.0bn repurchase authorization (Apr-2025); $69.5bn remaining at 30-Jun-2026; no repurchases in Q1 or Q2 2026 (Q2-26 10-Q Note 11).",
+  "dividend": "Quarterly common dividend $0.20 initiated Q2-2024; $0.21 from Q2-2025; $0.22 from Q2-2026 (declared Apr-2026 and Jul-2026).",
+  "wiz": "Wiz acquired 11-Mar-2026 for $29.5bn ($29,467m): intangibles $8,300m (developed technology $3,600m / 7 years; customer relationships $4,500m / 10 years; trade names $200m / 7 years), goodwill $22,705m (Google Cloud; not tax-deductible), net liabilities assumed $(1,538)m incl. $660m cash acquired. Q2-26 10-Q Note 8.",
+  "intersect": "Intersect (renewable-energy developer, VIE) acquired 10-Mar-2026 for $5.9bn ($5,868m): goodwill $2,174m, property and equipment $5,129m, debt $(1,214)m, net liabilities $(221)m incl. $410m cash. Q2-26 10-Q Note 8.",
+  "gfiber": "GFiber pending contribution to a new entity (agreement Mar-2026, close expected late 2026): Alphabet to receive $1.5bn cash, a $2.0bn note receivable and a 49.99% equity interest (equity method); held for sale (PP&E $7.1bn in other current assets at 30-Jun-2026). Results stay in Other Bets to closing. Q2-26 10-Q Note 8."
+ },
+ "price": {
+  "px": 350.0,
+  "date": "2026-10-13",
+  "src": "User-provided GOOG (Class C) share price, 13-Oct-2026. For reference the latest SEC-filed Class C price was $340.45 (Form 4 open-market sale, 30-Sep-2026, filed 2-Oct-2026). Update to market."
+ },
+ "known_exceptions": {
+  "2015 sum of quarters vs FY net income (+71)": "The Q2-15 10-Q revised income tax expense for 2008-Q1-2015 (incorrect classification of certain revenues between legal entities); Q1-15 as originally reported $3,586m vs $3,515m revised. Quarters are kept as originally reported, so Q1-Q4 2015 sum to $71m more than FY2015.",
+  "Q3-16 free cash flow (-29)": "The Q3-16 release FCF ($7,291m) predates the 10-Q; the 10-Q year-to-date cash flow gives $7,262m for the quarter (H1 from the Q2-16 10-Q).",
+  "2017-2018 segment operating income vs consolidated": "In 2019 Alphabet reclassified performance fees from operating expenses to other income (expense), net and recast 2017-2018 segment operating income (2018 total $27,524m vs $26,321m originally reported); consolidated figures are kept as originally reported, segments as recast (latest filing presenting the period). Shown as an explicit basis-difference row.",
+  "Q1-Q3 2014 cash": "The 2014 10-Q cash-flow statements include Motorola Mobile cash classified as held for sale ($160m); the balance-sheet cash excludes it. Cash-flow ending cash = beginning + net change; the difference is a memo row.",
+  "2013 legacy segments": "The 2013 segment note (Google / Motorola Mobile) reconciles to consolidated operating income through unallocated items (stock-based compensation, restructuring) that are not tagged by segment; memo only, no check."
+ }
+}
