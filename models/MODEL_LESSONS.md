@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -20,16 +20,17 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
-| Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
+| Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA), GOOG (no guidance, no EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
 | Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
-| Net-cash balance sheet | RMS, CPRT, ODFL |
-| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
+| Net-cash balance sheet | RMS, CPRT, ODFL, GOOG (marketable securities as the liquidity buffer) |
+| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes), GOOG (three classes, MCPS 2026) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
 | Private company, LBO | R&Y |
+| Mega-cap tech / internet; capex super-cycle; XBRL-instance extraction | GOOG |
 
 ---
 
@@ -698,6 +699,57 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [bridges] If the company computes adjusted tax annually, the FY column uses the FY table rather than Σ Q.
   - [BS/CF] The cash check must net overdrafts the CF statement nets.
   - [QA] Template residue survived here: the Bull-Base-Bear N26 comment cites MLM; the P40 comment cites "Model rows 290–292 / Model!CF2" (another build's rows) with author "User"; DCF headers say "USDm" / "($)" in a CHF model.
+
+## Internet & technology
+
+### GOOG — Alphabet Inc. (MLM template 6-Oct-26, via the WWD kit; US GAAP / USD m / calendar FY)
+- **Coverage & basis:**
+  - FY2006–12 annual, Q1/13–Q2/26 quarterly, Q3/Q4-26E, 2027E–30E: the template's own columns, so no column shift.
+  - Two registrants: Google Inc. (CIK 1288776) to Q3-2015 and Alphabet Inc. (CIK 1652044) from the FY2015 10-K.
+  - Statements are as originally reported, extracted from each 10-K / 10-Q **XBRL instance document**; FY2006–08 come from the 10-K text.
+  - Revenue types and segments come from the latest filing presenting the period. Earlier structures are memo rows: legacy websites / Network / other / Motorola 2006–19; Google / Other Bets 2015–20.
+  - Splits: ×2 (Class C dividend, Apr-2014) and ×20 (Jul-2022), applied by source filing date. Three share classes are summed.
+- **Operating build:**
+  - Revenue by type: Search, YouTube, Network, subscriptions / platforms / devices, Cloud, Other Bets, hedging. Segment OI = revenue × margin (Services, Cloud), with Other Bets as a $ lever and Alphabet-level costs as % of revenues.
+  - Basis-difference row for the 2019 performance-fee recast (2018 OI +$1,203m).
+  - KPIs: TAC; RPO (Cloud backlog $513.9bn vs FY2025 Cloud revenue $58.7bn); employees.
+  - Out-year margins step down so adjusted EBITDA margin stays ~42–44% while D&A rises from 6% to 14% of revenues on $250–300bn p.a. capex.
+- **Bridges & definitions:**
+  - Alphabet publishes no EBITDA or adjusted EPS, so all three bridges are model definitions.
+  - Only items the company reconciled in a published non-GAAP table are adjusted: EC fines Q2-17 / Q2-18 / Q1-19 / Q3-25; severance and office space Q1-23 / Q1-24; the Tax Act Q4-17. Named-but-unreconciled items are listed (BC lesson).
+  - Equity-security gains / losses (ASU 2016-01) are the dominant model item: $136bn in 1H26, which took Q2-26 GAAP EPS to $9.11 vs model adjusted $2.75. They are tax-effected at the statutory rate.
+  - Google's non-GAAP excl.-SBC EPS (to Q4-16) and the 2017–19 "excluding the EC fine / Tax Act" EPS are memo rows with checks.
+- **Data quirks & corrections:**
+  - The Q2-15 10-Q revised 2008–Q1-15 tax, so Σ 2015 quarters ≠ FY by $71m (documented exception).
+  - The Q2-15 $522m Class C adjustment payment makes Class C EPS ≠ Class A; EPS uses Class A, with an allocation row.
+  - The Q1–Q3/14 cash-flow statements include Motorola held-for-sale cash ($160m).
+  - XBRL quirks: FY2009 has no OI&E tag (derived) and untagged class shares (taken from the text); 2012–13 cost of revenues is tagged by segment only (derived); 2014–15 Class C shares sit under `CapitalStockSharesOutstanding`; the FY2009 10-K tables are in thousands.
+  - Q3-16 release FCF predates a $29m 10-Q revision.
+  - 966 data checks, 5 documented exceptions.
+- **Deals & special blocks:**
+  - Wiz ($29.5bn) and Intersect ($5.9bn) closed in Mar-2026: PPA in the Q1-26 column.
+  - GFiber divestiture: $1.5bn cash + $2.0bn note + 49.99% stake; no gain assumed.
+  - Jun-2026 raise: $30.5bn common (incl. a Berkshire Hathaway private placement) + $19.0bn 6.25% mandatory convertible preferred. The preferred has a conversion-rate band at the forecast price, is if-converted in diluted EPS, and converts in May-2029 (capped calls ignored). $40bn ATM program.
+- **Calibration & scenarios:**
+  - No revenue, margin or EPS guidance. Q3–Q4/26E use the 1H26 y/y run-rate (revenues), Q2-26 margins with last year's sequential seasonality (Services) or held (Cloud), plus scenario shifts.
+  - An optional, blank FY revenue target solves the shift if entered (HEI lesson).
+  - The 2026 capex outlook ($195–205bn) is call-only and labelled UNVERIFIED; its mid-point is the 2026E capex.
+- **Balance sheet, cash & capital:**
+  - Net cash $142bn at 30-Jun-2026. Marketable securities ($187bn) are the liquidity buffer: sold to keep cash at $25bn before commercial paper is drawn.
+  - Net-cash-floor buybacks (−0.10x / −0.25x / −0.40x adjusted EBITDA).
+  - Notes repaid and refinanced. Common dividends = DPS × beginning shares; preferred dividends follow their schedule.
+- **Valuation:**
+  - $350 user price (latest SEC-filed $340.45, Form 4 30-Sep-26).
+  - EV and invested capital exclude non-marketable equity stakes at carrying value ($131bn; UBER lesson).
+  - DCF: net debt at YE2026E, so the 2026E UFCF is excluded. Fade capex converges to D&A + NOPAT × g ÷ terminal RONIC (20%), because growing the 2030E build-out capex (36% of revenues) in perpetuity implied ~88% reinvestment at ~7% returns.
+  - DCF $216 vs Base P/E target ~$400–430.
+- **Reusable lessons:**
+  - [extraction] Parse each filing's XBRL instance (contexts + dimensions) rather than the company-facts API, which drops dimensional facts (segments, revenue types). Keep one block per filing, take the latest filing presenting the period, and guard against old taxonomies (require a member that only the current taxonomy has).
+  - [basis] For multi-class EPS, sum basic shares across classes and take diluted as Class A diluted (which includes the Class B conversion) + Class C. Use one class's EPS as the memo and put class-specific payments in an allocation row.
+  - [BS/CF] With a large marketable-securities book, make securities the first liquidity buffer before commercial paper, as a non-circular MAX(0, liquidity − minimum cash) plug. Otherwise the model borrows while holding cash.
+  - [build] When capex rises fast, check adjusted EBITDA margin: fixed segment OI margins with D&A tripling as a share of revenue imply implausible cash-cost cuts.
+  - [valuation] In a capex super-cycle, converge fade-period capex to the terminal reinvestment rate (g ÷ RONIC). Never grow peak build-out capex into the terminal value.
+  - [QA] For a build on the template's own columns, `Model!CF2` is the model's own switch cell; allow that token in `residue_scan.py`.
 
 ## Private company / LBO
 

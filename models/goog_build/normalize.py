@@ -126,7 +126,7 @@ def cf_lines(c, ni, amort_is):
     gl = (-gain if gain_tag else N(gain)) if gain is not None else 0.0
     sbcnet = c.get('cf_sbcnet')
     sbcnet = -abs(sbcnet) if sbcnet is not None else 0.0
-    o = {'cf_ni': ni, 'cf_dep': dep, 'cf_amort': N(amort), 'cf_sbc': N(c.get('cf_sbc')), 'cf_def': N(c.get('cf_def')), 'cf_gl': gl}
+    o = {'cf_ni': ni, 'cf_dep': dep, 'cf_amort': N(amort), 'cf_dda': dep + N(amort), 'cf_sbc': N(c.get('cf_sbc')), 'cf_def': N(c.get('cf_def')), 'cf_gl': gl}
     o['cf_wc'] = c['cf_cfo'] - ni - dep - N(amort) - o['cf_sbc'] - o['cf_def'] - gl
     o['cf_cfo'] = c['cf_cfo']; o['cf_capex'] = c['cf_capex']; o['cf_acq'] = N(c.get('cf_acq')); o['cf_divest'] = N(c.get('cf_divest'))
     o['cf_oinv'] = c['cf_cfi'] - o['cf_capex'] - o['cf_acq'] - o['cf_divest']; o['cf_cfi'] = c['cf_cfi']
@@ -193,6 +193,7 @@ def do_bs(p):
     put(p, 'bs_pref', pref); put(p, 'bs_eq', teq - pref); put(p, 'bs_teq', teq); put(p, 'bs_tle', b['bs_tle'])
     put(p, 'debt_tot', std + N(b.get('bs_ltd')))
     if b.get('bs_sh') is not None: put(p, 'bs_shares', b['bs_sh'] * f)
+    put(p, 'rpo', b.get('bs_rpo')); put(p, 'bs_cp', N(b.get('bs_cp')))
 
 # ---------------------------------------------------------------- segments and revenue types
 def dims(p, blk):
@@ -230,6 +231,8 @@ def do_seg():
             v = raw[p]
         for k, val in v.items(): put(p, k, val)
         x = DATA.get(p, {}).get('x', {})
+        ob = x.get('sr_ob') if x.get('sr_ob') is not None else x.get('lsr_ob')
+        if ob is not None: put(p, 'ob_rev', ob)
         if x.get('sr_svc') is not None and x.get('rev') is not None:
             put(p, 'st_hedge', x['rev'] - x['sr_svc'] - x['sr_cloud'] - N(x.get('sr_ob')))
     # legacy revenue split (own filing; 10-K / pre-2009 text)
@@ -271,7 +274,8 @@ def do_release():
                 y = str(2000 + int(p[-2:])); put(y, key, N(X(y, key)) + d['v']); put(y, key + '_lab', d['label'])
     for p, d in MAN['company_adjusted'].items():
         if p.startswith('_'): continue
-        put(p, 'ca_oi', d.get('oi')); put(p, 'ca_ni', d.get('ni')); put(p, 'ca_eps', d.get('eps')); put(p, 'ca_def', d['def'])
+        put(p, 'ca_oi', d.get('oi')); put(p, 'ca_ni', d.get('ni')); put(p, 'ca_def', d['def'])
+        if d.get('eps') is not None: put(p, 'ca_eps', d['eps'] / 20)          # releases dated 2017-2019: x20 for the Jul-2022 split
 
 def run():
     load()

@@ -82,7 +82,8 @@ A = {
   'bs_cltd': [r'^LongTermDebtCurrent$', r'^LongTermDebtAndCapitalLeaseObligationsCurrent$', r'^DebtCurrent$'],
   'bs_ltd': [r'^LongTermDebtNoncurrent$', r'^LongTermDebtAndCapitalLeaseObligations$'],
   'bs_oll': [r'^OperatingLeaseLiabilityNoncurrent$'],
-  'bs_tl': [r'^Liabilities$'], 'bs_pref': [r'^PreferredStockIncludingAdditionalPaidInCapital$', r'^PreferredStockValue$'],
+  'bs_tl': [r'^Liabilities$'], 'bs_pref': [r'^ConvertiblePreferredStockNonredeemableOrRedeemableIssuerOptionValue$', r'^PreferredStockIncludingAdditionalPaidInCapital$', r'^PreferredStockValue$'],
+  'bs_rpo': [r'^RevenueRemainingPerformanceObligation$'],
   'bs_eq': [r'^StockholdersEquity$'], 'bs_tle': [r'^LiabilitiesAndStockholdersEquity$'],
   'bs_sh': [r'^CommonandCapitalStockSharesOutstanding$', r'^CommonStockSharesOutstanding$'],
 }
@@ -92,7 +93,7 @@ PS = ['eps_b', 'eps_d', 'sh_b', 'sh_d']
 DUR_CF = ['cf_dep', 'cf_amort', 'cf_sbc', 'cf_def', 'cf_gain', 'cf_cfo', 'cf_capex', 'cf_acq', 'cf_divest', 'cf_cfi', 'cf_bb', 'cf_div', 'cf_div_pref', 'cf_sbcnet',
           'cf_eq_iss', 'cf_pref_iss', 'cf_minority', 'cf_debt_iss', 'cf_debt_rep', 'cf_cff', 'cf_fx']
 INST = ['cf_cash', 'bs_cash', 'bs_msec', 'bs_ar', 'bs_tca', 'bs_nmsec', 'bs_ppe', 'bs_rou', 'bs_gw', 'bs_int', 'bs_ta', 'bs_ap', 'bs_tcl', 'bs_cp', 'bs_cltd', 'bs_ltd',
-        'bs_oll', 'bs_tl', 'bs_pref', 'bs_eq', 'bs_tle', 'bs_sh']
+        'bs_oll', 'bs_tl', 'bs_pref', 'bs_eq', 'bs_tle', 'bs_sh', 'bs_rpo']
 COMP = {k: [re.compile(p) for p in v] for k, v in A.items()}
 CF_NEG = {'cf_capex', 'cf_acq', 'cf_bb', 'cf_div', 'cf_div_pref', 'cf_debt_rep'}      # payment concepts are tagged positive
 

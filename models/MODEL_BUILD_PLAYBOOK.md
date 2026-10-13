@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, GOOG). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -258,6 +258,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | Pending / new acquisition | DHR, MLM, CTAS, ESAB, CSGP, UBER, CHRW | Separate block, PPA, financing, synergies, closing-date toggle; deal tab for large deals |
 | Dual-class / splits | ONON, HEI, CTAS, ODFL | Class-equivalent shares; split-adjust by source filing date |
 | Private company | R&Y | Compilation statements; implied CF from BS changes; LBO tab |
+| Capex super-cycle, net cash, large securities book | GOOG | Securities as the liquidity buffer before CP; hold EBITDA margin as D&A rises; converge DCF fade capex to g ÷ RONIC; equity stakes outside IC / EV |
 
 ### 4.3 Pitfalls that have bitten before
 - Template-company constants left in forecast formulas or notes (Moog `888`, MLM LNA rows, MLM-specific DCF text).
@@ -275,7 +276,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -288,6 +289,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Working capital from a single-line CFO = CFO − NI − D&A − SBC − deferred tax, using XBRL for the components and noting missing tags. [WWD]
   - Recast Q4 = FY recast − 9M recast; quarters that were never recast stay blank. [LECO]
   - Each derivation is noted in the cell comment.
+- **Segments and revenue types live in dimensional XBRL facts** that the company-facts API omits. Parse each filing's instance document (contexts with their dimensions), keep one block per filing, take the latest filing presenting the period, and require a member only the current taxonomy has so an older basis cannot mix in. [GOOG]
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
 
@@ -361,6 +363,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Limit the buyback row to the remaining quarters; actual share counts already include YTD repurchases.
 
   [TMO, STE, UBER, CTAS, CSGP, DHR, ONON, RBA]
+- **Large marketable-securities books:** make the securities the first liquidity buffer (non-circular MAX(0, liquidity before CP − minimum cash)), and draw commercial paper only once they are exhausted. Otherwise the model borrows while holding securities. [GOOG]
 - **Dividends = DPS × beginning shares,** so they aren't circular with plug-driven buybacks. [TMO, CTAS, CSGP]
 - **Deal year:** size working capital, leverage, the buyback floor and EV multiples on pro forma full-year revenue and Adj. EBITDA (memo rows), and exclude acquired NWC from ΔNWC. Check whether acquired intangibles are tax-deductible; if not, add a DTL unwind. [MLM, CSGP, DHR, CTAS, TMO, UBER, ESAB, KRMN]
 - **Choose the buyback plug to fit the capital structure:**
@@ -405,9 +408,11 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   [ESAB, BWXT, HEI, UBER]
 - **Deal tabs** show accretion both vs the standalone with buybacks and on the company's comparison basis, and solve for the synergies or margin needed to meet the stated accretion. [CHRW]
 - **Historical average share prices** come from 10-K Item 5 only where disclosed; leave later years blank. [HII]
+- **Capex super-cycles:** converge fade-period capex to the terminal reinvestment rate (D&A + NOPAT × g ÷ RONIC, with RONIC as an input). Growing peak build-out capex into the terminal value implies near-total reinvestment at sub-WACC returns. In the forecast, check that fixed segment margins don't imply an implausible EBITDA margin as D&A rises. [GOOG]
 
 ### 5.8 QA
 - **Template residue is the most common defect.** At least 10 builds shipped MLM text in Bull-Base-Bear N26 / P40 comments or DCF rationale, and TFI kept Moog comments. `tools/residue_scan.py` is a hard gate. [CLH, WAB, SAIA, ODFL, WCN, LOAR, ONON, LECO, ESAB, STE, CTAS, UBER, TFI, CPRT]
+- **Builds on the template's own columns** (history from 2006, quarters from 2013) keep the switch at `Model!CF2`; allow that token in `residue_scan.py` (`--allow Model!CF2`). [GOOG]
 - **Check also:** foreign row numbers and switch-cell addresses in comments, the wrong currency symbol on non-USD models, and modelling-note dates that contradict the definition flags. [ONON, DHR]
 - **Check tolerances** are set by period when the issuer changes rounding units, and stated in the label. [STE, TMO, CSGP, ONON, DHR]
 - **Private-company implied CF:** related-party balances are financing; explain the sign of implied capex; leave first-year ratios n/a when there is no opening BS. [R&Y]

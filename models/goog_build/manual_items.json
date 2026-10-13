@@ -159,5 +159,17 @@
   "2017-2018 segment operating income vs consolidated": "In 2019 Alphabet reclassified performance fees from operating expenses to other income (expense), net and recast 2017-2018 segment operating income (2018 total $27,524m vs $26,321m originally reported); consolidated figures are kept as originally reported, segments as recast (latest filing presenting the period). Shown as an explicit basis-difference row.",
   "Q1-Q3 2014 cash": "The 2014 10-Q cash-flow statements include Motorola Mobile cash classified as held for sale ($160m); the balance-sheet cash excludes it. Cash-flow ending cash = beginning + net change; the difference is a memo row.",
   "2013 legacy segments": "The 2013 segment note (Google / Motorola Mobile) reconciles to consolidated operating income through unallocated items (stock-based compensation, restructuring) that are not tagged by segment; memo only, no check."
+ },
+ "ppa": {
+  "_doc": "Purchase-price allocations in the closing-quarter column (Q2-26 10-Q Note 8). Q1-26 = Wiz (closed 11-Mar-2026; $29,467m: intangibles $8,300m, goodwill $22,705m, net liabilities $(1,538)m incl. $660m cash) + Intersect (closed 10-Mar-2026; $5,868m: goodwill $2,174m, property & equipment $5,129m, debt $(1,214)m, net liabilities $(221)m incl. $410m cash).",
+  "Q1-26": {
+   "cons": 35335.0,
+   "ppe": 5129.0,
+   "intang": 8300.0,
+   "gw": 24879.0,
+   "nl": -1759.0,
+   "debt": -1214.0,
+   "names": "Wiz (11-Mar-2026) + Intersect (10-Mar-2026)"
+  }
  }
 }
