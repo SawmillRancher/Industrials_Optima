@@ -1,4 +1,4 @@
-"""Build WWD_Model.xlsx from the MLM template (same layout, formatting and process as the prior models)."""
+"""Build MSFT_Model.xlsx from the MLM template (same layout, formatting and process as the prior models)."""
 import sys, copy, os, json
 from openpyxl.styles import Font
 from fw import *
@@ -6,93 +6,87 @@ import fw
 from spec import build_spec, scen_layout, SCEN_ROWS, SC
 from spec2 import build_spec2
 
-OUT = os.path.join(os.path.dirname(BASE), 'WWD_Model.xlsx')
-G26 = MAN['guidance_fy26']
+OUT = os.path.join(os.path.dirname(BASE), 'MSFT_Model.xlsx')
+GQ = MAN['guidance_q1fy27']
+GU = MAN['guidance_fy27_unverified']
 
 # ====================================================================== inputs (V0)
 def wc_inputs():
-    q = DATA['2025']['x']
-    rev, cogs = q['rev'], q['cogs']
-    return {'dso': round(q['bs_ar'] / rev * 365), 'dio': round(q['bs_inv'] / cogs * 365), 'dpo': round(q['bs_ap'] / cogs * 365),
-            'ocl': round(q['bs_ocl'] / rev, 3)}
+    q = DATA['2026']['x']
+    rev = q['rev']
+    return {'dso': round(q['bs_ar'] / rev * 365), 'ucr': round(q['bs_ucr'] / rev, 3), 'ap': round(q['bs_ap'] / rev, 3)}
 WC = wc_inputs()
-WC['note'] = (f'Forecast inputs at fiscal-year-end (30-Sep-2025) levels on FY2025 net sales / cost of goods sold (DSO {WC["dso"]}d, inventory {WC["dio"]}d, '
-              f'payables {WC["dpo"]}d, other current liabilities {WC["ocl"]:.1%} of sales); year ends are compared with year ends.')
+WC['note'] = (f'Forecast inputs at fiscal-year-end (30-Jun-2026) levels on FY2026 revenue (DSO {WC["dso"]}d, short-term unearned revenue {WC["ucr"]:.1%}, '
+              f'accounts payable {WC["ap"]:.1%} of revenue); June is the seasonal billing peak, so year ends are compared with year ends.')
 AM = MAN['amort_sched']
 
 V0 = {
-    'out_hdr': 'FY26 guidance — Q3 FY26 release (29-Jul-2026)',
-    'out_note': ('Sales growth +20–23% (unchanged), adjusted EPS $9.30–9.50 (raised from $9.15–9.45), FCF $300–350m, capex ~$290m, ~61.5m shares, adjusted tax rate ~22.5%; '
-                 'Aerospace sales +21–23% at ~23.5% segment margin; Industrial sales +19–21% at ~19%.'),
+    'out_hdr': 'Q1 FY27 guidance — 29-Jul-2026 call, re-filed in 8-K 2-Sep-2026 (Item 7.01, Ex. 99.1; SEC-filed)',
+    'out_note': ('Total revenue $89.85–90.95bn: Agents and Infra $75.15–75.75bn, Devices and Consumer $14.7–15.2bn (adjusted to the FY27 segments); COGS $29.6–29.8bn; '
+                 'operating expenses $16.8–16.9bn; other income ~$(100)m ex OpenAI; operating margin relatively flat y/y; ETR ~20%; capex over $50bn. '
+                 'Cost rows: Bull = low end, Bear = high end.'),
     'outlook': [
-        ('out_g', '  FY26 net sales growth', tuple(G26['sales_growth']), 'pct', 'Guided +20–23%. Drives the Q4/26E sales calibration.'),
-        ('out_eps', '  FY26 adjusted EPS ($)', tuple(G26['adj_eps']), 'ps', 'Guided $9.30–9.50. Drives the Q4/26E segment-margin calibration.'),
-        ('out_ag', '  FY26 Aerospace sales growth — memo', tuple(G26['aero_growth']), 'pct', 'Guided +21–23% (information row; compare the model).'),
-        ('out_ig', '  FY26 Industrial sales growth — memo', tuple(G26['ind_growth']), 'pct', 'Guided +19–21% (information row).'),
-        ('out_fcf', '  FY26 free cash flow ($m) — memo', tuple(G26['fcf']), 'm', 'Guided $300–350m (information row).'),
-        ('bb26', '  Q4/26E share repurchases ($m)', (300.0, 200.0, 100.0), 'm', '9M FY26 $553.4m ($198m in Q3); $1,286m left on the $1.8bn 2026 Authorization at 30-Jun-2026.'),
+        ('out_ai', '  Q1 FY27 Agents and Infra revenue ($m)', tuple(GQ['ai_rev']), 'm', 'Guided $75.15–75.75bn (8-K 2-Sep-2026). Drives the Agents and Infra growth calibration.'),
+        ('out_dc', '  Q1 FY27 Devices and Consumer revenue ($m)', tuple(GQ['dc_rev']), 'm', 'Guided $14.7–15.2bn. Drives the Devices and Consumer growth calibration.'),
+        ('out_cogs', '  Q1 FY27 cost of revenue ($m; Bull = low end)', tuple(GQ['cogs']), 'm', 'Guided $29.6–29.8bn. With opex, sets the guided operating income for the margin calibration.'),
+        ('out_opex', '  Q1 FY27 operating expenses ($m; Bull = low end)', tuple(GQ['opex']), 'm', 'Guided $16.8–16.9bn. Drives Q1/27E R&D, S&M and G&A (prior-year mix).'),
     ],
     'points': [
-        ('pt_int', '  Q4/26E interest expense ($m)', 15.5, 'm1', 'Not guided; Q3 $14.8m; full quarter of the $250m term loan and the revolver (~$1.35bn debt at ~4.6%).'),
-        ('pt_intinc', '  Q4/26E interest income ($m)', 0.6, 'm1', 'Q3 $0.6m.'),
-        ('pt_othinc', '  Q4/26E other income, net ($m)', 20.0, 'm1', '9M FY26 $60.3m (~$20m a quarter; no divestiture gains).'),
-        ('pt_amort', '  Q4/26E amortization of intangibles ($m)', AM['2026_rem'], 'm1', 'Q3 FY26 10-Q schedule: $8.4m remaining in FY26.'),
-        ('pt_dep', '  Q4/26E depreciation ($m)', 23.0, 'm1', 'Q3 $22.5m; rising with capex.'),
-        ('pt_etr', '  Q4/26E tax rate (GAAP & adjusted)', 0.24, 'pct', 'FY26 adjusted rate guided ~22.5%; 9M FY26 adjusted 21.9% → Q4 ~24% (Q3 24.2%).'),
-        ('pt_capex', '  FY26 capital expenditures ($m)', G26['capex'], 'm1', 'Guided ~$290m (9M $156.3m); Spartanburg, SC campus.'),
-        ('pt_restr', '  Q4/26E restructuring charges ($m)', 6.0, 'm1', 'China OH wind-down complete; servo-valve transition (~$15m total) and the start of the Santa Clarita plan (8-K 21-Sep-2026).'),
-        ('pt_am', '  FY26 Aerospace segment margin guidance', G26['aero_margin'], 'pct', 'Guided ~23.5% (information row).'),
-        ('pt_im', '  FY26 Industrial segment margin guidance', G26['ind_margin'], 'pct', 'Guided ~19% (information row).'),
+        ('pt_oth', '  Q1–Q4/27E other income (expense), net per quarter ($m)', GQ['other_inc'], 'm', 'Guided ~$(100)m for Q1 excluding any impact from investments in OpenAI; held for Q2–Q4 (assumption).'),
+        ('pt_etr', '  FY27E effective tax rate', GQ['etr'], 'pct', 'Guided ~20% for Q1 (8-K 2-Sep-2026); held for the year (assumption). FY26 19.4%.'),
+        ('pt_dps', '  FY27E quarterly dividend declared ($)', 1.00, 'ps', 'Assumption: $0.91 + ~10% (Sep-2025 raise +9.6%); the Sep-2026 declaration is not in the EDGAR filings reviewed. Update when filed.'),
+        ('pt_fyg', '  FY27 revenue / operating-income growth "double-digit" — UNVERIFIED', GU['rev_growth_min'], 'pct',
+         'UNVERIFIED: 29-Jul-2026 call commentary as reported by third parties (MarketBeat, Nasdaq, Motley Fool transcript); not in an SEC filing. Information row only — not used as a solve target.'),
     ],
-    'lev': (1.75, 1.25, 0.75),
-    'lev_note': ('Net debt $867m at 30-Jun-26 ≈ 1.0x adjusted EBITDA (FY2021–25 0.5–1.1x); company "EBITDA leverage" (total debt / TTM EBITDA) 1.6x. Target = leverage up to which surplus cash is returned '
-                 'via buybacks ($1.8bn three-year authorization to Nov-2028); below it free cash flow repays the revolver. Bull = more buybacks (higher target).'),
+    'liq': (60000.0, 70000.0, 80000.0),
+    'liq_note': ('Cash & short-term investments $76.8bn at 30-Jun-2026 ($94.6bn a year earlier) against $40.3bn of debt and $66.6bn of finance leases. Surplus above the target is '
+                 'returned through buybacks ($40.6bn left on the $60bn program); Bull = lower target (more buybacks). Assumption.'),
+    'bbmin': (25000.0, 20000.0, 15000.0),
+    'bbmin_note': 'FY2026 repurchases $22.3bn (program $16.7bn + $5.6bn tax withholding); FY2025 $18.4bn. Minimum per year by scenario (assumption).',
     'blocks': [
-        ('AERO_COEM', 'AERO_COEM (Commercial OEM y/y)', 0.04, -0.06, [0.14, 0.11, 0.09, 0.07, 0.06],
-         '9M FY26 +29% (airframer rate increases after the FY25 Boeing work stoppage / inventory normalisation); 737 / A320 / 787 / A350 ramps, A350 spoiler actuation from Spartanburg (2027).', 'pct', False),
-        ('AERO_CSERV', 'AERO_CSERV (Commercial services y/y)', 0.03, -0.06, [0.09, 0.08, 0.07, 0.06, 0.06],
-         '9M FY26 +36% (FY25 +29%, partly advance purchases); high utilisation of legacy fleets, price; normalising toward high-single digits.', 'pct', False),
-        ('AERO_DOEM', 'AERO_DOEM (Defense OEM y/y)', 0.03, -0.04, [0.07, 0.06, 0.05, 0.05, 0.05], '9M FY26 +7% (FY25 +38%: smart-defense / guided-weapons demand, price).', 'pct', False),
-        ('AERO_DSERV', 'AERO_DSERV (Defense services y/y)', 0.02, -0.04, [0.05, 0.05, 0.04, 0.04, 0.04], '9M FY26 +9%; FY25 −2% (mix).', 'pct', False),
-        ('IND_PG', 'IND_PG (Power generation y/y)', 0.04, -0.06, [0.12, 0.10, 0.08, 0.06, 0.05],
-         '9M FY26 +11%; FY25 +10%: gas turbines and reciprocating gensets (data-centre and grid demand).', 'pct', False),
-        ('IND_TRANS', 'IND_TRANS (Transportation y/y)', 0.04, -0.08, [0.00, 0.04, 0.04, 0.03, 0.03],
-         '9M FY26 +42% (marine, rail, China OH last-time buys); China OH wound down by end of FY26 → flat FY27.', 'pct', False),
-        ('IND_OG', 'IND_OG (Oil and gas y/y)', 0.03, -0.06, [0.04, 0.04, 0.03, 0.03, 0.03], '9M FY26 +18%; FY25 +14%: gas compression / midstream.', 'pct', False),
-        ('AERO_M', 'AERO_M (Aerospace segment margin)', 0.01, -0.02, [0.240, 0.245, 0.250, 0.253, 0.255],
-         'FY26 guided ~23.5% (FY25 21.9%, FY19 peak 20.7%); price and volume leverage vs Spartanburg start-up costs (2027).', 'pct', False),
-        ('IND_M', 'IND_M (Industrial segment margin)', 0.01, -0.03, [0.190, 0.192, 0.195, 0.197, 0.200],
-         'FY26 guided ~19% (FY25 14.6%, FY24 17.7%); China OH exit accretive; cyclical downside (FY18 6.2%).', 'pct', False),
-        ('MNA', 'M&A_spend (bolt-on acquisitions, $m)', 100.0, -100.0, [100.0, 100.0, 100.0, 100.0, 100.0],
-         'Woodward spent $40m (Safran EMA, FY25) and $121m (Valve Research, FY26) on bolt-ons besides L\'Orange ($771m, FY18). Base $100m p.a. (assumption).', 'm', True),
+        ('AI_AZ', 'AI_AZ (Azure y/y)', 0.06, -0.10, [0.32, 0.26, 0.21, 0.17],
+         'FY26 +40% restated (Q4 +42%); Q1 FY27 guided +44–45% cc; capacity-constrained AI demand, commercial RPO +84% to $678bn. Decelerating with scale (assumption).', 'pct', False),
+        ('AI_M365', 'AI_M365 (Microsoft 365 cloud y/y)', 0.03, -0.05, [0.14, 0.13, 0.12, 0.11],
+         'FY26 +18.5% (incl. GitHub, Security Copilot); Q1 FY27 M365 commercial cloud ~17% cc; seats +7%, ARPU from E5 / Copilot.', 'pct', False),
+        ('AI_PSL', 'AI_PSL (Productivity & server licensing y/y)', 0.03, -0.04, [-0.02, -0.02, -0.03, -0.03],
+         'FY26 +5.4% (lumpy on-premises server / Office transactional); Q1 FY27 guided to decline low-single digits; long-run cloud migration.', 'pct', False),
+        ('AI_IND', 'AI_IND (Industry solutions y/y)', 0.03, -0.04, [0.09, 0.09, 0.08, 0.08], 'FY26 +10.5%; Q1 FY27 cloud high-single digits (Dynamics 365, LinkedIn Talent / Sales, healthcare).', 'pct', False),
+        ('AI_FSS', 'AI_FSS (Frontier & support services y/y)', 0.02, -0.03, [0.04, 0.04, 0.03, 0.03], 'FY26 +6.4% (enterprise support, industry consulting).', 'pct', False),
+        ('DC_SA', 'DC_SA (Search & advertising y/y)', 0.03, -0.05, [0.08, 0.08, 0.07, 0.07], 'FY26 +12% (ex-TAC +14% restated); Q1 FY27 mid- to high-single digits.', 'pct', False),
+        ('DC_XBOX', 'DC_XBOX (XBOX y/y)', 0.04, -0.06, [0.02, 0.03, 0.03, 0.03], 'FY26 −7%; Q1 FY27 content & services down mid-single digits, hardware down.', 'pct', False),
+        ('DC_WIN', 'DC_WIN (Windows OEM & devices y/y)', 0.03, -0.04, [0.00, 0.01, 0.01, 0.01],
+         'FY26 −1.3% (Windows 10 end-of-support pull-forward); Q1 FY27 guided down low-twenties on that comparison; PC-market growth thereafter.', 'pct', False),
+        ('AI_M', 'AI_M (Agents and Infra operating margin)', 0.02, -0.04, [0.470, 0.465, 0.470, 0.475],
+         'FY26 50.9% (FY25 50.6%; Q4/26 49.3%); depreciation from the FY26–27 capex wave (FY26 $34bn, +56%) compresses margins before operating leverage. Assumption.', 'pct', False),
+        ('DC_M', 'DC_M (Devices and Consumer operating margin)', 0.02, -0.03, [0.290, 0.290, 0.295, 0.300], 'FY26 29.6% (FY25 28.1%); Q4/26 25.1% after XBOX charges.', 'pct', False),
+        ('MNA', 'M&A_spend (acquisitions, $m)', 2000.0, -3000.0, [3000.0, 3000.0, 3000.0, 3000.0],
+         'Acquisition spend FY24 $69.1bn (Activision), FY25 $6.0bn, FY26 $1.7bn. Base $3bn p.a. of bolt-ons (assumption).', 'm', True),
     ],
-    'corp_pct': -0.035,
-    'dep_pct': {2027: 0.023, 2028: 0.025, 2029: 0.026, 2030: 0.026, 2031: 0.026},
-    'sga_pct': {2027: 0.093, 2028: 0.092, 2029: 0.091, 2030: 0.090, 2031: 0.090},
-    'rd_pct': 0.041, 'sbc_pct': 0.0085, 'etr': 0.225, 'othinc': 80.0,
-    'capex_pct': {2027: 0.050, 2028: 0.035, 2029: 0.032, 2030: 0.030, 2031: 0.030},
-    'dps_q': 0.32, 'dps_g': 0.10, 'def_q4': 0.0, 'def_ae': -20.0, 'eq_q4': 10.0, 'eq_ae': 60.0, 'iss_q4': 0.10, 'iss_ae': 0.40, 'dil': 1.7,
-    'ae_restr': {2027: 30.0, 2028: 15.0, 2029: 0.0, 2030: 0.0, 2031: 0.0},
-    'amort_sched': {2027: AM['2027'], 2028: AM['2028'], 2029: AM['2029'], 2030: AM['2030'], 2031: 30.0},
-    'amort_note': AM['src'] + ' FY27 $32.5m, FY28 $32.1m, FY29 $31.2m, FY30 $31.2m; FY31 $30.0m assumed ($245.6m thereafter).',
-    'dv_proc': {2027: 180.0, 2028: 0.0, 2029: 0.0, 2030: 0.0, 2031: 0.0},
-    'dv_nav': {2027: 16.364, 2028: 0.0, 2029: 0.0, 2030: 0.0, 2031: 0.0},
-    'iss_notes': {2026: 450.0, 2027: 85.0, 2028: 90.289, 2029: 225.0, 2030: 225.0, 2031: 300.421},
-    'repay': {2026: 46.903, 2027: 85.0, 2028: 90.289, 2029: 225.0, 2030: 225.0, 2031: 300.421},
-    'mat': {2026: 85.0, 2027: 90.289, 2028: 225.0, 2029: 225.0, 2030: 300.421, 2031: 0.0},
-    'repay_note': ('Sep-2026 Series M (EUR; $46.9m at 30-Sep-25 FX); May-2027 Series Q $85m; Sep-2028 Series N (EUR; $90.3m); FY2029 Series R $75m + U $150m; FY2030 S $75m + V $150m; '
-                   'FY2031 term loan $250m (May-2031) + Series O (EUR; $50.4m). EUR notes at 30-Sep-2025 FX (assumption). 2027E+ maturities assumed refinanced with new notes (input row above).'),
-    'min_cash': 300.0,
-    'r_notes': {2027: 0.046, 2028: 0.046, 2029: 0.047, 2030: 0.048, 2031: 0.049},
-    'r_notes_note': ('Weighted coupon ~4.6% after the $450m U/V/W issue (5.34–5.64%), term loan (SOFR + 0.875–1.75%), USD notes 4.35–4.61% and EUR notes 1.31–1.57%; '
-                     'drifting up as low-coupon EUR notes mature.'),
+    'guid_note': GQ['note'],
+    'unver_note': GU['status'] + ': ' + GU['text'] + ' Sources: ' + '; '.join(GU['src']),
+    'dep_rate': {2027: 0.17, 2028: 0.17, 2029: 0.17, 2030: 0.17, 2031: 0.17},
+    'dep_note': ('FY2026: $34.3bn ÷ opening net PP&E $205.0bn = 16.7%; FY2025 16.2%. Held at 17% (assumption): server lives 2–6 years; the Q1 FY27 outlook mentions a '
+                 '"useful life update" that is not quantified in the filings.'),
+    'amort_sched': {2027: AM['2027'], 2028: AM['2028'], 2029: AM['2029'], 2030: AM['2030'], 2031: AM['2031']},
+    'amort_note': 'FY2026 10-K schedule of intangibles held at 30-Jun-2026: FY27 $3,097m, FY28 $2,141m, FY29 $1,944m, FY30 $1,477m, FY31 $1,128m, thereafter $8,822m.',
+    'sbc_pct': 0.037, 'rd_pct': 0.105, 'sm_pct': 0.075, 'ga_pct': 0.022, 'etr': 0.19,
+    'capex_fy27': 200000.0,
+    'capex_note': ('Capital expenditures including finance leases (Microsoft\'s capex metric): FY2026 $140.6bn ($115.9bn cash + $24.6bn finance-lease assets), FY2025 $85.1bn. '
+                   'FY2027E $200bn = Q1 guidance "over $50 billion" × 4 (assumption). 2028E+: % of revenue.'),
+    'fl_share': 0.175,
+    'capex_pct': {2028: 0.45, 2029: 0.40, 2030: 0.35, 2031: 0.32},
+    'dps_g': 0.10, 'def_tax': 0.0, 'stock_iss': 2000.0, 'iss_sh': 30.0, 'dil': 24.0,
+    'repay': {2027: 9250.0, 2028: 0.0, 2029: 2001.0, 2030: 0.0, 2031: 500.0},
+    'mat': {2027: 0.0, 2028: 2001.0, 2029: 0.0, 2030: 500.0, 2031: 0.0},
+    'min_liq': 40000.0,
+    'r_debt': 0.015, 'r_debt_note': ('FY2026 interest expense $3,051m incl. $2,547m finance-lease interest → ~$0.5bn on ~$42bn of notes (~1.2%) after capitalised interest '
+                                    '(datacenter construction). 1.5% input (assumption).'),
+    'r_cash': 0.035, 'r_cash_note': 'FY2026 interest & dividend income $3,301m on average cash & short-term investments of ~$86bn (~3.9%). 3.5% input (assumption).',
+    'fl_prin_r': 0.067,
     'wc': WC,
     'px': MAN['price']['px'],
-    'px_note': ('VALUATION — share price input $382.17 (weighted average price paid for shares repurchased in June 2026, Q3 FY26 10-Q Part II Item 2 — the latest '
-                'share price in an SEC filing; ~$23bn market cap); update to market'),
-    'mna_note': 'Scenario lever M&A_spend (Base $100m p.a. of bolt-ons). Funded from cash / revolver (debt schedule).',
-    'rev_guid_note': 'Company FY26 net sales growth guidance +20–23% (raised 29-Apr-2026, unchanged 29-Jul-2026). Drives the sales calibration.',
-    'eps_guid_note': 'Company FY26 adjusted EPS guidance $9.30–9.50 (raised 29-Jul-2026). Drives the segment-margin calibration.',
+    'px_note': 'VALUATION — share price input $541 (user-provided, 12-Oct-2026); update to market',
+    'mna_note': 'Scenario lever M&A_spend (Base $3bn p.a.). Funded from cash.',
 }
 
 # ====================================================================== compute engine
@@ -115,6 +109,8 @@ def compute(row, col):
     CTX.col = col
     if kw.get('ann') and col.q: return None, False
     if k in HISTK:
+        if 'a26_in' in kw and col.c == A26: return kw['a26_in'], True
+        if 'a26' in kw and col.c == A26: return kw['a26'](), False
         v = hist_value(row, col)
         if v is not None: return v, True
         for key in ('hist', 'all'):
@@ -142,12 +138,12 @@ def compute(row, col):
     return None, False
 
 # ====================================================================== writers
-CAGR_G = {'is_rev', 'g_rev', 'aero_rev', 'ind_rev', 'aero_coem', 'aero_cserv', 'aero_doem', 'aero_dserv', 'ind_pg', 'ind_trans', 'ind_og', 'mx_com', 'mx_def',
-          'o_adj', 'g_adj', 'r_adj', 'r_ebitda', 'is_ebit', 'd_dda', 'e_adjni', 'e_eps', 'cf_cfo', 'fcf', 'bs_ta', 'bs_teq', 'sh_dil', 'is_gp', 'is_sga',
-          'd_amort', 'd_dep', 'aero_oi', 'ind_oi', 'is_ni', 'eps_dil', 'dps'}
-CAGR_A = {'aero_m', 'ind_m', 'g_adjm', 'o_adj_m', 'r_adj_m', 'is_gm', 'is_ebit_m', 'r_ebit_m', 'gm_rev', 'gm_aero', 'gm_ind', 'gm_gm', 'gm_ebitda_m',
-          'gm_op_m', 'gm_net_m', 'gm_sga', 'gm_rd', 'gm_adjop_m', 'fcf_m', 'fcf_conv', 'capex_pct', 'ra_roic', 'rn_ronta', 'roe', 'lv_x',
-          'd_sga', 'd_dep_pct', 'd_sbc_pct', 'wc_nwc_p', 'is_etr', 'e_rate', 'fcf_eb', 'corp_pct', 'aero_aft', 'mx_com_p', 'mx_def_p'}
+CAGR_G = {'is_rev', 'g_rev', 'ai_rev', 'dc_rev', 'ai_az', 'ai_m365', 'ai_psl', 'ai_ind', 'ai_fss', 'dc_sa', 'dc_xbox', 'dc_win', 'mx_cloud',
+          'o_adj', 'g_oi', 'r_adj', 'r_ebitda', 'is_oi', 'd_dda', 'e_adjni', 'e_eps', 'cf_cfo', 'fcf', 'bs_ta', 'bs_eq', 'sh_dil', 'is_gp', 'is_rd', 'is_sm',
+          'is_ga', 'd_dep', 'd_amort', 'ai_oi', 'dc_oi', 'is_ni', 'eps_dil', 'dps', 'd_capex', 's3_pbp_r', 's3_ic_r', 's3_mpc_r'}
+CAGR_A = {'ai_m', 'dc_m', 'g_oim', 'o_adj_m', 'r_adj_m', 'is_gm', 'is_oi_m', 'r_ebit_m', 'gm_rev', 'gm_ai', 'gm_dc', 'gm_az', 'gm_gm', 'gm_ebitda_m',
+          'gm_op_m', 'gm_net_m', 'gm_rd', 'gm_sm', 'gm_ga', 'gm_adjop_m', 'fcf_m', 'fcf_conv', 'capex_pct', 'ra_roic', 'rn_ronta', 'roe', 'lv_x',
+          'd_rd', 'd_sm', 'd_ga', 'd_sbc_pct', 'wc_nwc_p', 'is_etr', 'fcf_eb', 'mx_az_p', 'd_capex_pct', 'd_dep_r', 'wc_ucr'}
 A = {y: ANN[y].c for y in ANN}
 
 def style_cagr(ws, r, on):
@@ -186,65 +182,75 @@ def write_row(ws, row):
     for c, t in rc.items(): comment(ws[f'{c}{r}'], t)
     if row.key in CAGR_G:
         ws[f'{CAGR[0]}{r}'] = f'=IFERROR(({A[2031]}{r}/{A[2026]}{r})^(1/5)-1,"n/m")'
-        ws[f'{CAGR[1]}{r}'] = f'=IFERROR(({A[2025]}{r}/{A[2020]}{r})^(1/5)-1,"n/m")'
-        ws[f'{CAGR[2]}{r}'] = f'=IFERROR(({A[2025]}{r}/{A[2015]}{r})^(1/10)-1,"n/m")'
-        ws[f'{CAGR[3]}{r}'] = f'=IFERROR(({A[2025]}{r}/{A[2011]}{r})^(1/14)-1,"n/m")'
+        ws[f'{CAGR[1]}{r}'] = f'=IFERROR(({A[2026]}{r}/{A[2021]}{r})^(1/5)-1,"n/m")'
+        ws[f'{CAGR[2]}{r}'] = f'=IFERROR(({A[2026]}{r}/{A[2016]}{r})^(1/10)-1,"n/m")'
+        ws[f'{CAGR[3]}{r}'] = f'=IFERROR(({A[2026]}{r}/{A[2006]}{r})^(1/20)-1,"n/m")'
         for c in CAGR: ws[f'{c}{r}'].number_format = '0%;\\(0%\\);"n/m"'
     elif row.key in CAGR_A:
         ws[f'{CAGR[0]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2027, 2032))}),"n/m")'
-        ws[f'{CAGR[1]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2021, 2026))}),"n/m")'
-        ws[f'{CAGR[2]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2016, 2026))}),"n/m")'
-        ws[f'{CAGR[3]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2011, 2026))}),"n/m")'
+        ws[f'{CAGR[1]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2022, 2027))}),"n/m")'
+        ws[f'{CAGR[2]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2017, 2027))}),"n/m")'
+        ws[f'{CAGR[3]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2006, 2027))}),"n/m")'
         for c in CAGR: ws[f'{c}{r}'].number_format = NF['pct']
     t = LABEL_SOURCES.get(row.key)
     if t: comment(ws.cell(r, 2), t)
 
-REL = 'Source: Woodward earnings releases (Form 8-K Item 2.02, Ex. 99.1) — '
+REL = 'Source: Microsoft earnings releases (Form 8-K Item 2.02, Ex. 99.1) — '
 LABEL_SOURCES = {
-    'aero_coem': ('Source: Woodward Forms 10-Q / 10-K, revenue note "Disaggregation of revenue" (sales by primary market, from FY2019; Q4 = fiscal year (10-K) − nine months (Q3 10-Q)). '
-                  'Commercial / defense "aftermarket" renamed "services" in FY2025.'),
-    'ind_pg': ('Source: Forms 10-Q / 10-K revenue note. Power generation / transportation / oil & gas introduced in the FY2023 10-K: FY2021–22 annual from the FY2023 10-K, FY2023 quarters from '
-               'the FY2024 10-Q comparatives (latest filing presenting the period); FY2023+ as reported. FY2021–22 quarters on the legacy basis only (memo rows).'),
-    'aero_oi': REL + 'segment net sales and earnings schedule (as originally reported; FY2018 restated in the FY2019 release for the pension-cost reclassification — memo row).',
-    'ns_gaap': REL + 'segment schedule ("Nonsegment expenses"); FY2018+ adjusting items from the "Reconciliation of Net Earnings to Adjusted Net Earnings" tables.',
-    'is_rev': REL + 'condensed consolidated statements of earnings, as originally reported (FY2016 and FY2018 cost-line reclassifications in the following year\'s release are not recast).',
-    'd_dda': REL + 'Reconciliation of Net Earnings to EBITDA (depreciation expense; amortization of intangible assets).',
-    'o_pub': REL + 'Reconciliation of Net Earnings to EBIT and Adjusted EBIT (published from Q2 FY2018).',
-    'e_pub': REL + 'Reconciliation of Net Earnings / EPS to Adjusted Net Earnings / Adjusted EPS (published from Q2 FY2018).',
-    'r_gebit_pub': REL + 'Reconciliation of Net Earnings to EBIT and EBITDA (published throughout).',
-    'cf_ni': ('Source: release condensed cash-flow statements (year to date; discrete quarters derived, Q4 = FY − 9M); D&A from the EBITDA reconciliation; '
-              'share-based compensation and deferred income taxes from the 10-K / 10-Q (XBRL, as first filed).'),
-    'bs_cash': REL + 'condensed consolidated balance sheets (period ends); shares outstanding = shares issued − treasury shares (XBRL).',
-    'ppa_cons': 'Source: FY2018 10-K Note 4 (L\'Orange, preliminary); Q3 FY26 10-Q Note 10 (Safran electro-mechanical actuation, Jul-2025; Valve Research, Apr-2026).',
-    'sh_basic': REL + 'statements of earnings (weighted average shares). No stock splits since the 3-for-1 split of Feb-2008.',
-    'ds_total': 'Source: release balance sheets; FY2025 10-K Note 15 and Q3 FY26 10-Q Note 15 (debt); 8-Ks of 28-May-2026 (revolver, term loan) and 21-Aug-2026 (Series U/V/W notes).',
-    'dv_hdr': 'Source: Q3 FY26 10-Q Note 10 (pilot controls held for sale; ONTIC agreement 15-Apr-2026); 8-K 21-Sep-2026 (Santa Clarita, Item 2.05).',
+    'ai_az': ('Source: Form 8-K 2-Sep-2026 (Item 7.01, Ex. 99.1 "FY27 Segments and Investor Metrics"): product and service revenue restated to the FY27 definitions, '
+              'Q1 FY25 – Q4 FY26. Earlier periods are not available on this basis.'),
+    'ai_oi': 'Source: Form 8-K 2-Sep-2026 (Ex. 99.1): Agents and Infra / Devices and Consumer revenue, cost of revenue, operating expenses and operating income restated, Q1 FY25 – Q4 FY26.',
+    's3_h': REL + 'segment revenue and operating income tables, as originally reported (FY2016 structure; later recasts not applied).',
+    'l2_h': REL + 'segment revenue and gross margin tables (FY2014–FY2015), as originally reported.',
+    'l1_h': 'Source: 10-K segment notes (FY2006–FY2012) and FY2013 earnings releases, as originally reported.',
+    'is_rev': (REL + 'income statements, as originally reported (FY2006–FY2012: 10-K Item 8). FY2016–FY2017 were restated for ASC 606 / 842 in the 8-K of 3-Aug-2017; '
+               'the model keeps the original figures (cell comments).'),
+    'd_dda': REL + 'cash-flow statements (three-month columns); depreciation and amortization of intangibles: 10-K notes (XBRL, annual).',
+    'o_pub': REL + '"GAAP to Non-GAAP" / "As Adjusted" reconciliation tables (ngaap.json); items and the basis per period are in the cell comments of the published adjusted EPS row.',
+    'e_pub': REL + 'reconciliation tables (ngaap.json). FY2012–Q1 FY14 published per share only.',
+    'cf_ni': REL + 'cash-flow statements (three-month columns for quarters; Q1 FY26 restated from the Q2 FY26 six-month column).',
+    'bs_cash': REL + 'balance sheets (period ends).',
+    'ppa_cons': 'Source: 10-K business-combination notes — LinkedIn (FY2017 10-K), Nuance (final allocation, FY2024 10-K), Activision Blizzard (FY2024 10-K).',
+    'sh_basic': REL + 'income statements (weighted average shares). No stock splits since Feb-2003.',
+    'dps': 'Source: XBRL CommonStockDividendsPerShareDeclared (10-K / 10-Q); FY2006–07 from the 10-K income statements.',
+    'ds_total': 'Source: balance sheets; FY2026 10-K Note 10 (debt) and Note 14 (leases).',
+    'fl_liab': 'Source: 10-K lease notes (XBRL FinanceLeaseLiability, RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability, FinanceLeasePrincipalPayments).',
+    'cal_ai_gd': 'Source: 8-K 2-Sep-2026, Item 7.01 Ex. 99.1 ("FY27 Q1 Adjusted Outlook"), which re-files the outlook given on the 29-Jul-2026 earnings call.',
+    'cal_fyg': 'UNVERIFIED — not in an SEC filing. ' + V0['unver_note'],
+    'd_capex': 'Source: cash-flow statements (additions to property and equipment) + 10-K lease note (finance-lease right-of-use assets obtained, XBRL).',
 }
 CELL_COMMENTS = {}
 def comments_setup():
-    a18 = A[2018]
-    CELL_COMMENTS['aero_oi'] = {a18: 'FY2018 as originally reported ($301.8m). Restated to $308.6m in the FY2019 release (pension-cost reclassification, ASU 2017-07) — see memo row.'}
-    CELL_COMMENTS['ind_oi'] = {a18: 'FY2018 as originally reported ($47.9m); restated to $49.9m in the FY2019 release (ASU 2017-07). Includes L\'Orange purchase-accounting charges (adjusted out).'}
-    CELL_COMMENTS['is_cogs'] = {A[2016]: 'FY2016 as originally reported; the FY2017 release shows $1,484.0m (cost of goods sold) / $174.0m (SG&A) after a reclassification.',
-                                A[2023]: 'FY2023 total from the Q4 FY23 release; Σ quarters as first reported differs by $1.4m (COGS ↔ R&D reclassification within the year).'}
-    CELL_COMMENTS['ind_pg'] = {A[2021]: 'Recast basis from the FY2023 10-K (prior-year comparatives).', A[2022]: 'Recast basis from the FY2023 10-K.'}
+    CELL_COMMENTS['is_rev'] = {A[2016]: 'FY2016 as originally reported ($85,320m). Restated for ASC 606 / 842 to $91,154m (8-K 3-Aug-2017).',
+                               A[2017]: 'FY2017 as originally reported ($89,950m). Restated for ASC 606 / 842 to $96,571m (8-K 3-Aug-2017); FY2018 y/y in this row therefore crosses bases.'}
+    CELL_COMMENTS['is_oi'] = {A[2008]: 'FY2008 as originally reported in the FY2008 10-K ($22,492m); later 10-K comparatives show $22,271m.',
+                              A[2016]: 'FY2016 operating income as originally reported ($20,182m); $26,078m restated for ASC 606.',
+                              A[2017]: 'FY2017 operating income as originally reported ($22,326m); $29,025m restated for ASC 606.'}
+    CELL_COMMENTS['is_tax'] = {A[2016]: 'FY2016 reflects the early adoption of ASU 2016-09 effective 1-Jul-2015; Q1–Q3 FY16 are as originally reported, so they sum to $302m more tax than the year.'}
+    CELL_COMMENTS['cf_dda'] = {QC[(2026, 1)].c: MAN['corrections']['Q1-26_cf']['note']}
+    CELL_COMMENTS['d_dda'] = {QC[(2026, 1)].c: 'Restated Q1 FY26 (see the cash-flow row comment): $8,147m vs $13,061m as first reported.'}
+    CELL_COMMENTS['s3_pbp_r'] = {A[2016]: 'FY2016 annual segment figures (Q4 FY16 release) differ from the sum of Q1–Q3 as first reported (re-allocations within the year).'}
 
 DEFS = {}
 def defs_setup():
     q = lambda y, n: QC[(y, n)].c
     DEFS['o_def'] = {
-        'C': ('FY2011–17: no adjusted measures published (EBIT / EBITDA / FCF only) — adjusted = GAAP EBIT; segments Aerospace / Energy (Energy renamed Industrial in FY2016)',
-              'Woodward\'s releases in FY2011–17 reconcile net earnings to EBIT and EBITDA but publish no adjusted EBIT or EPS (FY2016 special charges of $16m were discussed in the text only).'),
-        A[2018]: ('FY2018+: adjusted EBIT / EBITDA / EPS published (from Q2 FY2018): restructuring, L\'Orange acquisition & purchase accounting, Duarte move, US tax reform',
-                  'Q2 FY2018 release onward; FY2018 annual from the Q4 FY2018 release.'),
-        A[2020]: ('FY2020: gains on property / business sales, cross-currency swap gain, Hexcel merger costs and COVID restructuring adjusted out', None),
-        q(2022, 1): ('FY2022+: business development, non-recurring matters, product rationalization, inventory / collections charges adjusted out', None),
-        q(2026, 1): ('FY2026: restructuring (China OH wind-down, servo-valve transition) only', None),
+        'C': ('FY2006–FY2011: no adjusted measures published — adjusted = GAAP (flag)', None),
+        A[2012]: ('FY2012–Q1 FY14: revenue deferrals for Windows / Office upgrade offers and pre-sales; FY2012 goodwill impairment; Q3 FY13 EC fine',
+                  'FY2012 adjusted figures were first presented in the Q4 FY13 release (prior-year comparative).'),
+        q(2015, 1): ('FY2015: impairment, integration & restructuring (Nokia)', 'Q1–Q3 FY15 first given adjusted figures in the FY2016 releases (re-presented comparatives) — that presentation is used.'),
+        q(2016, 1): ('FY2016–FY2017: Windows 10 revenue deferrals + impairment / integration / restructuring', None),
+        q(2018, 1): ('FY2018+ (ASC 606): no operating adjustments except Q2 FY23 severance, hardware impairment & lease consolidation ($1,171m)', None),
     }
     DEFS['e_def'] = {
-        'C': ('FY2011–17: no adjusted EPS published — adjusted = GAAP diluted EPS (flag)', None),
-        A[2018]: ('FY2018+: adjusted EPS = GAAP diluted EPS + items net of tax (company definition); FY2018–19 incl. US tax-reform transition impact', None),
-        q(2025, 1): ('FY2025: product rationalization gains and German corporate tax-rate change adjusted out', None),
+        'C': ('FY2006–FY2011: no adjusted EPS published — adjusted = GAAP (flag)', None),
+        A[2012]: ('FY2012–Q1 FY14: per-share bridges only — after-tax $ = per-share effect × diluted shares (labelled)', None),
+        q(2018, 2): ('FY2018–FY2022: discrete tax items adjusted out (TCJA, intangible-property transfers, India withholding-tax decision)', None),
+        q(2025, 1): ('FY2025–FY2026: impact from investments in OpenAI adjusted out (net income / EPS only)',
+                     'Introduced in the Q1 FY26 release; FY2025 quarters take the adjusted figures re-presented in the FY2026 releases (the FY2025 releases published none).'),
+    }
+    DEFS['r_def'] = {
+        'C': ('Model definitions throughout (Microsoft publishes no EBITDA): EBIT = operating income; D&A = cash-flow line "Depreciation, amortization, and other"', None),
     }
 def write_defs(ws, row):
     for c, (txt, cm) in DEFS[row.key].items():
@@ -253,7 +259,7 @@ def write_defs(ws, row):
         if cm: comment(cell, cm)
 
 def write_scen(ws):
-    srcrow = {'hdr': 9, 'out_hdr': 11, 'pt_hdr': 15, 'out': 12, 'pt': 16, 'lev': 28, 'blk': 30, 'yr': 31}
+    srcrow = {'hdr': 9, 'out_hdr': 11, 'pt_hdr': 15, 'out': 12, 'pt': 16, 'lev': 28, 'tgt': 28, 'blk': 30, 'yr': 31}
     for spec_ in SCEN_ROWS:
         r, kind = spec_[0], spec_[1]
         for ci in range(CI(SL), CI(SNOTE) + 1):
@@ -271,11 +277,11 @@ def write_scen(ws):
         elif kind == 'pt':
             _, _, lab, _, val, _, note, nf = spec_
             ws[f'{SL}{r}'] = lab; ws[f'{SBASE}{r}'] = val; ws[f'{SBASE}{r}'].number_format = NF[nf]; set_color(ws[f'{SBASE}{r}'], BLUE); ws[f'{SNOTE}{r}'] = note
-        elif kind == 'lev':
+        elif kind == 'tgt':
             _, _, lab, a, b, c_, note = spec_
             ws[f'{SL}{r}'] = lab
             for col, v in zip([SBULL, SBASE, SBEAR], [a, b, c_]):
-                ws[f'{col}{r}'] = v; ws[f'{col}{r}'].number_format = NF['x']
+                ws[f'{col}{r}'] = v; ws[f'{col}{r}'].number_format = NF['m']; set_color(ws[f'{col}{r}'], BLUE)
             ws[f'{SNOTE}{r}'] = note
         elif kind == 'blk':
             _, _, lab, db, mid, de, note, nf = spec_
@@ -296,24 +302,24 @@ def write_header(ws):
         clone_row_style(ws, r, r, 2, CI(LASTC))
     ws[f'{NOTE}1'] = 'SCENARIO SWITCH ▼ (Bull / Base / Bear) — drives all scenario-linked forecast drivers'
     ws[f'{NOTE}2'] = 'Base'
-    comment(ws[f'{NOTE}2'], 'Scenario toggle. Choose Bull / Base / Bear. Drives: FY26 sales-growth and adjusted-EPS guidance end-points (high / mid / low), '
-            'Q4/26E buybacks, 2027E–2031E primary-market sales growth, segment margins, M&A spend and the leverage target for 2027E+ buybacks '
+    comment(ws[f'{NOTE}2'], 'Scenario toggle. Choose Bull / Base / Bear. Drives: Q1 FY27 guidance end-points (segment revenue high / mid / low; COGS and opex low / mid / high), '
+            '2028E–2031E product & service growth, segment margins, M&A spend, and the liquidity target and minimum for buybacks '
             f'(scenario table {SL}:{SNOTE}).')
     from openpyxl.worksheet.datavalidation import DataValidation
     dv = DataValidation(type='list', formula1='"Bull,Base,Bear"', allow_blank=False); ws.add_data_validation(dv); dv.add(f'{NOTE}2')
-    ws['B2'] = 'Woodward, Inc. (NASDAQ: WWD) — 3-Statement Financial Model'
-    ws['B3'] = ('US GAAP as reported · USD millions (per-share data in USD; shares in millions) · Fiscal years ended 30 September (2026 = Oct-2025 – Sep-2026) · '
-                'Source: Woodward Forms 10-K / 10-Q, Form 8-K earnings releases (Ex. 99.1) and deal / financing 8-Ks, SEC EDGAR (CIK 108312); XBRL company facts; '
-                'investor-relations releases at woodward.com are the same documents as filed on EDGAR')
-    ws['B4'] = ('Basis notes: as originally reported (FY2016 and FY2018 reclassifications not recast; FY2018 restated segment earnings in memo rows). Segments: Aerospace, Industrial '
-                '(Energy to FY2015). Acquisitions: L\'Orange Jun-18, Safran EMA Jul-25, Valve Research Apr-26; divestitures: renewable power systems May-20, product lines FY25, '
-                'pilot controls (ONTIC, pending FY27). Q4/26E calibrated to FY26 sales-growth and adjusted-EPS guidance (29-Jul-2026).')
+    ws['B2'] = 'Microsoft Corporation (NASDAQ: MSFT) — 3-Statement Financial Model'
+    ws['B3'] = ('US GAAP as reported · USD millions (per-share data in USD; shares in millions) · Fiscal years ended 30 June (2027 = Jul-2026 – Jun-2027) · '
+                'Source: Microsoft Forms 10-K / 10-Q, Form 8-K earnings releases (Ex. 99.1) and the 8-K of 2-Sep-2026 (FY27 segments, restated history, Q1 FY27 outlook), '
+                'SEC EDGAR (CIK 0000789019); XBRL company facts. FY27 full-year call commentary is UNVERIFIED (information rows only).')
+    ws['B4'] = ('Basis notes: as originally reported (FY2016–17 ASC 606 / 842 restatement and later segment recasts not applied; memo comments). Segment build on the FY27 structure '
+                '(Agents and Infra / Devices and Consumer), restated history Q1/25–Q4/26 only; earlier structures as memo. Acquisitions: LinkedIn Dec-16, Nuance Mar-22, '
+                'Activision Blizzard Oct-23. Q1/27E calibrated to the Q1 FY27 outlook; Q2–Q4/27E carry the Q1 calibration. Share price $541 (user, 12-Oct-2026).')
     ws[f'{CAGR[0]}5'] = 'Forecast'
     for c in CAGR[1:]: ws[f'{c}5'] = 'Historical'
     ws['B6'] = '(USDm)'
     for col in COLS: ws[f'{col.c}6'] = col.label
     ws[f'{NOTE}6'] = 'Modelling Notes'
-    for c, a, b in zip(CAGR, ['5Y CAGR', '5Y CAGR', '10Y CAGR', '14Y CAGR'], ["26-'31", "20-'25", "15-'25", "11-'25"]):
+    for c, a, b in zip(CAGR, ['5Y CAGR', '5Y CAGR', '10Y CAGR', '20Y CAGR'], ["26-'31", "21-'26", "16-'26", "06-'26"]):
         ws[f'{c}6'] = a; ws[f'{c}7'] = b
 
 def set_columns(ws):
@@ -378,7 +384,7 @@ def scenario_snapshots():
     import other_sheets as osh
     snaps = {}
     for scen in ('Bull', 'Bear'):
-        p = os.path.join(BASE, f'WWD_{scen}.xlsx')
+        p = os.path.join(BASE, f'MSFT_{scen}.xlsx')
         wb = openpyxl.load_workbook(OUT); wb['Model'][f'{NOTE}2'] = scen; wb.save(p)
         res = recalc(p); print(scen, res.get('status'), res.get('total_errors'))
         v = openpyxl.load_workbook(p, data_only=True)['Bull-Base-Bear']
@@ -436,7 +442,7 @@ def inject_values(src_xlsx, recalc_xlsx):
 
 def store_values():
     import shutil
-    p = os.path.join(BASE, 'WWD_recalc.xlsx')
+    p = os.path.join(BASE, 'MSFT_recalc.xlsx')
     shutil.copy(OUT, p)
     res = recalc(p); print('recalc', res.get('status'), res.get('total_errors'))
     inject_values(OUT, p)

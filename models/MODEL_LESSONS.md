@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -14,6 +14,7 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 |---|---|
 | Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
+| Software / cloud; segments re-cut after year end with a restated-history 8-K | MSFT |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
@@ -25,8 +26,8 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
-| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
-| Net-cash balance sheet | RMS, CPRT, ODFL |
+| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), MSFT (Jun), TDY (52/53-week) |
+| Net-cash balance sheet | RMS, CPRT, ODFL, MSFT |
 | Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
 | Private company, LBO | R&Y |
@@ -698,6 +699,24 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [bridges] If the company computes adjusted tax annually, the FY column uses the FY table rather than Σ Q.
   - [BS/CF] The cash check must net overdrafts the CF statement nets.
   - [QA] Template residue survived here: the Bull-Base-Bear N26 comment cites MLM; the P40 comment cites "Model rows 290–292 / Model!CF2" (another build's rows) with author "User"; DCF headers say "USDm" / "($)" in a CHF model.
+
+## Software & cloud
+
+### MSFT — Microsoft Corporation (MLM template via WWD kit; US GAAP / USD m / FY ends 30-Jun)
+- **Coverage & basis:** FY2006–12 annual (10-K Item 8; the releases of that era carry no tables), Q1/13–Q4/26 quarterly from each release's three-month columns, Q1–Q4/27E, FY2028E–31E. As originally reported: the ASC 606 / 842 restatement of FY2016–17 (8-K 3-Aug-2017) is a cell comment, so FY2018 y/y crosses bases. CIK 0000789019. 2,094 data checks; 353 XBRL comparisons tie (FY2008 OI differs from later comparatives — original kept).
+- **Operating build:** the FY27 two-segment structure (Agents and Infra / Devices and Consumer, eight product & service lines) announced in the 8-K of 2-Sep-2026, two months after year end, with restated quarters only for FY2025–26. The build uses it anyway (it is the basis of every FY27 report and the re-cut guidance); PBP / IC / MPC (FY2016–26), D&C / Commercial (FY2014–15, revenue and gross margin) and the five divisions (FY2006–13) are memo blocks with Σ checks. Segment OI = revenue × margin; Microsoft allocates all costs, so there is no corporate line.
+- **Bridges & definitions:** company "As Adjusted" figures exist only when items exist: revenue deferrals (Windows / Office upgrade offers 2012–14, Windows 10 2016–17), impairment / restructuring (2015–17, Q2 FY23), EC fine, discrete tax items (FY2018–22) and the OpenAI impact (FY2026, re-presented for FY2025). The layouts changed across eras (vertical rows, then horizontal As Reported / Impact / As Adjusted columns), so the bridges are curated in `ngaap.json` and verified. FY2012–Q1 FY14 are per share only. EBITDA is a model definition (OI + the cash-flow "D&A and other" line).
+- **Data quirks & corrections:** within-year cash-flow reclassification (Q2 FY26 YTD moved $4.9bn of OpenAI results out of "D&A and other"): Q1 FY26 restated from the later YTD. FY2016 Σ quarters ≠ year (ASU 2016-09 early-adopted in Q4 retroactive to 1-Jul-2015). Statement headings sit in the previous table or inside the table in some releases; classification is by row content. Short-term-debt cash-flow labels have a dozen variants.
+- **Deals & special blocks:** PPAs for LinkedIn (Q2 FY17), Nuance (Q3 FY22, final allocation from the FY2024 10-K) and Activision Blizzard (Q2 FY24). M&A lever $3bn p.a. at 10x sales.
+- **Calibration & scenarios:** Microsoft guides one quarter ahead, on the call; the 2-Sep-2026 8-K re-filed the Q1 FY27 outlook mechanically re-cut to the new segments, which makes it EDGAR-verifiable. One growth Δ per segment solves Q1/27E segment revenue to the guide; one uniform margin Δ solves OI to guided revenue − COGS − opex (Bull = low cost end); Q2–Q4 carry the Q1 Δs. FY27 "double-digit growth" call commentary is an UNVERIFIED information row.
+- **Balance sheet, cash & capital:** net cash before leases; finance leases (datacenters, $66.6bn) are modelled explicitly — additions as a share of capex incl. leases (the company's capex metric), principal as % of opening liability, interest at 4.5% — and count as debt. Buybacks plug to a scenario cash & short-term investment target with a scenario minimum; short-term borrowing backstops a $40bn minimum. Notes repaid at face; carrying-value discount (Activision notes) held.
+- **Valuation:** $541 user price (12-Oct-2026). DCF base year FY2026A; UFCF deducts capex incl. finance-lease assets; investment gains (OpenAI) excluded and the ~$36bn of equity investments not added back. Mauboussin block with g (12%) > WACC (9.4%) still computes correctly (finite-horizon formula).
+- **Reusable lessons:**
+  - [sources] Before labelling call guidance unverified, check post-call Item 7.01 8-Ks: segment re-cuts often re-file the outlook, making it EDGAR-sourced.
+  - [basis] When the segment structure changes just after year end, build on the new structure with its short restated history and keep every old structure as an as-reported memo block with Σ checks.
+  - [extraction] Parse statements from HTML cells, not text lines (labels wrap), and classify tables by row content; carry the last section header into page-break continuation tables.
+  - [extraction] Use the release three-month cash-flow columns where published, but restate an earlier quarter from a later YTD statement when the issuer reclassifies within the year.
+  - [BS/CF] When the company's capex metric includes finance leases and lease liabilities count as debt, roll PP&E with capex incl. leases, carry the lease liability schedule, and deduct leased-asset additions in UFCF.
 
 ## Private company / LBO
 

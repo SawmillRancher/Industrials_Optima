@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, MSFT). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -254,7 +254,8 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | IFRS / foreign currency | ONON, RMS, BC, TFI | Reporting currency; constant-currency + FX build; price × FX input; IFRS 16 lease schedule; rent-as-opex DCF option |
 | Half-year reporters | RMS, BC | H1 / H2 / FY columns (H2 = FY − H1); quarterly revenue memo |
 | Recent IPO | LOAR, ONON, KRMN | Annual columns from the prospectus; P&L-only years flagged; BS / CF start when available |
-| Non-December fiscal year | STE (Mar), CTAS (May), HEI (Oct) | Column labels by fiscal year; DCF discount dates moved to FY ends |
+| Non-December fiscal year | STE (Mar), CTAS (May), HEI (Oct), MSFT (Jun) | Column labels by fiscal year; DCF discount dates moved to FY ends |
+| Segments re-cut just after year end (restated-history 8-K) | MSFT | Build on the new structure with its short restated history; every old structure as an as-reported memo block with Σ checks |
 | Pending / new acquisition | DHR, MLM, CTAS, ESAB, CSGP, UBER, CHRW | Separate block, PPA, financing, synergies, closing-date toggle; deal tab for large deals |
 | Dual-class / splits | ONON, HEI, CTAS, ODFL | Class-equivalent shares; split-adjust by source filing date |
 | Private company | R&Y | Compilation statements; implied CF from BS changes; LBO tab |
@@ -275,11 +276,12 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
 ### 5.1 Sources and extraction
+- **Guidance re-filed on EDGAR.** Call-only guidance can be re-filed in a later Item 7.01 8-K (segment re-cuts, investor-day decks). Check those 8-Ks before labelling guidance unverified; cite the 8-K. [MSFT]
 - **Share price fallback.** With market sites blocked and no price from the user, use the latest SEC-filed price: the 10-Q Part II Item 2 average repurchase price, or a Form 4 transaction / withholding price. Cite the form and date, and flag "update to market". Don't use unverifiable web quotes. [WWD, BWXT, MLM, CLH, WAB, CSGP, CTAS, UBER]
 - **XBRL can be wrong, not just incomplete.** Facts tagged 0, tags retired mid-history into a combined concept, and sign flips all occur. Tie every XBRL-sourced fact to the face statement before using it as a primary input. For as-originally-reported checks, use the earliest-filed fact, and compare absolute values where the tag's sign convention changed. [TFI, ODFL]
 - **Foreign filers' EDGAR history starts at the US listing.** Record reporting-currency switches and keep an FX reference series for any manually entered earlier data. For non-SEC issuers, confirm EDGAR holds only F-6 ADR CIKs, say so in header row 3, and source from the home regulator's filings. [TFI, RBA, RMS]
@@ -288,6 +290,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Working capital from a single-line CFO = CFO − NI − D&A − SBC − deferred tax, using XBRL for the components and noting missing tags. [WWD]
   - Recast Q4 = FY recast − 9M recast; quarters that were never recast stay blank. [LECO]
   - Each derivation is noted in the cell comment.
+- **Parse statements from HTML table cells, not text lines** (labels wrap across lines), and identify statements by their row content: headings can sit in the preceding table or inside the table, and page breaks split cash-flow statements into continuation tables that need the last section header carried over. [MSFT]
+- **Within-year reclassifications:** where releases publish three-month cash-flow columns, use them, but restate an earlier quarter from a later year-to-date statement when the issuer reclassifies within the year (note it as a correction). [MSFT]
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
 
@@ -297,6 +301,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Disc-ops recast published only in totals:** scale minor opex lines to the restated totals, with SG&A as the plug, and comment the cells. [STE]
 - **After a spin:** start the BS at the first post-spin balance sheet even if the P&L uses earlier recast comparatives, and fill earlier y/y with company-reported change % memos. Spin-cos put carve-out (Form 10) years in the main columns, with the former parent's segment history as a flagged memo under the parent's CIK. [XPO, ESAB]
 - **Half-year reporters:** carry quarterly revenue as "1st / 2nd quarter of the half" memo rows inside the half-year columns, with a Σ check. [RMS, BC]
+- **Segment structure changed just after year end:** if the new structure restates only a short history (an Item 7.01 8-K), still build the forecast on it — the guidance and every future report use it — and keep each earlier structure as an as-reported memo block with its own Σ check. [MSFT]
 - **Two builds of one company:** diff their dated facts (split dates, deconsolidation quarter, label cut-overs) and resolve each from the filing. [LECO]
 
 ### 5.3 Operating build
@@ -377,6 +382,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Calibrate a fees / capitalized-interest row to YTD interest when coupons overstate actual expense.
 
   [KRMN, MLM, WWD, BWXT]
+- **Finance leases as capex:** when the company's capex metric includes finance-lease assets, roll PP&E with capex incl. leases, keep a finance-lease liability schedule (additions, principal, interest), count the liability as debt, and deduct leased-asset additions in DCF capex so EV and UFCF are on the same basis. [MSFT]
 - **Convertibles and preferred:**
   - Convertibles: treasury-stock dilution above the conversion price, driven by the forecast share price; capped calls ignored; counted at face in net debt.
   - Mandatory convertible preferred: if-converted shares until conversion, with dividends added back in adjusted EPS.

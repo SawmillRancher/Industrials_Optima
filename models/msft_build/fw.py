@@ -1,9 +1,9 @@
-"""Framework: MLM-template layout re-based on Woodward's fiscal (30-September year-end) columns, style cloning, row registry and
+"""Framework: MLM-template layout re-based on Microsoft's fiscal (30-June year-end) columns, style cloning, row registry and
 per-column formula context.
 
-Columns (Model sheet): C-L FY2011-FY2020 (annual) | M-AK Q1/21-Q4/25 with FY subtotals | AL-AN Q1/26-Q3/26 (actual) |
-AO Q4/26E | AP 2026E | AQ-AU 2027E-2031E | AV modelling notes | AX-BA CAGRs | BD-BH scenario input table. Fiscal year N =
-October N-1 to September N. Template columns right of the forecast block keep their order (template letter - 36).
+Columns (Model sheet): C-I FY2006-FY2012 (annual) | J-CA Q1/13-Q4/26 with FY subtotals (all actual) | CB-CE Q1/27E-Q4/27E |
+CF 2027E | CG-CJ 2028E-2031E | CK modelling notes | CM-CP CAGRs | CS-CW scenario input table. Fiscal year N = July N-1 to June N.
+Template columns right of the forecast block keep their order (template letter + 5).
 """
 import copy, json, os
 import openpyxl
@@ -21,7 +21,7 @@ class Col:
         self.prior = None; self.prevq = None
     def __repr__(self): return f'{self.c}:{self.label}'
 
-FY0, FYQ0, FYC = 2011, 2021, 2026          # first annual year, first quarterly year, current (partly estimated) year
+FY0, FYQ0, FYC = 2006, 2013, 2027          # first annual year, first quarterly year, current (estimated) year
 FYL = 2031
 COLS, ANN, QC = [], {}, {}
 _i = CI('C')
@@ -31,7 +31,7 @@ for y in range(FYQ0, FYC + 1):
     yy = str(y)[2:]
     for q in (1, 2, 3, 4, None):
         if q:
-            kind, lab = ('QE', f'Q{q}/{yy}E') if (y == FYC and q == 4) else ('Q', f'Q{q}/{yy}')
+            kind, lab = ('QE', f'Q{q}/{yy}E') if y == FYC else ('Q', f'Q{q}/{yy}')
             col = Col(L(_i), lab, kind, y, q); QC[(y, q)] = col
         else:
             kind, lab = ('E26', f'{y}E') if y == FYC else ('A', y)
@@ -39,7 +39,7 @@ for y in range(FYQ0, FYC + 1):
         COLS.append(col); _i += 1
 for y in range(FYC + 1, FYL + 1):
     col = Col(L(_i), f'{y}E', 'AE', y); COLS.append(col); ANN[y] = col; _i += 1
-assert ANN[2025].c == 'AK' and QC[(2026, 3)].c == 'AN' and QC[(2026, 4)].c == 'AO' and ANN[2026].c == 'AP' and ANN[2031].c == 'AU', (ANN[2025], ANN[2026], ANN[2031])
+assert ANN[2025].c == 'BV' and ANN[2026].c == 'CA' and QC[(2027, 1)].c == 'CB' and QC[(2027, 4)].c == 'CE' and ANN[2027].c == 'CF' and ANN[2031].c == 'CJ', (ANN[2026], ANN[2027], ANN[2031])
 for col in COLS:
     if col.q is None:
         if col.year - 1 in ANN: col.prior = ANN[col.year - 1].c
@@ -51,16 +51,15 @@ COLMAP = {c.c: c for c in COLS}
 HISTK = ('A', 'Q')
 FCK = ('QE', 'E26', 'AE')
 
-Q1, Q2, Q3, QE, E26 = 'AL', 'AM', 'AN', 'AO', 'AP'         # FY26 quarters (Q1-Q3 actual, Q4 estimate) / FY2026E
-LQ = Q3                                                     # last actual quarter (30-Jun-2026)
-A25, A24 = 'AK', 'AF'
-PQ1, PQ3 = 'AG', 'AI'                                       # Q1/25 - Q3/25 (prior-year year to date)
-NOTE = 'AV'
-SW = '$AV$2'                                                # scenario switch
-SL, SBULL, SBASE, SBEAR, SNOTE = 'BD', 'BE', 'BF', 'BG', 'BH'
-CAGR = ('AX', 'AY', 'AZ', 'BA')
-LASTC = 'BH'
-TSHIFT = 36                                                 # template column index - TSHIFT = WWD column index (right block)
+Q1, Q2, Q3, QE, E26 = 'CB', 'CC', 'CD', 'CE', 'CF'      # FY27 quarters (all estimates) / FY2027E
+LQ, LQP = 'BZ', 'BU'                                      # last actual quarter (Q4/26, 30-Jun-2026) and its prior-year quarter (Q4/25)
+A26, A25 = 'CA', 'BV'
+NOTE = 'CK'
+SW = '$CK$2'                                              # scenario switch
+SL, SBULL, SBASE, SBEAR, SNOTE = 'CS', 'CT', 'CU', 'CV', 'CW'
+CAGR = ('CM', 'CN', 'CO', 'CP')
+LASTC = 'CW'
+TSHIFT = -5                                               # template column index - TSHIFT = MSFT column index (right block)
 
 def pkey(col):
     if col.kind == 'A': return str(col.year)
@@ -100,7 +99,7 @@ def set_color(cell, rgb, bold=None):
     cell.font = Font(name=f.name, sz=f.sz, b=f.b if bold is None else bold, i=f.i, u=f.u, color=rgb)
 
 def comment(cell, text, w=420, h=160):
-    c = Comment(text, 'WWD model'); c.width, c.height = w, h
+    c = Comment(text, 'MSFT model'); c.width, c.height = w, h
     cell.comment = c
 
 class Row:
@@ -129,7 +128,7 @@ def P(key): return f'{CTX.col.prior}{R[key]}'
 def PQ(key): return f'{CTX.col.prevq}{R[key]}'
 def Q(key, y, q): return f'{QC[(y, q)].c}{R[key]}'
 def Y(key, y): return f'{ANN[y].c}{R[key]}'
-def S26(key): return f'=SUM({Q1}{R[key]}:{QE}{R[key]})'
+def S26(key): return f'=SUM({Q1}{R[key]}:{QE}{R[key]})'          # FY2027E flow = sum of the four estimate quarters
 def SUMQ(key):
     y = CTX.col.year
     return f'=SUM({QC[(y, 1)].c}{R[key]}:{QC[(y, 4)].c}{R[key]})'
