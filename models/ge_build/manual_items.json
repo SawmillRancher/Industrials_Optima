@@ -1,0 +1,69 @@
+{
+ "guidance_fy26": {
+  "src": "Q2-26 release (Form 8-K Item 2.02, Ex. 99.1, 16-Jul-2026): FY2026 guidance raised across the board (initiated 22-Jan-2026 in the Q4-25 release; maintained 21-Apr-2026, trending to the high end)",
+  "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000047/ge2q2026earningsrelease.htm",
+  "adj_rev_growth_text": "High-teens (prior: LDD)",
+  "adj_rev_growth": [0.19, 0.18, 0.17],
+  "adj_rev_growth_note": "Model mapping of the qualitative 'high-teens' guide to 19% / 18% / 17% (high / mid / low) is an assumption.",
+  "op": [10750.0, 10650.0, 10550.0],
+  "adj_eps": [7.85, 7.75, 7.65],
+  "fcf": [9200.0, 9050.0, 8900.0],
+  "ces_rev_growth_text": "~20% (prior: mid-teens); services low 20s (prior: mid-teens); equipment ~20% (prior: mid-to-high teens)",
+  "ces_sv_growth": [0.23, 0.22, 0.21],
+  "ces_eq_growth": [0.21, 0.20, 0.19],
+  "ces_op": [10350.0, 10300.0, 10250.0],
+  "dpt_rev_growth_text": "low double digits (prior: mid- to high-single digits)",
+  "dpt_growth": [0.12, 0.11, 0.10],
+  "dpt_op": [1700.0, 1650.0, 1600.0],
+  "corp_text": "Corporate cost & eliminations (adjusted Corporate & Other operating costs): $(1.2)-(1.3)B per the Q4-25 release (22-Jan-2026); not restated in the Q1-26 / Q2-26 releases. The 16-Jul-2026 total and segment ranges imply about $(1.3)B at the mid-points.",
+  "corp": [-1200.0, -1250.0, -1300.0],
+  "segment_mapping_note": "Qualitative segment guides (~20%, low 20s, low double digits) are mapped to numbers as assumptions (scenario high / mid / low).",
+  "history": "22-Jan-2026 (Q4-25 release): adjusted revenue +LDD; operating profit $9.85-10.25B; adjusted EPS $7.10-7.40; FCF $8.0-8.4B (>100% conversion); CES services +mid-teens, equipment +mid/high-teens, CES revenue +mid-teens, DPT revenue +MSD/HSD; CES operating profit $9.6-9.9B, DPT $1.55-1.65B, Corporate cost & eliminations $(1.2)-(1.3)B. 21-Apr-2026 (Q1-26 release): maintained, trending toward the high end. 16-Jul-2026 (Q2-26 release): adjusted revenue high-teens, operating profit $10.55-10.75B, adjusted EPS $7.65-7.85, FCF $8.9-9.2B; CES revenue ~+20% (services low 20s, equipment ~20%), CES operating profit $10.25-10.35B; DPT revenue low double digits, operating profit $1.6-1.7B."
+ },
+ "seg_fy25_revised": {
+  "src": "Q4-25 release (8-K 22-Jan-2026) 'Full-Year 2026 Segment Guidance' table: 2025 revised for the Jan-2026 segment changes (Aeroderivative CES -> DPT; remaining T&O site revenue and cost from Corporate to the businesses); $bn, unaudited estimates.",
+  "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000005/ge4q2025earningsrelease.htm",
+  "ces_sv": 24200.0, "ces_eq": 7700.0, "ces": 31900.0, "dpt": 12200.0, "ces_op": 8600.0, "dpt_op": 1500.0, "corp": -1000.0
+ },
+ "cpp": {
+  "src": "Form 8-K 8-Sep-2026 (Items 7.01 / 8.01): Ex. 99.1 investor presentation and Ex. 99.2 press release.",
+  "url": "https://www.sec.gov/Archives/edgar/data/40545/000095014226002501/eh260827362_ex9902.htm",
+  "price": 11750.0,
+  "cash": 7000.0,
+  "new_debt": 4750.0,
+  "rev_2027e": 2000.0,
+  "ebitda_mult_pre": 26.0,
+  "ebitda_mult_post": 18.0,
+  "synergies_y3": 200.0,
+  "text": "Consolidated Precision Products (castings; ~6,600 employees, >20 facilities; ~60% commercial aerospace / ~20% defense / ~20% power and other; ~70% of revenue from commercial and defense engines). Purchase price $11.75bn (cash; financed with $7bn existing cash and new debt); ~18x 2027 EBITDA incl. expected net synergies, ~26x without (implies ~$452m 2027E EBITDA and ~$200m net synergies); ~$200m net synergies by year 3, >2x by year 6; adjusted EPS and FCF accretive in year 1 excluding one-time costs and deal-related amortization; double-digit ROIC by year 5; close expected 2H-2027 subject to regulatory approvals. CPP is a GE Aerospace supplier (LEAP, GEnx, T700, F110, F404).",
+  "assumptions": "Not disclosed (model assumptions, flagged): closing date 30-Sep-2027 (one quarter in 2027E); revenue growth after 2027; EBITDA margin from the deck multiple; share of CPP revenue sold to GE Aerospace (eliminated on consolidation) 25%; PPA split (PP&E 15%, intangibles 35% amortized over 15 years, net working capital 5%, goodwill the remainder; no deferred-tax step-up); new-debt coupon 5.0%; one-time integration costs $150m in 2028E."
+ },
+ "debt": {
+  "src": "FY2025 Form 10-K Note 10 (borrowings; long-term debt maturities) and Q2-26 Form 10-Q Note 10.",
+  "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000008/ge-20251231.htm",
+  "maturities": {"2026": 1661.0, "2027": 1693.0, "2028": 480.0, "2029": 1639.0, "2030": 1700.0, "thereafter": 13296.0},
+  "at_2026_06_30": "Total borrowings $19,157m at 30-Jun-2026 (short-term $2,000m incl. current portion of senior notes $1,786m; long-term $17,157m: senior notes $15,238m, subordinated $1,412m, other $507m). Senior notes average rate 4.00% at 31-Dec-2025 (subordinated 4.40%). $3.0bn five-year revolving credit facility maturing 2029, undrawn at 31-Dec-2025. 2025 issues: $1.0bn 4.3% notes due 2030 and $1.0bn 4.9% notes due 2036.",
+  "avg_rate": 0.04
+ },
+ "amort_sched": {
+  "src": "FY2025 Form 10-K Note 7: estimated annual pre-tax amortization of intangible assets (2026 $351m, 2027 $356m, 2028 $357m, 2029 $376m, 2030 $371m).",
+  "2026": 351.0, "2027": 356.0, "2028": 357.0, "2029": 376.0, "2030": 371.0
+ },
+ "capital": {
+  "buyback": "Board authorization of up to $20bn of common share repurchases (Dec-2025). Q2-26 10-Q Part II: 6,888 thousand shares repurchased for $2,012m in Q2-26 at an average $292.17; ~$17,988m remaining at 30-Jun-2026. H1-26 purchases of common stock for treasury $4,527m (cash flow statement).",
+  "dps": "Dividends declared per share (XBRL CommonStockDividendsPerShareDeclared): 2023 $0.08 a quarter; 2024 $0.28 a quarter (no Q1 declaration; two in Q2); 2025 $0.36 a quarter; 2026 $0.47 a quarter (Q1, Q2).",
+  "dps_q": {"Q1-23": 0.08, "Q2-23": 0.08, "Q3-23": 0.08, "Q4-23": 0.08, "Q1-24": 0.0, "Q2-24": 0.56, "Q3-24": 0.28, "Q4-24": 0.28, "Q1-25": 0.36, "Q2-25": 0.36, "Q3-25": 0.36, "Q4-25": 0.36, "Q1-26": 0.47, "Q2-26": 0.47},
+  "dps_a": {"2023": 0.32, "2024": 1.12, "2025": 1.44}
+ },
+ "tax": {
+  "src": "FY2025 Form 10-K MD&A: effective tax rate 14.1% (2024 12.6%); adjusted effective tax rate (non-GAAP) 17.3% (2024 20.1%). Q2-26 Form 10-Q: adjusted ETR 16.7% in Q2-26 and 15.7% in H1-26 (tax benefits on global activities incl. the OBBBA).",
+  "items_rate": 0.21
+ },
+ "price": {
+  "px": 308.0,
+  "date": "12-Oct-2026",
+  "src": "Share price $308.00 provided by the user (12-Oct-2026). For reference, the Q2-26 Form 10-Q Part II reports an average repurchase price of $292.17 in Q2-26."
+ },
+ "corrections": "None. Known differences (documented, not corrected): company rounding of $1-3m in the non-GAAP bridges (totals computed from unrounded figures); FY2025 FCF quarters (as first published) do not sum to the FY figure because the Q3-25 release added dispositions of PP&E to the definition and re-presented prior periods.",
+ "ppa": {}
+}

@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -12,14 +12,14 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 
 | Situation | Read |
 |---|---|
-| Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
+| Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW, GE |
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
-| Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
-| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
-| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
+| Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO, GE (CPP) |
+| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM, GE (parent after two spins) |
+| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO, GE (FCF) |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
@@ -165,6 +165,61 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [calibration] For EPS guidance, back-solve the required adjusted EBIT through tax and interest, then solve the margin Δ.
   - [valuation] When FY end ≈ valuation date, roll the DCF: that FY is the base year and net debt is taken at its end.
   - [BS/CF] Add a revolver-headroom memo row so the minimum-cash plug can't silently exceed the commitment.
+
+### GE — General Electric Company, operating as GE Aerospace (MLM template via WWD kit; US GAAP / USD m / calendar FY)
+- **Coverage & basis:**
+  - FY2022 annual, Q1/23–Q2/26 quarterly, Q3/Q4-26E, 2027E–31E (CIK 40545).
+  - The parent stayed the registrant through two spins (GE HealthCare 3-Jan-2023, GE Vernova 2-Apr-2024), so history starts at the first GE Aerospace presentation. Each period comes from the first filing that presents it on that basis:
+    - FY2022–23 and the 2023 quarters come from the 2024 10-Q / 10-K / release comparatives. Only H1-23 and Q2-23 were re-presented, so Q1-23 = H1 − Q2 and the Q1/Q2-23 cash flows are blank.
+    - Q1-24 comes from the Q1-25 comparatives: the Q1-24 10-Q still consolidated GE Vernova (spin on the second day of Q2).
+  - The 11-Apr-2024 8-K "preliminary supplemental" recast is in $bn to one decimal, so it is used only for Q1-23 per-share data and shares.
+  - The balance sheet starts 31-Dec-2023.
+- **Operating build:**
+  - CES services and CES equipment revenue, and DPT revenue × segment margin, + eliminations (% of segment revenue) + adjusted Corporate & Other costs = company operating profit (checked against the bridge).
+  - KPI memos: engine deliveries (LEAP), implied revenue per engine, internal shop-visit growth, orders, book-to-bill, RPO.
+  - Run-off insurance (~$3.5bn revenue, $38bn investment securities) and U.S. tax equity have their own blocks outside operating profit.
+  - The Jan-2026 segment recast (Aeroderivative CES → DPT) was published only as Q1–Q2/25 comparatives plus a FY2025 "revised" guidance-table base in $bn. 2026 growth rows divide by the recast memo rows, and FY26 targets = revised base × (1 + guide).
+- **Bridges & definitions:**
+  1. Profit (GAAP) → operating profit (company): ± insurance, U.S. tax equity, interest, non-operating benefit, restructuring, separation, goodwill impairment, gains, NCI (±3 rounding).
+  2. EBITDA is a model definition (operating profit + D&A).
+  3. Adjusted EPS: company items net of tax, with a basis-difference row vs the release's starting figure.
+  4. FCF: the definition added PP&E dispositions in the Q3-25 release and re-presented prior periods (FY2024 $6,203m vs $6,089m), so the FY2025 quarter sum is exempt.
+
+  The U.S. tax equity item sits in other income and costs in the operating-profit table but differs from the EPS-table pre-tax figure (e.g. −$70m vs −$77m in Q2-26). Each bridge uses its own table.
+- **Data quirks & corrections:**
+  - GE's statements don't always foot ($2m); "other current assets" is derived.
+  - Q1-24 total NCI ($27m) includes GE Vernova, so continuing NCI comes from the EPS note.
+  - GE tags `IncomeLossFromContinuingOperations` after NCI, so the XBRL cross-check compares NI − NCI.
+  - Release rows carry V% only on totals (4- vs 6-token rows).
+  - About $1.2bn of restricted cash sits outside the BS cash line, carried as a memo.
+- **Deals & special blocks:**
+  - CPP ($11.75bn, 8-K 8-Sep-2026; close 2H-27) has a toggle, a closing-year flag and an assumed 30-Sep-2027 close.
+  - Undisclosed terms are flagged assumptions: 25% of CPP revenue sold to GE (eliminated, margin kept), synergies phased × a scenario multiplier, and the PPA split.
+  - $4.75bn of acquisition debt; pro forma EBITDA for leverage in the closing year.
+- **Calibration & scenarios:**
+  - **Inputs:** 16-Jul-2026 guide. Qualitative guides (high-teens, ~20%, low 20s, LDD) are mapped to numbers as labelled assumptions.
+  - **Revenue:** a uniform growth Δ across the three lines solves FY26 adjusted revenue (closed form with a sensitivity helper).
+  - **Margin:** the segment operating-profit guides plus the Corporate guide give the pre-calibration total; one margin Δ closes it to the total operating-profit guide.
+  - **FCF:** the 2H change in customer advances is solved to the guide.
+  - **Information rows:** adjusted EPS and the segment operating-profit guides.
+- **Balance sheet, cash & capital:**
+  - 10-K maturities are refinanced.
+  - The revolver / CP plug is relabelled "incremental notes" above the $3bn commitment, with a headroom memo.
+  - Buybacks plug to 1.5 / 1.0 / 0.5x net debt / adjusted EBITDA.
+  - Non-cash pension income is reversed through a pension line that reduces the benefit liability.
+- **Valuation:**
+  - $308 (user, 12-Oct-2026).
+  - NOPAT is on full-cost operating profit less restructuring and separation; insurance, tax equity and pension income are excluded.
+  - The CPP consideration is in 2027E UFCF.
+  - Insurance is not deducted in the EV bridge.
+  - Template quirk fixed: the Bull-Base-Bear implied market cap is blank in years without an assumed P/E.
+- **Reusable lessons:**
+  - [basis] For a parent that keeps its CIK through spins, start history at the first filing presenting the new basis. Derive Q1 = H1 − Q2 where only half-years were re-presented, and leave the cash flow blank rather than estimating.
+  - [basis] A spin effective early in a quarter leaves that quarter's 10-Q consolidated. Take the quarter from next year's comparative, and derive continuing NCI from the EPS note when the statement's NCI line still includes the spun business.
+  - [calibration] When a segment recast is published only as a rounded FY "revised" base in the guidance table, use it as the growth base (FY target = base × (1 + guide)), split the remaining quarters by last year's seasonality, and keep the recast as memo rows.
+  - [calibration] Map qualitative guidance ("high-teens", "LDD") to explicit high / mid / low numbers in the scenario table and label the mapping an assumption.
+  - [bridges] When two company tables measure the same item differently (tax equity in operating profit vs adjusted EPS), use each table's own figure in its bridge rather than forcing one.
+  - [QA] Template quirk: Bull-Base-Bear rows 47–49 compute a zero market cap where no P/E is assumed; wrap them in IF(ISNUMBER(P/E)).
 
 ### HII — Huntington Ingalls Industries (DSV template, US GAAP as reported / USD millions / FY Dec)
 - **Coverage & basis:** 2015–1H26 from 10-K/10-Q XBRL and 8-K Ex. 99.1 (CIK 0001501585). FY2015–16 are as originally reported; FY2017+ are as recast for ASU 2017-07 in the 2018 10-K (non-service pension moved below OI). Technical Solutions was formed Dec-2016 (renamed Mission Technologies 2022). Q1–Q3/15 stay on the original "Other" basis; Q4/15 and FY2015 are recast. Q4 = FY − 9M. Restricted cash is included from FY2019. Unbilled receivables are separate from FY2017 (ASC 606).

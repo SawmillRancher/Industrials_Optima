@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, GE). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -251,6 +251,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | No non-GAAP published | ODFL, DHR (EBITDA), STE (EBITDA) | Model-defined bridges, clearly labelled, checked against XBRL / GAAP |
 | Definition changed over time | TDY, LOAR, RBA, MLM | Definition-flag row, in-force definition per period, current-definition memo series |
 | Spin-offs / disc ops | DHR, STE, BWXT, XPO | Hybrid recast or post-spin history; recast cell comments; rebuild originally reported adjusted EPS in memo |
+| Parent that keeps its CIK through spins | GE | History from the first filing presenting the remaining-company basis; Q1 = H1 − Q2 where only half-years were re-presented; blank (not estimated) cash flows; BS from the first post-spin year end |
 | IFRS / foreign currency | ONON, RMS, BC, TFI | Reporting currency; constant-currency + FX build; price × FX input; IFRS 16 lease schedule; rent-as-opex DCF option |
 | Half-year reporters | RMS, BC | H1 / H2 / FY columns (H2 = FY − H1); quarterly revenue memo |
 | Recent IPO | LOAR, ONON, KRMN | Annual columns from the prospectus; P&L-only years flagged; BS / CF start when available |
@@ -275,13 +276,13 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
 ### 5.1 Sources and extraction
 - **Share price fallback.** With market sites blocked and no price from the user, use the latest SEC-filed price: the 10-Q Part II Item 2 average repurchase price, or a Form 4 transaction / withholding price. Cite the form and date, and flag "update to market". Don't use unverifiable web quotes. [WWD, BWXT, MLM, CLH, WAB, CSGP, CTAS, UBER]
-- **XBRL can be wrong, not just incomplete.** Facts tagged 0, tags retired mid-history into a combined concept, and sign flips all occur. Tie every XBRL-sourced fact to the face statement before using it as a primary input. For as-originally-reported checks, use the earliest-filed fact, and compare absolute values where the tag's sign convention changed. [TFI, ODFL]
+- **XBRL can be wrong, not just incomplete.** Facts tagged 0, tags retired mid-history into a combined concept, and sign flips all occur. Tie every XBRL-sourced fact to the face statement before using it as a primary input. For as-originally-reported checks, use the earliest-filed fact, and compare absolute values where the tag's sign convention changed. For recast periods, match facts by the accession of the filing the model uses, and check the concept's meaning: GE tags `IncomeLossFromContinuingOperations` after NCI. [TFI, ODFL, GE]
 - **Foreign filers' EDGAR history starts at the US listing.** Record reporting-currency switches and keep an FX reference series for any manually entered earlier data. For non-SEC issuers, confirm EDGAR holds only F-6 ADR CIKs, say so in header row 3, and source from the home regulator's filings. [TFI, RBA, RMS]
 - **Derivations when releases are thin:**
   - Acquired sales = (total growth % − organic growth %) × prior-year revenue. [KRMN]
@@ -298,6 +299,12 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **After a spin:** start the BS at the first post-spin balance sheet even if the P&L uses earlier recast comparatives, and fill earlier y/y with company-reported change % memos. Spin-cos put carve-out (Form 10) years in the main columns, with the former parent's segment history as a flagged memo under the parent's CIK. [XPO, ESAB]
 - **Half-year reporters:** carry quarterly revenue as "1st / 2nd quarter of the half" memo rows inside the half-year columns, with a Σ check. [RMS, BC]
 - **Two builds of one company:** diff their dated facts (split dates, deconsolidation quarter, label cut-overs) and resolve each from the filing. [LECO]
+- **Parent after spins (same registrant):**
+  - Start history at the first filing that presents the remaining company.
+  - Derive Q1 = H1 − Q2 where only half-years were re-presented, and leave unpresented cash-flow quarters blank.
+  - A spin early in a quarter leaves that quarter's 10-Q consolidated: take the quarter from next year's comparative, with continuing NCI from the EPS note if the statement's NCI line still includes the spun business.
+
+  [GE]
 
 ### 5.3 Operating build
 - **When a segment or product table changes revenue basis** (net sales → ex-freight → total revenue; pre-ASC 606), add a derived "outside the lines" row (consolidated − Σ lines) so the build check ties in every period. [MLM, VMC]
@@ -353,6 +360,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
 - **Apply the Δ only to genuinely uncommitted lines** (retail rather than order-book wholesale). Constant-FX guidance needs a separate FX-translation Δ for the reporting-currency figure. EPS guidance made stale by post-guidance buybacks becomes an information row. [BC, ONON, BWXT]
 - **No guidance:** leave targets as optional blank inputs; don't invent them. [HEI, BC]
+- **Qualitative guidance** ("high-teens", "LDD", "~20%"): map it to explicit high / mid / low numbers in the outlook block and label the mapping an assumption. [GE]
+- **Segment recast published only as a rounded "revised" prior-year base** (guidance table): use it as the growth base for the current-year targets (FY target = revised base × (1 + guide)), split the remaining quarters by last year's seasonality, keep the recast as memo rows, and compute current-year growth against them. [GE]
 
 ### 5.6 Balance sheet, cash and capital
 - **Current year with actual quarters:**
@@ -376,7 +385,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - After a debt-funded deal, sweep surplus cash to prepayable debt before buybacks resume.
   - Calibrate a fees / capitalized-interest row to YTD interest when coupons overstate actual expense.
 
-  [KRMN, MLM, WWD, BWXT]
+  [KRMN, MLM, WWD, BWXT, GE]
 - **Convertibles and preferred:**
   - Convertibles: treasury-stock dilution above the conversion price, driven by the forecast share price; capped calls ignored; counted at face in net debt.
   - Mandatory convertible preferred: if-converted shares until conversion, with dividends added back in adjusted EPS.
@@ -409,5 +418,6 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 ### 5.8 QA
 - **Template residue is the most common defect.** At least 10 builds shipped MLM text in Bull-Base-Bear N26 / P40 comments or DCF rationale, and TFI kept Moog comments. `tools/residue_scan.py` is a hard gate. [CLH, WAB, SAIA, ODFL, WCN, LOAR, ONON, LECO, ESAB, STE, CTAS, UBER, TFI, CPRT]
 - **Check also:** foreign row numbers and switch-cell addresses in comments, the wrong currency symbol on non-USD models, and modelling-note dates that contradict the definition flags. [ONON, DHR]
+- **Template quirk:** Bull-Base-Bear rows 47–49 (implied market cap / EV) compute a zero market cap in years without an assumed P/E, which gives a meaningless EV / EBITDA. Wrap them in `IF(ISNUMBER(<P/E row 27>), …, "")`. [GE]
 - **Check tolerances** are set by period when the issuer changes rounding units, and stated in the label. [STE, TMO, CSGP, ONON, DHR]
 - **Private-company implied CF:** related-party balances are financing; explain the sign of implied capex; leave first-year ratios n/a when there is no opening BS. [R&Y]
