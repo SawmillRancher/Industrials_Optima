@@ -285,11 +285,11 @@ def revcat(p, kind):
     """kind: 'q' / 'ytd' / 'fy'; returns {'cur': {...}, 'leg': {...}} for that period's filing."""
     a = AG.get(p)
     rc = (a or {}).get('revcat') or {}
-    out = {'cur': {}, 'leg': {}}
+    out = {'cur': {}, 'leg': {}, 'met': {}}
     main = rc.get(kind) or []
     met = rc.get(f'{kind}_metrics') or []
     if rc.get('basis') == 'current':
-        out['cur'] = rc_map(main, RC_CUR); out['leg'] = rc_map(met, RC_LEG)
+        out['cur'] = rc_map(main, RC_CUR); out['met'] = rc_map(met, RC_LEG)
     elif rc.get('basis') == 'legacy':
         out['leg'] = rc_map(main, RC_LEG)
     elif rc.get(f'{kind}_legacy_recast'):        # FY2007-08: five-category recast in the FY2009 10-K (2006: none published)
@@ -305,11 +305,11 @@ def do_rc():
         else:
             fyr, nine = revcat(str(fy), 'fy'), revcat(qk(fy, 3), 'ytd')
             src = {}
-            for b in ('cur', 'leg'):
+            for b in ('cur', 'leg', 'met'):
                 src[b] = {k: fyr[b][k] - nine[b][k] for k in fyr[b] if k in nine[b]}
-            if src['cur'] or src['leg']: put(p, 'rc_q4_derived', 1)
-        for b in ('cur', 'leg'):
-            for k, v in src[b].items(): put(p, (k if b == 'cur' else k.replace('rc_', 'rcl_')), v)
+            if src['cur'] or src['leg'] or src['met']: put(p, 'rc_q4_derived', 1)
+        for b, pre in (('cur', 'rc_'), ('leg', 'rcl_'), ('met', 'rcm_')):
+            for k, v in src[b].items(): put(p, k.replace('rc_', pre), v)
     # current-basis history for periods filed on the legacy basis: the next year's filing comparatives (manual_items)
     for p, d in MAN.get('revcat_recast', {}).items():
         for k in ('rc_pn', 'rc_vas'):
@@ -352,6 +352,8 @@ def run():
     for p in periods():
         do_is(p); do_bs(p); do_op(p); do_ag(p)
     do_cf(); do_rc(); do_dps()
+    # 30-Jun-2026 shares outstanding from the Q2-26 10-Q note (Class A 870.7m + Class B 6.5m); the balance-sheet caption is rounded
+    put('Q2-26', 'bs_shares', MAN['shares']['jun30_2026'])
     return DATA
 
 if __name__ == '__main__':

@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, MA). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -112,7 +112,7 @@ Copy this section into the new model's PR description or working notes and tick 
 ### Phase 4 — Workbook layout (Model tab)
 - [ ] Start from `templates/MLM_Model.xlsx`. Clear the Model sheet values, comments, outline levels and data validations, but keep styles. Drop `DCF_old`.
 - [ ] Columns (template default): C–I FY2006–12 annual | J… quarterly Q1–Q4 + FY subtotal per year | current-year actual quarters | QnE estimate quarters | current-year E | 4–5 scenario years | **Modelling Notes** | spacer | CAGR columns (5Y fwd, 5Y, 10Y, full history) | spacer | **scenario input table** (label, Bull, Base, Bear, note).
-- [ ] Re-base the column map in `fw.py` for the company's history. Right-of-forecast blocks keep template order (template column − shift); assert the key column letters.
+- [ ] Re-base the column map in `fw.py` for the company's history. Right-of-forecast blocks keep template order (template column − shift); assert the key column letters. If the company's history window is the template's own (FY2006 annual, quarterly from 2013, calendar year), use no shift and an identity CMAP (MA).
 - [ ] Each column carries kind (A / Q / QE / E / AE), `prior` (same period last year) and `prevq`. Formulas use these, never hard-coded letters.
 - [ ] Header rows: row 1 switch caption; row 2 company name `(EXCHANGE: TICKER) — 3-Statement Financial Model` and scenario switch cell; row 3 basis · currency · units · sources · CIK; row 4 basis notes (fiscal calendar, recasts, acquisitions / disposals with dates); row 5 Forecast / Historical over the CAGR columns; row 6 period labels and "(USDm)"; row 7 CAGR spans.
 - [ ] Formatting by cloning template archetype rows (section, block, line, total, growth, pct, memo, check, driver, text, eps, schedule):
@@ -270,12 +270,13 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 - Missing Q4s / release-only quarters (no MD&A exhibit). Derive FY − 9M and note it.
 - Issuer sign flips between years (TFI FinanceCosts). Normalise signs in `normalize.py` and note them.
 - Saving with openpyxl drops chart formatting. Re-inject the template chart XML after every save.
+- Formula helpers that return a sum of cells (e.g. Q3E + Q4E) must be parenthesised; used inside a product they silently mis-bind and show up as a constant BS imbalance (MA: 325 = one quarter of D&A).
 - Files without cached values look blank in viewers. Store calculated values.
 - `libreoffice-core` cannot open .xlsx; install `libreoffice-calc`.
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -288,7 +289,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Working capital from a single-line CFO = CFO − NI − D&A − SBC − deferred tax, using XBRL for the components and noting missing tags. [WWD]
   - Recast Q4 = FY recast − 9M recast; quarters that were never recast stay blank. [LECO]
   - Each derivation is noted in the cell comment.
-- **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
+- **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW, MA]
+- **Long histories with drifting release formats:** parse statements as generic "label | values" rows with regex label maps, and set units per release by filing date (e.g. USD thousands before Apr-2010), not from header text that the HTML conversion can drop. Check every release cash-flow end balance against beginning + net change; a misprint is settled by the 10-Q. [MA]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
 
 ### 5.2 Basis
@@ -353,6 +355,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
 - **Apply the Δ only to genuinely uncommitted lines** (retail rather than order-book wholesale). Constant-FX guidance needs a separate FX-translation Δ for the reporting-currency figure. EPS guidance made stale by post-guidance buybacks becomes an information row. [BC, ONON, BWXT]
 - **No guidance:** leave targets as optional blank inputs; don't invent them. [HEI, BC]
+- **Call-only verbal guidance** ("high end of low double digits", currency-neutral): translate it into explicit numeric High / Mid / Low end-points, show the translation (currency-neutral + FX) in the scenario note, cite the transcript source and label every such row UNVERIFIED in the workbook. [MA, TMO, LECO]
 
 ### 5.6 Balance sheet, cash and capital
 - **Current year with actual quarters:**
@@ -408,6 +411,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 
 ### 5.8 QA
 - **Template residue is the most common defect.** At least 10 builds shipped MLM text in Bull-Base-Bear N26 / P40 comments or DCF rationale, and TFI kept Moog comments. `tools/residue_scan.py` is a hard gate. [CLH, WAB, SAIA, ODFL, WCN, LOAR, ONON, LECO, ESAB, STE, CTAS, UBER, TFI, CPRT]
+- **A flagged token can be legitimately the new model's** (MA's switch really is `Model!CF2` with no column shift): reword the text ("Model sheet, cell CF2") rather than whitelisting a template token with `--allow`. [MA]
 - **Check also:** foreign row numbers and switch-cell addresses in comments, the wrong currency symbol on non-USD models, and modelling-note dates that contradict the definition flags. [ONON, DHR]
 - **Check tolerances** are set by period when the issuer changes rounding units, and stated in the label. [STE, TMO, CSGP, ONON, DHR]
 - **Private-company implied CF:** related-party balances are financing; explain the sign of implied capex; leave first-year ratios n/a when there is no opening BS. [R&Y]

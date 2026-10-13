@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -13,21 +13,22 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Situation | Read |
 |---|---|
 | Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
-| Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
-| Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
+| Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER, MA |
+| Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate), MA (GDV × yield) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
-| Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
+| Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA), MA (EBITDA; outlook on the call only) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
+| Guidance given only on the earnings call (unverified wording) | MA, TMO, LECO, CHRW |
 | Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
-| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
+| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI, MA (share classes; two-class EPS 2008–09) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
 | Private company, LBO | R&Y |
 
@@ -698,6 +699,25 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [bridges] If the company computes adjusted tax annually, the FY column uses the FY table rather than Σ Q.
   - [BS/CF] The cash check must net overdrafts the CF statement nets.
   - [QA] Template residue survived here: the Bull-Base-Bear N26 comment cites MLM; the P40 comment cites "Model rows 290–292 / Model!CF2" (another build's rows) with author "User"; DCF headers say "USDm" / "($)" in a CHF model.
+
+## Payments & financial technology
+
+### MA — Mastercard Incorporated (MLM template 6-Oct-26 via the WWD kit; US GAAP / USD m / calendar FY)
+- **Coverage & basis:** FY2006–12 annual, Q1/13–Q2/26 quarterly, Q3/Q4-26E, 2026E, 2027E–30E. All periods are as originally reported in their own releases (CIK 1141391; IPO May-2006). The history window is exactly the template's, so the build runs with no column shift (TSHIFT = 0) and the BBB / DCF tabs map one-to-one. Releases to 2009 are in USD thousands. There was a 10-for-1 split on 21-Jan-2014: documents filed earlier are restated by filing date. Class A and Class B shares are combined. The 2014 net revenue re-presentation (2015) and the FY2018 $89m A&M → G&A reclassification are memo / comment only. From 2018 cash-flow cash includes restricted cash and restricted security deposits held for customers. To Q3-24 it also held $15–36m of restricted cash that the balance sheet carried in prepaid / other assets, shown as a memo line in the cash check.
+- **Operating build:** one reportable segment. GDV (release operating-performance tables, all programs, worldwide) × payment network yield (bps), plus value-added services and solutions by growth. The two-category revenue split was first presented in the FY2022 10-K. FY2020–21 and the 2021–22 quarters come from the next filings' comparatives (Q1-21 = H1 − Q2; Q4 = FY − 9M), and every recast period ties exactly to net revenue. Earlier years carry a "not split" row. The legacy categories (domestic assessments, cross-border, transaction processing, other revenues, rebates; FY2007–Q3-22, with 2007–08 from the FY2009 10-K recast) and the payment-network key metrics (from FY2022) are memo blocks with Σ checks. Cross-border and switched-transaction growth exist only in release text (transcribed per period).
+- **Bridges & definitions:** (1) GAAP opex → adjusted opex → adjusted operating income / margin. The special items are litigation provisions, restructuring, the 2006 Foundation stock contribution, the 2015 pension termination, Venezuela (Q4-17), the indirect tax matter (Q3-21) and Russia (2022, which included a revenue item, so adjusted revenue ≠ GAAP in 2022 only). (2) NI → EBITDA → adjusted EBITDA is a model definition, because Mastercard publishes no EBITDA. (3) NI → adjusted EPS, with the tax effect derived as published adjusted NI − NI − pre-tax items (U.S. Tax Act 2017–19 as discrete). Equity-investment gains / losses have been excluded since Q2-19. Non-GAAP figures were published annually "excluding special items" in 2006–09, not at all in 2010, and from 2013 only in quarters with special items. Adjusted = GAAP elsewhere, with a definition flag.
+- **Data quirks & corrections:** The Q1-26 release prints ending cash equal to beginning cash (13,248). The 10-Q shows 10,764, which ties arithmetically and to the balance sheet, so the 10-Q figure is used. 2008–09 EPS uses the two-class method (~$0.007 vs NI ÷ diluted shares). GDV annual tables differ from Σ quarters (customer revisions, up to $18bn). XBRL dividends per share are patchy and mix pre / post-split values, so DPS comes from the 10-Q / 10-K "dividends declared per share" table or equity-statement caption, split-adjusted by filing date. Equity captions before 2014 are split across lines in the text, so period-end shares there are left blank.
+- **Deals & special blocks:** BVNK (pending; $1.5bn + up to $300m contingent; "expected to complete before the end of Q3-2026") has a switch and an assumed 30-Sep-2026 close. Revenue and PPA are undisclosed, so revenue / opex are flagged inputs at 0 and intangibles are assumed at 25% (8 years). Future M&A lever: $1.0bn a year at 8x sales. Recorded Future (Dec-2024, $2.65bn) is in history.
+- **Calibration & scenarios:** guidance is call-only and unverified: third-party transcripts via web search, because the release has no outlook and the slide decks stopped after 2019. "High end of low double digits" currency-neutral + ~1 ppt FX is translated to reported end-points of 14.0 / 13.5 / 13.0%. A uniform Δ on payment network and value-added services growth solves FY26 organic revenue (Δ −2.9 pp, as the FX tailwind fades in H2). A second Δ on adjusted opex growth solves "low double digits" + FX (11.0 / 11.5 / 12.0%; Bull = low end). Other income (−$125m Q3), tax (20.5%) and D&A are point estimates; adjusted EPS is an output.
+- **Balance sheet, cash & capital:** notes ladder from the Q2-26 10-Q ($24.1bn, 29 tranches), refinanced at maturity plus incremental issuance. Commercial paper is drawn to a $12bn minimum (cash-flow basis, incl. restricted cash and deposits), with a headroom memo vs the $8bn facility. Leverage-target buybacks: 0.7x / 0.5x / 0.3x net debt / adjusted EBITDA (no stated company target). The 2026E buyback row covers H2 only ($7.0bn Base vs $7.8bn of authorization left). Settlement assets and obligations run as a ratio to GDV; customer-incentive prepayments and accruals as % of revenue. Dividends are paid one quarter after declaration, and the December declaration sets the next year's rate.
+- **Valuation:** $595, user-provided. Adjusted operating income is already full-cost (SBC and all amortization expensed), so NOPAT deducts only cash litigation and restructuring. D&A is added back and capex incl. capitalized software deducted. The 2026E UFCF is excluded because net debt is at YE2026E. DCF $574 (Bull $643 / Bear $479); P/E 33x Base on adjusted EPS.
+- **Reusable lessons:**
+  - [tooling] Check whether the company's history window matches the template's own columns before re-basing; if it does, run with no shift and keep CMAP as identity.
+  - [extraction] For a long-history issuer whose release format drifts, parse every statement as generic "label | values" rows and map labels by regex. Set units per release by filing date (thousands before a known date) rather than from header text, which the HTML conversion often drops.
+  - [calibration] When the outlook exists only as call wording ("high end of low double digits"), translate it into explicit numeric end-points in the scenario table, show the translation (currency-neutral + FX) in the note, and label the row UNVERIFIED.
+  - [extraction] Check every release cash-flow end balance against beginning + net change. A release can reprint the opening balance as the closing one; the 10-Q settles it.
+  - [QA] A residue token can be legitimately the new model's (the switch really is `Model!CF2` with no column shift). Reword the text ("Model sheet, cell CF2") rather than whitelisting a template token.
+  - [tooling] Helper functions that return a sum of cells (H2 = Q3E + Q4E) must wrap it in parentheses; `QQ(x)*share` silently mis-binds. The BS check exposed it as a constant 325 = one quarter of D&A.
 
 ## Private company / LBO
 
