@@ -1,0 +1,37 @@
+"""Download the Fair Isaac source documents (10-K / 10-Q primary documents; Ex. 99 exhibits of the indexed 8-Ks, and the primary
+document of 8-Ks without exhibits) into $FICO_SRC/docs, convert them to text ($FICO_SRC/txt) with h2t.py, and download the XBRL
+company facts ($FICO_SRC/cf_814547.json). Run make_index.py first. Downloads are sequential (~4 requests/s, under the EDGAR
+limit); HTML -> text conversion runs in parallel processes."""
+import json, subprocess, os, re, time
+from multiprocessing import Pool
+from h2t import html_to_text
+S = os.environ.get('FICO_SRC', '/tmp/fico_src')
+UA = os.environ.get('SEC_UA', 'Industrials Optima research admin@industrialsoptima.com')
+os.makedirs(os.path.join(S, 'txt'), exist_ok=True)
+
+def ok(p): return os.path.exists(p) and os.path.getsize(p) > 2000 and b'Request Rate Threshold' not in open(p, 'rb').read(5000)
+
+def conv(base):
+    p = os.path.join(S, 'docs', base); t = os.path.join(S, 'txt', base.rsplit('.', 1)[0] + '.txt')
+    if not os.path.exists(t) and os.path.exists(p):
+        open(t, 'w').write(html_to_text(open(p, 'rb').read()))
+
+if __name__ == '__main__':
+    cf = os.path.join(S, 'cf_814547.json')
+    if not ok(cf):
+        subprocess.run(['curl', '-sS', '-A', UA, 'https://data.sec.gov/api/xbrl/companyfacts/CIK0000814547.json', '-o', cf], check=True)
+    bases = []
+    for o in json.load(open(os.path.join(S, 'filings.json'))):
+        n = o['acc'].replace('-', '')
+        if o['form'] in ('10-K', '10-Q'): want = [o['primary']]
+        else:      # 8-K cover document + news-release exhibits (agreements / charters, Ex. 2, 3, 4, 10, are skipped)
+            want = [o['primary']] + [x for x in o['files'] if x != o['primary'] and not re.search(r'ex(10|2|3|4)\d*[_.a-z]|ex(10|2|3|4)\d', x.lower())]
+        for w in want:
+            base = f"{o['date']}_{o['form']}_{o['acc']}_{w}"
+            p = os.path.join(S, 'docs', base)
+            for k in range(6):
+                if ok(p): break
+                subprocess.run(['curl', '-sS', '-A', UA, f"https://www.sec.gov/Archives/edgar/data/{o['cik']}/{n}/{w}", '-o', p]); time.sleep(0.25 * 2 ** k)
+            bases.append(base)
+    with Pool(6) as pool: pool.map(conv, bases, chunksize=1)
+    print(len(bases), 'documents')

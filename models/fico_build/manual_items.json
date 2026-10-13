@@ -1,0 +1,37 @@
+{
+ "_about": "Fair Isaac (FICO) items that are not machine-extracted: FY26 guidance history, debt terms, buyback / ASR, restructuring, share price. Every item cites its EDGAR source (SEC EDGAR, CIK 814547). USD millions unless stated.",
+ "guidance_fy26": {
+  "history": [
+   {"date": "2025-11-05", "source": "Q4 FY25 release (8-K Ex. 99.1), https://www.sec.gov/Archives/edgar/data/814547/000081454725000026/", "revenue": 2350.0, "gaap_ni": 795.0, "gaap_eps": 33.47, "ng_ni": 907.0, "ng_eps": 38.17, "sbc": 166.0, "tax_adj": -42.0, "etb": -13.0},
+   {"date": "2026-01-28", "source": "Q1 FY26 release (8-K Ex. 99.1): guidance reiterated", "revenue": 2350.0, "gaap_ni": 795.0, "gaap_eps": 33.47, "ng_ni": 907.0, "ng_eps": 38.17, "sbc": 166.0, "tax_adj": -42.0, "etb": -13.0},
+   {"date": "2026-04-28", "source": "Q2 FY26 release (8-K Ex. 99.1): raised", "revenue": 2450.0, "gaap_ni": 825.0, "gaap_eps": 35.6, "ng_ni": 946.0, "ng_eps": 40.45, "sbc": 185.0, "tax_adj": -45.0, "etb": -19.0},
+   {"date": "2026-07-29", "source": "Q3 FY26 release (8-K Ex. 99.1), https://www.sec.gov/Archives/edgar/data/814547/000081454726000031/exhibit991erq32026.htm: raised", "revenue": 2530.0, "gaap_ni": 850.0, "gaap_eps": 36.86, "ng_ni": 979.0, "ng_eps": 42.43, "sbc": 188.0, "tax_adj": -46.0, "etb": -13.0}
+  ],
+  "current": {"revenue": 2530.0, "gaap_ni": 850.0, "gaap_eps": 36.86, "ng_ni": 979.0, "ng_eps": 42.43, "sbc": 188.0, "tax_adj": -46.0, "etb": -13.0},
+  "note": "Point guidance (no ranges). The company gives no segment, margin, tax-rate, interest, capex or cash-flow guidance; FY26 ended 30-Sep-2026 and Q4 FY26 had not been reported at the build date (13-Oct-2026)."
+ },
+ "restructuring_oct2026": {"source": "8-K Item 2.05 dated 1-Oct-2026 (filed 6-Oct-2026), https://www.sec.gov/Archives/edgar/data/814547/000119312526415732/d127042d8k.htm",
+  "q4_fy26_charge": 27.0, "text": "Workforce reduction of ~15% of positions (fewer layers, simpler operating structure, AI-driven product development); ~$27.0m pre-tax charges in Q4 FY26, substantially all cash; plan substantially complete by end of Q3 FY27. Announced after the 29-Jul-2026 guidance; restructuring is excluded from FICO's non-GAAP measures."},
+ "debt_2026_06_30": {
+  "source": "Q3 FY26 10-Q Note 6 (Debt) and MD&A Capital Resources, https://www.sec.gov/Archives/edgar/data/814547/000081454726000030/fico-20260630.htm; 8-K 5-Jun-2026 (term loan); 8-Ks 11-Mar-2026 (2026 Senior Notes pricing)",
+  "revolver": {"drawn": 710.0, "rate": 0.05643, "commitment": 1000.0, "maturity": "2030-05-13"},
+  "term_loan": {"balance": 1500.0, "rate": 0.05863, "maturity": "2028-05-15", "amortization": "$75.0m per quarter 30-Sep-2026 to 30-Jun-2027, then $112.5m per quarter; balance due 15-May-2028",
+                "by_fiscal_year": {"2026": 75.0, "2027": 337.5, "2028": 1087.5}},
+  "notes": [
+   {"name": "2019 + 2021 Senior Notes", "face": 900.0, "coupon": 0.04, "maturity": "2028-06-15"},
+   {"name": "2025 Senior Notes", "face": 1500.0, "coupon": 0.06, "maturity": "2033-05-15"},
+   {"name": "2026 Senior Notes", "face": 1000.0, "coupon": 0.0625, "maturity": "2034-09-15"}
+  ],
+  "repaid": "2018 Senior Notes ($400m, 5.25%, due May-2026) redeemed 26-Mar-2026 from the 2026 Senior Notes proceeds",
+  "carrying_total": 5582.389,
+  "covenant": "Maximum consolidated leverage ratio 4.5x through 30-Dec-2026, 4.0x 31-Dec-2026 to 30-Dec-2027, 3.5x thereafter (credit agreement definition)"
+ },
+ "buyback": {"source": "Q3 FY26 10-Q Note 7 and Part II Item 2",
+  "program": "June 2026 program: $2.0bn, open-ended; $800.0m remaining at 30-Jun-2026 including the $300.0m ASR prepayment not yet delivered in shares",
+  "asr": {"date": "2026-06-05", "amount": 1500.0, "initial_shares_m": 1.055103, "initial_pct": 0.8, "settlement": "expected in Q4 FY26 (shares based on VWAP over the term less a discount)"},
+  "q3_fy26_avg_price": 1148.84, "june_2026_avg_price": 1137.33},
+ "shares": {"outstanding_2026_06_30_m": 21.597, "cover_2026_07_17_m": 21.597635, "source": "Q3 FY26 10-Q balance sheet parenthetical and cover page"},
+ "dividends": "Quarterly dividend of $0.02 per share paid through FY2017; none since (cash-flow statements).",
+ "price": {"px": 740.0, "date": "2026-10-13", "source": "User-provided share price for this build (13-Oct-2026). Not an SEC-sourced figure: update to market. For reference, the Q3 FY26 10-Q Part II Item 2 average repurchase price was $1,148.84 (Apr-Jun 2026)."},
+ "corrections": []
+}

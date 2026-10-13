@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, FICO). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -69,7 +69,7 @@ Copy this section into the new model's PR description or working notes and tick 
 ### Phase 1 — Source collection
 - [ ] `make_index.py`: build `filings.csv` from the EDGAR submissions JSON: 10-K, 10-Q, 8-K Item 2.02 Ex. 99.1, deal 8-Ks, S-4/424B3, 424B4 IPO prospectus, 20-F/40-F/6-K for foreign filers.
 - [ ] `fetch.py`: download into `$<TICKER>_SRC` (outside the repo; raw filings are not committed). Use a User-Agent, throttle, and retry/back off on 503s.
-- [ ] `h2t.py`: convert HTML to text (one table row per line, cells joined by ` | `). Known quirk: a dropped ")" means "(25,433" is negative, and "—" is zero.
+- [ ] `h2t.py`: convert HTML to text (one table row per line, cells joined by ` | `). Known quirk: a dropped ")" means "(25,433" is negative, and "—" is zero. Text conversion also drops blank cells, so rows with a blank comparative shift columns; for table extraction prefer a grid-position HTML parser (FICO `ptab.py`).
 - [ ] Download the XBRL company facts JSON (`data.sec.gov/api/xbrl/companyfacts/CIK##########.json`) for cross-checks and for items releases omit (D&A, SBC, deferred tax, shares outstanding, DPS).
 - [ ] Collect the latest guidance / outlook (release text, mid-quarter updates such as ODFL's Item 7.01, investor-day targets). Note anything that is not verifiable from EDGAR (for example call transcripts) as unverified.
 - [ ] For acquired or pending targets, collect the target's own filings (Masimo for DHR, UniFirst for CTAS, RXO for CHRW).
@@ -275,7 +275,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -290,6 +290,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
+- **Parse HTML tables by grid position** (each number assigned to a value column by the right edge of its cell, colspans expanded), not from text conversions that drop blank cells. When column headers run together, match columns by a value known from another table (segment operating income). Check the 8-K index for preliminary 2.02 releases and `.txt` exhibits in older filings. [FICO]
 
 ### 5.2 Basis
 - **Segment re-presentation with a short recast history:** model an aggregate the re-presentation doesn't change and keep the old split as memo. Prove where an absorbed segment went using the restated comparative Δ. [RBA, TFI]
@@ -353,6 +354,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
 - **Apply the Δ only to genuinely uncommitted lines** (retail rather than order-book wholesale). Constant-FX guidance needs a separate FX-translation Δ for the reporting-currency figure. EPS guidance made stale by post-guidance buybacks becomes an information row. [BC, ONON, BWXT]
 - **No guidance:** leave targets as optional blank inputs; don't invent them. [HEI, BC]
+- **Point guidance:** set high = mid = low in the outlook block and say so. Take guided cost items (SBC, tax adjustments) from the company's guidance reconciliation less YTD. Items announced after the guidance date (an Item 2.05 restructuring) go on top as information. [FICO, CLH]
 
 ### 5.6 Balance sheet, cash and capital
 - **Current year with actual quarters:**
@@ -375,8 +377,9 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Add a revolver-headroom memo.
   - After a debt-funded deal, sweep surplus cash to prepayable debt before buybacks resume.
   - Calibrate a fees / capitalized-interest row to YTD interest when coupons overstate actual expense.
+  - When a leverage-target buyback plug funds with debt, add a term-out row (revolver draws above a threshold refinanced with notes; no circularity) so the revolver never exceeds its commitment.
 
-  [KRMN, MLM, WWD, BWXT]
+  [KRMN, MLM, WWD, BWXT, FICO]
 - **Convertibles and preferred:**
   - Convertibles: treasury-stock dilution above the conversion price, driven by the forecast share price; capped calls ignored; counted at face in net debt.
   - Mandatory convertible preferred: if-converted shares until conversion, with dividends added back in adjusted EPS.

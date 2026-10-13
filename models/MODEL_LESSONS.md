@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -17,15 +17,16 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
+| Software, data & analytics; price-led growth; stockholders' deficit from debt-funded buybacks | FICO, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
-| Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
+| Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA), FICO (no EBITDA / non-GAAP OI) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
-| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
+| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), FICO (Sep), CPRT (Jul), TDY (52/53-week) |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
 | Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
@@ -486,6 +487,45 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [QA] Widen the check tolerance from the column where the issuer's rounding unit changes, and flag it in the definition row.
   - [BS/CF] Set forecast working-capital days from fiscal year-end balances, not annualised quarters.
   - [QA] The BBB tab carries the same MLM N26 and P40 ("Model!CF2") comments as CTAS; the STE switch is AU2.
+
+## Software, data & analytics
+
+### FICO — Fair Isaac Corporation (MLM template 6-Oct-26 via the WWD kit; US GAAP / USD m / FY ends 30-Sep)
+- **Coverage & basis:** FY2006–12 annual (10-K), Q1/13–Q3/26 quarterly, Q4/26E, 2027E–31E. The template's own column grid is used (no re-basing); the right block shifts by +1 for the fifth forecast year. Basis: as originally reported. Statements and the non-GAAP table come from the releases; segment operating income, the interest split and the revenue KPIs come from the 10-Q / 10-K. Q4 10-Q-only items = FY − 9M. Disc ops FY2007–09. CIK 814547. The first prompt named "First Isaac Corp", which is not on EDGAR; the ticker confirmed Fair Isaac.
+- **Operating build:**
+  - Scores = B2B + B2C; Software = platform + non-platform + professional services. The streams come from 10-Q / 10-K MD&A tables first published in the FY2021 10-K.
+  - Segments were re-cut four times: product lines (FY2006–09), Applications / Scores / Tools, Applications / Scores / DMS, then Scores / Software (FY2021 10-K). The model drives Scores and Software = consolidated − Scores, which every re-cut leaves intact; legacy segments are memo rows with a Σ check.
+  - Segment operating income × margin + unallocated corporate = non-GAAP operating income (model measure).
+- **Bridges & definitions:**
+  - FICO publishes non-GAAP NI / EPS (from Q1 FY13) and FCF, but no EBITDA or non-GAAP operating income. The model operating bridge uses the unallocated items of the MD&A segment summary and is checked against that summary.
+  - Items were shown net of tax to Q2/16, so the tax effect is derived. Excess tax benefits are excluded from FY2017; TCJA and a cost-method investment gain were excluded in FY2018–19.
+  - FCF deducted dividends to Q2/17 (memo row).
+  - Non-GAAP excludes SBC (~7% of revenue): adjusted EBITDA is defined the same way, and NOPAT deducts SBC.
+- **Data quirks:**
+  - The release HTML drops empty cells, so a text parser misaligns columns. `ptab.py` assigns numbers by grid position.
+  - Segment-note column headers run together ("Scores Software Unallocated Corporate Expenses Total"), so revenue columns are matched to segments by their operating income.
+  - Quarter and YTD summaries share one HTML table; split it at each "Operating income" row.
+  - Preliminary 2.02 8-Ks (Apr-07, Jan-08, Oct-13) precede the full releases.
+  - Old 8-Ks carry the release as an `ex991.txt` exhibit.
+- **Calibration & scenarios:**
+  - Point guidance (revenue $2.53bn, non-GAAP EPS $42.43, 29-Jul-26), so high = mid = low.
+  - Q4 SBC, the tax rate on items and the excess-tax-benefit line come from the company's guidance reconciliation less 9M actuals.
+  - Revenue Δ −3.3pp; margin Δ −2.5pp.
+  - The Oct-2026 Item 2.05 restructuring ($27m) post-dates the guidance; it is added on top and only moves GAAP (FY26E GAAP NI $825m vs $850m guided, information row).
+  - Levers: B2B price-led growth (Bear: FHFA alternative scores, 10-K risk factors), platform vs non-platform software, segment margins.
+- **Balance sheet, cash & capital:**
+  - Stockholders' deficit since FY2021 (debt-funded buybacks): ROE is n/m, ROIC uses book IC (deficit + net debt, still positive).
+  - $1.5bn ASR (Jun-2026): 80% of shares delivered upfront; the remaining ~0.264m is assumed delivered in Q4 with no cash.
+  - Debt: term-loan amortization per the credit agreement; FY2028 refinancing of the 2028 notes and term-loan balloon (assumption).
+  - Leverage-plug buybacks at 3.0x net debt / adjusted EBITDA would have drawn the $1.0bn revolver several times over. Draws above $750m are therefore termed out into new notes (labelled financing assumption), alongside a covenant memo.
+- **Valuation:** $740.00 user-provided (13-Oct-26; Q3 FY26 10-Q average repurchase price $1,148.84). FY2026E is the base year. NOPAT = (adjusted EBITA − SBC − restructuring) × (1 − 25%). Beta 1.10 (credit-data peers, assumption).
+- **Reusable lessons:**
+  - [extraction] Parse EDGAR HTML tables by grid position (right edge of each cell, colspans expanded); text conversions lose blank cells and shift columns.
+  - [extraction] When segment-note headers can't be split, match each segment's column by a value known from another table (segment operating income).
+  - [basis] For repeated segment re-cuts, model the segment that never changes and the residual (consolidated − it); keep every legacy structure as memo with a Σ check.
+  - [calibration] When guidance is a point, set high = mid = low and say so; take guided cost items from the company's own guidance reconciliation less YTD.
+  - [BS/CF] A leverage-target buyback plug can silently push the revolver past its commitment. Add a term-out row (draws above a threshold refinanced with notes, no circularity) plus a headroom memo.
+  - [valuation] When the company's non-GAAP excludes SBC, define adjusted EBITDA the same way for comparability but deduct SBC in NOPAT.
 
 ## Business, environmental & marketplace services
 
