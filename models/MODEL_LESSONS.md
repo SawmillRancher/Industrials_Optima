@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -13,13 +13,13 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Situation | Read |
 |---|---|
 | Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
-| Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
+| Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER, NFLX (regions) |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
-| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
+| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO, NFLX (FCF, non-GAAP NI, adjusted EBITDA published intermittently) |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
@@ -29,6 +29,8 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Net-cash balance sheet | RMS, CPRT, ODFL |
 | Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
+| Content-heavy / subscription media (content-asset amortization, cash content spend, memberships × ARM) | NFLX |
+| Terminated deal with a break fee received | NFLX (WBD) |
 | Private company, LBO | R&Y |
 
 ---
@@ -698,6 +700,54 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [bridges] If the company computes adjusted tax annually, the FY column uses the FY table rather than Σ Q.
   - [BS/CF] The cash check must net overdrafts the CF statement nets.
   - [QA] Template residue survived here: the Bull-Base-Bear N26 comment cites MLM; the P40 comment cites "Model rows 290–292 / Model!CF2" (another build's rows) with author "User"; DCF headers say "USDm" / "($)" in a CHF model.
+
+## Media & consumer internet
+
+### NFLX — Netflix (MLM template via WWD kit; US GAAP as reported / USD m / calendar FY)
+- **Coverage & basis:**
+  - History: FY2006–12 annual and Q1/13–Q2/26 quarterly, as originally reported in each period's own 10-Q / 10-K, with Q4 = FY − 9M tied to the Q4 letter. 2031E was added, so the right-hand blocks sit at template column + 1. CIK 1065280.
+  - Per-share data: the 7-for-1 (Jul-2015) and 10-for-1 (Nov-2025) splits are applied by the filing date of each source (×70 / ×10), so early EPS shows to three decimals.
+  - Recast: personnel costs were reclassified effective Q4-2018 (8-K 3-Jan-2019) and applied in the FY2018 10-K but not in the 2018 10-Qs, so FY − 9M mixed bases. The Q1–Q3 2018 quarters take the 2019 10-Q comparatives, with the original figures in cell comments.
+  - The FY2006 10-K presents its columns oldest first. Cash-flow cash includes restricted cash from 2018 (memo line).
+- **Operating build:**
+  - Revenue by region (UCAN / EMEA / LATAM / APAC): FY2017–19 from the FY2019 10-K and the 2019 quarters from the 2020 10-Q comparatives (latest filing presenting the period).
+  - Paid memberships and ARM are history-only KPIs (published to Q4-24; ~301.6m paid memberships at the end).
+  - Legacy segments Domestic / International streaming / Domestic DVD (Q4-11–2019) sit in memo rows, with contribution-profit checks; FY2011 has only a Q4 table. DVD revenue (to Sep-2023) is a derived row outside the regions.
+  - Costs: content amortization (from the cash-flow statement) + other cost of revenues + marketing / T&D / G&A. In 2027E+ other cost of revenues balances to an operating-margin lever.
+- **Bridges & definitions:**
+  - FCF (company definition, published throughout) changed three times: it deducted DVD / content library, intangibles and other assets to 2016, the change in other assets 2017–20, and is CFO − capex from 2021. The extra items are carried as "other items in the company definition", and every published figure is checked.
+  - Adjusted EBITDA (NI + interest & other + tax + non-content D&A + SBC) was published Q2-14 – Q1-23 and is rebuilt elsewhere.
+  - Non-GAAP net income was published 2006 – Q2-10 (ex SBC net of tax), Q1-13 (debt extinguishment), Q4-14 / Q4-15 (tax-accrual releases) and Q1-15 (F/X impact). Elsewhere the model adds back only company-quantified items: Q2-22 restructuring ~$150m, Q3-25 Brazil non-income tax ~$619m, euro-debt F/X remeasurement, and the Q1-26 $2.8bn WBD termination fee.
+  - Adjusted operating income is a model measure; Netflix's "adjusted operating margin" is only the F/X-neutral YTD margin.
+- **Data quirks & corrections:**
+  - Published-measure columns are matched by value, not position: FCF on CFO, adjusted EBITDA and non-GAAP NI on GAAP net income. Release column order varies (the Jan-2007 release puts the current quarter third and the current year last) and comparatives are restated (Q2-13 used a restated Q1-13 CFO).
+  - The Q4-14 letter prints the tax-accrual release as +38.6 but deducts it.
+  - The FY2007 10-K CFO differs from its release (FCF check n/p).
+  - Recent 10-Qs show 3M and YTD cash-flow columns (choose by row width); older ones show YTD only.
+- **Deals & special blocks:**
+  - WBD merger (Dec-2025) terminated 27-Feb-2026; the $2.8bn fee is in Q1-26 interest and other income and excluded from adjusted EPS. It sits in 2026E net debt, not UFCF.
+  - The Mar-2026 ~$587m acquisition has no PPA disclosed.
+  - The M&A lever is cash only: capability acquisitions with no revenue attached.
+- **Calibration & scenarios:**
+  - Q3-26 revenue ($12,860m) and margin (33.2%) and FY26 revenue ($51.0–51.4bn) and margin (31.5%) are each solved with a per-quarter Δ: revenue on the regional 1H y/y, margin on the non-content cost ratios after the guided content amortization (+10%).
+  - The Q3 net income and EPS guides are information rows; the model lands on them ($3,452m, $0.82) via a guide-implied 16.5% tax rate.
+  - FY26 FCF (~$12.5bn) is solved through a 2H other-operating outflow booked to other non-current assets (Brazil deposit). A first version put it in accrued expenses, which reversed into 2027E FCF.
+  - Out-year levers: regional growth, operating margin, content-amortization growth, cash content / amortization ratio, M&A.
+- **Balance sheet, cash & capital:**
+  - Content assets roll forward with additions − amortization; cash content spend = ratio × amortization (guided ~1.1x).
+  - Notes are repaid at par and refinanced 100%; the $1bn 2036 notes were issued in Jul-2026; the $3bn revolver plugs to minimum cash.
+  - Buybacks plug to a target year-end cash in months of revenue (1.75 / 2.0 / 2.5), anchored on the former "two months of revenue" policy that Netflix dropped in the Q1-24 letter. No dividend.
+- **Valuation:**
+  - Price $70.00, per the user (13-Oct-2026).
+  - The DCF base year is 2026E, with explicit 2027E–31E (template columns remapped one year). NOPAT is on operating income after content amortization and SBC; only non-content D&A is added back; cash content spend above amortization goes in the working-capital row.
+  - Beta 1.15 and the market inputs are assumptions.
+  - Exit P/E 22 / 28 / 16x.
+- **Reusable lessons:**
+  - [extraction] Find statements by their first row label plus required subtotals, not by title: titles also appear in the TOC, MD&A and selected-data tables. Check the column order of very old 10-Ks (oldest first).
+  - [extraction] Match published non-GAAP columns to the period by value (CFO for FCF, GAAP NI for EBITDA / NI tables) rather than by position. Releases reorder columns and restate comparatives.
+  - [basis] A reclassification effective in Q4 and applied only in the 10-K mixes bases in FY − 9M. Take Q1–Q3 from the next year's 10-Q comparatives.
+  - [calibration] When FCF guidance includes a one-off (a deposit), put the calibration into a non-reverting balance-sheet line, not working capital that mean-reverts the next year.
+  - [build] For content-heavy companies, forecast cash content spend as a ratio to amortization. The DCF adds back only non-content D&A and deducts cash content above amortization in the working-capital row.
 
 ## Private company / LBO
 

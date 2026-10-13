@@ -1,0 +1,51 @@
+{
+ "guidance_fy26": {
+  "src": "Q2-26 shareholder letter, 8-K Item 2.02 Ex. 99.1 filed 16-Jul-2026: https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm",
+  "revenue": [51400.0, 51200.0, 51000.0],
+  "revenue_note": "FY26 revenue $51.0-51.4bn (13-14% growth, ~12% F/X neutral), narrowed from $50.7-51.7bn (Q4-25 letter 20-Jan-2026; unchanged in the Q1-26 letter 16-Apr-2026)",
+  "op_margin": 0.315,
+  "op_margin_note": "FY26 operating margin 31.5% on a reported basis and at F/X rates of 1-Jan-2026 (unchanged since the Q4-25 letter); implies 20%+ operating income growth",
+  "content_amort_growth": 0.10,
+  "content_amort_note": "Content amortization to grow ~10% in 2026, faster in the first half (Q4-25, Q1-26 and Q2-26 letters)",
+  "fcf": 12500.0,
+  "fcf_note": "FCF ~$12.5bn (raised from ~$11bn in the Q1-26 letter; reiterated 16-Jul-2026); includes the $2.8bn WBD termination fee, cash taxes on it and an expected ~$700m Brazil tax deposit (Q4-25 letter)",
+  "cash_content_ratio": 1.1,
+  "cash_content_note": "Annual cash content spend to content amortization ratio ~1.1x (Q4-25, Q1-26, Q2-26 letters)",
+  "ads_revenue": 3000.0,
+  "ads_note": "Ads revenue to roughly double to ~$3bn in 2026 (Q2-26 letter)",
+  "q3": {"revenue": 12860.0, "op_income": 4268.0, "op_margin": 0.332, "net_income": 3452.0, "eps_diluted": 0.82,
+         "note": "Q3-26 forecast (Q2-26 letter summary table): revenue $12,860m (+11.7% y/y; +11% F/X neutral), operating income $4,268m, operating margin 33.2%, net income $3,452m, diluted EPS $0.82"}
+ },
+ "debt": {
+  "src": "Q2-26 Form 10-Q Note 7 (filed 17-Jul-2026); 8-K 22-Jul-2026 (Item 8.01, $1bn 5.250% notes due 2036)",
+  "at_2026_06_30": "Senior notes $14,309m carrying ($14,372m par less $49m issuance costs / discount, plus $14m fair-value hedge adjustment); EUR 4,700m of the notes are remeasured each quarter. $3bn revolving credit facility (Apr-2024, matures Apr-2029) undrawn.",
+  "ladder_par": [["4.375% Nov-2026", 1000.0], ["3.625% EUR May-2027", 1486.0], ["4.875% Apr-2028", 1600.0], ["5.875% Nov-2028", 1900.0],
+                 ["4.625% EUR May-2029", 1257.0], ["6.375% May-2029", 800.0], ["3.875% EUR Nov-2029", 1372.0], ["5.375% Nov-2029", 900.0],
+                 ["3.625% EUR Jun-2030", 1257.0], ["4.875% Jun-2030", 1000.0], ["4.900% Aug-2034", 1000.0], ["5.400% Aug-2054", 800.0]],
+  "new_notes": "$1,000m 5.250% senior notes due 2036 issued 22-Jul-2026 (8-K 22-Jul-2026); the Q2-26 letter says the $1bn of notes maturing later in 2026 will be refinanced.",
+  "coupon_wavg": 0.0476,
+  "coupon_note": "Par-weighted coupon of the 30-Jun-2026 notes 4.76% (EUR notes 3.625-4.625%, USD notes 4.375-6.375%); Q2-26 interest expense $175.7m (~4.9% annualised on $14.4bn)."
+ },
+ "capital_return": {
+  "src": "Q2-26 letter; 8-K 23-Apr-2026 (Item 8.01)",
+  "buyback": "Board authorised an additional $25bn in April 2026 on top of the $6.8bn left at the end of Q1; $4.7bn repurchased in Q2-26; $27.1bn of authorization remaining (Q2-26 letter). No dividend.",
+  "policy": "Capital allocation: reinvest in the business (organic and selective M&A), maintain a healthy balance sheet and liquidity, return excess cash via buybacks. The Q1-24 letter (8-K 18-Apr-2024) dropped the former anchors ($10-15bn gross debt; minimum cash equal to two months of revenue) for 'financial policies consistent with a solid investment grade credit rating'."
+ },
+ "deals": {
+  "wbd": "WBD transaction: definitive agreement 4-Dec-2025 (8-K 5-Dec-2025) to acquire Warner Bros. Discovery's streaming and studios businesses, amended 19-Jan-2026 (8-K 20-Jan-2026); terminated by WBD on 27-Feb-2026 (8-K Item 1.02) to merge with Paramount Skydance, which paid Netflix a $2.8bn termination fee, recorded in interest and other income (expense) in Q1-26 (Q2-26 10-Q Note 6). Bridge / term-loan commitments for the deal (8-K 22-Dec-2025) lapsed with the termination.",
+  "wbd_fee": 2800.0,
+  "acq_2026": "March 2026: business combination for ~$587m cash (Q2-26 10-Q Note 6; purchase-price allocation not disclosed; $585.7m in the cash-flow statement).",
+  "acq_hist": "Earlier acquisitions (2021-2023 cash-flow line 'Acquisitions'): animation, VFX and games studios; no revenue contribution disclosed."
+ },
+ "one_offs": {
+  "restructuring_q222": {"amount": 150.0, "src": "Q2-22 letter (8-K 19-Jul-2022): 'approximately $70 million of severance costs and an $80m non-cash impairment of certain real estate leases'; Q3-22 letter: 'excluding the $150m of restructuring costs in Q2'."},
+  "brazil_q325": {"amount": 619.0, "src": "Q3-25 letter (8-K 21-Oct-2025): 'an expense in Q3'25 of approximately $619 million related to an ongoing dispute with Brazilian tax authorities regarding certain non-income tax assessments' (in cost of revenues); operating margin 28% vs 31.5% guidance."},
+  "wbd_fee_q126": {"amount": 2800.0, "src": "Q2-26 10-Q Note 6: $2.8bn termination fee received in Q1-26, recorded in interest and other income (expense)."}
+ },
+ "price": {"px": 70.0, "date": "2026-10-13", "src": "Share price $70.00 provided by the user (13-Oct-2026); update to market."},
+ "corrections": [
+  "Q4-14 non-GAAP net income: the Q4-14 letter prints the release of tax accrual as +38,612 but deducts it (83,371 - 38,612 = 44,759); later letters print '(38,612)'. The model deducts it.",
+  "FY2006: the FY2006 10-K presents its columns oldest first (2004, 2005, 2006); the extraction takes the last column.",
+  "FY2007: the FY2007 10-K cash flow (CFO $291.8m) differs from the Q4-07 release ($290.1m) used for published FCF ($45.5m); FCF check left n/p for FY2007."
+ ]
+}

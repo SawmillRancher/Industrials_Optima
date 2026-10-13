@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, NFLX). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -256,6 +256,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | Recent IPO | LOAR, ONON, KRMN | Annual columns from the prospectus; P&L-only years flagged; BS / CF start when available |
 | Non-December fiscal year | STE (Mar), CTAS (May), HEI (Oct) | Column labels by fiscal year; DCF discount dates moved to FY ends |
 | Pending / new acquisition | DHR, MLM, CTAS, ESAB, CSGP, UBER, CHRW | Separate block, PPA, financing, synergies, closing-date toggle; deal tab for large deals |
+| Content / subscription media | NFLX | Regional revenue build (memberships × ARM as history KPIs); content amortization as the main cost; cash content spend / amortization ratio; terminated-deal break fee as a non-operating adjusting item |
 | Dual-class / splits | ONON, HEI, CTAS, ODFL | Class-equivalent shares; split-adjust by source filing date |
 | Private company | R&Y | Compilation statements; implied CF from BS changes; LBO tab |
 
@@ -275,7 +276,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -290,6 +291,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
+- **Locate statements by content, not title.** A face statement starts at its first row label ("Revenues", "Cash and cash equivalents") and must contain its subtotals; titles also appear in the TOC, MD&A and selected-data tables. Check the column order of old 10-Ks (some run oldest first). [NFLX]
+- **Match published non-GAAP columns by value** (CFO for FCF; GAAP net income for EBITDA / adjusted NI tables), not by position: releases reorder columns and restate comparatives. Log any loose match. [NFLX]
 
 ### 5.2 Basis
 - **Segment re-presentation with a short recast history:** model an aggregate the re-presentation doesn't change and keep the old split as memo. Prove where an absorbed segment went using the restated comparative Δ. [RBA, TFI]
@@ -298,6 +301,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **After a spin:** start the BS at the first post-spin balance sheet even if the P&L uses earlier recast comparatives, and fill earlier y/y with company-reported change % memos. Spin-cos put carve-out (Form 10) years in the main columns, with the former parent's segment history as a flagged memo under the parent's CIK. [XPO, ESAB]
 - **Half-year reporters:** carry quarterly revenue as "1st / 2nd quarter of the half" memo rows inside the half-year columns, with a Σ check. [RMS, BC]
 - **Two builds of one company:** diff their dated facts (split dates, deconsolidation quarter, label cut-overs) and resolve each from the filing. [LECO]
+- **Q4-effective reclassifications** applied in the 10-K but not the earlier 10-Qs make FY − 9M mix bases. Take Q1–Q3 from the next year's 10-Q comparatives and comment the original figures. [NFLX]
 
 ### 5.3 Operating build
 - **When a segment or product table changes revenue basis** (net sales → ex-freight → total revenue; pre-ASC 606), add a derived "outside the lines" row (consolidated − Σ lines) so the build check ties in every period. [MLM, VMC]
@@ -348,6 +352,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Incremental-margin guidance:** target = prior-year half + incremental % × Δ sales. [LECO]
 - **Operating-ratio guidance:** solve the remaining quarters on OR, with the largest controllable cost line balancing, and show the implied shift vs run-rate. [SAIA]
 - **FCF or CFO guidance:** solve the dominant working-capital item (contract assets, DSO, advance billings) with one designated BS plug, or keep it as an information row. [HII, WCN, CW, BWXT, TMO]
+  - When the guided FCF includes a one-off (a tax deposit), book the solve to a non-reverting line (other non-current assets), not a working-capital ratio that mean-reverts and inflates next year's FCF. [NFLX]
 - **Segment ranges that don't sum to the total:** drive segments from their own end-points and close to the total with one uniform Δ. Allocate aggregate guidance by 1H mix or prior-year quarter × 1H momentum. [CW, HII, RBA]
 - **Guided cost items** (D&A, interest, SBC) for the remaining halves = (FY mid − 1H) ÷ 2. Add post-guidance financing events (new notes) on top. Take point estimates from the company's own outlook reconciliation rather than guessing. [CLH, XPO, WAB, VMC, MLM, TDY]
 - **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
@@ -386,6 +391,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Leverage ratios use LTM EBITDA** (carried in the quarter columns), not annualised 1H. [VMC, HEI]
 - **Working-capital ratios** come from fiscal-year-end balances, not annualised quarters. [STE, CTAS]
 - **Use the company's own capex / FCF definition** when it is guided, so guided and modelled figures are comparable. [RBA, HII]
+- **Content-heavy companies:** forecast cash content spend as a ratio to content amortization (company-guided where available) and roll content assets forward. In the DCF, add back only non-content D&A and deduct cash content above amortization in the working-capital row. [NFLX]
 - **Reconcile BS cash vs CF ending cash with a memo line** when definitions differ (overdraft, restricted cash, disc-ops cash). [ONON, CSGP, DHR]
 
 ### 5.7 Valuation
