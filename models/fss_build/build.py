@@ -1,4 +1,4 @@
-"""Build WWD_Model.xlsx from the MLM template (same layout, formatting and process as the prior models)."""
+"""Build FSS_Model.xlsx (Federal Signal Corporation) from the MLM template (same layout, formatting and process as the prior models)."""
 import sys, copy, os, json
 from openpyxl.styles import Font
 from fw import *
@@ -6,93 +6,85 @@ import fw
 from spec import build_spec, scen_layout, SCEN_ROWS, SC
 from spec2 import build_spec2
 
-OUT = os.path.join(os.path.dirname(BASE), 'WWD_Model.xlsx')
+OUT = os.path.join(os.path.dirname(BASE), 'FSS_Model.xlsx')
 G26 = MAN['guidance_fy26']
 
 # ====================================================================== inputs (V0)
 def wc_inputs():
-    q = DATA['2025']['x']
-    rev, cogs = q['rev'], q['cogs']
+    """working-capital drivers at 30-Sep-2026 balances on last-twelve-month (Q4/25-Q3/26) net sales / cost of sales: the 31-Dec-2025 balances
+    carry New Way's receivables and inventory (acquired 25-Nov-2025) against one month of its sales."""
+    q = DATA['Q3-26']['x']
+    ltm = ['Q4-25', 'Q1-26', 'Q2-26', 'Q3-26']
+    rev = sum(DATA[p]['x']['rev'] for p in ltm); cogs = sum(DATA[p]['x']['cogs'] for p in ltm)
     return {'dso': round(q['bs_ar'] / rev * 365), 'dio': round(q['bs_inv'] / cogs * 365), 'dpo': round(q['bs_ap'] / cogs * 365),
-            'ocl': round(q['bs_ocl'] / rev, 3)}
+            'dep': round(q['bs_dep'] / rev, 3), 'ocl': round(q['bs_ocl'] / rev, 3), 'rev': rev, 'cogs': cogs}
 WC = wc_inputs()
-WC['note'] = (f'Forecast inputs at fiscal-year-end (30-Sep-2025) levels on FY2025 net sales / cost of goods sold (DSO {WC["dso"]}d, inventory {WC["dio"]}d, '
-              f'payables {WC["dpo"]}d, other current liabilities {WC["ocl"]:.1%} of sales); year ends are compared with year ends.')
+WC['note'] = (f'Forecast inputs at 30-Sep-2026 balances on LTM (Q4/25–Q3/26) net sales ${WC["rev"]:,.0f}m / cost of sales ${WC["cogs"]:,.0f}m (DSO {WC["dso"]}d, inventory {WC["dio"]}d, '
+              f'payables {WC["dpo"]}d, customer deposits {WC["dep"]:.1%}, other current liabilities {WC["ocl"]:.1%} of sales). The 31-Dec-2025 balances carry New Way\'s '
+              'working capital against one month of its sales, so the year-end basis is not used.')
 AM = MAN['amort_sched']
 
 V0 = {
-    'out_hdr': 'FY26 guidance — Q3 FY26 release (29-Jul-2026)',
-    'out_note': ('Sales growth +20–23% (unchanged), adjusted EPS $9.30–9.50 (raised from $9.15–9.45), FCF $300–350m, capex ~$290m, ~61.5m shares, adjusted tax rate ~22.5%; '
-                 'Aerospace sales +21–23% at ~23.5% segment margin; Industrial sales +19–21% at ~19%.'),
+    'out_hdr': 'FY26 outlook — Q3-26 release (29-Oct-2026)',
+    'out_note': ('Adjusted EPS $5.20–5.32 (raised from $5.12–5.30), net sales $2.61–2.64bn (narrowed from $2.58–2.67bn on delayed third-party refuse-truck deliveries); '
+                 'capex $45–55m (FY25 release, not repeated). EDGAR-filed (Ex. 99.1 to the Q3-26 10-Q).'),
     'outlook': [
-        ('out_g', '  FY26 net sales growth', tuple(G26['sales_growth']), 'pct', 'Guided +20–23%. Drives the Q4/26E sales calibration.'),
-        ('out_eps', '  FY26 adjusted EPS ($)', tuple(G26['adj_eps']), 'ps', 'Guided $9.30–9.50. Drives the Q4/26E segment-margin calibration.'),
-        ('out_ag', '  FY26 Aerospace sales growth — memo', tuple(G26['aero_growth']), 'pct', 'Guided +21–23% (information row; compare the model).'),
-        ('out_ig', '  FY26 Industrial sales growth — memo', tuple(G26['ind_growth']), 'pct', 'Guided +19–21% (information row).'),
-        ('out_fcf', '  FY26 free cash flow ($m) — memo', tuple(G26['fcf']), 'm', 'Guided $300–350m (information row).'),
-        ('bb26', '  Q4/26E share repurchases ($m)', (300.0, 200.0, 100.0), 'm', '9M FY26 $553.4m ($198m in Q3); $1,286m left on the $1.8bn 2026 Authorization at 30-Jun-2026.'),
+        ('out_rev', '  FY26 net sales ($m)', tuple(G26['net_sales']), 'm', 'Guided $2.61–2.64bn. Drives the Q4/26E sales calibration.'),
+        ('out_eps', '  FY26 adjusted EPS ($)', tuple(G26['adj_eps']), 'ps', 'Guided $5.20–5.32. Drives the Q4/26E segment-margin calibration.'),
+        ('out_capex', '  FY26 capital expenditures ($m) — memo', tuple(G26['capex']), 'm', 'Guided $45–55m in the FY25 release (information row; high = low capex).'),
+        ('bb26', '  Q4/26E share repurchases ($m)', (20.0, 10.0, 0.0), 'm', '9M 2026 $5.1m (September); $152.0m remaining under the March 2020 / April 2025 programs.'),
     ],
     'points': [
-        ('pt_int', '  Q4/26E interest expense ($m)', 15.5, 'm1', 'Not guided; Q3 $14.8m; full quarter of the $250m term loan and the revolver (~$1.35bn debt at ~4.6%).'),
-        ('pt_intinc', '  Q4/26E interest income ($m)', 0.6, 'm1', 'Q3 $0.6m.'),
-        ('pt_othinc', '  Q4/26E other income, net ($m)', 20.0, 'm1', '9M FY26 $60.3m (~$20m a quarter; no divestiture gains).'),
-        ('pt_amort', '  Q4/26E amortization of intangibles ($m)', AM['2026_rem'], 'm1', 'Q3 FY26 10-Q schedule: $8.4m remaining in FY26.'),
-        ('pt_dep', '  Q4/26E depreciation ($m)', 23.0, 'm1', 'Q3 $22.5m; rising with capex.'),
-        ('pt_etr', '  Q4/26E tax rate (GAAP & adjusted)', 0.24, 'pct', 'FY26 adjusted rate guided ~22.5%; 9M FY26 adjusted 21.9% → Q4 ~24% (Q3 24.2%).'),
-        ('pt_capex', '  FY26 capital expenditures ($m)', G26['capex'], 'm1', 'Guided ~$290m (9M $156.3m); Spartanburg, SC campus.'),
-        ('pt_restr', '  Q4/26E restructuring charges ($m)', 6.0, 'm1', 'China OH wind-down complete; servo-valve transition (~$15m total) and the start of the Santa Clarita plan (8-K 21-Sep-2026).'),
-        ('pt_am', '  FY26 Aerospace segment margin guidance', G26['aero_margin'], 'pct', 'Guided ~23.5% (information row).'),
-        ('pt_im', '  FY26 Industrial segment margin guidance', G26['ind_margin'], 'pct', 'Guided ~19% (information row).'),
+        ('pt_int', '  Q4/26E interest expense, net ($m)', 4.8, 'm1', 'Q3-26 $5.3m on ~$437m average debt (~4.9%); debt $420m at 30-Sep-2026 + GVS ($29m) on the revolver.'),
+        ('pt_nonop', '  Q4/26E other expense, net ($m)', 1.0, 'm1', 'Q1–Q3 2026 $0.6m / $0.8m / $1.0m (non-service pension cost).'),
+        ('pt_etr', '  Q4/26E tax rate (GAAP & adjusted)', 0.24, 'pct', '9M 2026 GAAP 23.5% and adjusted 23.5%; Q3-26 24.3% / 24.2%.'),
+        ('pt_dda', '  Q4/26E depreciation & amortization ($m)', 26.0, 'm1', 'Q3-26 $25.3m (rising with the rental fleet, Mega, Western Technology; GVS from 28-Oct).'),
+        ('pt_amort', '  Q4/26E amortization of intangibles ($m)', AM['2026_rem'], 'm1', 'Q3-26 10-Q estimate: $6.7m remaining in 2026 (excludes GVS).'),
+        ('pt_acq', '  Q4/26E acquisition & integration costs ($m)', 1.5, 'm1', 'Q1–Q3 2026 $1.2m / $0.7m / $1.2m; GVS closing in Q4 (assumption).'),
+        ('pt_stepup', '  Q4/26E purchase accounting effects ($m)', 0.5, 'm1', 'Q1–Q3 2026 $1.6m / $0.9m / $0.4m (Mega, New Way step-ups running off; GVS).'),
+        ('pt_capex', '  FY26 capital expenditures ($m)', 50.0, 'm1', 'Mid-point of the $45–55m guidance (9M 2026 $30.0m).'),
+        ('pt_gvs', '  Q4/26E acquisition of Global Vacuum Systems ($m)', 29.0, 'm1', 'Initial price ~$29m incl. the Texas facility (closed 28-Oct-2026; Q3-26 10-Q Note 14).'),
+        ('pt_gvs_ppe', '  GVS: PP&E share of the price (assumption; PPA not yet published)', 0.30, 'pct', 'Includes the manufacturing facility; replace with the FY2026 10-K allocation.'),
+        ('pt_gvs_int', '  GVS: intangibles share of the price (assumption)', 0.35, 'pct', 'Federal Signal PPAs: New Way 39%, Hog 41%, Mega 41% of consideration; replace with the 10-K allocation.'),
     ],
-    'lev': (1.75, 1.25, 0.75),
-    'lev_note': ('Net debt $867m at 30-Jun-26 ≈ 1.0x adjusted EBITDA (FY2021–25 0.5–1.1x); company "EBITDA leverage" (total debt / TTM EBITDA) 1.6x. Target = leverage up to which surplus cash is returned '
-                 'via buybacks ($1.8bn three-year authorization to Nov-2028); below it free cash flow repays the revolver. Bull = more buybacks (higher target).'),
+    'lev': (1.0, 0.75, 0.5),
+    'lev_note': ('Net debt $346m at 30-Sep-2026 ≈ 0.65x LTM adjusted EBITDA (FY2022–25 0.5–1.3x); covenants allow restricted payments up to 3.25x. Target = leverage up to which '
+                 'surplus cash (after dividends and the M&A lever) is returned via buybacks; Bull = more buybacks (higher target). Assumption — the company sets no leverage target.'),
     'blocks': [
-        ('AERO_COEM', 'AERO_COEM (Commercial OEM y/y)', 0.04, -0.06, [0.14, 0.11, 0.09, 0.07, 0.06],
-         '9M FY26 +29% (airframer rate increases after the FY25 Boeing work stoppage / inventory normalisation); 737 / A320 / 787 / A350 ramps, A350 spoiler actuation from Spartanburg (2027).', 'pct', False),
-        ('AERO_CSERV', 'AERO_CSERV (Commercial services y/y)', 0.03, -0.06, [0.09, 0.08, 0.07, 0.06, 0.06],
-         '9M FY26 +36% (FY25 +29%, partly advance purchases); high utilisation of legacy fleets, price; normalising toward high-single digits.', 'pct', False),
-        ('AERO_DOEM', 'AERO_DOEM (Defense OEM y/y)', 0.03, -0.04, [0.07, 0.06, 0.05, 0.05, 0.05], '9M FY26 +7% (FY25 +38%: smart-defense / guided-weapons demand, price).', 'pct', False),
-        ('AERO_DSERV', 'AERO_DSERV (Defense services y/y)', 0.02, -0.04, [0.05, 0.05, 0.04, 0.04, 0.04], '9M FY26 +9%; FY25 −2% (mix).', 'pct', False),
-        ('IND_PG', 'IND_PG (Power generation y/y)', 0.04, -0.06, [0.12, 0.10, 0.08, 0.06, 0.05],
-         '9M FY26 +11%; FY25 +10%: gas turbines and reciprocating gensets (data-centre and grid demand).', 'pct', False),
-        ('IND_TRANS', 'IND_TRANS (Transportation y/y)', 0.04, -0.08, [0.00, 0.04, 0.04, 0.03, 0.03],
-         '9M FY26 +42% (marine, rail, China OH last-time buys); China OH wound down by end of FY26 → flat FY27.', 'pct', False),
-        ('IND_OG', 'IND_OG (Oil and gas y/y)', 0.03, -0.06, [0.04, 0.04, 0.03, 0.03, 0.03], '9M FY26 +18%; FY25 +14%: gas compression / midstream.', 'pct', False),
-        ('AERO_M', 'AERO_M (Aerospace segment margin)', 0.01, -0.02, [0.240, 0.245, 0.250, 0.253, 0.255],
-         'FY26 guided ~23.5% (FY25 21.9%, FY19 peak 20.7%); price and volume leverage vs Spartanburg start-up costs (2027).', 'pct', False),
-        ('IND_M', 'IND_M (Industrial segment margin)', 0.01, -0.03, [0.190, 0.192, 0.195, 0.197, 0.200],
-         'FY26 guided ~19% (FY25 14.6%, FY24 17.7%); China OH exit accretive; cyclical downside (FY18 6.2%).', 'pct', False),
-        ('MNA', 'M&A_spend (bolt-on acquisitions, $m)', 100.0, -100.0, [100.0, 100.0, 100.0, 100.0, 100.0],
-         'Woodward spent $40m (Safran EMA, FY25) and $121m (Valve Research, FY26) on bolt-ons besides L\'Orange ($771m, FY18). Base $100m p.a. (assumption).', 'm', True),
+        ('ESG_G', 'ESG_G (Environmental Solutions net sales y/y)', 0.03, -0.06, [0.075, 0.07, 0.065, 0.06, 0.055],
+         '9M 2026 +25.6% (New Way, Mega acquired; Q3 orders +43%, high-teens organic); 2027E includes ~10 months of GVS and New Way synergies; FY2021–25 sales CAGR 15% incl. acquisitions.', 'pct', False),
+        ('SSG_G', 'SSG_G (Safety and Security Systems net sales y/y)', 0.02, -0.05, [0.03, 0.04, 0.04, 0.04, 0.04],
+         '9M 2026 +10.8% (Q3 +2%); Q3 orders −6% and backlog $65m (−26% y/y) after large non-U.S. public-safety orders; FY2021–25 CAGR 10%.', 'pct', False),
+        ('ESG_M', 'ESG_M (Environmental Solutions segment operating margin)', 0.01, -0.025, [0.185, 0.19, 0.193, 0.195, 0.195],
+         'FY2025 17.7%, 9M 2026 18.2% (after amortization; New Way dilutive initially, synergies $15–20m by 2028); FY2021–24 12.0–16.8%.', 'pct', False),
+        ('SSG_M', 'SSG_M (Safety and Security Systems segment operating margin)', 0.01, -0.03, [0.245, 0.245, 0.25, 0.25, 0.25],
+         'FY2025 23.8%, 9M 2026 24.7%; FY2019–24 15.6–21.2%.', 'pct', False),
+        ('MNA', 'M&A_spend (bolt-on acquisitions, $m)', 100.0, -150.0, [150.0, 150.0, 150.0, 150.0, 150.0],
+         'Acquisition spend: $501m (2025: New Way, Hog, Kinloch), $40m (2024), $55m (2023), ~$95m 9M 2026 + GVS; 15 acquisitions since 2016. Base $150m p.a. (assumption).', 'm', True),
     ],
-    'corp_pct': -0.035,
-    'dep_pct': {2027: 0.023, 2028: 0.025, 2029: 0.026, 2030: 0.026, 2031: 0.026},
-    'sga_pct': {2027: 0.093, 2028: 0.092, 2029: 0.091, 2030: 0.090, 2031: 0.090},
-    'rd_pct': 0.041, 'sbc_pct': 0.0085, 'etr': 0.225, 'othinc': 80.0,
-    'capex_pct': {2027: 0.050, 2028: 0.035, 2029: 0.032, 2030: 0.030, 2031: 0.030},
-    'dps_q': 0.32, 'dps_g': 0.10, 'def_q4': 0.0, 'def_ae': -20.0, 'eq_q4': 10.0, 'eq_ae': 60.0, 'iss_q4': 0.10, 'iss_ae': 0.40, 'dil': 1.7,
-    'ae_restr': {2027: 30.0, 2028: 15.0, 2029: 0.0, 2030: 0.0, 2031: 0.0},
-    'amort_sched': {2027: AM['2027'], 2028: AM['2028'], 2029: AM['2029'], 2030: AM['2030'], 2031: 30.0},
-    'amort_note': AM['src'] + ' FY27 $32.5m, FY28 $32.1m, FY29 $31.2m, FY30 $31.2m; FY31 $30.0m assumed ($245.6m thereafter).',
-    'dv_proc': {2027: 180.0, 2028: 0.0, 2029: 0.0, 2030: 0.0, 2031: 0.0},
-    'dv_nav': {2027: 16.364, 2028: 0.0, 2029: 0.0, 2030: 0.0, 2031: 0.0},
-    'iss_notes': {2026: 450.0, 2027: 85.0, 2028: 90.289, 2029: 225.0, 2030: 225.0, 2031: 300.421},
-    'repay': {2026: 46.903, 2027: 85.0, 2028: 90.289, 2029: 225.0, 2030: 225.0, 2031: 300.421},
-    'mat': {2026: 85.0, 2027: 90.289, 2028: 225.0, 2029: 225.0, 2030: 300.421, 2031: 0.0},
-    'repay_note': ('Sep-2026 Series M (EUR; $46.9m at 30-Sep-25 FX); May-2027 Series Q $85m; Sep-2028 Series N (EUR; $90.3m); FY2029 Series R $75m + U $150m; FY2030 S $75m + V $150m; '
-                   'FY2031 term loan $250m (May-2031) + Series O (EUR; $50.4m). EUR notes at 30-Sep-2025 FX (assumption). 2027E+ maturities assumed refinanced with new notes (input row above).'),
-    'min_cash': 300.0,
-    'r_notes': {2027: 0.046, 2028: 0.046, 2029: 0.047, 2030: 0.048, 2031: 0.049},
-    'r_notes_note': ('Weighted coupon ~4.6% after the $450m U/V/W issue (5.34–5.64%), term loan (SOFR + 0.875–1.75%), USD notes 4.35–4.61% and EUR notes 1.31–1.57%; '
-                     'drifting up as low-coupon EUR notes mature.'),
+    'b2b': {'esg': (1.0, 1.0), 'ssg': (1.0, 1.0)},
+    'b2b_note': 'Book-to-bill input 1.00x (FY2025 ESG 1.01x / SSG 1.06x; 9M 2026 0.96x / 0.97x); backlog is an output.',
+    'corp_pct': -0.023,
+    'dda_pct': {2027: 0.038, 2028: 0.038, 2029: 0.037, 2030: 0.037, 2031: 0.037},
+    'sga_pct': {2027: 0.112, 2028: 0.111, 2029: 0.110, 2030: 0.110, 2031: 0.110},
+    'sbc_pct': 0.007, 'etr': 0.24, 'nonop': 4.0,
+    'capex_pct': {2027: 0.018, 2028: 0.018, 2029: 0.018, 2030: 0.018, 2031: 0.018},
+    'rent_pct': {2027: 0.011, 2028: 0.011, 2029: 0.011, 2030: 0.011, 2031: 0.011},
+    'dps_q': 0.15, 'dps_g': 0.07, 'def_q4': 1.0, 'def_ae': 5.0, 'wh_q4': -0.5, 'wh_ae': -14.0, 'eq_q4': 0.3, 'eq_ae': 2.0, 'iss_q4': 0.0, 'iss_ae': 0.2, 'dil': 0.6,
+    'amort_sched': {2027: AM['2027'], 2028: AM['2028'], 2029: AM['2029'], 2030: AM['2030'], 2031: 16.0},
+    'amort_note': AM['src'] + ' 2027 $26.0m, 2028 $25.3m, 2029 $20.0m, 2030 $16.9m; 2031 $16.0m assumed ($108.4m thereafter).',
+    'tl_repay': {},
+    'tl_note': 'Term loan $375.0m at 30-Sep-2026 ($25.0m voluntarily prepaid in Q3-26); no scheduled amortization modelled; the 29-Oct-2030 maturity is assumed refinanced (assumption).',
+    'min_cash': 60.0,
+    'r_tl': {2027: 0.050, 2028: 0.050, 2029: 0.051, 2030: 0.052, 2031: 0.052},
+    'r_note': 'Adjusted RFR + 1.00–1.75% (2025 Credit Agreement); Q3-26 interest expense, net ≈ 4.9% of average debt. Assumption.',
     'wc': WC,
     'px': MAN['price']['px'],
-    'px_note': ('VALUATION — share price input $382.17 (weighted average price paid for shares repurchased in June 2026, Q3 FY26 10-Q Part II Item 2 — the latest '
-                'share price in an SEC filing; ~$23bn market cap); update to market'),
-    'mna_note': 'Scenario lever M&A_spend (Base $100m p.a. of bolt-ons). Funded from cash / revolver (debt schedule).',
-    'rev_guid_note': 'Company FY26 net sales growth guidance +20–23% (raised 29-Apr-2026, unchanged 29-Jul-2026). Drives the sales calibration.',
-    'eps_guid_note': 'Company FY26 adjusted EPS guidance $9.30–9.50 (raised 29-Jul-2026). Drives the segment-margin calibration.',
+    'px_note': ('VALUATION — share price input $114.00 (weighted average price paid for shares repurchased 30-Aug – 26-Sep-2026, Q3-26 10-Q Part II Item 2, filed '
+                '29-Oct-2026 — the latest share price in an SEC filing; ~$7.0bn market cap); update to market'),
+    'mna_note': 'Scenario lever M&A_spend (Base $150m p.a. of bolt-ons). Funded from cash / revolver (debt schedule).',
+    'rev_guid_note': 'Company FY26 net sales guidance $2.61–2.64bn (Q3-26 release, 29-Oct-2026). Drives the sales calibration.',
+    'eps_guid_note': 'Company FY26 adjusted EPS guidance $5.20–5.32 (raised 29-Oct-2026). Drives the segment-margin calibration.',
 }
 
 # ====================================================================== compute engine
@@ -142,12 +134,11 @@ def compute(row, col):
     return None, False
 
 # ====================================================================== writers
-CAGR_G = {'is_rev', 'g_rev', 'aero_rev', 'ind_rev', 'aero_coem', 'aero_cserv', 'aero_doem', 'aero_dserv', 'ind_pg', 'ind_trans', 'ind_og', 'mx_com', 'mx_def',
-          'o_adj', 'g_adj', 'r_adj', 'r_ebitda', 'is_ebit', 'd_dda', 'e_adjni', 'e_eps', 'cf_cfo', 'fcf', 'bs_ta', 'bs_teq', 'sh_dil', 'is_gp', 'is_sga',
-          'd_amort', 'd_dep', 'aero_oi', 'ind_oi', 'is_ni', 'eps_dil', 'dps'}
-CAGR_A = {'aero_m', 'ind_m', 'g_adjm', 'o_adj_m', 'r_adj_m', 'is_gm', 'is_ebit_m', 'r_ebit_m', 'gm_rev', 'gm_aero', 'gm_ind', 'gm_gm', 'gm_ebitda_m',
-          'gm_op_m', 'gm_net_m', 'gm_sga', 'gm_rd', 'gm_adjop_m', 'fcf_m', 'fcf_conv', 'capex_pct', 'ra_roic', 'rn_ronta', 'roe', 'lv_x',
-          'd_sga', 'd_dep_pct', 'd_sbc_pct', 'wc_nwc_p', 'is_etr', 'e_rate', 'fcf_eb', 'corp_pct', 'aero_aft', 'mx_com_p', 'mx_def_p'}
+CAGR_G = {'is_rev', 'g_rev', 'esg_rev', 'ssg_rev', 'esg_oi', 'ssg_oi', 'esg_ord', 'ssg_ord', 'r_adj', 'r_ebit', 'is_oi', 'e_adjni', 'e_eps', 'cf_cfo', 'fcf',
+          'bs_ta', 'bs_teq', 'sh_dil', 'is_ni', 'eps_dil', 'dps', 'd_dda', 'is_gp', 'is_sga', 'd_amort'}
+CAGR_A = {'esg_m', 'ssg_m', 'r_adj_m', 'r_ebit_m', 'is_gm', 'is_oi_m', 'gm_rev', 'gm_esg', 'gm_ssg', 'gm_gm', 'gm_ebitda_m', 'gm_op_m', 'gm_adj_m', 'gm_net_m',
+          'gm_sga', 'fcf_m', 'fcf_conv', 'capex_pct', 'ra_roic', 'rn_ronta', 'roe', 'lv_x', 'd_sga', 'd_dda_pct', 'd_sbc_pct', 'wc_nwc_p', 'is_etr', 'e_rate',
+          'fcf_eb', 'corp_pct', 'esg_mix', 'esg_b2b', 'ssg_b2b'}
 A = {y: ANN[y].c for y in ANN}
 
 def style_cagr(ws, r, on):
@@ -182,69 +173,74 @@ def write_row(ws, row):
             set_color(cell, GRAY)
         else:
             set_color(cell, BLACK)
+        if row.key == 'is_rev' and col.kind in HISTK:
+            nts = DATA.get(pkey(col), {}).get('notes')
+            if nts: comment(cell, f'{pkey(col)}: ' + ' '.join(dict.fromkeys(nts)), 440, 150)
     rc = CELL_COMMENTS.get(row.key, {})
     for c, t in rc.items(): comment(ws[f'{c}{r}'], t)
     if row.key in CAGR_G:
         ws[f'{CAGR[0]}{r}'] = f'=IFERROR(({A[2031]}{r}/{A[2026]}{r})^(1/5)-1,"n/m")'
         ws[f'{CAGR[1]}{r}'] = f'=IFERROR(({A[2025]}{r}/{A[2020]}{r})^(1/5)-1,"n/m")'
         ws[f'{CAGR[2]}{r}'] = f'=IFERROR(({A[2025]}{r}/{A[2015]}{r})^(1/10)-1,"n/m")'
-        ws[f'{CAGR[3]}{r}'] = f'=IFERROR(({A[2025]}{r}/{A[2011]}{r})^(1/14)-1,"n/m")'
+        ws[f'{CAGR[3]}{r}'] = f'=IFERROR(({A[2025]}{r}/{A[2006]}{r})^(1/19)-1,"n/m")'
         for c in CAGR: ws[f'{c}{r}'].number_format = '0%;\\(0%\\);"n/m"'
     elif row.key in CAGR_A:
         ws[f'{CAGR[0]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2027, 2032))}),"n/m")'
         ws[f'{CAGR[1]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2021, 2026))}),"n/m")'
         ws[f'{CAGR[2]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2016, 2026))}),"n/m")'
-        ws[f'{CAGR[3]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2011, 2026))}),"n/m")'
+        ws[f'{CAGR[3]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2006, 2026))}),"n/m")'
         for c in CAGR: ws[f'{c}{r}'].number_format = NF['pct']
     t = LABEL_SOURCES.get(row.key)
     if t: comment(ws.cell(r, 2), t)
 
-REL = 'Source: Woodward earnings releases (Form 8-K Item 2.02, Ex. 99.1) — '
+K = 'Source: Federal Signal Forms 10-K / 10-Q (SEC EDGAR, CIK 277509) — '
+REL = 'Source: Federal Signal earnings releases (Ex. 99.1 to each 10-Q / 10-K; Form 8-K Item 2.02 for FY2008) — '
 LABEL_SOURCES = {
-    'aero_coem': ('Source: Woodward Forms 10-Q / 10-K, revenue note "Disaggregation of revenue" (sales by primary market, from FY2019; Q4 = fiscal year (10-K) − nine months (Q3 10-Q)). '
-                  'Commercial / defense "aftermarket" renamed "services" in FY2025.'),
-    'ind_pg': ('Source: Forms 10-Q / 10-K revenue note. Power generation / transportation / oil & gas introduced in the FY2023 10-K: FY2021–22 annual from the FY2023 10-K, FY2023 quarters from '
-               'the FY2024 10-Q comparatives (latest filing presenting the period); FY2023+ as reported. FY2021–22 quarters on the legacy basis only (memo rows).'),
-    'aero_oi': REL + 'segment net sales and earnings schedule (as originally reported; FY2018 restated in the FY2019 release for the pension-cost reclassification — memo row).',
-    'ns_gaap': REL + 'segment schedule ("Nonsegment expenses"); FY2018+ adjusting items from the "Reconciliation of Net Earnings to Adjusted Net Earnings" tables.',
-    'is_rev': REL + 'condensed consolidated statements of earnings, as originally reported (FY2016 and FY2018 cost-line reclassifications in the following year\'s release are not recast).',
-    'd_dda': REL + 'Reconciliation of Net Earnings to EBITDA (depreciation expense; amortization of intangible assets).',
-    'o_pub': REL + 'Reconciliation of Net Earnings to EBIT and Adjusted EBIT (published from Q2 FY2018).',
-    'e_pub': REL + 'Reconciliation of Net Earnings / EPS to Adjusted Net Earnings / Adjusted EPS (published from Q2 FY2018).',
-    'r_gebit_pub': REL + 'Reconciliation of Net Earnings to EBIT and EBITDA (published throughout).',
-    'cf_ni': ('Source: release condensed cash-flow statements (year to date; discrete quarters derived, Q4 = FY − 9M); D&A from the EBITDA reconciliation; '
-              'share-based compensation and deferred income taxes from the 10-K / 10-Q (XBRL, as first filed).'),
-    'bs_cash': REL + 'condensed consolidated balance sheets (period ends); shares outstanding = shares issued − treasury shares (XBRL).',
-    'ppa_cons': 'Source: FY2018 10-K Note 4 (L\'Orange, preliminary); Q3 FY26 10-Q Note 10 (Safran electro-mechanical actuation, Jul-2025; Valve Research, Apr-2026).',
-    'sh_basic': REL + 'statements of earnings (weighted average shares). No stock splits since the 3-for-1 split of Feb-2008.',
-    'ds_total': 'Source: release balance sheets; FY2025 10-K Note 15 and Q3 FY26 10-Q Note 15 (debt); 8-Ks of 28-May-2026 (revolver, term loan) and 21-Aug-2026 (Series U/V/W notes).',
-    'dv_hdr': 'Source: Q3 FY26 10-Q Note 10 (pilot controls held for sale; ONTIC agreement 15-Apr-2026); 8-K 21-Sep-2026 (Santa Clarita, Item 2.05).',
+    'esg_ord': REL + 'group results tables (total orders, backlog); 2006–2012 annual from the 10-K MD&A group tables. Q4 = fourth-quarter release three-month column.',
+    'esg_rev': K + 'segment note / MD&A group tables (net sales, operating income), as originally reported; Q1–Q3/15 from the 2016 10-Q comparatives (Fire Rescue re-presented as discontinued). '
+               'Groups: Environmental Solutions (Environmental Products to 2006); Safety and Security Systems (Safety Products to 2006).',
+    'esg_aeb': REL + 'segment adjusted EBITDA reconciliations (published from Q1-17).',
+    'frg_rev': K + 'segment notes as originally reported: Fire Rescue (Bronto, E-One to 2008), Tool (to 2007), Federal Signal Technologies (2009–2011).',
+    'corp': K + 'derived as consolidated operating income − Σ group operating income; the segment note showed "Corporate expenses / Corporate and eliminations" to 2023 (check row).',
+    'is_rev': K + 'consolidated statements of operations, as originally reported (Q1–Q3/15 restated comparatives; Q4 from the fourth-quarter release). Period notes are in the cell comments of this row.',
+    'd_dda': K + 'cash-flow statements (year to date; discrete quarters derived), = the D&A line of the adjusted EBITDA reconciliation.',
+    'd_acq': REL + 'adjusted EBITDA reconciliations (from FY2013 annual / Q1-17 quarterly); otherwise the pre-tax items of the adjusted EPS reconciliation (2014–2016 quarters). Labels in cell comments.',
+    'r_pub': REL + 'Reconciliation of net income to adjusted EBITDA (quarterly from Q1-17; FY2013–16 from the total debt / adjusted EBITDA tables).',
+    'e_pub': REL + 'Adjusted net income and EPS reconciliations (from Q1-13; Q1–Q3/13 per share only).',
+    'cf_ni': K + 'statements of cash flows (year to date, as originally reported; discrete quarters derived, Q4 = FY − 9M).',
+    'bs_cash': K + 'balance sheets (period ends, as originally reported); shares outstanding = shares issued − treasury shares (balance-sheet captions / XBRL).',
+    'ppa_cons': 'Source: FY2025 10-K Note 2 (New Way, Hog — preliminary allocations).',
+    'sh_basic': K + 'statements of operations (weighted average shares); FY2006–08 from the 10-K Note 1 text and FY2009–11 from the EPS note table (basic = diluted). No stock splits in the period.',
+    'ds_total': 'Source: balance sheets; Q3-26 10-Q Note 5 and FY2025 10-K (2025 Credit Agreement, 29-Oct-2025).',
+    'm_hdr': 'Source: FY2025 10-K Note 2; Q3-26 10-Q Notes 2 and 14; 8-Ks of 25-Sep-2025 (New Way deck), 1-Dec-2025, 18-Dec-2025 and 16-Jan-2026.',
 }
 CELL_COMMENTS = {}
 def comments_setup():
-    a18 = A[2018]
-    CELL_COMMENTS['aero_oi'] = {a18: 'FY2018 as originally reported ($301.8m). Restated to $308.6m in the FY2019 release (pension-cost reclassification, ASU 2017-07) — see memo row.'}
-    CELL_COMMENTS['ind_oi'] = {a18: 'FY2018 as originally reported ($47.9m); restated to $49.9m in the FY2019 release (ASU 2017-07). Includes L\'Orange purchase-accounting charges (adjusted out).'}
-    CELL_COMMENTS['is_cogs'] = {A[2016]: 'FY2016 as originally reported; the FY2017 release shows $1,484.0m (cost of goods sold) / $174.0m (SG&A) after a reclassification.',
-                                A[2023]: 'FY2023 total from the Q4 FY23 release; Σ quarters as first reported differs by $1.4m (COGS ↔ R&D reclassification within the year).'}
-    CELL_COMMENTS['ind_pg'] = {A[2021]: 'Recast basis from the FY2023 10-K (prior-year comparatives).', A[2022]: 'Recast basis from the FY2023 10-K.'}
+    CELL_COMMENTS['is_disc'] = {A[2008]: 'FY2008: Tool Group and E-One sold / discontinued ($126.9m loss).', A[2012]: 'FY2012: FSTech Group (sold Nov-2012) and other businesses ($49.5m loss).',
+                                A[2010]: 'FY2010: includes the discontinued Riverchase and financial-services activities.'}
+    CELL_COMMENTS['gm_rev'] = {A[2008]: 'As reported: FY2007 included the Tool Group (discontinued in the FY2008 10-K). Like-for-like growth is in the row below.',
+                               A[2012]: 'FY2011 as first reported included FSTech; see the comparative-basis row.',
+                               A[2015]: 'FY2014 as first reported included Fire Rescue (Bronto), moved to discontinued operations in the FY2015 10-K.'}
+    CELL_COMMENTS['tax'] = {}
 
 DEFS = {}
 def defs_setup():
     q = lambda y, n: QC[(y, n)].c
-    DEFS['o_def'] = {
-        'C': ('FY2011–17: no adjusted measures published (EBIT / EBITDA / FCF only) — adjusted = GAAP EBIT; segments Aerospace / Energy (Energy renamed Industrial in FY2016)',
-              'Woodward\'s releases in FY2011–17 reconcile net earnings to EBIT and EBITDA but publish no adjusted EBIT or EPS (FY2016 special charges of $16m were discussed in the text only).'),
-        A[2018]: ('FY2018+: adjusted EBIT / EBITDA / EPS published (from Q2 FY2018): restructuring, L\'Orange acquisition & purchase accounting, Duarte move, US tax reform',
-                  'Q2 FY2018 release onward; FY2018 annual from the Q4 FY2018 release.'),
-        A[2020]: ('FY2020: gains on property / business sales, cross-currency swap gain, Hexcel merger costs and COVID restructuring adjusted out', None),
-        q(2022, 1): ('FY2022+: business development, non-recurring matters, product rationalization, inventory / collections charges adjusted out', None),
-        q(2026, 1): ('FY2026: restructuring (China OH wind-down, servo-valve transition) only', None),
+    DEFS['r_def'] = {
+        'C': ('2006–2012: no adjusted EBITDA published (EBITDA quoted in the 2010 releases only) — model = EBITDA; adjusting items nil',
+              'Federal Signal began publishing adjusted EBITDA in the FY2013 leverage table (total debt / adjusted EBITDA, trailing twelve months).'),
+        A[2013]: ('FY2013–16: adjusted EBITDA published annually (leverage tables: + restructuring, acquisition costs, purchase accounting, debt settlement); quarters = model (EPS-bridge items)', None),
+        q(2017, 1): ('Q1-17+: quarterly adjusted EBITDA reconciliation (+ acquisition & integration, restructuring, executive severance, purchase accounting, hearing-loss and pension settlement charges)', None),
+        q(2020, 1): ('2020–21: coronavirus-related expenses added back', None),
+        q(2023, 2): ('2023: environmental remediation costs added back', None),
+        q(2026, 3): ('Q3-26: charges associated with previously discontinued operations added back (the Q1-26 $1.0m was not; to be recast)',
+                     'Q3-26 release note (a): Q1-26 charges of $1.0m were not excluded from adjusted EBITDA in Q1 / 1H-26; prior periods will be recast. The model keeps the figures as published.'),
     }
     DEFS['e_def'] = {
-        'C': ('FY2011–17: no adjusted EPS published — adjusted = GAAP diluted EPS (flag)', None),
-        A[2018]: ('FY2018+: adjusted EPS = GAAP diluted EPS + items net of tax (company definition); FY2018–19 incl. US tax-reform transition impact', None),
-        q(2025, 1): ('FY2025: product rationalization gains and German corporate tax-rate change adjusted out', None),
+        'C': ('2006–2012: no consistent adjusted EPS (2010–12 releases quoted per-share items for restructuring / debt settlement only) — adjusted = GAAP continuing EPS (flag)', None),
+        q(2013, 1): ('2013: adjusted EPS from continuing operations; items shown net of tax (debt settlement, restructuring, special tax items incl. the $102m valuation-allowance release)', None),
+        q(2014, 1): ('2014+: pre-tax items with a recomputed adjusted income tax (special tax items excluded); company definition', None),
+        q(2026, 3): ('Q3-26: + charges associated with previously discontinued operations', None),
     }
 def write_defs(ws, row):
     for c, (txt, cm) in DEFS[row.key].items():
@@ -296,24 +292,25 @@ def write_header(ws):
         clone_row_style(ws, r, r, 2, CI(LASTC))
     ws[f'{NOTE}1'] = 'SCENARIO SWITCH ▼ (Bull / Base / Bear) — drives all scenario-linked forecast drivers'
     ws[f'{NOTE}2'] = 'Base'
-    comment(ws[f'{NOTE}2'], 'Scenario toggle. Choose Bull / Base / Bear. Drives: FY26 sales-growth and adjusted-EPS guidance end-points (high / mid / low), '
-            'Q4/26E buybacks, 2027E–2031E primary-market sales growth, segment margins, M&A spend and the leverage target for 2027E+ buybacks '
+    comment(ws[f'{NOTE}2'], 'Scenario toggle. Choose Bull / Base / Bear. Drives: FY26 net-sales and adjusted-EPS guidance end-points (high / mid / low), '
+            'Q4/26E buybacks, 2027E–2031E group sales growth and segment margins, M&A spend and the leverage target for 2027E+ buybacks '
             f'(scenario table {SL}:{SNOTE}).')
     from openpyxl.worksheet.datavalidation import DataValidation
     dv = DataValidation(type='list', formula1='"Bull,Base,Bear"', allow_blank=False); ws.add_data_validation(dv); dv.add(f'{NOTE}2')
-    ws['B2'] = 'Woodward, Inc. (NASDAQ: WWD) — 3-Statement Financial Model'
-    ws['B3'] = ('US GAAP as reported · USD millions (per-share data in USD; shares in millions) · Fiscal years ended 30 September (2026 = Oct-2025 – Sep-2026) · '
-                'Source: Woodward Forms 10-K / 10-Q, Form 8-K earnings releases (Ex. 99.1) and deal / financing 8-Ks, SEC EDGAR (CIK 108312); XBRL company facts; '
-                'investor-relations releases at woodward.com are the same documents as filed on EDGAR')
-    ws['B4'] = ('Basis notes: as originally reported (FY2016 and FY2018 reclassifications not recast; FY2018 restated segment earnings in memo rows). Segments: Aerospace, Industrial '
-                '(Energy to FY2015). Acquisitions: L\'Orange Jun-18, Safran EMA Jul-25, Valve Research Apr-26; divestitures: renewable power systems May-20, product lines FY25, '
-                'pilot controls (ONTIC, pending FY27). Q4/26E calibrated to FY26 sales-growth and adjusted-EPS guidance (29-Jul-2026).')
+    ws['B2'] = 'Federal Signal Corporation (NYSE: FSS) — 3-Statement Financial Model'
+    ws['B3'] = ('US GAAP as originally reported · USD millions (per-share data in USD; shares in millions) · Calendar fiscal year · Source: Federal Signal Forms 10-K / 10-Q and '
+                'the earnings releases filed as their Ex. 99.1 (Form 8-K for FY2008), deal 8-Ks, SEC EDGAR (CIK 277509); XBRL company facts. The investor-relations site '
+                'is not used; its releases are the same documents as filed on EDGAR')
+    ws['B4'] = ('Basis notes: as originally reported; Q1–Q3/15 from the 2016 10-Q comparatives (Fire Rescue / Bronto discontinued in the FY2015 10-K) and the 2021 quarters with '
+                'amortization reclassified out of SEG&A. Discontinued: Tool 2008, FSTech 2012, Fire Rescue 2015–16. Acquisitions: Westech Jan-16, Joe Johnson Equipment Jun-16, TBEI Jun-17, '
+                'MRL Jul-19, OSW Feb-21, Ground Force and Deist 2021, TowHaul 2022, Trackless and Blasters 2023, Standard 2024, Hog Feb-25, New Way Nov-25, Kinloch Dec-25, Mega Jan-26, '
+                'Western Technology Jul-26, GVS Oct-26. Q4/26E calibrated to the FY26 outlook (29-Oct-2026).')
     ws[f'{CAGR[0]}5'] = 'Forecast'
     for c in CAGR[1:]: ws[f'{c}5'] = 'Historical'
     ws['B6'] = '(USDm)'
     for col in COLS: ws[f'{col.c}6'] = col.label
     ws[f'{NOTE}6'] = 'Modelling Notes'
-    for c, a, b in zip(CAGR, ['5Y CAGR', '5Y CAGR', '10Y CAGR', '14Y CAGR'], ["26-'31", "20-'25", "15-'25", "11-'25"]):
+    for c, a, b in zip(CAGR, ['5Y CAGR', '5Y CAGR', '10Y CAGR', '19Y CAGR'], ["26-'31", "20-'25", "15-'25", "06-'25"]):
         ws[f'{c}6'] = a; ws[f'{c}7'] = b
 
 def set_columns(ws):
@@ -378,7 +375,7 @@ def scenario_snapshots():
     import other_sheets as osh
     snaps = {}
     for scen in ('Bull', 'Bear'):
-        p = os.path.join(BASE, f'WWD_{scen}.xlsx')
+        p = os.path.join(BASE, f'FSS_{scen}.xlsx')
         wb = openpyxl.load_workbook(OUT); wb['Model'][f'{NOTE}2'] = scen; wb.save(p)
         res = recalc(p); print(scen, res.get('status'), res.get('total_errors'))
         v = openpyxl.load_workbook(p, data_only=True)['Bull-Base-Bear']
@@ -393,7 +390,7 @@ def scenario_snapshots():
 NS = 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'
 def inject_values(src_xlsx, recalc_xlsx):
     """Store cached formula results (from a LibreOffice-recalculated copy) in the openpyxl file, so the workbook reads correctly in any
-    viewer; fullCalcOnLoad stays set so Excel recalculates on open. Same approach as the LECO / ESAB finishing step."""
+    viewer; fullCalcOnLoad stays set so Excel recalculates on open."""
     import zipfile, shutil, openpyxl
     from lxml import etree
     wbv = openpyxl.load_workbook(recalc_xlsx, data_only=True)
@@ -436,7 +433,7 @@ def inject_values(src_xlsx, recalc_xlsx):
 
 def store_values():
     import shutil
-    p = os.path.join(BASE, 'WWD_recalc.xlsx')
+    p = os.path.join(BASE, 'FSS_recalc.xlsx')
     shutil.copy(OUT, p)
     res = recalc(p); print('recalc', res.get('status'), res.get('total_errors'))
     inject_values(OUT, p)

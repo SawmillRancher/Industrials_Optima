@@ -263,6 +263,31 @@ def do_ngaap(p, block='rel'):
             put(p, f'ei_{c.lower()}', tot[c]); put(p, f'ei_{c.lower()}_lab', '; '.join(labs[c]))
         put(p, 'e_start_label', a.get('start_label'))
 
+def op_items(p):
+    """adjusting items inside operating income used by the model bridges: the adjusted EBITDA reconciliation items where the company
+    published adjusted EBITDA, else the pre-tax items of the adjusted EPS reconciliation, else none (adjusted = GAAP)."""
+    src = 'none'
+    if x_(p, 'ebitda_pub') is not None: src = 'ea'
+    elif x_(p, 'e_pub') is not None and not x_(p, 'e_items_net'): src = 'ei'
+    for c in ('acq', 'restr', 'stepup', 'other'):
+        put(p, f'oa_{c}', x_(p, f'{src}_{c}') if src != 'none' else 0.0)
+        put(p, f'oa_{c}_lab', x_(p, f'{src}_{c}_lab') if src != 'none' else '')
+    put(p, 'oa_src', src)
+    if x_(p, 'e_pub') is not None and not x_(p, 'e_items_net'):
+        put(p, 'e_preitems', sum(N(x_(p, f'ei_{c}')) for c in ('acq', 'restr', 'stepup', 'other', 'pension', 'debt')))
+        put(p, 'e_preitems_lab', '; '.join(x for x in (x_(p, f'ei_{c}_lab') for c in ('acq', 'restr', 'stepup', 'other', 'pension', 'debt')) if x))
+        put(p, 'ea_nonop', N(x_(p, 'ei_pension')) + N(x_(p, 'ei_debt')) if not x_(p, 'pension_in_oi') else N(x_(p, 'ei_debt')))
+        labs = '; '.join(x for x in (x_(p, 'ei_pension_lab') if not x_(p, 'pension_in_oi') else '', x_(p, 'ei_debt_lab')) if x)
+        put(p, 'ea_nonop_lab', labs)
+        put(p, 'e_taxd', N(x_(p, 'ei_taxd')))
+    elif x_(p, 'e_items_net'):
+        put(p, 'e_preitems', 0.0)
+        tot = sum(N(x_(p, f'ei_{c}')) for c in ('acq', 'restr', 'stepup', 'other', 'pension', 'debt', 'taxd'))
+        put(p, 'e_netitems', tot)
+        put(p, 'e_netitems_lab', '; '.join(x for x in (x_(p, f'ei_{c}_lab') for c in ('acq', 'restr', 'stepup', 'other', 'pension', 'debt', 'taxd')) if x))
+    else:
+        put(p, 'e_preitems', 0.0)
+
 def adj_basis(p):
     """flags which adjusted measures the company published for the period."""
     fy, q = fyq(p)
@@ -359,6 +384,10 @@ def do_bs(p):
     if b.get('sh_issued') is not None and b.get('sh_treasury') is not None: put(p, 'bs_shares', b['sh_issued'] - b['sh_treasury'])
     elif (r.get('x') or {}).get('sh_out') is not None: put(p, 'bs_shares', r['x']['sh_out'])
     put(p, 'debt_tot', std + N(b.get('ltd')))
+    put(p, 'bs_ppex', N(b.get('ppe')) + N(b.get('rental')))
+    d = MAN['debt']
+    if p == 'Q3-26':      # split of the 30-Sep-2026 debt (Q3-26 10-Q Note 5): term loan; revolver + finance leases net of issuance costs
+        put(p, 'debt_tl', d['tl']); put(p, 'debt_rev', std + N(b.get('ltd')) - d['tl'])
 
 def do_misc(p):
     r = REC.get(p)
@@ -389,6 +418,7 @@ def run():
         seg_derived(p)
         if q == 4: do_ngaap(p, 'rel_q4')
         else: do_ngaap(p, 'rel')
+        op_items(p)
         adj_basis(p)
     do_cf()
     return DATA

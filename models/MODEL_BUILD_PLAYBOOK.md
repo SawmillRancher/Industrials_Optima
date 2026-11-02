@@ -1,15 +1,15 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, FSS). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
 - **Fill-in docs:** [`templates/NEW_MODEL_README_TEMPLATE.md`](templates/NEW_MODEL_README_TEMPLATE.md) and [`templates/EXTRACTION_SCHEMA_TEMPLATE.md`](templates/EXTRACTION_SCHEMA_TEMPLATE.md).
 - **QA tools:** [`tools/inspect_model.py`](tools/inspect_model.py) (formula errors and non-zero check rows), [`tools/cyc.py`](tools/cyc.py) (circular references) and [`tools/residue_scan.py`](tools/residue_scan.py) (leftover template-company text in values and comments).
 - **Per-model lessons:** [`MODEL_LESSONS.md`](MODEL_LESSONS.md) records each model's specific nuances (basis, bridges, data quirks, deals, calibration, valuation) and reusable rules. Read the entries for the most similar companies before you start.
-- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`) and WWD (`wwd_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
+- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`), WWD (`wwd_build`) and FSS (`fss_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
 
 ---
 
@@ -275,7 +275,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -290,6 +290,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
+- **Releases filed as 10-Q / 10-K exhibits:** if 8-K Item 2.02 filings are missing, check the 10-Q / 10-K Ex. 99 before concluding there are no releases. [FSS]
+- **Column resolution:** take column positions from the header row that carries the years ("Change" headings may sit on another row), then re-express each year against the document's own fiscal year, so a 10-K's "2024 vs 2023" MD&A table is not read as current-year data. [FSS]
 
 ### 5.2 Basis
 - **Segment re-presentation with a short recast history:** model an aggregate the re-presentation doesn't change and keep the old split as memo. Prove where an absorbed segment went using the restated comparative Δ. [RBA, TFI]
@@ -297,6 +299,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Disc-ops recast published only in totals:** scale minor opex lines to the restated totals, with SG&A as the plug, and comment the cells. [STE]
 - **After a spin:** start the BS at the first post-spin balance sheet even if the P&L uses earlier recast comparatives, and fill earlier y/y with company-reported change % memos. Spin-cos put carve-out (Form 10) years in the main columns, with the former parent's segment history as a flagged memo under the parent's CIK. [XPO, ESAB]
 - **Half-year reporters:** carry quarterly revenue as "1st / 2nd quarter of the half" memo rows inside the half-year columns, with a Σ check. [RMS, BC]
+- **Late-year reclassification:** when a 10-K re-presents a business (discontinued operations) or a cost line after the Q3 10-Q, take that year's quarters from the next year's 10-Q comparatives so Σ quarters = year, and comment the cells. [FSS]
 - **Two builds of one company:** diff their dated facts (split dates, deconsolidation quarter, label cut-overs) and resolve each from the filing. [LECO]
 
 ### 5.3 Operating build
@@ -333,6 +336,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   [RBA, LOAR, VMC, TDY]
 - **Rebuild a company measure exactly as published,** even if it isn't tax-effected or excludes SBC. Add a tax-effected memo variant if useful. [KRMN, TDY, VMC, MLM]
 - **Adjust only for items the company itself quantified,** and list the items it named but didn't adjust. Keep model items and company items distinguishable within a row via per-period comments, and use a labelled plug row only for definitional drift or overlapping company measures in published periods. [ODFL, BC, HEI, CHRW, UBER]
+- **Separate item sets per bridge:** when the adjusted-EBITDA and adjusted-EPS reconciliations treat an item differently (purchase-accounting depreciation step-up is in D&A for EBITDA but added back in EPS), give each bridge its own reconciliation's items. [FSS]
 - **Store each period's company adjusting-item wording and amounts as a comment** on the total-items cell, so the category rows can stay few without losing the audit trail. [WAB]
 - **Use the company's own share count** (adjusted / fully diluted in loss quarters, unrounded) in the adjusted EPS bridge. [WAB, XPO]
 - **Don't force FY = Σ quarters** for adjusted measures the company computes annually (annual tax effect, FY cc rates), or for a measure whose definition changed mid-year. Exempt them from the quarter-sum check with a comment. [ONON, VMC]
@@ -362,6 +366,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 
   [TMO, STE, UBER, CTAS, CSGP, DHR, ONON, RBA]
 - **Dividends = DPS × beginning shares,** so they aren't circular with plug-driven buybacks. [TMO, CTAS, CSGP]
+- **Acquisition just before year-end:** set working-capital days on the latest quarter-end balances and LTM (or pro forma) sales; the year-end balances carry the target's working capital against a month of its sales. [FSS]
 - **Deal year:** size working capital, leverage, the buyback floor and EV multiples on pro forma full-year revenue and Adj. EBITDA (memo rows), and exclude acquired NWC from ΔNWC. Check whether acquired intangibles are tax-deductible; if not, add a DTL unwind. [MLM, CSGP, DHR, CTAS, TMO, UBER, ESAB, KRMN]
 - **Choose the buyback plug to fit the capital structure:**
   - net-debt floor for levered companies;

@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -12,13 +12,13 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 
 | Situation | Read |
 |---|---|
-| Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
+| Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW, FSS |
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
-| Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
-| Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
+| Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB, FSS (orders / backlog by group) |
+| Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP, FSS |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
-| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
+| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM, FSS (three discontinued groups) |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
@@ -210,6 +210,24 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [bridges] Store the company's line-item wording and amounts per period as a comment on the total-adjustments cell. Category rows can then stay few while the audit trail is kept.
   - [bridges] Narrative-only per-share bridges: input $/share as published (split-adjusted) and convert at diluted shares in a separately labelled row.
   - [build] Without published orders, derive implied orders from the backlog roll-forward and label what it includes (FX, acquired backlog).
+
+## Machinery & specialty vehicles
+
+### FSS — Federal Signal Corporation (MLM template via the WWD kit; US GAAP as originally reported / USD m / calendar FY)
+- **Coverage & basis:** FY2006–12 annual, Q1/13–Q3/26 quarterly, Q4/26E calibrated, 2027E–31E. As originally reported, with one rule: when the following year's 10-Q re-presents a quarter, the quarter takes that comparative, so a year's quarters match its annual column. That applied to Q1–Q3/15 (Fire Rescue / Bronto moved to discontinued operations in the FY2015 10-K, after the Q3 10-Q) and to the 2021 quarters (amortization split out of SEG&A in the FY2021 10-K). Annual columns keep Tool (to 2007), FSTech (2009–11) and Fire Rescue (to 2014) as legacy groups inside the totals; a "y/y vs the prior-year comparative in this filing" row gives like-for-like growth. Q4 comes from the Q4 release three-month column. CIK 277509.
+- **Operating build:** two groups (Environmental Solutions, Safety and Security Systems): orders = sales × book-to-bill, backlog roll-forward, net sales × segment operating margin (after amortization and the group's acquisition costs). Corporate is derived (operating income − Σ groups) because the segment note stopped showing it in 2024; it is checked against the published line to 2023. Segment adjusted EBITDA (from Q1-17) is a memo. The rental fleet is depreciated inside D&A but bought inside operating cash flow, so the forecast carries a separate rental-investment line and a combined "properties, equipment and rental fleet" balance.
+- **Bridges & definitions:** (1) Net income → EBITDA → adjusted EBITDA, company definition: published annually from FY2013 (leverage tables) and quarterly from Q1-17; 2014–16 quarters use the adjusted-EPS items; 2006–12 = EBITDA. (2) Operating income → adjusted EBIT (model). (3) Continuing income → adjusted EPS (company, from Q1-13): the EPS reconciliation adds back purchase accounting including the depreciation step-up and pension / debt settlement charges, while the EBITDA reconciliation excludes the step-up inside D&A, so each bridge uses its own reconciliation's items. Adjusted tax is derived from the published adjusted net income; 2013 items were shown net of tax and Q1–Q3/13 per share only. The 2017 pension settlement sat inside operating income. Q3-26 added "charges associated with previously discontinued operations" and said Q1-26 ($1.0m) was not excluded; the model keeps the published figures.
+- **Data quirks & corrections:** Federal Signal files its earnings releases as Ex. 99.1 to the 10-Q / 10-K, not on Form 8-K (three Item 2.02 8-Ks in 20 years; Q3/14 is Ex. 99.2). 10-K MD&A tables put a "Change" heading on a separate header row and include prior-year comparison tables ("2024 vs 2023"), so columns are resolved from the year row and re-expressed against the document's fiscal year. FY2006–16 cash-flow statements split continuing and discontinued cash flows; the model's CFO / CFI / CFF are the continuing figures plus a derived discontinued line. FY2015 cash-flow cash includes $5.0m held by Fire Rescue. FY2006–11 share counts come from the 10-K note text and EPS tables (basic = diluted). FY2009 / FY2011 XBRL revenue was first tagged in restated comparatives. No corrections were needed; check_data runs 1,344 checks.
+- **Deals & special blocks:** New Way (25-Nov-2025, $424m incl. earn-out; PPA in the model; $15–20m synergies by 2028), Hog (Feb-25), Mega (Jan-26), Western Technology (Jul-26) are inside actuals. Global Vacuum Systems (~$29m, 28-Oct-2026, after the last 10-Q) enters Q4/26E cash flow and the balance sheet with an assumed allocation flagged "replace with the 10-K". M&A lever $150m p.a. at 1.6x EV / sales (New Way ~1.7x, Mega ~1.1x).
+- **Calibration & scenarios:** FY26 outlook from the Q3-26 release (EDGAR): net sales $2.61–2.64bn (uniform growth Δ on both groups) and adjusted EPS $5.20–5.32 (uniform segment-margin Δ through required operating income = (EPS × shares − 9M) ÷ (1 − t) − items + interest + other expense). Capex guidance ($45–55m, FY25 release) is an information row. Q4/26E corporate is the 9M run-rate because Q4-25 carried $13.3m of New Way deal costs.
+- **Balance sheet, cash & capital:** working-capital days come from the 30-Sep-2026 balances on LTM sales, because the 31-Dec-2025 balances carry New Way's receivables and inventory against one month of its sales (year-end basis gave a Q4/26E CFO of $8m). Term loan $375m held (prepayable, refinanced at the Oct-2030 maturity); revolver plugs to $60m minimum cash with a $1.1bn headroom memo. Buybacks plug to a net debt / adjusted EBITDA target (1.0x / 0.75x / 0.5x, assumption; the company states none). Dividends = DPS × opening shares.
+- **Valuation:** $114.00 = September-2026 average repurchase price (Q3-26 10-Q Part II Item 2); Form 4 sales on 3/4-Aug-2026 were ~$130. DCF NOPAT on full-cost adjusted EBIT less cash adjusting items with total D&A added back (recent intangibles and goodwill are tax-deductible); capex, rental fleet and M&A deducted in 2027E–31E; 2026E is the base year so net debt is taken at 31-Dec-2026.
+- **Reusable lessons:**
+  - [sources] If 8-K Item 2.02 filings are missing, look for the earnings release as an exhibit to the 10-Q / 10-K before concluding there are no releases.
+  - [extraction] Resolve columns from the header row that carries the years, and re-express each year against the document's fiscal year; multi-row headers and prior-year comparison tables otherwise shift whole columns.
+  - [basis] When a 10-K reclassifies a business (or a cost line) after the Q3 10-Q, take that year's quarters from the next year's 10-Q comparatives so Σ quarters = year.
+  - [bridges] When the adjusted-EBITDA and adjusted-EPS reconciliations treat an item differently (purchase-accounting depreciation step-up), give each bridge its own items rather than one shared item row.
+  - [BS/CF] After a large acquisition closes just before year-end, set working-capital days on the latest quarter-end balances and LTM (or pro forma) sales, not on the year-end balances.
 
 ## Construction materials
 
