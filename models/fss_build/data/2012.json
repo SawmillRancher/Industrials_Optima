@@ -64,17 +64,106 @@
   },
   "cf": {
    "ytd_months": 12,
-   "cfo": 23.2,
+   "dda": 13.2,
+   "sbc": 2.6,
+   "deftax": -4.8,
+   "cfo": 49.2,
    "capex": -13.0,
    "capex_disp": 1.8,
    "acq": 0.0,
    "divest": 82.1,
-   "rev_net": -67.3,
-   "debt_repay": -6.9,
+   "cfi": 69.9,
+   "rev_net": -182.8,
+   "debt_proc": 215.0,
+   "debt_repay": -106.4,
    "div": 0.0,
    "stock_iss": 0.0,
+   "cff": -71.8,
+   "fx": -0.2,
    "net": 20.2,
+   "beg": 9.5,
+   "end": 29.7,
    "lines_raw": [
+    [
+     "Net loss",
+     -27.5
+    ],
+    [
+     "Loss on discontinued operations and disposal",
+     49.5
+    ],
+    [
+     "Gain on joint venture",
+     0.0
+    ],
+    [
+     "Restructuring charges, net of cash payments",
+     0.9
+    ],
+    [
+     "Depreciation and amortization",
+     13.2
+    ],
+    [
+     "Debt settlement charges",
+     2.5
+    ],
+    [
+     "Stock-based compensation expense",
+     2.6
+    ],
+    [
+     "Pension expense, net of funding",
+     -5.7
+    ],
+    [
+     "Provision for doubtful accounts",
+     0.6
+    ],
+    [
+     "Deferred income taxes, including change in valuation allowance",
+     -4.8
+    ],
+    [
+     "Accounts receivable",
+     8.7
+    ],
+    [
+     "Inventories",
+     -14.5
+    ],
+    [
+     "Other current assets",
+     0.5
+    ],
+    [
+     "Accounts payable",
+     2.6
+    ],
+    [
+     "Customer deposits",
+     -1.5
+    ],
+    [
+     "Accrued liabilities",
+     16.4
+    ],
+    [
+     "Income taxes",
+     8.6
+    ],
+    [
+     "Other",
+     -2.9
+    ],
+    [
+     "Net cash provided by continuing operating activities",
+     49.2
+    ],
+    [
+     "Net cash (used for) provided by discontinued operating activities",
+     -26.0
+    ],
     [
      "Net cash provided by operating activities",
      23.2
@@ -100,16 +189,36 @@
      -1.0
     ],
     [
-     "Borrowing activity, net",
-     -67.3
+     "Net cash provided by (used for) continuing investing activities",
+     69.9
+    ],
+    [
+     "Net cash used for discontinued investing activities",
+     0.0
+    ],
+    [
+     "Net cash provided by (used for) investing activities",
+     69.9
+    ],
+    [
+     "(Decrease) increase in revolving lines of credit",
+     -173.3
+    ],
+    [
+     "(Decrease) increase in short-term borrowings, net",
+     -9.5
+    ],
+    [
+     "Proceeds from issuance of long-term borrowings",
+     215.0
+    ],
+    [
+     "Payments on long-term borrowings",
+     -99.5
     ],
     [
      "Payments of debt financing fees",
      -6.9
-    ],
-    [
-     "Net cash used for discontinued financing activities",
-     -0.9
     ],
     [
      "Cash dividends paid to shareholders",
@@ -120,12 +229,36 @@
      0.0
     ],
     [
-     "All other, net",
-     2.2
+     "Other, net",
+     2.4
+    ],
+    [
+     "Net cash (used for) provided by continuing financing activities",
+     -71.8
+    ],
+    [
+     "Net cash used for discontinued financing activities",
+     -0.9
+    ],
+    [
+     "Net cash (used for) provided by financing activities",
+     -72.7
+    ],
+    [
+     "Effects of foreign exchange rate changes on cash",
+     -0.2
     ],
     [
      "Increase (decrease) in cash and cash equivalents",
      20.2
+    ],
+    [
+     "Cash and cash equivalents at beginning of year",
+     9.5
+    ],
+    [
+     "Cash and cash equivalents at end of year",
+     29.7
     ]
    ]
   },
@@ -733,206 +866,24 @@
    ]
   },
   "grp": {
-   "misaligned": [
-    [
-     "esg",
-     "Net sales",
-     [
-      474.0,
-      427.8,
-      357.8,
-      46.2,
-      70.0
-     ]
-    ],
-    [
-     "esg",
-     "Operating income",
-     [
-      58.2,
-      42.0,
-      24.5,
-      16.2,
-      17.5
-     ]
-    ],
-    [
-     "esg",
-     "Operating margin",
-     [
-      12.3,
-      9.8,
-      6.8,
-      2.5,
-      3.0
-     ]
-    ],
-    [
-     "esg",
-     "Total orders",
-     [
-      469.7,
-      447.9,
-      458.5,
-      21.8,
-      -10.6
-     ]
-    ],
-    [
-     "esg",
-     "Backlog",
-     [
-      199.3,
-      203.6,
-      183.4,
-      -4.3,
-      20.2
-     ]
-    ],
-    [
-     "esg",
-     "Depreciation and amortization",
-     [
-      6.1,
-      5.4,
-      5.2,
-      0.7,
-      0.2
-     ]
-    ],
-    [
-     "ssg",
-     "Net sales",
-     [
-      238.9,
-      240.3,
-      221.4,
-      -1.4,
-      18.9
-     ]
-    ],
-    [
-     "ssg",
-     "Operating income",
-     [
-      26.1,
-      27.9,
-      21.5,
-      -1.8,
-      6.4
-     ]
-    ],
-    [
-     "ssg",
-     "Operating margin",
-     [
-      10.9,
-      11.6,
-      9.7,
-      -0.7,
-      1.9
-     ]
-    ],
-    [
-     "ssg",
-     "Total orders",
-     [
-      236.3,
-      241.9,
-      235.3,
-      -5.6,
-      6.6
-     ]
-    ],
-    [
-     "ssg",
-     "Backlog",
-     [
-      27.2,
-      31.2,
-      31.7,
-      -4.0,
-      -0.5
-     ]
-    ],
-    [
-     "ssg",
-     "Depreciation and amortization",
-     [
-      4.2,
-      4.3,
-      4.4,
-      -0.1,
-      -0.1
-     ]
-    ],
-    [
-     "frg",
-     "Net sales",
-     [
-      138.4,
-      135.1,
-      109.5,
-      3.3,
-      25.6
-     ]
-    ],
-    [
-     "frg",
-     "Operating income",
-     [
-      9.0,
-      8.9,
-      6.6,
-      0.1,
-      2.3
-     ]
-    ],
-    [
-     "frg",
-     "Operating margin",
-     [
-      6.5,
-      6.6,
-      6.0,
-      -0.1,
-      0.6
-     ]
-    ],
-    [
-     "frg",
-     "Total orders",
-     [
-      130.8,
-      136.5,
-      137.6,
-      -5.7,
-      -1.1
-     ]
-    ],
-    [
-     "frg",
-     "Backlog",
-     [
-      79.3,
-      83.6,
-      80.1,
-      -4.3,
-      3.5
-     ]
-    ],
-    [
-     "frg",
-     "Depreciation and amortization",
-     [
-      3.2,
-      2.6,
-      2.5,
-      0.6,
-      0.1
-     ]
-    ]
-   ]
+   "sales_esg": 427.8,
+   "oi_esg": 42.0,
+   "op_m_esg": 9.8,
+   "orders_esg": 447.9,
+   "backlog_esg": 203.6,
+   "dda_esg": 5.4,
+   "sales_ssg": 240.3,
+   "oi_ssg": 27.9,
+   "op_m_ssg": 11.6,
+   "orders_ssg": 241.9,
+   "backlog_ssg": 31.2,
+   "dda_ssg": 4.3,
+   "sales_frg": 135.1,
+   "oi_frg": 8.9,
+   "op_m_frg": 6.6,
+   "orders_frg": 136.5,
+   "backlog_frg": 83.6,
+   "dda_frg": 2.6
   }
  },
  "k2": {
@@ -1175,206 +1126,24 @@
    ]
   },
   "grp": {
-   "misaligned": [
-    [
-     "esg",
-     "Net sales",
-     [
-      536.6,
-      474.0,
-      427.8,
-      62.6,
-      46.2
-     ]
-    ],
-    [
-     "esg",
-     "Operating income",
-     [
-      81.9,
-      58.2,
-      42.0,
-      23.7,
-      16.2
-     ]
-    ],
-    [
-     "esg",
-     "Operating margin",
-     [
-      15.3,
-      12.3,
-      9.8,
-      3.0,
-      2.5
-     ]
-    ],
-    [
-     "esg",
-     "Total orders",
-     [
-      555.6,
-      469.7,
-      447.9,
-      85.9,
-      21.8
-     ]
-    ],
-    [
-     "esg",
-     "Backlog",
-     [
-      218.3,
-      199.3,
-      203.6,
-      19.0,
-      -4.3
-     ]
-    ],
-    [
-     "esg",
-     "Depreciation and amortization",
-     [
-      6.8,
-      6.1,
-      5.4,
-      0.7,
-      0.7
-     ]
-    ],
-    [
-     "ssg",
-     "Net sales",
-     [
-      242.5,
-      238.9,
-      240.3,
-      3.6,
-      -1.4
-     ]
-    ],
-    [
-     "ssg",
-     "Operating income",
-     [
-      32.1,
-      26.1,
-      27.9,
-      6.0,
-      -1.8
-     ]
-    ],
-    [
-     "ssg",
-     "Operating margin",
-     [
-      13.2,
-      10.9,
-      11.6,
-      2.3,
-      -0.7
-     ]
-    ],
-    [
-     "ssg",
-     "Total orders",
-     [
-      251.8,
-      236.3,
-      241.9,
-      15.5,
-      -5.6
-     ]
-    ],
-    [
-     "ssg",
-     "Backlog",
-     [
-      36.4,
-      27.2,
-      31.2,
-      9.2,
-      -4.0
-     ]
-    ],
-    [
-     "ssg",
-     "Depreciation and amortization",
-     [
-      4.5,
-      4.2,
-      4.3,
-      0.3,
-      -0.1
-     ]
-    ],
-    [
-     "frg",
-     "Net sales",
-     [
-      139.4,
-      138.4,
-      135.1,
-      1.0,
-      3.3
-     ]
-    ],
-    [
-     "frg",
-     "Operating income",
-     [
-      3.9,
-      9.0,
-      8.9,
-      -5.1,
-      0.1
-     ]
-    ],
-    [
-     "frg",
-     "Operating margin",
-     [
-      2.8,
-      6.5,
-      6.6,
-      -3.7,
-      -0.1
-     ]
-    ],
-    [
-     "frg",
-     "Total orders",
-     [
-      150.0,
-      130.8,
-      136.5,
-      19.2,
-      -5.7
-     ]
-    ],
-    [
-     "frg",
-     "Backlog",
-     [
-      73.5,
-      79.3,
-      83.6,
-      -5.8,
-      -4.3
-     ]
-    ],
-    [
-     "frg",
-     "Depreciation and amortization",
-     [
-      3.5,
-      3.2,
-      2.6,
-      0.3,
-      0.6
-     ]
-    ]
-   ]
+   "sales_esg": 427.8,
+   "oi_esg": 42.0,
+   "op_m_esg": 9.8,
+   "orders_esg": 447.9,
+   "backlog_esg": 203.6,
+   "dda_esg": 5.4,
+   "sales_ssg": 240.3,
+   "oi_ssg": 27.9,
+   "op_m_ssg": 11.6,
+   "orders_ssg": 241.9,
+   "backlog_ssg": 31.2,
+   "dda_ssg": 4.3,
+   "sales_frg": 135.1,
+   "oi_frg": 8.9,
+   "op_m_frg": 6.6,
+   "orders_frg": 136.5,
+   "backlog_frg": 83.6,
+   "dda_frg": 2.6
   }
  },
  "rel": {
@@ -1811,6 +1580,233 @@
    ]
   }
  },
+ "rel_q4": {
+  "is": {
+   "rev": 217.7,
+   "cogs": 168.0,
+   "gp": 49.7,
+   "sga": 36.1,
+   "restr": 0.6,
+   "oi": 13.0,
+   "int_exp": 5.7,
+   "debt_settle": 0.0,
+   "oth": 0.4,
+   "ebt": 6.9,
+   "tax": -2.0,
+   "cont": 4.9,
+   "disc": -0.1,
+   "ni": 4.8,
+   "eps_b_cont": 0.08,
+   "eps_d_cont": 0.08,
+   "eps_b_disc": 0.0,
+   "eps_d_disc": 0.0,
+   "sh_b": 62.4,
+   "sh_d": 63.0
+  },
+  "grp": {
+   "orders_ssg": 59.8,
+   "backlog_ssg": 31.2,
+   "sales_ssg": 67.1,
+   "oi_ssg": 9.2,
+   "op_m_ssg": 13.7,
+   "dda_ssg": 1.1,
+   "orders_frg": 24.2,
+   "backlog_frg": 83.6,
+   "sales_frg": 44.4,
+   "oi_frg": 4.5,
+   "op_m_frg": 10.1,
+   "dda_frg": 0.7,
+   "orders_esg": 124.0,
+   "backlog_esg": 203.6,
+   "sales_esg": 106.2,
+   "oi_esg": 8.2,
+   "op_m_esg": 7.7,
+   "dda_esg": 1.5
+  },
+  "corp_text": {
+   "cur": 8.9,
+   "py": 5.6
+  },
+  "bs": {
+   "cash": 29.7,
+   "restricted": 1.0,
+   "ar": 96.9,
+   "inv": 119.9,
+   "disc_ca": 0.8,
+   "tca": 267.2,
+   "ppe": 59.3,
+   "gw": 272.3,
+   "intang": 0.7,
+   "disc_lta": 1.2,
+   "ta": 613.2,
+   "std": 5.0,
+   "ap": 52.5,
+   "cust_dep": 13.1,
+   "disc_cl": 6.4,
+   "tcl": 149.6,
+   "ltd": 152.8,
+   "pension": 84.1,
+   "dtl": 35.8,
+   "disc_ltl": 8.6,
+   "tl": 466.3,
+   "eq": 146.9,
+   "tle": 613.2,
+   "lines_raw": [
+    [
+     "Cash and cash equivalents",
+     29.7
+    ],
+    [
+     "Restricted cash",
+     1.0
+    ],
+    [
+     "Accounts receivable, net of allowances for doubtful accounts of $2.4 million and $2.4 million, respectively",
+     96.9
+    ],
+    [
+     "Inventories",
+     119.9
+    ],
+    [
+     "Prepaid expenses",
+     13.8
+    ],
+    [
+     "Other current assets",
+     5.1
+    ],
+    [
+     "Current assets of discontinued operations",
+     0.8
+    ],
+    [
+     "Total current assets",
+     267.2
+    ],
+    [
+     "Properties and equipment",
+     59.3
+    ],
+    [
+     "Goodwill",
+     272.3
+    ],
+    [
+     "Intangible assets, net",
+     0.7
+    ],
+    [
+     "Deferred charges and other assets",
+     12.5
+    ],
+    [
+     "Long-term assets of discontinued operations",
+     1.2
+    ],
+    [
+     "Total assets",
+     613.2
+    ],
+    [
+     "Short-term borrowings",
+     0.3
+    ],
+    [
+     "Current portion of long-term borrowings and capital lease obligations",
+     4.7
+    ],
+    [
+     "Accounts payable",
+     52.5
+    ],
+    [
+     "Customer deposits",
+     13.1
+    ],
+    [
+     "Deferred revenue",
+     3.1
+    ],
+    [
+     "Deferred tax liability",
+     10.6
+    ],
+    [
+     "Compensation and withholding taxes",
+     25.8
+    ],
+    [
+     "Other",
+     33.1
+    ],
+    [
+     "Current liabilities of discontinued operations",
+     6.4
+    ],
+    [
+     "Total current liabilities",
+     149.6
+    ],
+    [
+     "Long-term borrowings and capital lease obligations",
+     152.8
+    ],
+    [
+     "Long-term pension and other postretirement benefit liabilities",
+     84.1
+    ],
+    [
+     "Deferred gain",
+     19.4
+    ],
+    [
+     "Deferred tax liabilities",
+     35.8
+    ],
+    [
+     "Other long-term liabilities",
+     16.0
+    ],
+    [
+     "Long-term liabilities of discontinued operations",
+     8.6
+    ],
+    [
+     "Total liabilities",
+     466.3
+    ],
+    [
+     "Common stock, $1 par value per share, 90.0 million shares authorized, 63.4 million and 63.1 million shares issued, respectively",
+     63.4
+    ],
+    [
+     "Capital in excess of par value",
+     171.1
+    ],
+    [
+     "Retained earnings",
+     8.9
+    ],
+    [
+     "Treasury stock, 0.9 million and 0.9 million shares, respectively, at cost",
+     -16.4
+    ],
+    [
+     "Accumulated other comprehensive loss",
+     -80.1
+    ],
+    [
+     "Total shareholders\u2019 equity",
+     146.9
+    ],
+    [
+     "Total liabilities and shareholders\u2019 equity",
+     613.2
+    ]
+   ]
+  }
+ },
  "rel1": {
   "is": {
    "rev": 803.2,
@@ -2115,6 +2111,105 @@
      29.7
     ]
    ]
+  }
+ },
+ "rel1_q4": {
+  "is": {
+   "rev": 217.7,
+   "cogs": 168.0,
+   "gp": 49.7,
+   "sga": 36.1,
+   "restr": 0.6,
+   "oi": 13.0,
+   "int_exp": 5.7,
+   "debt_settle": 0.0,
+   "oth": 0.4,
+   "ebt": 6.9,
+   "tax": -2.0,
+   "cont": 4.9,
+   "disc": -0.1,
+   "ni": 4.8,
+   "eps_b_cont": 0.08,
+   "eps_b_disc": 0.0,
+   "eps_b": 0.08,
+   "eps_d_cont": 0.08,
+   "eps_d_disc": 0.0,
+   "eps_d": 0.08,
+   "sh_b": 62.4,
+   "sh_d": 63.0
+  },
+  "grp": {
+   "sales_esg": 106.2,
+   "oi_esg": 8.2,
+   "op_m_esg": 7.7,
+   "orders_esg": 124.0,
+   "backlog_esg": 203.6,
+   "dda_esg": 1.5,
+   "sales_ssg": 67.1,
+   "oi_ssg": 9.2,
+   "op_m_ssg": 13.7,
+   "orders_ssg": 59.8,
+   "backlog_ssg": 31.2,
+   "dda_ssg": 1.1,
+   "sales_frg": 44.4,
+   "oi_frg": 4.5,
+   "op_m_frg": 10.1,
+   "orders_frg": 24.2,
+   "backlog_frg": 83.6,
+   "dda_frg": 0.7
+  },
+  "adjeps": {
+   "fmt": "net",
+   "start": 4.9,
+   "start_label": "Income from continuing operations",
+   "adj_ni": 5.5,
+   "adj_label": "Adjusted income from continuing operations",
+   "items": [
+    {
+     "label": "Debt settlement charges, net of tax",
+     "v": 0.0,
+     "cat": "DEBT"
+    },
+    {
+     "label": "Restructuring, net of tax",
+     "v": 0.6,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Special tax items (1)",
+     "v": 0.0,
+     "cat": "TAXD"
+    },
+    {
+     "label": "Tax planning benefits (2)",
+     "v": 0.0,
+     "cat": "TAXD"
+    }
+   ],
+   "eps": 0.08,
+   "adj_eps": 0.09,
+   "items_ps": [
+    {
+     "label": "Debt settlement charges, net of tax",
+     "v": 0.0
+    },
+    {
+     "label": "Restructuring, net of tax",
+     "v": 0.01
+    },
+    {
+     "label": "Special tax items (1)",
+     "v": 0.0
+    },
+    {
+     "label": "Tax planning benefits (2)",
+     "v": 0.0
+    }
+   ]
+  },
+  "corp_text": {
+   "cur": 7.7,
+   "py": 8.9
   }
  },
  "x": {

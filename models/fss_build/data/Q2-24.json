@@ -24,11 +24,10 @@
    "ebt": 77.5,
    "tax": 16.7,
    "ni": 60.8,
-   "op_m": 16.5,
+   "eps_b": 1.0,
    "eps_d": 0.99,
-   "orders": 473.0,
-   "backlog": 1079.9,
-   "dda": 15.8
+   "sh_b": 61.0,
+   "sh_d": 61.7
   },
   "seg": {
    "sales_esg": 408.8,
@@ -348,11 +347,10 @@
    "ebt": 128.4,
    "tax": 16.0,
    "ni": 112.4,
-   "op_m": 14.8,
+   "eps_b": 1.84,
    "eps_d": 1.82,
-   "orders": 975.7,
-   "backlog": 1079.9,
-   "dda": 31.2
+   "sh_b": 61.0,
+   "sh_d": 61.7
   },
   "seg_ytd": {
    "sales_esg": 762.8,
@@ -378,13 +376,26 @@
    "ebt": 77.5,
    "tax": 16.7,
    "ni": 60.8,
-   "op_m": 16.5,
+   "eps_b": 1.0,
    "eps_d": 0.99,
-   "orders": 473.0,
-   "backlog": 1079.9,
-   "dda": 15.8
+   "sh_b": 61.0,
+   "sh_d": 61.7
   },
   "seg": {
+   "sales_esg": 408.8,
+   "sales_ssg": 81.6,
+   "sales_tot": 490.4,
+   "cogs_esg": 299.3,
+   "cogs_ssg": 47.1,
+   "gp_esg": 109.5,
+   "gp_ssg": 34.5,
+   "sga_esg": 32.2,
+   "sga_ssg": 16.2,
+   "osi_esg": 4.4,
+   "osi_ssg": 0.0,
+   "oi_esg": 72.9,
+   "oi_ssg": 18.3,
+   "oi_segtot": 91.2,
    "da_esg": 14.7,
    "da_ssg": 1.0,
    "da_corp": 0.1,
@@ -393,164 +404,6 @@
    "capex_ssg": 1.4,
    "capex_corp": 0.8,
    "capex_tot": 15.8
-  },
-  "bs": {
-   "cash": 91.1,
-   "ar": 196.4,
-   "inv": 331.0,
-   "tca": 642.5,
-   "ppe": 218.9,
-   "rental": 173.2,
-   "rou": 27.8,
-   "gw": 477.7,
-   "intang": 199.7,
-   "ta": 1765.2,
-   "std": 19.4,
-   "ap": 79.0,
-   "cust_dep": 35.0,
-   "tcl": 241.8,
-   "ltd": 204.4,
-   "pension": 41.7,
-   "dtl": 58.0,
-   "tl": 579.1,
-   "sh_issued": 70.3,
-   "sh_treasury": 9.2,
-   "eq": 1186.1,
-   "tle": 1765.2,
-   "lines_raw": [
-    [
-     "Cash and cash equivalents",
-     91.1
-    ],
-    [
-     "Accounts receivable, net of allowances for doubtful accounts of $ 3.1 and $ 2.6 , respectively",
-     196.4
-    ],
-    [
-     "Inventories",
-     331.0
-    ],
-    [
-     "Prepaid expenses and other current assets",
-     24.0
-    ],
-    [
-     "Total current assets",
-     642.5
-    ],
-    [
-     "Properties and equipment, net of accumulated depreciation of $ 200.4 and $ 187.4 , respectively",
-     218.9
-    ],
-    [
-     "Rental equipment, net of accumulated depreciation of $ 62.4 and $ 53.3 , respectively",
-     173.2
-    ],
-    [
-     "Operating lease right-of-use assets",
-     27.8
-    ],
-    [
-     "Goodwill",
-     477.7
-    ],
-    [
-     "Intangible assets, net of accumulated amortization of $ 94.6 and $ 85.6 , respectively",
-     199.7
-    ],
-    [
-     "Deferred tax assets",
-     9.4
-    ],
-    [
-     "Other long-term assets",
-     16.0
-    ],
-    [
-     "Total assets",
-     1765.2
-    ],
-    [
-     "Current portion of long-term borrowings and finance lease obligations",
-     19.4
-    ],
-    [
-     "Accounts payable",
-     79.0
-    ],
-    [
-     "Customer deposits",
-     35.0
-    ],
-    [
-     "Compensation and withholding taxes",
-     45.6
-    ],
-    [
-     "Current operating lease liabilities",
-     6.8
-    ],
-    [
-     "Other current liabilities",
-     56.0
-    ],
-    [
-     "Total current liabilities",
-     241.8
-    ],
-    [
-     "Long-term borrowings and finance lease obligations",
-     204.4
-    ],
-    [
-     "Long-term operating lease liabilities",
-     21.8
-    ],
-    [
-     "Long-term pension and other postretirement benefit liabilities",
-     41.7
-    ],
-    [
-     "Deferred tax liabilities",
-     58.0
-    ],
-    [
-     "Other long-term liabilities",
-     11.4
-    ],
-    [
-     "Total liabilities",
-     579.1
-    ],
-    [
-     "Common stock, $ 1 par value per share, 90.0 shares authorized, 70.7 and 70.3 shares issued, respectively",
-     70.3
-    ],
-    [
-     "Capital in excess of par value",
-     309.8
-    ],
-    [
-     "Retained earnings",
-     1102.8
-    ],
-    [
-     "Treasury stock, at cost, 9.9 and 9.2 shares, respectively",
-     -207.8
-    ],
-    [
-     "Accumulated other comprehensive loss",
-     -89.0
-    ],
-    [
-     "Total stockholders\u2019 equity",
-     1186.1
-    ],
-    [
-     "Total liabilities and stockholders\u2019 equity",
-     1765.2
-    ]
-   ]
   },
   "grp": {
    "sales_esg": 408.8,
@@ -707,13 +560,26 @@
    "ebt": 128.4,
    "tax": 16.0,
    "ni": 112.4,
-   "op_m": 14.8,
+   "eps_b": 1.84,
    "eps_d": 1.82,
-   "orders": 975.7,
-   "backlog": 1079.9,
-   "dda": 31.2
+   "sh_b": 61.0,
+   "sh_d": 61.7
   },
   "seg_ytd": {
+   "sales_esg": 762.8,
+   "sales_ssg": 152.5,
+   "sales_tot": 915.3,
+   "cogs_esg": 566.6,
+   "cogs_ssg": 88.7,
+   "gp_esg": 196.2,
+   "gp_ssg": 63.8,
+   "sga_esg": 63.1,
+   "sga_ssg": 31.7,
+   "osi_esg": 8.5,
+   "osi_ssg": 0.0,
+   "oi_esg": 124.6,
+   "oi_ssg": 32.1,
+   "oi_segtot": 156.7,
    "da_esg": 29.0,
    "da_ssg": 2.0,
    "da_corp": 0.2,
@@ -785,7 +651,7 @@
     }
    ],
    "eps": 0.99,
-   "adj_eps": 1.27,
+   "adj_eps": 0.95,
    "items_ps": [
     {
      "label": "Acquisition and integration-related expenses, net",
@@ -1203,7 +1069,7 @@
     }
    ],
    "eps": 0.99,
-   "adj_eps": 1.27,
+   "adj_eps": 0.95,
    "items_ps": [
     {
      "label": "Acquisition and integration-related expenses, net",

@@ -80,7 +80,7 @@ IS_MAP = [('rev', r'^(net )?(sales|revenues?)( \(a\))?$'), ('cogs', r'^cost of (
           ('oi', r'^operating (\(loss\) )?income|^operating income \(loss\)|^operating \(loss\)$|^income from operations'),
           ('int_exp', r'^interest expense'), ('debt_settle', r'^debt settlement'), ('pension_settle', r'^pension settlement'),
           ('oth', r'^other (\(income\) expense|expense \(income\)|income \(expense\)|\(expense\) income|expense|income),? ?net$|^other (income|expense)( \(expense\)| \(income\))?,? net$|^other \(income\) expense$|^other income \(expense\)$'),
-          ('ebt', r'^(\(loss\) )?income (\(loss\) )?before income taxes|^income \(loss\) before income taxes|^\(loss\) income before'),
+          ('ebt', r'^(\(loss\) )?income (\(loss\) )?(from continuing operations )?before income taxes|^income \(loss\) (from continuing operations )?before income taxes|^\(loss\) income (from continuing operations )?before'),
           ('tax', r'^income tax (expense|benefit|\(benefit\)|\(expense\)|provision|charge)|^income tax(es)?( benefit| \(charge\))?$|^provision for income taxes|^income tax benefit \(charge\)'),
           ('cont', r'^(\(loss\) )?income (\(loss\) )?from continuing operations$|^income \(loss\) from continuing operations$|^\(loss\) income from continuing'),
           ('disc', r'from discontinued operations|^discontinued operations|^\(loss\) gain from discontinued|^gain \(loss\) from discontinued|^loss from discontinued|^income from discontinued'),
@@ -109,6 +109,13 @@ def ext_is(tabs, mo, cp):
             if len(vals) != len(t['cols']):
                 misal.append([lab, vals]); continue
             v = vals[ci]
+            if re.search(r'^basic and diluted', L):          # 2006-2011: "Basic and diluted earnings (loss) per share Earnings from continuing operations"
+                sec = 'bd'
+                if 'continuing' in L:
+                    out.setdefault('eps_b_cont', v); out.setdefault('eps_d_cont', v)
+                continue
+            if re.search(r'^average shares outstanding\W+basic', L): out.setdefault('sh_b', v); continue
+            if re.search(r'^diluted shares outstanding', L): out.setdefault('sh_d', v); continue
             # EPS / share rows
             if sec in ('b', 'd', 'bd', 'eps', 'sh') or re.search(r'per share|per diluted share|earnings per|share earns', L):
                 keys = []
@@ -149,7 +156,8 @@ def ext_is(tabs, mo, cp):
             if misal: out['misaligned'] = misal
             cands.append(out)
     if not cands: return None
-    cands.sort(key=lambda o: -len([k for k in o if k not in ('other_lines', 'dups', 'misaligned')]))
+    # the face statement (it carries the share counts) first, then the table with the most lines
+    cands.sort(key=lambda o: (-(('sh_d' in o) + ('eps_d' in o)), -len([k for k in o if k not in ('other_lines', 'dups', 'misaligned')])))
     return cands[0]
 
 # ------------------------------------------------------------------ segments (10-K / 10-Q note; releases 2006-2012)
@@ -308,7 +316,9 @@ def _adj_table(t, ci):
             if re.match(r'^(diluted|eps|earnings per|\(loss\) earnings per|loss per|net income per)', L) and 'adjusted' not in L and 'ps' not in out:
                 out['ps'] = {'start': v, 'items': []}
             elif 'ps' in out and 'adj' not in out['ps']:
-                if re.match(r'^(adjusted|normalized)', L): out['ps']['adj'] = v
+                if re.match(r'^adjusted (\(loss\) )?income (\(loss\) )?before', L): out['ps']['adj_ebt'] = v
+                elif re.match(r'^adjusted income tax', L): out['ps']['adj_tax'] = v
+                elif re.match(r'^(adjusted|normalized)', L): out['ps']['adj'] = v
                 elif re.match(r'^income tax|^tax expense', L): out['ps']['tax'] = v
                 elif re.match(r'^(\(loss\) )?income (\(loss\) )?before|^income before', L): out['ps']['ebt'] = v
                 elif re.match(r'^adjusted', L): pass
@@ -416,7 +426,7 @@ def ext_cf(tabs, mo, cp):
                     if k in ('acq', 'divest', 'capex_disp', 'rental', 'debt_proc', 'debt_repay', 'rev_net', 'disc_cfo', 'disc_cfi', 'disc_cff'): out[k] = round(out.get(k, 0.0) + v, 6)
                     elif k not in out: out[k] = v
                     break
-        if 'cfo' in out:
+        if 'cfo' in out and 'end' in out:
             out['lines_raw'] = raw
             if misal: out['misaligned'] = misal
             return out
@@ -425,11 +435,13 @@ def ext_cf(tabs, mo, cp):
 BS_MAP = [('cash', r'^cash and cash equivalents'), ('restricted', r'^restricted cash'), ('sti', r'^short[- ]term investments'), ('ar', r'^(trade )?accounts receivable'),
           ('inv', r'^inventories'), ('disc_ca', r'^current assets of discontinued|assets held for sale'), ('tca', r'^total current assets'),
           ('ppe', r'^propert(y|ies)(,| and|, plant,?) (and )?equipment'), ('rental', r'^rental equipment'), ('rou', r'^operating lease right'),
-          ('gw', r'^goodwill'), ('intang', r'^intangible assets'), ('disc_lta', r'^(long-term|non-?current) assets of discontinued'), ('ta', r'^total assets'),
+          ('gw', r'^goodwill'), ('intang', r'^intangible assets'), ('disc_lta', r'^(long-term|non-?current) assets of discontinued|^assets of discontinued'),
+          ('ta_cont', r'^total assets of continuing'), ('ta', r'^total assets$'),
           ('std', r'^short[- ]term borrowings|^current portion of long-term (borrowings|debt)|^current maturities'),
           ('ap', r'^accounts payable'), ('cust_dep', r'^customer deposits'), ('disc_cl', r'^current liabilities of discontinued'), ('tcl', r'^total current liabilities'),
           ('ltd', r'^long-term (borrowings|debt)'), ('disc_ltl', r'^(long-term|non-?current) liabilities of discontinued'),
-          ('pension', r'^long-term pension|^pension'), ('dtl', r'^deferred (income )?tax liabilities'), ('tl', r'^total liabilities$'),
+          ('pension', r'^long-term pension|^pension'), ('dtl', r'^deferred (income )?tax liabilities'), ('tl_cont', r'^total liabilities of continuing'),
+          ('disc_ltl2', r'^liabilities of discontinued'), ('tl', r'^total liabilities$'),
           ('eq', r"^total (stockholders|shareholders)['’]? equity|^total (common )?(stockholders|shareholders)"), ('tle', r"^total liabilities and")]
 
 def ext_bs(tabs, cp='cur'):
@@ -504,17 +516,19 @@ def tag_seg2(tabs):
             ys = sorted(by[t['mo']], reverse=True); t['cp'] = ['cur', 'py', 'py2'][ys.index(t['year'])]
     return tabs
 
-def doc_tables(path):
+def doc_tables(path, docyear=None):
     tabs = parsed(path)
+    if docyear is not None: P.relabel(tabs, docyear)
     if tabs and not any(t['type'] == 'seg2' for t in tabs): tag_seg2(tabs)
     # releases 2017+: group tables include Adjusted EBITDA rows; classify by orders / backlog first
     for t in tabs:
         if t['type'] == 'ebitda' and any(re.match(r'^(total )?orders|^backlog', l.lower()) for l, _ in t['rows']): t['type'] = 'grp'
+    if docyear is not None: P.relabel(tabs, docyear)
     return tabs
 
 # ------------------------------------------------------------------ records
-def block_k(path, mo, cp, annual, bs_cp):
-    tabs = doc_tables(path)
+def block_k(path, mo, cp, annual, bs_cp, docyear):
+    tabs = doc_tables(path, docyear)
     o = {'is': ext_is(tabs, mo, cp), 'seg': ext_seg(tabs, mo, cp), 'cf': ext_cf(tabs, mo, cp)}
     if bs_cp: o['bs'] = ext_bs(tabs, bs_cp)
     if annual and cp == 'cur': o['selected'] = ext_selected(tabs)
@@ -522,8 +536,8 @@ def block_k(path, mo, cp, annual, bs_cp):
     if g: o['grp'] = g
     return {k: v for k, v in o.items() if v}
 
-def block_rel(path, mo, cp, ytd=None):
-    tabs = doc_tables(path)
+def block_rel(path, mo, cp, docyear, ytd=None):
+    tabs = doc_tables(path, docyear)
     txt = text(path)
     o = {'is': ext_is(tabs, mo, cp), 'grp': ext_grp(tabs, mo, cp), 'adjeps': ext_adjeps(tabs, mo, cp), 'ebitda': ext_ebitda(tabs, mo, cp),
          'corp_text': ext_corp_text(txt, mo), 'bs': ext_bs(tabs, 'cur' if cp == 'cur' else 'py') if cp == 'cur' else None}
@@ -541,30 +555,52 @@ def rec_period(docs, fy, q, annual):
            'sources': {'filing': d['primary_url'], 'filing_date': d['date']}, 'notes': []}
     if d.get('release_url'): rec['sources']['release'] = d['release_url']; rec['sources']['release_date'] = d.get('release_date')
     # own filing: 3M (quarter) or 12M (annual); YTD cash flow; balance sheet
-    rec['k'] = block_k(d['primary'], mo, 'cur', annual, 'cur')
+    rec['k'] = block_k(d['primary'], mo, 'cur', annual, 'cur', fy)
     if not annual:
-        rec['k']['cf'] = ext_cf(doc_tables(d['primary']), ytd, 'cur') or rec['k'].get('cf')
-        rec['k']['is_ytd'] = ext_is(doc_tables(d['primary']), ytd, 'cur') if q > 1 else None
-        rec['k']['seg_ytd'] = ext_seg(doc_tables(d['primary']), ytd, 'cur') if q > 1 else None
+        rec['k']['cf'] = ext_cf(doc_tables(d['primary'], fy), ytd, 'cur') or rec['k'].get('cf')
+        rec['k']['is_ytd'] = ext_is(doc_tables(d['primary'], fy), ytd, 'cur') if q > 1 else None
+        rec['k']['seg_ytd'] = ext_seg(doc_tables(d['primary'], fy), ytd, 'cur') if q > 1 else None
     # following year's filing, prior-year columns
     d1 = docs.get((fy + 1, 4 if annual else q))
     if d1 and 'primary' in d1:
         rec['sources']['filing_next'] = d1['primary_url']
-        rec['k1'] = block_k(d1['primary'], mo, 'py', annual, 'py')
+        rec['k1'] = block_k(d1['primary'], mo, 'py', annual, 'py' if annual else None, fy + 1)
         if not annual:
-            rec['k1']['cf'] = ext_cf(doc_tables(d1['primary']), ytd, 'py') or rec['k1'].get('cf')
-            rec['k1']['is_ytd'] = ext_is(doc_tables(d1['primary']), ytd, 'py') if q > 1 else None
-            rec['k1']['seg_ytd'] = ext_seg(doc_tables(d1['primary']), ytd, 'py') if q > 1 else None
+            rec['k1']['cf'] = ext_cf(doc_tables(d1['primary'], fy + 1), ytd, 'py') or rec['k1'].get('cf')
+            rec['k1']['is_ytd'] = ext_is(doc_tables(d1['primary'], fy + 1), ytd, 'py') if q > 1 else None
+            rec['k1']['seg_ytd'] = ext_seg(doc_tables(d1['primary'], fy + 1), ytd, 'py') if q > 1 else None
     if annual:
         d2 = docs.get((fy + 2, 4))
         if d2 and 'primary' in d2:
             rec['sources']['filing_next2'] = d2['primary_url']
-            rec['k2'] = block_k(d2['primary'], 12, 'py2', True, None)
+            rec['k2'] = block_k(d2['primary'], 12, 'py2', True, None, fy + 2)
     # releases
     if d.get('release'):
-        rec['rel'] = block_rel(d['release'], mo, 'cur', ytd)
+        rec['rel'] = block_rel(d['release'], mo, 'cur', fy, ytd)
+        if annual: rec['rel_q4'] = block_rel(d['release'], 3, 'cur', fy)
     if d1 and d1.get('release'):
-        rec['rel1'] = block_rel(d1['release'], mo, 'py', ytd)
+        rec['rel1'] = block_rel(d1['release'], mo, 'py', fy + 1, ytd)
+        if annual: rec['rel1_q4'] = block_rel(d1['release'], 3, 'py', fy + 1)
+    if annual and rec['k'].get('is') and rec['k']['is'].get('sh_d') is None:
+        for dd, cpx in ((d, 'cur'), (d1, 'py'), (docs.get((fy + 2, 4)), 'py2')):
+            if not dd or 'primary' not in dd or rec['k']['is'].get('sh_d') is not None: continue
+            dy = fy + {'cur': 0, 'py': 1, 'py2': 2}[cpx]
+            for t in P.html_tables(open(dd['primary'], 'rb').read()):
+                if not any(re.search(r'^average shares outstanding\W+basic', l, re.I) for l, _ in t['rows']): continue
+                cols = P.columns(t)
+                if not cols: continue
+                t2 = dict(t, cols=cols); P.relabel([t2], dy)
+                b = P.rowval(t2, r'^average shares outstanding\W+basic', 12, cpx); dl = P.rowval(t2, r'^diluted shares outstanding', 12, cpx)
+                if isinstance(b, float) and isinstance(dl, float):
+                    rec['k']['is']['sh_b'], rec['k']['is']['sh_d'] = b, dl
+                    rec['notes'].append(f'Weighted-average shares from the EPS note table of {dd["primary_url"]}.')
+                    break
+        t = re.sub(r'\s+', ' ', text(d['primary']))
+        m = re.search(r'weighted average common shares outstanding, which totaled ([\d.]+) million, ([\d.]+) million and ([\d.]+) million', t)
+        m2 = re.search(r'weighted average number of shares outstanding for diluted earnings \(loss\) per share were ([\d.]+) million, ([\d.]+) million and ([\d.]+) million', t)
+        if m: rec['k']['is']['sh_b'] = float(m.group(1)); rec['notes'].append('Basic weighted-average shares from the 10-K Note 1 text (earnings per share policy).')
+        if m2: rec['k']['is']['sh_d'] = float(m2.group(1))
+        elif m: rec['k']['is']['sh_d'] = float(m.group(1)); rec['notes'].append('10-K text gives one weighted-average share count (no dilutive shares); used as diluted.')
     # XBRL extras (as first filed)
     kind = 'FY' if annual else 'YTD'
     qq = 4 if annual else q

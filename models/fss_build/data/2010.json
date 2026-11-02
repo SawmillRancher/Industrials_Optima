@@ -10,7 +10,9 @@
   "filing_next": "https://www.sec.gov/Archives/edgar/data/277509/000119312512115045/d281202d10k.htm",
   "filing_next2": "https://www.sec.gov/Archives/edgar/data/277509/000119312513109337/d451748d10k.htm"
  },
- "notes": [],
+ "notes": [
+  "Weighted-average shares from the EPS note table of https://www.sec.gov/Archives/edgar/data/277509/000095012311025900/c62191e10vk.htm."
+ ],
  "k": {
   "is": {
    "rev": 726.5,
@@ -44,7 +46,9 @@
    "eps_b_disc": -0.26,
    "eps_d_disc": -0.26,
    "eps_b": -3.05,
-   "eps_d": -3.05
+   "eps_d": -3.05,
+   "sh_b": 57.6,
+   "sh_d": 57.6
   },
   "seg": {
    "sales_ssg": 214.5,
@@ -72,111 +76,196 @@
   },
   "cf": {
    "ytd_months": 12,
-   "cfo": 31.2,
-   "cfi": -108.0,
-   "cff": 117.6,
-   "capex": 12.8,
    "dda": 19.2,
+   "sbc": 2.3,
+   "deftax": -13.7,
+   "cfo": 37.8,
+   "capex": -12.8,
+   "capex_disp": 1.9,
+   "acq": -97.3,
+   "cfi": -108.2,
+   "debt_proc": 0.0,
+   "debt_repay": -70.8,
+   "bb": 0.0,
+   "div": -13.3,
+   "stock_iss": 71.2,
+   "cff": 118.6,
+   "fx": 0.2,
+   "net": 41.0,
+   "beg": 21.1,
+   "end": 62.1,
    "lines_raw": [
     [
-     "Net sales (a)",
-     726.5
+     "Net (loss) income",
+     -175.7
     ],
     [
-     "(Loss) income before income taxes (a)",
-     -88.4
+     "Loss (gain) on discontinued operations and disposal",
+     15.0
     ],
     [
-     "(Loss) income from continuing operations(a)",
-     -160.7
+     "(Gain) loss on joint venture",
+     -0.1
     ],
     [
-     "Operating margin (a)",
-     -10.6
+     "Goodwill and intangible assets impairment",
+     78.9
     ],
     [
-     "Return on average common shareholders\u2019 equity",
-     -33.8
+     "Valuation allowance",
+     85.0
     ],
     [
-     "(Loss) income from continuing operations \u2014 diluted",
-     -2.79
+     "Depreciation and amortization",
+     19.2
     ],
     [
-     "Cash dividends per share",
-     0.24
+     "Stock option and award compensation expense",
+     2.3
     ],
     [
-     "High",
-     10.3
+     "Provision for doubtful accounts",
+     1.2
     ],
     [
-     "Low",
-     4.91
+     "Deferred income taxes",
+     -13.7
     ],
     [
-     "Average common shares outstanding (in millions)",
-     57.6
+     "Accounts receivable",
+     19.6
     ],
     [
-     "Working capital (a)(b)",
-     85.4
+     "Inventories",
+     -7.9
     ],
     [
-     "Current ratio (a)(b)",
-     1.4
+     "Other current assets",
+     2.6
     ],
     [
-     "Total assets",
-     764.5
+     "Accounts payable",
+     4.0
     ],
     [
-     "Long-term debt, net of current portion",
-     184.4
+     "Customer deposits",
+     0.0
     ],
     [
-     "Shareholders\u2019 equity",
-     220.9
+     "Accrued liabilities",
+     -3.4
     ],
     [
-     "Debt-to-capitalization ratio (c)",
-     54.3
+     "Income taxes",
+     -1.2
     ],
     [
-     "Net debt-to-capitalization ratio (d)",
-     47.6
+     "Pension contributions",
+     -1.1
     ],
     [
-     "Orders(a)",
-     742.6
+     "Deferred revenue",
+     6.3
     ],
     [
-     "Backlog (a)",
-     216.8
+     "Other",
+     6.8
+    ],
+    [
+     "Net cash provided by (used for) continuing operating activities",
+     37.8
+    ],
+    [
+     "Net cash (used for) provided by discontinued operating activities",
+     -6.6
     ],
     [
      "Net cash provided by operating activities",
      31.2
     ],
     [
+     "Purchases of properties and equipment",
+     -12.8
+    ],
+    [
+     "Proceeds from sales of properties and equipment",
+     1.9
+    ],
+    [
+     "Payments for acquisitions, net of cash acquired",
+     -97.3
+    ],
+    [
+     "Other, net",
+     0.0
+    ],
+    [
+     "Net cash used for continuing investing activities",
+     -108.2
+    ],
+    [
+     "Net cash provided by discontinued investing activities",
+     0.2
+    ],
+    [
      "Net cash (used for) provided by investing activities",
      -108.0
+    ],
+    [
+     "Increase (reduction) in short-term borrowings, net",
+     130.9
+    ],
+    [
+     "Proceeds from issuance of long-term borrowings",
+     0.0
+    ],
+    [
+     "Repayment of long-term borrowings",
+     -70.8
+    ],
+    [
+     "Purchases of treasury stock",
+     0.0
+    ],
+    [
+     "Cash dividends paid to shareholders",
+     -13.3
+    ],
+    [
+     "Proceeds from Equity offering, net",
+     71.2
+    ],
+    [
+     "Other, net",
+     0.6
+    ],
+    [
+     "Net cash provided by (used for) continuing financing activities",
+     118.6
+    ],
+    [
+     "Net cash used for discontinued financing activities",
+     -1.0
     ],
     [
      "Net cash provided by (used for) financing activities",
      117.6
     ],
     [
-     "Capital expenditures (a)",
-     12.8
+     "Effects of foreign exchange rate changes on cash",
+     0.2
     ],
     [
-     "Depreciation and amortization (a)",
-     19.2
+     "Increase (decrease) in cash and cash equivalents",
+     41.0
     ],
     [
-     "Employees (a)",
-     2812.0
+     "Cash and cash equivalents at beginning of year",
+     21.1
+    ],
+    [
+     "Cash and cash equivalents at end of year",
+     62.1
     ]
    ]
   },
@@ -188,7 +277,9 @@
    "ppe": 63.2,
    "gw": 310.4,
    "intang": 84.4,
-   "ta": 761.4,
+   "ta_cont": 761.4,
+   "disc_lta": 3.1,
+   "ta": 764.5,
    "std": 78.0,
    "ap": 53.5,
    "cust_dep": 10.2,
@@ -196,6 +287,8 @@
    "ltd": 184.4,
    "pension": 41.3,
    "dtl": 45.8,
+   "tl_cont": 525.4,
+   "disc_ltl2": 18.2,
    "tl": 543.6,
    "eq": 220.9,
    "tle": 764.5,
@@ -423,111 +516,196 @@
   },
   "cf": {
    "ytd_months": 12,
-   "cfo": 31.2,
-   "cfi": -108.0,
-   "cff": 117.6,
-   "capex": 12.8,
    "dda": 19.2,
+   "sbc": 2.3,
+   "deftax": -13.7,
+   "cfo": 37.8,
+   "capex": -12.8,
+   "capex_disp": 1.9,
+   "acq": -97.3,
+   "cfi": -108.2,
+   "rev_net": 130.9,
+   "debt_proc": 0.0,
+   "debt_repay": -70.8,
+   "div": -13.3,
+   "stock_iss": 71.2,
+   "cff": 118.6,
+   "fx": 0.2,
+   "net": 41.0,
+   "beg": 21.1,
+   "end": 62.1,
    "lines_raw": [
     [
-     "Net sales",
-     726.5
+     "Net (loss) income",
+     -175.7
     ],
     [
-     "(Loss) income before income taxes",
-     -88.4
+     "(Gain) loss on discontinued operations and disposal",
+     15.0
     ],
     [
-     "(Loss) income from continuing operations",
-     -160.7
+     "Gain on joint venture",
+     -0.1
     ],
     [
-     "Operating margin",
-     -10.6
+     "Goodwill and intangible assets impairment",
+     78.9
     ],
     [
-     "Return on average common shareholders\u2019 equity",
-     -33.8
-    ],
-    [
-     "(Loss) income from continuing operations \u2014 diluted",
-     -2.79
-    ],
-    [
-     "Cash dividends per share",
-     0.24
-    ],
-    [
-     "High",
-     10.3
-    ],
-    [
-     "Low",
-     4.91
-    ],
-    [
-     "Average common shares outstanding (in millions)",
-     57.6
-    ],
-    [
-     "Working capital (a)",
-     85.4
-    ],
-    [
-     "Current ratio (a)",
-     1.4
-    ],
-    [
-     "Total assets",
-     764.5
-    ],
-    [
-     "Long-term debt, net of current portion",
-     184.4
-    ],
-    [
-     "Shareholders\u2019 equity",
-     220.9
-    ],
-    [
-     "Debt-to-capitalization ratio (b)",
-     54.3
-    ],
-    [
-     "Net debt-to-capitalization ratio (c)",
-     47.6
-    ],
-    [
-     "Orders",
-     742.6
-    ],
-    [
-     "Backlog",
-     216.8
-    ],
-    [
-     "Net cash provided by operating activities",
-     31.2
-    ],
-    [
-     "Net cash (used for) provided by investing activities",
-     -108.0
-    ],
-    [
-     "Net cash (used for) provided by financing activities",
-     117.6
-    ],
-    [
-     "Capital expenditures",
-     12.8
+     "Valuation allowance",
+     85.0
     ],
     [
      "Depreciation and amortization",
      19.2
     ],
     [
-     "Employees",
-     2812.0
+     "Stock option and award compensation expense",
+     2.3
+    ],
+    [
+     "Provision for doubtful accounts",
+     1.2
+    ],
+    [
+     "Deferred income taxes",
+     -13.7
+    ],
+    [
+     "Accounts receivable",
+     19.6
+    ],
+    [
+     "Inventories",
+     -7.9
+    ],
+    [
+     "Other current assets",
+     2.6
+    ],
+    [
+     "Accounts payable",
+     4.0
+    ],
+    [
+     "Customer deposits",
+     0.0
+    ],
+    [
+     "Accrued liabilities",
+     -3.4
+    ],
+    [
+     "Income taxes",
+     -1.2
+    ],
+    [
+     "Pension contributions",
+     -1.1
+    ],
+    [
+     "Deferred revenue",
+     6.3
+    ],
+    [
+     "Other",
+     6.8
+    ],
+    [
+     "Net cash provided by continuing operating activities",
+     37.8
+    ],
+    [
+     "Net cash (used for) provided by discontinued operating activities",
+     -6.6
+    ],
+    [
+     "Net cash provided by operating activities",
+     31.2
+    ],
+    [
+     "Purchases of properties and equipment",
+     -12.8
+    ],
+    [
+     "Proceeds from sales of properties and equipment",
+     1.9
+    ],
+    [
+     "Payments for acquisitions, net of cash acquired",
+     -97.3
+    ],
+    [
+     "Other, net",
+     0.0
+    ],
+    [
+     "Net cash used for continuing investing activities",
+     -108.2
+    ],
+    [
+     "Net cash provided by discontinued investing activities",
+     0.2
+    ],
+    [
+     "Net cash (used for) provided by investing activities",
+     -108.0
+    ],
+    [
+     "(Decrease) increase in short-term borrowings, net",
+     130.9
+    ],
+    [
+     "Proceeds from issuance of long-term borrowings",
+     0.0
+    ],
+    [
+     "Payments on long-term borrowings",
+     -70.8
+    ],
+    [
+     "Payments of debt amendment fees",
+     0.0
+    ],
+    [
+     "Cash dividends paid to shareholders",
+     -13.3
+    ],
+    [
+     "Proceeds from equity offering, net of fees",
+     71.2
+    ],
+    [
+     "Other, net",
+     0.6
+    ],
+    [
+     "Net cash (used for) provided by continuing financing activities",
+     118.6
+    ],
+    [
+     "Net cash provided by (used for) discontinued financing activities",
+     -1.0
+    ],
+    [
+     "Net cash (used for) provided by financing activities",
+     117.6
+    ],
+    [
+     "Effects of foreign exchange rate changes on cash",
+     0.2
+    ],
+    [
+     "(Decrease) increase in cash and cash equivalents",
+     41.0
+    ],
+    [
+     "Cash and cash equivalents at beginning of year",
+     21.1
+    ],
+    [
+     "Cash and cash equivalents at end of year",
+     62.1
     ]
    ]
   },
@@ -539,7 +717,9 @@
    "ppe": 63.2,
    "gw": 310.4,
    "intang": 84.4,
-   "ta": 761.4,
+   "ta_cont": 761.4,
+   "disc_lta": 3.1,
+   "ta": 764.5,
    "std": 78.0,
    "ap": 53.5,
    "cust_dep": 10.2,
@@ -547,6 +727,8 @@
    "ltd": 184.4,
    "pension": 41.3,
    "dtl": 45.8,
+   "tl_cont": 525.4,
+   "disc_ltl2": 18.2,
    "tl": 543.6,
    "eq": 220.9,
    "tle": 764.5,
@@ -769,17 +951,106 @@
   },
   "cf": {
    "ytd_months": 12,
-   "cfo": 30.3,
+   "dda": 11.4,
+   "sbc": 2.1,
+   "deftax": 75.7,
+   "cfo": 28.7,
    "capex": -11.3,
    "capex_disp": 1.8,
    "acq": -97.3,
    "divest": 0.0,
-   "rev_net": 60.5,
-   "debt_repay": 0.0,
+   "cfi": -106.8,
+   "rev_net": 131.3,
+   "debt_proc": 0.0,
+   "debt_repay": -70.8,
    "div": -13.3,
    "stock_iss": 71.2,
+   "cff": 119.2,
+   "fx": 0.2,
    "net": 41.0,
+   "beg": 21.1,
+   "end": 62.1,
    "lines_raw": [
+    [
+     "Net loss",
+     -175.7
+    ],
+    [
+     "Loss on discontinued operations and disposal",
+     101.6
+    ],
+    [
+     "Gain on joint venture",
+     -0.1
+    ],
+    [
+     "Restructuring charges, net of cash payments",
+     2.3
+    ],
+    [
+     "Depreciation and amortization",
+     11.4
+    ],
+    [
+     "Debt settlement charges",
+     0.0
+    ],
+    [
+     "Stock-based compensation expense",
+     2.1
+    ],
+    [
+     "Pension expense, net of funding",
+     2.2
+    ],
+    [
+     "Provision for doubtful accounts",
+     1.1
+    ],
+    [
+     "Deferred income taxes, including change in valuation allowance",
+     75.7
+    ],
+    [
+     "Accounts receivable",
+     23.9
+    ],
+    [
+     "Inventories",
+     -4.2
+    ],
+    [
+     "Other current assets",
+     4.9
+    ],
+    [
+     "Accounts payable",
+     2.0
+    ],
+    [
+     "Customer deposits",
+     -0.1
+    ],
+    [
+     "Accrued liabilities",
+     -4.8
+    ],
+    [
+     "Income taxes",
+     -12.3
+    ],
+    [
+     "Other",
+     -1.3
+    ],
+    [
+     "Net cash provided by continuing operating activities",
+     28.7
+    ],
+    [
+     "Net cash (used for) provided by discontinued operating activities",
+     1.6
+    ],
     [
      "Net cash provided by operating activities",
      30.3
@@ -805,16 +1076,36 @@
      0.0
     ],
     [
-     "Borrowing activity, net",
-     60.5
+     "Net cash provided by (used for) continuing investing activities",
+     -106.8
+    ],
+    [
+     "Net cash used for discontinued investing activities",
+     -0.9
+    ],
+    [
+     "Net cash provided by (used for) investing activities",
+     -107.7
+    ],
+    [
+     "(Decrease) increase in revolving lines of credit",
+     129.6
+    ],
+    [
+     "(Decrease) increase in short-term borrowings, net",
+     1.7
+    ],
+    [
+     "Proceeds from issuance of long-term borrowings",
+     0.0
+    ],
+    [
+     "Payments on long-term borrowings",
+     -70.8
     ],
     [
      "Payments of debt financing fees",
      0.0
-    ],
-    [
-     "Net cash used for discontinued financing activities",
-     -1.0
     ],
     [
      "Cash dividends paid to shareholders",
@@ -825,12 +1116,36 @@
      71.2
     ],
     [
-     "All other, net",
-     0.1
+     "Other, net",
+     0.8
+    ],
+    [
+     "Net cash (used for) provided by continuing financing activities",
+     119.2
+    ],
+    [
+     "Net cash used for discontinued financing activities",
+     -1.0
+    ],
+    [
+     "Net cash (used for) provided by financing activities",
+     118.2
+    ],
+    [
+     "Effects of foreign exchange rate changes on cash",
+     0.2
     ],
     [
      "Increase (decrease) in cash and cash equivalents",
      41.0
+    ],
+    [
+     "Cash and cash equivalents at beginning of year",
+     21.1
+    ],
+    [
+     "Cash and cash equivalents at end of year",
+     62.1
     ]
    ]
   },
@@ -887,7 +1202,9 @@
    "ppe": 63.2,
    "gw": 310.4,
    "intang": 84.4,
-   "ta": 761.4,
+   "ta_cont": 761.4,
+   "disc_lta": 3.1,
+   "ta": 764.5,
    "std": 78.0,
    "ap": 53.5,
    "cust_dep": 10.2,
@@ -895,6 +1212,8 @@
    "ltd": 184.4,
    "pension": 41.3,
    "dtl": 45.8,
+   "tl_cont": 525.4,
+   "disc_ltl2": 18.2,
    "tl": 543.6,
    "eq": 220.9,
    "tle": 764.5,
@@ -1241,6 +1560,223 @@
    ]
   }
  },
+ "rel_q4": {
+  "is": {
+   "rev": 186.7,
+   "cogs": 138.5,
+   "sga": 50.9,
+   "acq": 0.1,
+   "impair": 78.9,
+   "restr": 1.0,
+   "oi": -82.7,
+   "int_exp": 2.0,
+   "oth": -0.2,
+   "ebt": -84.9,
+   "tax": -73.5,
+   "cont": -158.4,
+   "disc": -10.8,
+   "ni": -169.2,
+   "eps_b_cont": -2.55,
+   "eps_d_cont": -2.55,
+   "eps_b_disc": -0.17,
+   "eps_d_disc": -0.17,
+   "sh_b": 62.2,
+   "sh_d": 62.2,
+   "dps": 0.06
+  },
+  "grp": {
+   "orders_ssg": 52.3,
+   "sales_ssg": 54.8,
+   "oi_ssg": 7.1,
+   "op_m_ssg": 13.0,
+   "dda_ssg": 0.9,
+   "orders_frg": 28.6,
+   "sales_frg": 34.0,
+   "oi_frg": 4.3,
+   "op_m_frg": 12.6,
+   "dda_frg": 0.6,
+   "orders_esg": 84.1,
+   "sales_esg": 71.9,
+   "oi_esg": 1.8,
+   "op_m_esg": 2.5,
+   "dda_esg": 1.2,
+   "orders_fst": 21.7,
+   "sales_fst": 26.0,
+   "oi_fst": -80.8,
+   "op_m_fst": -310.8,
+   "dda_fst": 1.6
+  },
+  "bs": {
+   "cash": 62.1,
+   "ar": 100.4,
+   "inv": 119.6,
+   "tca": 300.0,
+   "ppe": 63.2,
+   "gw": 310.4,
+   "intang": 84.4,
+   "ta_cont": 761.4,
+   "disc_lta": 3.1,
+   "ta": 764.5,
+   "std": 78.0,
+   "ap": 53.5,
+   "cust_dep": 10.2,
+   "tcl": 214.6,
+   "ltd": 184.4,
+   "pension": 41.3,
+   "dtl": 45.8,
+   "tl_cont": 525.4,
+   "disc_ltl2": 18.2,
+   "tl": 543.6,
+   "eq": 220.9,
+   "tle": 764.5,
+   "lines_raw": [
+    [
+     "Cash and cash equivalents",
+     62.1
+    ],
+    [
+     "Accounts receivable, net of allowances for doubtful accounts of $2.8 and $2.4, respectively",
+     100.4
+    ],
+    [
+     "Inventories, net",
+     119.6
+    ],
+    [
+     "Other current assets",
+     17.9
+    ],
+    [
+     "Total current assets",
+     300.0
+    ],
+    [
+     "Properties and equipment, net",
+     63.2
+    ],
+    [
+     "Goodwill",
+     310.4
+    ],
+    [
+     "Intangible assets, net of accumulated amortization",
+     84.4
+    ],
+    [
+     "Deferred tax assets",
+     0.0
+    ],
+    [
+     "Deferred charges and other assets",
+     3.4
+    ],
+    [
+     "Total assets of continuing operations",
+     761.4
+    ],
+    [
+     "Assets of discontinued operations",
+     3.1
+    ],
+    [
+     "Total assets",
+     764.5
+    ],
+    [
+     "Short-term borrowings",
+     1.8
+    ],
+    [
+     "Current portion of long-term borrowings",
+     76.2
+    ],
+    [
+     "Accounts payable",
+     53.5
+    ],
+    [
+     "Compensation and withholding taxes",
+     21.2
+    ],
+    [
+     "Customer deposits",
+     10.2
+    ],
+    [
+     "Deferred revenue",
+     10.6
+    ],
+    [
+     "Other",
+     41.1
+    ],
+    [
+     "Total current liabilities",
+     214.6
+    ],
+    [
+     "Long-term borrowings and capital lease obligations",
+     184.4
+    ],
+    [
+     "Long-term pension and other postretirement benefit liabilities",
+     41.3
+    ],
+    [
+     "Deferred gain",
+     23.5
+    ],
+    [
+     "Deferred tax liabilities",
+     45.8
+    ],
+    [
+     "Other long-term liabilities",
+     15.8
+    ],
+    [
+     "Total liabilities of continuing operations",
+     525.4
+    ],
+    [
+     "Liabilities of discontinued operations",
+     18.2
+    ],
+    [
+     "Total liabilities",
+     543.6
+    ],
+    [
+     "Common stock, $1 par value per share, 90.0 million shares authorized, 63.0 million and 49.6 million shares issued, respectively",
+     63.0
+    ],
+    [
+     "Capital in excess of par value",
+     164.7
+    ],
+    [
+     "Retained earnings",
+     50.6
+    ],
+    [
+     "Treasury stock, 0.9 million and 0.8 million shares at cost, respectively",
+     -15.8
+    ],
+    [
+     "Accumulated other comprehensive loss",
+     -41.6
+    ],
+    [
+     "Total shareholders\u2019 equity",
+     220.9
+    ],
+    [
+     "Total liabilities and shareholders\u2019 equity",
+     764.5
+    ]
+   ]
+  }
+ },
  "rel1": {
   "is": {
    "rev": 726.5,
@@ -1460,6 +1996,66 @@
      62.1
     ]
    ]
+  }
+ },
+ "rel1_q4": {
+  "is": {
+   "rev": 186.7,
+   "cogs": 138.5,
+   "sga": 50.9,
+   "acq": 0.1,
+   "impair": 78.9,
+   "restr": 1.0,
+   "oi": -82.7,
+   "int_exp": 1.8,
+   "oth": -0.5,
+   "other_lines": [
+    [
+     "Loss before income taxes",
+     -85.0
+    ],
+    [
+     "Loss from continuing operations",
+     -158.4
+    ]
+   ],
+   "tax": -73.4,
+   "disc": -10.8,
+   "ni": -169.2,
+   "eps_b_cont": -2.55,
+   "eps_d_cont": -2.55,
+   "eps_b_disc": -0.17,
+   "eps_d_disc": -0.17,
+   "eps_b": -2.72,
+   "eps_d": -2.72,
+   "sh_b": 62.2,
+   "sh_d": 62.2,
+   "dps": 0.06
+  },
+  "grp": {
+   "orders_ssg": 52.3,
+   "backlog_ssg": 18.2,
+   "sales_ssg": 54.9,
+   "oi_ssg": 7.2,
+   "op_m_ssg": 13.1,
+   "dda_ssg": 0.9,
+   "orders_frg": 28.8,
+   "backlog_frg": 57.3,
+   "sales_frg": 34.5,
+   "oi_frg": 4.4,
+   "op_m_frg": 12.8,
+   "dda_frg": 0.6,
+   "orders_esg": 84.2,
+   "backlog_esg": 82.6,
+   "sales_esg": 71.9,
+   "oi_esg": 1.8,
+   "op_m_esg": 2.5,
+   "dda_esg": 1.2,
+   "orders_fst": 21.6,
+   "backlog_fst": 58.7,
+   "sales_fst": 25.4,
+   "op_m_fst": -318.9,
+   "dda_fst": 1.5
   }
  },
  "x": {

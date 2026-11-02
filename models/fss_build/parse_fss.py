@@ -14,6 +14,7 @@ their raw values; extract.py uses them only when the counts agree and otherwise 
 import re
 from bs4 import BeautifulSoup
 
+CPS = ['cur', 'py', 'py2', 'py3', 'py4', 'py5']
 MONTHS = 'january|february|march|april|may|june|july|august|september|october|november|december'
 DROP = {'', '$', ')', '%', ')%', '%)', '(', '$(', ')(', '—%', 'pts', 'bps'}
 
@@ -75,66 +76,97 @@ KIND = [(r'three[\s\-]+months|\bqtr\b|\bquarter\b|3 months', 3), (r'six[\s\-]+mo
 YEAR = re.compile(r'(?<!\d)(20\d\d)(?!\d)')
 INST = re.compile(r'(' + MONTHS + r')\s+\d{1,2},?\s*(20\d\d)', re.I)
 
+def _kind_of(text):
+    tl = text.lower()
+    for p, k in KIND:
+        if re.search(p, tl): return k
+    return None
+
 def columns(t):
-    """resolve value columns -> list of (months, cp, kind) or None if the table has no period columns."""
+    """resolve value columns -> list of (months, cp, kind, year) or None if the table has no period columns.
+
+    Column positions come from the header row that carries the year tokens ("2026 | 2025 | Change | 2026 | 2025 | Change"); period
+    lengths come from the "Three / Nine Months Ended" row (or the sentence before the table in the 2010-2013 releases). Tokens with
+    "change" or "vs." are change columns."""
     n = max((len(v) for _, v in t['rows']), default=0)
     if not n: return None
-    h = ' || '.join(t['hdr'] + ([t['rows'][0][0]] if t['rows'] and not t['rows'][0][1] else []))
+    hdr = list(t['hdr']) + ([t['rows'][0][0]] if t['rows'] and not t['rows'][0][1] else [])
+    h = ' || '.join(hdr)
     hl = h.lower()
-    toks = [x.strip() for x in re.split(r'\s*\|\|?\s*', h) if x.strip()]
-    kinds = []
-    for tok in toks:
+    def is_year(tok):
+        tl = tok.lower().strip()
+        return bool(re.fullmatch(r'(fy ?)?20\d\d\*?( ?\(\d\))?( ?\(unaudited\))?( ?\([a-z]\))?', tl) or
+                    re.fullmatch(r'(' + MONTHS + r')\s+\d{1,2},?\s*20\d\d( ?\(unaudited\))?', tl))
+    def is_chg(tok):
         tl = tok.lower()
-        for p, k in KIND:
-            if re.search(p, tl): kinds.append(k); break
-    if not kinds and YEAR.search(h):
-        # 2010-2013 releases: the period is in the sentence before the table ("...for the three month period ended December 31, 2010 and 2009")
+        return bool(re.search(r'change|variance|\bvs\.?\b|better|worse', tl))
+    # the row with the most year tokens defines the column order
+    best, brow = 0, None
+    for row in hdr:
+        toks = [x.strip() for x in row.split('|') if x.strip()]
+        ny = sum(1 for x in toks if is_year(x))
+        if ny > best: best, brow = ny, toks
+    kinds = []
+    for row in hdr:
+        for x in row.split('|'):
+            k = _kind_of(x)
+            if k is not None and not is_year(x): kinds.append(k)
+    if not kinds:
         pl = t['pre'].lower()[-160:]
         m = re.search(r'(three|six|nine|twelve)[\s\-]+months?|year ended|years ended', pl)
-        if m:
-            kinds = [{'three': 3, 'six': 6, 'nine': 9, 'twelve': 12}.get(m.group(1), 12)]
-    # instants (balance sheets): "June 30, 2014 | December 31, 2013" or "December 31, || 2010 | 2009"
-    inst = INST.findall(h)
-    cols = []
-    seq = []           # sequence of ('y', year) / ('c',) value columns in header order
-    for tok in toks:
-        tl = tok.lower()
-        if re.search(r'change|variance|\bvs\b|better', tl) and not YEAR.search(tok): seq.append(('c', None)); continue
-        if re.fullmatch(r'(fy ?)?20\d\d( ?\(\d\))?( \(unaudited\))?( ?[a-z]\))?', tl) or INST.fullmatch(tok.rstrip(' (unaudited)')) or re.fullmatch(r'(' + MONTHS + r')\s+\d{1,2},?\s*20\d\d.*', tl):
-            for m in YEAR.finditer(tok):
-                seq.append(('y', int(m.group(1)))); break
+        if m: kinds = [{'three': 3, 'six': 6, 'nine': 9, 'twelve': 12}.get(m.group(1), 12)]
+    if brow is None:
+        ys = YEAR.findall(h)
+        if not ys: return None
+        k = kinds[0] if kinds else (0 if re.search(r'december 31|as of', hl) else 12)
+        return [(k, 'cur', 'v', int(ys[0]))]
+    seq = []
+    for x in brow:
+        if is_chg(x): seq.append(('c', None))
+        elif is_year(x): seq.append(('y', int(YEAR.search(x).group(1))))
+    nchg = sum(1 for k, _ in seq if k == 'c')
     years = [y for k, y in seq if k == 'y']
-    if not years: return None
-    if inst and len(inst) == len(years) and not kinds:
-        yrs = sorted(set(years), reverse=True)
-        return [(0, ['cur', 'py', 'py2', 'py3'][min(yrs.index(y), 3)], 'v') for y in years]
+    inst = any(re.fullmatch(r'(' + MONTHS + r')\s+\d{1,2},?\s*20\d\d.*', x.lower().strip()) for x in brow if is_year(x))
     if not kinds:
-        if re.search(r'december 31|as of', hl) and 'ended' not in hl and len(set(years)) == len(years) and n <= 3 and 'operating activities' not in hl:
-            kinds = [0]                 # balance sheet with "December 31, || 2010 | 2009"
+        if inst or (re.search(r'december 31|as of', hl) and 'ended' not in hl and len(set(years)) == len(years) and n <= 3):
+            kinds = [0]
         else:
-            kinds = [12]                # 10-K statements: "For the Years Ended December 31, | 2025 | 2024 | 2023"
-    # distribute years over kinds in order
-    ny = len(years)
-    per = ny // len(kinds) if len(kinds) and ny % len(kinds) == 0 else ny
-    blocks = []
-    i = 0
-    for kidx in range(len(kinds) if per != ny else 1):
-        blk = years[i:i + per]; i += per
-        blocks.append((kinds[kidx], blk))
-    if per == ny and len(kinds) > 1: blocks = [(kinds[0], years)]
-    ymap = {}
-    yi = 0
-    for k, blk in blocks:
-        srt = sorted(set(blk), reverse=True)
-        for y in blk:
-            ymap[yi] = (k, ['cur', 'py', 'py2', 'py3', 'py4'][min(srt.index(y), 4)]); yi += 1
-    yi = 0
-    for kind, y in seq:
-        if kind == 'c': cols.append(('chg', 'chg', 'v'))
+            kinds = [12]
+    # change columns announced on another header row ("For the Years Ended | Change") go after each block of years
+    if nchg == 0 and n > len(years) and re.search(r'change|\bvs\b', hl):
+        nb = len(kinds) if len(years) % max(len(kinds), 1) == 0 else 1
+        per = len(years) // nb
+        seq2 = []
+        for i in range(nb):
+            seq2 += [('y', y) for y in years[i * per:(i + 1) * per]] + [('c', None)]
+        seq = seq2[:n] if len(seq2) >= n else seq2
+    nb = len(kinds) if len(kinds) and len(years) % len(kinds) == 0 else 1
+    per = len(years) // nb
+    cols, yi = [], 0
+    for k, y in seq:
+        if k == 'c': cols.append(('chg', 'chg', 'v', None))
         else:
-            k, cp = ymap[yi]; yi += 1
-            cols.append((k, cp, 'v'))
-    return cols
+            blk = min(yi // per, nb - 1); yi += 1
+            cols.append((kinds[blk] if len(kinds) > blk else kinds[0], 'cur', 'v', y))
+    # provisional cur / py by rank within each block (relabel() re-expresses them against the document year)
+    out, yi = [], 0
+    for c in cols:
+        if c[3] is None: out.append(c); continue
+        blk = min(yi // per, nb - 1); yi += 1
+        ys = sorted({y for y in years[blk * per:(blk + 1) * per]}, reverse=True)
+        out.append((c[0], CPS[min(ys.index(c[3]), len(CPS) - 1)], 'v', c[3]))
+    return out
+
+def relabel(tabs, docyear):
+    """re-express each column's cur / py / py2 relative to the document's own fiscal year (a 10-K's MD&A '2024 vs 2023' table is then
+    'py' / 'py2', not 'cur' / 'py')."""
+    for t in tabs:
+        if t.get('_rel') == docyear: continue
+        t['cols'] = [(c[0], (CPS[docyear - c[3]] if c[3] is not None and 0 <= docyear - c[3] < len(CPS) else ('chg' if c[3] is None else 'other')), c[2], c[3])
+                     for c in t['cols']]
+        if t.get('year') is not None: t['cp'] = CPS[docyear - t['year']] if 0 <= docyear - t['year'] < len(CPS) else 'other'
+        t['_rel'] = docyear
+    return tabs
 
 # ------------------------------------------------------------------ typed tables
 GROUPS = [('ssg', r'safety and security|safety products'), ('frg', r'fire rescue'), ('esg', r'environmental (solutions|products)'),
