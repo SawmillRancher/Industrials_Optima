@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, GHM). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -275,7 +275,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -289,6 +289,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Recast Q4 = FY recast − 9M recast; quarters that were never recast stay blank. [LECO]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
+- **Parse release tables by grid column, not by value list.** Rows that leave change / percent cells blank shift a value list against the header. Place each cell by its colspan-aware column, and resolve periods from the header tokens above it. Supplemental exhibits can also mislabel column years, so sequence quarter columns (a Q1 after Q4 / YTD starts the next fiscal year). [GHM]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
 
 ### 5.2 Basis
@@ -353,6 +354,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
 - **Apply the Δ only to genuinely uncommitted lines** (retail rather than order-book wholesale). Constant-FX guidance needs a separate FX-translation Δ for the reporting-currency figure. EPS guidance made stale by post-guidance buybacks becomes an information row. [BC, ONON, BWXT]
 - **No guidance:** leave targets as optional blank inputs; don't invent them. [HEI, BC]
+- **Lumpy, milestone-driven revenue:** seed the remaining-quarter trend with trailing-four-quarter y/y rather than the YTD quarter(s), or the uniform Δ forces implausible line splits. When gross margin, a cost ratio and EBITDA are all guided, pin the cost ratio and solve gross margin, and show the guided-mid-point gap as information. [GHM]
 
 ### 5.6 Balance sheet, cash and capital
 - **Current year with actual quarters:**
@@ -405,6 +407,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   [ESAB, BWXT, HEI, UBER]
 - **Deal tabs** show accretion both vs the standalone with buybacks and on the company's comparison basis, and solve for the synergies or margin needed to meet the stated accretion. [CHRW]
 - **Historical average share prices** come from 10-K Item 5 only where disclosed; leave later years blank. [HII]
+- **When the current year is excluded from the DCF,** rebase the template's DCF CAGR columns (P / Q) to the first explicit year; measured from the excluded year they return `#NUM!` when that year's UFCF is negative. Check terminal reinvestment too: capex held at growth-programme levels into the fade implies a terminal RONIC far below ROIC. [GHM]
 
 ### 5.8 QA
 - **Template residue is the most common defect.** At least 10 builds shipped MLM text in Bull-Base-Bear N26 / P40 comments or DCF rationale, and TFI kept Moog comments. `tools/residue_scan.py` is a hard gate. [CLH, WAB, SAIA, ODFL, WCN, LOAR, ONON, LECO, ESAB, STE, CTAS, UBER, TFI, CPRT]

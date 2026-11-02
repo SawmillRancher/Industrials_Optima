@@ -1,9 +1,9 @@
-"""Framework: MLM-template layout re-based on Woodward's fiscal (30-September year-end) columns, style cloning, row registry and
+"""Framework: MLM-template layout re-based on Graham's fiscal (31-March year-end) columns, style cloning, row registry and
 per-column formula context.
 
-Columns (Model sheet): C-L FY2011-FY2020 (annual) | M-AK Q1/21-Q4/25 with FY subtotals | AL-AN Q1/26-Q3/26 (actual) |
-AO Q4/26E | AP 2026E | AQ-AU 2027E-2031E | AV modelling notes | AX-BA CAGRs | BD-BH scenario input table. Fiscal year N =
-October N-1 to September N. Template columns right of the forecast block keep their order (template letter - 36).
+Columns (Model sheet): C-I FY2006-FY2012 (annual) | J-CA Q1/13-Q4/26 with FY subtotals | CB Q1/27 (actual) | CC-CE Q2/27E-Q4/27E |
+CF 2027E | CG-CJ 2028E-2031E | CK modelling notes | CM-CP CAGRs | CS-CW scenario input table. Fiscal year N = April N-1 to
+March N. Template columns right of the forecast block keep their order (template letter + 5).
 """
 import copy, json, os
 import openpyxl
@@ -14,6 +14,7 @@ import normalize
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE = os.path.join(BASE, 'MLM_Model.xlsx')
+AUTHOR = 'GHM model'
 
 class Col:
     def __init__(self, c, label, kind, year, q=None):
@@ -21,8 +22,9 @@ class Col:
         self.prior = None; self.prevq = None
     def __repr__(self): return f'{self.c}:{self.label}'
 
-FY0, FYQ0, FYC = 2011, 2021, 2026          # first annual year, first quarterly year, current (partly estimated) year
+FY0, FYQ0, FYC = 2006, 2013, 2027          # first annual year, first quarterly year, current (partly estimated) year
 FYL = 2031
+NACT = 1                                   # actual quarters of the current year (Q1 FY27)
 COLS, ANN, QC = [], {}, {}
 _i = CI('C')
 for y in range(FY0, FYQ0):
@@ -31,15 +33,16 @@ for y in range(FYQ0, FYC + 1):
     yy = str(y)[2:]
     for q in (1, 2, 3, 4, None):
         if q:
-            kind, lab = ('QE', f'Q{q}/{yy}E') if (y == FYC and q == 4) else ('Q', f'Q{q}/{yy}')
+            kind, lab = ('QE', f'Q{q}/{yy}E') if (y == FYC and q > NACT) else ('Q', f'Q{q}/{yy}')
             col = Col(L(_i), lab, kind, y, q); QC[(y, q)] = col
         else:
-            kind, lab = ('E26', f'{y}E') if y == FYC else ('A', y)
+            kind, lab = ('EC', f'{y}E') if y == FYC else ('A', y)
             col = Col(L(_i), lab, kind, y); ANN[y] = col
         COLS.append(col); _i += 1
 for y in range(FYC + 1, FYL + 1):
     col = Col(L(_i), f'{y}E', 'AE', y); COLS.append(col); ANN[y] = col; _i += 1
-assert ANN[2025].c == 'AK' and QC[(2026, 3)].c == 'AN' and QC[(2026, 4)].c == 'AO' and ANN[2026].c == 'AP' and ANN[2031].c == 'AU', (ANN[2025], ANN[2026], ANN[2031])
+assert ANN[2012].c == 'I' and QC[(2013, 1)].c == 'J' and ANN[2026].c == 'CA' and QC[(2027, 1)].c == 'CB' and QC[(2027, 4)].c == 'CE' \
+    and ANN[2027].c == 'CF' and ANN[2031].c == 'CJ', (ANN[2026], ANN[2027], ANN[2031])
 for col in COLS:
     if col.q is None:
         if col.year - 1 in ANN: col.prior = ANN[col.year - 1].c
@@ -49,18 +52,19 @@ for col in COLS:
         elif (col.year - 1, 4) in QC: col.prevq = QC[(col.year - 1, 4)].c
 COLMAP = {c.c: c for c in COLS}
 HISTK = ('A', 'Q')
-FCK = ('QE', 'E26', 'AE')
+FCK = ('QE', 'EC', 'AE')
 
-Q1, Q2, Q3, QE, E26 = 'AL', 'AM', 'AN', 'AO', 'AP'         # FY26 quarters (Q1-Q3 actual, Q4 estimate) / FY2026E
-LQ = Q3                                                     # last actual quarter (30-Jun-2026)
-A25, A24 = 'AK', 'AF'
-PQ1, PQ3 = 'AG', 'AI'                                       # Q1/25 - Q3/25 (prior-year year to date)
-NOTE = 'AV'
-SW = '$AV$2'                                                # scenario switch
-SL, SBULL, SBASE, SBEAR, SNOTE = 'BD', 'BE', 'BF', 'BG', 'BH'
-CAGR = ('AX', 'AY', 'AZ', 'BA')
-LASTC = 'BH'
-TSHIFT = 36                                                 # template column index - TSHIFT = WWD column index (right block)
+Q1, QE1, QE3, EC = 'CB', 'CC', 'CE', 'CF'                  # Q1/27 actual | Q2/27E | Q4/27E | FY2027E
+QEC = ('CC', 'CD', 'CE')
+LQ = Q1                                                     # last actual quarter (30-Jun-2026)
+A26, A25 = 'CA', 'BV'
+PQ1 = 'BW'                                                  # Q1/26 (prior-year year to date)
+NOTE = 'CK'
+SW = '$CK$2'                                                # scenario switch
+SL, SBULL, SBASE, SBEAR, SNOTE = 'CS', 'CT', 'CU', 'CV', 'CW'
+CAGR = ('CM', 'CN', 'CO', 'CP')
+LASTC = 'CW'
+TSHIFT = -5                                                 # template column index = GHM column index + TSHIFT (right block)
 
 def pkey(col):
     if col.kind == 'A': return str(col.year)
@@ -81,9 +85,9 @@ ARCH = {'section': 8, 'blank': 9, 'block': 10, 'line_b': 162, 'line': 161, 'grow
         'driver': 153, 'total': 166, 'text': 215, 'sub': 217, 'eps': 187, 'eps_total': 188, 'eps_memo': 191, 'sched': 378, 'memo_calc': 181}
 NF = {'m': '#,##0;\\(#,##0\\);\\-', 'm1': '#,##0.0;\\(#,##0.0\\);\\-', 'pct': '0.0%;\\(0.0%\\);\\-', 'ps': '0.00;\\(0.00\\);\\-',
       'x': '0.0\\x', 'x2': '0.00\\x;\\(0.00"x)";\\-', 'd': '0\\d;\\(0")d";\\-', 'gen': 'General', 'yrs': '0" yrs"',
-      'm2': '#,##0.00;\\(#,##0.00\\);\\-', 'pct2': '0.00%;\\(0.00%\\);\\-'}
+      'm2': '#,##0.00;\\(#,##0.00\\);\\-', 'm3': '#,##0.000;\\(#,##0.000\\);\\-', 'pct2': '0.00%;\\(0.00%\\);\\-'}
 BLUE, BLACK, GRAY = 'FF0000FF', 'FF000000', 'FFA6A6A6'
-SRC_KIND = {'A': 'BV', 'Q': 'BX', 'QE': 'BY', 'E26': 'CA', 'AE': 'CB'}
+SRC_KIND = {'A': 'BV', 'Q': 'BX', 'QE': 'BY', 'EC': 'CA', 'AE': 'CB'}
 
 def tcol(ci):
     letter = L(ci)
@@ -100,7 +104,7 @@ def set_color(cell, rgb, bold=None):
     cell.font = Font(name=f.name, sz=f.sz, b=f.b if bold is None else bold, i=f.i, u=f.u, color=rgb)
 
 def comment(cell, text, w=420, h=160):
-    c = Comment(text, 'WWD model'); c.width, c.height = w, h
+    c = Comment(text, AUTHOR); c.width, c.height = w, h
     cell.comment = c
 
 class Row:
@@ -129,7 +133,7 @@ def P(key): return f'{CTX.col.prior}{R[key]}'
 def PQ(key): return f'{CTX.col.prevq}{R[key]}'
 def Q(key, y, q): return f'{QC[(y, q)].c}{R[key]}'
 def Y(key, y): return f'{ANN[y].c}{R[key]}'
-def S26(key): return f'=SUM({Q1}{R[key]}:{QE}{R[key]})'
+def SC27(key): return f'=SUM({Q1}{R[key]}:{QE3}{R[key]})'
 def SUMQ(key):
     y = CTX.col.year
     return f'=SUM({QC[(y, 1)].c}{R[key]}:{QC[(y, 4)].c}{R[key]})'

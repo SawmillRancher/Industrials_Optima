@@ -1,16 +1,66 @@
 {
  "guidance_fy27": {
-  "src": "Q4 FY26 release (8-K Ex. 99.1, 8-Jun-2026), reaffirmed in the Q1 FY27 release (6-Aug-2026)",
+  "src": "Q4 FY26 release (8-K Ex. 99.1, 8-Jun-2026); reaffirmed in the Q1 FY27 release (8-K Ex. 99.1, 6-Aug-2026)",
   "url": "https://www.sec.gov/Archives/edgar/data/716314/000119312526336614/d28324dex991.htm",
   "sales": [295.0, 290.0, 285.0],
   "gm": [0.255, 0.25, 0.245],
   "sga_pct": [0.165, 0.17, 0.175],
   "adj_ebitda": [40.0, 37.5, 35.0],
-  "etr": [0.18, 0.19, 0.20],
+  "etr": [0.18, 0.19, 0.2],
   "capex": [18.0, 20.0, 22.0],
-  "sga_items": "SG&A guidance includes ~$4.0-5.0m of equity-based compensation, net acquisition & integration costs and ERP conversion costs; Adjusted EBITDA guidance excludes ~$5.5-6.5m of those items (Q1 FY27 release footnote; $4.0-5.0m in the Q4 FY26 release)",
-  "invest": "~$2.5m of incremental costs in FY2027 to invest in people, processes and technology"
+  "items": [5.5, 6.0, 6.5],
+  "items_note": "Adjusted EBITDA guidance excludes ~$5.5-6.5m of equity-based compensation, net acquisition & integration costs and ERP conversion costs (Q1 FY27 release; $4.0-5.0m in the Q4 FY26 release). SG&A guidance (incl. amortization) includes ~$4.0-5.0m of those items.",
+  "invest": "~$2.5m of incremental FY2027 costs to invest in people, processes and technology (included in SG&A and Adjusted EBITDA guidance)."
  },
- "price": {"px": 95.34, "note": "Form 4 (filed 10-Jun-2026): shares withheld for taxes on 8-Jun-2026 at $95.34 (Malone, Thome, Thoren) - the latest share price in an SEC filing; update to market."},
- "splits": "2-for-1 (declared 28-Jul-2005), 5-for-4 effective 3-Jan-2008 (declared 26-Oct-2007), 2-for-1 effective 6-Oct-2008 (declared 31-Jul-2008): FY2009 10-K Item 5 and Note 1."
+ "investor_day": {
+  "src": "Investor Day presentation (8-K Item 7.01, Ex. 99.1, 18-Jun-2026)",
+  "url": "https://www.sec.gov/Archives/edgar/data/716314/000119312526274996/d154066dex991.htm",
+  "organic_growth": [0.08, 0.10],
+  "adj_ebitda_margin_fy29": [0.14, 0.16],
+  "longer_term_adj_ebitda_margin": [0.17, 0.18],
+  "roic": ">20% enterprise ROIC (top quartile); >20% ROIC hurdle on organic investments",
+  "flacktek_fy27": "FlackTek: expect ~$30 million of revenue and ~$3 million of Adjusted EBITDA in FY2027; $25 million of potential earnouts tied to progressively increasing EBITDA targets FY2027-FY2030.",
+  "capital": "Capex 7-10% of sales and R&D 1-2% of sales (organic growth); M&A as an accelerator with leverage <3.0x (Q4 FY26 presentation, 8-K Ex. 99.3, 8-Jun-2026)."
+ },
+ "flacktek": {
+  "close": "2026-01-23",
+  "sales": {"Q4-26": 2.767, "Q1-27": 6.551},
+  "sales_src": "FY2026 10-K Note 2 (net sales of FlackTek included in FY2026: $2,767 thousand, i.e. 23-Jan to 31-Mar-2026); Q1 FY27 10-Q MD&A (FlackTek added $6,551 thousand to Q1 FY27 net sales).",
+  "fy27_run_rate": 30.0,
+  "market_share": {"def": 0.15, "space": 0.10, "ep": 0.75},
+  "market_share_note": "Assumption: allocation of FlackTek sales across the company's markets (not disclosed by market). The Q4 FY26 presentation says FlackTek's $3m was 'primarily Energy & Process'; the Q1 FY27 release says its contribution was across all markets.",
+  "consideration": "Purchase price $37,022 thousand (FY2026 10-K): cash $26,456 thousand + 76 thousand shares ($5,678 thousand at $74.89) + contingent earn-out at fair value $5,638 thousand (up to $25,000 thousand, FY2027-FY2030 adjusted EBITDA targets). Q1 FY27 working-capital settlement: $1,567 thousand cash received; purchase price reduced to $36,205 thousand and goodwill by $752 thousand (Q1 FY27 10-Q Note 2).",
+  "earnout_liability": "Contingent earn-out liabilities $7,059 thousand at 30-Jun-2026 ($3,967 thousand current), after a $577 thousand fair-value increase in Q1 FY27 (10-Q Note 2)."
+ },
+ "ppa": {
+  "Q1-22": {
+   "names": "Barber-Nichols (BN) - closed 1-Jun-2021; final purchase-price allocation (FY2022 10-K Note 2): $72,014 thousand = $61,150 cash + 610 thousand shares ($8,964 thousand)",
+   "cons": 72.014, "ca": 20.035, "ppe": 8.037, "intang": 32.5, "gw": 23.523, "onca": 9.026, "cl": 9.938, "debt": 0.0, "ncl": 11.169,
+   "src": "FY2022 10-K Note 2: cash 868 + receivables 8,074 + unbilled 7,068 + inventories 3,549 + prepaid 476; operating lease asset 9,026; customer relationships 11,800 + technology 10,100 + other intangibles 10,600; payables 1,842 + accrued compensation 1,341 + accrued other 707 + customer deposits 6,048; operating lease liabilities 9,066 + other long-term 2,103 (USD thousands)."
+  },
+  "Q3-24": {
+   "names": "P3 Technologies - closed 9-Nov-2023 (final allocation, FY2026 10-K Note 2): $11,238 thousand = $7,268 cash + 125 thousand shares ($1,930) + contingent earn-out",
+   "cons": 11.238, "ca": 1.954, "ppe": 0.542, "intang": 7.2, "gw": 1.997, "onca": 0.13, "cl": 0.451, "debt": 0.0, "ncl": 0.134,
+   "src": "FY2026 10-K Note 2: cash 286 + receivables 465 + unbilled 302 + inventories 808 + prepaid 93; operating lease asset 130; customer relationships 4,400 + technology 2,500 + tradename 300; accrued compensation 62 + customer deposits 389; operating lease liabilities 134 (USD thousands)."
+  },
+  "Q4-26": {
+   "names": "FlackTek - closed 23-Jan-2026 (preliminary allocation, FY2026 10-K Note 2): $37,022 thousand = cash $26,456 + 76 thousand shares ($5,678) + earn-out at fair value $5,638; revised to $36,205 thousand in Q1 FY27",
+   "cons": 37.022, "ca": 8.289, "ppe": 2.03, "intang": 23.4, "gw": 11.844, "onca": 1.479, "cl": 8.572, "debt": 0.0, "ncl": 1.448,
+   "src": "FY2026 10-K Note 2: cash 66 + receivables 3,985 + inventories 4,154 + prepaid 84; operating lease asset 1,448 + other 31; customer relationships 3,400 + technology 13,300 + tradename (indefinite-lived) 6,700; payables 2,237 + accrued compensation 596 + accrued other 3,988 + customer deposits 1,751; operating lease liabilities 1,448 (USD thousands). Xdot (20-Oct-2025, $900 thousand cash + $507 thousand earn-out; goodwill $714 thousand, technology $650 thousand) is immaterial and not tabulated."
+  }
+ },
+ "amort_sched": {
+  "2027_rem": 2.824, "2028": 3.721, "2029": 3.721, "2030": 3.721, "2031": 3.721, "thereafter": 19.999, "total": 37.707,
+  "src": "Q1 FY27 10-Q Note 5: estimated annual amortization of intangibles held at 30-Jun-2026 (fiscal years ending 31 March); excludes the FlackTek inventory step-up ($95 thousand in Q1 FY27)."
+ },
+ "debt": {
+  "facility": "Wells Fargo revolving credit facility (5-year, 13-Oct-2023; matures Oct-2028), increased from $50,000 to $80,000 thousand on 23-Jan-2026; $25,000 thousand letter-of-credit sub-limit. SOFR + 1.25-2.50% (1.25% fixed for the first year), unused fee 0.10-0.20%. Covenants: total leverage <= 3.50x, fixed-charge coverage >= 1.20x (FY2026 10-K Note 9).",
+  "at_2026_06_30": "No borrowings; $5,520 thousand of letters of credit; $74,480 thousand available (Q1 FY27 10-Q Note 7). $13,000 thousand repaid in April 2026 from the PIPE proceeds.",
+  "pipe": "Securities Purchase Agreement 14-Apr-2026 (8-K 15-Apr-2026): 600 thousand shares to accounts advised by T. Rowe Price at $83.36 (20-day average close) = $50,000 thousand gross (Q1 FY27 10-Q Note 6)."
+ },
+ "buyback": "Stock repurchase program authorized 29-Jan-2015 for up to $18,000 thousand; no shares purchased in FY2024-FY2026 (FY2026 10-K Note 16) or Q1 FY27 (10-Q Part II Item 2: none).",
+ "dividend": "Quarterly dividend suspended in Q4 FY2022 (FY2023 10-K Item 5); none paid FY2023-Q1 FY27.",
+ "price": {"px": 95.34, "date": "2026-06-08", "note": "Form 4s filed 10-Jun-2026 (Malone, Thome, Thoren): shares withheld for taxes on 8-Jun-2026 at $95.34 - the latest share price in an SEC filing (later Form 4s of Aug/Sep-2026 report unpriced grants); update to market."},
+ "splits": "2-for-1 (declared 28-Jul-2005, before the history window), 5-for-4 effective 3-Jan-2008 (declared 26-Oct-2007) and 2-for-1 effective 6-Oct-2008 (declared 31-Jul-2008): FY2009 10-K Item 5 and Item 6 note. Releases dated before 3-Jan-2008 are restated x2.5, before 6-Oct-2008 x2.",
+ "tax": "Statutory tax rate used by the company for the tax effect of adjustments: 23% (federal 21% + state); 'normalize tax rate to 19%/20%' in FY2022. FY2026 ETR 15.3% (R&D credits, share-based compensation; FY2026 10-K Note 11)."
 }

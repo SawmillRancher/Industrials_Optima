@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -13,10 +13,10 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Situation | Read |
 |---|---|
 | Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
-| Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
+| Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER, GHM |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
-| Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
-| Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
+| Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB, GHM (Navy programs, milestone revenue) |
+| Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP, GHM (small-cap bolt-ons) |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
@@ -25,8 +25,8 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
-| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
-| Net-cash balance sheet | RMS, CPRT, ODFL |
+| Non-December fiscal year / 52–53-week years | STE (Mar), GHM (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
+| Net-cash balance sheet | RMS, CPRT, ODFL, GHM |
 | Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
 | Private company, LBO | R&Y |
@@ -210,6 +210,53 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [bridges] Store the company's line-item wording and amounts per period as a comment on the total-adjustments cell. Category rows can then stay few while the audit trail is kept.
   - [bridges] Narrative-only per-share bridges: input $/share as published (split-adjusted) and convert at diluted shares in a separately labelled row.
   - [build] Without published orders, derive implied orders from the backlog roll-forward and label what it includes (FX, acquired backlog).
+
+### GHM — Graham Corporation (MLM template via WWD kit; US GAAP / USD m / FY ends 31-Mar)
+- **Coverage & basis:**
+  - History: FY2006–12 annual and Q1 FY13–Q1 FY27 quarterly, as originally reported (CIK 716314). Q2–Q4 FY27E are calibrated; FY2028E–31E are scenario years.
+  - Template columns shift +5 on the right (switch `CK2`, scenario table `CS:CW`).
+  - Splits: 5-for-4 (effective 3-Jan-2008) and 2-for-1 (6-Oct-2008), restated by release date (×2.5 / ×2).
+  - One reportable segment.
+  - Markets: the current Defense / Space / Energy & Process basis (FY2025 10-K) is used from FY2020. FY2020 Defense comes from the FY2021 releases' prior-year tables. Energy & Process = sales − Defense − Space where only the legacy refining / chemical / power / other split exists; the legacy split is kept as memo.
+- **Operating build:**
+  - Markets × growth. Orders = sales × book-to-bill; backlog roll-forward with a historical adjustments plug (incl. the $6.1m FlackTek acquired backlog).
+  - FlackTek (closed 23-Jan-2026): sales are explicit (10-K stub $2.8m, Q1 FY27 $6.6m, ~$30m FY27 per the Investor Day 8-K). Its y/y increment is added to the markets by an assumed share (E&P 75%) until the anniversary.
+  - M&A lever at 1.5x EV/sales with a 12% EBITDA margin (≈ FlackTek's 12x EBITDA).
+- **Bridges & definitions:**
+  - Adjusted EBITDA definition flags by column: FY2011 (acquisition costs, table in USD m) → EBITDA only FY2012–14, FY2016, Q4 FY2020–FY2021 → restructuring / impairment / nuclear items FY2017–Q3 FY2020 → acquisition & integration, CEO / CFO transition, debt amendment (FY2022+) → BN performance bonus, ERP, ERC credit (FY2024) → equity-based compensation from Q4 FY2024 (not restated).
+  - Adjusted net income adds back amortization from FY2022 and taxes items at 23% statutory ("normalize to 19–20%" in FY2022). FY2015 items were shown net of tax, so the tax line is derived as published − GAAP − pre-tax items.
+  - Adjusted operating profit was published only Q4 FY2018–Q3 FY2020; elsewhere it is a model definition.
+  - GHM publishes no FCF.
+- **Data quirks & corrections:**
+  - The Q1 FY2022 release has no operating-profit line, so it is derived.
+  - The FY2021 statement combined interest with other income in one line; it is split per the EBITDA reconciliation.
+  - FY2019–20 cash flow deducts cash held for sale (nuclear business), carried as its own line.
+  - From FY2023 the market / region / orders / backlog grids move to Ex. 99.2 (Ex. 99.3 in Q4 FY2023) in USD thousands; earlier grids are USD m to one decimal (Σ checks ±0.35).
+  - The Q1 FY2026 supplemental exhibit labels the current column "2025"; grid columns are sequenced (Q1 after Q4 / YTD = next year).
+  - Release rows omit change-column cells, so values were misaligned until the parser placed cells by grid column (colspan-aware).
+  - check_data runs 1,679 checks, all passing.
+- **Deals & special blocks:** PPAs for Barber-Nichols (final, $72.0m incl. shares), P3 ($11.2m) and FlackTek ($37.0m incl. $5.6m earn-out at fair value, preliminary; revised to $36.2m in Q1 FY27). The $50m PIPE (600k shares at $83.36, Apr-2026) repaid the $13m revolver.
+- **Calibration & scenarios:**
+  - Guidance: sales $285–295m, gross margin 24.5–25.5%, SG&A incl. amortization 16.5–17.5%, Adjusted EBITDA $35–40m, ETR 18–20%, capex $18–22m (8-Jun-2026, reaffirmed 6-Aug-2026).
+  - Step 1: a uniform growth Δ on the markets, seeded with **trailing-four-quarter** organic y/y. Q1 alone (Defense +40% on milestone timing) gave a −17pp Δ and E&P −34%; the four-quarter seed gives −14pp and E&P −16%, consistent with E&P backlog −20%.
+  - Step 2: SG&A is pinned to its guided end-point.
+  - Step 3: a gross-margin Δ is solved to Adjusted EBITDA. The result is 24.4%, just below the guided gross-margin range, because the guided mid-points are not mutually consistent. Shown as an information row.
+  - The Q2–Q4 tax rate is solved to the 19% FY ETR. Investor Day FY27–29 targets (8–10% organic growth, 14–16% Adjusted EBITDA margin) are information rows; Base reaches 15.0% in FY29.
+- **Balance sheet, cash & capital:**
+  - Net cash; the Wells Fargo $80m revolver plugs to a $15m minimum cash.
+  - Customer deposits are driven as % of backlog (Defense advance billings).
+  - No dividend since FY2022; buybacks come only from a net-cash cap (−1.0x Base) under the 2015 $18m authorization.
+  - Capex steps down from 6% to 4% of sales after the capacity programme.
+- **Valuation:**
+  - Price $95.34 from Form 4 tax-withholding prices (8-Jun-2026, filed 10-Jun-2026).
+  - NOPAT = Adjusted EBITA − SBC − cash acquisition / ERP costs; FY2027E UFCF is set to zero because net debt is taken at 31-Mar-2027.
+  - The DCF gives ~$30 vs ~49x FY27E adjusted EPS at market. The template's DCF CAGR columns measured from the excluded year and returned `#NUM!` in Bear; they are rebased to FY2028E.
+- **Reusable lessons:**
+  - [calibration] For milestone / over-time revenue, seed the remaining quarters with trailing-four-quarter y/y, not the single YTD quarter; otherwise the uniform Δ forces implausible market splits.
+  - [calibration] When the company guides gross margin, SG&A % and EBITDA together, pin the cost ratio first and solve gross margin. Show the guided-mid-point inconsistency rather than forcing all three.
+  - [tooling] Place release table cells by grid column (colspan-aware); value-list parsing misaligns rows that leave change cells blank.
+  - [extraction] Supplemental exhibits can mislabel column years; sequence quarter columns instead of trusting the header year.
+  - [valuation] When the current year is excluded from the DCF, rebase the template's CAGR columns to the first explicit year, and check terminal reinvestment (capex held at growth-programme levels implies a low terminal RONIC).
 
 ## Construction materials
 
