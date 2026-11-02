@@ -308,6 +308,7 @@ def do_cf():
         put(p, 'cf_beg', c['beg']); put(p, 'cf_end', c['end']); put(p, 'cf_cashadj', 0.0)
         if x_(p, 'bs_cash') is not None and c['end'] is not None and abs(c['end'] - x_(p, 'bs_cash')) > 0.05:
             put(p, 'cf_cash_disc', c['end'] - x_(p, 'bs_cash'))
+            if y >= 2013: put(qk(y, 4), 'cf_cash_disc', c['end'] - x_(p, 'bs_cash'))
             note(p, f'Cash-flow cash {c["end"]:,.1f} includes {c["end"] - x_(p, "bs_cash"):,.1f} of cash held by discontinued operations (balance sheet cash {x_(p, "bs_cash"):,.1f}).')
     for y in range(2013, 2027):
         prev = None; ni_c = 0.0
