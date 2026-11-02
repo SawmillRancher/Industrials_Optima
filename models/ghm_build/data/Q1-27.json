@@ -1,0 +1,522 @@
+{
+ "period": "Q1-27",
+ "fy": 2027,
+ "q": 1,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/716314/000119312526336614/d28324dex991.htm",
+  "release_date": "2026-08-06",
+  "exhibits": [
+   "d28324dex991.htm",
+   "d28324dex992.htm"
+  ],
+  "filing": "https://www.sec.gov/Archives/edgar/data/716314/000119312526336752/ghm-20260630.htm"
+ },
+ "notes": [],
+ "is": {
+  "rev": 71.342,
+  "cogs": 53.541,
+  "gp": 17.801,
+  "sga": 12.554,
+  "sga_amort": 0.507,
+  "oth_op": 0.588,
+  "op_profit": 4.152,
+  "oth_nonop": 0.089,
+  "int_net": -0.12,
+  "ebt": 4.183,
+  "tax": 0.271,
+  "ni": 3.912,
+  "eps_b": 0.34,
+  "eps_d": 0.33,
+  "sh_b": 11.597,
+  "sh_d": 11.71,
+  "other_op_lines": [],
+  "nonop_lines": []
+ },
+ "ngaap": {
+  "ebitda": {
+   "items": [
+    [
+     "Acquisition & integration expense (income), net",
+     1.179,
+     "ACQ"
+    ],
+    [
+     "ERP Implementation costs",
+     0.143,
+     "ERP"
+    ],
+    [
+     "Equity-based compensation expense",
+     0.645,
+     "SBC"
+    ]
+   ],
+   "start": 3.912,
+   "start_label": "Net income",
+   "int": -0.12,
+   "tax": 0.271,
+   "dda": 2.72,
+   "adj_ebitda": 8.75,
+   "unit": "k",
+   "doc": "d28324dex991.htm"
+  },
+  "adjni": {
+   "items": [
+    [
+     "Acquisition & integration expense (income), net",
+     1.179,
+     "ACQ"
+    ],
+    [
+     "Amortization of intangible assets",
+     1.05,
+     "AMORT"
+    ],
+    [
+     "ERP Implementation costs",
+     0.143,
+     "ERP"
+    ],
+    [
+     "Tax impact of adjustments (1)",
+     -0.546,
+     "TAX"
+    ]
+   ],
+   "start": 3.912,
+   "start_label": "Net income",
+   "adj_ni": 5.738,
+   "gaap_eps": 0.33,
+   "adj_eps": 0.49,
+   "sh_d": 11.71,
+   "unit": "k",
+   "doc": "d28324dex991.htm"
+  }
+ },
+ "cf": {
+  "ytd_months": 3,
+  "ni": 3.912,
+  "dep": 1.67,
+  "amort": 1.05,
+  "pens_amort": 0.173,
+  "sbc": 0.645,
+  "gain_ppe": 0.011,
+  "cont_cons": 0.577,
+  "deftax": 0.157,
+  "cfo": -12.65,
+  "capex": -2.609,
+  "acq": 1.567,
+  "cfi": -1.042,
+  "debt_borrow": 0.0,
+  "debt_repay": -13.0,
+  "fin_lease": -0.087,
+  "stock_iss": 50.0,
+  "stock_cost": -0.138,
+  "withhold": -2.731,
+  "cff": 34.044,
+  "fx": 0.021,
+  "net": 20.373,
+  "beg": 6.58,
+  "end": 26.953,
+  "lines_raw": [
+   [
+    "Net income",
+    3.912
+   ],
+   [
+    "Depreciation",
+    1.67
+   ],
+   [
+    "Amortization",
+    1.05
+   ],
+   [
+    "Amortization of actuarial losses",
+    0.173
+   ],
+   [
+    "Equity-based compensation expense",
+    0.645
+   ],
+   [
+    "Loss on disposal or sale of property, plant and equipment",
+    0.011
+   ],
+   [
+    "Change in fair value of contingent consideration",
+    0.577
+   ],
+   [
+    "Deferred income taxes",
+    0.157
+   ],
+   [
+    "Accounts receivable",
+    -16.021
+   ],
+   [
+    "Unbilled revenue",
+    -6.021
+   ],
+   [
+    "Inventories",
+    1.23
+   ],
+   [
+    "Income taxes receivable",
+    0.237
+   ],
+   [
+    "Prepaid expenses and other current and non-current assets",
+    -1.936
+   ],
+   [
+    "Operating lease assets",
+    0.366
+   ],
+   [
+    "Prepaid pension asset",
+    -0.036
+   ],
+   [
+    "Accounts payable",
+    -0.592
+   ],
+   [
+    "Accrued compensation, accrued expenses and other current and non-current liabilities",
+    -8.557
+   ],
+   [
+    "Customer deposits",
+    10.846
+   ],
+   [
+    "Operating lease liabilities",
+    -0.36
+   ],
+   [
+    "Long-term portion of accrued compensation, accrued pension and postretirement benefit liabilities",
+    -0.001
+   ],
+   [
+    "Net cash used by operating activities",
+    -12.65
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -2.609
+   ],
+   [
+    "Acquisitions, net of cash acquired",
+    1.567
+   ],
+   [
+    "Net cash used by investing activities",
+    -1.042
+   ],
+   [
+    "Borrowings of debt obligations",
+    0.0
+   ],
+   [
+    "Principal repayments on debt",
+    -13.0
+   ],
+   [
+    "Repayments on finance lease obligations",
+    -0.087
+   ],
+   [
+    "Issuance of common stock",
+    50.0
+   ],
+   [
+    "Common stock issuance costs",
+    -0.138
+   ],
+   [
+    "Tax withholdings related to net share settlements of restricted stock units",
+    -2.731
+   ],
+   [
+    "Net cash provided (used) by financing activities",
+    34.044
+   ],
+   [
+    "Effect of exchange rate changes on cash",
+    0.021
+   ],
+   [
+    "Net increase (decrease) in cash and cash equivalents",
+    20.373
+   ],
+   [
+    "Cash and cash equivalents at beginning of period",
+    6.58
+   ],
+   [
+    "Cash and cash equivalents at end of period",
+    26.953
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 26.953,
+  "ar": 49.75,
+  "unbilled": 65.884,
+  "inv": 49.436,
+  "tca": 198.378,
+  "ppe": 60.747,
+  "pension_asset": 6.669,
+  "rou": 6.339,
+  "gw": 37.326,
+  "intang": 51.107,
+  "ta": 363.96,
+  "std": 0.024,
+  "ap": 24.697,
+  "accr_comp": 13.142,
+  "accr_oth": 8.326,
+  "deposits": 113.135,
+  "oplease_cl": 1.799,
+  "tax_pay": 0.0,
+  "tcl": 161.123,
+  "ltd": 0.015,
+  "oplease_ncl": 4.954,
+  "tl": 171.764,
+  "eq": 192.196,
+  "tle": 363.96,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    26.953
+   ],
+   [
+    "Trade accounts receivable, net of allowances ($287 and $195 at June 30, 2026 and March 31 2026, respectively)",
+    49.75
+   ],
+   [
+    "Unbilled revenue",
+    65.884
+   ],
+   [
+    "Inventories",
+    49.436
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    5.414
+   ],
+   [
+    "Income taxes receivable",
+    0.941
+   ],
+   [
+    "Total current assets",
+    198.378
+   ],
+   [
+    "Property, plant and equipment, net",
+    60.747
+   ],
+   [
+    "Prepaid pension asset",
+    6.669
+   ],
+   [
+    "Operating lease assets",
+    6.339
+   ],
+   [
+    "Goodwill",
+    37.326
+   ],
+   [
+    "Customer relationships, net",
+    15.016
+   ],
+   [
+    "Technology and technical know-how, net",
+    22.658
+   ],
+   [
+    "Tradenames, net",
+    13.433
+   ],
+   [
+    "Deferred income tax asset",
+    0.134
+   ],
+   [
+    "Other assets",
+    3.26
+   ],
+   [
+    "Total assets",
+    363.96
+   ],
+   [
+    "Current portion of finance lease obligations",
+    0.024
+   ],
+   [
+    "Accounts payable",
+    24.697
+   ],
+   [
+    "Accrued compensation",
+    13.142
+   ],
+   [
+    "Accrued expenses and other current liabilities",
+    8.326
+   ],
+   [
+    "Customer deposits",
+    113.135
+   ],
+   [
+    "Operating lease liabilities",
+    1.799
+   ],
+   [
+    "Income taxes payable",
+    0.0
+   ],
+   [
+    "Total current liabilities",
+    161.123
+   ],
+   [
+    "Long-term debt",
+    0.0
+   ],
+   [
+    "Finance lease obligations",
+    0.015
+   ],
+   [
+    "Operating lease liabilities",
+    4.954
+   ],
+   [
+    "Deferred income tax liability",
+    1.098
+   ],
+   [
+    "Accrued pension and postretirement benefit liabilities",
+    1.144
+   ],
+   [
+    "Other long-term liabilities",
+    3.43
+   ],
+   [
+    "Total liabilities",
+    171.764
+   ],
+   [
+    "Preferred stock, $1.00 par value, 500 shares authorized",
+    0.0
+   ],
+   [
+    "Common stock, $0.10 par value, 25,500 shares authorized, 11,901 and 11,247 shares issued and 11,727 and 11,073 shares outstanding at June 30, 2026 and March 31, 2026, respectively",
+    1.19
+   ],
+   [
+    "Capital in excess of par value",
+    89.409
+   ],
+   [
+    "Retained earnings",
+    110.641
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -5.656
+   ],
+   [
+    "Treasury stock (174 shares at June 30, 2026 and March 31, 2026, respectively)",
+    -3.388
+   ],
+   [
+    "Total stockholders\u2019 equity",
+    192.196
+   ],
+   [
+    "Total liabilities and stockholders\u2019 equity",
+    363.96
+   ]
+  ]
+ },
+ "kpi": {
+  "orders": 95.9,
+  "backlog": 557.2,
+  "sales_mkt": {
+   "defense": 41.383,
+   "space": 6.287,
+   "ep": 23.672
+  },
+  "sales_mkt_labels": {
+   "defense": "Defense",
+   "space": "Space",
+   "ep": "Energy & Process"
+  },
+  "sales_mkt_unit": "k",
+  "orders_mkt": {
+   "defense": 61.828,
+   "space": 14.366,
+   "ep": 19.656
+  },
+  "orders_mkt_labels": {
+   "defense": "Defense",
+   "space": "Space",
+   "ep": "Energy & Process"
+  },
+  "orders_mkt_unit": "k",
+  "backlog_mkt": {
+   "defense": 470.496,
+   "space": 45.295,
+   "ep": 41.426
+  },
+  "backlog_mkt_labels": {
+   "defense": "Defense",
+   "space": "Space",
+   "ep": "Energy & Process"
+  },
+  "backlog_mkt_unit": "k",
+  "sales_reg": {
+   "us": 64.463,
+   "mideast": 3.428,
+   "asia": 1.465,
+   "other": 1.986
+  },
+  "sales_reg_labels": {
+   "us": "United States",
+   "mideast": "Middle East",
+   "asia": "Asia",
+   "other": "Other"
+  },
+  "sales_reg_unit": "k"
+ },
+ "mkt_note": {
+  "defense": 41.383,
+  "space": 6.287,
+  "ep": 23.672,
+  "total": 71.342
+ },
+ "x": {
+  "sh_cover": {
+   "shares": 11.737033,
+   "date": "2026-08-04"
+  },
+  "sh_issued": 11.901,
+  "sh_treasury": 0.174,
+  "sh_out": 11.727,
+  "rev": 71.342,
+  "ni": 3.912,
+  "eps_d": 0.33,
+  "ta": 363.96,
+  "cfo_ytd": -12.65
+ }
+}

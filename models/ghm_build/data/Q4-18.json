@@ -1,0 +1,670 @@
+{
+ "period": "Q4-18",
+ "fy": 2018,
+ "q": 4,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/716314/000119312518179491/d593876dex991.htm",
+  "release_date": "2018-05-31",
+  "exhibits": [
+   "d593876dex991.htm",
+   "d593876dex992.htm"
+  ],
+  "filing": "https://www.sec.gov/Archives/edgar/data/716314/000156459018014971/ghm-10k_20180331.htm"
+ },
+ "notes": [],
+ "is": {
+  "rev": 22.178,
+  "cogs": 17.129,
+  "gp": 5.049,
+  "sga": 4.14,
+  "sga_amort": 0.059,
+  "impair": 0.0,
+  "restr": 0.0,
+  "op_profit": 0.85,
+  "int_inc": -0.151,
+  "int_exp": 0.004,
+  "ebt": 0.997,
+  "tax": 0.164,
+  "ni": 0.833,
+  "eps_b": 0.09,
+  "eps_d": 0.09,
+  "sh_b": 9.772,
+  "sh_d": 9.781,
+  "dps": 0.09,
+  "other_op_lines": [],
+  "nonop_lines": []
+ },
+ "ngaap": {
+  "ebitda": {
+   "items": [
+    [
+     "+ Restructuring charge",
+     0.0,
+     "RESTR"
+    ],
+    [
+     "+ Impairment of goodwill and intangible assets",
+     0.0,
+     "IMPAIR"
+    ],
+    [
+     "+ Bad debt charge on commercial nuclear power business",
+     0.0,
+     "BADDEBT"
+    ]
+   ],
+   "start": 0.833,
+   "start_label": "Net income (loss)",
+   "int": -0.147,
+   "tax": 0.164,
+   "dda": 0.555,
+   "adj_ebitda": 1.405,
+   "unit": "k",
+   "doc": "d593876dex991.htm"
+  },
+  "adjni": {
+   "items": [
+    [
+     "+ Restructuring charge",
+     0.0,
+     "RESTR"
+    ],
+    [
+     "+ Impairment of goodwill and intangible assets",
+     0.0,
+     "IMPAIR"
+    ],
+    [
+     "+ Bad debt charge on commercial nuclear power business",
+     0.0,
+     "BADDEBT"
+    ],
+    [
+     "- Tax effect of above",
+     0.0,
+     "TAX"
+    ],
+    [
+     "- Impact of new tax law",
+     -0.209,
+     "TAXD"
+    ]
+   ],
+   "start": 0.833,
+   "start_label": "Net income (loss)",
+   "adj_ni": 0.624,
+   "adj_eps": 0.07,
+   "gaap_eps": 0.09,
+   "items_ps": [
+    [
+     "+ Restructuring charge",
+     0.0
+    ],
+    [
+     "+ Impairment of goodwill and intangible assets",
+     0.0
+    ],
+    [
+     "+ Bad debt charge on commercial nuclear power business",
+     0.0
+    ],
+    [
+     "- Tax effect of above",
+     0.0
+    ],
+    [
+     "- Impact of new tax law",
+     -0.02
+    ]
+   ],
+   "unit": "k",
+   "doc": "d593876dex991.htm"
+  },
+  "adjop": {
+   "items": [
+    [
+     "+ Restructuring charge",
+     0.0,
+     "RESTR"
+    ],
+    [
+     "+ Impairment of goodwill and intangible assets",
+     0.0,
+     "IMPAIR"
+    ],
+    [
+     "+ Bad debt charge on commercial nuclear power business",
+     0.0,
+     "BADDEBT"
+    ]
+   ],
+   "start": 0.85,
+   "start_label": "Operating profit (loss)",
+   "adj_op": 0.85,
+   "unit": "k",
+   "doc": "d593876dex991.htm"
+  }
+ },
+ "cf": {
+  "ytd_months": 12,
+  "ni": -9.844,
+  "dep": 1.986,
+  "amort": 0.236,
+  "pens_amort": 1.05,
+  "sbc": 0.577,
+  "gain_ppe": 0.026,
+  "deftax": -3.088,
+  "cfo": 8.511,
+  "capex": -2.051,
+  "capex_proc": 0.006,
+  "inv_purch": -54.023,
+  "inv_red": 52.0,
+  "cfi": -4.068,
+  "debt_repay": -0.107,
+  "stock_iss": 0.0,
+  "div": -3.517,
+  "bb": -0.119,
+  "cff": -3.743,
+  "fx": 0.282,
+  "net": 0.982,
+  "beg": 39.474,
+  "end": 40.456,
+  "lines_raw": [
+   [
+    "Net (loss) income",
+    -9.844
+   ],
+   [
+    "Depreciation",
+    1.986
+   ],
+   [
+    "Amortization",
+    0.236
+   ],
+   [
+    "Amortization of unrecognized prior service cost and actuarial losses",
+    1.05
+   ],
+   [
+    "Impairment of goodwill and intangible assets",
+    14.816
+   ],
+   [
+    "Stock-based compensation expense",
+    0.577
+   ],
+   [
+    "Loss on disposal or sale of property, plant and equipment",
+    0.026
+   ],
+   [
+    "Deferred income taxes",
+    -3.088
+   ],
+   [
+    "Accounts receivable",
+    -5.472
+   ],
+   [
+    "Unbilled revenue",
+    7.866
+   ],
+   [
+    "Inventories",
+    -2.311
+   ],
+   [
+    "Income taxes receivable/payable",
+    -1.794
+   ],
+   [
+    "Prepaid expenses and other current and non-current assets",
+    -0.176
+   ],
+   [
+    "Prepaid pension asset",
+    -1.009
+   ],
+   [
+    "Accounts payable",
+    5.757
+   ],
+   [
+    "Accrued compensation, accrued expenses and other current and non-current liabilities",
+    -0.954
+   ],
+   [
+    "Customer deposits",
+    0.792
+   ],
+   [
+    "Long-term portion of accrued compensation, accrued pension liability and accrued postretirement benefits",
+    0.053
+   ],
+   [
+    "Net cash provided by operating activities",
+    8.511
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -2.051
+   ],
+   [
+    "Proceeds from disposal of property, plant and equipment",
+    0.006
+   ],
+   [
+    "Purchase of investments",
+    -54.023
+   ],
+   [
+    "Redemption of investments at maturity",
+    52.0
+   ],
+   [
+    "Net cash (used) provided by investing activities",
+    -4.068
+   ],
+   [
+    "Principal repayments on capital lease obligations",
+    -0.107
+   ],
+   [
+    "Issuance of common stock",
+    0.0
+   ],
+   [
+    "Dividends paid",
+    -3.517
+   ],
+   [
+    "Purchase of treasury stock",
+    -0.119
+   ],
+   [
+    "Excess tax deficiency (benefit) on stock awards",
+    0.0
+   ],
+   [
+    "Net cash used by financing activities",
+    -3.743
+   ],
+   [
+    "Effect of exchange rate changes on cash",
+    0.282
+   ],
+   [
+    "Net increase in cash and cash equivalents",
+    0.982
+   ],
+   [
+    "Cash and cash equivalents at beginning of year",
+    39.474
+   ],
+   [
+    "Cash and cash equivalents at end of period",
+    40.456
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 40.456,
+  "invest": 36.023,
+  "ar": 17.026,
+  "unbilled": 8.079,
+  "inv": 11.566,
+  "tca": 115.4,
+  "ppe": 17.052,
+  "pension_asset": 4.369,
+  "gw": 1.222,
+  "intang": 5.088,
+  "ta": 143.333,
+  "std": 0.088,
+  "ap": 16.151,
+  "accr_comp": 4.958,
+  "accr_oth": 2.885,
+  "deposits": 13.213,
+  "tax_pay": 0.0,
+  "tcl": 37.295,
+  "ltd": 0.055,
+  "tl": 39.984,
+  "eq": 103.349,
+  "tle": 143.333,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    40.456
+   ],
+   [
+    "Investments",
+    36.023
+   ],
+   [
+    "Trade accounts receivable, net of allowances ($339 and $168 at March 31, 2018 and 2017, respectively)",
+    17.026
+   ],
+   [
+    "Unbilled revenue",
+    8.079
+   ],
+   [
+    "Inventories",
+    11.566
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    0.772
+   ],
+   [
+    "Income taxes receivable",
+    1.478
+   ],
+   [
+    "Total current assets",
+    115.4
+   ],
+   [
+    "Property, plant and equipment, net",
+    17.052
+   ],
+   [
+    "Prepaid pension asset",
+    4.369
+   ],
+   [
+    "Goodwill",
+    1.222
+   ],
+   [
+    "Permits",
+    1.7
+   ],
+   [
+    "Other intangible assets, net",
+    3.388
+   ],
+   [
+    "Other assets",
+    0.202
+   ],
+   [
+    "Total assets",
+    143.333
+   ],
+   [
+    "Current portion of capital lease obligations",
+    0.088
+   ],
+   [
+    "Accounts payable",
+    16.151
+   ],
+   [
+    "Accrued compensation",
+    4.958
+   ],
+   [
+    "Accrued expenses and other current liabilities",
+    2.885
+   ],
+   [
+    "Customer deposits",
+    13.213
+   ],
+   [
+    "Income taxes payable",
+    0.0
+   ],
+   [
+    "Total current liabilities",
+    37.295
+   ],
+   [
+    "Capital lease obligations",
+    0.055
+   ],
+   [
+    "Deferred income tax liability",
+    1.427
+   ],
+   [
+    "Accrued pension liability",
+    0.565
+   ],
+   [
+    "Accrued postretirement benefits",
+    0.642
+   ],
+   [
+    "Total liabilities",
+    39.984
+   ],
+   [
+    "Preferred stock, $1.00 par value, 500 shares authorized",
+    0.0
+   ],
+   [
+    "Common stock, $.10 par value, 25,500 shares authorized 10,579 and 10,548 shares issued and 9,772 and 9,740 shares outstanding at March 31, 2018 and 2017, respectively",
+    1.058
+   ],
+   [
+    "Capital in excess of par value",
+    23.826
+   ],
+   [
+    "Retained earnings",
+    99.011
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -8.25
+   ],
+   [
+    "Treasury stock (807 and 808 shares at March 31, 2018 and 2017, respectively)",
+    -12.296
+   ],
+   [
+    "Total stockholders\u2019 equity",
+    103.349
+   ],
+   [
+    "Total liabilities and stockholders\u2019 equity",
+    143.333
+   ]
+  ]
+ },
+ "kpi": {
+  "orders": 43.5,
+  "backlog": 117.9,
+  "orders_q4": 43.5,
+  "sales_mkt": {
+   "refining": 7.9,
+   "chem": 3.6,
+   "power": 3.2,
+   "other": 7.4,
+   "total": 22.1
+  },
+  "sales_mkt_labels": {
+   "refining": "Refining",
+   "chem": "Chemical/ Petrochemical",
+   "power": "Power",
+   "other": "Other Commercial, Industrial and Defense"
+  },
+  "sales_mkt_unit": "m",
+  "sales_reg": {
+   "us": 14.7,
+   "mideast": 0.9,
+   "asia": 1.9,
+   "other": 4.6,
+   "total": 22.1
+  },
+  "sales_reg_labels": {
+   "us": "United States",
+   "mideast": "Middle East",
+   "asia": "Asia",
+   "other": "Other"
+  },
+  "sales_reg_unit": "m"
+ },
+ "py": {
+  "release": "https://www.sec.gov/Archives/edgar/data/716314/000119312519160249/d707944dex991.htm",
+  "is": {
+   "rev": 22.178,
+   "cogs": 17.218,
+   "gp": 4.96,
+   "sga": 4.171,
+   "sga_amort": 0.059,
+   "impair": 0.0,
+   "restr": 0.0,
+   "op_profit": 0.73,
+   "oth_nonop": -0.12,
+   "int_inc": -0.151,
+   "int_exp": 0.004,
+   "ebt": 0.997,
+   "tax": 0.164,
+   "ni": 0.833,
+   "eps_b": 0.09,
+   "eps_d": 0.09,
+   "sh_b": 9.772,
+   "sh_d": 9.781,
+   "dps": 0.09,
+   "other_op_lines": [],
+   "nonop_lines": []
+  },
+  "ngaap": {
+   "ebitda": {
+    "items": [
+     [
+      "+ Restructuring charge",
+      0.0,
+      "RESTR"
+     ],
+     [
+      "+ Goodwill and other impairments",
+      0.0,
+      "IMPAIR"
+     ],
+     [
+      "+ Bad debt charge on commercial nuclear utility business",
+      0.0,
+      "BADDEBT"
+     ]
+    ],
+    "start": 0.833,
+    "start_label": "Net (loss) income",
+    "int": -0.147,
+    "tax": 0.164,
+    "dda": 0.555,
+    "adj_ebitda": 1.405,
+    "unit": "k",
+    "doc": "d707944dex991.htm"
+   },
+   "adjni": {
+    "items": [
+     [
+      "+ Restructuring charge",
+      0.0,
+      "RESTR"
+     ],
+     [
+      "+ Goodwill and other impairments",
+      0.0,
+      "IMPAIR"
+     ],
+     [
+      "+ Bad debt charge on commercial nuclear utility business",
+      0.0,
+      "BADDEBT"
+     ],
+     [
+      "- Tax effect of above",
+      0.0,
+      "TAX"
+     ],
+     [
+      "- Impact of new tax law",
+      -0.209,
+      "TAXD"
+     ]
+    ],
+    "start": 0.833,
+    "start_label": "Net (loss) income",
+    "adj_ni": 0.624,
+    "unit": "k",
+    "doc": "d707944dex991.htm"
+   },
+   "adjop": {
+    "items": [
+     [
+      "+ Restructuring charge",
+      0.0,
+      "RESTR"
+     ],
+     [
+      "+ Goodwill and other impairments",
+      0.0,
+      "IMPAIR"
+     ],
+     [
+      "+ Bad debt charge on commercial nuclear utility business",
+      0.0,
+      "BADDEBT"
+     ]
+    ],
+    "start": 0.73,
+    "start_label": "Operating (loss) profit",
+    "adj_op": 0.73,
+    "unit": "k",
+    "doc": "d707944dex991.htm"
+   }
+  },
+  "kpi": {
+   "orders": 43.5,
+   "backlog": 117.9,
+   "orders_q4": 43.5,
+   "sales_mkt": {
+    "refining": 7.9,
+    "chem": 3.6,
+    "power": 3.2,
+    "other": 7.4,
+    "total": 22.1
+   },
+   "sales_mkt_labels": {
+    "refining": "Refining",
+    "chem": "Chemical/Petrochemical",
+    "power": "Power",
+    "other": "Other Commercial, Industrial and Defense"
+   },
+   "sales_mkt_unit": "m",
+   "sales_reg": {
+    "us": 14.7,
+    "mideast": 0.9,
+    "asia": 1.9,
+    "other": 4.6,
+    "total": 22.1
+   },
+   "sales_reg_labels": {
+    "us": "United States",
+    "mideast": "Middle East",
+    "asia": "Asia",
+    "other": "Other"
+   },
+   "sales_reg_unit": "m"
+  }
+ },
+ "x": {
+  "sh_cover": {
+   "shares": 9.771705,
+   "date": "2018-05-23"
+  },
+  "sh_issued": 10.579,
+  "sh_treasury": 0.807,
+  "sh_out": 9.772,
+  "rev": 22.178,
+  "ni": 0.833,
+  "eps_d": 0.09,
+  "ta": 143.333,
+  "cfo_ytd": 8.511
+ }
+}

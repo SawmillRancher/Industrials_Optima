@@ -1,0 +1,483 @@
+{
+ "period": "Q1-15",
+ "fy": 2015,
+ "q": 1,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/716314/000119312514288375/d765402dex991.htm",
+  "release_date": "2014-07-31",
+  "exhibits": [
+   "d765402dex991.htm",
+   "d765402dex992.htm"
+  ],
+  "filing": "https://www.sec.gov/Archives/edgar/data/716314/000119312514294530/d748276d10q.htm"
+ },
+ "notes": [],
+ "is": {
+  "rev": 28.502,
+  "cogs": 20.57,
+  "gp": 7.932,
+  "sga": 4.295,
+  "sga_amort": 0.054,
+  "op_profit": 3.583,
+  "int_inc": -0.046,
+  "int_exp": 0.003,
+  "ebt": 3.626,
+  "tax": 1.234,
+  "ni": 2.392,
+  "eps_b": 0.24,
+  "eps_d": 0.24,
+  "sh_b": 10.105,
+  "sh_d": 10.127,
+  "dps": 0.04,
+  "other_op_lines": [],
+  "nonop_lines": []
+ },
+ "ngaap": {
+  "ebitda": {
+   "items": [],
+   "start": 2.392,
+   "start_label": "Net income",
+   "int": -0.043,
+   "tax": 1.234,
+   "dda": 0.574,
+   "ebitda": 4.157,
+   "unit": "k",
+   "doc": "d765402dex991.htm"
+  }
+ },
+ "cf": {
+  "ytd_months": 3,
+  "ni": 2.392,
+  "dep": 0.52,
+  "amort": 0.054,
+  "pens_amort": 0.13,
+  "sbc": 0.123,
+  "deftax": -0.007,
+  "cfo": 3.189,
+  "capex": -2.569,
+  "inv_purch": -5.0,
+  "inv_red": 19.0,
+  "cfi": 11.431,
+  "debt_repay": -0.021,
+  "stock_iss": 0.029,
+  "div": -0.405,
+  "cff": -0.363,
+  "fx": 0.007,
+  "net": 14.264,
+  "beg": 32.146,
+  "end": 46.41,
+  "lines_raw": [
+   [
+    "Net income",
+    2.392
+   ],
+   [
+    "Depreciation",
+    0.52
+   ],
+   [
+    "Amortization",
+    0.054
+   ],
+   [
+    "Amortization of unrecognized prior service cost and actuarial losses",
+    0.13
+   ],
+   [
+    "Discount accretion on investments",
+    0.0
+   ],
+   [
+    "Stock-based compensation expense",
+    0.123
+   ],
+   [
+    "Deferred income taxes",
+    -0.007
+   ],
+   [
+    "Accounts receivable",
+    -1.958
+   ],
+   [
+    "Unbilled revenue",
+    0.196
+   ],
+   [
+    "Inventories",
+    3.702
+   ],
+   [
+    "Prepaid expenses and other current and non-current assets",
+    -0.487
+   ],
+   [
+    "Prepaid pension asset",
+    -0.32
+   ],
+   [
+    "Accounts payable",
+    -3.015
+   ],
+   [
+    "Accrued compensation, accrued expenses and other current and non-current liabilities",
+    0.259
+   ],
+   [
+    "Customer deposits",
+    0.502
+   ],
+   [
+    "Income taxes payable/receivable",
+    1.236
+   ],
+   [
+    "Long-term portion of accrued compensation, accrued pension liability and accrued postretirement benefits",
+    -0.138
+   ],
+   [
+    "Net cash provided by operating activities",
+    3.189
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -2.569
+   ],
+   [
+    "Purchase of investments",
+    -5.0
+   ],
+   [
+    "Redemption of investments at maturity",
+    19.0
+   ],
+   [
+    "Net cash provided by (used by) investing activities",
+    11.431
+   ],
+   [
+    "Principal repayments on capital lease obligations",
+    -0.021
+   ],
+   [
+    "Issuance of common stock",
+    0.029
+   ],
+   [
+    "Dividends paid",
+    -0.405
+   ],
+   [
+    "Excess tax benefit on stock awards",
+    0.034
+   ],
+   [
+    "Net cash used by financing activities",
+    -0.363
+   ],
+   [
+    "Effect of exchange rate changes on cash",
+    0.007
+   ],
+   [
+    "Net increase (decrease) in cash and cash equivalents",
+    14.264
+   ],
+   [
+    "Cash and cash equivalents at beginning of year",
+    32.146
+   ],
+   [
+    "Cash and cash equivalents at end of period",
+    46.41
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 46.41,
+  "invest": 15.0,
+  "ar": 12.297,
+  "unbilled": 7.634,
+  "inv": 12.817,
+  "tca": 95.738,
+  "ppe": 18.559,
+  "pension_asset": 6.077,
+  "gw": 6.938,
+  "intang": 14.863,
+  "ta": 142.388,
+  "std": 0.07,
+  "ap": 7.132,
+  "accr_comp": 5.505,
+  "accr_oth": 2.688,
+  "deposits": 8.515,
+  "tax_pay": 0.738,
+  "tcl": 24.648,
+  "ltd": 0.124,
+  "accr_comp_lt": 0.0,
+  "tl": 34.218,
+  "eq": 108.17,
+  "tle": 142.388,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    46.41
+   ],
+   [
+    "Investments",
+    15.0
+   ],
+   [
+    "Trade accounts receivable, net of allowances ($22 and $46 at June 30 and June 30, 2014, respectively)",
+    12.297
+   ],
+   [
+    "Unbilled revenue",
+    7.634
+   ],
+   [
+    "Inventories",
+    12.817
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    0.865
+   ],
+   [
+    "Income taxes receivable",
+    0.0
+   ],
+   [
+    "Deferred income tax asset",
+    0.715
+   ],
+   [
+    "Total current assets",
+    95.738
+   ],
+   [
+    "Property, plant and equipment, net",
+    18.559
+   ],
+   [
+    "Prepaid pension asset",
+    6.077
+   ],
+   [
+    "Goodwill",
+    6.938
+   ],
+   [
+    "Permits",
+    10.3
+   ],
+   [
+    "Other intangible assets, net",
+    4.563
+   ],
+   [
+    "Other assets",
+    0.213
+   ],
+   [
+    "Total assets",
+    142.388
+   ],
+   [
+    "Current portion of capital lease obligations",
+    0.07
+   ],
+   [
+    "Accounts payable",
+    7.132
+   ],
+   [
+    "Accrued compensation",
+    5.505
+   ],
+   [
+    "Accrued expenses and other current liabilities",
+    2.688
+   ],
+   [
+    "Customer deposits",
+    8.515
+   ],
+   [
+    "Income taxes payable",
+    0.738
+   ],
+   [
+    "Total current liabilities",
+    24.648
+   ],
+   [
+    "Capital lease obligations",
+    0.124
+   ],
+   [
+    "Accrued compensation",
+    0.0
+   ],
+   [
+    "Deferred income tax liability",
+    8.301
+   ],
+   [
+    "Accrued pension liability",
+    0.283
+   ],
+   [
+    "Accrued postretirement benefits",
+    0.862
+   ],
+   [
+    "Total liabilities",
+    34.218
+   ],
+   [
+    "Issued, 10,430 and 10,409 shares at June 30, 2014 and March 31, 2014, respectively",
+    1.043
+   ],
+   [
+    "Capital in excess of par value",
+    20.458
+   ],
+   [
+    "Retained earnings",
+    95.456
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -5.676
+   ],
+   [
+    "Treasury stock, 311 shares at each of June 30, 2014 and March 31, 2014",
+    -3.111
+   ],
+   [
+    "Total stockholders\u2019 equity",
+    108.17
+   ],
+   [
+    "Total liabilities and stockholders\u2019 equity",
+    142.388
+   ]
+  ]
+ },
+ "kpi": {
+  "orders": 31.1,
+  "backlog": 114.8,
+  "sales_mkt": {
+   "refining": 6.6,
+   "chem": 11.7,
+   "power": 4.9,
+   "other": 5.3,
+   "total": 28.5
+  },
+  "sales_mkt_labels": {
+   "refining": "Refining",
+   "chem": "Chemical/ Petrochemical",
+   "power": "Power",
+   "other": "Other Commercial and Industrial*"
+  },
+  "sales_mkt_unit": "m",
+  "sales_reg": {
+   "us": 22.2,
+   "mideast": 1.5,
+   "asia": 2.4,
+   "other": 2.4,
+   "total": 28.5
+  },
+  "sales_reg_labels": {
+   "us": "United States",
+   "mideast": "Middle East",
+   "asia": "Asia",
+   "other": "Other"
+  },
+  "sales_reg_unit": "m"
+ },
+ "mkt_note": {},
+ "mkt_note_py": {},
+ "py": {
+  "release": "https://www.sec.gov/Archives/edgar/data/716314/000119312515270298/d65177dex991.htm",
+  "is": {
+   "rev": 28.502,
+   "cogs": 20.57,
+   "gp": 7.932,
+   "sga": 4.295,
+   "sga_amort": 0.054,
+   "op_profit": 3.583,
+   "int_inc": -0.046,
+   "int_exp": 0.003,
+   "ebt": 3.626,
+   "tax": 1.234,
+   "ni": 2.392,
+   "eps_b": 0.24,
+   "eps_d": 0.24,
+   "sh_b": 10.105,
+   "sh_d": 10.127,
+   "dps": 0.04,
+   "other_op_lines": [],
+   "nonop_lines": []
+  },
+  "ngaap": {
+   "ebitda": {
+    "items": [],
+    "start": 2.392,
+    "start_label": "Net income",
+    "int": -0.043,
+    "tax": 1.234,
+    "dda": 0.574,
+    "ebitda": 4.157,
+    "unit": "k",
+    "doc": "d65177dex991.htm"
+   }
+  },
+  "kpi": {
+   "orders": 31.1,
+   "backlog": 114.8,
+   "sales_mkt": {
+    "refining": 6.6,
+    "chem": 11.7,
+    "power": 4.9,
+    "other": 5.3,
+    "total": 28.5
+   },
+   "sales_mkt_labels": {
+    "refining": "Refining",
+    "chem": "Chemical/ Petrochemical",
+    "power": "Power",
+    "other": "Other Commercial and Industrial*"
+   },
+   "sales_mkt_unit": "m",
+   "sales_reg": {
+    "us": 22.2,
+    "mideast": 1.5,
+    "asia": 2.4,
+    "other": 2.4,
+    "total": 28.5
+   },
+   "sales_reg_labels": {
+    "us": "United States",
+    "mideast": "Middle East",
+    "asia": "Asia",
+    "other": "Other"
+   },
+   "sales_reg_unit": "m"
+  }
+ },
+ "x": {
+  "sh_cover": {
+   "shares": 10.118906,
+   "date": "2014-08-01"
+  },
+  "sh_issued": 10.43,
+  "sh_treasury": 0.311,
+  "sh_out": null,
+  "rev": 28.502,
+  "ni": 2.392,
+  "eps_d": 0.24,
+  "ta": 142.388,
+  "cfo_ytd": null
+ }
+}

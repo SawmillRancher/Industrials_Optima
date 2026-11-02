@@ -1,0 +1,684 @@
+{
+ "period": "Q1-24",
+ "fy": 2024,
+ "q": 1,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/716314/000119312523204523/d431321dex991.htm",
+  "release_date": "2023-08-07",
+  "exhibits": [
+   "d431321dex991.htm",
+   "d431321dex992.htm"
+  ],
+  "filing": "https://www.sec.gov/Archives/edgar/data/716314/000095017023038764/ghm-20230630.htm"
+ },
+ "notes": [],
+ "is": {
+  "rev": 47.569,
+  "cogs": 36.592,
+  "gp": 10.977,
+  "sga": 7.019,
+  "sga_amort": 0.274,
+  "op_profit": 3.684,
+  "oth_nonop": 0.093,
+  "int_net": 0.185,
+  "ebt": 3.406,
+  "tax": 0.766,
+  "ni": 2.64,
+  "eps_b": 0.25,
+  "eps_d": 0.25,
+  "sh_b": 10.653,
+  "sh_d": 10.719,
+  "other_op_lines": [],
+  "nonop_lines": []
+ },
+ "ngaap": {
+  "ebitda": {
+   "items": [
+    [
+     "Acquisition & integration costs",
+     0.0,
+     "ACQ"
+    ],
+    [
+     "Barber-Nichols performance bonus",
+     0.767,
+     "BNBONUS"
+    ],
+    [
+     "Debt amendment costs",
+     0.0,
+     "DEBT"
+    ]
+   ],
+   "start": 2.64,
+   "start_label": "Net income",
+   "int": 0.185,
+   "tax": 0.766,
+   "dda": 1.239,
+   "adj_ebitda": 5.597,
+   "unit": "k",
+   "doc": "d431321dex991.htm"
+  },
+  "adjni": {
+   "items": [
+    [
+     "Acquisition & integration costs",
+     0.0,
+     "ACQ"
+    ],
+    [
+     "Amortization of intangible assets",
+     0.446,
+     "AMORT"
+    ],
+    [
+     "Barber-Nichols performance bonus",
+     0.767,
+     "BNBONUS"
+    ],
+    [
+     "Debt amendment costs",
+     0.0,
+     "DEBT"
+    ],
+    [
+     "Normalized tax rate (1)",
+     -0.279,
+     "TAX"
+    ]
+   ],
+   "start": 2.64,
+   "start_label": "Net income",
+   "adj_ni": 3.574,
+   "gaap_eps": 0.25,
+   "adj_eps": 0.33,
+   "sh_d": 10.719,
+   "unit": "k",
+   "doc": "d431321dex991.htm"
+  }
+ },
+ "cf": {
+  "ytd_months": 3,
+  "ni": 2.64,
+  "dep": 0.793,
+  "amort": 0.446,
+  "pens_amort": 0.211,
+  "sbc": 0.293,
+  "deftax": 0.855,
+  "cfo": 8.603,
+  "capex": -1.499,
+  "cfi": -1.499,
+  "debt_repay": -0.511,
+  "debt_borrow": 0.0,
+  "bb": -0.057,
+  "cff": -0.642,
+  "fx": -0.057,
+  "net": 6.405,
+  "beg": 18.257,
+  "end": 24.662,
+  "lines_raw": [
+   [
+    "Net income",
+    2.64
+   ],
+   [
+    "Depreciation",
+    0.793
+   ],
+   [
+    "Amortization",
+    0.446
+   ],
+   [
+    "Amortization of actuarial losses",
+    0.211
+   ],
+   [
+    "Amortization of debt issuance costs",
+    0.059
+   ],
+   [
+    "Equity-based compensation expense",
+    0.293
+   ],
+   [
+    "Deferred income taxes",
+    0.855
+   ],
+   [
+    "Accounts receivable",
+    -5.769
+   ],
+   [
+    "Unbilled revenue",
+    5.171
+   ],
+   [
+    "Inventories",
+    0.78
+   ],
+   [
+    "Prepaid expenses and other current and non-current assets",
+    -1.065
+   ],
+   [
+    "Income taxes receivable",
+    -0.159
+   ],
+   [
+    "Operating lease assets",
+    0.293
+   ],
+   [
+    "Prepaid pension asset",
+    -0.072
+   ],
+   [
+    "Accounts payable",
+    -4.745
+   ],
+   [
+    "Accrued compensation, accrued expenses and other current and non-current liabilities",
+    -0.868
+   ],
+   [
+    "Customer deposits",
+    10.002
+   ],
+   [
+    "Operating lease liabilities",
+    -0.256
+   ],
+   [
+    "Long-term portion of accrued compensation, accrued pension liability and accrued postretirement benefits",
+    -0.006
+   ],
+   [
+    "Net cash provided (used) by operating activities",
+    8.603
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -1.499
+   ],
+   [
+    "Net cash used by investing activities",
+    -1.499
+   ],
+   [
+    "Principal repayments on debt",
+    -0.5
+   ],
+   [
+    "Proceeds from the issuance of debt",
+    0.0
+   ],
+   [
+    "Principal repayments on finance lease obligations",
+    -0.011
+   ],
+   [
+    "Repayments on lease financing obligations",
+    -0.074
+   ],
+   [
+    "Payment of debt issuance costs",
+    0.0
+   ],
+   [
+    "Purchase of treasury stock",
+    -0.057
+   ],
+   [
+    "Net cash used by financing activities",
+    -0.642
+   ],
+   [
+    "Effect of exchange rate changes on cash",
+    -0.057
+   ],
+   [
+    "Net increase (decrease) in cash and cash equivalents",
+    6.405
+   ],
+   [
+    "Cash and cash equivalents at beginning of period",
+    18.257
+   ],
+   [
+    "Cash and cash equivalents at end of period",
+    24.662
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 24.662,
+  "ar": 29.544,
+  "unbilled": 34.467,
+  "inv": 25.49,
+  "tca": 117.347,
+  "ppe": 25.91,
+  "pension_asset": 6.179,
+  "rou": 8.071,
+  "gw": 23.523,
+  "intang": 27.057,
+  "ta": 210.028,
+  "std": 2.026,
+  "ap": 15.085,
+  "accr_comp": 10.334,
+  "accr_oth": 5.706,
+  "deposits": 56.016,
+  "oplease_cl": 1.114,
+  "tax_pay": 0.062,
+  "tcl": 90.343,
+  "ltd": 9.38,
+  "oplease_ncl": 7.278,
+  "tl": 110.307,
+  "eq": 99.721,
+  "tle": 210.028,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    24.662
+   ],
+   [
+    "Trade accounts receivable, net of allowances ($1,878 and $1,841 at June 30 and March 31, 2023, respectively)",
+    29.544
+   ],
+   [
+    "Unbilled revenue",
+    34.467
+   ],
+   [
+    "Inventories",
+    25.49
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    2.675
+   ],
+   [
+    "Income taxes receivable",
+    0.509
+   ],
+   [
+    "Total current assets",
+    117.347
+   ],
+   [
+    "Property, plant and equipment, net",
+    25.91
+   ],
+   [
+    "Prepaid pension asset",
+    6.179
+   ],
+   [
+    "Operating lease assets",
+    8.071
+   ],
+   [
+    "Goodwill",
+    23.523
+   ],
+   [
+    "Customer relationships, net",
+    10.571
+   ],
+   [
+    "Technology and technical know-how, net",
+    9.048
+   ],
+   [
+    "Other intangible assets, net",
+    7.438
+   ],
+   [
+    "Deferred income tax asset",
+    1.792
+   ],
+   [
+    "Other assets",
+    0.149
+   ],
+   [
+    "Total assets",
+    210.028
+   ],
+   [
+    "Current portion of long-term debt",
+    2.0
+   ],
+   [
+    "Current portion of finance lease obligations",
+    0.026
+   ],
+   [
+    "Accounts payable",
+    15.085
+   ],
+   [
+    "Accrued compensation",
+    10.334
+   ],
+   [
+    "Accrued expenses and other current liabilities",
+    5.706
+   ],
+   [
+    "Customer deposits",
+    56.016
+   ],
+   [
+    "Operating lease liabilities",
+    1.114
+   ],
+   [
+    "Income taxes payable",
+    0.062
+   ],
+   [
+    "Total current liabilities",
+    90.343
+   ],
+   [
+    "Long-term debt",
+    9.303
+   ],
+   [
+    "Finance lease obligations",
+    0.077
+   ],
+   [
+    "Operating lease liabilities",
+    7.278
+   ],
+   [
+    "Deferred income tax liability",
+    0.001
+   ],
+   [
+    "Accrued pension and postretirement benefit liabilities",
+    1.337
+   ],
+   [
+    "Other long-term liabilities",
+    1.968
+   ],
+   [
+    "Total liabilities",
+    110.307
+   ],
+   [
+    "Preferred stock, $1.00 par value, 500 shares authorized",
+    0.0
+   ],
+   [
+    "Common stock, $0.10 par value, 25,500 shares authorized, 10,818 and 10,774 shares issued and 10,675 and 10,635 shares outstanding at June 30 and March 31, 2023, respectively",
+    1.082
+   ],
+   [
+    "Capital in excess of par value",
+    28.641
+   ],
+   [
+    "Retained earnings",
+    80.083
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -7.551
+   ],
+   [
+    "Treasury stock (143 and 138 shares at June 30 and March 31, 2023, respectively)",
+    -2.534
+   ],
+   [
+    "Total stockholders\u2019 equity",
+    99.721
+   ],
+   [
+    "Total liabilities and stockholders\u2019 equity",
+    210.028
+   ]
+  ]
+ },
+ "kpi": {
+  "orders": 67.9,
+  "backlog": 322.0,
+  "sales_mkt": {
+   "refining": 6.867,
+   "chem": 6.041,
+   "space": 4.822,
+   "defense": 22.817,
+   "other": 7.022
+  },
+  "sales_mkt_labels": {
+   "refining": "Refining",
+   "chem": "Chemical/Petrochemical",
+   "space": "Space",
+   "defense": "Defense",
+   "other": "Other"
+  },
+  "sales_mkt_unit": "k",
+  "orders_mkt": {
+   "refining": 14.321,
+   "chem": 10.863,
+   "space": 4.606,
+   "defense": 32.958,
+   "other": 5.185
+  },
+  "orders_mkt_labels": {
+   "refining": "Refining",
+   "chem": "Chemical/Petrochemical",
+   "space": "Space",
+   "defense": "Defense",
+   "other": "Other"
+  },
+  "orders_mkt_unit": "k",
+  "backlog_mkt": {
+   "refining": 33.264,
+   "chem": 12.794,
+   "space": 8.675,
+   "defense": 253.358,
+   "other": 13.912
+  },
+  "backlog_mkt_labels": {
+   "refining": "Refining",
+   "chem": "Chemical/Petrochemical",
+   "space": "Space",
+   "defense": "Defense",
+   "other": "Other"
+  },
+  "backlog_mkt_unit": "k",
+  "sales_reg": {
+   "us": 38.141,
+   "mideast": 1.049,
+   "asia": 5.902,
+   "other": 2.477
+  },
+  "sales_reg_labels": {
+   "us": "United States",
+   "mideast": "Middle East",
+   "asia": "Asia",
+   "other": "Other"
+  },
+  "sales_reg_unit": "k"
+ },
+ "mkt_note": {
+  "refining": 6.867,
+  "chem": 6.041,
+  "defense": 22.817,
+  "space": 4.822,
+  "other": 7.022,
+  "total": 47.569
+ },
+ "mkt_note_py": {
+  "refining": 6.867,
+  "chem": 6.041,
+  "defense": 22.817,
+  "space": 4.822,
+  "other": 7.022,
+  "total": 47.569
+ },
+ "py": {
+  "release": "https://www.sec.gov/Archives/edgar/data/716314/000119312524195406/d867574dex991.htm",
+  "is": {
+   "rev": 47.569,
+   "cogs": 36.592,
+   "gp": 10.977,
+   "sga": 7.019,
+   "sga_amort": 0.274,
+   "oth_op": 0.0,
+   "op_profit": 3.684,
+   "oth_nonop": 0.093,
+   "int_net": 0.185,
+   "ebt": 3.406,
+   "tax": 0.766,
+   "ni": 2.64,
+   "eps_b": 0.25,
+   "eps_d": 0.25,
+   "sh_b": 10.653,
+   "sh_d": 10.719,
+   "other_op_lines": [],
+   "nonop_lines": []
+  },
+  "ngaap": {
+   "ebitda": {
+    "items": [
+     [
+      "Acquisition & integration income",
+      0.0,
+      "ACQ"
+     ],
+     [
+      "ERP Implementation costs",
+      0.0,
+      "ERP"
+     ],
+     [
+      "Equity-based compensation expense",
+      0.293,
+      "SBC"
+     ]
+    ],
+    "start": 2.64,
+    "start_label": "Net income",
+    "int": 0.185,
+    "tax": 0.766,
+    "dda": 1.239,
+    "adj_ebitda": 5.123,
+    "unit": "k",
+    "doc": "d867574dex991.htm"
+   },
+   "adjni": {
+    "items": [
+     [
+      "Acquisition & integration income",
+      0.0,
+      "ACQ"
+     ],
+     [
+      "Amortization of intangible assets",
+      0.446,
+      "AMORT"
+     ],
+     [
+      "ERP Implementation costs",
+      0.0,
+      "ERP"
+     ],
+     [
+      "Normalized tax rate (1)",
+      -0.103,
+      "TAX"
+     ]
+    ],
+    "start": 2.64,
+    "start_label": "Net income",
+    "adj_ni": 2.983,
+    "gaap_eps": 0.25,
+    "adj_eps": 0.28,
+    "sh_d": 10.719,
+    "unit": "k",
+    "doc": "d867574dex991.htm"
+   }
+  },
+  "kpi": {
+   "orders": 67.9,
+   "backlog": 322.0,
+   "sales_mkt": {
+    "refining": 6.867,
+    "chem": 6.041,
+    "space": 4.822,
+    "defense": 22.817,
+    "other": 7.022
+   },
+   "sales_mkt_labels": {
+    "refining": "Refining",
+    "chem": "Chemical/Petrochemical",
+    "space": "Space",
+    "defense": "Defense",
+    "other": "Other"
+   },
+   "sales_mkt_unit": "k",
+   "orders_mkt": {
+    "refining": 14.321,
+    "chem": 10.863,
+    "space": 4.606,
+    "defense": 32.958,
+    "other": 5.185
+   },
+   "orders_mkt_labels": {
+    "refining": "Refining",
+    "chem": "Chemical/Petrochemical",
+    "space": "Space",
+    "defense": "Defense",
+    "other": "Other"
+   },
+   "orders_mkt_unit": "k",
+   "backlog_mkt": {
+    "refining": 33.264,
+    "chem": 12.794,
+    "space": 8.675,
+    "defense": 253.358,
+    "other": 13.912
+   },
+   "backlog_mkt_labels": {
+    "refining": "Refining",
+    "chem": "Chemical/Petrochemical",
+    "space": "Space",
+    "defense": "Defense",
+    "other": "Other"
+   },
+   "backlog_mkt_unit": "k",
+   "sales_reg": {
+    "us": 38.141,
+    "mideast": 1.049,
+    "asia": 5.902,
+    "other": 2.477
+   },
+   "sales_reg_labels": {
+    "us": "United States",
+    "mideast": "Middle East",
+    "asia": "Asia",
+    "other": "Other"
+   },
+   "sales_reg_unit": "k"
+  }
+ },
+ "x": {
+  "sh_cover": {
+   "shares": 10.70292,
+   "date": "2023-08-03"
+  },
+  "sh_issued": 10.818,
+  "sh_treasury": 0.143,
+  "sh_out": 10.675,
+  "rev": 47.569,
+  "ni": 2.64,
+  "eps_d": 0.25,
+  "ta": 210.028,
+  "cfo_ytd": 8.603
+ }
+}

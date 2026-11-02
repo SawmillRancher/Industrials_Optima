@@ -1,0 +1,542 @@
+{
+ "period": "Q2-18",
+ "fy": 2018,
+ "q": 2,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/716314/000119312517318516/d481926dex991.htm",
+  "release_date": "2017-10-25",
+  "exhibits": [
+   "d481926dex991.htm",
+   "d481926dex992.htm"
+  ],
+  "filing": "https://www.sec.gov/Archives/edgar/data/716314/000156459017020101/ghm-10q_20170930.htm"
+ },
+ "notes": [],
+ "is": {
+  "rev": 17.224,
+  "cogs": 13.394,
+  "gp": 3.83,
+  "sga": 3.64,
+  "sga_amort": 0.06,
+  "restr": 0.316,
+  "op_profit": -0.186,
+  "int_inc": -0.162,
+  "int_exp": 0.002,
+  "ebt": -0.026,
+  "tax": -0.036,
+  "ni": 0.01,
+  "eps_b": 0.0,
+  "eps_d": 0.0,
+  "sh_b": 9.769,
+  "sh_d": 9.775,
+  "dps": 0.09,
+  "other_op_lines": [],
+  "nonop_lines": []
+ },
+ "ngaap": {
+  "ebitda": {
+   "items": [
+    [
+     "+ Restructuring charge",
+     0.316,
+     "RESTR"
+    ]
+   ],
+   "start": 0.01,
+   "start_label": "Net income",
+   "int": -0.16,
+   "tax": -0.036,
+   "dda": 0.556,
+   "adj_ebitda": 0.686,
+   "unit": "k",
+   "doc": "d481926dex991.htm"
+  },
+  "adjni": {
+   "items": [
+    [
+     "+ Restructuring charge",
+     0.316,
+     "RESTR"
+    ],
+    [
+     "- Tax effect",
+     -0.092,
+     "TAX"
+    ]
+   ],
+   "start": 0.01,
+   "start_label": "Net income",
+   "adj_ni": 0.234,
+   "unit": "k",
+   "doc": "d481926dex991.htm"
+  }
+ },
+ "cf": {
+  "ytd_months": 6,
+  "ni": 0.945,
+  "dep": 0.993,
+  "amort": 0.118,
+  "pens_amort": 0.525,
+  "sbc": 0.149,
+  "gain_ppe": 0.001,
+  "deftax": 0.106,
+  "cfo": 0.848,
+  "capex": -0.431,
+  "capex_proc": 0.001,
+  "inv_purch": -25.0,
+  "inv_red": 18.0,
+  "cfi": -7.43,
+  "debt_repay": -0.051,
+  "stock_iss": 0.0,
+  "div": -1.758,
+  "bb": -0.119,
+  "cff": -1.928,
+  "fx": 0.138,
+  "net": -8.372,
+  "beg": 39.474,
+  "end": 31.102,
+  "lines_raw": [
+   [
+    "Net income",
+    0.945
+   ],
+   [
+    "Depreciation",
+    0.993
+   ],
+   [
+    "Amortization",
+    0.118
+   ],
+   [
+    "Amortization of unrecognized prior service cost and actuarial losses",
+    0.525
+   ],
+   [
+    "Stock-based compensation expense",
+    0.149
+   ],
+   [
+    "Loss on disposal or sale of property, plant and equipment",
+    0.001
+   ],
+   [
+    "Deferred income taxes",
+    0.106
+   ],
+   [
+    "Accounts receivable",
+    0.151
+   ],
+   [
+    "Unbilled revenue",
+    3.186
+   ],
+   [
+    "Inventories",
+    0.846
+   ],
+   [
+    "Prepaid expenses and other current and non-current assets",
+    -0.774
+   ],
+   [
+    "Income taxes receivable",
+    -1.507
+   ],
+   [
+    "Prepaid pension asset",
+    -0.478
+   ],
+   [
+    "Accounts payable",
+    -3.166
+   ],
+   [
+    "Accrued compensation, accrued expenses and other current liabilities",
+    -0.864
+   ],
+   [
+    "Customer deposits",
+    0.56
+   ],
+   [
+    "Long-term portion of accrued compensation, accrued pension liability and accrued postretirement benefits",
+    0.057
+   ],
+   [
+    "Net cash provided by operating activities",
+    0.848
+   ],
+   [
+    "Purchase of property, plant and equipment",
+    -0.431
+   ],
+   [
+    "Proceeds from disposal of property, plant and equipment",
+    0.001
+   ],
+   [
+    "Purchase of investments",
+    -25.0
+   ],
+   [
+    "Redemption of investments at maturity",
+    18.0
+   ],
+   [
+    "Net cash (used) provided by investing activities",
+    -7.43
+   ],
+   [
+    "Principal repayments on capital lease obligations",
+    -0.051
+   ],
+   [
+    "Issuance of common stock",
+    0.0
+   ],
+   [
+    "Dividends paid",
+    -1.758
+   ],
+   [
+    "Purchase of treasury stock",
+    -0.119
+   ],
+   [
+    "Excess tax deficiency benefit on stock awards",
+    0.0
+   ],
+   [
+    "Net cash used by financing activities",
+    -1.928
+   ],
+   [
+    "Effect of exchange rate changes on cash",
+    0.138
+   ],
+   [
+    "Net (decrease) increase in cash and cash equivalents",
+    -8.372
+   ],
+   [
+    "Cash and cash equivalents at beginning of year",
+    39.474
+   ],
+   [
+    "Cash and cash equivalents at end of period",
+    31.102
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 31.102,
+  "invest": 41.0,
+  "ar": 11.347,
+  "unbilled": 12.688,
+  "inv": 8.403,
+  "tca": 107.091,
+  "ppe": 16.453,
+  "pension_asset": 2.818,
+  "gw": 6.938,
+  "intang": 14.278,
+  "ta": 147.853,
+  "std": 0.108,
+  "ap": 7.162,
+  "accr_comp": 4.761,
+  "accr_oth": 3.234,
+  "deposits": 12.978,
+  "tax_pay": 0.0,
+  "tcl": 28.243,
+  "ltd": 0.091,
+  "tl": 33.985,
+  "eq": 113.868,
+  "tle": 147.853,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    31.102
+   ],
+   [
+    "Investments",
+    41.0
+   ],
+   [
+    "Trade accounts receivable, net of allowances ($101 and $168 at September 30 and March 31, 2017, respectively)",
+    11.347
+   ],
+   [
+    "Unbilled revenue",
+    12.688
+   ],
+   [
+    "Inventories",
+    8.403
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    1.361
+   ],
+   [
+    "Income taxes receivable",
+    1.19
+   ],
+   [
+    "Total current assets",
+    107.091
+   ],
+   [
+    "Property, plant and equipment, net",
+    16.453
+   ],
+   [
+    "Prepaid pension asset",
+    2.818
+   ],
+   [
+    "Goodwill",
+    6.938
+   ],
+   [
+    "Permits",
+    10.3
+   ],
+   [
+    "Other intangible assets, net",
+    3.978
+   ],
+   [
+    "Other assets",
+    0.275
+   ],
+   [
+    "Total assets",
+    147.853
+   ],
+   [
+    "Current portion of capital lease obligations",
+    0.108
+   ],
+   [
+    "Accounts payable",
+    7.162
+   ],
+   [
+    "Accrued compensation",
+    4.761
+   ],
+   [
+    "Accrued expenses and other current liabilities",
+    3.234
+   ],
+   [
+    "Customer deposits",
+    12.978
+   ],
+   [
+    "Income taxes payable",
+    0.0
+   ],
+   [
+    "Total current liabilities",
+    28.243
+   ],
+   [
+    "Capital lease obligations",
+    0.091
+   ],
+   [
+    "Deferred income tax liability",
+    4.366
+   ],
+   [
+    "Accrued pension liability",
+    0.512
+   ],
+   [
+    "Accrued postretirement benefits",
+    0.773
+   ],
+   [
+    "Total liabilities",
+    33.985
+   ],
+   [
+    "Preferred stock, $1.00 par value, 500 shares authorized",
+    0.0
+   ],
+   [
+    "Common stock, $.10 par value, 25,500 shares authorized 10,580 and 10,548 shares issued and 9,769 and 9,740 shares outstanding at September 30 and March 31, 2017, respectively",
+    1.058
+   ],
+   [
+    "Capital in excess of par value",
+    23.359
+   ],
+   [
+    "Retained earnings",
+    109.731
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -7.954
+   ],
+   [
+    "Treasury stock (811 and 808 shares at September 30 and March 31, 2017, respectively)",
+    -12.326
+   ],
+   [
+    "Total stockholders\u2019 equity",
+    113.868
+   ],
+   [
+    "Total liabilities and stockholders\u2019 equity",
+    147.853
+   ]
+  ]
+ },
+ "kpi": {
+  "orders": 17.1,
+  "backlog": 73.0,
+  "sales_mkt": {
+   "refining": 4.7,
+   "chem": 5.7,
+   "power": 1.9,
+   "other": 4.9,
+   "total": 17.2
+  },
+  "sales_mkt_labels": {
+   "refining": "Refining",
+   "chem": "Chemical/ Petrochemical",
+   "power": "Power",
+   "other": "Other Commercial, Industrial and Defense"
+  },
+  "sales_mkt_unit": "m",
+  "sales_reg": {
+   "us": 11.1,
+   "mideast": 1.0,
+   "asia": 2.6,
+   "other": 2.5,
+   "total": 17.2
+  },
+  "sales_reg_labels": {
+   "us": "United States",
+   "mideast": "Middle East",
+   "asia": "Asia",
+   "other": "Other"
+  },
+  "sales_reg_unit": "m"
+ },
+ "mkt_note": {},
+ "mkt_note_py": {},
+ "py": {
+  "release": "https://www.sec.gov/Archives/edgar/data/716314/000119312518321895/d646266dex991.htm",
+  "is": {
+   "rev": 17.224,
+   "cogs": 13.483,
+   "gp": 3.741,
+   "sga": 3.671,
+   "sga_amort": 0.06,
+   "restr": 0.316,
+   "op_profit": -0.306,
+   "oth_nonop": -0.12,
+   "int_inc": -0.162,
+   "int_exp": 0.002,
+   "ebt": -0.026,
+   "tax": -0.036,
+   "ni": 0.01,
+   "eps_b": 0.0,
+   "eps_d": 0.0,
+   "sh_b": 9.769,
+   "sh_d": 9.775,
+   "dps": 0.09,
+   "other_op_lines": [],
+   "nonop_lines": []
+  },
+  "ngaap": {
+   "ebitda": {
+    "items": [
+     [
+      "+ Restructuring charge",
+      0.316,
+      "RESTR"
+     ]
+    ],
+    "start": 0.01,
+    "start_label": "Net income",
+    "int": -0.16,
+    "tax": -0.036,
+    "dda": 0.556,
+    "adj_ebitda": 0.686,
+    "unit": "k",
+    "doc": "d646266dex991.htm"
+   },
+   "adjni": {
+    "items": [
+     [
+      "+ Restructuring charge",
+      0.316,
+      "RESTR"
+     ],
+     [
+      "- Tax effect",
+      -0.092,
+      "TAX"
+     ]
+    ],
+    "start": 0.01,
+    "start_label": "Net income",
+    "adj_ni": 0.234,
+    "unit": "k",
+    "doc": "d646266dex991.htm"
+   }
+  },
+  "kpi": {
+   "orders": 17.1,
+   "backlog": 73.0,
+   "sales_mkt": {
+    "refining": 4.7,
+    "chem": 5.7,
+    "power": 1.9,
+    "other": 4.9,
+    "total": 17.2
+   },
+   "sales_mkt_labels": {
+    "refining": "Refining",
+    "chem": "Chemical/ Petrochemical",
+    "power": "Power",
+    "other": "Other Commercial, Industrial and Defense"
+   },
+   "sales_mkt_unit": "m",
+   "sales_reg": {
+    "us": 11.1,
+    "mideast": 1.0,
+    "asia": 2.6,
+    "other": 2.5,
+    "total": 17.2
+   },
+   "sales_reg_labels": {
+    "us": "United States",
+    "mideast": "Middle East",
+    "asia": "Asia",
+    "other": "Other"
+   },
+   "sales_reg_unit": "m"
+  }
+ },
+ "x": {
+  "sh_cover": {
+   "shares": 9.768686,
+   "date": "2017-10-20"
+  },
+  "sh_issued": 10.58,
+  "sh_treasury": 0.811,
+  "sh_out": 9.769,
+  "rev": 17.224,
+  "ni": 0.01,
+  "eps_d": null,
+  "ta": 147.853,
+  "cfo_ytd": 0.848
+ }
+}
