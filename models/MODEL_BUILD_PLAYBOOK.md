@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, THEON). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -251,9 +251,9 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | No non-GAAP published | ODFL, DHR (EBITDA), STE (EBITDA) | Model-defined bridges, clearly labelled, checked against XBRL / GAAP |
 | Definition changed over time | TDY, LOAR, RBA, MLM | Definition-flag row, in-force definition per period, current-definition memo series |
 | Spin-offs / disc ops | DHR, STE, BWXT, XPO | Hybrid recast or post-spin history; recast cell comments; rebuild originally reported adjusted EPS in memo |
-| IFRS / foreign currency | ONON, RMS, BC, TFI | Reporting currency; constant-currency + FX build; price × FX input; IFRS 16 lease schedule; rent-as-opex DCF option |
+| IFRS / foreign currency | ONON, RMS, BC, TFI, THEON | Reporting currency; constant-currency + FX build; price × FX input; IFRS 16 lease schedule; rent-as-opex DCF option |
 | Half-year reporters | RMS, BC | H1 / H2 / FY columns (H2 = FY − H1); quarterly revenue memo |
-| Recent IPO | LOAR, ONON, KRMN | Annual columns from the prospectus; P&L-only years flagged; BS / CF start when available |
+| Recent IPO | LOAR, ONON, KRMN, THEON | Annual columns from the prospectus; P&L-only years flagged; BS / CF start when available |
 | Non-December fiscal year | STE (Mar), CTAS (May), HEI (Oct) | Column labels by fiscal year; DCF discount dates moved to FY ends |
 | Pending / new acquisition | DHR, MLM, CTAS, ESAB, CSGP, UBER, CHRW | Separate block, PPA, financing, synergies, closing-date toggle; deal tab for large deals |
 | Dual-class / splits | ONON, HEI, CTAS, ODFL | Class-equivalent shares; split-adjust by source filing date |
@@ -275,13 +275,15 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
 ### 5.1 Sources and extraction
 - **Share price fallback.** With market sites blocked and no price from the user, use the latest SEC-filed price: the 10-Q Part II Item 2 average repurchase price, or a Form 4 transaction / withholding price. Cite the form and date, and flag "update to market". Don't use unverifiable web quotes. [WWD, BWXT, MLM, CLH, WAB, CSGP, CTAS, UBER]
 - **XBRL can be wrong, not just incomplete.** Facts tagged 0, tags retired mid-history into a combined concept, and sign flips all occur. Tie every XBRL-sourced fact to the face statement before using it as a primary input. For as-originally-reported checks, use the earliest-filed fact, and compare absolute values where the tag's sign convention changed. [TFI, ODFL]
+- **Check EDGAR coverage before extracting.** If the issuer has no EDGAR statements (only 13G / 13D or F-6 ADR CIKs), stop and ask the user before using any other source; the fallback is the home-market regulated documents, and their hosts must be allowed in the environment's network settings. [THEON, RMS]
+- **PDF-only issuers:** script the extraction from `pdftotext -layout` text with per-document line ranges and column cuts (two statements side by side), both thousand-separator styles, date filtering, wrapped-label borrowing and ligature repair; run the statement self-checks on every record and comparative. [THEON]
 - **Foreign filers' EDGAR history starts at the US listing.** Record reporting-currency switches and keep an FX reference series for any manually entered earlier data. For non-SEC issuers, confirm EDGAR holds only F-6 ADR CIKs, say so in header row 3, and source from the home regulator's filings. [TFI, RBA, RMS]
 - **Derivations when releases are thin:**
   - Acquired sales = (total growth % − organic growth %) × prior-year revenue. [KRMN]
@@ -338,6 +340,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Don't force FY = Σ quarters** for adjusted measures the company computes annually (annual tax effect, FY cc rates), or for a measure whose definition changed mid-year. Exempt them from the quarter-sum check with a comment. [ONON, VMC]
 - **Known, explained source differences** (a restated starting NI, a release issued before a 10-Q impairment) can stay as documented check exceptions rather than plugs. [WCN]
 - **Long-term target base years** stay "as first published", with a note that definitions have since changed. [XPO]
+- **An investee line that moves inside operating profit** (THEON associates from Q2-25): show it as its own line inside operating profit in every period, check the APM on the definition in force, and difference year-to-date figures only on one definition (use the restated comparative for the changeover quarter). [THEON]
 - **Two-class / participating preferred:** the adjusted-NI bridge needs an "allocation to preferred" line, and the preferred is deducted in the EV bridge. [RBA]
 
 ### 5.5 Calibration
@@ -363,6 +366,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   [TMO, STE, UBER, CTAS, CSGP, DHR, ONON, RBA]
 - **Dividends = DPS × beginning shares,** so they aren't circular with plug-driven buybacks. [TMO, CTAS, CSGP]
 - **Deal year:** size working capital, leverage, the buyback floor and EV multiples on pro forma full-year revenue and Adj. EBITDA (memo rows), and exclude acquired NWC from ΔNWC. Check whether acquired intangibles are tax-deductible; if not, add a DTL unwind. [MLM, CSGP, DHR, CTAS, TMO, UBER, ESAB, KRMN]
+- **Deal closing just after the forecast year end:** add a pro forma leverage memo (year-end net debt + debt-funded EV over EBITDA + target EBITDA) and tie it to the company's stated pro forma leverage. [THEON]
 - **Choose the buyback plug to fit the capital structure:**
   - net-debt floor for levered companies;
   - target cash, or a negative net-debt floor (a net-cash cap), for net-cash companies;
@@ -395,6 +399,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - State the basis in the DCF notes. If a kit uses full-cost EBIT (STE, CTAS, LOAR, CSGP), keep the D&A add-back consistent with it.
 
   [DHR, TMO, CSGP, ONON, CLH, WAB, XPO, CPRT, RBA, KRMN]
+- **DCF fade period:** the template grows every UFCF line at the fade rate. Keep acquisitions to the explicit years and scale ΔWC to the fading growth rate; otherwise reinvestment-heavy growth cases value below low-growth cases (THEON's DCF ran Bull < Base < Bear before the fix). [THEON]
 - **Don't double-count the current year:** when valuation net debt is taken at the current fiscal year end, exclude that year's UFCF. When the FY ended just before the valuation date, make it the base year. [BWXT, CW, WWD, BC, HEI]
 - **EV bridge items:**
   - Add legacy debt-like items (asbestos net of insurance) and redeemable NCI.

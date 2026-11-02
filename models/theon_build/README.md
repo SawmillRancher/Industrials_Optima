@@ -1,36 +1,99 @@
-# THEON model build kit — WORK IN PROGRESS (blocked on source access)
+# THEON model build kit
 
-`models/THEON_Model.xlsx` will be the Theon International Plc (Euronext Amsterdam: THEON) three-statement model, built on the MLM template (`templates/MLM_Model.xlsx`, 6-Oct-2026 version) with the standard process in `models/MODEL_BUILD_PLAYBOOK.md`. **The workbook does not exist yet.** This directory holds the Phase 0 scope work and the document index, so the build can start the moment the sources are reachable.
+`models/THEON_Model.xlsx` is the Theon International Plc (Euronext Amsterdam: THEON) three-statement model. It is built on the MLM template (`MLM_Model.xlsx`, included here, 6-Oct-2026 version) with the standard process in `models/MODEL_BUILD_PLAYBOOK.md`. The scripts started from the ONON kit (IFRS, non-USD, recent IPO) and were rewritten for Theon.
+- **Formatting and rows:** the template's archetype rows and colour conventions:
+  - blue = input / published data;
+  - black = formula;
+  - grey = historical growth;
+  - green = cross-sheet link;
+  - red = definition-flag text.
 
-## Status (2-Nov-2026)
+  It also keeps the template's check rows and notes column. The view is frozen at C8 with quarterly columns grouped and collapsed, at 70% zoom.
+- **Scenarios:** Bull / Base / Bear switch in `Model!AC2`, scenario table in `Model!AK:AO`.
+- **Other tabs:**
+  - Bull-Base-Bear: live panel plus Bull / Bear value snapshots, including the buyback rows.
+  - DCF: current layout (live valuation date, fade, implied ROIC, target-IRR entry price, WACC × g, reverse DCF, Mauboussin EV/NOPAT).
+  - Charts.
+  - The template's `DCF_old` tab is dropped.
+- **Calculated values stored**, so the workbook reads correctly in any viewer (`fullCalcOnLoad` stays set).
 
-### Sourcing finding
-- **Theon is not an SEC registrant.** EDGAR holds one CIK for it, **0002095508** (Theon International Plc., Cyprus, fiscal year end 31-Dec), used only for two Schedule 13G filings about its stake in Kopin Corp (13G 6-Nov-2025, 13G/A 27-Jul-2026). It has filed no annual report, interim report or prospectus with the SEC. EDGAR therefore contains **no Theon historical financial statements**, and the instruction "historical numbers from SEC EDGAR only" cannot be satisfied for this company.
-- **Playbook rule for non-SEC issuers** (section 5.1, RMS / BC precedent): confirm EDGAR holds only ADR-type CIKs, say so in header row 3, and source from the home-regulator filings. Theon's regulated disclosures are its prospectus (24-Jan-2024), annual reports, half-year reports and trading updates, published on theon.com / media.theon.com / s204.q4cdn.com and distributed through GlobeNewswire (Euronext / AFM-regulated information).
-- **Every one of those hosts is blocked from this build environment** (proxy 403 from the container; DNS failure from the fetch tool): theon.com, investors.theon.com, media.theon.com, s204.q4cdn.com, globenewswire.com, live.euronext.com, afm.nl, filings.xbrl.org, and the newswire mirrors (investegate, placera, via.ritzau, adnkronos). Only EDGAR is reachable.
-- Web-search snippets (third-party summaries of the releases) are **not** acceptable sources under the playbook ("never estimate a historical number"; "don't use unverifiable web quotes"), so nothing from them has been entered as data. The figures quoted below are scope notes only and are marked unverified.
+## Sourcing (read first)
+Theon is **not an SEC registrant**. EDGAR holds one CIK for it, 0002095508, used only for Schedule 13G filings on its Kopin stake, and no financial statements. The user accepted regulator-filed documents in lieu of EDGAR for a foreign issuer (2-Nov-2026). The history therefore comes from Theon's own regulated reports and releases on `media.theon.com`. Guidance and deal terms from those releases are labelled **unverified (not on EDGAR)** in the workbook. Header row 3 says so.
 
-### What is needed to proceed
-One of:
-1. Allow `theon.com`, `media.theon.com`, `s204.q4cdn.com` and `www.globenewswire.com` in the cloud environment's network settings, or
-2. Upload the documents in the index below (prospectus, FY2023–25 annual reports, H1 2024–26 reports, the trading updates and deal releases) into the session, or
-3. Accept a model with no history (not recommended; every check and bridge would be empty).
+## Columns (fiscal year ends 31 December)
+- **C–D FY2021–2022:** annual. FY2021 is the P&L as first reported (AR2021). FY2022 and the 31-Dec-2021 / 31-Dec-2022 balance sheets are the restated figures in AR2023 (correction of errors, note 37).
+- **E–S Q1/23–Q4/25 with FY subtotals:** grouped and collapsed like the template. 2023 quarters come from the comparatives in the 2024 Q1 / H1 / 9M documents; quarter-end balance sheets start at Q1-24 (2023 quarter ends were not published).
+- **T–U Q1/26–Q2/26; V–W Q3/26E–Q4/26E; X 2026E:** forecast quarters calibrated to the FY26 outlook.
+- **Y–AB 2027E–2030E:** scenario forecast.
+- **Right of the forecast** (template column − 55): AC notes, AE–AH CAGRs (5Y fwd, 4Y, 3Y, 2Y), AK–AO scenario table.
 
-## Scope notes (Phase 0) — all facts below are from web-search snippets and are **unverified** until the primary documents are read
-- **Company:** Theon International Plc, public limited company under Cyprus law (5 Agiou Antoniou, Muskita Building 2, Nicosia). Night-vision and thermal-imaging systems for defence and security; operations started in Greece in 1997 (Theon Sensors). Majority owner Venetus Ltd (controlled by Christianos Hadjiminas via CHRE Investments Ltd). [EDGAR 13G/A, Kopin 8-K Ex. 99.2 — these two facts are EDGAR-verified.]
-- **Listing:** Euronext Amsterdam, ticker THEON, ISIN CY0200751713; first trading day 7-Feb-2024; IPO price €10.00 per share; 15.4m shares placed (10.0m new, 5.4m existing incl. 1.4m over-allotment); prospectus dated 24-Jan-2024. 70,000,000 ordinary shares in issue (Nov-2025). A rights offering of ~€150m was announced at some point in 2026 (date and terms to verify).
-- **Reporting basis:** IFRS as adopted by the EU, EUR, calendar fiscal year. **Half-year reporter:** full statements at FY and H1; Q1 and Q3 (and Q2/H1) trading updates with revenue, adjusted EBIT, order intake and backlog. → Use the RMS / BC half-year layout (H1 / H2 / FY columns, H2 = FY − H1, quarterly revenue memo rows inside the half columns).
-- **History window:** FY2021–23 from the prospectus (annual P&L / BS / CF); FY2023 annual report; H1 columns from H1/24; latest actual H1/26 (report published 7-Sep-2026). Forecast: H2/26E (calibrated to FY26 guidance), 2026E, 2027E–2030E.
-- **Headline figures seen in snippets (unverified):** FY2025 revenue €443.5m (+25.9%), adjusted EBIT margin ~26.2%, order intake €1,313.9m (+182%); Q1/26 revenue €120.1m (+32.3%), adjusted EBIT €30.0m; H1/26 revenue €248.7m (+35.4%, organic +24.7%), adjusted EBIT €65.1m (26.2%), order intake €232.5m, net debt €237.9m; backlog €1,420m at Q1/26. FY2025 dividend €0.31 per share (€24.4m, 30% payout; policy 20–30%).
-- **Guidance (unverified, from the Q1/26 and Q2/26 updates):** FY2026 revenue €570–600m, mid-twenties adjusted EBIT margin; medium-term organic growth >15% p.a. plus bolt-on M&A. Q3/26 trading update scheduled 9-Nov-2026.
-- **Deals needing blocks:** Harder Digital (image-intensifier tubes, acquired Oct-2024); Kappa Optronics GmbH (announced 4-Aug-2025, EV €75m, cash consideration €69.9m, closed 14-Jan-2026, ~€40m FY26 revenue); 9.8% stake in Exosens for €268.7m (closed 7-Jan-2026; financial asset, not consolidated); Kopin Corp investment (Series A convertible preferred, converted 28-May-2026; 6,190,496 shares = 3.33% at 27-Jul-2026 — EDGAR-verified) and a 49% interest in Kopin Europe (terms to verify). Pro forma net debt after Kappa and Exosens stated as €211.7m / 1.8x LTM EBITDA (unverified).
-- **Share price:** not given by the user and no SEC-filed price exists (Theon files no Forms 4 / 10-Q). Must be asked for or taken from a dated Euronext close once reachable; flag "update to market".
-- **Closest reference kits:** ONON (IFRS, foreign currency, recent IPO, 6-Oct template kit) for the scripts; RMS and BC lessons for the half-year column layout, IFRS 16 schedule and net-cash / lease treatment.
+## Basis
+- **Policy:** as originally reported, except FY2022 (restated in AR2023) and the FY2021 balance sheet (AR2023 opening balance sheet). Each later comparative is kept in `data/<period>.json` under `cmp`.
+- **Share of profit of equity-accounted investees:** from Q2-25 (effective 1-Jan-2025, 2024 restated) Theon presents the share of profit of core associates inside operating profit, adjusted EBIT and EBITDA. The model shows it as its own line inside operating profit in every period. Earlier documents printed it below operating profit, so the model adds it back. The adjusted-EBIT check compares with each period's figure on the definition then in force (definition-flag row).
+- **Segments:** one reportable segment (Optronics). Revenue is disaggregated by product (night vision, thermal, and a "platform-based / ISR & other" residual, because the company's minor categories changed between documents) and by geography (memo).
+- **Per-share data:** pre-IPO data are not meaningful (200,000 shares to FY2021; split ×100 in Nov-2023 to 20m; 60m before the IPO). IPO 7-Feb-2024 (+10m shares at €10.00). Rights issue Dec-2025 (+8.62m shares at €17.40; 78.62m in issue).
+- **Interim frequency:** Theon publishes full statements at H1 and FY and condensed statements in its Q1 and 9M trading updates. Discrete quarters are derived (Q2 = H1 − Q1, Q3 = 9M − H1, Q4 = FY − 9M) for the P&L, APM reconciliation, revenue splits, cash flow and order intake.
+- **NCI and shares:** the profit attribution split and weighted shares are printed only in H1 / FY statements, so they sit in the annual columns; quarterly EPS is a memo from the Q1 releases.
 
-## Document index
-`filings.csv` lists every document the build needs, with the URL found so far, the host, and whether it is reachable from this environment. Raw downloads go to `$THEON_SRC` outside the repo; only the extracted `data/*.json` is committed.
+## Model structure (Model tab)
+- **Revenue build:** night vision, thermal, platform-based / ISR & other. Q3/Q4-26E = prior-year quarter × (1 + 1H/26 y/y + Δ); platform at the Q2-26 run-rate × (1 + Δ), because Kappa is consolidated from 14-Jan-2026. Order intake, soft backlog, options and book-to-bill are KPI rows.
+- **Deal blocks** (announced after the Feb-26 guidance, so outside the calibration):
+  - **MERIO** (80%, completion underway 29-Oct-2026): revenue and EBIT from the company (>€15m, >€3.5m); Q4-26E stub and price (€37.5m) are **assumptions**.
+  - **HGH Systèmes Infrarouges** (100%, EV c.€300m, closing ~1-Jan-2027, toggle): revenue c.€40m; EBITDA margin and synergies **derived** from the stated multiples (mid- to high-teens pre-synergies, c.10x post); PPA split and life are **assumptions**; funded by the €325m term loan.
+  - **Future bolt-ons:** spend lever ÷ EV/sales 3.0x at a 20% margin.
+- **FY26 outlook calibration:** a uniform growth Δ solves FY26 revenue (guidance basis, excl. MERIO) to €600 / 585 / 570m (closed form via a sensitivity helper row). A uniform margin Δ solves the existing-portfolio adjusted EBIT margin to 26 / 25 / 24% ("mid-twenties"). Both have check rows.
+- **IFRS P&L from the build:** operating profit = adjusted EBIT − non-recurring items; opex is the balancing line; finance income = interest only (no fair-value changes forecast); finance costs on opening debt plus the term loan drawn at 1-Jan-2027; tax 23%.
+- **Bridges** (checks vs published in every reported period):
+  1. **Profit after tax → EBIT → adjusted EBIT → adjusted EBITDA:** company APM; definition flag for the associates change.
+  2. **Operating profit → adjusted operating profit:** company items only (non-recurring items).
+  3. **Adjusted EPS (model definition):** Theon publishes none; = profit attributable + non-recurring items after tax − fair-value gains on FVTPL stakes (Exosens mark-to-market lifted H1-26 IFRS EPS). Annual columns only (fair-value gains are not disclosed in the Q1 / 9M updates).
+- **Other schedules:** cash flow (condensed to the trading-update presentation); debt schedule with cash sweep to minimum cash and leverage-floor buybacks; share schedule; balance sheet with derived "other" lines; working capital at FY2025 year-end days; D&A split; ratios; valuation with non-operating investments deducted.
+- **DCF basis:** full-cost adjusted EBIT less non-recurring cash items, × (1 − t), + D&A − capex − acquisitions (explicit years) − ΔWC. 2026E UFCF excluded (in YE2026 net debt). Fade period: capex only and ΔWC scaled to the fading growth rate. Equity bridge deducts net debt less the Exosens / Kopin / associate stakes, plus NCI. Opening IC adds Kappa and MERIO.
 
-## Files (so far)
-- `README.md`: this file.
-- `EXTRACTION_SCHEMA.md`: per-period extraction schema adapted for an IFRS, EUR, half-year reporter.
-- `filings.csv`: document index.
+## Key forecast assumptions (Base)
+- Night vision +15 / 12 / 10 / 8%, thermal +20 / 18 / 15 / 12%, platform +35 / 30 / 25 / 20% (2027E–30E; Bull / Bear Δ in the scenario table).
+- Adjusted EBIT margin 25% on the existing portfolio (company: "mid-twenties").
+- HGH revenue growth 25 / 22 / 18 / 15%; synergies phased 1/3, 2/3, 100%.
+- Bolt-on M&A €50m p.a. from 2028E.
+- Capex €30m in 2026E (guided), then 4% of revenue (mid-term target); D&A 2.2% of revenue plus deal D&A.
+- Tax 23%; debt cost 5.0%; cash yield 2.0%; minimum cash €75m; payout 30%; buyback floor 1.5x net debt / adjusted EBITDA (assumption).
+
+## Data corrections and known exceptions
+- **FY2022:** restated in AR2023 (revenue 147.4 → 142.9; net income 30.6 → 30.0). The model uses the restated figures.
+- **Q4-23 D&A −0.03:** FY2023 (1.27) less the 9M-23 comparative (1.30); the two documents are inconsistent. Kept as published.
+- **FY2025 Σ quarters ≠ FY published adjusted EBIT by €0.759m:** Q1-25 was published before the associates change. Exempt in `check_data.py`; Q2-25 is derived from the restated Q1-25.
+- **H1-26 adjusted EBITDA:** the 27-Jul trading update printed 69.0, the 7-Sep report 69.956. The report is used.
+- **Q2-26 acquisitions +€2.9m:** the Q1 condensed and H1 full cash flows classify investment lines differently; the derived quarter is kept as computed.
+- **Cash:** the cash-flow statement nets small overdrafts (FY2025 €0.007m; 30-Sep-2025 €1.74m); a memo row reconciles BS and cash-flow cash.
+
+## Sources
+Regulated reports and releases of Theon International Plc (`media.theon.com`; full list with URLs in `filings.csv` and `doc_urls.txt`):
+- Annual reports FY2021–25 and signed financial statements FY2024–25.
+- Semi-annual reports H1-24, H1-25, H1-26.
+- Q1 / 9M trading updates 2024–26 (condensed statements).
+- Results and trading-update releases; rights-issue and IPO releases; deal releases on theon.com (MERIO, HGH, Exosens, Harder Digital, RCF, AGM).
+- EDGAR: Kopin Corp 8-K (16-Oct-2025) and Theon's Schedule 13G / 13G/A on Kopin (CIK 0002095508).
+
+The share price (€29.84 = H1 2026 report market capitalisation €2,346.2m ÷ 78,624,645 shares, 30-Jun-2026) is an input at `Model!X322` in the valuation block. The user gave no price and no SEC-filed price exists; **update it to market**.
+
+## Rebuild
+1. Install the tools: `pip install openpyxl lxml`, `poppler-utils` (pdftotext) and LibreOffice Calc (`apt-get install libreoffice-calc`) for recalculation.
+2. Refresh the data (only needed for new documents; `data/` is committed):
+   1. `export THEON_SRC=/path/to/src` (outside the repo). The environment must allow `media.theon.com`.
+   2. Run `python3 fetch.py && python3 -I extract.py`. New documents need a spec entry (line ranges, column cuts) in `extract.py` `DOCS` and their URL in `doc_urls.txt`.
+   3. `python3 check_data.py` runs the statement-arithmetic, quarter-sum, cash, balance-sheet and APM checks. Known exceptions: listed above.
+3. Build: `python3 build.py --snap --recalc` writes `../THEON_Model.xlsx`, reruns with the switch on Bull and Bear to fill the snapshot panels, and stores calculated values. Set `XLSX_RECALC` to a LibreOffice recalculation script (default: the xlsx skill's `recalc.py`).
+4. Validate:
+   - `python3 ../tools/inspect_model.py ../THEON_Model.xlsx` → 0 error cells and 0 non-zero check rows.
+   - `python3 ../tools/cyc.py ../THEON_Model.xlsx` → 0 cycles.
+   - `python3 ../tools/residue_scan.py ../THEON_Model.xlsx --extra ONON "On Holding" 32.00 CHF "Class A"` → 0 residue hits.
+
+## Files
+- `fw.py`: column map, style cloning from the MLM template archetype rows, row registry.
+- `spec.py`, `spec2.py`: Model row specification.
+- `build.py`: inputs (V0), compute engine, scenario table, definition flags, header, snapshots, value injection.
+- `other_sheets.py`: rewires Bull-Base-Bear / DCF / Charts, replaces template text and comments, re-injects the template chart XML.
+- `fetch.py`, `parse_stmt.py`, `extract.py`: download and pdftotext conversion, statement-line parser (side-by-side layouts, both thousand separators), per-document extraction.
+- `normalize.py`: basis rules, discrete quarters, definition-consistent APM differencing, flat model keys.
+- `check_data.py`: data consistency checks. `manual_items.json`: KPIs, guidance, deals, capital events, share price. `doc_urls.txt`, `filings.csv`: document index.
+- `inspect_model.py`, `cyc.py`: copies of the shared QA tools.

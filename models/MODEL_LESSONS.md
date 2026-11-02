@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -17,14 +17,14 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
-| Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
+| Large pending or just-closed deal | THEON (HGH, debt-funded, closing after the forecast year), DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
-| IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
+| IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F), THEON (EUR, Euronext; PDFs only) |
 | Half-year reporter | RMS, BC |
-| Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
+| Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN, THEON |
 | Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
 | Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
@@ -210,6 +210,22 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [bridges] Store the company's line-item wording and amounts per period as a comment on the total-adjustments cell. Category rows can then stay few while the audit trail is kept.
   - [bridges] Narrative-only per-share bridges: input $/share as published (split-adjusted) and convert at diluted shares in a separately labelled row.
   - [build] Without published orders, derive implied orders from the backlog roll-forward and label what it includes (FX, acquired backlog).
+
+### THEON — Theon International Plc (MLM template via ONON kit; IFRS / EUR m / Dec FY; Euronext Amsterdam; not an SEC registrant)
+- **Coverage & basis:** FY2021–22 annual, Q1/23–Q2/26 quarterly, Q3/Q4-26E, 2027E–30E. EDGAR holds only Schedule 13G filings (CIK 0002095508, Kopin stake), so with the user's agreement the history comes from Theon's regulated PDFs on media.theon.com (annual reports, semi-annual reports, Q1 / 9M trading updates with condensed statements). FY2021 P&L as first reported; FY2022 and the 31-Dec-2021/22 balance sheets restated in AR2023 (correction of errors). 2023 quarters from the 2024 documents' comparatives; quarter-end balance sheets from Q1-24. Discrete quarters derived from Q1 / H1 / 9M / FY.
+- **Operating build:** one segment (Optronics). Night vision / thermal / "platform-based, ISR & other" residual, because the minor product categories changed between documents ("Platform based" in Q1-26 became "ISR" plus "Miscellaneous" in H1-26). Platform Q3/Q4-26E use the Q2-26 run-rate (Kappa consolidated from 14-Jan-2026 makes y/y meaningless). Order intake (YTD in releases), soft backlog and options are KPI rows.
+- **Bridges & definitions:** company APM: profit after tax + tax + net finance = EBIT; + non-recurring items = adjusted EBIT; + D&A = adjusted EBITDA. From Q2-25 (2024 restated, Q1-25 restated only in the Q1-26 update) the share of profit of core associates moved inside operating profit and the APMs. The model carries associates as their own line inside operating profit in every period and checks against each period's figure on the definition in force; Q2-25 is derived from H1-25 less the restated Q1-25. Theon publishes no adjusted EPS: a model measure removes non-recurring items after tax and fair-value gains on the FVTPL stakes (the Exosens mark-to-market added EUR 37m to H1-26 profit).
+- **Data quirks & corrections:** pdftotext output prints two statements side by side and wraps labels; one document uses dot thousand separators; ligature glyphs drop letters ("atributable"). Q1-26 prints the non-recurring amount above its label (derived as adjusted EBIT − EBIT). Q4-23 D&A is −0.03 (9M-23 comparative vs FY23). H1-26 adjusted EBITDA differs between the trading update (69.0) and the report (69.956). Q1 / 9M statements print no NCI split or share count, so those sit in annual columns.
+- **Deals & special blocks:** Harder Digital (60%, Oct-24), Kappa (Jan-26, PPA in the H1-26 report), Exosens 9.8% (EUR 268.7m, FVTPL, non-operating), MERIO (80%, price undisclosed → flagged assumption), HGH (EV c.EUR 300m, closing ~1-Jan-2027, toggle; EBITDA and synergies derived from the stated pre- and post-synergy multiples; EUR 325m term loan). A pro forma leverage memo (YE26 net debt + EV over adjusted EBITDA + HGH EBITDA = 3.2x) reproduces the company's "c.3.0x".
+- **Calibration & scenarios:** FY26 revenue EUR 570–600m (guidance basis excludes MERIO) via a closed-form growth Δ; "mid-twenties" adjusted EBIT margin read as 24 / 25 / 26% via a margin Δ. All guidance is labelled unverified (company releases, not EDGAR). Base 2027E+ follows the medium-term ">15% organic growth" and "mid-twenties margin" targets.
+- **Balance sheet, cash & capital:** EUR 300m RCF fully drawn; cash sweep to EUR 75m minimum cash; buybacks only below a leverage floor (assumption; treasury purchases serve the LTIP). Dividends = prior-year DPS × shares (30% payout). Working capital at FY-end days (NWC c.40% of revenue). The cash-flow statement nets overdrafts, and the 2026 statements start from gross cash, so 2026E begins from the 2026 documents' opening cash.
+- **Valuation:** EUR 29.84 = H1-26 report market capitalisation ÷ shares in issue (no SEC-filed price; flagged "update to market"). Exosens, Kopin and associates are deducted at carrying value outside invested capital. DCF excludes 2026E UFCF (YE26 net debt) and, in the fade, drops acquisitions and scales ΔWC to the fading growth rate; before that fix the template fade made Bull < Base < Bear.
+- **Reusable lessons:**
+  - [sources] When the user asks for EDGAR-only sources, check EDGAR for the issuer first. A foreign company with only 13G / 13D or ADR CIKs needs the user's decision before any extraction; regulator-filed home-market documents are the fallback, and the host must be allowed in the environment.
+  - [extraction] For PDF-only issuers, script the extraction: a line parser with per-document column cuts, both thousand-separator styles, date filtering and label borrowing, then the standard self-checks on every statement and comparative.
+  - [basis] When an investee line moves inside operating profit, keep it as a separate line inside operating profit in every period and check the APM on the definition in force; difference year-to-date figures only on one definition.
+  - [valuation] The template DCF fade grows every UFCF line at the fade rate. Drop acquisitions after the explicit years and scale ΔWC to the fade growth, or growth cases with heavy reinvestment value below the low-growth case.
+  - [BS/CF] For a deal closing just after the forecast year end, add a pro forma leverage memo (net debt + debt-funded EV over EBITDA + target EBITDA) to tie to the company's stated pro forma leverage.
 
 ## Construction materials
 

@@ -1,0 +1,79 @@
+{
+ "_note": "Items not machine-extracted from the statements. All from Theon's own regulated releases / reports (media.theon.com, theon.com news). The user accepted regulator-filed documents in lieu of EDGAR (Theon is not an SEC registrant); forward-looking guidance from these documents is labelled 'unverified (not EDGAR)'. EUR millions unless stated.",
+ "kpi_ytd": {
+  "_note": "Order intake (year-to-date, as printed in each release) and soft backlog / options at period end (company definition: remaining contract value of existing and anticipated contracts). Discrete quarters are derived as YTD differences in normalize.py.",
+  "H1-23": {"order_intake": 57.0, "src": "https://media.theon.com/msemp0jl/press-release_h1-2024-results.pdf"},
+  "9M-23": {"order_intake": 82.1, "src": "https://media.theon.com/pgzhtet5/press-release_9m-2024-results_vff.pdf"},
+  "Q1-24": {"order_intake": 39.0, "soft_backlog": 502.0, "options": 586.0, "src": "https://media.theon.com/m13l25ro/press_release_q1_2024_trading_update.pdf"},
+  "H1-24": {"order_intake": 77.0, "soft_backlog": 427.0, "src": "https://media.theon.com/msemp0jl/press-release_h1-2024-results.pdf"},
+  "9M-24": {"order_intake": 121.0, "soft_backlog": 400.0, "src": "https://media.theon.com/pgzhtet5/press-release_9m-2024-results_vff.pdf"},
+  "2024": {"order_intake": 466.0, "soft_backlog": 654.2, "options": 298.2, "src": "https://media.theon.com/4lwabm5f/theon-fy25-preliminary-results_16022026_vpublished2.pdf; soft backlog 654.2 per FY2025 annual report note 10 (FY2024 release: c.654, options 301)"},
+  "Q1-25": {"order_intake": 117.9, "soft_backlog": 668.6, "options": 289.0, "src": "https://media.theon.com/rl5p1rt0/press-release-q1-2025-trading-update.pdf"},
+  "H1-25": {"order_intake": 167.9, "soft_backlog": 622.2, "options": 378.2, "src": "https://media.theon.com/o5dbjw5u/press-release_h1-2025_trading_update_vf.pdf"},
+  "9M-25": {"order_intake": 232.7, "soft_backlog": 591.7, "src": "https://media.theon.com/1upa1oqe/press-release_3q2025-trading-update_vf_03-11-2025.pdf"},
+  "2025": {"order_intake": 1313.9, "soft_backlog": 1414.3, "options": 856.4, "src": "https://media.theon.com/4lwabm5f/theon-fy25-preliminary-results_16022026_vpublished2.pdf"},
+  "Q1-26": {"order_intake": 70.0, "soft_backlog": 1420.3, "options": 896.9, "src": "https://media.theon.com/wr3cnmil/theon-q1-26-trading-update-vf.pdf (backlog includes Kappa Optronics on consolidation)"},
+  "H1-26": {"order_intake": 232.5, "soft_backlog": 1455.9, "options": 902.0, "src": "https://media.theon.com/13obburb/pr-theon-1h26-trading-update-vf.pdf"}
+ },
+ "eps_q1_release": {
+  "_note": "Q1 trading updates print EPS in the release table only (statements carry no attribution split or share count).",
+  "Q1-24": 0.18, "Q1-25": 0.25, "Q1-26": 0.692,
+  "src": "https://media.theon.com/rl5p1rt0/press-release-q1-2025-trading-update.pdf ; https://media.theon.com/wr3cnmil/theon-q1-26-trading-update-vf.pdf"
+ },
+ "shares": {
+  "_note": "Weighted average ordinary shares (basic = diluted), millions, from the EPS notes. Pre-IPO: 200,000 shares at €1 (FY2021-22 as first reported); split to €0.01 on 14-Nov-2023 (x100 = 20m, restated FY2022 comparative); 60m before the IPO; +10m new shares at the IPO (7-Feb-2024); +8,624,645 new shares in the Dec-2025 rights issue (78,624,645 issued).",
+  "2021": 0.2, "2022": 20.0, "2023": 60.0, "2024": 69.166667, "2025": 69.782498,
+  "H1-23": 20.0, "H1-24": 69.166667, "H1-25": 70.0, "H1-26": 77.591549,
+  "issued_30jun26": 78.624645,
+  "src": "AR2021 note 5.11; AR2023 note 12; H1-24 note 10b; AR2024 note 16; H1-25 note 10b; AR2025 note 16; H1-26 note 10"
+ },
+ "eps_h1": {"H1-23": 0.23, "H1-24": 0.41, "H1-25": 0.48, "H1-26": 0.96},
+ "nci_profit": {"_note": "Profit attributable to NCI (Harder Digital, 60% owned from Oct-2024) where the statement prints the split.", "2024": 0.018832, "2025": 0.738187, "H1-25": 0.082823, "H1-26": 0.121847},
+ "dps": {"_note": "Dividend declared for each financial year (paid the following June/July).", "2023": 0.206, "2024": 0.34, "2025": 0.31,
+          "paid": {"2024": 14.438234, "2025": 23.8, "2026": 24.07},
+          "src": "H1-24 release (FY2023 €14.4m, €0.206/sh paid Jul-2024); AR2025 press release 20-Apr-2026 (FY2024 €0.34, €23.8m; FY2025 €0.31, €24.4m, 30% payout); AGM result 4-Jun-2026 (€24,373,639.95, paid 26-Jun-2026); H1-26 cash flow (€24.07m paid)"},
+ "fv_gains": {"_note": "Net fair value gains on financial assets at FVTPL (cash-flow add-back; Exosens, Kopin, Varjo etc.). Not disclosed in the Q1 / 9M condensed statements.", "2024": 0.099835, "2025": 5.682225, "H1-25": 0.144065, "H1-26": 37.244144},
+ "nri_desc": {
+  "Q1-24": "Initial admission fees to the regulated market of Euronext Amsterdam (EUR 0.36m)",
+  "2024": "Non-recurring items EUR 1.53m (IPO / listing and acquisition-related costs; AR2024 note 11c)",
+  "2025": "Non-recurring expenses EUR 7.30m, mainly legal, due diligence and other acquisition-related costs (AR2025 note 39)",
+  "H1-26": "Non-recurring items EUR 3.89m (acquisition-related; H1-26 report APM note)"
+ },
+ "restatements": {
+  "2022": "AR2023 note 37: correction of errors; FY2022 revenue 147.386 → 142.895, operating profit 40.997 → 40.232, net income 30.597 → 30.004; BS 31-Dec-2022 and 1-Jan-2022 restated (staff indemnity reclass, ROU split, prepayments). The model uses the restated figures for FY2022 and the 31-Dec-2021 balance sheet; FY2021 P&L stays as first reported (no restated 2021 P&L was published).",
+  "2024_policy": "AR2025 note 7.a / H1-25 report: from Q2-2025 (effective 1-Jan-2025) the share of profit of core equity-accounted investees is presented within operating profit and adjusted EBIT/EBITDA. 2024 comparatives restated (FY2024 operating profit 86.852 → 89.299; adjusted EBIT 88.386 → 90.833). Q1-2025 restated in the Q1-2026 update (adjusted EBIT 23.018 → 23.777; adjusted EBITDA 23.952 → 24.711). The model presents the share of profit as its own line inside operating profit in every period (current definition) and checks adjusted EBIT against each period's published figure on the definition then in force."
+ },
+ "adj_restated": {"Q1-25": {"adj_ebit": 23.776818, "adj_ebitda": 24.710673, "src": "https://media.theon.com/aako01na/theon-group-trading-update-q1_2026_vff.pdf"}},
+ "h1_26_tu_vs_report": "Q2/H1-2026 trading update (27-Jul-2026) printed H1-26 adjusted EBITDA 69.0 and adjusted EBIT 65.1; the H1 2026 report (7-Sep-2026) shows adjusted EBITDA 69.956 and adjusted EBIT 65.139. The report wins.",
+ "guidance": {
+  "_note": "All guidance below is from Theon's own releases (not on EDGAR) — marked unverified in the workbook.",
+  "FY2024": {"revenue": [330, 350], "date": "2024 releases (9M-24: on track for EUR 330-350m)", "capex": 15},
+  "FY2025": {"revenue_initial": [410, 430], "revenue_jun25": 430, "revenue_nov25": [435, 445], "capex": 20, "src": "FY2024 prelim 14-Feb-2025; H1-25 TU; Q3-25 TU 3-Nov-2025"},
+  "FY2026": {"revenue_nov25": [570, 590], "revenue": [570, 600], "adj_ebit_margin": "mid-twenties", "capex": 30, "dividend": "30% of FY2025 net income", "inorganic": "c.30% growth of which >20% organic, rest inorganic (Kappa; c.EUR 40m FY26 revenue)",
+             "src": "Q3-25 TU 3-Nov-2025 (first target); FY2025 preliminary results 16-Feb-2026; reiterated Q1-26 TU 5-May-2026, Q2/H1-26 TU 27-Jul-2026 and H1-26 report 7-Sep-2026",
+             "date": "2026-07-27"},
+  "medium_term": {"organic_growth": ">15% p.a., supported by bolt-on M&A", "capex_pct": 0.04, "dividend_payout": "20-30% of net income", "revenue_target": "EUR 1bn ahead of the original 2030 projection",
+                  "src": "FY2025 preliminary results 16-Feb-2026; Q2/H1-26 TU"}
+ },
+ "deals": {
+  "harder_digital": {"date": "2024-10", "stake": 0.60, "consideration": 34.0, "note": "Cash injection of EUR 34m for a 60% controlling stake (Germany / Latvia image-intensifier tubes); NCI 40%. 2024 target EUR 17m sales at 10% EBITDA margin.", "src": "theon.com news 2024 'THEON announces the acquisition of Harder Digital'"},
+  "kappa": {"date": "2026-01-14", "consideration": 69.9, "ev": 75.0, "goodwill": 37.6, "intangibles": 27.1, "fy26_revenue": 40.0, "src": "AR2025 note 40; H1-26 report note 13; FY2025 preliminary results"},
+  "exosens": {"date": "2026-01-07", "stake": 0.098, "consideration": 268.7, "price_per_share": 54.0, "treatment": "financial asset at FVTPL (mark-to-market through finance income)", "src": "theon.com news 7-Jan-2026; AR2025 note 40"},
+  "merio": {"announced": "2026-05-04", "completion": "underway 29-Oct-2026 (all approvals received)", "stake": 0.80, "fy26_revenue": ">15", "fy26_ebit": ">3.5", "price": "not disclosed ('accretive EBIT multiple')", "financing": "debt and internally generated cash",
+            "src": "theon.com news 4-May-2026 and 29-Oct-2026"},
+  "hgh": {"announced": "2026-06-17", "stake": 1.0, "seller": "Carlyle", "ev": 300.0, "multiple": "mid- to high-teens EV/EBITDA pre-synergies; c.10x post run-rate synergies by year 2-3", "revenue": 40.0, "revenue_cagr": 0.30,
+          "closing": "expected by the beginning of 2027", "financing": "entirely debt (EUR 325m syndicated senior unsecured term loan, Alpha Bank, signed Jul/Sep-2026); pro forma leverage c.3.0x, lowering to c.2.5x by 2027", "accretion": "EBITDA-margin accretive; mid-single-digit EPS accretive in 2027",
+          "src": "theon.com news 17-Jun-2026; Q2/H1-26 TU 27-Jul-2026; H1-26 report"},
+  "other_investments": "Kopin Corp (US$7m convertible loan → Series A preferred, converted 28-May-2026; 6,190,496 common shares = 3.33%, EDGAR SC 13G/A 27-Jul-2026); Kopin Europe 49% (US$8m); ShockEOS 30% (US$12.0m, 8-Apr-2026); Andres Industries 10% (EUR 1.1m); Varjo convertible loan EUR 10m; Twin Prime US$3m"
+ },
+ "capital": {
+  "ipo": {"date": "2024-02-07", "price": 10.0, "new_shares": 10.0, "gross": 100.0, "costs": 5.982684},
+  "rights_issue": {"date": "2025-12", "new_shares": 8.624645, "price": 17.40, "terp": 25.15, "close_28nov25": 26.10, "gross": 151.279349, "costs": 3.903153, "src": "https://media.theon.com/gvogcaoy/theon-rights-issue-annoucement-press-release.pdf ; AR2025 SOCE"},
+  "buyback_2025": {"authorised_shares": 1.4, "cost_2025": 30.6477, "note": "Treasury shares for a long-term employee incentive plan (AGM 5-Jun-2025); 1.28% of issued shares held in treasury at 30-Jun-2026"},
+  "rcf": {"date": "2025-10-09", "amount": 300.0, "tenor_years": 5, "rate": "1M Euribor + 1.5%", "drawn_30jun26": 301.885834, "note": "Second and final tranche of EUR 185m drawn 2-Jan-2026 (EUR 300m drawn); upsizable to EUR 400m"},
+  "hgh_term_loan": {"amount": 325.0, "note": "Syndicated senior unsecured term loan facility of up to EUR 325m (Alpha Bank coordinator) for the HGH acquisition; undrawn at the H1-26 report date"}
+ },
+ "share_price": {"value": 29.84, "basis": "Market capitalisation EUR 2,346,159,408 ÷ 78,624,645 shares in issue at 30-Jun-2026 (H1 2026 semi-annual report, p.9)", "date": "2026-06-30", "flag": "update to market",
+                 "other": "Closing price EUR 26.10 on 28-Nov-2025 (rights issue announcement)"},
+ "calendar": {"q3_2026_tu": "2026-11-09"}
+}
