@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, EXENS). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -251,8 +251,8 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | No non-GAAP published | ODFL, DHR (EBITDA), STE (EBITDA) | Model-defined bridges, clearly labelled, checked against XBRL / GAAP |
 | Definition changed over time | TDY, LOAR, RBA, MLM | Definition-flag row, in-force definition per period, current-definition memo series |
 | Spin-offs / disc ops | DHR, STE, BWXT, XPO | Hybrid recast or post-spin history; recast cell comments; rebuild originally reported adjusted EPS in memo |
-| IFRS / foreign currency | ONON, RMS, BC, TFI | Reporting currency; constant-currency + FX build; price × FX input; IFRS 16 lease schedule; rent-as-opex DCF option |
-| Half-year reporters | RMS, BC | H1 / H2 / FY columns (H2 = FY − H1); quarterly revenue memo |
+| IFRS / foreign currency | ONON, RMS, BC, TFI, EXENS | Reporting currency; constant-currency + FX build; price × FX input; IFRS 16 lease schedule; rent-as-opex DCF option |
+| Half-year reporters | RMS, BC, EXENS | H1 / H2 / FY columns (H2 = FY − H1); quarterly revenue memo; `exens_build` is the build-kit version (column map with `HC[(year, half)]`, `prevh`, H2/26E = Q3 actual + Q4E) |
 | Recent IPO | LOAR, ONON, KRMN | Annual columns from the prospectus; P&L-only years flagged; BS / CF start when available |
 | Non-December fiscal year | STE (Mar), CTAS (May), HEI (Oct) | Column labels by fiscal year; DCF discount dates moved to FY ends |
 | Pending / new acquisition | DHR, MLM, CTAS, ESAB, CSGP, UBER, CHRW | Separate block, PPA, financing, synergies, closing-date toggle; deal tab for large deals |
@@ -275,12 +275,13 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
 ### 5.1 Sources and extraction
 - **Share price fallback.** With market sites blocked and no price from the user, use the latest SEC-filed price: the 10-Q Part II Item 2 average repurchase price, or a Form 4 transaction / withholding price. Cite the form and date, and flag "update to market". Don't use unverifiable web quotes. [WWD, BWXT, MLM, CLH, WAB, CSGP, CTAS, UBER]
+- **Non-SEC issuers when the IR site is blocked.** Confirm on EDGAR that only an F-6 / F-6EF ADR CIK exists (full-text search plus the submissions JSON), say so in header row 3, and stop to ask the user (a) to accept regulator-filed documents instead of EDGAR and (b) to allow the issuer's document host in the environment's network settings; the agent cannot change the allowlist itself. The Euronext quote feed (`live.euronext.com/en/ajax/getDetailedQuote/<ISIN>-<MIC>`, `…/intraday_chart/getChartData/<ISIN>-<MIC>/max`) returns CryptoJS-AES JSON whose passphrase is the page's `drupalSettings.ajax_secure.kye`; decrypting it gives a dated close for the share price. Index every document in `filings.csv` and keep a `fetch.py` (download + `pdftotext -layout`) so the PDFs can be re-fetched outside the repo. [RMS, EXENS]
 - **XBRL can be wrong, not just incomplete.** Facts tagged 0, tags retired mid-history into a combined concept, and sign flips all occur. Tie every XBRL-sourced fact to the face statement before using it as a primary input. For as-originally-reported checks, use the earliest-filed fact, and compare absolute values where the tag's sign convention changed. [TFI, ODFL]
 - **Foreign filers' EDGAR history starts at the US listing.** Record reporting-currency switches and keep an FX reference series for any manually entered earlier data. For non-SEC issuers, confirm EDGAR holds only F-6 ADR CIKs, say so in header row 3, and source from the home regulator's filings. [TFI, RBA, RMS]
 - **Derivations when releases are thin:**
@@ -297,6 +298,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Disc-ops recast published only in totals:** scale minor opex lines to the restated totals, with SG&A as the plug, and comment the cells. [STE]
 - **After a spin:** start the BS at the first post-spin balance sheet even if the P&L uses earlier recast comparatives, and fill earlier y/y with company-reported change % memos. Spin-cos put carve-out (Form 10) years in the main columns, with the former parent's segment history as a flagged memo under the parent's CIK. [XPO, ESAB]
 - **Half-year reporters:** carry quarterly revenue as "1st / 2nd quarter of the half" memo rows inside the half-year columns, with a Σ check. [RMS, BC]
+- **IFRS 5 restatement one year back** (a disposal restates only the prior year and prior half): put the restated year / half in the main columns, keep the originally reported revenue, Adjusted EBITDA and net profit as memo rows, and take the restated segment quarters from the release appendix. The half left between a restated FY and an unrestated H1 (H2 = FY restated − H1 reported) is mixed: flag it in the segment block and the definition row rather than leaving a silent build-vs-reported gap. [EXENS]
 - **Two builds of one company:** diff their dated facts (split dates, deconsolidation quarter, label cut-overs) and resolve each from the filing. [LECO]
 
 ### 5.3 Operating build
@@ -396,6 +398,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 
   [DHR, TMO, CSGP, ONON, CLH, WAB, XPO, CPRT, RBA, KRMN]
 - **Don't double-count the current year:** when valuation net debt is taken at the current fiscal year end, exclude that year's UFCF. When the FY ended just before the valuation date, make it the base year. [BWXT, CW, WWD, BC, HEI]
+- **DCF fade years must not grow acquisition spend.** The template fade row grows the last explicit capex line; when that line includes M&A, strip it first (`I22 = (H22 − M&A_last)×(1+g)`), or the fade deducts perpetual acquisitions without their revenue. When the current year is excluded for double counting, also move the WACC × g sensitivity grid (its SUMPRODUCT ranges) to start in the next year. [EXENS]
 - **EV bridge items:**
   - Add legacy debt-like items (asbestos net of insurance) and redeemable NCI.
   - Carry equity stakes and retained divestiture stakes at carrying value outside invested capital.
@@ -410,4 +413,5 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Template residue is the most common defect.** At least 10 builds shipped MLM text in Bull-Base-Bear N26 / P40 comments or DCF rationale, and TFI kept Moog comments. `tools/residue_scan.py` is a hard gate. [CLH, WAB, SAIA, ODFL, WCN, LOAR, ONON, LECO, ESAB, STE, CTAS, UBER, TFI, CPRT]
 - **Check also:** foreign row numbers and switch-cell addresses in comments, the wrong currency symbol on non-USD models, and modelling-note dates that contradict the definition flags. [ONON, DHR]
 - **Check tolerances** are set by period when the issuer changes rounding units, and stated in the label. [STE, TMO, CSGP, ONON, DHR]
+- **LibreOffice recalculation resets cell-comment authors** to "Unknown Author" in the stored-values file; restore them in the post-save XML step (`xl/comments*.xml` `<authors>`), or `residue_scan.py` reports foreign authors. On non-USD models also relabel the template's DCF B5 ("US 10Y"), B16 / B33 ("USDm"), B58 ("($)") and Bull-Base-Bear B33 / N33 / Z33 ("FCF / share ($)"). [EXENS, ONON]
 - **Private-company implied CF:** related-party balances are financing; explain the sign of implied capex; leave first-year ratios n/a when there is no opening BS. [R&Y]

@@ -1,0 +1,876 @@
+{
+ "period": "2021",
+ "period_end": "2021-12-31",
+ "basis": "Exosens International SAS (formerly Photonis International, the pre-July-2021 group parent) consolidated statements for the year ended 31 December 2021, with FY2020 comparatives; IFRS, 12 months, as presented in the IPO Registration Document section 18.2. This is the predecessor-entity full-year set that the Registration Document key-figures tables use for 2021 (revenue 166.2, adjusted EBITDA 47.5). It is NOT a comparative column: the Exosens (parent, formerly Photonis Group) statements in section 18.1 only show a 10-month 16-Mar-2021 to 31-Dec-2021 column with 5 months of activity (recorded in 2022.json py).",
+ "sources": {
+  "is": "REGDOC_2024.txt p.257 (lines 14055-14085)",
+  "bs": "REGDOC_2024.txt p.256 (lines 14006-14049)",
+  "cf": "REGDOC_2024.txt p.259-260 (lines 14119-14211)",
+  "seg": "REGDOC_2024.txt p.110 (lines 5717-5729), p.295 (lines 16224-16229), key figures p.100 (lines 5178-5183)",
+  "ng": "REGDOC_2024.txt p.100 (lines 5187-5222), p.134 (lines 7071-7090), p.92 (lines 4757-4785)",
+  "notes": "REGDOC_2024.txt 18.2 notes 2,5,6,7,12,13,20,22,23,24,25,28 (lines 14303-16690); chapter 8 debt table p.116-117 (lines 6049-6147)"
+ },
+ "is": {
+  "rev": 166.168,
+  "cos": -42.916,
+  "ext": -23.219,
+  "taxes": -1.309,
+  "staff": -56.172,
+  "oth_op_inc": 2.041,
+  "oth_op_exp": -0.652,
+  "dna_prov": -11.982,
+  "rop": 31.955,
+  "oth_inc": 0.0,
+  "oth_exp": -146.343,
+  "op": -114.388,
+  "jv_income": 0.0,
+  "cost_net_debt": -37.599,
+  "deriv": 1.748,
+  "fin_oth": -0.027,
+  "net_fin": -35.878,
+  "ebt": -150.265,
+  "tax": 1.299,
+  "ni_cont": -148.965,
+  "disc": 0.0,
+  "ni": -148.965,
+  "nci": 0.0,
+  "eps_basic": null,
+  "eps_dil": null,
+  "wsh": null,
+  "wsh_dil": null,
+  "pref_div": null,
+  "lines_raw": [
+   [
+    "Revenue",
+    "166 168"
+   ],
+   [
+    "Purchases consumed",
+    "(42 916)"
+   ],
+   [
+    "Other purchases and external expenses",
+    "(23 219)"
+   ],
+   [
+    "Taxes other than taxes on income",
+    "(1 309)"
+   ],
+   [
+    "Personnel expense",
+    "(56 172)"
+   ],
+   [
+    "Other operating income",
+    "2 041"
+   ],
+   [
+    "Other operating expenses",
+    "(652)"
+   ],
+   [
+    "Additions, write offs of depreciation, amortization and impairment",
+    "(11 982)"
+   ],
+   [
+    "OPERATING PROFIT (LOSS) FROM CONTINUING OPERATIONS",
+    "31 955"
+   ],
+   [
+    "Other income",
+    "-"
+   ],
+   [
+    "Other expenses",
+    "(146 343)"
+   ],
+   [
+    "OPERATING PROFIT (LOSS) FROM OPERATIONS",
+    "(114 388)"
+   ],
+   [
+    "Income (loss) from joint ventures and associates",
+    "-"
+   ],
+   [
+    "Cost of net debt",
+    "(37 599)"
+   ],
+   [
+    "Net impact of hedging",
+    "1 748"
+   ],
+   [
+    "Other",
+    "(27)"
+   ],
+   [
+    "Net financial loss",
+    "(35 878)"
+   ],
+   [
+    "PROFIT (LOSS) BEFORE TAX",
+    "(150 265)"
+   ],
+   [
+    "Corporate income tax",
+    "1 299"
+   ],
+   [
+    "PROFIT (LOSS) FROM CONTINUING OPERATIONS",
+    "(148 965)"
+   ],
+   [
+    "Profit (loss) from discontinued operations",
+    "-"
+   ],
+   [
+    "PROFIT (LOSS) FOR THE PERIOD",
+    "(148 965)"
+   ],
+   [
+    "Attributable to non-controlling interests",
+    "-"
+   ],
+   [
+    "PROFIT (LOSS) ATTRIBUTABLE TO OWNERS OF THE PARENT",
+    "(148 965)"
+   ]
+  ]
+ },
+ "seg": {
+  "amp_rev": 121.5,
+  "di_rev": 43.5,
+  "elim_rev": 1.2,
+  "tot_rev": 166.2,
+  "amp_rev_k": 121.512,
+  "di_rev_k": 43.494,
+  "elim_rev_k": 1.16,
+  "amp_agp": null,
+  "di_agp": null,
+  "oth_agp": null,
+  "agp": 65.4,
+  "amp_agp_pct": null,
+  "di_agp_pct": null,
+  "agp_pct": null,
+  "amp_g": null,
+  "di_g": null,
+  "tot_g": null,
+  "amp_lfl": null,
+  "di_lfl": null,
+  "tot_lfl": null,
+  "geo_k": {
+   "Europe": 97.44,
+   "Asia": 28.561,
+   "North America": 32.39,
+   "Africa": 6.529,
+   "Australia": 1.244,
+   "Other": 0.004
+  },
+  "seg_note": "Exosens International FY2021: two segments Amplification / Detection and Imaging as in later years; segment revenue printed in € thousand in Note 18 (121,512 / 43,494 / 1,160) and in € million in chapter 7 (121.5 / 43.5 / 1.2). Adjusted gross margin 65.4 only given at group level (key figures table p.100); no segment split for 2021. 'Other, eliminations and not allocated' is +1.2 (holding/corporate activity and eliminations). Revenue by type: product sales 160,771, service contracts 5,401, sale of goods (4)."
+ },
+ "ng": {
+  "op": -114.4,
+  "dna_impair": 12.0,
+  "oth_inc_exp": 146.3,
+  "ebitda": null,
+  "sbc": null,
+  "nonrec": null,
+  "other_restatements": 3.6,
+  "adj_ebitda": 47.5,
+  "dna_ex_ppa": -12.0,
+  "ppa_restatement": 0.0,
+  "adj_ebit": 35.5,
+  "adj_ebitda_margin_pct": 28.6,
+  "adj_ebit_margin_pct": 21.4,
+  "mgmt_cos": null,
+  "mgmt_rd": null,
+  "mgmt_sga": null,
+  "mgmt_oth": null,
+  "mgmt_rop": null,
+  "cap_rd": 6.3,
+  "capex": 10.4,
+  "capex_growth": 6.2,
+  "capex_maint": 4.2,
+  "cash_conv_pct": 74.7,
+  "adj_ebitda_less_cap_rd": 41.2,
+  "adj_ebitda_less_cap_rd_capex": 30.7,
+  "rd_net_total": 7.7,
+  "fcf_pre_growth": null,
+  "fcf": null,
+  "ni_ex_ppa": null,
+  "ni_cont_ex_ppa": null,
+  "ni_ex_brand": null,
+  "adj_items_text": "'Other restatements' (3.6) correspond to the restatement of the impact of items that do not reflect the Group's core operating performance, such as costs relating to business reorganisation and adaptation operations, and expenses associated with share-based payments (IFRS 2). IFRS 2 expense in 2021 was 0.1 (Note 29 of the 18.1 statements). Restatement of other income and expenses (146.3) is the goodwill impairment of 143.9 plus other non-recurring expenses. No PPA restatement line for 2021 ('-').",
+  "definition": "Adjusted EBITDA corresponds to operating profit, after deducting (i) depreciation, amortisation and reversal of impairment losses on non-current assets; (ii) non-recurring income and expenses as presented in the consolidated income statement under 'Other income' and 'Other expenses'; and (iii) the impact of items that do not reflect the Group's core operating performance, such as costs relating to business reorganisation and adaptation operations and expenses associated with share-based payments (IFRS 2). Adjusted EBIT corresponds to operating profit, after deducting (i) non-recurring income and expenses as presented in the consolidated income statement under 'Other income' and 'Other expenses'; and (ii) the impact of items that do not reflect the Group's core operating performance [...]. Depreciation, amortisation and reversal of impairment losses on non-current assets, included in adjusted EBIT, exclude the amortisation of the part of non-current assets corresponding to purchase price allocation."
+ },
+ "dna": {
+  "dna_ex_ifrs16": -10.07,
+  "dna_rou": -1.418,
+  "impair_current": -0.406,
+  "provisions": -0.088,
+  "total": -11.982,
+  "ppa_amort": null,
+  "brand_impair": null
+ },
+ "fin": {
+  "int_bank": -17.689,
+  "int_conv_bonds": -11.743,
+  "debt_costs": -7.779,
+  "int_lease": -0.388,
+  "cost_net_debt": -37.599,
+  "fx": 4.378,
+  "deriv_inc": -2.656,
+  "deriv_exp": 0.0,
+  "deriv_other": 0.026,
+  "deriv_net": 1.748,
+  "other": -0.027,
+  "net_fin": -35.878
+ },
+ "tax": {
+  "current": -2.812,
+  "deferred": 4.111,
+  "total": 1.299,
+  "etr_pct": null,
+  "statutory_rate_pct": 26.5,
+  "unused_tax_losses": 100.357
+ },
+ "cf": {
+  "ni": -148.965,
+  "fin_cash": 22.314,
+  "fin_noncash": 13.553,
+  "tax": 1.299,
+  "dna_prov": 11.982,
+  "oth": 144.656,
+  "disposal_gains": 0.0,
+  "jv": 0.0,
+  "cfo_pre_wc": 44.839,
+  "tax_paid": -1.965,
+  "wc": -0.219,
+  "cfo": 42.655,
+  "capex": -19.587,
+  "disposals": null,
+  "acq": -1.669,
+  "divest": null,
+  "grants": null,
+  "oth_fin_assets": null,
+  "cfi": -21.256,
+  "sh_iss": 42.736,
+  "sh_iss_costs": null,
+  "treasury": null,
+  "div": null,
+  "conv_int": null,
+  "ncb_in": 212.065,
+  "ncb_out": -258.902,
+  "cb_in": 0.446,
+  "cb_out": -12.398,
+  "accr_int": -9.055,
+  "int_paid": -21.925,
+  "lease_rep": 0.367,
+  "lease_int": -0.388,
+  "deriv_inc": null,
+  "inv_inc": null,
+  "loan_costs": -7.722,
+  "early_rep": null,
+  "oth_fin": 17.951,
+  "cff": -36.826,
+  "fx": 0.211,
+  "net_change": -15.216,
+  "disc_cf": null,
+  "beg": 31.142,
+  "end": 15.927,
+  "lines_raw": [
+   [
+    "Profit (loss) for the period",
+    "(148 965)"
+   ],
+   [
+    "Profit (loss) from continuing operations",
+    "(148 965)"
+   ],
+   [
+    "Additions, write offs of depreciation, amortization and impairment",
+    "11 982"
+   ],
+   [
+    "Capital gains and losses on disposals",
+    "-"
+   ],
+   [
+    "Other expenses and income with no cash impact (1)",
+    "144 656"
+   ],
+   [
+    "Income tax expense (including deferred taxes)",
+    "1 299"
+   ],
+   [
+    "Loss from joint ventures and associates",
+    "-"
+   ],
+   [
+    "Finance cost with no cash impact (2)",
+    "13 553"
+   ],
+   [
+    "Finance cost with cash impact (3)",
+    "22 314"
+   ],
+   [
+    "Cash from operations before changes in working capital",
+    "44 839"
+   ],
+   [
+    "Tax received/(paid)",
+    "(1 965)"
+   ],
+   [
+    "Change in working capital",
+    "(219)"
+   ],
+   [
+    "Cash flow from (used in) operating activities",
+    "42 655"
+   ],
+   [
+    "Acquisition of equity stakes",
+    "(1 669)"
+   ],
+   [
+    "Acquisition of non-current assets (4)",
+    "(19 587)"
+   ],
+   [
+    "Cash flow from investing activities",
+    "(21 256)"
+   ],
+   [
+    "increases Capital",
+    "42 736"
+   ],
+   [
+    "Internal financing",
+    "17 951"
+   ],
+   [
+    "Refinancing of non-current borrowings",
+    "212 065"
+   ],
+   [
+    "Repayment of non-current borrowings",
+    "(258 902)"
+   ],
+   [
+    "Refinancing current borrowings",
+    "446"
+   ],
+   [
+    "Repayment of current borrowings",
+    "(12 398)"
+   ],
+   [
+    "Accrued interest payments",
+    "(9 055)"
+   ],
+   [
+    "Changes in financial debt related to IFRS 16",
+    "367"
+   ],
+   [
+    "Financial expenses with cash flow linked to loans",
+    "(21 925)"
+   ],
+   [
+    "Financial expenses with cash flow linked to financial debts (IFRS 16)",
+    "(388)"
+   ],
+   [
+    "Loan issue expenses",
+    "(7 722)"
+   ],
+   [
+    "Cash flow from financing activities",
+    "(36 826)"
+   ],
+   [
+    "Foreign exchange gains and losses",
+    "211"
+   ],
+   [
+    "Change in cash and cash equivalents over the period",
+    "(15 216)"
+   ],
+   [
+    "Opening cash and cash equivalents",
+    "31 142"
+   ],
+   [
+    "Cash and cash equivalents at period-end",
+    "15 927"
+   ],
+   [
+    "Change in cash",
+    "(15 215)"
+   ],
+   [
+    "(1) Impact of IFRS 2",
+    "136"
+   ],
+   [
+    "(1) Post-employment benefit expense (IAS 19)",
+    "282"
+   ],
+   [
+    "(1) Other operating income and expenses",
+    "372"
+   ],
+   [
+    "(1) Other expenses/(income) [goodwill impairment]",
+    "143,866"
+   ],
+   [
+    "(1) Other non-cash income and expenses",
+    "144 656"
+   ],
+   [
+    "(2) Debt issuance costs",
+    "(6 932)"
+   ],
+   [
+    "(2) Interest cost on convertible bonds issued",
+    "(11 743)"
+   ],
+   [
+    "(2) Foreign exchange gains",
+    "7 407"
+   ],
+   [
+    "(2) Foreign exchange losses",
+    "(476)"
+   ],
+   [
+    "(2) Other",
+    "(1 834)"
+   ],
+   [
+    "(2) Finance costs with no cash impact",
+    "(13 553)"
+   ],
+   [
+    "(3) Interest on debts",
+    "(21 925)"
+   ],
+   [
+    "(3) Other",
+    "(388)"
+   ],
+   [
+    "(3) Finance costs with cash impact",
+    "(22 313)"
+   ],
+   [
+    "(4) Acquisition of intangible assets",
+    "(9 070)"
+   ],
+   [
+    "(4) Acquisition of property, plant and equipement",
+    "(7 859)"
+   ],
+   [
+    "(4) Fixed assets suppliers",
+    "(187)"
+   ],
+   [
+    "(4) Other",
+    "(2 471)"
+   ],
+   [
+    "(4) [total, mislabelled 'Finance costs with no cash impact']",
+    "(19 587)"
+   ]
+  ]
+ },
+ "bs": {
+  "gw": 257.552,
+  "intang": 38.494,
+  "ppe": 46.51,
+  "rou": null,
+  "eq_inv": 1.767,
+  "oth_nca": 0.281,
+  "dta": 3.187,
+  "tnca": 347.79,
+  "inv": 45.023,
+  "ar": 35.583,
+  "deriv_a": 0.0,
+  "oca": 16.193,
+  "cash": 15.927,
+  "tca": 112.727,
+  "ta": 460.517,
+  "sh_cap": 347.465,
+  "sh_prem": 137.799,
+  "reserves": -313.157,
+  "teq": 172.107,
+  "nci": 0.0,
+  "ncb": 221.335,
+  "ncll": null,
+  "pens": null,
+  "oncl": 13.535,
+  "dtl": 0.0,
+  "tncl": 234.87,
+  "cb": 4.847,
+  "cll": null,
+  "deriv_l": 0.0,
+  "ap": 15.894,
+  "ocl": 32.799,
+  "tcl": 53.54,
+  "tle": 460.517,
+  "shares_out": 347465398,
+  "treasury": null,
+  "lines_raw": [
+   [
+    "Goodwill",
+    "257 552"
+   ],
+   [
+    "Intangible assets",
+    "38 494"
+   ],
+   [
+    "Property, plant and equipment",
+    "46 510"
+   ],
+   [
+    "Investments in joint ventures and associates",
+    "1 767"
+   ],
+   [
+    "Non-current financial assets",
+    "41"
+   ],
+   [
+    "Derivative financial instruments",
+    "(0)"
+   ],
+   [
+    "Deferred tax assets",
+    "3 187"
+   ],
+   [
+    "Other non-current assets",
+    "240"
+   ],
+   [
+    "NON-CURRENT ASSETS",
+    "347 790"
+   ],
+   [
+    "Inventories",
+    "45 023"
+   ],
+   [
+    "Trade receivables",
+    "35 583"
+   ],
+   [
+    "Derivative financial instruments",
+    "0"
+   ],
+   [
+    "Other current assets",
+    "16 152"
+   ],
+   [
+    "Current financial assets",
+    "41"
+   ],
+   [
+    "Cash and cash equivalents",
+    "15 927"
+   ],
+   [
+    "CURRENT ASSETS",
+    "112 727"
+   ],
+   [
+    "TOTAL ASSETS",
+    "460 517"
+   ],
+   [
+    "Share capital",
+    "347 465"
+   ],
+   [
+    "Share premiums",
+    "137 799"
+   ],
+   [
+    "Primes",
+    "-"
+   ],
+   [
+    "Reserves & Retained earnings",
+    "(160 481)"
+   ],
+   [
+    "Profit (loss) for the period",
+    "(148 965)"
+   ],
+   [
+    "Translation adjustments",
+    "(3 711)"
+   ],
+   [
+    "Equity attributable to owners of the parent",
+    "172 107"
+   ],
+   [
+    "Non-Controlling interests",
+    "-"
+   ],
+   [
+    "CONSOLIDATED EQUITY",
+    "172 107"
+   ],
+   [
+    "Long term provisions",
+    "7 962"
+   ],
+   [
+    "Non-current loans and borrowings",
+    "221 335"
+   ],
+   [
+    "Derivative financial instruments",
+    "(0)"
+   ],
+   [
+    "Deferred tax liabilities",
+    "-"
+   ],
+   [
+    "Other non-current liabilities",
+    "5 573"
+   ],
+   [
+    "NON-CURRENT LIABILITIES",
+    "234 870"
+   ],
+   [
+    "Short term provisions",
+    "2 355"
+   ],
+   [
+    "Current loans and borrowings",
+    "4 847"
+   ],
+   [
+    "Derivative financial instruments",
+    "-"
+   ],
+   [
+    "Trade payables",
+    "15 894"
+   ],
+   [
+    "Other current liabilities",
+    "30 444"
+   ],
+   [
+    "CURRENT LIABILITIES",
+    "53 540"
+   ],
+   [
+    "TOTAL EQUITY AND LIABILITIES",
+    "460 517"
+   ]
+  ]
+ },
+ "debt": {
+  "tlb": null,
+  "tlb_gross": null,
+  "a_bonds": 168.548,
+  "a_bonds_gross": 174.2,
+  "senior_debt": 33.479,
+  "senior_gross": 35.0,
+  "leases": 6.086,
+  "debt_to_parent": 16.37,
+  "oth_liab": 1.476,
+  "accrued_int": 0.223,
+  "overdraft": 0.0,
+  "gross_debt": 226.182,
+  "deriv_net": 0.0,
+  "cash": 15.927,
+  "net_debt": 210.255,
+  "adj_ebitda_lev": 47.5,
+  "leverage_x": 4.4,
+  "rcf_drawn": 0.0,
+  "legacy_debt": "At 31-Dec-2021 (Exosens International Note 13, € thousand): A Bonds 168,548 (gross 174.2m less 5.5m issue costs; EUR 175m 7-year, 6.75% + Euribor, issued 22-Jul-2021 by Photonis Group and on-lent); Senior debt 33,479 (gross 35m less 1.5m costs: Facility A1 14.3m amortising 5.5-yr incl. 2.7m current, Facility A2 19.1m 6-yr bullet); lease liabilities 6,086; 'Other financial liabilities' 16,370 (chapter 8 table labels this 'Financial debt to Exosens Group' 16.4m; the note footnote (3) says Device-Alab debt); 'Accrued interest' 1,476 (chapter 8 shows other financial debt of Device-Alab 1.5m) and an unlabelled 223 (= accrued interest on Facility A1 per footnote 4); total financial debt 226,182; net of cash 15,927 = 210,255. Pre-acquisition debt repaid 22-Jul-2021: EUR 270m incl. accrued interest (convertible bonds 167.0m, junior PIK debt 94.6m); the EUR 20m RCF and EUR 10m acquisition facility were undrawn at year-end. FY2020 comparatives: convertible bond 166,955, senior debt 174,640, junior PIK 94,617, leases 6,345, other 9,034; net debt 417,899."
+ },
+ "equity": {
+  "sbc_ifrs2": 0.137,
+  "capital_increase": 379.451,
+  "convertible_bond_conversion": -156.413,
+  "dividends": 0.0,
+  "treasury_adj": null,
+  "other": 0.313,
+  "note": "Equity statement FY2021: share capital increase 243,752 + premium 135,699 = 379,451 (conversion of 158,314,898 convertible bonds 22,616; debt offsetting 118,101; capital increase subscribed by Photonis Group 103,035 of which 44,900 cash under the delegation agreement); 'Convertible bonds' column (106,741) and retained earnings (49,673) = (156,413); IFRIC-IAS 19 301; IFRS 2 137; other 12."
+ },
+ "extra": {
+  "employees": 862,
+  "employees_avg_note20": 921,
+  "dps_declared": 0.0,
+  "acquisitions": [
+   [
+    "Device-Alab (remaining 60.1%, now Photonis Infrared France)",
+    "2021-03-05",
+    1.9,
+    1.387,
+    "Detection and Imaging",
+    "n/a (already consolidated)"
+   ]
+  ],
+  "divestitures": [],
+  "guidance": null,
+  "events": "Acquisition of the Photonis group by HLD Europe completed 22-Jul-2021 (exclusive negotiations from 16/21-Feb-2021 with Ardian); repayment of EUR 270m legacy debt and new EUR 210m financing (A Bonds 175m, Facility A1 15m, Facility A2 20m) on 22-Jul-2021; repayment of the four PGE state-guaranteed loans (EUR 10m) on 10-Jul-2021; goodwill impairment of EUR 143,866k (transaction value used as value in use); conversion of convertible bonds and capital increases bringing Exosens International share capital to EUR 347,465,398 (347,465,398 ordinary shares of EUR 1; all preference shares and ABSA warrants converted/lapsed). Photonis International renamed Exosens International on 7-Sep-2023. Events after the reporting period: no major adverse consequences expected from the conflict in Ukraine.",
+  "intangibles_net": {
+   "dev_tech": 31.328,
+   "software": 3.95,
+   "cust_brands": null,
+   "contracts": 0.164,
+   "other": 3.052,
+   "total": 38.494
+  },
+  "amort_intang": 5.047,
+  "dep_ppe": 6.441,
+  "dep_rou": 1.429,
+  "capex_intang_cf": 9.07,
+  "capex_ppe_cf": 7.859,
+  "rd_capitalised_note6": 6.3,
+  "top_customer_pct": null
+ },
+ "py": {
+  "restated": false,
+  "period": "2020",
+  "notes": "FY2020 comparative column of the Exosens International FY2021 statements (REGDOC_2024 section 18.2).",
+  "is": {
+   "rev": 149.859,
+   "cos": -35.744,
+   "ext": -22.283,
+   "taxes": -1.608,
+   "staff": -52.174,
+   "oth_op_inc": 2.719,
+   "oth_op_exp": -1.977,
+   "dna_prov": -8.083,
+   "rop": 30.7,
+   "oth_inc": 0.023,
+   "oth_exp": -0.686,
+   "op": 30.037,
+   "jv_income": 0.037,
+   "cost_net_debt": -41.88,
+   "deriv": -1.332,
+   "fin_oth": -0.099,
+   "net_fin": -43.311,
+   "ebt": -13.237,
+   "tax": -2.591,
+   "ni_cont": -15.828,
+   "disc": 0.0,
+   "ni": -15.828
+  },
+  "seg": {
+   "tot_rev": 149.9,
+   "geo_k": {
+    "Europe": 86.84,
+    "Asia": 29.435,
+    "North America": 24.848,
+    "Africa": 6.854,
+    "Australia": 0.483,
+    "Other": 1.399
+   }
+  },
+  "ng": {},
+  "dna": {
+   "dna_ex_ifrs16": -6.479,
+   "dna_rou": -1.383,
+   "impair_current": 0.071,
+   "provisions": -0.292,
+   "total": -8.083
+  },
+  "fin": {
+   "int_conv_bonds": -19.207,
+   "int_bank": -21.139,
+   "debt_costs": -1.193,
+   "int_lease": -0.341,
+   "cost_net_debt": -41.88,
+   "fx": -3.657,
+   "deriv_exp": -0.717,
+   "deriv_other": 3.043,
+   "deriv_net": -1.331,
+   "other": -0.099,
+   "net_fin": -43.31
+  },
+  "tax": {
+   "current": -2.549,
+   "deferred": -0.042,
+   "total": -2.591
+  },
+  "cf": {
+   "ni": -15.828,
+   "dna_prov": 8.083,
+   "disposal_gains": 0.008,
+   "oth": 2.284,
+   "tax": 2.591,
+   "jv": -0.037,
+   "fin_noncash": 33.981,
+   "fin_cash": 9.33,
+   "cfo_pre_wc": 40.412,
+   "tax_paid": -1.261,
+   "wc": 4.967,
+   "cfo": 44.119,
+   "acq": 0.0,
+   "capex": -13.766,
+   "cfi": -13.766,
+   "ncb_in": 10.0,
+   "ncb_out": -4.0,
+   "cb_in": -0.442,
+   "lease_rep": -1.237,
+   "int_paid": -8.99,
+   "lease_int": -0.341,
+   "cff": -5.01,
+   "fx": -0.26,
+   "net_change": 25.083,
+   "beg": 6.059,
+   "end": 31.142
+  },
+  "bs": {
+   "gw": 399.977,
+   "intang": 32.566,
+   "ppe": 43.712,
+   "eq_inv": 1.813,
+   "oth_nca": 0.631,
+   "dta": 0.0,
+   "tnca": 478.712,
+   "inv": 46.209,
+   "ar": 28.146,
+   "deriv_a": 2.55,
+   "oca": 11.341,
+   "cash": 31.142,
+   "tca": 119.389,
+   "ta": 598.1,
+   "sh_cap": 103.713,
+   "sh_prem": 2.101,
+   "primes": 106.741,
+   "reserves": -115.456,
+   "teq": 97.098,
+   "oncl": 12.596,
+   "ncb": 428.762,
+   "dtl": 0.653,
+   "tncl": 442.011,
+   "cb": 22.829,
+   "ap": 10.687,
+   "ocl": 25.474,
+   "tcl": 58.991,
+   "tle": 598.1
+  }
+ },
+ "notes": "Units: statements in € thousand (printed with space thousands separators, e.g. '166 168') converted to € million / 3 dp; APM tables as printed in € million. Line structure differs from 2022-24: cost of sales is 'Purchases consumed'; D&A line is 'Additions, write offs of depreciation, amortization and impairment'; a separate 'Income (loss) from joint ventures and associates' line (0) sits between operating profit and cost of net debt; 'Net impact of hedging' = net gains on derivatives; separate lines for continuing/discontinued operations and NCI (all zero). Balance sheet: no separate right-of-use line (PP&E 46,510 includes IFRS 16 right-of-use assets of 6,190 per Note 7; lease liabilities 4,637 non-current / 1,449 current are inside loans and borrowings); 'Long term provisions' 7,962 includes post-employment benefit provisions (personnel cost accruals 8,534 total per Note 14); equity split into capital / premiums / reserves & retained earnings / profit for the period / translation adjustments (bs.reserves = -160,481 - 148,965 - 3,711 = -313,157, computed). Computed aggregates (stated, not printed): bs.oth_nca = non-current financial assets 41 + other non-current assets 240 = 281; bs.oca = other current assets 16,152 + current financial assets 41 = 16,193; bs.oncl = long-term provisions 7,962 + other non-current liabilities 5,573 = 13,535; bs.ocl = short-term provisions 2,355 + other current liabilities 30,444 = 32,799. Self-check failures: IS rop: rev+cos+ext+taxes+staff+oth_op_inc+oth_op_exp+dna_prov = 31.959 vs printed 31.955 (diff 0.004; source rounding - Note 20 shows personnel expense 56,171 which gives 31.960). bs.tca components sum 112.726 vs 112.727 (0.001, rounding). All other IS/CF/BS checks pass within 0.002. Cash-flow statement: the line 'Profit (loss) from continuing operations (148 965)' repeats net profit and is not additive; the printed 'Change in cash (15 215)' footer line differs by 1 from 'Change in cash and cash equivalents over the period (15 216)'. cf.oth = 'Other expenses and income with no cash impact' 144,656 (goodwill impairment 143,866 + IFRS 2 136 + IAS 19 282 + inventory scrapping 372). cf.oth_fin = 'Internal financing' 17,951. cf.accr_int = 'Accrued interest payments' (9,055). cf.lease_rep = 'Changes in financial debt related to IFRS 16' +367 as printed. cf.capex = 'Acquisition of non-current assets' (19,587) which includes fixed-asset suppliers (187) and other (2,471); chapter 8 presents net investment in PP&E and intangibles as (17.1) and cash flow from other financial assets (2.5). ng: bridge printed from Adjusted EBITDA down to operating profit (restatements shown negative); recorded here with add-backs positive as in the cash-conversion table (op -114.4 + 12.0 + 146.3 + 3.6 = 47.5). EBITDA (pre-adjustment) not printed; computed op + D&A + other income/expenses = 43.9. dna_ex_ppa recorded as -12.0 because the PPA restatement line for 2021 is '-' (35.5 = 47.5 - 12.0). EPS: not applicable / 'N/A' (Exosens International was a wholly owned subsidiary; 347,465,398 ordinary shares of EUR 1 at year-end; FY2020: 103,713k shares of which ordinary 54,850k, preference A 26,441k, R2 60k, R3 22,362k). Employees: Note 20 states an average of 921 (2020: 835) but the category table totals 862 (2020: 835) and chapter 7 uses 862; both recorded. Segment adjusted gross margin by segment not presented for 2021. Exosens (parent) 10-month 2021 column (16-Mar-2021 to 31-Dec-2021, 5 months of activity: revenue 82,281, net loss (3,404)) is recorded in 2022.json py."
+}

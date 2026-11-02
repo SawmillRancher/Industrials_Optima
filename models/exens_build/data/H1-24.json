@@ -1,0 +1,829 @@
+{
+ "period": "H1-24",
+ "period_end": "2024-06-30",
+ "basis": "IFRS (IAS 34) condensed consolidated half-year statements, as originally reported in the H1 2024 interim financial report (Microwave Amplification included; no discontinued operations). Reviewed (not audited) by PwC / Baker Tilly Strego.",
+ "sources": {
+  "is": "RFS_H124_EN.txt FS p.4 (lines 735-760); EPS Note 12 FS p.16 (lines 1366-1392)",
+  "bs": "RFS_H124_EN.txt FS p.3 (lines 687-720)",
+  "cf": "RFS_H124_EN.txt FS p.6 (lines 804-854)",
+  "seg": "RFS_H124_EN.txt business report sections 3.1-3.2 p.6-7 (lines 166-225); Note 4 FS p.12 (lines 1150-1178)",
+  "ng": "RFS_H124_EN.txt key figures p.4 (lines 74-92); sections 3.5-3.6 p.8 (lines 271-284); Note 4 reconciliation FS p.13 (lines 1184-1197); section 4.1 p.9 (line 346, capitalised R&D)",
+  "dna": "RFS_H124_EN.txt Note 8 FS p.14 (lines 1292-1297)",
+  "fin": "RFS_H124_EN.txt Note 10 FS p.15 (lines 1322-1335)",
+  "tax": "RFS_H124_EN.txt Note 11 FS p.15 (line 1344)",
+  "debt": "RFS_H124_EN.txt Note 23 FS p.22-23 (lines 1689-1773)",
+  "equity": "RFS_H124_EN.txt statement of changes in equity FS p.7 (lines 880-902); Note 22 FS p.20-21 (lines 1632-1680)",
+  "extra": "RFS_H124_EN.txt Note 1 (line 920), Note 3 (lines 1027-1117), Note 14-16 (lines 1441-1546), Note 31 (lines 2095-2124), sections 6-7 p.12-13 (lines 475-512)",
+  "notes": "RFS_H124_EN.txt"
+ },
+ "is": {
+  "rev": 186.887,
+  "cos": -45.571,
+  "ext": -33.939,
+  "taxes": -1.216,
+  "staff": -55.537,
+  "oth_op_inc": 1.682,
+  "oth_op_exp": -2.261,
+  "dna_prov": -15.499,
+  "rop": 34.546,
+  "oth_inc": 0.119,
+  "oth_exp": -3.982,
+  "op": 30.683,
+  "cost_net_debt": -27.366,
+  "deriv": 1.981,
+  "fin_oth": -0.311,
+  "net_fin": -25.696,
+  "ebt": 4.987,
+  "tax": -2.123,
+  "ni": 2.864,
+  "eps_basic": -0.07,
+  "eps_dil": -0.07,
+  "wsh": 32510681,
+  "wsh_dil": 32510681,
+  "pref_div": 5.149,
+  "ni_for_eps": -2.285
+ },
+ "seg": {
+  "amp_rev": 138.5,
+  "di_rev": 50.4,
+  "elim_rev": -2.0,
+  "tot_rev": 186.9,
+  "amp_agp": 65.2,
+  "di_agp": 25.8,
+  "oth_agp": 0.1,
+  "agp": 91.1,
+  "amp_agp_pct": 47.1,
+  "di_agp_pct": 51.1,
+  "agp_pct": 48.8,
+  "amp_pct_of_sales": 74.1,
+  "di_pct_of_sales": 27.0,
+  "elim_pct_of_sales": -1.1,
+  "amp_g": 46.8,
+  "di_g": 60.2,
+  "tot_g": 49.5,
+  "agp_g": 60.9,
+  "amp_agp_g": 54.9,
+  "di_agp_g": 78.7,
+  "amp_lfl": null,
+  "di_lfl": null,
+  "tot_lfl": null,
+  "q1_rev": 86.7,
+  "q2_rev": 100.2,
+  "q1_g": 49.6,
+  "q2_g": 49.4,
+  "seg_note": "Two segments, Amplification and Detection and Imaging, as originally reported (Microwave Amplification inside Amplification). Segment note (Note 4) prints D&I revenue 50.4; the section 3.2.2 table prints 50.5 (rounding) - 50.4 used. No like-for-like / organic growth figure by segment is printed in the H1 2024 report; revenue growth is reported only (ProxiVision, El-Mul, Telops acquired June, July and October 2023 are inside D&I growth)."
+ },
+ "ng": {
+  "op": 30.7,
+  "dna_impair": 15.9,
+  "oth_inc_exp": 3.8,
+  "oth_adj": 5.7,
+  "ebitda": null,
+  "sbc": 2.9,
+  "nonrec": null,
+  "adj_ebitda": 56.1,
+  "dna_ex_ppa": null,
+  "adj_ebit": 46.1,
+  "adj_ebit_keyfigures_table": 43.2,
+  "adj_ebitda_pct": 30.0,
+  "adj_ebit_pct": 23.1,
+  "agp_pct": 48.8,
+  "rop_pct": 18.5,
+  "op_pct": 16.4,
+  "cfo_pct": 21.3,
+  "rd_gross": 11.9,
+  "rd_gross_pct": 6.4,
+  "rd_not_capitalised": 7.283,
+  "mgmt_cos": null,
+  "mgmt_rd": null,
+  "mgmt_sga": null,
+  "mgmt_oth": null,
+  "mgmt_rop": null,
+  "cap_rd": 4.6,
+  "capex": null,
+  "capex_growth": null,
+  "capex_maint": null,
+  "cash_conv_pct": null,
+  "fcf_pre_growth": null,
+  "fcf": null,
+  "ni_ex_ppa": null,
+  "ni_cont_ex_ppa": null,
+  "ni_ex_brand": null,
+  "cfo": 39.8,
+  "net_debt": 136.8,
+  "leverage_x": 1.28,
+  "adj_items_text": "Reconciliation (Note 4, in € million): EBITDA (adjusted) 56.1; Depreciation, amortization and impairment (15.9); Other income and expenses (Note 9) (3.8); Other * (5.7); OPERATING PROFIT 30.7. * In the 6-month period ended June 30, 2024, the \"Other\" line mainly comprises the IFRS 2 share-based payment expense for €2.9 million and non-recurring advisory and strategy fees relating to the Group's external growth policy (recorded in Other operating expenses) for €2.0 million. Section 3.5: increase in EBITDA (adjusted) of €22.1 million ... other restatements totaling €3.3 million (M&A costs and IFRS 2 expense). Other income and expenses (Note 9): IPO costs (3,853); Company acquisition costs 0; Other (10); total (3,863) € thousand.",
+  "definition": "The Group defines EBITDA (adjusted) as operating profit, less (i) additions net of reversals to depreciation, amortization and impairment of non-current assets; (ii) non-recurring income and expenses as presented in the Group's consolidated income statement within \"Other income\" and \"Other expenses\", and (iii) the impact of items that do not reflect ordinary operating performance (in particular business reorganization and adaption costs, costs relating to acquisition and external growth transactions, as well as the IFRS 2 share-based payment expense). [Note 4] EBIT (adjusted): as defined in Section 7.4 of the 2023 Registration Document (excluding depreciation and amortization corresponding to purchase price allocations). [Key figures note 3 / section 3.6]"
+ },
+ "dna": {
+  "dna_ex_ifrs16": -14.59,
+  "dna_rou": -1.244,
+  "impair_current": 0.185,
+  "provisions": 0.15,
+  "total": -15.499,
+  "ppa_amort": null,
+  "brand_impair": null
+ },
+ "fin": {
+  "int_bank": -26.961,
+  "int_lease": -0.405,
+  "oth_fin_exp": 0.0,
+  "cost_net_debt": -27.366,
+  "fx": 0.903,
+  "deriv_inc": 1.078,
+  "deriv_exp": null,
+  "deriv_net": 1.981,
+  "other": -0.311,
+  "net_fin": -25.696,
+  "nonrec_in_int_bank": {
+   "extinguishment_of_former_debt": 8.2,
+   "early_repayment_penalties": 0.9,
+   "financing_not_secured": 3.0,
+   "new_non_capitalisable_financing": 0.5
+  },
+  "fin_note": "Note 10: 'Net financial gains/(losses) on derivative instruments' 1,981 is the subtotal of foreign exchange gains and losses 903 and financial income from derivative instruments 1,078 (€ thousand). Foreign exchange gains and losses consist of the currency impact on loans."
+ },
+ "tax": {
+  "current": null,
+  "deferred": null,
+  "total": -2.123,
+  "etr_pct": null,
+  "tax_note": "Note 11 gives only the total expense (€2,123 thousand); Pillar 2 has no impact."
+ },
+ "cf": {
+  "ni": 2.864,
+  "fin_cash": 16.05,
+  "fin_noncash": 9.646,
+  "tax": 2.123,
+  "dna_prov": 15.499,
+  "oth": 2.889,
+  "tax_paid": -1.617,
+  "wc": -7.653,
+  "cfo": 39.802,
+  "capex": -18.3,
+  "disposals": 0.0,
+  "acq": -0.909,
+  "divest": null,
+  "grants": 0.0,
+  "oth_fin_assets": -0.025,
+  "cfi": -19.234,
+  "sh_iss": 180.0,
+  "sh_iss_costs": -7.801,
+  "conv_int": 0.0,
+  "ncb_in": 250.0,
+  "ncb_out": -306.307,
+  "cb_in": 0.0,
+  "cb_out": -5.115,
+  "int_paid": -15.044,
+  "lease_rep": -1.099,
+  "lease_int": -0.405,
+  "deriv_inc": 0.654,
+  "loan_costs": -6.955,
+  "early_rep": -0.856,
+  "oth_fin": -0.03,
+  "cff": 87.043,
+  "fx": 0.095,
+  "net_change": 107.706,
+  "beg": 15.458,
+  "end": 123.166,
+  "lines_raw": [
+   [
+    "Net profit for the period",
+    "2,864"
+   ],
+   [
+    "• Cost of net debt",
+    "16,050"
+   ],
+   [
+    "• Other financial income and expenses",
+    "9,646"
+   ],
+   [
+    "• Income tax",
+    "2,123"
+   ],
+   [
+    "• Additions net of reversals to depreciation/amortization",
+    "15,499"
+   ],
+   [
+    "• Other income and expenses (1)",
+    "2,889"
+   ],
+   [
+    "Income tax received/(paid)",
+    "(1,617)"
+   ],
+   [
+    "Change in working capital, net of impairment",
+    "(7,653)"
+   ],
+   [
+    "Net cash from operating activities",
+    "39,802"
+   ],
+   [
+    "Acquisition of intangible assets and PP&E",
+    "(18,300)"
+   ],
+   [
+    "Proceeds on disposal of intangible assets and PP&E",
+    "-"
+   ],
+   [
+    "Acquisition of equity investments, net of cash acquired (2)",
+    "(909)"
+   ],
+   [
+    "Proceeds on disposal of equity investments, net of cash divested",
+    ""
+   ],
+   [
+    "Investment grants received",
+    "-"
+   ],
+   [
+    "Cash flows relating to other financial assets",
+    "(25)"
+   ],
+   [
+    "Net cash used in investing activities",
+    "(19,234)"
+   ],
+   [
+    "Share capital increase",
+    "180,000"
+   ],
+   [
+    "Share capital increase costs",
+    "(7,801)"
+   ],
+   [
+    "Interest paid on convertible bonds",
+    "-"
+   ],
+   [
+    "Refinancing of non-current borrowings",
+    "250,000"
+   ],
+   [
+    "Repayment of non-current borrowings",
+    "(306,307)"
+   ],
+   [
+    "Refinancing of current borrowings",
+    "-"
+   ],
+   [
+    "Repayment of current borrowings",
+    "(5,115)"
+   ],
+   [
+    "Financial expenses with cash impact related to borrowings*",
+    "(15,044)"
+   ],
+   [
+    "Repayment of IFRS 16 lease liabilities",
+    "(1,099)"
+   ],
+   [
+    "Financial expenses with cash impact related to IFRS 16 lease liabilities",
+    "(405)"
+   ],
+   [
+    "Financial income with cash impact related to derivative instruments",
+    "654"
+   ],
+   [
+    "Loan issue costs (3)",
+    "(6,955)"
+   ],
+   [
+    "Loan early repayment costs",
+    "(856)"
+   ],
+   [
+    "Other",
+    "(30)"
+   ],
+   [
+    "Net cash from (used in) financing activities",
+    "87,043"
+   ],
+   [
+    "Effect of changes in exchange rates",
+    "95"
+   ],
+   [
+    "Increase/(decrease) in cash and cash equivalents",
+    "107,706"
+   ],
+   [
+    "Opening cash and cash equivalents",
+    "15,458"
+   ],
+   [
+    "Closing cash and cash equivalents",
+    "123,166"
+   ]
+  ]
+ },
+ "bs": {
+  "gw": 174.338,
+  "intang": 198.757,
+  "ppe": 79.4,
+  "rou": 9.942,
+  "eq_inv": 3.41,
+  "oth_nca": 1.15,
+  "dta": 1.468,
+  "tnca": 468.466,
+  "inv": 94.906,
+  "ar": 60.31,
+  "deriv_a": 0.598,
+  "oca": 36.877,
+  "cash": 123.166,
+  "tca": 315.857,
+  "ta": 784.323,
+  "sh_cap": 21.583,
+  "sh_prem": 340.586,
+  "reserves": 19.808,
+  "teq": 381.977,
+  "ncb": 248.982,
+  "ncll": 7.623,
+  "pens": 7.73,
+  "oncl": 9.293,
+  "dtl": 16.976,
+  "tncl": 290.604,
+  "cb": 1.729,
+  "cll": 2.274,
+  "deriv_l": 0.0,
+  "ap": 35.229,
+  "ocl": 72.511,
+  "tcl": 111.743,
+  "tle": 784.323,
+  "lines_raw": [
+   [
+    "Goodwill",
+    "174,338"
+   ],
+   [
+    "Intangible assets",
+    "198,757"
+   ],
+   [
+    "Property, plant and equipment",
+    "79,400"
+   ],
+   [
+    "Right-of-use assets",
+    "9,942"
+   ],
+   [
+    "Investments in equity-accounted companies",
+    "3,410"
+   ],
+   [
+    "Non-current financial assets and other non-current assets",
+    "1,150"
+   ],
+   [
+    "Deferred tax assets",
+    "1,468"
+   ],
+   [
+    "NON-CURRENT ASSETS",
+    "468,466"
+   ],
+   [
+    "Inventories",
+    "94,906"
+   ],
+   [
+    "Trade receivables",
+    "60,310"
+   ],
+   [
+    "Derivative financial instruments",
+    "598"
+   ],
+   [
+    "Current financial assets and other current assets",
+    "36,877"
+   ],
+   [
+    "Cash and cash equivalents",
+    "123,166"
+   ],
+   [
+    "CURRENT ASSETS",
+    "315,857"
+   ],
+   [
+    "TOTAL ASSETS",
+    "784,323"
+   ],
+   [
+    "Share capital",
+    "21,583"
+   ],
+   [
+    "Share premiums",
+    "340,586"
+   ],
+   [
+    "Reserves",
+    "19,808"
+   ],
+   [
+    "TOTAL EQUITY",
+    "381,977"
+   ],
+   [
+    "Non-current loans and borrowings",
+    "248,982"
+   ],
+   [
+    "Non-current lease liabilities",
+    "7,623"
+   ],
+   [
+    "Provisions for employee benefit obligations",
+    "7,730"
+   ],
+   [
+    "Non-current provisions and other non-current liabilities",
+    "9,293"
+   ],
+   [
+    "Deferred tax liabilities",
+    "16,976"
+   ],
+   [
+    "NON-CURRENT LIABILITIES",
+    "290,604"
+   ],
+   [
+    "Current loans and borrowings",
+    "1,729"
+   ],
+   [
+    "Current lease liabilities",
+    "2,274"
+   ],
+   [
+    "Derivative financial instruments",
+    "0"
+   ],
+   [
+    "Trade payables",
+    "35,229"
+   ],
+   [
+    "Current provisions and other current liabilities",
+    "72,511"
+   ],
+   [
+    "CURRENT LIABILITIES",
+    "111,743"
+   ],
+   [
+    "TOTAL EQUITY AND LIABILITIES",
+    "784,323"
+   ]
+  ],
+  "shares_out": 50782552,
+  "treasury": 0,
+  "par_value_eur": 0.425
+ },
+ "debt": {
+  "tlb": 246.528,
+  "tlb_gross": 250.0,
+  "tlb_issue_costs": 3.5,
+  "leases": 9.898,
+  "leases_nc": 7.624,
+  "leases_c": 2.274,
+  "oth_liab": 3.164,
+  "accrued_int": 1.021,
+  "overdraft": null,
+  "gross_debt": 260.611,
+  "gross_debt_c": 4.004,
+  "gross_debt_nc": 256.605,
+  "deriv_net": -0.598,
+  "cash": -123.166,
+  "net_debt": 136.847,
+  "adj_ebitda_lev": null,
+  "leverage_x": 1.28,
+  "rcf_drawn": 0.0,
+  "rcf_size": 100.0,
+  "legacy_debt": "At December 31, 2023 (Note 23 comparative, € thousand): A Bonds 185,111; B Bonds 9,840; 2023 Bonds 33,712; Senior debt 71,924 (current 4,334 / non-current 67,590); lease liabilities 10,043; other financial liabilities 6,166; accrued interest 1,127; financial liabilities 317,922; derivative assets (152); cash (15,458); total financial liabilities, net 302,312. All term loans (A1, A2, Acquisition Facility), the RCF commitments and the A, B and Additional (2023) bonds were repaid / redeemed in full at the IPO (June 2024). Business report 4.4: redemption of bond debt €228.7 million and repayment of senior debt €71.9 million; new €250.0 million term loan.",
+  "tlb_terms": "Term Loan B: 5-year, euro, €250 million gross, Euribor 3M + 1.50%-2.50%, repayable at maturity; carried net of €3.5 million issuance costs. RCF €100 million, 5 years, undrawn. Covenant: leverage (net debt / adjusted EBITDA) below 3.00x at December 31, 2024.",
+  "flows_note": "Note 23 flow table (€ thousand): opening 317,923; inflows 246,500; outflows (312,521); accrued interest (106); other non-cash 8,812 (mainly accelerated amortisation of issue costs on debt repaid at the IPO); closing 260,611."
+ },
+ "equity": {
+  "sbc_ifrs2": 2.802,
+  "capital_increase": 190.212,
+  "capital_decrease": -18.043,
+  "dividends": null,
+  "treasury_adj": null,
+  "other": null,
+  "oci": 0.077,
+  "ni": 2.864,
+  "note": "Statement of changes in equity H1 2024 (€ thousand): opening 204,065; OCI 77 (translation 107, actuarial (30)); profit 2,864; share capital increase 19,757 capital + 170,455 premiums = 190,212 (net of €7,801 thousand issue costs deducted from premiums); share capital decrease (122) + (17,921) = (18,043) (merger journal entries with no cash impact relating to the IPO share reorganisation); other 2,802 (mainly IFRS 2); closing 381,977."
+ },
+ "extra": {
+  "employees": "over 1,600 employees (Note 1 wording)",
+  "dps_declared": null,
+  "acquisitions": [
+   [
+    "Centronic (UK)",
+    "agreement 2024-01-26; completed 2024-07-31 (post balance sheet)",
+    "GBP 20.6 million",
+    null,
+    "Detection and Imaging",
+    "not consolidated in H1 2024; revenue GBP 11.0 million for the period ended 2024-01-04 (unaudited UK GAAP)"
+   ],
+   [
+    "LR Tech (Canada)",
+    "2024-09-01 (post balance sheet)",
+    null,
+    null,
+    "Detection and Imaging",
+    "revenue CAD 6.6 million for the period ended 2023-08-31 (unaudited local GAAP)"
+   ],
+   [
+    "ProxiVision / Photonis Germany (PPA finalised H1 2024)",
+    "acquired June 2023",
+    6.75,
+    1.622,
+    "Detection and Imaging",
+    "H1 2024 contribution: revenue 4.089, net profit -0.022 (€m)"
+   ],
+   [
+    "El-Mul (PPA finalised H1 2024)",
+    "acquired July 2023",
+    24.011,
+    11.583,
+    "Detection and Imaging",
+    "H1 2024 contribution: revenue 6.484, net profit 0.127 (€m)"
+   ],
+   [
+    "Telops (PPA finalised H1 2024)",
+    "acquired October 2023",
+    39.137,
+    21.492,
+    "Detection and Imaging",
+    "H1 2024 contribution: revenue 7.561, net profit -0.989 (€m)"
+   ]
+  ],
+  "divestitures": [],
+  "guidance": "Outlook for 2024 (section 7): Based on the strong revenue growth in the first half of the year, the Company confirms its forecast outlook of organic revenue growth at the high end of the 15%-20% range and of around 30% total revenue growth including the 12-month contribution of acquisitions in 2024.",
+  "events": "Conversion from SAS to SA on 2024-05-31. IPO on Euronext Paris (compartment A, ticker EXENS) on 2024-06-07 by private placement at a technical reference price of €20.00; 9,000,001 new shares issued (€180.0 million gross); over-allotment option (max 2,625,002 additional sale shares) exercised in full on 2024-06-12. IPO costs €12.2 million: €7.8 million in equity (deducted from share premiums), €4.4 million in the income statement (€3.9 million in Other expenses; the balance in financial expenses / operating lines). Refinancing: all legacy loans and bonds repaid; new €250 million Term Loan B and €100 million RCF. Liquidity agreement with Kepler Cheuvreux signed 2024-07-07 (€2 million). HLD Europe remains the majority shareholder. Ten production sites.",
+  "intangibles_net": {
+   "dev_tech": 60.418,
+   "software": 2.862,
+   "cust_brands": 125.647,
+   "customer_relationships": 97.216,
+   "brands": 28.431,
+   "other": 9.83
+  },
+  "amort_intang": -9.822,
+  "amort_customer_rel_brands": -4.399,
+  "amort_dev_tech": -4.93,
+  "dep_ppe": -4.459,
+  "dep_rou": -1.552,
+  "additions_intang": 6.196,
+  "additions_ppe": 11.475,
+  "additions_rou": 0.847,
+  "goodwill_by_cgu": {
+   "amplification": 94.042,
+   "detection_imaging": 80.297
+  },
+  "revenue_by_geography": {
+   "europe": 121.549,
+   "of_which_greece": 76.147,
+   "of_which_france": 5.222,
+   "north_america": 23.029,
+   "of_which_usa": 20.771,
+   "asia": 41.409,
+   "oceania": 0.795,
+   "africa": 0.053,
+   "other": 0.052
+  },
+  "revenue_by_type": {
+   "goods": 183.746,
+   "services_and_licences": 3.141
+  },
+  "inventories": {
+   "gross": 107.293,
+   "provision": -12.388,
+   "net": 94.906
+  },
+  "other_current_liabilities": {
+   "payroll_tax": 28.182,
+   "vat_other_taxes": 17.084,
+   "accrued_expenses": 7.001,
+   "capex_payables": 2.126,
+   "customer_advances": 11.644,
+   "misc": 5.617,
+   "total": 71.654
+  },
+  "derivatives": "SWAP €170 million to 2024-12-31 (BNP); CAP €40 million to 2024-12-31 (BNP); FX hedge GBP 20.2 million to 2024-09-11 (CIC, Centronic consideration).",
+  "oci": {
+   "actuarial": -0.04,
+   "deferred_tax_actuarial": 0.01,
+   "translation": 0.107,
+   "total_oci": 0.077,
+   "total_comprehensive_income": 2.941
+  }
+ },
+ "py": {
+  "restated": false,
+  "notes": "The comparative column of the H1 2024 report is the first publication of H1 2023 (unaudited, not reviewed) and is recorded in H1-23.json. Its EPS was computed 'taking into account ordinary shares and performance shares issued or canceled in the first half of 2024' (Note 12). py.bs below is the 31-December-2023 statement of financial position as printed in this report.",
+  "is": {},
+  "seg": {},
+  "ng": {},
+  "cf": {},
+  "bs": {
+   "gw": 174.344,
+   "intang": 202.351,
+   "ppe": 72.051,
+   "rou": 10.759,
+   "eq_inv": 3.41,
+   "oth_nca": 0.744,
+   "dta": 0.044,
+   "tnca": 463.703,
+   "inv": 78.544,
+   "ar": 69.189,
+   "deriv_a": 0.152,
+   "oca": 29.366,
+   "cash": 15.458,
+   "tca": 192.709,
+   "ta": 656.412,
+   "sh_cap": 1.948,
+   "sh_prem": 188.052,
+   "reserves": 14.065,
+   "teq": 204.065,
+   "ncb": 300.844,
+   "ncll": 7.693,
+   "pens": 7.595,
+   "oncl": 8.554,
+   "dtl": 17.578,
+   "tncl": 342.263,
+   "cb": 7.026,
+   "cll": 2.36,
+   "deriv_l": 0.0,
+   "ap": 32.304,
+   "ocl": 68.394,
+   "tcl": 110.084,
+   "tle": 656.412,
+   "lines_raw": [
+    [
+     "Goodwill",
+     "174,344"
+    ],
+    [
+     "Intangible assets",
+     "202,351"
+    ],
+    [
+     "Property, plant and equipment",
+     "72,051"
+    ],
+    [
+     "Right-of-use assets",
+     "10,759"
+    ],
+    [
+     "Investments in equity-accounted companies",
+     "3,410"
+    ],
+    [
+     "Non-current financial assets and other non-current assets",
+     "744"
+    ],
+    [
+     "Deferred tax assets",
+     "44"
+    ],
+    [
+     "NON-CURRENT ASSETS",
+     "463,703"
+    ],
+    [
+     "Inventories",
+     "78,544"
+    ],
+    [
+     "Trade receivables",
+     "69,189"
+    ],
+    [
+     "Derivative financial instruments",
+     "152"
+    ],
+    [
+     "Current financial assets and other current assets",
+     "29,366"
+    ],
+    [
+     "Cash and cash equivalents",
+     "15,458"
+    ],
+    [
+     "CURRENT ASSETS",
+     "192,709"
+    ],
+    [
+     "TOTAL ASSETS",
+     "656,412"
+    ],
+    [
+     "Share capital",
+     "1,948"
+    ],
+    [
+     "Share premiums",
+     "188,052"
+    ],
+    [
+     "Reserves",
+     "14,065"
+    ],
+    [
+     "TOTAL EQUITY",
+     "204,065"
+    ],
+    [
+     "Non-current loans and borrowings",
+     "300,844"
+    ],
+    [
+     "Non-current lease liabilities",
+     "7,693"
+    ],
+    [
+     "Provisions for employee benefit obligations",
+     "7,595"
+    ],
+    [
+     "Non-current provisions and other non-current liabilities",
+     "8,554"
+    ],
+    [
+     "Deferred tax liabilities",
+     "17,578"
+    ],
+    [
+     "NON-CURRENT LIABILITIES",
+     "342,263"
+    ],
+    [
+     "Current loans and borrowings",
+     "7,026"
+    ],
+    [
+     "Current lease liabilities",
+     "2,360"
+    ],
+    [
+     "Derivative financial instruments",
+     "0"
+    ],
+    [
+     "Trade payables",
+     "32,304"
+    ],
+    [
+     "Current provisions and other current liabilities",
+     "68,394"
+    ],
+    [
+     "CURRENT LIABILITIES",
+     "110,084"
+    ],
+    [
+     "TOTAL EQUITY AND LIABILITIES",
+     "656,412"
+    ]
+   ],
+   "shares_out": null,
+   "treasury": 0,
+   "shares_note": "At 31-Dec-2023 (Note 22, thousands of shares): ordinary 75,968; A preferred 113,953; R2 50; R3 39; R1 2,770; O' preferred 792; A' preferred 1,188; total 194,760. Exact unit counts are not printed (119,499,391 preferred shares were converted at the IPO)."
+  },
+  "debt": {
+   "gross_debt": 317.922,
+   "net_debt": 302.312,
+   "leases": 10.043,
+   "oth_liab": 6.166,
+   "accrued_int": 1.127,
+   "a_bonds": 185.111,
+   "b_bonds": 9.84,
+   "bonds_2023": 33.712,
+   "senior_debt": 71.924,
+   "cash": -15.458,
+   "deriv_net": -0.152
+  }
+ },
+ "notes": "All statement values converted from € thousand to € million (÷1,000, 3 decimals); APM tables as printed in € million. Signs as printed. SELF-CHECKS: IS, segment, cash-flow and balance-sheet checks pass within tolerance (sums of printed lines differ from printed subtotals by at most €1-2 thousand of rounding: CF operating lines sum to 39,801 vs printed 39,802; financing lines sum to 87,042 vs 87,043; opening cash 15,458 + 107,706 = 123,164 vs closing 123,166; balance-sheet non-current assets sum to 468,465 vs 468,466). EPS check ni/wsh = 2.864/32.51m = +0.09 does NOT equal the printed basic EPS of -0.07: Note 12 deducts a preferential dividend attributable to A preferred shares of €5,149 thousand, giving net profit attributable to the Company of -€2,285 thousand; -2.285/32.510681m = -0.07 (check passes on that basis). Weighted average ordinary shares 32,510,681 reflects the pre-IPO share structure (ordinary shares, A / R1 / R2 / R3 / O' / A' preferred shares) and the June 2024 reorganisation: 15-Mar-2024 issue of 205,795 R1 preferred; 6-Jun-2024 issue of 195,920 R1 preferred, par value of ordinary shares raised from €0.01 to €0.17, cancellation of 45,581,016 ordinary shares and par value raised to €0.425; 11-Jun-2024 issue of 208,000 O', 312,000 A' and 778,348 R1 preferred, 63,145 new ordinary shares with cancellation of 992,149 A preferred, 264,059 new ordinary shares with cancellation of 264,526 ordinary, cancellation of all 119,499,391 preferred shares against 11,332,529 new ordinary shares, and 9,000,001 new ordinary shares in the IPO. Shares in issue at 30-Jun-2024: 50,782,552 ordinary shares of €0.425 (share capital €21,582,584.60); no treasury shares; no dilutive instruments after conversion of the preferred shares. BRIDGE: the H1 2024 report prints a top-down reconciliation only (adj. EBITDA 56.1 - D&A 15.9 - other income/expenses 3.8 - other 5.7 = OP 30.7); EBITDA (50.4), the split of 'Other' into share-based payments (2.9) and non-recurring costs (2.8), D&A excluding PPA (10.0) and PPA amortisation (5.9) are printed only as comparatives in the H1 2025 report (see H1-25.json py.ng). 'oth_adj' 5.7 is the printed 'Other' line; 'sbc' 2.9 is from its footnote; computed EBITDA = 30.7 + 15.9 + 3.8 = 50.4 (not written). ADJUSTED EBIT DISCREPANCY: the key figures table (p.4) prints EBIT (adjusted) of 43.2 (23.1% of sales) for H1 2024, while section 3.6 states 'EBIT (adjusted) is €46.1 million, up €18.9 million year-on-year' (27.2 + 18.9 = 46.1; consistent with adj. EBITDA 56.1 less D&A ex-PPA 10.0, and with the H1 2025 report's comparative of 46.1 / 24.7%). ng.adj_ebit records 46.1; the key-figures value is kept in ng.adj_ebit_keyfigures_table (43.2) and ng.adj_ebit_pct (23.1) is the key-figures percentage. D&A: Note 8 total (15,499) feeds the cash flow statement; the asset notes show amortisation of intangibles (9,822), depreciation of PP&E (4,459) and of right-of-use assets (1,552) - the IFRS 16 line in Note 8 is (1,244). Business report 4.1 cites D&A of (15.8) and additions net of disposals of 17.6. CASH: cash and cash equivalents 123,166 = cash 103,166 + bank deposits with notice up to three months 20,000; no overdraft. BALANCE SHEET comparative: the business report section 4 tables are headed 'June 30, 2023' but the figures printed (468.5/463.7, 192.7/177.3, 123.2/15.5, 784.3/656.4; 382.0/204.1, 290.6/342.3, 111.7/110.1) are the 31-December-2023 statement of financial position; no 30-June-2023 balance sheet is published. Net debt 136.8 / leverage 1.28x (unaudited) per key figures and Note 23; the adjusted EBITDA used for the ratio is not printed. Other income/expenses: Note 9 total (3,863) = IPO costs (3,853) + other (10), presented in the income statement as Other income 119 and Other expenses (3,982). Company acquisition costs (2,077 per the H1 2025 report's Note 8 comparative) are inside Other operating expenses (2,261) in 2024, whereas in H1 2023 they were in Other expenses (1,065)."
+}

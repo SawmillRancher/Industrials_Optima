@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -18,13 +18,13 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
-| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
+| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM, EXENS (IFRS 5 disposal restated one year back) |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
-| IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
-| Half-year reporter | RMS, BC |
-| Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
+| IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F), EXENS (EUR, AMF filings; EDGAR has only an F-6EF) |
+| Half-year reporter | RMS, BC, EXENS (half-year columns with quarterly memo rows; build-kit version) |
+| Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN, EXENS (IPO Jun-2024; preference-share conversion and reverse split) |
 | Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
 | Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
@@ -210,6 +210,49 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [bridges] Store the company's line-item wording and amounts per period as a comment on the total-adjustments cell. Category rows can then stay few while the audit trail is kept.
   - [bridges] Narrative-only per-share bridges: input $/share as published (split-adjusted) and convert at diluted shares in a separately labelled row.
   - [build] Without published orders, derive implied orders from the backlog roll-forward and label what it includes (FX, acquired backlog).
+
+### EXENS — Exosens SAS (MLM template via ONON kit; IFRS / EUR m / calendar FY; half-year reporter; Euronext Paris, not an SEC registrant)
+- **Coverage & basis:**
+  - FY2021–22 annual from the IPO registration document (Jul-2024). FY2021 is the predecessor Exosens International full year (the parent was formed Mar-2021 and bought Photonis on 22-Jul-2021).
+  - Half-year columns H1/23 → H1/26 with FY subtotals; H2 = FY − H1. Q1 / Q3 revenue and adjusted gross margin sit in "first / second quarter of the half" memo rows.
+  - Hybrid recast: FY2024 and H1/25 are the continuing-operations figures restated for the Microwave Amplification disposal (closed 31-Dec-2025). FY2023 and earlier, and H1/24, are as reported. H2/24 is flagged as mixed.
+  - EDGAR holds only the Citibank F-6EF (CIK 0002109666). With the user's agreement, the build uses AMF-filed documents (URD 2024 / 2025, half-year reports, releases) from www.exosens.com, which had to be allowed in the environment's network settings.
+- **Operating build:**
+  - Amplification (image intensifier tubes) and Detection & Imaging. Each segment = prior period × (1 + like-for-like + scope & currency). The releases never split scope from FX.
+  - Adjusted gross margin by segment is the company's segment measure (management basis, incl. staff costs). The IFRS income statement is by nature, so the by-nature cost lines are history only and operating expenses before D&A are implied.
+  - The 2024 segment halves come from the FY2025 release's restated quarterly appendix.
+- **Bridges & definitions:**
+  - The company bridge is operating profit + D&A / impairment of non-current assets + other income & expenses = EBITDA, + share-based payments + one-offs = Adjusted EBITDA, − D&A excl. PPA = Adjusted EBIT.
+  - PPA amortisation is implied by the bridge (FY) or printed in the release income statement (H1).
+  - FY2021–22 and the 2023 halves publish one combined "other restatements" add-back, carried as its own line.
+  - Net profit excl. PPA (& impairment) is published almost gross of tax. The tax line is derived from the published figure, and the forecast keeps that convention (0% tax on the add-back), so the series stays comparable.
+  - The H1-24 report printed only a top-down bridge; its detailed lines come from the H1-25 comparative column.
+- **Data quirks & corrections:**
+  - Pre-IPO EPS is after a preferential dividend to A preference shares. At the 7-Jun-2024 IPO, 119.5m preference shares converted and the ordinary shares were reverse-split; FY2022–23 use URD 2024's restated share basis (FY2023 EPS €0.24 on 30.39m shares).
+  - Cash-flow cash excludes accrued interest receivable and nets overdrafts, so the BS-cash difference comes from the cash notes.
+  - The 2025 cash-flow line labelled "Interest paid on convertible bonds" (−5,078) is the FY2024 dividend; the equity statement and §5.3.2 confirm it.
+  - The H1-26 brand impairment (−€28.2m, DTL reversal +€7.6m) is excluded from Adjusted EBIT and from net profit ex PPA.
+- **Deals & special blocks:** 2025 deals are Noxant, NVLS (75%, with a 10% / 15% put / call) and Phasics. Emberion (Apr-2026) was not consolidated at 30-Jun-26. The future-M&A lever is €60m p.a. at 2.5x EV/revenue, with 40% intangibles over 10 years plus a DTL, 70% to D&I.
+- **Calibration & scenarios:**
+  - Raised FY26 guide (17-Sep-2026): revenue €558–570m, Adjusted EBITDA €186–192m, capex ~9% + capitalised R&D ~3%.
+  - The Q3-26 actual is an input. Q4-26E = Q4-25 × (1 + Q3 growth + a uniform Δ), solved in closed form to the revenue end-point. H2/26E Adjusted EBITDA = end-point − H1.
+  - 2027E+ levers: segment like-for-like growth (Base 12% → 9–10%), adjusted gross margins, Adjusted EBITDA margin (34% → 35%) and M&A spend.
+  - The medium-term targets (organic growth up to mid-teens; organic EBITDA growth > 15%; capex ~5%; payout 20–25%; €1bn revenue ambition) are information rows.
+- **Balance sheet, cash & capital:**
+  - Debt: €250m TLB bullet (Jun-2029) with issue-cost accretion (non-cash, kept out of interest paid). The RCF (€200m) / EIB (€140m) revolver plugs to a €60m minimum cash, with a headroom memo.
+  - Dividends: prior-year DPS × opening shares, paid in H1. No buyback programme.
+  - Working capital is measured in days of revenue at year-end levels, because H1 inventories are built for H2 deliveries.
+- **Valuation:**
+  - Price €56.90 (Euronext close 30-Oct-2026, decrypted from the quote feed).
+  - NOPAT = (Adjusted EBIT − SBC − one-offs) × 74%, with a D&A add-back that excludes PPA. UFCF deducts capitalised R&D, M&A (explicit years only; the template fade row was fixed to exclude it) and lease principal.
+  - 2026E is excluded from the PV sum and the sensitivity grid (YE2026 net debt). DCF €37 vs Mauboussin €68 vs P/E-based targets (24x) of €82 for 2027 and €92 for 2028: the market prices more growth than a 2.5% terminal rate.
+- **Reusable lessons:**
+  - [sources] For a non-SEC issuer, stop and ask for both the regulator-document waiver and the network allowlist; the agent cannot change environment settings itself. Then index the PDFs in `filings.csv` with a `fetch.py`.
+  - [sources] The Euronext quote feed is AES-encrypted JSON; the passphrase is in the page's `drupalSettings.ajax_secure.kye`.
+  - [basis] For an IFRS 5 disposal that restates only one year back, use the restated year / half in the main columns, keep originals as memo, and flag the mixed half (H2 = FY restated − H1 reported).
+  - [build] A half-year build kit needs `prevh` (prior half) and an H2E column built as Q3 actual + Q4E. Quarterly memo rows carry the calibration (Q4E vs Q4 prior year).
+  - [valuation] Strip M&A from the DCF fade capex, and move the sensitivity grid's ranges together with the PV sum when the current year is excluded.
+  - [QA] LibreOffice recalc resets comment authors; restore them after storing values. Relabel the template's USD / $ DCF and Bull-Base-Bear captions on non-USD models.
 
 ## Construction materials
 

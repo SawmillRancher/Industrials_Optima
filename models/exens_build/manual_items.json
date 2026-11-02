@@ -1,0 +1,25 @@
+{
+  "_note": "Items not machine-read from the statements: guidance, medium-term targets, share price, financing terms, scenario rationale and the Q3-2026 trading update. Every item names its source document.",
+  "sources": {
+    "guidance_2026": "Press release 17-Sep-2026 'Exosens raises full-year 2026 guidance' (revenue EUR 558-570m; adjusted EBITDA EUR 186-192m; capex ~9% of revenue excl. capitalized R&D ~3%), confirmed in the 9M-2026 release (27-Oct-2026). Original FY26 guidance EUR 520-540m / EUR 168-178m (FY2025 release, 23-Feb-2026; 'towards the upper end' in the H1-2026 release, 28-Jul-2026).",
+    "medium_term": "URD 2025 section 5.8.1 / FY2025 release: medium-term average annual organic revenue growth up to mid-teens; organic adjusted EBITDA growth above 15% (mild progressive margin improvement); normalized capex ~5% of revenue after the capacity expansion completes in 2027 (+ capitalized R&D ~3%); dividend payout 20-25% of net income; leverage may temporarily reach ~2x for acquisitions; EUR 1bn revenue ambition.",
+    "q3_2026": "9M-2026 release (27-Oct-2026): Q3-2026 revenue by segment and adjusted gross margin (appendix), Q3 like-for-like +20.5%.",
+    "share_price": "Euronext Paris live quote feed (live.euronext.com, ISIN FR001400Q9V2-XPAR): close EUR 56.90 on 30-Oct-2026 (last trade EUR 57.25 at 14:41 CET on 2-Nov-2026). URD 2025 section 7.4.2: EUR 48.45 at 31-Dec-2025.",
+    "shares": "Monthly share-count notice 1-Oct-2026: 50,936,749 shares at 30-Sep-2026 (59,173,206 exercisable voting rights). H1-2026 report Note 24: 25,873 treasury shares (liquidity contract); LTIP 2025-2026 (216,750 performance shares) and LTIP 2026-2028 (197,000) outstanding; weighted average H1-2026 50,441,791.",
+    "financing": "H1-2026 report section 1.4 and Note 25: Term Loan B EUR 250m bullet (first drawdown Jun-2024, 5-year maturity, i.e. Jun-2029), 3M Euribor + 0.95-1.75% (1.15% at 1.0-1.5x leverage after the 3-Jun-2026 renegotiation); RCF EUR 200m undrawn (commitment to Jun-2029; margin 0.55-1.75%, 0.75% at 1.0-1.5x; non-utilisation fee 35% of margin); EIB EUR 140m facility (24-Jun-2026, up to 7 years, bullet, undrawn; illustrative fixed 4.08% at 1.0-2.0x); other loans EUR 4.6m; leases EUR 17.75m. Covenant: net debt / adjusted EBITDA <= 3.0x.",
+    "deals": "Emberion (24-Apr-2026, 100%, EUR 2.5m, not yet consolidated at 30-Jun-2026, immaterial); Adelphi Technology 29.99% (EUR 2.3m, equity method); NVLS minority put/call (10% H1-2026 exercised for EUR 1.4m; 15% in H1-2027); contingent consideration liabilities EUR 3.8m (H1-2026 Note 26)."
+  },
+  "guidance_2026": {"rev_high": 570.0, "rev_mid": 564.0, "rev_low": 558.0, "ebitda_high": 192.0, "ebitda_mid": 189.0, "ebitda_low": 186.0, "capex_pct": 0.09, "cap_rd_pct": 0.03},
+  "q3_2026": {"amp": 91.5, "di": 42.5, "elim": -0.3, "tot": 133.8, "g": 0.235, "lfl": 0.205, "agp_amp": 46.3, "agp_di": 18.6, "agp_oth": 0.1, "agp": 65.0},
+  "q3_2025": {"amp": 73.9, "di": 34.7, "elim": -0.2, "tot": 108.3, "agp": 56.5},
+  "share_price": {"px": 56.90, "date": "2026-10-30", "source": "Euronext Paris close (live.euronext.com), last full trading day before the build; 2-Nov-2026 intraday EUR 57.25"},
+  "shares_out_latest": {"shares": 50936749, "date": "2026-09-30", "treasury": 25873, "dilutive": 0.41},
+  "overrides": {
+    "_note": "Per-share data before the IPO: the 7-Jun-2024 reorganisation (conversion of 119.5m preference shares, 2.5-for-1 reverse split of the ordinary shares) restated FY2023 EPS to EUR 0.24 on 30,387,344 weighted shares (URD 2024 comparative, Note 13; H1-2024 report Note 12). The registration document printed FY2022-23 on 75,968,360 pre-reorganisation shares; the restated basis (x0.4 shares, /0.4 EPS) is applied to FY2022-23 by filing date. FY2022 PPA amortisation (7.4) is printed in the registration document rather than D&A excl. PPA, so dna_ex_ppa is derived as 20.5 - 7.4.",
+    "2024": {"cash_adj": 1.534, "cash_adj_note": "BS cash 117.163 = cash-flow cash 115.629 + accrued interest receivable 1.220 + bank overdraft 0.314 (URD 2025 Note 26)"},
+    "H1-25": {"cash_adj": 0.960, "cash_adj_note": "BS cash 89.785 = cash-flow cash 88.825 + accrued interest receivable 0.960 (H1-2025 report Note 23)"},
+    "2023": {"wsh": 30.387344, "eps_basic": 0.24, "eps_dil": 0.24, "wsh_note": "URD 2024 comparative column (restated for the 2024 reverse split); registration document original: EUR 0.10 on 75,968,360 shares"},
+    "2022": {"wsh": 30.387344, "eps_basic": 0.03, "eps_dil": 0.03, "dna_ex_ppa": 13.1, "ppa_amort": 7.4,
+             "wsh_note": "registration document EUR 0.01 on 75,968,360 shares, restated x2.5 / x0.4 for the 2024 reverse split (rounded); D&A excl. PPA = 20.5 bridge D&A - 7.4 printed PPA amortisation"}
+  }
+}
