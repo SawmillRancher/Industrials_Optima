@@ -21,8 +21,8 @@ WC['note'] = (f'Forecast inputs at 31-Dec-2025 levels on FY25 revenue (receivabl
               'inventory built for the seasonally stronger second half (30-Jun-26 inventories €123m vs €105m).')
 
 V0 = {
-    'out_hdr': 'FY26 outlook — raised 17-Sep-2026 (confirmed in the 9M-26 release, 27-Oct-2026)',
-    'out_note': ('17-Sep-2026: revenue €558–570m (from €520–540m); Adjusted EBITDA €186–192m (from €168–178m); capex ~9% of revenue excl. capitalized R&D (~3%). '
+    'out_hdr': 'FY26 outlook — raised 17-Sep-2026 (confirmed 27-Oct-2026) — UNVERIFIED: not on SEC EDGAR',
+    'out_note': ('UNVERIFIED (not on SEC EDGAR; company press release / URD filed with the AMF as regulated information): 17-Sep-2026: revenue €558–570m (from €520–540m); Adjusted EBITDA €186–192m (from €168–178m); capex ~9% of revenue excl. capitalized R&D (~3%). '
                  'FY27 guidance due with the FY26 results on 22-Feb-2027.'),
     'outlook': [
         ('out_rev', '  FY26 revenue (€m)', (GU['rev_high'], GU['rev_mid'], GU['rev_low']), 'm1', 'Guided €558–570m (c.20% growth at mid-point). Drives the Q4-26E calibration Δ.'),
@@ -66,8 +66,8 @@ V0 = {
     'dtl_rate': 0.25, 'dil': SHL['dilutive'], 'iss': 0.15, 'bb_ae': 0.0,
     'px': PX['px'], 'px_date': PX['date'],
     'px_note': f'VALUATION — share price input €{PX["px"]:.2f} (Euronext Paris: EXENS, close {PX["date"]}; 2-Nov-2026 intraday €57.25); update to market',
-    'rev_guid_note': 'Company FY26 revenue guidance €558–570m (17-Sep-2026, confirmed 27-Oct-2026). Drives the Q4-26E calibration Δ.',
-    'eb_guid_note': 'Company FY26 Adjusted EBITDA guidance €186–192m (17-Sep-2026, confirmed 27-Oct-2026). H2/26E = end-point − H1-26 actual.',
+    'rev_guid_note': 'UNVERIFIED (not on SEC EDGAR; company press release / URD filed with the AMF as regulated information): Company FY26 revenue guidance €558–570m (17-Sep-2026, confirmed 27-Oct-2026). Drives the Q4-26E calibration Δ.',
+    'eb_guid_note': 'UNVERIFIED (not on SEC EDGAR; company press release / URD filed with the AMF as regulated information): Company FY26 Adjusted EBITDA guidance €186–192m (17-Sep-2026, confirmed 27-Oct-2026). H2/26E = end-point − H1-26 actual.',
 }
 
 # ====================================================================== compute engine

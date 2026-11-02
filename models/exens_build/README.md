@@ -30,7 +30,7 @@ Exosens is **not an SEC registrant**. EDGAR holds only the Citibank F-6EF ADR re
 
 **Share price:** €56.90, the Euronext Paris close on 30-Oct-2026 (intraday €57.25 on 2-Nov-2026), read from the Euronext quote feed. It is an input at `Model!P` in the valuation block; update it to market.
 
-**Unverified guidance:** none of the forecast anchors come from outside the AMF documents. The FY26 outlook, the medium-term targets and the capex guidance are all from regulator-filed press releases or the URD. Peer multiples in the P/E and beta rationale are labelled as assumptions.
+**Unverified guidance:** all guidance is from outside SEC EDGAR, so it is labelled UNVERIFIED in the workbook: the outlook block of the scenario table, the guidance memo rows, the medium-term target rows and the capex note. That covers the FY26 outlook, the medium-term targets and the capex guidance, which come from company press releases and the URD filed with the AMF as regulated information. Peer multiples in the P/E and beta rationale are labelled as assumptions.
 
 ## Columns (fiscal year ends 31 December)
 - **C–D FY2021–2022:** annual, from the IPO registration document. FY2021 is the predecessor (Exosens International) full year. Per-share data before the IPO are not comparable.

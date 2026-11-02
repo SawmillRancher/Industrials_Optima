@@ -149,7 +149,7 @@ def build_spec(V0):
                   f'/({P("amp_qb")}+{P("di_qb")}+{P("elim_qb")})'),
       note='Closed-form solve: Δ = (FY26 target − H1-26 − Q3-26 − Σ Q4-25 × (1 + Q3-26 growth)) ÷ Σ Q4-25. Applied uniformly to Amplification, D&I and eliminations.')
     S('cal_rev_chk', '  Check: FY26 revenue vs guidance end-point (should be 0)', 'check', 'm1', e26=lambda: f'=ROUND({V("g_rev")}-{V("cal_rev")},1)')
-    S('tg_h', '  Medium-term outlook (FY2025 release / URD 2025 §5.8) vs model — information, not forced:', 'sub', 'gen')
+    S('tg_h', '  Medium-term outlook (FY2025 release / URD 2025 §5.8; UNVERIFIED — not on SEC EDGAR) vs model — information, not forced:', 'sub', 'gen')
     S('tg_lfl', '    Organic revenue growth target "up to mid-teens" (model like-for-like growth)', 'memo_calc', 'pct', ae=lambda: f'={V("g_lfl")}')
     S('tg_eb', '    Organic Adjusted EBITDA growth target "above 15%" (model Adjusted EBITDA y/y %, incl. M&A)', 'memo_calc', 'pct', ae=lambda: f'=IFERROR({V("g_adj")}/{P("g_adj")}-1,"")')
     S('tg_1bn', '    €1bn revenue ambition (model revenue − 1,000)', 'memo_calc', 'm1', ae=lambda: f'={V("g_rev")}-1000')

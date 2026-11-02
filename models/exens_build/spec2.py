@@ -82,7 +82,7 @@ def build_spec2(V0):
       he=lambda: f'={V("caprd_pct", E26)}*{V("is_rev", E26)}-{h26("caprd")}', ae=lambda: f'={V("is_rev")}*{V("caprd_pct")}',
       note='FY25 €13.7m (2.9%); H1-26 €9.2m (3.6%); guided ~3%.')
     S('capex_pct', '  Capex % of revenue', 'pct', 'pct', all=ratio('capex', 'is_rev'), e26=lambda: '=' + CH(SC['out_capex']), ae_in=V0['capex_pct'],
-      note='2026E guidance ~9%; company: normalised ~5% after the capacity expansion completes in 2027. 2027E input 7%, then 5%.')
+      note='2026E guidance ~9% and normalised ~5% after the 2027 capacity completion (UNVERIFIED: company guidance, not on SEC EDGAR). 2027E input 7%, then 5%.')
     S('caprd_pct', '  Capitalised R&D % of revenue', 'pct', 'pct', all=ratio('caprd', 'is_rev'), e26=lambda: '=' + CH(SC['out_caprd']), ae_in=V0['caprd_pct'])
     S('capex_chk', '  Check: capex + capitalised R&D vs cash-flow purchases of intangible assets & PP&E (should be 0; ±1.5: timing of capex payables; from 2022, the 2021 predecessor statement is on a different basis)', 'check', 'm1',
       hist=lambda: (f'=IF(AND(ISNUMBER({V("capex")}),ISNUMBER({V("cf_capex")})),IF(ABS({V("capex")}+{V("caprd")}+{V("cf_capex")})<=1.5,0,ROUND({V("capex")}+{V("caprd")}+{V("cf_capex")},1)),"")' if CTX.col.year >= 2022 else None),
