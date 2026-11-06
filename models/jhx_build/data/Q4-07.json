@@ -1,0 +1,202 @@
+{
+ "2007-05-31": {
+  "is": {
+   "_label_asb_adj": "Asbestos adjustments",
+   "_label_cogs": "Cost of goods sold",
+   "_label_ebt": "Operating loss before income taxes",
+   "_label_eps_d": "Earnings (loss) per share \u2014 diluted (US cents)",
+   "_label_gp": "Gross profit",
+   "_label_int_net": "Net interest (expense) income",
+   "_label_ni": "Net operating profit (loss)",
+   "_label_op": "EBIT",
+   "_label_other_op": "Other operating expense",
+   "_label_rd": "Research & development expense",
+   "_label_rev": "Total Net Sales",
+   "_label_sga": "Selling, general & administrative expense",
+   "_label_tax": "Income tax benefit (expense)",
+   "asb_adj": -286.3,
+   "cogs": -227.1,
+   "ebt": -220.0,
+   "eps_d": 0.22,
+   "gp": 133.8,
+   "int_net": -4.2,
+   "ni": 103.1,
+   "op": -215.8,
+   "other_op": 0.0,
+   "rd": -5.6,
+   "rev": 360.9,
+   "sga": -52.3,
+   "tax": 323.1
+  },
+  "ng": {
+   "adj_ebit_label": "EBIT excluding asbestos adjustments",
+   "adj_ni_label": "Net operating profit excluding asbestos adjustments and tax benefit related to asbestos adjustments",
+   "ebit_items_def": [
+    [
+     "Asbestos adjustments",
+     286.3,
+     715.6,
+     405.5,
+     715.6
+    ]
+   ],
+   "ni_items": [
+    [
+     "Asbestos adjustments",
+     286.3,
+     715.6,
+     405.5,
+     715.6
+    ],
+    [
+     "Tax benefit related to asbestos adjustments",
+     -335.0,
+     0.0,
+     -335.0,
+     0.0
+    ]
+   ]
+  },
+  "seg": {
+   "apac_ebit": 8.8,
+   "apac_rev": 64.3,
+   "corp_ebit": -16.7,
+   "na_ebit": 84.6,
+   "na_rev": 289.9,
+   "oth_ebit": -2.7,
+   "oth_rev": 6.7,
+   "rd_ebit": -3.5,
+   "tot_adj_ebit": 70.5,
+   "tot_adj_ebt": 66.3,
+   "tot_adj_ni": 54.4,
+   "tot_asb_adj_in_ebit": -286.3,
+   "tot_ebit": -215.8,
+   "tot_int_inc": 5.5
+  },
+  "sources": {
+   "ma": "https://www.sec.gov/Archives/edgar/data/1159152/000095013707008312/a30740exv99w1.htm"
+  }
+ },
+ "2008-05-23": {
+  "is": {
+   "asb_adj": -286.3,
+   "cogs": -227.1,
+   "ebt": -220.0,
+   "gp": 133.8,
+   "impair": 0.0,
+   "int_net": -4.2,
+   "op": -215.8,
+   "rd": -5.6,
+   "rev": 360.9,
+   "sci": -5.4,
+   "sga": -52.3,
+   "tax": 323.1
+  },
+  "ng": {
+   "ebit_items_def": [
+    [
+     "Asbestos adjustments",
+     286.3,
+     null,
+     405.5,
+     null
+    ],
+    [
+     "AICF SG&A expenses",
+     0.0,
+     null,
+     0.0,
+     null
+    ],
+    [
+     "Impairment charges",
+     0.0,
+     null,
+     0.0,
+     null
+    ],
+    [
+     "Impairment related costs",
+     0.0,
+     null,
+     0.0,
+     null
+    ]
+   ],
+   "ni_items": [
+    [
+     "Asbestos adjustments",
+     286.3,
+     null,
+     405.5,
+     null
+    ],
+    [
+     "AICF SG&A expenses",
+     0.0,
+     null,
+     0.0,
+     null
+    ],
+    [
+     "AICF interest income",
+     0.0,
+     null,
+     0.0,
+     null
+    ],
+    [
+     "Tax benefit related to asbestos adjustments",
+     -335.0,
+     null,
+     -335.0,
+     null
+    ],
+    [
+     "Impairment charges (net of tax)",
+     0.0,
+     null,
+     0.0,
+     null
+    ],
+    [
+     "Impairment related costs (net of tax)",
+     0.0,
+     null,
+     0.0,
+     null
+    ],
+    [
+     "Tax adjustments",
+     -3.0,
+     null,
+     -10.4,
+     null
+    ]
+   ]
+  },
+  "seg": {
+   "apac_rev": 64.3,
+   "corp_ebit": -16.7,
+   "na_ebit": 84.6,
+   "na_rev": 289.9,
+   "oth_ebit": -2.7,
+   "oth_rev": 6.7,
+   "rd_ebit": -3.5,
+   "tot_adj_ebit": 70.5,
+   "tot_adj_ebt": 66.3,
+   "tot_adj_eps": 0.11,
+   "tot_adj_etr": 22.5,
+   "tot_adj_ni": 51.4,
+   "tot_adj_sh_d": 469.0,
+   "tot_adj_tax": -14.9,
+   "tot_aicf_int": 0.0,
+   "tot_aicf_sga_in_ebit": 0.0,
+   "tot_asb_adj_in_ebit": -286.3,
+   "tot_dna": 13.7,
+   "tot_ebit": -215.8,
+   "tot_ebitda": -202.1,
+   "tot_int_inc": 5.5
+  }
+ }
+}

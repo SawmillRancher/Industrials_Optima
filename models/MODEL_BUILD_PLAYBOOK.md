@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, JHX). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -275,7 +275,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -287,9 +287,11 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Acquired sales = (total growth % − organic growth %) × prior-year revenue. [KRMN]
   - Working capital from a single-line CFO = CFO − NI − D&A − SBC − deferred tax, using XBRL for the components and noting missing tags. [WWD]
   - Recast Q4 = FY recast − 9M recast; quarters that were never recast stay blank. [LECO]
+  - A quarter reported before a mid-year discontinued-operations reclassification = the next release's year-to-date columns − the latest quarter, for every line; keep the originals under `*_orig`. [JHX]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
+- **Bridges printed only in a later package's comparative columns** fill the gaps of a package that has none (a headline-only release); store the prior-period columns under their own periods and let the period's own package win. Segment-section "EBIT excluding …" tables can masquerade as the group bridge: prefer the block that ends in the group measure and carries a group-level item. [JHX]
 
 ### 5.2 Basis
 - **Segment re-presentation with a short recast history:** model an aggregate the re-presentation doesn't change and keep the old split as memo. Prove where an absorbed segment went using the restated comparative Δ. [RBA, TFI]
@@ -344,6 +346,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Order of operations.** Apply every explicitly guided driver first, then solve one uniform Δ on the least-guided driver. Use a "sensitivity to +1.00" helper row for a closed-form linear solve, with no goal-seek and no circularity. [VMC, MLM, TDY, WAB, DHR, LOAR, CSGP]
 - **EPS guidance → operating target:** required adjusted OI = EPS × guidance share count (ex future buybacks) ÷ (1 − guided ETR) + net interest − adjusted other income, less the actual YTD. Then solve margins to it. [DHR, CTAS, STE, WAB, WWD]
 - **Two anchors in one year:** if a quarterly guide and a FY guide both exist, solve Q3 to the quarter and Q4 to the year with separate Δs and checks. For one-quarter-ahead guidance only, carry the solved Δ forward. [DHR, ONON, TDY, UBER]
+- **Segment-level guidance** (quarter and full year by segment) needs no Δ solve: set the guided segments directly (quarter, then FY − 9M), derive the unguided segment from the total, and let corporate absorb the residual, with checks on the quarter and the year. [JHX]
 - **Guidance that excludes a deal or one-off:** calibrate a legacy / guidance-basis memo series with its own check, and add the deal block and excluded items on top. Deals already inside guidance go inside segment acquisition %. Check the deal close date against the outlook date. [MLM, KRMN, CLH, CSGP, CTAS, UBER, TMO, ONON, DHR]
 - **Incremental-margin guidance:** target = prior-year half + incremental % × Δ sales. [LECO]
 - **Operating-ratio guidance:** solve the remaining quarters on OR, with the largest controllable cost line balancing, and show the implied shift vs run-rate. [SAIA]
@@ -387,6 +390,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Working-capital ratios** come from fiscal-year-end balances, not annualised quarters. [STE, CTAS]
 - **Use the company's own capex / FCF definition** when it is guided, so guided and modelled figures are comparable. [RBA, HII]
 - **Reconcile BS cash vs CF ending cash with a memo line** when definitions differ (overdraft, restricted cash, disc-ops cash). [ONON, CSGP, DHR]
+- **Consolidated compensation funds** (asbestos AICF): claims paid are the operating cash cost; contributions to the fund are transfers into restricted cash. Model the fund's cash roll, and deduct the net unfunded liability (liability − insurance − fund assets) in the EV bridge. [JHX, ESAB]
+- **Future-acquisition amortization** reduces intangibles; keep it out of the depreciation deducted from PP&E, or the forecast BS drifts by exactly that amount. [JHX]
 
 ### 5.7 Valuation
 - **Standard NOPAT basis** (the builds diverged here; this is now the rule):
@@ -410,4 +415,5 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Template residue is the most common defect.** At least 10 builds shipped MLM text in Bull-Base-Bear N26 / P40 comments or DCF rationale, and TFI kept Moog comments. `tools/residue_scan.py` is a hard gate. [CLH, WAB, SAIA, ODFL, WCN, LOAR, ONON, LECO, ESAB, STE, CTAS, UBER, TFI, CPRT]
 - **Check also:** foreign row numbers and switch-cell addresses in comments, the wrong currency symbol on non-USD models, and modelling-note dates that contradict the definition flags. [ONON, DHR]
 - **Check tolerances** are set by period when the issuer changes rounding units, and stated in the label. [STE, TMO, CSGP, ONON, DHR]
+- **LibreOffice recalculation drops comment authors** ("Unknown Author"), which `residue_scan.py` reports: restore the author in `xl/comments*.xml` when re-injecting the chart XML after `--recalc`. [JHX]
 - **Private-company implied CF:** related-party balances are financing; explain the sign of implied capex; leave first-year ratios n/a when there is no opening BS. [R&Y]

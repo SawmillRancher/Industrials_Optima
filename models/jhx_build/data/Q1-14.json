@@ -1,0 +1,417 @@
+{
+ "2013-08-13": {
+  "bs": {
+   "accrued_payroll": 28.6,
+   "ap": 111.9,
+   "asb_liab_c": 120.0,
+   "asb_liab_nc": 1349.7,
+   "cash": 198.1,
+   "div_payable": 163.6,
+   "dta": 18.3,
+   "dta_asb": 381.5,
+   "dta_asb_c": 16.6,
+   "dta_c": 17.4,
+   "dtl": 94.0,
+   "equity": -13.0,
+   "ins_rec_asb_c": 19.7,
+   "ins_rec_asb_nc": 181.2,
+   "inv": 169.8,
+   "other_cl": 25.8,
+   "other_nca": 28.8,
+   "other_ncl": 30.9,
+   "ppe": 658.2,
+   "prepaid": 21.4,
+   "restr_cash": 3.2,
+   "restr_cash_asb": 82.9,
+   "restr_cash_nc": 1.8,
+   "restr_inv_asb": 6.3,
+   "ta": 2001.6,
+   "tax_payable": 7.2,
+   "tca": 677.9,
+   "tcl": 465.8,
+   "tl": 2014.6,
+   "tle": 2001.6,
+   "warranty_c": 7.9,
+   "warranty_nc": 20.3,
+   "wc_asb_c": 0.8,
+   "wc_asb_lc": 0.8,
+   "wc_asb_lnc": 53.9,
+   "wc_asb_nc": 53.9
+  },
+  "cf": {
+   "asb_adj": -94.5,
+   "capex": -26.1,
+   "cash_basis": "cash",
+   "cash_begin": 153.7,
+   "cash_end": 198.1,
+   "cff": 2.7,
+   "cfi": -25.7,
+   "cfo": 78.2,
+   "deferred_tax": 9.9,
+   "dna": 15.4,
+   "fx": -10.8,
+   "lines_raw": [
+    [
+     "Net income",
+     142.2
+    ],
+    [
+     "Depreciation and amortisation",
+     15.4
+    ],
+    [
+     "Deferred income taxes",
+     9.9
+    ],
+    [
+     "Stock-based compensation",
+     0.8
+    ],
+    [
+     "Asbestos adjustments",
+     -94.5
+    ],
+    [
+     "Tax benefit from stock options exercised",
+     -0.2
+    ],
+    [
+     "Restricted cash and cash equivalents",
+     31.5
+    ],
+    [
+     "Restricted short-term investments",
+     -0.1
+    ],
+    [
+     "Payment to AICF",
+     0.0
+    ],
+    [
+     "Accounts and other receivables",
+     0.6
+    ],
+    [
+     "Inventories",
+     -2.5
+    ],
+    [
+     "Prepaid expenses and other assets",
+     -1.3
+    ],
+    [
+     "Insurance receivable - Asbestos",
+     5.4
+    ],
+    [
+     "Accounts payable and accrued liabilities",
+     25.0
+    ],
+    [
+     "Asbestos liability",
+     -38.4
+    ],
+    [
+     "Other accrued liabilities",
+     -15.6
+    ],
+    [
+     "Net cash provided by operating activities",
+     78.2
+    ],
+    [
+     "Purchases of property, plant and equipment",
+     -26.1
+    ],
+    [
+     "Proceeds from sale of property, plant and equipment",
+     0.4
+    ],
+    [
+     "Net cash used in investing activities",
+     -25.7
+    ],
+    [
+     "Proceeds from issuance of shares",
+     2.5
+    ],
+    [
+     "Tax benefit from stock options exercised",
+     0.2
+    ],
+    [
+     "Net cash provided by financing activities",
+     2.7
+    ],
+    [
+     "Effects of exchange rate changes on cash",
+     -10.8
+    ],
+    [
+     "Net increase in cash and cash equivalents",
+     44.4
+    ],
+    [
+     "Cash and cash equivalents at beginning of period",
+     153.7
+    ],
+    [
+     "Cash and cash equivalents at end of period",
+     198.1
+    ]
+   ],
+   "net_change": 44.4,
+   "ni": 142.2,
+   "ppe_proceeds": 0.4,
+   "sbc": 0.8,
+   "share_iss": 2.5,
+   "ytd_months": 3
+  },
+  "is": {
+   "_label_asb_adj": "Asbestos adjustments",
+   "_label_cogs": "Cost of goods sold",
+   "_label_ebt": "Income before income taxes",
+   "_label_eps_b": "Basic",
+   "_label_eps_d": "Diluted",
+   "_label_gp": "Gross profit",
+   "_label_int_exp": "Interest expense",
+   "_label_int_inc": "Interest income",
+   "_label_int_net": "Net interest income",
+   "_label_ni": "Net income",
+   "_label_ni_total": "Net income",
+   "_label_op": "Operating income",
+   "_label_other_nonop": "Other income",
+   "_label_rd": "Research and development expenses",
+   "_label_rev": "Net sales",
+   "_label_sga": "Selling, general and administrative expenses",
+   "_label_tax": "Income tax expense",
+   "asb_adj": 94.5,
+   "cogs": -245.9,
+   "ebt": 157.1,
+   "eps_b": 0.32,
+   "eps_d": 0.32,
+   "gp": 126.3,
+   "int_exp": -1.1,
+   "int_inc": 1.2,
+   "int_net": 0.1,
+   "ni": 142.2,
+   "ni_total": 142.2,
+   "op": 156.9,
+   "other_nonop": 0.1,
+   "rd": -9.0,
+   "rev": 372.2,
+   "sga": -54.9,
+   "sh_b": 441.7,
+   "sh_d": 443.1,
+   "tax": -14.9
+  },
+  "ng": {
+   "adj_ebit_label": "EBIT excluding asbestos, ASIC expenses and New Zealand product liability expenses",
+   "ebit_items_def": [
+    [
+     "Asbestos adjustments",
+     -94.5,
+     -25.2,
+     null,
+     null
+    ],
+    [
+     "AICF SG&A expenses",
+     0.5,
+     0.3,
+     null,
+     null
+    ],
+    [
+     "ASIC expenses",
+     0.0,
+     0.1,
+     null,
+     null
+    ],
+    [
+     "New Zealand product liability expenses",
+     4.6,
+     0.0,
+     null,
+     null
+    ]
+   ],
+   "ebitda_items": [
+    [
+     "Depreciation and amortisation",
+     15.4,
+     15.4,
+     null,
+     null
+    ]
+   ]
+  },
+  "seg": {
+   "apac_asp": 926.0,
+   "apac_ebit": 21.1,
+   "apac_rev": 94.1,
+   "apac_rev_fs": 94.1,
+   "apac_vol": 102.4,
+   "corp_ebit": -6.9,
+   "corp_ebit_fs": 87.1,
+   "na_ebit": 59.4,
+   "na_ebit_fs": 59.4,
+   "na_rev": 278.1,
+   "na_rev_fs": 278.1,
+   "na_vol": 428.0,
+   "rd_ebit": -6.1,
+   "rd_ebit_fs": -6.1,
+   "tot_adj_ebit": 67.5,
+   "tot_adj_ebitda": 172.3,
+   "tot_adj_ebt": 66.6,
+   "tot_adj_etr": 21.9,
+   "tot_adj_tax": -14.6,
+   "tot_aicf_int": -1.1,
+   "tot_aicf_sga_in_ebit": -0.5,
+   "tot_asb_adj_in_ebit": 94.5,
+   "tot_dna": 15.4,
+   "tot_ebit": 156.9,
+   "tot_sh_d_note": 443.1
+  },
+  "sources": {
+   "fs": "https://www.sec.gov/Archives/edgar/data/1159152/000119312513332544/d581542dex995.htm",
+   "ma": "https://www.sec.gov/Archives/edgar/data/1159152/000119312513332544/d581542dex993.htm",
+   "mr": "https://www.sec.gov/Archives/edgar/data/1159152/000119312513332544/d581542dex994.htm"
+  }
+ },
+ "2014-08-18": {
+  "cf": {
+   "asb_adj": -94.5,
+   "capex": -26.1,
+   "cash_begin": 153.7,
+   "cash_end": 198.1,
+   "cff": 2.7,
+   "cfi": -25.7,
+   "cfo": 67.6,
+   "deferred_tax": 9.9,
+   "div": 0.0,
+   "dna": 15.4,
+   "fx": -0.2,
+   "net_change": 44.4,
+   "ni": 142.2,
+   "ppe_proceeds": 0.4,
+   "sbc": 0.8,
+   "share_iss": 2.5
+  },
+  "is": {
+   "asb_adj": 94.5,
+   "cogs": -245.9,
+   "ebt": 157.1,
+   "eps_b": 0.32,
+   "eps_d": 0.32,
+   "gp": 126.3,
+   "int_exp": -1.1,
+   "int_inc": 1.2,
+   "int_net": 0.1,
+   "ni": 142.2,
+   "ni_total": 142.2,
+   "op": 156.9,
+   "other_nonop": 0.1,
+   "rd": -9.0,
+   "rev": 372.2,
+   "sga": -54.9,
+   "sh_b": 441.7,
+   "sh_d": 443.1,
+   "tax": -14.9
+  },
+  "ng": {
+   "ebit_items_def": [
+    [
+     "Asbestos adjustments",
+     -94.5,
+     null,
+     null,
+     null
+    ],
+    [
+     "AICF SG&A expenses",
+     0.5,
+     null,
+     null,
+     null
+    ],
+    [
+     "New Zealand weathertightness claims",
+     4.6,
+     null,
+     null,
+     null
+    ]
+   ],
+   "ni_items": [
+    [
+     "Asbestos adjustments",
+     -94.5,
+     null,
+     null,
+     null
+    ],
+    [
+     "AICF SG&A expenses",
+     0.5,
+     null,
+     null,
+     null
+    ],
+    [
+     "AICF interest expense, net",
+     -1.1,
+     null,
+     null,
+     null
+    ],
+    [
+     "New Zealand weathertightness claims (benefit) expense",
+     4.6,
+     null,
+     null,
+     null
+    ],
+    [
+     "Asbestos and other tax adjustments",
+     0.3,
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  "seg": {
+   "apac_asp": 916.0,
+   "apac_ebit": 16.5,
+   "apac_ebit_ex": 21.1,
+   "apac_rev": 94.1,
+   "apac_rev_fs": 94.1,
+   "apac_rev_lc": 94.8,
+   "apac_vol": 102.4,
+   "corp_ebit_ex": -6.9,
+   "corp_ebit_fs": 87.1,
+   "na_asp": 638.0,
+   "na_ebit": 59.4,
+   "na_ebit_ex": 21.1,
+   "na_ebit_fs": 59.4,
+   "na_rev": 278.1,
+   "na_rev_fs": 278.1,
+   "na_vol": 428.0,
+   "rd_ebit": -6.1,
+   "rd_ebit_fs": -6.1,
+   "tot_adj_ebit": 67.5,
+   "tot_adj_ebitda": 172.3,
+   "tot_adj_ebt": 66.6,
+   "tot_adj_eps": 0.12,
+   "tot_adj_etr": 21.9,
+   "tot_adj_ni": 52.0,
+   "tot_adj_sh_d": 443.1,
+   "tot_adj_tax": -14.6,
+   "tot_aicf_int": -1.1,
+   "tot_dna": 15.4,
+   "tot_sh_d_note": 443.1
+  }
+ }
+}
