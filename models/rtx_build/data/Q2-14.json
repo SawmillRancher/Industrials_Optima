@@ -1,0 +1,798 @@
+{
+ "period": "Q2-14",
+ "period_end": "2014-06-30",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/101829/000010182914000030/a2014-06x308xkerexhibit99.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/101829/000010182914000033/a2014-06x3010xq.htm",
+  "next_release": "https://www.sec.gov/Archives/edgar/data/101829/000010182915000032/a2015-06x308xkerex99.htm",
+  "next_filing": "https://www.sec.gov/Archives/edgar/data/101829/000010182915000035/a2015-06x3010xq.htm"
+ },
+ "is": {
+  "sales": 17191,
+  "sales_products": 13017,
+  "sales_services": 4174,
+  "cogs": 12931,
+  "cogs_products": 10182,
+  "cogs_services": 2749,
+  "rnd": 666,
+  "sga": 1623,
+  "other_op_lines": [],
+  "other_income": 384,
+  "op_profit": 2355,
+  "nonservice_pension": null,
+  "interest_exp_net": 206,
+  "other_nonop": null,
+  "ebt": 2149,
+  "tax": 359,
+  "cont_ops": 1790,
+  "nci_cont": 110,
+  "ni_parent_cont": 1680,
+  "shares_basic": 900,
+  "shares_diluted": 915,
+  "dps": 0.59,
+  "disc_ops": 0,
+  "net_income": 1790,
+  "nci": 110,
+  "ni_parent": 1680,
+  "eps_basic_cont": 1.87,
+  "eps_basic": 1.87,
+  "eps_dil_cont": 1.84,
+  "eps_dil": 1.84
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Otis",
+    "sales": 3365,
+    "op_profit": 693,
+    "adj_sales": 3365,
+    "adj_op": 714,
+    "restr": 21,
+    "other_items": 0,
+    "margin_pct": 20.6,
+    "adj_margin_pct": 21.2
+   },
+   {
+    "name": "UTC Climate, Controls & Security",
+    "sales": 4429,
+    "op_profit": 815,
+    "adj_sales": 4429,
+    "adj_op": 840,
+    "restr": 25,
+    "other_items": 0,
+    "margin_pct": 18.4,
+    "adj_margin_pct": 19.0
+   },
+   {
+    "name": "Pratt & Whitney",
+    "sales": 3592,
+    "op_profit": 432,
+    "adj_sales": 3592,
+    "adj_op": 519,
+    "restr": 5,
+    "other_items": -82,
+    "margin_pct": 12.0,
+    "adj_margin_pct": 14.4
+   },
+   {
+    "name": "UTC Aerospace Systems",
+    "sales": 3636,
+    "op_profit": 602,
+    "adj_sales": 3636,
+    "adj_op": 606,
+    "restr": 4,
+    "other_items": 0,
+    "margin_pct": 16.6,
+    "adj_margin_pct": 16.7
+   },
+   {
+    "name": "Sikorsky",
+    "sales": 2384,
+    "op_profit": -317,
+    "adj_sales": 1554,
+    "adj_op": 149,
+    "restr": 0,
+    "other_items": -466,
+    "margin_pct": -13.3,
+    "adj_margin_pct": 9.6
+   }
+  ],
+  "total_seg_sales": 17406,
+  "elim_sales": -215,
+  "elim_op": 249,
+  "elim_adj_op": 29,
+  "corp_op": -119,
+  "corp_adj_op": -119,
+  "fas_cas": null,
+  "acq_acct_adj": null,
+  "total_seg_op": 2225,
+  "consol_sales": 17191,
+  "consol_op": 2355,
+  "consol_adj_op": 2738,
+  "seg_note": "Five segments as printed. Sikorsky sales include the $830m CMHP cumulative sales adjustment (adjusted Sikorsky sales 1,554; adjusted segment sales 16,576; adjusted consolidated net sales 16,361). Segment Operating Profit Margin 12.8% (adjusted 17.1%). Sikorsky margin (13.3)% reported, 9.6% adjusted."
+ },
+ "kpi": {
+  "organic_growth_pct": 3.0,
+  "fx_pct": null,
+  "acq_div_pct": -1.0,
+  "other": {
+   "reported sales growth %": 7,
+   "CMHP cumulative sales adjustment contribution to sales growth pts": 5,
+   "Otis new equipment orders growth % (constant currency)": 3,
+   "Otis new equipment orders growth North America %": 44,
+   "UTC Climate, Controls & Security equipment orders organic growth %": 2,
+   "Pratt & Whitney large commercial engine spares orders growth %": -6,
+   "UTC Aerospace Systems commercial spares orders growth %": 28,
+   "segment operating profit growth % (incl. CMHP)": -15,
+   "adjusted segment operating profit growth %": 8,
+   "adjusted segment operating margin expansion bps": 90,
+   "EPS growth % excluding restructuring and one-time items": 12,
+   "first-half EPS growth % excluding restructuring and one-time items": 11
+  }
+ },
+ "ngaap": {
+  "adj_sales_pub": 16361,
+  "adj_op_pub": 2738,
+  "adj_ni_pub": null,
+  "adj_eps_pub": null,
+  "adj_etr_pct_pub": null,
+  "fcf_pub": 1336,
+  "fcf_pub_ytd": 2338,
+  "eps_bridge_start": 1.84,
+  "eps_bridge_start_label": "Diluted EPS from continuing operations attributable to common shareowners",
+  "eps_bridge": [
+   [
+    "Less: Impact on Diluted Earnings Per Share from Continuing Operations of restructuring costs and non-recurring items (removal of the items; release prints the impact as +0.00)",
+    0.0
+   ]
+  ],
+  "items": [
+   {
+    "label": "Restructuring Costs included in Operating Profit - Otis",
+    "segment": "Otis",
+    "where": "op",
+    "pretax": -21,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring Costs included in Operating Profit - UTC Climate, Controls & Security",
+    "segment": "UTC Climate, Controls & Security",
+    "where": "op",
+    "pretax": -25,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring Costs included in Operating Profit - Pratt & Whitney",
+    "segment": "Pratt & Whitney",
+    "where": "op",
+    "pretax": -5,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring Costs included in Operating Profit - UTC Aerospace Systems",
+    "segment": "UTC Aerospace Systems",
+    "where": "op",
+    "pretax": -4,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Charge to adjust the fair value of a Pratt & Whitney joint venture investment",
+    "segment": "Pratt & Whitney",
+    "where": "op",
+    "pretax": -60,
+    "aftertax": null,
+    "cat": "IMPAIR",
+    "approx": true
+   },
+   {
+    "label": "Charge for impairment of assets related to a joint venture",
+    "segment": "Pratt & Whitney",
+    "where": "op",
+    "pretax": -22,
+    "aftertax": null,
+    "cat": "IMPAIR",
+    "approx": true
+   },
+   {
+    "label": "Canadian Maritime Helicopter Program (CMHP): cumulative adjustment to record $830 million in sales and $438 million in losses based upon the change in estimate required for the contractual amendments signed with the Canadian Government",
+    "segment": "Sikorsky",
+    "where": "op",
+    "pretax": -438,
+    "sales_impact": 830,
+    "aftertax": null,
+    "cat": "IMPAIR"
+   },
+   {
+    "label": "Charge for the impairment of a Sikorsky joint venture investment",
+    "segment": "Sikorsky",
+    "where": "op",
+    "pretax": -28,
+    "aftertax": null,
+    "cat": "IMPAIR",
+    "approx": true
+   },
+   {
+    "label": "Gain on an agreement with a state taxing authority for the monetization of tax credits",
+    "segment": "Eliminations and other",
+    "where": "op",
+    "pretax": 220,
+    "aftertax": null,
+    "cat": "OTHER",
+    "approx": true
+   },
+   {
+    "label": "Favorable pre-tax interest adjustments, primarily related to the conclusion of the IRS's examination of the Company's 2009 and 2010 tax years",
+    "segment": "Consolidated",
+    "where": "interest",
+    "pretax": 21,
+    "aftertax": null,
+    "cat": "TAXD",
+    "approx": true
+   },
+   {
+    "label": "Tax effect of restructuring and non-recurring items above",
+    "segment": "Consolidated",
+    "where": "tax",
+    "pretax": null,
+    "aftertax": 108,
+    "cat": "TAX"
+   },
+   {
+    "label": "Favorable income tax adjustments related to the conclusion of the IRS's examination of the Company's 2009 and 2010 tax years, and the settlement of state income taxes related to the disposition of the Hamilton Sundstrand Industrials businesses",
+    "segment": "Consolidated",
+    "where": "tax",
+    "pretax": null,
+    "aftertax": 253,
+    "cat": "TAXD",
+    "approx": true
+   }
+  ],
+  "restr_total": 55,
+  "acq_acct_adj_total": null,
+  "sig_items_op_total": -328,
+  "sig_items_op_impact_total": -383,
+  "sig_items_sales": 830,
+  "sig_items_interest": 21,
+  "tax_effect": 108,
+  "sig_items_tax": 253,
+  "items_impact_ni_parent_cont": -1,
+  "items_impact_eps_dil_cont": 0.0,
+  "guidance": "\"With earnings up 11 percent, excluding the impact of restructuring and one-time items, UTC delivered a strong first half of the year,\" said Chenevert. \"Our solid backlogs, organic growth trends, and focus on execution give us confidence to increase the lower end of our earnings per share range. We now expect earnings per share of $6.75 to $6.85, up from $6.65 to $6.85 previously.\" As a result of increased working capital investment to support the aerospace upcycle, the company now anticipates 2014 cash flow from operations less capital expenditures to range from 90 to 100 percent of net income attributable to common shareowners. In addition, UTC now expects share repurchase of $1.25 billion and acquisitions of less than $1 billion for the year, from the previous expectation of $1 billion each.",
+  "definitions": "Organic sales growth represents the total reported increase within the Corporation's ongoing businesses less the impact of foreign currency translation, acquisitions and divestitures completed in the preceding twelve months and significant non-recurring items. Free cash flow, which represents cash flow from operations less capital expenditures, is the principal cash performance measure used by UTC. Segment net sales, operating profits and operating profit margins are also presented 'as adjusted for restructuring costs and non-recurring items'; management believes these adjusted results more accurately portray the ongoing operational performance and fundamentals of the underlying businesses. No adjusted EPS figure is published in this release; the release states the per-share impact of restructuring and non-recurring items on diluted EPS from continuing operations."
+ },
+ "cf": {
+  "ytd_months": 6,
+  "ni": 3096,
+  "ni_label": "Income from continuing operations",
+  "dda": 935,
+  "deferred_tax": 36,
+  "sbc": 118,
+  "pension_noncash": null,
+  "k401_match": null,
+  "pension_contrib": -144,
+  "wc_lines": [
+   [
+    "Change in working capital",
+    -999
+   ]
+  ],
+  "wc_total": -999,
+  "other_op": 35,
+  "cfo": 3077,
+  "capex": -739,
+  "acq": 72,
+  "divest": null,
+  "other_intang": -308,
+  "customer_financing": null,
+  "other_inv": 102,
+  "cfi": -873,
+  "debt_issue": null,
+  "debt_repay": -173,
+  "cp_change": null,
+  "st_debt_change": 19,
+  "dividends": -1026,
+  "nci_dividends": null,
+  "buyback": -670,
+  "other_fin": 7,
+  "cff": -1843,
+  "fx": -18,
+  "net_change": 343,
+  "cash_begin": 4619,
+  "cash_end": 4962,
+  "cash_held_for_sale": null,
+  "cash_end_continuing": 4962,
+  "restricted_cash": null,
+  "cash_basis": "cash",
+  "disc_ops_cf": {
+   "cfo": 0,
+   "cfi": 0,
+   "cff": null
+  },
+  "lines_raw": [
+   [
+    "Income from continuing operations",
+    3096
+   ],
+   [
+    "Depreciation and amortization",
+    935
+   ],
+   [
+    "Deferred income tax (benefit) provision",
+    36
+   ],
+   [
+    "Stock compensation cost",
+    118
+   ],
+   [
+    "Change in working capital",
+    -999
+   ],
+   [
+    "Global pension contributions",
+    -144
+   ],
+   [
+    "Other operating activities, net",
+    35
+   ],
+   [
+    "Net cash flows provided by operating activities of continuing operations",
+    3077
+   ],
+   [
+    "Capital expenditures",
+    -739
+   ],
+   [
+    "Acquisitions and dispositions of businesses, net",
+    72
+   ],
+   [
+    "Increase in collaboration intangible assets",
+    -308
+   ],
+   [
+    "Other investing activities, net",
+    102
+   ],
+   [
+    "Net cash flows provided by (used in) investing activities of continuing operations",
+    -873
+   ],
+   [
+    "Repayment of long-term debt, net",
+    -173
+   ],
+   [
+    "Increase (decrease) in short-term borrowings, net",
+    19
+   ],
+   [
+    "Dividends paid on Common Stock",
+    -1026
+   ],
+   [
+    "Repurchase of Common Stock",
+    -670
+   ],
+   [
+    "Other financing activities, net",
+    7
+   ],
+   [
+    "Net cash flows used in financing activities of continuing operations",
+    -1843
+   ],
+   [
+    "Discontinued Operations: Net cash provided by (used in) operating activities",
+    0
+   ],
+   [
+    "Discontinued Operations: Net cash provided by (used in) investing activities",
+    0
+   ],
+   [
+    "Discontinued Operations: Net cash provided by financing activities",
+    null
+   ],
+   [
+    "Net cash flows provided by (used in) discontinued operations",
+    0
+   ],
+   [
+    "Effect of foreign exchange rate changes on cash and cash equivalents",
+    -18
+   ],
+   [
+    "Net increase (decrease) in cash and cash equivalents",
+    343
+   ],
+   [
+    "Cash and cash equivalents, beginning of period",
+    4619
+   ],
+   [
+    "Cash and cash equivalents, end of period",
+    4962
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 4962,
+  "ar": 11795,
+  "contract_assets": null,
+  "inventory": 9896,
+  "other_ca": 2988,
+  "tca": 29641,
+  "customer_financing": null,
+  "ppe": 9026,
+  "rou": null,
+  "goodwill": 28378,
+  "intangibles": 15715,
+  "other_nca": 9382,
+  "ta": 92142,
+  "st_debt": 2235,
+  "ap": 7297,
+  "accrued_comp": null,
+  "other_accrued": 14798,
+  "contract_liabilities": null,
+  "ltd_current": null,
+  "tcl": 24330,
+  "ltd": 17837,
+  "lease_ltl": null,
+  "pension_obl": null,
+  "other_ncl": 14636,
+  "tl": 56803,
+  "redeemable_nci": 146,
+  "common_stock": 14939,
+  "treasury": -21094,
+  "retained": 42343,
+  "aoci": -2403,
+  "equity_parent": 33785,
+  "nci": 1408,
+  "te": 35193,
+  "tle": 92142,
+  "shares_out": 914.8,
+  "shares_out_date": "2014-06-30",
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    4962
+   ],
+   [
+    "Accounts receivable, net",
+    11795
+   ],
+   [
+    "Inventories and contracts in progress, net",
+    9896
+   ],
+   [
+    "Other assets, current",
+    2988
+   ],
+   [
+    "Total Current Assets",
+    29641
+   ],
+   [
+    "Fixed assets, net",
+    9026
+   ],
+   [
+    "Goodwill",
+    28378
+   ],
+   [
+    "Intangible assets, net",
+    15715
+   ],
+   [
+    "Other assets",
+    9382
+   ],
+   [
+    "Total Assets",
+    92142
+   ],
+   [
+    "Short-term debt",
+    2235
+   ],
+   [
+    "Accounts payable",
+    7297
+   ],
+   [
+    "Accrued liabilities",
+    14798
+   ],
+   [
+    "Total Current Liabilities",
+    24330
+   ],
+   [
+    "Long-term debt",
+    17837
+   ],
+   [
+    "Other long-term liabilities",
+    14636
+   ],
+   [
+    "Total Liabilities",
+    56803
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    146
+   ],
+   [
+    "Common Stock",
+    14939
+   ],
+   [
+    "Treasury Stock",
+    -21094
+   ],
+   [
+    "Retained earnings",
+    42343
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -2403
+   ],
+   [
+    "Total Shareowners' Equity",
+    33785
+   ],
+   [
+    "Noncontrolling interest",
+    1408
+   ],
+   [
+    "Total Equity",
+    35193
+   ],
+   [
+    "Total Liabilities and Equity",
+    92142
+   ],
+   [
+    "Debt to total capitalization %",
+    36
+   ],
+   [
+    "Net debt to net capitalization %",
+    30
+   ]
+  ]
+ },
+ "py": {
+  "restated": false,
+  "reason": "Values identical; the Q2-15 release (issued 21-Jul-2015, before Sikorsky was reclassified to discontinued operations in Q3-15) presents Q2-14 as reported, with Sikorsky in the segment table",
+  "source": "https://www.sec.gov/Archives/edgar/data/101829/000010182915000032/a2015-06x308xkerex99.htm",
+  "is": {
+   "sales": 17191,
+   "cogs": 12931,
+   "rnd": 666,
+   "sga": 1623,
+   "other_income": 384,
+   "op_profit": 2355,
+   "interest_exp_net": 206,
+   "ebt": 2149,
+   "tax": 359,
+   "cont_ops": 1790,
+   "net_income": 1790,
+   "nci": 110,
+   "nci_cont": 110,
+   "ni_parent": 1680,
+   "ni_parent_cont": 1680,
+   "shares_basic": 900,
+   "shares_diluted": 915,
+   "eps_basic": 1.87,
+   "eps_dil": 1.84,
+   "eps_dil_cont": 1.84,
+   "labels_note": "Q2-15 release prints \"Income before income taxes\" / \"Net income\" (no continuing / discontinued split); values identical to the Q2-14 release"
+  },
+  "seg": {
+   "segments": [
+    {
+     "name": "Otis",
+     "sales": 3365,
+     "op_profit": 693,
+     "adj_sales": 3365,
+     "adj_op": 714,
+     "restr": 21,
+     "other_items": 0,
+     "margin_pct": 20.6,
+     "adj_margin_pct": 21.2
+    },
+    {
+     "name": "UTC Climate, Controls & Security",
+     "sales": 4429,
+     "op_profit": 815,
+     "adj_sales": 4429,
+     "adj_op": 840,
+     "restr": 25,
+     "other_items": 0,
+     "margin_pct": 18.4,
+     "adj_margin_pct": 19.0
+    },
+    {
+     "name": "Pratt & Whitney",
+     "sales": 3592,
+     "op_profit": 432,
+     "adj_sales": 3592,
+     "adj_op": 519,
+     "restr": 5,
+     "other_items": -82,
+     "margin_pct": 12.0,
+     "adj_margin_pct": 14.4
+    },
+    {
+     "name": "UTC Aerospace Systems",
+     "sales": 3636,
+     "op_profit": 602,
+     "adj_sales": 3636,
+     "adj_op": 606,
+     "restr": 4,
+     "other_items": 0,
+     "margin_pct": 16.6,
+     "adj_margin_pct": 16.7
+    },
+    {
+     "name": "Sikorsky",
+     "sales": 2384,
+     "op_profit": -317,
+     "adj_sales": 1554,
+     "adj_op": 149,
+     "restr": 0,
+     "other_items": -466,
+     "margin_pct": -13.3,
+     "adj_margin_pct": 9.6
+    }
+   ],
+   "total_seg_sales": 17406,
+   "elim_sales": -215,
+   "elim_op": 249,
+   "elim_adj_op": 29,
+   "corp_op": -119,
+   "corp_adj_op": -119,
+   "fas_cas": null,
+   "acq_acct_adj": null,
+   "total_seg_op": 2225,
+   "consol_sales": 17191,
+   "consol_op": 2355,
+   "consol_adj_op": 2738,
+   "seg_note": "2014 column of the Q2-15 release; identical to the original Q2-14 release (Sikorsky still a reported segment; adjusted Sikorsky sales 1,554)"
+  },
+  "ngaap": {
+   "adj_sales_pub": 16361,
+   "adj_op_pub": 2738,
+   "adj_ni_pub": null,
+   "adj_eps_pub": null,
+   "restr_total": 55,
+   "sig_items_sales": 830,
+   "sig_items_op_total": -328,
+   "sig_items_interest": 21,
+   "tax_effect": 108,
+   "sig_items_tax": 253,
+   "items_impact_ni_parent_cont": -1,
+   "items_impact_eps_dil_cont": 0.0,
+   "items": [
+    {
+     "label": "Restructuring Costs included in Operating Profit - Otis",
+     "segment": "Otis",
+     "where": "op",
+     "pretax": -21,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Restructuring Costs included in Operating Profit - UTC Climate, Controls & Security",
+     "segment": "UTC Climate, Controls & Security",
+     "where": "op",
+     "pretax": -25,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Restructuring Costs included in Operating Profit - Pratt & Whitney",
+     "segment": "Pratt & Whitney",
+     "where": "op",
+     "pretax": -5,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Restructuring Costs included in Operating Profit - UTC Aerospace Systems",
+     "segment": "UTC Aerospace Systems",
+     "where": "op",
+     "pretax": -4,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Charge to adjust the fair value of a Pratt & Whitney joint venture investment",
+     "segment": "Pratt & Whitney",
+     "where": "op",
+     "pretax": -60,
+     "aftertax": null,
+     "cat": "IMPAIR",
+     "approx": true
+    },
+    {
+     "label": "Charge for impairment of assets related to a joint venture",
+     "segment": "Pratt & Whitney",
+     "where": "op",
+     "pretax": -22,
+     "aftertax": null,
+     "cat": "IMPAIR",
+     "approx": true
+    },
+    {
+     "label": "Canadian Maritime Helicopter Program (CMHP): cumulative adjustment to record $830 million in sales and $438 million in losses based upon the change in estimate required for the contractual amendments signed with the Canadian Government",
+     "segment": "Sikorsky",
+     "where": "op",
+     "pretax": -438,
+     "sales_impact": 830,
+     "aftertax": null,
+     "cat": "IMPAIR"
+    },
+    {
+     "label": "Charge for the impairment of a Sikorsky joint venture investment",
+     "segment": "Sikorsky",
+     "where": "op",
+     "pretax": -28,
+     "aftertax": null,
+     "cat": "IMPAIR",
+     "approx": true
+    },
+    {
+     "label": "Gain on an agreement with a state taxing authority for the monetization of tax credits",
+     "segment": "Eliminations and other",
+     "where": "op",
+     "pretax": 220,
+     "aftertax": null,
+     "cat": "OTHER",
+     "approx": true
+    },
+    {
+     "label": "Favorable pre-tax interest adjustments, primarily related to the conclusion of the IRS's examination of the Company's 2009 and 2010 tax years",
+     "segment": "Consolidated",
+     "where": "interest",
+     "pretax": 21,
+     "aftertax": null,
+     "cat": "TAXD",
+     "approx": true
+    },
+    {
+     "label": "Tax effect of restructuring and non-recurring items above",
+     "segment": "Consolidated",
+     "where": "tax",
+     "pretax": null,
+     "aftertax": 108,
+     "cat": "TAX"
+    },
+    {
+     "label": "Favorable income tax adjustments related to the conclusion of the IRS's examination of the Company's 2009 and 2010 tax years, and the settlement of state income taxes related to the disposition of the Hamilton Sundstrand Industrials businesses",
+     "segment": "Consolidated",
+     "where": "tax",
+     "pretax": null,
+     "aftertax": 253,
+     "cat": "TAXD",
+     "approx": true
+    }
+   ]
+  }
+ },
+ "notes": "Quarterly IS from the Q2-14 release; products/services split from the Q2-14 10-Q (cogs 12,931 = 10,182 + 2,749). Discontinued operations lines all \"\u2014\"; net_income 1,790 = income from continuing operations. 1,680 / 915 = 1.836 vs 1.84. Unusual item: Sikorsky Canadian Maritime Helicopter Program cumulative adjustment (+$830m sales, -$438m operating profit) recorded in Q2-14 after contractual amendments with the Canadian Government; the release adjusts both sales (adj_sales_pub 16,361) and operating profit for it. Non-recurring items in operating profit: P&W (82) = (60) JV fair value + (22) JV asset impairment; Sikorsky (466) = (438) CMHP + (28) JV impairment; Eliminations and other +220 tax-credit monetization gain. Total impact on consolidated OP (383) = restructuring (55) + items (328); items impact on diluted EPS \"\u2014\" (nil). cf.acq 72 is the net acquisitions/dispositions line (six months, net inflow). BS st_debt 2,235 is the release line incl. current LTD (2015 maturities reclassified). shares_out 914,810,016 (10-Q cover). dps 0.59 paid in Q2-14. py check per brief: Q2-15 release presents Q2-14 as reported (restated false); the Sikorsky recast appears only from the Q3-15 release."
+}

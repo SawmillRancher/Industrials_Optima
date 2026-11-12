@@ -1,0 +1,691 @@
+{
+ "period": "Q1-14",
+ "period_end": "2014-03-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/101829/000010182914000014/a2014-03x318xkerex99.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/101829/000010182914000016/a2014-03x3110xq.htm",
+  "next_release": "https://www.sec.gov/Archives/edgar/data/101829/000010182915000013/a2015-03x318xkerexhibit99.htm",
+  "next_filing": "https://www.sec.gov/Archives/edgar/data/101829/000010182915000015/a2015-03x3110xq.htm"
+ },
+ "is": {
+  "sales": 14745,
+  "sales_products": 10692,
+  "sales_services": 4053,
+  "cogs": 10690,
+  "cogs_products": 8081,
+  "cogs_services": 2609,
+  "rnd": 624,
+  "sga": 1596,
+  "other_op_lines": [],
+  "other_income": 263,
+  "op_profit": 2098,
+  "nonservice_pension": null,
+  "interest_exp_net": 225,
+  "other_nonop": null,
+  "ebt": 1873,
+  "tax": 567,
+  "cont_ops": 1306,
+  "nci_cont": 93,
+  "ni_parent_cont": 1213,
+  "shares_basic": 901,
+  "shares_diluted": 917,
+  "dps": 0.59,
+  "disc_ops": 0,
+  "net_income": 1306,
+  "nci": 93,
+  "ni_parent": 1213,
+  "eps_basic_cont": 1.35,
+  "eps_basic": 1.35,
+  "eps_dil_cont": 1.32,
+  "eps_dil": 1.32
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Otis",
+    "sales": 2955,
+    "op_profit": 570,
+    "adj_sales": 2955,
+    "adj_op": 587,
+    "restr": 17,
+    "other_items": 0,
+    "margin_pct": 19.3,
+    "adj_margin_pct": 19.9
+   },
+   {
+    "name": "UTC Climate, Controls & Security",
+    "sales": 3851,
+    "op_profit": 537,
+    "adj_sales": 3851,
+    "adj_op": 580,
+    "restr": 43,
+    "other_items": 0,
+    "margin_pct": 13.9,
+    "adj_margin_pct": 15.1
+   },
+   {
+    "name": "Pratt & Whitney",
+    "sales": 3329,
+    "op_profit": 388,
+    "adj_sales": 3329,
+    "adj_op": 430,
+    "restr": 42,
+    "other_items": 0,
+    "margin_pct": 11.7,
+    "adj_margin_pct": 12.9
+   },
+   {
+    "name": "UTC Aerospace Systems",
+    "sales": 3450,
+    "op_profit": 590,
+    "adj_sales": 3450,
+    "adj_op": 596,
+    "restr": 6,
+    "other_items": 0,
+    "margin_pct": 17.1,
+    "adj_margin_pct": 17.3
+   },
+   {
+    "name": "Sikorsky",
+    "sales": 1361,
+    "op_profit": 86,
+    "adj_sales": 1361,
+    "adj_op": 103,
+    "restr": 17,
+    "other_items": 0,
+    "margin_pct": 6.3,
+    "adj_margin_pct": 7.6
+   }
+  ],
+  "total_seg_sales": 14946,
+  "elim_sales": -201,
+  "elim_op": 39,
+  "elim_adj_op": 39,
+  "corp_op": -112,
+  "corp_adj_op": -112,
+  "fas_cas": null,
+  "acq_acct_adj": null,
+  "total_seg_op": 2171,
+  "consol_sales": 14745,
+  "consol_op": 2098,
+  "consol_adj_op": 2223,
+  "seg_note": "Five segments as printed; Segment Operating Profit Margin 14.5% (adjusted 15.4%). No non-recurring items in operating profit this quarter."
+ },
+ "kpi": {
+  "organic_growth_pct": 5.0,
+  "fx_pct": -1.0,
+  "acq_div_pct": -2.0,
+  "other": {
+   "reported sales growth %": 2,
+   "Otis new equipment orders growth %": 9,
+   "Otis new equipment orders growth China %": 27,
+   "Otis orders FX impact pts (overall / China)": "-2 / +2",
+   "UTC Climate, Controls & Security equipment orders organic growth %": 1,
+   "Pratt & Whitney large commercial engine spares orders growth %": 11,
+   "UTC Aerospace Systems commercial spares orders growth %": 9,
+   "segment operating profit growth %": 4,
+   "adjusted segment operating profit growth %": 9,
+   "EPS growth % excluding restructuring and one-time items": 10
+  }
+ },
+ "ngaap": {
+  "adj_sales_pub": 14745,
+  "adj_op_pub": 2223,
+  "adj_ni_pub": null,
+  "adj_eps_pub": null,
+  "adj_etr_pct_pub": null,
+  "fcf_pub": 1002,
+  "fcf_pub_ytd": null,
+  "eps_bridge_start": 1.32,
+  "eps_bridge_start_label": "Diluted EPS from continuing operations attributable to common shareowners",
+  "eps_bridge": [
+   [
+    "Less: Impact on Diluted Earnings Per Share from Continuing Operations of restructuring costs and non-recurring items (removal of the items; release prints the impact as -0.09)",
+    0.09
+   ]
+  ],
+  "items": [
+   {
+    "label": "Restructuring Costs included in Operating Profit - Otis",
+    "segment": "Otis",
+    "where": "op",
+    "pretax": -17,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring Costs included in Operating Profit - UTC Climate, Controls & Security",
+    "segment": "UTC Climate, Controls & Security",
+    "where": "op",
+    "pretax": -43,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring Costs included in Operating Profit - Pratt & Whitney",
+    "segment": "Pratt & Whitney",
+    "where": "op",
+    "pretax": -42,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring Costs included in Operating Profit - UTC Aerospace Systems",
+    "segment": "UTC Aerospace Systems",
+    "where": "op",
+    "pretax": -6,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring Costs included in Operating Profit - Sikorsky",
+    "segment": "Sikorsky",
+    "where": "op",
+    "pretax": -17,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Tax effect of restructuring and non-recurring items above",
+    "segment": "Consolidated",
+    "where": "tax",
+    "pretax": null,
+    "aftertax": 42,
+    "cat": "TAX"
+   }
+  ],
+  "restr_total": 125,
+  "acq_acct_adj_total": null,
+  "sig_items_op_total": 0,
+  "sig_items_op_impact_total": -125,
+  "sig_items_sales": null,
+  "sig_items_interest": null,
+  "tax_effect": 42,
+  "sig_items_tax": 0,
+  "items_impact_ni_parent_cont": -83,
+  "items_impact_eps_dil_cont": -0.09,
+  "guidance": "\"Continued organic growth and orders strength give us confidence in our sales expectation of $64 billion for 2014,\" added Chenevert. \"Based on visibility to additional restructuring projects with solid returns, we now plan to increase restructuring spending from $300 million to $375 million, which we expect to be offset by one-time gains. The sales outlook together with continued cost reduction positions us to increase the lower end of our earnings per share range. We now expect earnings per share of $6.65 to $6.85, up from $6.55 to $6.85 previously.\" Share repurchase was $335 million and UTC continues to anticipate share repurchase, acquisitions, and debt paydown of $1 billion each in 2014. The company continues to target cash flow from operations less capital expenditures equal to net income attributable to common shareowners for the year.",
+  "definitions": "Organic sales growth represents the total reported increase within the Corporation's ongoing businesses less the impact of foreign currency translation, acquisitions and divestitures completed in the preceding twelve months and significant non-recurring items. Free cash flow, which represents cash flow from operations less capital expenditures, is the principal cash performance measure used by UTC. Segment net sales, operating profits and operating profit margins are also presented 'as adjusted for restructuring costs and non-recurring items'; management believes these adjusted results more accurately portray the ongoing operational performance and fundamentals of the underlying businesses. No adjusted EPS figure is published in this release; the release states the per-share impact of restructuring and non-recurring items on diluted EPS from continuing operations."
+ },
+ "cf": {
+  "ytd_months": 3,
+  "ni": 1306,
+  "ni_label": "Income from continuing operations",
+  "dda": 467,
+  "deferred_tax": 44,
+  "sbc": 60,
+  "pension_noncash": null,
+  "k401_match": null,
+  "pension_contrib": -84,
+  "wc_lines": [
+   [
+    "Change in working capital",
+    -521
+   ]
+  ],
+  "wc_total": -521,
+  "other_op": 63,
+  "cfo": 1335,
+  "capex": -333,
+  "acq": 106,
+  "divest": null,
+  "other_intang": -142,
+  "customer_financing": null,
+  "other_inv": -73,
+  "cfi": -442,
+  "debt_issue": null,
+  "debt_repay": 6,
+  "cp_change": null,
+  "st_debt_change": -200,
+  "dividends": -514,
+  "nci_dividends": null,
+  "buyback": -335,
+  "other_fin": 48,
+  "cff": -995,
+  "fx": -40,
+  "net_change": -142,
+  "cash_begin": 4619,
+  "cash_end": 4477,
+  "cash_held_for_sale": 0,
+  "cash_end_continuing": 4477,
+  "restricted_cash": null,
+  "cash_basis": "cash",
+  "disc_ops_cf": {
+   "cfo": 0,
+   "cfi": 0,
+   "cff": null
+  },
+  "lines_raw": [
+   [
+    "Income from continuing operations",
+    1306
+   ],
+   [
+    "Depreciation and amortization",
+    467
+   ],
+   [
+    "Deferred income tax provision (benefit)",
+    44
+   ],
+   [
+    "Stock compensation cost",
+    60
+   ],
+   [
+    "Change in working capital",
+    -521
+   ],
+   [
+    "Global pension contributions",
+    -84
+   ],
+   [
+    "Other operating activities, net",
+    63
+   ],
+   [
+    "Net cash flows provided by operating activities of continuing operations",
+    1335
+   ],
+   [
+    "Capital expenditures",
+    -333
+   ],
+   [
+    "Acquisitions and dispositions of businesses, net",
+    106
+   ],
+   [
+    "Increase in collaboration intangible assets",
+    -142
+   ],
+   [
+    "Other investing activities, net",
+    -73
+   ],
+   [
+    "Net cash flows provided by (used in) investing activities of continuing operations",
+    -442
+   ],
+   [
+    "Issuance (repayment) of long-term debt, net",
+    6
+   ],
+   [
+    "Increase (decrease) in short-term borrowings, net",
+    -200
+   ],
+   [
+    "Dividends paid on Common Stock",
+    -514
+   ],
+   [
+    "Repurchase of Common Stock",
+    -335
+   ],
+   [
+    "Other financing activities, net",
+    48
+   ],
+   [
+    "Net cash flows used in financing activities of continuing operations",
+    -995
+   ],
+   [
+    "Discontinued Operations: Net cash provided by (used in) operating activities",
+    0
+   ],
+   [
+    "Discontinued Operations: Net cash provided by (used in) investing activities",
+    0
+   ],
+   [
+    "Discontinued Operations: Net cash provided by financing activities",
+    null
+   ],
+   [
+    "Net cash flows provided by (used in) discontinued operations",
+    0
+   ],
+   [
+    "Effect of foreign exchange rate changes on cash and cash equivalents",
+    -40
+   ],
+   [
+    "Net increase (decrease) in cash and cash equivalents",
+    -142
+   ],
+   [
+    "Cash and cash equivalents, beginning of period",
+    4619
+   ],
+   [
+    "Cash and cash equivalents, end of period",
+    4477
+   ],
+   [
+    "Less: Cash and cash equivalents of assets held for sale",
+    0
+   ],
+   [
+    "Cash and cash equivalents of continuing operations, end of period",
+    4477
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 4477,
+  "ar": 11537,
+  "contract_assets": null,
+  "inventory": 10992,
+  "other_ca": 2814,
+  "tca": 29820,
+  "customer_financing": null,
+  "ppe": 8895,
+  "rou": null,
+  "goodwill": 28216,
+  "intangibles": 15528,
+  "other_nca": 8770,
+  "ta": 91229,
+  "st_debt": 304,
+  "ap": 6949,
+  "accrued_comp": null,
+  "other_accrued": 15678,
+  "contract_liabilities": null,
+  "ltd_current": null,
+  "tcl": 22931,
+  "ltd": 19739,
+  "lease_ltl": null,
+  "pension_obl": null,
+  "other_ncl": 14727,
+  "tl": 57397,
+  "redeemable_nci": 137,
+  "common_stock": 14813,
+  "treasury": -20760,
+  "retained": 41205,
+  "aoci": -2941,
+  "equity_parent": 32317,
+  "nci": 1378,
+  "te": 33695,
+  "tle": 91229,
+  "shares_out": 916.7,
+  "shares_out_date": "2014-03-31",
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    4477
+   ],
+   [
+    "Accounts receivable, net",
+    11537
+   ],
+   [
+    "Inventories and contracts in progress, net",
+    10992
+   ],
+   [
+    "Other assets, current",
+    2814
+   ],
+   [
+    "Total Current Assets",
+    29820
+   ],
+   [
+    "Fixed assets, net",
+    8895
+   ],
+   [
+    "Goodwill",
+    28216
+   ],
+   [
+    "Intangible assets, net",
+    15528
+   ],
+   [
+    "Other assets",
+    8770
+   ],
+   [
+    "Total Assets",
+    91229
+   ],
+   [
+    "Short-term debt",
+    304
+   ],
+   [
+    "Accounts payable",
+    6949
+   ],
+   [
+    "Accrued liabilities",
+    15678
+   ],
+   [
+    "Total Current Liabilities",
+    22931
+   ],
+   [
+    "Long-term debt",
+    19739
+   ],
+   [
+    "Other long-term liabilities",
+    14727
+   ],
+   [
+    "Total Liabilities",
+    57397
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    137
+   ],
+   [
+    "Common Stock",
+    14813
+   ],
+   [
+    "Treasury Stock",
+    -20760
+   ],
+   [
+    "Retained earnings",
+    41205
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -2941
+   ],
+   [
+    "Total Shareowners' Equity",
+    32317
+   ],
+   [
+    "Noncontrolling interest",
+    1378
+   ],
+   [
+    "Total Equity",
+    33695
+   ],
+   [
+    "Total Liabilities and Equity",
+    91229
+   ],
+   [
+    "Debt to total capitalization %",
+    37
+   ],
+   [
+    "Net debt to net capitalization %",
+    32
+   ]
+  ]
+ },
+ "py": {
+  "restated": false,
+  "reason": "Values identical; the Q1-15 release (before the Q3-15 Sikorsky classification) presents Q1-14 as reported, with Sikorsky in the segment table",
+  "source": "https://www.sec.gov/Archives/edgar/data/101829/000010182915000013/a2015-03x318xkerexhibit99.htm",
+  "is": {
+   "sales": 14745,
+   "cogs": 10690,
+   "rnd": 624,
+   "sga": 1596,
+   "other_income": 263,
+   "op_profit": 2098,
+   "interest_exp_net": 225,
+   "ebt": 1873,
+   "tax": 567,
+   "cont_ops": 1306,
+   "net_income": 1306,
+   "nci": 93,
+   "nci_cont": 93,
+   "ni_parent": 1213,
+   "ni_parent_cont": 1213,
+   "shares_basic": 901,
+   "shares_diluted": 917,
+   "eps_basic": 1.35,
+   "eps_dil": 1.32,
+   "eps_dil_cont": 1.32,
+   "labels_note": "Q1-15 release prints \"Income before income taxes\", \"Net income\" and \"Net income attributable to common shareowners\" (no continuing / discontinued split); values identical to the Q1-14 release"
+  },
+  "seg": {
+   "segments": [
+    {
+     "name": "Otis",
+     "sales": 2955,
+     "op_profit": 570,
+     "adj_sales": 2955,
+     "adj_op": 587,
+     "restr": 17,
+     "other_items": 0,
+     "margin_pct": 19.3,
+     "adj_margin_pct": 19.9
+    },
+    {
+     "name": "UTC Climate, Controls & Security",
+     "sales": 3851,
+     "op_profit": 537,
+     "adj_sales": 3851,
+     "adj_op": 580,
+     "restr": 43,
+     "other_items": 0,
+     "margin_pct": 13.9,
+     "adj_margin_pct": 15.1
+    },
+    {
+     "name": "Pratt & Whitney",
+     "sales": 3329,
+     "op_profit": 388,
+     "adj_sales": 3329,
+     "adj_op": 430,
+     "restr": 42,
+     "other_items": 0,
+     "margin_pct": 11.7,
+     "adj_margin_pct": 12.9
+    },
+    {
+     "name": "UTC Aerospace Systems",
+     "sales": 3450,
+     "op_profit": 590,
+     "adj_sales": 3450,
+     "adj_op": 596,
+     "restr": 6,
+     "other_items": 0,
+     "margin_pct": 17.1,
+     "adj_margin_pct": 17.3
+    },
+    {
+     "name": "Sikorsky",
+     "sales": 1361,
+     "op_profit": 86,
+     "adj_sales": 1361,
+     "adj_op": 103,
+     "restr": 17,
+     "other_items": 0,
+     "margin_pct": 6.3,
+     "adj_margin_pct": 7.6
+    }
+   ],
+   "total_seg_sales": 14946,
+   "elim_sales": -201,
+   "elim_op": 39,
+   "elim_adj_op": 39,
+   "corp_op": -112,
+   "corp_adj_op": -112,
+   "fas_cas": null,
+   "acq_acct_adj": null,
+   "total_seg_op": 2171,
+   "consol_sales": 14745,
+   "consol_op": 2098,
+   "consol_adj_op": 2223,
+   "seg_note": "2014 column of the Q1-15 release; identical to the original Q1-14 release (Sikorsky still a reported segment)"
+  },
+  "ngaap": {
+   "adj_sales_pub": 14745,
+   "adj_op_pub": 2223,
+   "adj_ni_pub": null,
+   "adj_eps_pub": null,
+   "restr_total": 125,
+   "sig_items_op_total": 0,
+   "tax_effect": 42,
+   "items_impact_ni_parent_cont": -83,
+   "items_impact_eps_dil_cont": -0.09,
+   "items": [
+    {
+     "label": "Restructuring Costs included in Operating Profit - Otis",
+     "segment": "Otis",
+     "where": "op",
+     "pretax": -17,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Restructuring Costs included in Operating Profit - UTC Climate, Controls & Security",
+     "segment": "UTC Climate, Controls & Security",
+     "where": "op",
+     "pretax": -43,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Restructuring Costs included in Operating Profit - Pratt & Whitney",
+     "segment": "Pratt & Whitney",
+     "where": "op",
+     "pretax": -42,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Restructuring Costs included in Operating Profit - UTC Aerospace Systems",
+     "segment": "UTC Aerospace Systems",
+     "where": "op",
+     "pretax": -6,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Restructuring Costs included in Operating Profit - Sikorsky",
+     "segment": "Sikorsky",
+     "where": "op",
+     "pretax": -17,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Tax effect of restructuring and non-recurring items above",
+     "segment": "Consolidated",
+     "where": "tax",
+     "pretax": null,
+     "aftertax": 42,
+     "cat": "TAX"
+    }
+   ]
+  }
+ },
+ "notes": "Quarterly IS from the Q1-14 release; products/services split from the Q1-14 10-Q (cogs 10,690 = 8,081 + 2,609). Discontinued operations lines all printed \"\u2014\" (disc_ops 0); net_income 1,306 = income from continuing operations; ni_parent 1,213. 1,213 / 917 = 1.323 vs 1.32. ngaap: the Q1-14 items table has no \"Non-Recurring items included in Interest Expense, Net\" line (sig_items_interest null) and \"\u2014\" for non-recurring items in income tax. No adjusted EPS published; items impact -0.09. cf.acq 106 is the net acquisitions/dispositions line (net inflow). BS st_debt is the release line incl. current LTD. shares_out 916,731,329 (10-Q cover). dps 0.59 paid in Q1-14. py check per brief: Q1-15 release presents Q1-14 as reported (Sikorsky not yet discontinued; classification came in Q3-15), so py.restated false; labels differ only (no continuing/discontinued split in the 2015 release)."
+}

@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, RTX). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -275,7 +275,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -288,10 +288,13 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Working capital from a single-line CFO = CFO − NI − D&A − SBC − deferred tax, using XBRL for the components and noting missing tags. [WWD]
   - Recast Q4 = FY recast − 9M recast; quarters that were never recast stay blank. [LECO]
   - Each derivation is noted in the cell comment.
+- **Old conglomerate 10-Ks keep the statements in Exhibit 13;** index and fetch Ex. 13 explicitly. Earnings 8-Ks can carry the wrong item code (RTX Q3-17 filed under Item 2.01), so match releases by content, not only by item. [RTX]
+- **Year-to-date cash flow across a basis change:** when the YTD statement changes basis mid-year (discontinued operations, a new ASU), take the release three-month column for that quarter instead of differencing YTD statements, and record the override with its source. [RTX]
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
 
 ### 5.2 Basis
+- **Hybrid recast test:** adopt the following year's re-presented quarters only when all four exist and sum to the re-presented year. A complete re-presented statement replaces the original; a partial one (only changed lines) overlays it, with net income / NCI rebuilt from its own continuing and discontinued lines. [RTX, DHR]
 - **Segment re-presentation with a short recast history:** model an aggregate the re-presentation doesn't change and keep the old split as memo. Prove where an absorbed segment went using the restated comparative Δ. [RBA, TFI]
 - **Partial standard recasts** (e.g. ASC 606 recast only at total revenue for an earlier year) get a memo row for that year rather than mixing bases in the main line. [RBA]
 - **Disc-ops recast published only in totals:** scale minor opex lines to the restated totals, with SG&A as the plug, and comment the cells. [STE]
@@ -331,6 +334,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - When a published adjusted figure is later restated, record both values in the definition-row comment and say which one the check uses.
 
   [RBA, LOAR, VMC, TDY]
+- **Acquisition-accounting lines can hide impairments:** a segment table's acquisition-accounting adjustment may include goodwill impairment that the reconciliation lists as a significant item. Use the reconciliation total in the bridge so the item is not counted twice. [RTX]
 - **Rebuild a company measure exactly as published,** even if it isn't tax-effected or excludes SBC. Add a tax-effected memo variant if useful. [KRMN, TDY, VMC, MLM]
 - **Adjust only for items the company itself quantified,** and list the items it named but didn't adjust. Keep model items and company items distinguishable within a row via per-period comments, and use a labelled plug row only for definitional drift or overlapping company measures in published periods. [ODFL, BC, HEI, CHRW, UBER]
 - **Store each period's company adjusting-item wording and amounts as a comment** on the total-items cell, so the category rows can stay few without losing the audit trail. [WAB]

@@ -1,0 +1,945 @@
+{
+ "period": "Q3-23",
+ "period_end": "2023-09-30",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/101829/000010182923000034/a2023-10x248xkerexhibit99.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/101829/000010182923000037/rtx-20230930.htm",
+  "next_release": "https://www.sec.gov/Archives/edgar/data/101829/000010182924000036/a2024-10x228xkerexhibit99.htm",
+  "next_filing": "https://www.sec.gov/Archives/edgar/data/101829/000010182924000038/rtx-20240930.htm"
+ },
+ "is": {
+  "sales": 13464,
+  "sales_products": 8615,
+  "sales_services": 4849,
+  "cogs": 12750,
+  "cogs_products": 9289,
+  "cogs_services": 3461,
+  "rnd": 712,
+  "sga": 1401,
+  "other_op_lines": [],
+  "other_income": 3,
+  "op_profit": -1396,
+  "nonservice_pension": 443,
+  "interest_exp_net": 369,
+  "other_nonop": null,
+  "ebt": -1322,
+  "tax": -389,
+  "cont_ops": -933,
+  "disc_ops": 0,
+  "net_income": -933,
+  "nci": 51,
+  "nci_cont": 51,
+  "ni_parent": -984,
+  "ni_parent_cont": -984,
+  "shares_basic": 1448.1,
+  "shares_diluted": 1448.1,
+  "eps_basic": -0.68,
+  "eps_basic_cont": -0.68,
+  "eps_dil": -0.68,
+  "eps_dil_cont": -0.68,
+  "eps_dil_disc": 0,
+  "dps": 0.0
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Collins Aerospace",
+    "sales": 6629,
+    "op_profit": 903,
+    "adj_sales": 6686,
+    "adj_op": 1043,
+    "restr": 64,
+    "other_items": -76,
+    "margin_pct": 13.6,
+    "adj_margin_pct": 15.6
+   },
+   {
+    "name": "Pratt & Whitney",
+    "sales": 926,
+    "op_profit": -2482,
+    "adj_sales": 6327,
+    "adj_op": 413,
+    "restr": 7,
+    "other_items": -2888,
+    "margin_pct": -268.0,
+    "adj_margin_pct": 6.5
+   },
+   {
+    "name": "Raytheon",
+    "sales": 6472,
+    "op_profit": 560,
+    "adj_sales": 6472,
+    "adj_op": 570,
+    "restr": 9,
+    "other_items": -1,
+    "margin_pct": 8.7,
+    "adj_margin_pct": 8.8
+   }
+  ],
+  "total_seg_sales": 14027,
+  "elim_sales": -563,
+  "elim_op": -69,
+  "elim_adj_op": -39,
+  "corp_op": -63,
+  "corp_adj_op": -31,
+  "fas_cas": 272,
+  "acq_acct_adj": -517,
+  "total_seg_op": -1019,
+  "consol_sales": 13464,
+  "consol_op": -1396,
+  "consol_adj_op": 2228,
+  "seg_note": "First quarter with three segments (Collins Aerospace, Pratt & Whitney, Raytheon), effective July 1, 2023; prior periods recast. Pratt & Whitney reported sales include the $5,401m powder metal sales reduction (operating loss includes the $2,888m net charge). Collins adjusted sales 6,686 exclude a $57m litigation sales reduction; Eliminations and other adjusted sales (533) exclude the (30) prior-year R&D capitalization IRS notice item. Total segment margin (7.3)% (adjusted 10.4%).",
+  "elim_adj_sales": -533,
+  "total_seg_adj_sales": 19485,
+  "total_seg_adj_op": 2026
+ },
+ "cust": {
+  "note": "10-Q / 10-K Note \"Segment sales disaggregated by type of customer\" and \"by sales type\"; (1) excludes foreign military sales through the U.S. government; \"Other\" column as printed (Eliminations and other).",
+  "Collins Aerospace": {
+   "Sales to the U.S. government (1)": 1502,
+   "Foreign military sales through the U.S. government": 76,
+   "Foreign government direct commercial sales": 257,
+   "Commercial aerospace and other commercial sales": 4264,
+   "Products": 4761,
+   "Services": 1338,
+   "Inter-segment sales": 530
+  },
+  "Pratt & Whitney": {
+   "Sales to the U.S. government (1)": 1239,
+   "Foreign military sales through the U.S. government": 474,
+   "Foreign government direct commercial sales": 127,
+   "Commercial aerospace and other commercial sales": -914,
+   "Products": -1486,
+   "Services": 2412,
+   "Inter-segment sales": 0
+  },
+  "Raytheon": {
+   "Sales to the U.S. government (1)": 4943,
+   "Foreign military sales through the U.S. government": 767,
+   "Foreign government direct commercial sales": 636,
+   "Commercial aerospace and other commercial sales": 96,
+   "Products": 5339,
+   "Services": 1103,
+   "Inter-segment sales": 30
+  },
+  "Other": {
+   "Sales to the U.S. government (1)": -6,
+   "Foreign military sales through the U.S. government": 0,
+   "Foreign government direct commercial sales": 0,
+   "Commercial aerospace and other commercial sales": 3,
+   "Products": 1,
+   "Services": -4,
+   "Inter-segment sales": -560
+  }
+ },
+ "kpi": {
+  "organic_growth_pct": 12,
+  "fx_pct": null,
+  "acq_div_pct": null,
+  "seg_organic_pct": {},
+  "backlog_total_bn": 190,
+  "backlog_commercial_bn": 115,
+  "backlog_defense_bn": 75,
+  "seg_backlog_bn": {
+   "Raytheon": 50
+  },
+  "defense_bookings_bn": 12,
+  "narrative_growth_pct": {
+   "collins_commercial_oe": 27,
+   "collins_commercial_aftermarket": 30,
+   "collins_defense": -1,
+   "pw_commercial_oe": 25,
+   "pw_commercial_aftermarket": 21,
+   "pw_military": 7
+  },
+  "other": {
+   "reported sales growth %": -21,
+   "adjusted sales growth %": 12,
+   "share repurchases in quarter $bn": 1.4,
+   "accelerated share repurchase program announced $bn": 10,
+   "capital return commitment through 2025 $bn (updated)": "36 - 37 (from 33 - 35)",
+   "Cybersecurity, Intelligence and Services sale price $bn (approx, announced)": 1.3
+  }
+ },
+ "ngaap": {
+  "adj_sales_pub": 18952,
+  "adj_op_pub": 2228,
+  "adj_ni_pub": 1822,
+  "adj_eps_pub": 1.25,
+  "adj_etr_pct_pub": 18.6,
+  "etr_pct_pub": 29.4,
+  "fcf_pub": 2752,
+  "fcf_pub_ytd": 1562,
+  "adj_shares_diluted": 1455.7,
+  "eps_bridge_start": -0.68,
+  "eps_bridge_start_label": "Diluted Earnings (Loss) Per Share",
+  "eps_bridge": [
+   [
+    "Impact on Diluted Earnings Per Share (removal of the items; release prints (1.93))",
+    1.93
+   ]
+  ],
+  "items": [
+   {
+    "label": "Charges related to a litigation matter",
+    "segment": "Collins Aerospace",
+    "where": "op",
+    "pretax": -57,
+    "aftertax": null,
+    "cat": "LEGAL",
+    "sales_impact": -57
+   },
+   {
+    "label": "Restructuring",
+    "segment": "Collins Aerospace",
+    "where": "op",
+    "pretax": -64,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Segment and portfolio transformation costs",
+    "segment": "Collins Aerospace",
+    "where": "op",
+    "pretax": -19,
+    "aftertax": null,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Powder metal charge (1)",
+    "segment": "Pratt & Whitney",
+    "where": "op",
+    "pretax": -5401,
+    "aftertax": null,
+    "cat": "IMPAIR",
+    "line": "Net sales",
+    "note": "Reduction of net sales of $5.4 billion, partially offset by a net reduction of cost of sales of $2.5 billion (partners' 49% share); the operating profit effect is the separate (2,888) item. Not included in sig_items_op_total; included in sig_items_sales_total."
+   },
+   {
+    "label": "Powder metal charge (1)",
+    "segment": "Pratt & Whitney",
+    "where": "op",
+    "pretax": -2888,
+    "aftertax": null,
+    "cat": "IMPAIR",
+    "sales_impact": -5401
+   },
+   {
+    "label": "Restructuring",
+    "segment": "Pratt & Whitney",
+    "where": "op",
+    "pretax": -7,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring",
+    "segment": "Raytheon",
+    "where": "op",
+    "pretax": -9,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Segment and portfolio realignment costs",
+    "segment": "Raytheon",
+    "where": "op",
+    "pretax": -1,
+    "aftertax": null,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Prior year impact from R&D capitalization IRS notice (3)",
+    "segment": "Eliminations and Other",
+    "where": "op",
+    "pretax": -30,
+    "aftertax": null,
+    "cat": "TAXD",
+    "sales_impact": -30
+   },
+   {
+    "label": "Restructuring",
+    "segment": "Corporate expenses and other unallocated items",
+    "where": "op",
+    "pretax": -24,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Segment and portfolio transformation costs",
+    "segment": "Corporate expenses and other unallocated items",
+    "where": "op",
+    "pretax": -8,
+    "aftertax": null,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Acquisition accounting adjustments",
+    "segment": "Acquisition Accounting Adjustments",
+    "where": "op",
+    "pretax": -517,
+    "aftertax": null,
+    "cat": "AMORT"
+   },
+   {
+    "label": "Non-service pension restructuring",
+    "segment": "Consolidated",
+    "where": "nonservice_pension",
+    "pretax": 0,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Tax effect of restructuring and net significant and/or non-recurring items above",
+    "segment": "Consolidated",
+    "where": "tax",
+    "pretax": null,
+    "aftertax": 826,
+    "cat": "TAX"
+   },
+   {
+    "label": "Prior year impact from R&D capitalization IRS notice (3)",
+    "segment": "Consolidated",
+    "where": "tax",
+    "pretax": null,
+    "aftertax": -8,
+    "cat": "TAXD"
+   }
+  ],
+  "restr_total": 104,
+  "acq_acct_adj_total": -517,
+  "sig_items_op_total": -3003,
+  "sig_items_sales_total": -5488,
+  "sig_items_nonservice_pension": 0,
+  "tax_effect": 826,
+  "sig_items_tax": -8,
+  "items_impact_ni_parent": -2806,
+  "items_impact_eps_dil": -1.93,
+  "guidance": "Updates outlook for full year 2023: Reported sales of approximately $68.5 billion, up from $67.5 - $68.5 billion; Adjusted sales* of approximately $74.0 billion, up from $73.0 - $74.0 billion; Adjusted EPS* of $4.98 - $5.02 from $4.95 - $5.05; Free cash flow* of approximately $4.8 billion, up from approximately $4.3 billion; Share repurchase spending of approximately $12.8 billion of RTX shares, up from $3.0 billion. Accelerated Share Repurchase Program: The RTX board of directors has approved a $10 billion accelerated share repurchase program commencing almost immediately; This will result in an increase to RTX's post-merger shareowner capital return commitment to $36 - $37 billion through 2025, up from the prior range of $33 - $35 billion; The program will be funded through a combination of short and long-term debt, with deleveraging to begin in 2024 in part supported by proceeds from the previously announced dispositions including Collins' actuation and flight control business in July, as well as Raytheon's Cybersecurity, Intelligence and Services business. \"We have made significant progress on our assessment of the Pratt & Whitney powder metal manufacturing matter and expect the financial impact to be in line with the previously disclosed charge ... We do not expect any significant future incremental impact as a result of these fleet management plans.\"",
+  "definitions": "Adjusted net sales represents consolidated net sales (a GAAP measure), excluding significant nonoperational items and/or significant operational items that may occur at irregular intervals (\"net significant and/or non-recurring items\"). Organic sales represents the change in consolidated net sales (a GAAP measure), excluding the impact of foreign currency translation, acquisitions and divestitures completed in the preceding twelve months and net significant and/or non-recurring items. Adjusted operating profit (loss) represents operating profit (loss) (a GAAP measure), excluding restructuring costs, acquisition accounting adjustments and net significant and/or non-recurring items. Acquisition accounting adjustments include the amortization of acquired intangible assets related to acquisitions, the amortization of the property, plant and equipment fair value adjustment acquired through acquisitions, the amortization of customer contractual obligations related to loss making or below market contracts acquired, and goodwill impairment. Adjusted net income represents net income from continuing operations (a GAAP measure), excluding restructuring costs, acquisition accounting adjustments and net significant and/or non-recurring items. Adjusted EPS represents diluted earnings per share from continuing operations (a GAAP measure), excluding restructuring costs, acquisition accounting adjustments and net significant and/or non-recurring items. Free cash flow is a non-GAAP financial measure that represents cash flow from operations (a GAAP measure) less capital expenditures. Adjusted operating profit margin represents adjusted operating profit (loss) as a percentage of adjusted net sales. Adjusted segment operating profit (loss) represents the combined operating profit (loss) (a GAAP measure) of our business segments, excluding restructuring costs, and net significant and/or non-recurring items (Q3-23 wording: segment operating profit (loss) represents operating profit (loss) (a GAAP measure) excluding Acquisition Accounting Adjustments, the FAS/CAS operating adjustment, Corporate expenses and other unallocated items, and Eliminations and other). Adjusted segment operating profit margin represents adjusted segment operating profit (loss) as a percentage of adjusted segment sales."
+ },
+ "cf": {
+  "ytd_months": 9,
+  "ni": 1907,
+  "ni_label": "Net income (loss) from continuing operations",
+  "dda": 3152,
+  "deferred_tax": -728,
+  "sbc": 319,
+  "pension_noncash": -1164,
+  "k401_match": null,
+  "pension_contrib": null,
+  "wc_lines": [
+   [
+    "Accounts receivable",
+    -913
+   ],
+   [
+    "Contract assets",
+    -1163
+   ],
+   [
+    "Inventory",
+    -1430
+   ],
+   [
+    "Other current assets",
+    -878
+   ],
+   [
+    "Accounts payable and accrued liabilities",
+    3422
+   ],
+   [
+    "Contract liabilities",
+    429
+   ]
+  ],
+  "wc_total": -533,
+  "other_op": 219,
+  "cfo": 3172,
+  "capex": -1610,
+  "acq": 0,
+  "divest": 6,
+  "other_intang": -536,
+  "customer_financing": 41,
+  "other_inv": 38,
+  "cfi": -2061,
+  "debt_issue": 2974,
+  "debt_repay": -175,
+  "cp_change": 473,
+  "st_debt_change": 68,
+  "dividends": -2472,
+  "nci_dividends": null,
+  "buyback": -2587,
+  "other_fin": -190,
+  "cff": -1909,
+  "fx": 4,
+  "net_change": -794,
+  "cash_begin": 6291,
+  "cash_end": 5497,
+  "restricted_cash": 41,
+  "cash_basis": "cash+restricted",
+  "disc_ops_cf": {
+   "cfo": null,
+   "cfi": null,
+   "cff": null
+  },
+  "lines_raw": [
+   [
+    "Net income (loss) from continuing operations",
+    1907
+   ],
+   [
+    "Depreciation and amortization",
+    3152
+   ],
+   [
+    "Deferred income tax benefit",
+    -728
+   ],
+   [
+    "Stock compensation cost",
+    319
+   ],
+   [
+    "Net periodic pension and other postretirement income",
+    -1164
+   ],
+   [
+    "Accounts receivable",
+    -913
+   ],
+   [
+    "Contract assets",
+    -1163
+   ],
+   [
+    "Inventory",
+    -1430
+   ],
+   [
+    "Other current assets",
+    -878
+   ],
+   [
+    "Accounts payable and accrued liabilities",
+    3422
+   ],
+   [
+    "Contract liabilities",
+    429
+   ],
+   [
+    "Other operating activities, net",
+    219
+   ],
+   [
+    "Net cash flows provided by operating activities from continuing operations",
+    3172
+   ],
+   [
+    "Capital expenditures",
+    -1610
+   ],
+   [
+    "Investments in businesses",
+    0
+   ],
+   [
+    "Dispositions of businesses, net of cash transferred",
+    6
+   ],
+   [
+    "Customer financing assets (payments) receipts, net",
+    41
+   ],
+   [
+    "Increase in other intangible assets",
+    -536
+   ],
+   [
+    "Payments from settlements of derivative contracts, net",
+    -18
+   ],
+   [
+    "Other investing activities, net",
+    56
+   ],
+   [
+    "Net cash flows used in investing activities from continuing operations",
+    -2061
+   ],
+   [
+    "Issuance of long-term debt",
+    2974
+   ],
+   [
+    "Repayment of long-term debt",
+    -175
+   ],
+   [
+    "Change in commercial paper, net",
+    473
+   ],
+   [
+    "Change in other short-term borrowings, net",
+    68
+   ],
+   [
+    "Dividends paid on common stock",
+    -2472
+   ],
+   [
+    "Repurchase of common stock",
+    -2587
+   ],
+   [
+    "Other financing activities, net",
+    -190
+   ],
+   [
+    "Net cash flows (used in) provided by financing activities from continuing operations",
+    -1909
+   ],
+   [
+    "Effect of foreign exchange rate changes on cash and cash equivalents from continuing operations",
+    4
+   ],
+   [
+    "Net increase (decrease) in cash, cash equivalents and restricted cash",
+    -794
+   ],
+   [
+    "Cash, cash equivalents and restricted cash, beginning of period",
+    6291
+   ],
+   [
+    "Cash, cash equivalents and restricted cash, end of period",
+    5497
+   ],
+   [
+    "Less: Restricted cash, included in Other assets, current and Other assets",
+    41
+   ],
+   [
+    "Cash and cash equivalents, end of period",
+    5456
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 5456,
+  "ar": 10058,
+  "contract_assets": 12696,
+  "inventory": 12050,
+  "other_ca": 6258,
+  "tca": 46518,
+  "customer_financing": 2452,
+  "ppe": 15347,
+  "rou": 1755,
+  "goodwill": 53883,
+  "intangibles": 35865,
+  "other_nca": 6623,
+  "ta": 162443,
+  "st_debt": 1170,
+  "ap": 10315,
+  "accrued_comp": 2597,
+  "other_accrued": 14283,
+  "contract_liabilities": 15248,
+  "ltd_current": 1389,
+  "tcl": 45002,
+  "ltd": 32701,
+  "lease_ltl": 1523,
+  "pension_obl": 4457,
+  "other_ncl": 7514,
+  "tl": 91197,
+  "redeemable_nci": 33,
+  "common_stock": 38369,
+  "treasury": -18170,
+  "retained": 51513,
+  "aoci": -2116,
+  "equity_parent": 69596,
+  "nci": 1617,
+  "te": 71213,
+  "tle": 162443,
+  "shares_out": 1437.9,
+  "shares_out_date": "2023-09-30 (10-Q cover: 1,437,901,284 shares)",
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    5456
+   ],
+   [
+    "Accounts receivable, net",
+    10058
+   ],
+   [
+    "Contract assets",
+    12696
+   ],
+   [
+    "Inventory, net",
+    12050
+   ],
+   [
+    "Other assets, current",
+    6258
+   ],
+   [
+    "Total current assets",
+    46518
+   ],
+   [
+    "Customer financing assets",
+    2452
+   ],
+   [
+    "Fixed assets, net",
+    15347
+   ],
+   [
+    "Operating lease right-of-use assets",
+    1755
+   ],
+   [
+    "Goodwill",
+    53883
+   ],
+   [
+    "Intangible assets, net",
+    35865
+   ],
+   [
+    "Other assets",
+    6623
+   ],
+   [
+    "Total assets",
+    162443
+   ],
+   [
+    "Short-term borrowings",
+    1170
+   ],
+   [
+    "Accounts payable",
+    10315
+   ],
+   [
+    "Accrued employee compensation",
+    2597
+   ],
+   [
+    "Other accrued liabilities",
+    14283
+   ],
+   [
+    "Contract liabilities",
+    15248
+   ],
+   [
+    "Long-term debt currently due",
+    1389
+   ],
+   [
+    "Total current liabilities",
+    45002
+   ],
+   [
+    "Long-term debt",
+    32701
+   ],
+   [
+    "Operating lease liabilities, non-current",
+    1523
+   ],
+   [
+    "Future pension and postretirement benefit obligations",
+    4457
+   ],
+   [
+    "Other long-term liabilities",
+    7514
+   ],
+   [
+    "Total liabilities",
+    91197
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    33
+   ],
+   [
+    "Common stock",
+    38369
+   ],
+   [
+    "Treasury stock",
+    -18170
+   ],
+   [
+    "Retained earnings",
+    51513
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -2116
+   ],
+   [
+    "Total shareowners\u2019 equity",
+    69596
+   ],
+   [
+    "Noncontrolling interest",
+    1617
+   ],
+   [
+    "Total equity",
+    71213
+   ],
+   [
+    "Total liabilities, redeemable noncontrolling interest and equity",
+    162443
+   ]
+  ]
+ },
+ "py": {
+  "restated": false,
+  "reason": "Q3-24 release and 10-Q prior-year columns are identical to the Q3-23 documents (segment labels only: \"Powder Metal charge\"). No further 2024 realignment of 2023 figures is visible.",
+  "source": "https://www.sec.gov/Archives/edgar/data/101829/000010182924000036/a2024-10x228xkerexhibit99.htm ; https://www.sec.gov/Archives/edgar/data/101829/000010182924000038/rtx-20240930.htm",
+  "is": {
+   "sales": 13464,
+   "cogs": 12750,
+   "rnd": 712,
+   "sga": 1401,
+   "other_op_lines": [],
+   "other_income": 3,
+   "op_profit": -1396,
+   "nonservice_pension": 443,
+   "interest_exp_net": 369,
+   "ebt": -1322,
+   "tax": -389,
+   "net_income": -933,
+   "nci": 51,
+   "ni_parent": -984,
+   "shares_basic": 1448.1,
+   "shares_diluted": 1448.1,
+   "eps_basic": -0.68,
+   "eps_dil": -0.68
+  },
+  "seg": {
+   "segments": [
+    {
+     "name": "Collins Aerospace",
+     "sales": 6629,
+     "op_profit": 903,
+     "adj_sales": 6686,
+     "adj_op": 1043,
+     "restr": 64,
+     "other_items": -76,
+     "margin_pct": 13.6,
+     "adj_margin_pct": 15.6
+    },
+    {
+     "name": "Pratt & Whitney",
+     "sales": 926,
+     "op_profit": -2482,
+     "adj_sales": 6327,
+     "adj_op": 413,
+     "restr": 7,
+     "other_items": -2888,
+     "margin_pct": -268.0,
+     "adj_margin_pct": 6.5
+    },
+    {
+     "name": "Raytheon",
+     "sales": 6472,
+     "op_profit": 560,
+     "adj_sales": 6472,
+     "adj_op": 570,
+     "restr": 9,
+     "other_items": -1,
+     "margin_pct": 8.7,
+     "adj_margin_pct": 8.8
+    }
+   ],
+   "total_seg_sales": 14027,
+   "elim_sales": -563,
+   "elim_op": -69,
+   "elim_adj_op": -39,
+   "corp_op": -63,
+   "corp_adj_op": -31,
+   "fas_cas": 272,
+   "acq_acct_adj": -517,
+   "total_seg_op": -1019,
+   "consol_sales": 13464,
+   "consol_op": -1396,
+   "consol_adj_op": 2228,
+   "seg_note": "As presented in the Q3-24 release (identical to Q3-23 release).",
+   "elim_adj_sales": -533,
+   "total_seg_adj_sales": 19485,
+   "total_seg_adj_op": 2026
+  },
+  "cust": {
+   "note": "Q3-24 10-Q prior-year columns (identical to the Q3-23 10-Q).",
+   "Collins Aerospace": {
+    "Sales to the U.S. government (1)": 1502,
+    "Foreign military sales through the U.S. government": 76,
+    "Foreign government direct commercial sales": 257,
+    "Commercial aerospace and other commercial sales": 4264,
+    "Products": 4761,
+    "Services": 1338,
+    "Inter-segment sales": 530
+   },
+   "Pratt & Whitney": {
+    "Sales to the U.S. government (1)": 1239,
+    "Foreign military sales through the U.S. government": 474,
+    "Foreign government direct commercial sales": 127,
+    "Commercial aerospace and other commercial sales": -914,
+    "Products": -1486,
+    "Services": 2412,
+    "Inter-segment sales": 0
+   },
+   "Raytheon": {
+    "Sales to the U.S. government (1)": 4943,
+    "Foreign military sales through the U.S. government": 767,
+    "Foreign government direct commercial sales": 636,
+    "Commercial aerospace and other commercial sales": 96,
+    "Products": 5339,
+    "Services": 1103,
+    "Inter-segment sales": 30
+   },
+   "Other": {
+    "Sales to the U.S. government (1)": -6,
+    "Foreign military sales through the U.S. government": 0,
+    "Foreign government direct commercial sales": 0,
+    "Commercial aerospace and other commercial sales": 3,
+    "Products": 1,
+    "Services": -4,
+    "Inter-segment sales": -560
+   }
+  },
+  "ngaap": {
+   "adj_sales_pub": 18952,
+   "adj_op_pub": 2228,
+   "adj_ni_pub": 1822,
+   "adj_eps_pub": 1.25,
+   "adj_etr_pct_pub": 18.6,
+   "restr_total": 104,
+   "acq_acct_adj_total": -517,
+   "sig_items_op_total": -3003,
+   "sig_items_sales_total": -5488,
+   "tax_effect": 826,
+   "items": [
+    {
+     "label": "Charges related to a litigation matter",
+     "segment": "Collins Aerospace",
+     "where": "op",
+     "pretax": -57,
+     "aftertax": null,
+     "cat": "LEGAL",
+     "sales_impact": -57
+    },
+    {
+     "label": "Restructuring",
+     "segment": "Collins Aerospace",
+     "where": "op",
+     "pretax": -64,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Segment and portfolio transformation costs",
+     "segment": "Collins Aerospace",
+     "where": "op",
+     "pretax": -19,
+     "aftertax": null,
+     "cat": "ACQ"
+    },
+    {
+     "label": "Powder Metal charge",
+     "segment": "Pratt & Whitney",
+     "where": "op",
+     "pretax": -2888,
+     "aftertax": null,
+     "cat": "IMPAIR",
+     "sales_impact": -5401
+    },
+    {
+     "label": "Restructuring",
+     "segment": "Pratt & Whitney",
+     "where": "op",
+     "pretax": -7,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Restructuring",
+     "segment": "Raytheon",
+     "where": "op",
+     "pretax": -9,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Segment and portfolio transformation costs",
+     "segment": "Raytheon",
+     "where": "op",
+     "pretax": -1,
+     "aftertax": null,
+     "cat": "ACQ"
+    },
+    {
+     "label": "Prior year impact from R&D capitalization IRS notice",
+     "segment": "Eliminations and Other",
+     "where": "op",
+     "pretax": -30,
+     "aftertax": null,
+     "cat": "TAXD",
+     "sales_impact": -30
+    },
+    {
+     "label": "Restructuring",
+     "segment": "Corporate expenses and other unallocated items",
+     "where": "op",
+     "pretax": -24,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Segment and portfolio transformation costs",
+     "segment": "Corporate expenses and other unallocated items",
+     "where": "op",
+     "pretax": -8,
+     "aftertax": null,
+     "cat": "ACQ"
+    },
+    {
+     "label": "Acquisition accounting adjustments",
+     "segment": "Acquisition Accounting Adjustments",
+     "where": "op",
+     "pretax": -517,
+     "aftertax": null,
+     "cat": "AMORT"
+    },
+    {
+     "label": "Tax effect of restructuring and net significant and/or non-recurring items above",
+     "segment": "Consolidated",
+     "where": "tax",
+     "pretax": null,
+     "aftertax": 826,
+     "cat": "TAX"
+    },
+    {
+     "label": "Prior year R&D state tax item",
+     "segment": "Consolidated",
+     "where": "tax",
+     "pretax": null,
+     "aftertax": -8,
+     "cat": "TAXD"
+    }
+   ]
+  }
+ },
+ "notes": "Powder metal matter: Q3-23 net pre-tax charge $2.9bn (reduction of sales $5,401m partially offset by a $2.5bn net reduction of cost of sales, partners' 49% share); recorded as two items (sales line -5,401 flagged line=\"Net sales\", excluded from sig_items_op_total; operating profit -2,888). Diluted shares equal basic (1,448.1) because of the loss; the release gives adjusted diluted shares 1,455.7 (adj_shares_diluted) - adj_ni_pub / reported diluted shares = 1.258 vs published 1.25 (within tolerance). Reported segment margin for Pratt & Whitney (268.0)% as printed. Nine-month FCF 1,562 in fcf_pub_ytd. Q3-23 10-Q: state income taxes allocable to U.S. government contracts (legacy RIS/RMD) reclassified from SG&A to income tax expense with prior periods reclassified (nine-month SG&A 4,364 vs 4,434 sum of originally reported quarters). DPS \"\u2014\" (no dividend declared in Q3; two declared in Q2). All self-checks pass."
+}

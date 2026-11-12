@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -12,13 +12,13 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 
 | Situation | Read |
 |---|---|
-| Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
+| Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW, RTX |
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
-| Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
+| Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB, RTX |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
-| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
+| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM, RTX (UTC → RTX: Sikorsky, Otis / Carrier, Raytheon merger) |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
@@ -28,7 +28,7 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
 | Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
-| Pension (CAS / FAS, non-service income) | HII, CW |
+| Pension (CAS / FAS, non-service income) | HII, CW, RTX |
 | Private company, LBO | R&Y |
 
 ---
@@ -210,6 +210,58 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [bridges] Store the company's line-item wording and amounts per period as a comment on the total-adjustments cell. Category rows can then stay few while the audit trail is kept.
   - [bridges] Narrative-only per-share bridges: input $/share as published (split-adjusted) and convert at diluted shares in a separately labelled row.
   - [build] Without published orders, derive implied orders from the backlog roll-forward and label what it includes (FX, acquired backlog).
+
+### RTX — RTX Corporation, formerly United Technologies / Raytheon Technologies (MLM template via WWD kit; US GAAP / USD m / calendar FY)
+- **Coverage & basis:**
+  - Columns: 2006–12 annual, Q1/13–Q3/26 quarterly, Q4/26E, 2026E, 2027E–31E. One CIK throughout (0000101829).
+  - Hybrid recast for the income statement, segments and adjusted figures. A year takes the following year's re-presented quarters only when all four were re-presented *and* they sum to the re-presented year. That gives 2015 (Sikorsky), 2016 (ASU 2016-09), 2017 (ASU 2017-07), 2019 (Otis / Carrier), 2020 (RIS / RMD) and 2023 (Collins / Raytheon realignment).
+  - Partial recasts stay as reported with memo rows: 2014 and 2022 had only Q3–Q4 re-presented.
+  - 2007–11 use the latest 10-K presentation. 2006–07 revenues still include other income ($711m in 2006).
+  - BS and CF are as originally reported.
+- **Operating build:**
+  - Segments come from the 10-Q / 10-K disaggregation by type of customer (2018+). Collins and Pratt & Whitney are split commercial vs defense (U.S. government + FMS + foreign direct). Raytheon is split U.S. government vs international vs commercial.
+  - Inter-segment sales are a separate line; the build checks to the segment table.
+  - Segment lineage: Hamilton Sundstrand → UTAS → Collins, and RIS + RMD → Raytheon.
+  - Legacy Otis, Carrier / CCS, Fire & Security and Sikorsky are memo rows included in the consolidated totals in their years.
+  - Below the segments sit the FAS/CAS operating adjustment (CAS pension cost recovered in pricing − FAS service cost) and acquisition accounting adjustments, both separate lines from Q2-20.
+- **Bridges & definitions:**
+  - Adjusted OP: UTC 2013–19 excluded restructuring and significant items only; amortization was added from Q2-20 (Raytheon merger).
+  - 2006–12 have no published adjusted EPS. Net items are derived from the published adjusted OP where a later-basis figure exists (2009, 2011); 2010 adjusted OP exists only on the original basis and is a memo.
+  - UTC published no segment adjusted OP before 2013. Consolidated items not allocated to segments sit in a labelled eliminations-and-other line so that the segment build ties.
+  - The Q2-20 $3,183m Collins goodwill impairment is in the segment table's acquisition-accounting line but is a significant item in the reconciliation. The bridge uses the reconciliation's acquisition-accounting total.
+  - Adjusted EBITDA is a model definition.
+  - Q1-20 adjusted EPS uses 866m adjusted diluted shares (858m GAAP in a loss quarter).
+- **Data quirks & corrections:**
+  - FY2006–18 statements are in 10-K Exhibit 13, which the 10-K index fetch skips by default.
+  - The Q3-17 earnings 8-K was filed under Item 2.01, not 2.02.
+  - Some re-presented comparatives print only the changed lines (2016 ASU 2016-09 tax), so net income and NCI are rebuilt from the comparative's own continuing and discontinued lines.
+  - Five cash-flow quarters cross a basis change, so they come from the release three-month columns: Q2-15, Q3-15, Q3-16, Q4-16, Q2-20. Discontinued operations, ASU 2016-15 / 2016-18 and Otis / Carrier would otherwise make 9M − H1 mix bases.
+  - Some Q4 records carry 12-month FCF in the quarter field; it is dropped when it equals the year-to-date figure.
+  - 1,402 data checks pass, and 176 XBRL comparisons all match.
+- **Deals & special blocks:**
+  - Goodrich (Jul-12, $16.4bn), Rockwell Collins (Nov-18, $23.5bn + $7.8bn debt) and the all-stock Raytheon merger (Apr-20, $33.2bn; 648.4m shares) are history only.
+  - No pending deals. The M&A lever is nil in Base and $500m p.a. in Bull.
+- **Calibration & scenarios:**
+  - The SEC-filed releases print only company-level 2026 ranges: adjusted sales $97.0–97.5bn, organic growth 10–11%, adjusted EPS $7.65–7.75, FCF $9.0–9.2bn.
+  - Segment, tax, interest and pension outlooks were call-only, so the Q4 point estimates are labelled "not guided in any SEC filing".
+  - Three solves: a uniform customer-line growth Δ to sales (−6.5pp vs the 9M rate), a uniform segment-margin Δ to adjusted EPS (−1.3pp; Q3 margins included IEEPA tariff refunds), and 2026E contract assets to FCF. Contract-asset days are then held at the 2026E level.
+- **Balance sheet, cash & capital:**
+  - Q3-26 10-Q debt ladder ($2.9bn due in Q4-26), with half of 2027E+ maturities refinanced.
+  - Commercial paper / incremental borrowings run to a $6bn minimum cash balance, with a headroom memo vs the $5bn revolver.
+  - Leverage-floor buybacks at 1.75x / 1.25x / 0.75x (no published target). The 10-Q flags an executive order that may limit defense-contractor buybacks.
+  - Non-cash pension income accretes other assets; deferred tax and other operating items go to other long-term liabilities; the 401(k) share match goes to equity.
+- **Valuation:**
+  - Price $201.70: Form 4 open-market sale on 30-Oct-2026 (filed 3-Nov-2026).
+  - 2026E is the base year (FY end seven weeks after valuation), so the explicit years are 2027–31E.
+  - NOPAT is on adjusted OP: before acquired amortization, after stock compensation and FAS/CAS, less restructuring, at 19% tax. Non-service pension income is excluded; NCI and redeemable NCI are deducted.
+  - Base DCF $199, Bull $251, Bear $128.
+- **Reusable lessons:**
+  - [basis] Adopt a re-presented year only when all four quarterly comparatives exist and sum to the re-presented year. A complete re-presented statement replaces the original; a partial one overlays it, and bottom lines are rebuilt from the comparative's own components.
+  - [extraction] When a year-to-date cash-flow statement changes basis mid-year (discontinued operations, new ASU), take the release's three-month column for that quarter instead of differencing.
+  - [bridges] Check whether a segment table's acquisition-accounting line includes goodwill impairment that the reconciliation lists as a significant item, and take the reconciliation's total for the bridge.
+  - [build] For A&D primes, the ASC 606 "type of customer" disaggregation (U.S. government / FMS / foreign direct / commercial) gives a commercial vs defense split by segment with a full 2018+ history.
+  - [sources] Old conglomerate 10-Ks keep the statements in Exhibit 13: index and fetch Ex. 13 explicitly. Earnings 8-Ks can carry the wrong item code (Q3-17 under 2.01).
+  - [tooling] Long parallel extractions can be cut by rate limits. Have agents write builder scripts to the scratchpad and resume them with SendMessage, rather than restarting.
 
 ## Construction materials
 

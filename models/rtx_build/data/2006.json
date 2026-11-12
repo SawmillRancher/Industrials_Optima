@@ -1,0 +1,948 @@
+{
+ "period": "2006",
+ "period_end": "2006-12-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/101829/000119312507010498/dex991.htm",
+  "next_release": "https://www.sec.gov/Archives/edgar/data/101829/000119312508010089/dex99.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/101829/000119312507024306/d10k.htm",
+  "filing_ex13": "https://www.sec.gov/Archives/edgar/data/101829/000119312507024306/dex13.htm",
+  "next_filing": "https://www.sec.gov/Archives/edgar/data/101829/000119312508022346/d10k.htm",
+  "next_filing_ex13": "https://www.sec.gov/Archives/edgar/data/101829/000119312508022346/dex13.htm",
+  "filing_2y": "https://www.sec.gov/Archives/edgar/data/101829/000119312509024624/d10k.htm",
+  "filing_2y_ex13": "https://www.sec.gov/Archives/edgar/data/101829/000119312509024624/dex13.htm"
+ },
+ "is": {
+  "sales": 47829,
+  "sales_label": "Revenues (includes Financing revenues and other income, net)",
+  "sales_products": 34271,
+  "sales_services": 12847,
+  "other_income_in_revenues": 711,
+  "cogs": 34740,
+  "cogs_products": 26089,
+  "cogs_services": 8651,
+  "rnd": 1529,
+  "sga": 5462,
+  "other_op_lines": [],
+  "other_income": null,
+  "op_profit": 6098,
+  "interest_exp": 606,
+  "ebt": 5492,
+  "ebt_label": "Income before income taxes and minority interests",
+  "tax": 1494,
+  "nci": 266,
+  "nci_label": "Minority interests in subsidiaries\u2019 earnings (deducted above net income, pre-SFAS 160)",
+  "cumulative_effect_accounting_change": 0.0,
+  "net_income": 3732,
+  "ni_parent": 3732,
+  "shares_basic": 980.0,
+  "shares_diluted": 1005.7,
+  "eps_basic": 3.81,
+  "eps_dil": 3.71,
+  "dps": 1.02
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Otis",
+    "sales": 10290,
+    "op_profit": 1888,
+    "restr": 46
+   },
+   {
+    "name": "Carrier",
+    "sales": 13481,
+    "op_profit": 1237,
+    "restr": 69,
+    "other_items": 60
+   },
+   {
+    "name": "UTC Fire & Security",
+    "sales": 4747,
+    "op_profit": 301,
+    "restr": 44
+   },
+   {
+    "name": "Pratt & Whitney",
+    "sales": 11112,
+    "op_profit": 1817,
+    "restr": 68,
+    "other_items": 105
+   },
+   {
+    "name": "Hamilton Sundstrand",
+    "sales": 4995,
+    "op_profit": 832,
+    "restr": 40
+   },
+   {
+    "name": "Sikorsky",
+    "sales": 3230,
+    "op_profit": 173,
+    "restr": 21
+   }
+  ],
+  "total_seg_sales": 47855,
+  "elim_sales": -26,
+  "elim_op": 187,
+  "corp_op": -337,
+  "fas_cas": null,
+  "acq_acct_adj": null,
+  "total_seg_op": 6248,
+  "consol_sales": 47829,
+  "consol_op": 6098,
+  "seg_note": "Six segments (Otis, Carrier, UTC Fire & Security, Pratt & Whitney, Hamilton Sundstrand, Sikorsky); segment \"Revenues\" include intersegment sales and other income.",
+  "elim_restr": 0,
+  "corp_restr": 0
+ },
+ "kpi": {
+  "organic_growth_pct": 9.0,
+  "fx_pct": 1.0,
+  "acq_div_pct": 2.0,
+  "backlog_total_bn": 44.336,
+  "seg_backlog_bn": {
+   "Otis": 11.583,
+   "Carrier": 1.852,
+   "UTC Fire & Security": 0.692,
+   "Pratt & Whitney": 16.893,
+   "Hamilton Sundstrand": 4.527,
+   "Sikorsky": 8.789
+  },
+  "other": {
+   "Q4 organic growth %": 10,
+   "Q4 foreign currency translation revenue impact %": 3,
+   "reported revenue growth %": 12,
+   "EPS growth % (before 2005 FIN 47 cumulative effect)": 19,
+   "voluntary pension contributions $m": 190,
+   "share repurchase $bn": 2.07,
+   "acquisition spending incl. debt assumed $bn": 1.0,
+   "debt to total capitalization %": 31,
+   "net debt to net capitalization %": 24
+  }
+ },
+ "ngaap": {
+  "adj_sales_pub": null,
+  "adj_op_pub": null,
+  "adj_ni_pub": null,
+  "adj_eps_pub": null,
+  "adj_etr_pct_pub": null,
+  "fcf_pub": null,
+  "eps_bridge_start": null,
+  "eps_bridge": [],
+  "items": [
+   {
+    "label": "Restructuring and Related Charges - Otis",
+    "segment": "Otis",
+    "where": "op",
+    "pretax": -46,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring and Related Charges - Carrier",
+    "segment": "Carrier",
+    "where": "op",
+    "pretax": -69,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring and Related Charges - UTC Fire & Security",
+    "segment": "UTC Fire & Security",
+    "where": "op",
+    "pretax": -44,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring and Related Charges - Pratt & Whitney",
+    "segment": "Pratt & Whitney",
+    "where": "op",
+    "pretax": -68,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring and Related Charges - Hamilton Sundstrand",
+    "segment": "Hamilton Sundstrand",
+    "where": "op",
+    "pretax": -40,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring and Related Charges - Sikorsky",
+    "segment": "Sikorsky",
+    "where": "op",
+    "pretax": -21,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Q3: Pretax gain realized on the sale of a partnership interest in Scroll Technologies",
+    "segment": "Carrier",
+    "where": "op",
+    "pretax": 60,
+    "aftertax": null,
+    "cat": "GAIN",
+    "approx": true
+   },
+   {
+    "label": "Q2: Pretax gain related to the settlement of a claim by the Department of Defense (DoD) regarding Pratt & Whitney\u2019s cost accounting practices for engine parts on commercial engine collaboration programs",
+    "segment": "Pratt & Whitney",
+    "where": "op",
+    "pretax": 80,
+    "aftertax": null,
+    "cat": "LEGAL",
+    "approx": true
+   },
+   {
+    "label": "Q2: Pretax interest income related to the final determination by the U.S. Congress Joint Committee on Taxation on a disputed issue in the IRS examination of tax years 1994 through 1999 (in revenues)",
+    "segment": "Eliminations and other",
+    "where": "op",
+    "pretax": 60,
+    "aftertax": null,
+    "cat": "OTHER",
+    "approx": true
+   },
+   {
+    "label": "Q2: Income Taxes - favorable income tax adjustment related to a determination by the U.S. Congress Joint Committee on Taxation (IRS examination of tax years 1994 through 1999)",
+    "segment": "Consolidated",
+    "where": "tax",
+    "pretax": null,
+    "aftertax": 35,
+    "cat": "TAXD",
+    "approx": true
+   },
+   {
+    "label": "Q1: Gain realized on the sale of a partnership interest in an engine program at Pratt Canada",
+    "segment": "Pratt & Whitney",
+    "where": "op",
+    "pretax": 25,
+    "aftertax": null,
+    "cat": "GAIN",
+    "approx": true
+   },
+   {
+    "label": "Q1: Gain from the sale of marketable securities",
+    "segment": "Eliminations and other",
+    "where": "op",
+    "pretax": 25,
+    "aftertax": null,
+    "cat": "GAIN",
+    "approx": true
+   }
+  ],
+  "restr_total": 288,
+  "sig_items_op_total": 250,
+  "items_eps_impact_pub": -0.01,
+  "items_eps_impact_wording": "For the year ended December 31, 2006, the impact of these items, excluding the Pratt & Whitney gain of $25 million on the sale of a partnership interest ($.18 per share) was offset by pre-tax restructuring and related charges ($.19 per share) resulting in a net $.01 adverse impact to earnings per share.",
+  "guidance": "We believe we are well positioned for earnings increases in 2007 and especially on favorable compares at Carrier and Sikorsky. We confirm prior guidance for 2007 earnings per share in the $4.05 to $4.20 range and cash flow after capital expenditures again to exceed net income. ... Additional favorable items are anticipated in 2007 to offset trailing costs from previous restructuring actions as well as to fund potential new actions initiated throughout the year.",
+  "definitions": "No adjusted EPS or adjusted operating profit is published. The release tabulates \"Restructuring and Related Charges\" by segment and lists \"non-recurring items\" in bullet text. Organic growth: \"the total reported revenue increase within the Corporation's ongoing businesses less the impact of foreign currency translation, acquisitions and divestitures completed in the preceding twelve months and significant non-recurring items.\" EPS growth references are \"before the cumulative effect of a change in accounting\" (FIN 47, 2005)."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "ni": 3732,
+  "dda": 1033,
+  "deferred_tax": -214,
+  "sbc": 180,
+  "pension_noncash": null,
+  "k401_match": null,
+  "pension_contrib": -190,
+  "wc_lines": [
+   [
+    "Accounts receivable",
+    -35
+   ],
+   [
+    "Inventories and contracts in progress",
+    -789
+   ],
+   [
+    "Other current assets",
+    25
+   ],
+   [
+    "Accounts payable and accrued liabilities",
+    990
+   ]
+  ],
+  "wc_total": 191,
+  "other_op": 71,
+  "cfo": 4803,
+  "capex": -954,
+  "acq": -911,
+  "divest": 451,
+  "other_intang": null,
+  "customer_financing": 68,
+  "other_inv": 85,
+  "cfi": -1261,
+  "debt_issue": 1109,
+  "debt_repay": -825,
+  "cp_change": null,
+  "st_debt_change": -817,
+  "dividends": -951,
+  "nci_dividends": null,
+  "buyback": -2068,
+  "other_fin": 210,
+  "cff": -3342,
+  "fx": 99,
+  "net_change": 299,
+  "cash_begin": 2247,
+  "cash_end": 2546,
+  "restricted_cash": null,
+  "cash_basis": "cash",
+  "lines_raw": [
+   [
+    "Net income",
+    3732
+   ],
+   [
+    "Depreciation and amortization",
+    1033
+   ],
+   [
+    "Deferred income tax (benefit) provision",
+    -214
+   ],
+   [
+    "Minority interests in subsidiaries\u2019 earnings",
+    266
+   ],
+   [
+    "Stock compensation cost",
+    180
+   ],
+   [
+    "Change in: Accounts receivable",
+    -35
+   ],
+   [
+    "Change in: Inventories and contracts in progress",
+    -789
+   ],
+   [
+    "Change in: Other current assets",
+    25
+   ],
+   [
+    "Change in: Accounts payable and accrued liabilities",
+    990
+   ],
+   [
+    "Voluntary contributions to global pension plans",
+    -190
+   ],
+   [
+    "Other, net",
+    -195
+   ],
+   [
+    "Net Cash Provided by Operating Activities",
+    4803
+   ],
+   [
+    "Capital expenditures",
+    -954
+   ],
+   [
+    "Increase in customer financing assets",
+    -314
+   ],
+   [
+    "Decrease in customer financing assets",
+    382
+   ],
+   [
+    "Business acquisitions",
+    -911
+   ],
+   [
+    "Dispositions of businesses",
+    451
+   ],
+   [
+    "Other, net",
+    85
+   ],
+   [
+    "Net Cash Used in Investing Activities",
+    -1261
+   ],
+   [
+    "Issuance of long-term debt",
+    1109
+   ],
+   [
+    "Repayment of long-term debt",
+    -825
+   ],
+   [
+    "(Decrease) increase in short-term borrowings",
+    -817
+   ],
+   [
+    "Common Stock issued under employee stock plans",
+    346
+   ],
+   [
+    "Dividends paid on Common Stock",
+    -951
+   ],
+   [
+    "Repurchase of Common Stock",
+    -2068
+   ],
+   [
+    "Dividends to minority interests and other",
+    -136
+   ],
+   [
+    "Net Cash (Used in) Provided by Financing Activities",
+    -3342
+   ],
+   [
+    "Effect of foreign exchange rate changes on Cash and cash equivalents",
+    99
+   ],
+   [
+    "Net increase (decrease) in Cash and cash equivalents",
+    299
+   ],
+   [
+    "Cash and cash equivalents, beginning of year",
+    2247
+   ],
+   [
+    "Cash and cash equivalents, end of year",
+    2546
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 2546,
+  "ar": 7679,
+  "contract_assets": null,
+  "inventory": 6657,
+  "other_ca": 1962,
+  "tca": 18844,
+  "customer_financing": 1073,
+  "ppe": 5725,
+  "rou": null,
+  "goodwill": 14146,
+  "intangibles": 3216,
+  "other_nca": 4137,
+  "ta": 47141,
+  "st_debt": 857,
+  "ap": 4263,
+  "accrued_comp": null,
+  "other_accrued": 10051,
+  "contract_liabilities": null,
+  "ltd_current": 37,
+  "tcl": 15208,
+  "ltd": 7037,
+  "lease_ltl": null,
+  "pension_obl": 2926,
+  "other_ncl": 3837,
+  "tl": 29008,
+  "redeemable_nci": null,
+  "common_stock": 9395,
+  "treasury": -9413,
+  "retained": 18754,
+  "aoci": -1439,
+  "equity_parent": 17297,
+  "nci": 836,
+  "te": null,
+  "tle": 47141,
+  "shares_out": 995.8,
+  "shares_out_date": "2007-01-31",
+  "shares_issued_m": 1351.471,
+  "treasury_shares_m": 355.771,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    2546
+   ],
+   [
+    "Accounts receivable (net of allowance for doubtful accounts of $324)",
+    7679
+   ],
+   [
+    "Inventories and contracts in progress",
+    6657
+   ],
+   [
+    "Future income tax benefits",
+    1261
+   ],
+   [
+    "Other current assets",
+    701
+   ],
+   [
+    "Total Current Assets",
+    18844
+   ],
+   [
+    "Customer financing assets",
+    1073
+   ],
+   [
+    "Future income tax benefits",
+    1690
+   ],
+   [
+    "Fixed assets",
+    5725
+   ],
+   [
+    "Goodwill",
+    14146
+   ],
+   [
+    "Intangible assets",
+    3216
+   ],
+   [
+    "Other assets",
+    2447
+   ],
+   [
+    "Total Assets",
+    47141
+   ],
+   [
+    "Short-term borrowings",
+    857
+   ],
+   [
+    "Accounts payable",
+    4263
+   ],
+   [
+    "Accrued liabilities",
+    10051
+   ],
+   [
+    "Long-term debt currently due",
+    37
+   ],
+   [
+    "Total Current Liabilities",
+    15208
+   ],
+   [
+    "Long-term debt",
+    7037
+   ],
+   [
+    "Future pension and postretirement benefit obligations",
+    2926
+   ],
+   [
+    "Other long-term liabilities",
+    3837
+   ],
+   [
+    "Total Liabilities",
+    29008
+   ],
+   [
+    "Minority interests in subsidiary companies",
+    836
+   ],
+   [
+    "Common Stock",
+    9622
+   ],
+   [
+    "Treasury Stock",
+    -9413
+   ],
+   [
+    "Retained earnings",
+    18754
+   ],
+   [
+    "Unearned ESOP shares",
+    -227
+   ],
+   [
+    "Foreign currency translation",
+    633
+   ],
+   [
+    "Other",
+    -2072
+   ],
+   [
+    "Total Accumulated Other Non-Shareowners\u2019 Changes in Equity",
+    -1439
+   ],
+   [
+    "Total Shareowners\u2019 Equity",
+    17297
+   ],
+   [
+    "Total Liabilities and Shareowners\u2019 Equity",
+    47141
+   ]
+  ]
+ },
+ "py": {
+  "restated": false,
+  "reason": null,
+  "source": "https://www.sec.gov/Archives/edgar/data/101829/000119312508010089/dex99.htm ; https://www.sec.gov/Archives/edgar/data/101829/000119312508022346/d10k.htm ; https://www.sec.gov/Archives/edgar/data/101829/000119312508022346/dex13.htm",
+  "note": "FY2007 10-K shows 2006 unchanged; it renames \"Financing revenues and other income, net\" to \"Other income, net\" (711) and its cash flow folds voluntary pension contributions (190) into \"Other, net\" (385).",
+  "is": {
+   "sales": 47829,
+   "sales_products": 34271,
+   "sales_services": 12847,
+   "other_income_in_revenues": 711,
+   "cogs": 34740,
+   "cogs_products": 26089,
+   "cogs_services": 8651,
+   "rnd": 1529,
+   "sga": 5462,
+   "op_profit": 6098,
+   "interest_exp": 606,
+   "ebt": 5492,
+   "tax": 1494,
+   "nci": 266,
+   "net_income": 3732,
+   "ni_parent": 3732,
+   "shares_basic": 980.0,
+   "shares_diluted": 1005.7,
+   "eps_basic": 3.81,
+   "eps_dil": 3.71,
+   "dps": 1.02
+  },
+  "seg": {
+   "segments": [
+    {
+     "name": "Otis",
+     "sales": 10290,
+     "op_profit": 1888,
+     "restr": 46
+    },
+    {
+     "name": "Carrier",
+     "sales": 13481,
+     "op_profit": 1237,
+     "restr": 69,
+     "other_items": 60
+    },
+    {
+     "name": "UTC Fire & Security",
+     "sales": 4747,
+     "op_profit": 301,
+     "restr": 44
+    },
+    {
+     "name": "Pratt & Whitney",
+     "sales": 11112,
+     "op_profit": 1817,
+     "restr": 68,
+     "other_items": 105
+    },
+    {
+     "name": "Hamilton Sundstrand",
+     "sales": 4995,
+     "op_profit": 832,
+     "restr": 40
+    },
+    {
+     "name": "Sikorsky",
+     "sales": 3230,
+     "op_profit": 173,
+     "restr": 21
+    }
+   ],
+   "total_seg_sales": 47855,
+   "elim_sales": -26,
+   "elim_op": 187,
+   "corp_op": -337,
+   "fas_cas": null,
+   "acq_acct_adj": null,
+   "total_seg_op": 6248,
+   "consol_sales": 47829,
+   "consol_op": 6098,
+   "seg_note": "Six segments (Otis, Carrier, UTC Fire & Security, Pratt & Whitney, Hamilton Sundstrand, Sikorsky); segment \"Revenues\" include intersegment sales and other income.",
+   "elim_restr": 0,
+   "corp_restr": 0
+  },
+  "cust": {},
+  "ngaap": {
+   "adj_sales_pub": null,
+   "adj_op_pub": null,
+   "adj_ni_pub": null,
+   "adj_eps_pub": null,
+   "restr_total": 288,
+   "items": [
+    {
+     "label": "Q3: Pretax gain realized on the sale of a partnership interest in Scroll Technologies",
+     "segment": "Carrier",
+     "where": "op",
+     "pretax": 60,
+     "aftertax": null,
+     "cat": "GAIN",
+     "approx": true
+    },
+    {
+     "label": "Q2: Pretax gain related to the settlement of a claim by the Department of Defense (DoD) regarding Pratt & Whitney\u2019s cost accounting practices for engine parts on commercial engine collaboration programs",
+     "segment": "Pratt & Whitney",
+     "where": "op",
+     "pretax": 80,
+     "aftertax": null,
+     "cat": "LEGAL",
+     "approx": true
+    },
+    {
+     "label": "Q2: Pretax interest income related to the final determination by the U.S. Congress Joint Committee on Taxation on a disputed issue in the IRS examination of tax years 1994 through 1999 (in revenues)",
+     "segment": "Eliminations and other",
+     "where": "op",
+     "pretax": 60,
+     "aftertax": null,
+     "cat": "OTHER",
+     "approx": true
+    },
+    {
+     "label": "Q2: Income Taxes - favorable income tax adjustment related to a determination by the U.S. Congress Joint Committee on Taxation (IRS examination of tax years 1994 through 1999)",
+     "segment": "Consolidated",
+     "where": "tax",
+     "pretax": null,
+     "aftertax": 35,
+     "cat": "TAXD",
+     "approx": true
+    },
+    {
+     "label": "Q1: Gain realized on the sale of a partnership interest in an engine program at Pratt Canada",
+     "segment": "Pratt & Whitney",
+     "where": "op",
+     "pretax": 25,
+     "aftertax": null,
+     "cat": "GAIN",
+     "approx": true
+    },
+    {
+     "label": "Q1: Gain from the sale of marketable securities",
+     "segment": "Eliminations and other",
+     "where": "op",
+     "pretax": 25,
+     "aftertax": null,
+     "cat": "GAIN",
+     "approx": true
+    }
+   ]
+  }
+ },
+ "py2": {
+  "restated": false,
+  "reason": null,
+  "source": "https://www.sec.gov/Archives/edgar/data/101829/000119312509024624/d10k.htm ; https://www.sec.gov/Archives/edgar/data/101829/000119312509024624/dex13.htm",
+  "note": "FY2008 10-K (Exhibit 13) presents 2006 with the same income statement and segment figures (pre-SFAS 160).",
+  "is": {
+   "sales": 47829,
+   "cogs": 34740,
+   "rnd": 1529,
+   "sga": 5462,
+   "op_profit": 6098,
+   "interest_exp": 606,
+   "ebt": 5492,
+   "tax": 1494,
+   "nci": 266,
+   "net_income": 3732,
+   "ni_parent": 3732,
+   "eps_basic": 3.81,
+   "eps_dil": 3.71,
+   "dps": 1.02
+  },
+  "seg": {
+   "segments": [
+    {
+     "name": "Otis",
+     "sales": 10290,
+     "op_profit": 1888
+    },
+    {
+     "name": "Carrier",
+     "sales": 13481,
+     "op_profit": 1237
+    },
+    {
+     "name": "UTC Fire & Security",
+     "sales": 4747,
+     "op_profit": 301
+    },
+    {
+     "name": "Pratt & Whitney",
+     "sales": 11112,
+     "op_profit": 1817
+    },
+    {
+     "name": "Hamilton Sundstrand",
+     "sales": 4995,
+     "op_profit": 832
+    },
+    {
+     "name": "Sikorsky",
+     "sales": 3230,
+     "op_profit": 173
+    }
+   ],
+   "elim_sales": -26,
+   "elim_op": 187,
+   "corp_op": -337,
+   "consol_sales": 47829,
+   "consol_op": 6098
+  },
+  "ngaap": {}
+ },
+ "extra": {
+  "employees": 214500,
+  "employees_note": "Exhibit 13 five-year summary and 10-K Item 1: approximately 214,500, about 66 percent outside the U.S.",
+  "seg_dda": {
+   "Otis": 183,
+   "Carrier": 157,
+   "UTC Fire & Security": 176,
+   "Pratt & Whitney": 280,
+   "Hamilton Sundstrand": 142,
+   "Sikorsky": 47,
+   "Total segment": 985,
+   "Eliminations & Other": 48,
+   "Consolidated": 1033
+  },
+  "seg_capex": {
+   "Otis": 93,
+   "Carrier": 148,
+   "UTC Fire & Security": 106,
+   "Pratt & Whitney": 335,
+   "Hamilton Sundstrand": 142,
+   "Sikorsky": 66,
+   "Total segment": 890,
+   "Eliminations & Other": 64,
+   "Consolidated": 954
+  },
+  "seg_assets": {
+   "Otis": 6973,
+   "Carrier": 10127,
+   "UTC Fire & Security": 8518,
+   "Pratt & Whitney": 9828,
+   "Hamilton Sundstrand": 9418,
+   "Sikorsky": 3145,
+   "Total segment": 48009,
+   "Eliminations & Other": -868,
+   "Consolidated": 47141
+  },
+  "backlog_bn": {
+   "Otis": 11.583,
+   "Carrier": 1.852,
+   "UTC Fire & Security": 0.692,
+   "Pratt & Whitney": 16.893,
+   "Hamilton Sundstrand": 4.527,
+   "Sikorsky": 8.789,
+   "total (computed sum of segments)": 44.336,
+   "U.S. government funded within PW / HS / Sikorsky $bn": "2.895 / 0.725 / 3.257",
+   "note": "Otis re-evaluated service contract backlog in 2006 (as previously calculated $6,750m); P&WC and HS added long-term aftermarket agreements (as previously calculated PW $15,836m, HS $3,015m)"
+  },
+  "debt_maturities": [
+   [
+    "2007",
+    37
+   ],
+   [
+    "2008",
+    48
+   ],
+   [
+    "2009",
+    950
+   ],
+   [
+    "2010",
+    1104
+   ],
+   [
+    "2011",
+    535
+   ]
+  ],
+  "debt_total_ltd_incl_current": 7074,
+  "amort_schedule": [
+   [
+    "2007",
+    225
+   ],
+   [
+    "2008",
+    225
+   ],
+   [
+    "2009",
+    225
+   ],
+   [
+    "2010",
+    225
+   ],
+   [
+    "2011",
+    225
+   ]
+  ],
+  "amort_schedule_note": "\"Amortization of these intangible assets for 2007 through 2011 is expected to approximate $225 million per year.\"",
+  "amortization_expense": 250,
+  "pension": {
+   "fas_service_cost": 432,
+   "interest_cost": 1128,
+   "expected_return_on_assets": -1413,
+   "net_periodic_pension_cost": 519,
+   "cas_expense": null,
+   "fas_cas_adj": null,
+   "nonservice_pension_income": null,
+   "contributions": 190,
+   "contributions_note": "Voluntary cash contributions $190m plus $150m of UTC common stock; plan-asset rollforward \"Employer contributions\" 508",
+   "funded_status": -1355,
+   "plan_assets": 20593,
+   "benefit_obligation": 21948,
+   "expected_return_pct": 8.3,
+   "discount_rate_pct": 5.4,
+   "discount_rate_net_cost_pct": 5.5,
+   "other_postretirement_funded_status": -1009,
+   "sfas158_adoption_equity_reduction": -1831
+  },
+  "acquisitions": [
+   [
+    "Investments in businesses 2006 ($1.0 billion incl. $138m debt assumed): principally smaller acquisitions incl. Red Hawk Industries (UTC Fire & Security), Page Group Ltd. (Hamilton Sundstrand), Longville Group Ltd. and Sensitech, Inc. (Carrier)",
+    "2006",
+    1049,
+    "various"
+   ]
+  ],
+  "divestitures": [
+   [
+    "Carrier: sale of a partnership interest in Scroll Technologies (pretax gain ~$60m)",
+    "Q3-2006",
+    "non-recurring gain"
+   ],
+   [
+    "Pratt & Whitney: sale of a partnership interest in an engine program at Pratt Canada (gain ~$25m)",
+    "Q1-2006",
+    "non-recurring gain"
+   ],
+   [
+    "Dispositions of businesses (cash flow)",
+    "2006",
+    "451 proceeds"
+   ]
+  ],
+  "share_repurchases": {
+   "shares_m": 33.3,
+   "amount_m": 2068,
+   "authorization_remaining_m": null,
+   "authorization_remaining_shares_m": 58.294,
+   "authorization_note": "10-K Item 5: program announced December 13, 2006 for up to 60 million shares; 58,294 thousand shares currently available"
+  },
+  "notes": "Restructuring cost split: $223m cost of sales, $64m SG&A, $1m other income. Goodwill $14,146m by segment in Note 2."
+ },
+ "notes": "Annual record: IS, BS and CF from the FY2006 10-K Exhibit 13 (agree with the Q4-06 release twelve-month column); segment and restructuring tables from the release. Pre-SFAS 160: minority interests (266) are deducted above net income; ni_parent = net_income; ebt is before minority interests. Revenues (47,829) include \"Financing revenues and other income, net\" (711), so is.sales = revenues as presented and other_income is null (kept in other_income_in_revenues); sales_products + sales_services = 47,118, so the validator check \"sales = products + services\" fails by 711 by construction. IS: shares 980.0 / 1,005.7 from the 10-K EPS note (release prints 980 / 1,006). Non-recurring items are bullet-text approximations; seg other_items are computed sums of those bullets (Carrier 60; Pratt & Whitney 80 + 25 = 105; Eliminations and other 60 + 25 = 85); sig_items_op_total 250 = computed sum. No adjusted figures are published. BS: other_ca 1,962 = Future income tax benefits 1,261 + Other current assets 701; other_nca 4,137 = Future income tax benefits 1,690 + Other assets 2,447; common_stock 9,395 = Common Stock 9,622 less Unearned ESOP shares (227) (as the release nets them); bs.nci = minority interests in subsidiary companies 836 (mezzanine, outside equity), te not presented. CF: other_op 71 = Minority interests in subsidiaries\u2019 earnings 266 + Other, net (195); customer_financing 68 = (314) + 382; other_fin 210 = Common Stock issued under employee stock plans 346 + Dividends to minority interests and other (136). No free cash flow table in the Q4-06 release (text: cash flow from operations after capital expenditures exceeded net income). kpi.backlog_total_bn is a computed sum."
+}

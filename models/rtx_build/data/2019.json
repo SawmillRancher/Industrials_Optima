@@ -1,0 +1,1244 @@
+{
+ "period": "2019",
+ "period_end": "2019-12-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/101829/000010182920000005/a2019-12x318xkerexhibi.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/101829/000010182920000013/utx-20191231_d2.htm",
+  "next_release": "https://www.sec.gov/Archives/edgar/data/101829/000010182921000004/a2020-12x318xkerexhibit99.htm",
+  "next_filing": "https://www.sec.gov/Archives/edgar/data/101829/000010182921000008/rtx-20201231.htm",
+  "filing_2y": "https://www.sec.gov/Archives/edgar/data/101829/000010182922000005/rtx-20211231.htm",
+  "recast_fy2019_8k_oct2020": "https://www.sec.gov/Archives/edgar/data/101829/000010182920000072/utx-20201027_d2.htm"
+ },
+ "is": {
+  "sales": 77046,
+  "sales_products": null,
+  "sales_services": null,
+  "cogs": 57065,
+  "rnd": 3015,
+  "sga": 8521,
+  "other_op_lines": [],
+  "other_income": 521,
+  "op_profit": 8966,
+  "nonservice_pension": 888,
+  "interest_exp_net": 1611,
+  "other_nonop": null,
+  "ebt": 8243,
+  "tax": 2295,
+  "cont_ops": 5948,
+  "net_income": 5948,
+  "nci": 411,
+  "nci_cont": 411,
+  "ni_parent": 5537,
+  "ni_parent_cont": 5537,
+  "shares_basic": 855,
+  "shares_diluted": 864,
+  "eps_basic": 6.48,
+  "eps_dil": 6.41,
+  "eps_dil_cont": 6.41,
+  "dps": 2.94
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Otis",
+    "sales": 13113,
+    "op_profit": 1948,
+    "adj_sales": 13113,
+    "adj_op": 2014,
+    "restr": 54,
+    "other_items": -12,
+    "margin_pct": 14.9,
+    "adj_margin_pct": 15.4
+   },
+   {
+    "name": "Carrier",
+    "sales": 18608,
+    "op_profit": 2697,
+    "adj_sales": 18608,
+    "adj_op": 2978,
+    "restr": 126,
+    "other_items": -155,
+    "margin_pct": 14.5,
+    "adj_margin_pct": 16.0
+   },
+   {
+    "name": "Pratt & Whitney",
+    "sales": 20892,
+    "op_profit": 1668,
+    "adj_sales": 20892,
+    "adj_op": 1801,
+    "restr": 133,
+    "other_items": 0,
+    "margin_pct": 8.0,
+    "adj_margin_pct": 8.6
+   },
+   {
+    "name": "Collins Aerospace Systems",
+    "sales": 26028,
+    "op_profit": 4100,
+    "adj_sales": 26028,
+    "adj_op": 4442,
+    "restr": 102,
+    "other_items": -240,
+    "margin_pct": 15.8,
+    "adj_margin_pct": 17.1
+   }
+  ],
+  "total_seg_sales": 78641,
+  "elim_sales": -1595,
+  "elim_op": -932,
+  "elim_adj_op": -218,
+  "corp_op": -515,
+  "corp_adj_op": -509,
+  "fas_cas": null,
+  "acq_acct_adj": null,
+  "total_seg_op": 10413,
+  "consol_sales": 77046,
+  "consol_op": 8966,
+  "consol_adj_op": 10508,
+  "seg_note": "UTC four segments as originally reported (Q4-19 release twelve-month Reported / Adjusted columns). Segment OP margin 13.2% (adjusted 14.3%)."
+ },
+ "cust": {
+  "note": "FY2019 revenue disaggregation as originally reported (incl. Otis and Carrier) is in the FY2019 Annual Report (10-K Exhibit 13), which is not among the local files -> not recorded. The continuing-operations FY2019 table is in py.cust."
+ },
+ "kpi": {
+  "organic_growth_pct": 5,
+  "fx_pct": -1,
+  "acq_div_pct": 12,
+  "seg_organic_pct": {
+   "Otis": 5,
+   "Carrier": 1,
+   "Pratt & Whitney": 8,
+   "Collins Aerospace Systems": 6
+  },
+  "backlog_total_bn": 132.7,
+  "backlog_defense_bn": 22.3,
+  "seg_backlog_bn": {
+   "Otis": 16.3,
+   "Carrier": 4.7,
+   "Pratt & Whitney": 85.2,
+   "Collins Aerospace Systems": 29.5
+  },
+  "defense_bookings_bn": 16.9,
+  "narrative_growth_pct": {
+   "collins_commercial_oe": 41,
+   "collins_commercial_aftermarket": 63,
+   "collins_defense": 74
+  },
+  "other": {
+   "reported sales growth %": 16,
+   "Collins commercial OEM organic growth %": -2,
+   "Collins commercial aftermarket organic growth %": 14,
+   "Collins military organic growth %": 9,
+   "Collins sales pro forma growth %": 7,
+   "Collins commercial OEM pro forma growth %": 2,
+   "Collins commercial aftermarket pro forma growth %": 14,
+   "Collins military pro forma growth %": 7,
+   "Otis adjusted OP at constant currency $m": 2083,
+   "Otis adjusted OP at constant currency growth %": 5,
+   "Carrier adjusted OP at constant currency $m": 3020,
+   "Carrier adjusted OP at constant currency growth %": -1,
+   "Collins Rockwell Collins cost synergies achieved in 2019 $m (approx)": 300,
+   "one-time portfolio separation cash costs in FCF $m (approx)": 400
+  }
+ },
+ "ngaap": {
+  "adj_sales_pub": 77046,
+  "adj_op_pub": 10508,
+  "adj_ni_pub": 7136,
+  "adj_eps_pub": 8.26,
+  "adj_etr_pct_pub": 21.9,
+  "fcf_pub": 6627,
+  "eps_bridge_start": 6.41,
+  "eps_bridge_start_label": "Diluted Earnings Per Share",
+  "eps_bridge": [
+   [
+    "Impact on Diluted Earnings Per Share (removal; printed (1.85))",
+    1.85
+   ]
+  ],
+  "items": [
+   {
+    "label": "Restructuring - Otis",
+    "segment": "Otis",
+    "where": "op",
+    "pretax": -54,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring - Carrier",
+    "segment": "Carrier",
+    "where": "op",
+    "pretax": -126,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring - Pratt & Whitney",
+    "segment": "Pratt & Whitney",
+    "where": "op",
+    "pretax": -133,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring - Collins Aerospace Systems",
+    "segment": "Collins Aerospace Systems",
+    "where": "op",
+    "pretax": -102,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring - Eliminations and other general corporate expenses",
+    "segment": "Eliminations and other / Corporate",
+    "where": "op",
+    "pretax": -6,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Costs associated with the Company's intention to separate its commercial businesses",
+    "segment": "Otis",
+    "where": "op",
+    "pretax": -9,
+    "aftertax": null,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Costs associated with pension plan amendment",
+    "segment": "Otis",
+    "where": "op",
+    "pretax": -3,
+    "aftertax": null,
+    "cat": "PENSION"
+   },
+   {
+    "label": "Investment impairment",
+    "segment": "Carrier",
+    "where": "op",
+    "pretax": -108,
+    "aftertax": null,
+    "cat": "IMPAIR"
+   },
+   {
+    "label": "Consultant contract termination",
+    "segment": "Carrier",
+    "where": "op",
+    "pretax": -34,
+    "aftertax": null,
+    "cat": "OTHER"
+   },
+   {
+    "label": "Costs associated with pension plan amendment",
+    "segment": "Carrier",
+    "where": "op",
+    "pretax": -7,
+    "aftertax": null,
+    "cat": "PENSION"
+   },
+   {
+    "label": "Costs associated with the Company's intention to separate its commercial businesses",
+    "segment": "Carrier",
+    "where": "op",
+    "pretax": -6,
+    "aftertax": null,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Loss on sale of business",
+    "segment": "Collins Aerospace Systems",
+    "where": "op",
+    "pretax": -25,
+    "aftertax": null,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Amortization of Rockwell Collins inventory fair value adjustment",
+    "segment": "Collins Aerospace Systems",
+    "where": "op",
+    "pretax": -181,
+    "aftertax": null,
+    "cat": "STEPUP"
+   },
+   {
+    "label": "Costs associated with the Company's intention to separate its commercial businesses",
+    "segment": "Collins Aerospace Systems",
+    "where": "op",
+    "pretax": -1,
+    "aftertax": null,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Costs associated with pension plan amendment",
+    "segment": "Collins Aerospace Systems",
+    "where": "op",
+    "pretax": -33,
+    "aftertax": null,
+    "cat": "PENSION"
+   },
+   {
+    "label": "Transaction and integration costs related to merger agreement with Rockwell Collins, Inc.",
+    "segment": "Eliminations and other / Corporate",
+    "where": "op",
+    "pretax": -40,
+    "aftertax": null,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Costs associated with the Company's intention to separate its commercial businesses",
+    "segment": "Eliminations and other / Corporate",
+    "where": "op",
+    "pretax": -591,
+    "aftertax": null,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Transaction expenses associated with the Raytheon Merger",
+    "segment": "Eliminations and other / Corporate",
+    "where": "op",
+    "pretax": -83,
+    "aftertax": null,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Pension curtailment",
+    "segment": "Consolidated",
+    "where": "nonservice_pension",
+    "pretax": 73,
+    "aftertax": null,
+    "cat": "PENSION"
+   },
+   {
+    "label": "Non-service pension cost restructuring",
+    "segment": "Consolidated",
+    "where": "nonservice_pension",
+    "pretax": -4,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Interest on tax settlements",
+    "segment": "Consolidated",
+    "where": "interest",
+    "pretax": 63,
+    "aftertax": null,
+    "cat": "TAXD"
+   },
+   {
+    "label": "Tax effect of restructuring and significant non-recurring and non-operational items above",
+    "segment": "Consolidated",
+    "where": "tax",
+    "pretax": null,
+    "aftertax": 249,
+    "cat": "TAX"
+   },
+   {
+    "label": "Tax settlements",
+    "segment": "Consolidated",
+    "where": "tax",
+    "pretax": null,
+    "aftertax": 278,
+    "cat": "TAXD"
+   },
+   {
+    "label": "Tax expenses related to separation of commercial businesses",
+    "segment": "Consolidated",
+    "where": "tax",
+    "pretax": null,
+    "aftertax": -759,
+    "cat": "TAXD"
+   },
+   {
+    "label": "Income tax adjustments related to the estimated impact of the U.S. tax reform legislation enacted on December 22, 2017",
+    "segment": "Consolidated",
+    "where": "tax",
+    "pretax": null,
+    "aftertax": 21,
+    "cat": "TAXD"
+   },
+   {
+    "label": "Tax adjustment resulting from the Company's announcement of its intention to separate its commercial businesses",
+    "segment": "Consolidated",
+    "where": "tax",
+    "pretax": null,
+    "aftertax": 29,
+    "cat": "TAXD"
+   },
+   {
+    "label": "Noncontrolling interest resulting from the Company's announcement of its intention to separate its commercial businesses",
+    "segment": "Consolidated",
+    "where": "nci",
+    "pretax": null,
+    "aftertax": -7,
+    "cat": "NCI"
+   }
+  ],
+  "restr_total": 421,
+  "acq_acct_adj_total": null,
+  "sig_items_op_total": -1121,
+  "tax_effect": 249,
+  "sig_items_nonservice_pension": 69,
+  "sig_items_interest": 63,
+  "sig_items_tax": -431,
+  "items_impact_ni_parent": -1599,
+  "items_impact_eps_dil": -1.85,
+  "etr_pct_pub": 27.8,
+  "separation_costs_eps_text": "Full year GAAP EPS included $1.85 of net restructuring charges and other significant items, including $1.46 of one-time portfolio separation costs.",
+  "guidance": "Outlook for 2020: Given the upcoming portfolio actions, the outlook for sales, adjusted EPS and free cash flow for Raytheon Technologies will be provided after the merger closes. The outlooks for Carrier and Otis will be provided in conjunction with their upcoming pre-spin investor meetings scheduled for February 10th and 11th, respectively. For Pratt & Whitney and Collins Aerospace, we provide the following 2020 outlook: Pratt & Whitney sales up mid single digit versus 2019; Pratt & Whitney adjusted operating profit up $225 to $275 million versus 2019; Collins Aerospace sales down low single digit versus 2019, including an estimated 5 point headwind resulting from the suspension of 737 MAX production, lower ADS-B mandate sales and the expected impact of divestitures associated with the Raytheon merger; Collins Aerospace adjusted operating profit down $275 to $325 million versus 2019, including an estimated headwind of approximately $550 to $600 million resulting from the 737 MAX, lower ADS-B mandate profit and the expected impact of divestitures associated with the Raytheon merger.",
+  "definitions": "Adjusted net sales represents consolidated net sales from continuing operations (a GAAP measure), excluding significant items of a non-recurring and/or nonoperational nature (\"other significant items\"). Organic sales represents consolidated net sales excluding the impact of foreign currency translation, acquisitions and divestitures completed in the preceding twelve months and other significant items. Adjusted operating profit represents income from continuing operations (a GAAP measure), excluding restructuring costs and other significant items. Adjusted net income represents net income from continuing operations, excluding restructuring costs and other significant items. Adjusted EPS represents diluted earnings per share from continuing operations, excluding restructuring costs and other significant items. The adjusted effective tax rate represents the effective tax rate excluding restructuring costs and other significant items. Free cash flow represents cash flow from operations less capital expenditures."
+ },
+ "cf": {
+  "ytd_months": 12,
+  "ni": 5948,
+  "dda": 3783,
+  "deferred_tax": 35,
+  "sbc": 356,
+  "pension_noncash": -525,
+  "k401_match": null,
+  "pension_contrib": -118,
+  "wc_lines": [
+   [
+    "Change in working capital",
+    175
+   ],
+   [
+    "Change in income taxes",
+    -406
+   ]
+  ],
+  "wc_total": -231,
+  "other_op": -365,
+  "cfo": 8883,
+  "capex": -2256,
+  "acq": null,
+  "divest": 82,
+  "other_intang": -351,
+  "customer_financing": -658,
+  "other_inv": 91,
+  "cfi": -3092,
+  "debt_issue": -2742,
+  "debt_repay": null,
+  "cp_change": null,
+  "st_debt_change": 927,
+  "dividends": -2442,
+  "nci_dividends": null,
+  "buyback": -151,
+  "other_fin": -156,
+  "cff": -4564,
+  "fx": -19,
+  "net_change": 1208,
+  "cash_begin": 6212,
+  "cash_end": 7420,
+  "restricted_cash": 42,
+  "cash_basis": "cash+restricted",
+  "disc_ops_cf": {
+   "cfo": null,
+   "cfi": null,
+   "cff": null
+  },
+  "lines_raw": [
+   [
+    "Net income from operations",
+    5948
+   ],
+   [
+    "Depreciation and amortization",
+    3783
+   ],
+   [
+    "Deferred income tax provision",
+    35
+   ],
+   [
+    "Stock compensation cost",
+    356
+   ],
+   [
+    "Net periodic pension and other postretirement (benefit)",
+    -525
+   ],
+   [
+    "Portfolio separation tax cost",
+    634
+   ],
+   [
+    "Gain on sale of Taylor Company",
+    0
+   ],
+   [
+    "Change in working capital",
+    175
+   ],
+   [
+    "Change in income taxes",
+    -406
+   ],
+   [
+    "Global pension contributions",
+    -118
+   ],
+   [
+    "Canadian government settlement",
+    -38
+   ],
+   [
+    "Other operating activities, net",
+    -961
+   ],
+   [
+    "Net cash flows provided by operating activities",
+    8883
+   ],
+   [
+    "Capital expenditures",
+    -2256
+   ],
+   [
+    "Acquisitions and dispositions of businesses, net",
+    82
+   ],
+   [
+    "Customer financing assets, net",
+    -658
+   ],
+   [
+    "Increase in collaboration intangible assets",
+    -351
+   ],
+   [
+    "Receipts from settlements of derivative contracts",
+    336
+   ],
+   [
+    "Other investing activities, net",
+    -245
+   ],
+   [
+    "Net cash flows used in investing activities",
+    -3092
+   ],
+   [
+    "(Repayment) issuance of long-term debt, net",
+    -2742
+   ],
+   [
+    "Increase (decrease) in short-term borrowings, net",
+    927
+   ],
+   [
+    "Dividends paid on Common Stock",
+    -2442
+   ],
+   [
+    "Repurchase of Common Stock",
+    -151
+   ],
+   [
+    "Other financing activities, net",
+    -156
+   ],
+   [
+    "Net cash flows (used in) provided by financing activities",
+    -4564
+   ],
+   [
+    "Effect of foreign exchange rate changes on cash and cash equivalents",
+    -19
+   ],
+   [
+    "Net increase (decrease) in cash, cash equivalents and restricted cash",
+    1208
+   ],
+   [
+    "Cash, cash equivalents and restricted cash, beginning of period",
+    6212
+   ],
+   [
+    "Cash, cash equivalents and restricted cash, end of period",
+    7420
+   ],
+   [
+    "Less: Restricted cash",
+    42
+   ],
+   [
+    "Cash and cash equivalents, end of period",
+    7378
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 7378,
+  "ar": 13524,
+  "contract_assets": 4184,
+  "inventory": 10950,
+  "other_ca": 1461,
+  "tca": 37497,
+  "customer_financing": null,
+  "ppe": 12755,
+  "rou": 2599,
+  "goodwill": 48063,
+  "intangibles": 26046,
+  "other_nca": 12756,
+  "ta": 139716,
+  "st_debt": 5860,
+  "ap": 10809,
+  "accrued_comp": null,
+  "other_accrued": 11737,
+  "contract_liabilities": 6180,
+  "ltd_current": null,
+  "tcl": 34586,
+  "ltd": 37788,
+  "lease_ltl": 2144,
+  "pension_obl": null,
+  "other_ncl": 20872,
+  "tl": 95390,
+  "redeemable_nci": 95,
+  "common_stock": 22955,
+  "treasury": -32626,
+  "retained": 61594,
+  "aoci": -10149,
+  "equity_parent": 41774,
+  "nci": 2457,
+  "te": 44231,
+  "tle": 139716,
+  "shares_out": 865.3,
+  "shares_out_date": "2020-01-31",
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    7378
+   ],
+   [
+    "Accounts receivable, net",
+    13524
+   ],
+   [
+    "Contract assets, current",
+    4184
+   ],
+   [
+    "Inventory, net",
+    10950
+   ],
+   [
+    "Other assets, current",
+    1461
+   ],
+   [
+    "Total Current Assets",
+    37497
+   ],
+   [
+    "Fixed assets, net",
+    12755
+   ],
+   [
+    "Operating lease right-of-use assets",
+    2599
+   ],
+   [
+    "Goodwill",
+    48063
+   ],
+   [
+    "Intangible assets, net",
+    26046
+   ],
+   [
+    "Other assets",
+    12756
+   ],
+   [
+    "Total Assets",
+    139716
+   ],
+   [
+    "Short-term debt",
+    5860
+   ],
+   [
+    "Accounts payable",
+    10809
+   ],
+   [
+    "Accrued liabilities",
+    11737
+   ],
+   [
+    "Contract liabilities, current",
+    6180
+   ],
+   [
+    "Total Current Liabilities",
+    34586
+   ],
+   [
+    "Long-term debt",
+    37788
+   ],
+   [
+    "Operating lease liabilities",
+    2144
+   ],
+   [
+    "Other long-term liabilities",
+    20872
+   ],
+   [
+    "Total Liabilities",
+    95390
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    95
+   ],
+   [
+    "Common Stock",
+    22955
+   ],
+   [
+    "Treasury Stock",
+    -32626
+   ],
+   [
+    "Retained earnings",
+    61594
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -10149
+   ],
+   [
+    "Total Shareowners' Equity",
+    41774
+   ],
+   [
+    "Noncontrolling interest",
+    2457
+   ],
+   [
+    "Total Equity",
+    44231
+   ],
+   [
+    "Total Liabilities and Equity",
+    139716
+   ]
+  ],
+  "note": "UTC release balance sheet (incl. Otis and Carrier); short-term debt includes current portion of long-term debt; \"Accrued liabilities\" in other_accrued."
+ },
+ "py": {
+  "restated": true,
+  "reason": "FY2020 10-K / Q4-20 release present 2019 with Otis and Carrier as discontinued operations, the new segment measurement (acquisition accounting adjustments outside segments, corporate expense allocations) and adjusted measures excluding acquisition accounting adjustments.",
+  "source": "https://www.sec.gov/Archives/edgar/data/101829/000010182921000004/a2020-12x318xkerexhibit99.htm ; https://www.sec.gov/Archives/edgar/data/101829/000010182921000008/rtx-20201231.htm",
+  "is": {
+   "sales": 45349,
+   "sales_products": 32998,
+   "sales_services": 12351,
+   "cogs": 34598,
+   "cogs_products": 26910,
+   "cogs_services": 7688,
+   "rnd": 2452,
+   "sga": 3711,
+   "other_income": 326,
+   "op_profit": 4914,
+   "nonservice_pension": 829,
+   "interest_exp_net": 1591,
+   "ebt": 4152,
+   "tax": 421,
+   "cont_ops": 3731,
+   "nci_cont": 221,
+   "ni_parent_cont": 3510,
+   "disc_ops_pretax": 4091,
+   "disc_ops_tax": 1874,
+   "disc_ops": 2217,
+   "nci_disc": 190,
+   "ni_parent_disc": 2027,
+   "net_income": 5948,
+   "nci": 411,
+   "ni_parent": 5537,
+   "shares_basic": 854.8,
+   "shares_diluted": 863.9,
+   "eps_basic_cont": 4.11,
+   "eps_basic": 6.48,
+   "eps_dil_cont": 4.06,
+   "eps_dil_disc": 2.35,
+   "eps_dil": 6.41,
+   "dps": 2.94,
+   "note": "net_income 5,948 and nci 411 computed (3,731 + 2,217; 221 + 190)."
+  },
+  "seg": {
+   "segments": [
+    {
+     "name": "Collins Aerospace Systems",
+     "sales": 26028,
+     "op_profit": 4508,
+     "adj_sales": 26028,
+     "adj_op": 4849,
+     "restr": 102,
+     "other_items": -239,
+     "margin_pct": 17.3,
+     "adj_margin_pct": 18.6
+    },
+    {
+     "name": "Pratt & Whitney",
+     "sales": 20902,
+     "op_profit": 1801,
+     "adj_sales": 20902,
+     "adj_op": 1934,
+     "restr": 133,
+     "other_items": 0,
+     "margin_pct": 8.6,
+     "adj_margin_pct": 9.3
+    }
+   ],
+   "total_seg_sales": 46930,
+   "elim_sales": -1581,
+   "elim_op": -140,
+   "elim_adj_op": -140,
+   "corp_op": -367,
+   "corp_adj_op": -228,
+   "fas_cas": null,
+   "acq_acct_adj": -888,
+   "total_seg_op": 6309,
+   "consol_sales": 45349,
+   "consol_op": 4914,
+   "consol_adj_op": 6415,
+   "seg_note": "FY2020 10-K Note 22 / Q4-20 release prior-year columns: continuing operations, post-merger segment measurement."
+  },
+  "cust": {
+   "note": "10-Q / 10-K \"Segment sales disaggregated by customer\" and \"by sales type\": rows exactly as printed except \"U.S. government (1)\" footnote marker dropped (excludes foreign military sales through the U.S. government) and \"Product\"/\"Service\" stored as Products / Services. Customer rows sum to Consolidated net sales (external); + Inter-segment sales = Business segment sales. \"Other\" column holds non-reportable segments / eliminations. Source: FY2020 10-K, 2019 table.",
+   "Collins Aerospace Systems": {
+    "U.S. government": 4781,
+    "Foreign military sales through the U.S. government": 255,
+    "Foreign government direct commercial sales": 937,
+    "Commercial aerospace and other commercial": 18458,
+    "Consolidated net sales": 24431,
+    "Inter-segment sales": 1597,
+    "Products": 19991,
+    "Services": 4440
+   },
+   "Pratt & Whitney": {
+    "U.S. government": 4313,
+    "Foreign military sales through the U.S. government": 1316,
+    "Foreign government direct commercial sales": 561,
+    "Commercial aerospace and other commercial": 14715,
+    "Consolidated net sales": 20905,
+    "Inter-segment sales": -3,
+    "Products": 12994,
+    "Services": 7911
+   },
+   "Other": {
+    "U.S. government": 0,
+    "Foreign military sales through the U.S. government": 0,
+    "Foreign government direct commercial sales": 0,
+    "Commercial aerospace and other commercial": 13,
+    "Consolidated net sales": 13,
+    "Inter-segment sales": -1594,
+    "Products": 13,
+    "Services": 0
+   }
+  },
+  "ngaap": {
+   "adj_sales_pub": 45349,
+   "adj_op_pub": 6415,
+   "adj_ni_pub": 4275,
+   "adj_eps_pub": 4.95,
+   "adj_etr_pct_pub": 18.7,
+   "fcf_pub": 3953,
+   "restr_total": 241,
+   "acq_acct_adj_total": -888,
+   "sig_items_op_total": -372,
+   "items": [
+    {
+     "label": "Restructuring",
+     "segment": "Collins Aerospace Systems",
+     "where": "op",
+     "pretax": -102,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Restructuring",
+     "segment": "Pratt & Whitney",
+     "where": "op",
+     "pretax": -133,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Restructuring",
+     "segment": "Corporate, Eliminations and other",
+     "where": "op",
+     "pretax": -6,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Loss on sale of business",
+     "segment": "Collins Aerospace Systems",
+     "where": "op",
+     "pretax": -25,
+     "aftertax": null,
+     "cat": "GAIN"
+    },
+    {
+     "label": "Amortization of Rockwell Collins inventory fair value adjustment",
+     "segment": "Collins Aerospace Systems",
+     "where": "op",
+     "pretax": -181,
+     "aftertax": null,
+     "cat": "STEPUP"
+    },
+    {
+     "label": "Costs associated with pension plan amendment",
+     "segment": "Collins Aerospace Systems",
+     "where": "op",
+     "pretax": -33,
+     "aftertax": null,
+     "cat": "PENSION"
+    },
+    {
+     "label": "Transaction and integration costs related to acquisition of Rockwell Collins, Inc.",
+     "segment": "Corporate, Eliminations and other",
+     "where": "op",
+     "pretax": -40,
+     "aftertax": null,
+     "cat": "ACQ"
+    },
+    {
+     "label": "Costs associated with pension plan amendment",
+     "segment": "Corporate, Eliminations and other",
+     "where": "op",
+     "pretax": -10,
+     "aftertax": null,
+     "cat": "PENSION"
+    },
+    {
+     "label": "Transaction and integration costs associated with the Raytheon Merger",
+     "segment": "Corporate, Eliminations and other",
+     "where": "op",
+     "pretax": -83,
+     "aftertax": null,
+     "cat": "ACQ"
+    },
+    {
+     "label": "Acquisition accounting adjustments",
+     "segment": "Consolidated",
+     "where": "op",
+     "pretax": -888,
+     "aftertax": null,
+     "cat": "AMORT"
+    },
+    {
+     "label": "Pension curtailment",
+     "segment": "Consolidated",
+     "where": "nonservice_pension",
+     "pretax": 73,
+     "aftertax": null,
+     "cat": "PENSION"
+    },
+    {
+     "label": "Non-service pension restructuring",
+     "segment": "Consolidated",
+     "where": "nonservice_pension",
+     "pretax": -4,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Interest on tax settlements",
+     "segment": "Consolidated",
+     "where": "interest",
+     "pretax": 63,
+     "aftertax": null,
+     "cat": "TAXD"
+    },
+    {
+     "label": "Tax effect of restructuring and significant non-recurring and non-operational items above",
+     "segment": "Consolidated",
+     "where": "tax",
+     "pretax": null,
+     "aftertax": 293,
+     "cat": "TAX"
+    },
+    {
+     "label": "Tax benefit (expenses) associated with the Company's separation of Otis and Carrier",
+     "segment": "Consolidated",
+     "where": "tax",
+     "pretax": null,
+     "aftertax": 19,
+     "cat": "TAXD"
+    },
+    {
+     "label": "Tax settlements",
+     "segment": "Consolidated",
+     "where": "tax",
+     "pretax": null,
+     "aftertax": 278,
+     "cat": "TAXD"
+    },
+    {
+     "label": "Tax impact as a result of tax reform regulations",
+     "segment": "Consolidated",
+     "where": "tax",
+     "pretax": null,
+     "aftertax": 21,
+     "cat": "TAXD"
+    },
+    {
+     "label": "Noncontrolling interest resulting from the Company's announcement of its intention to separate its commercial businesses",
+     "segment": "Consolidated",
+     "where": "nci",
+     "pretax": null,
+     "aftertax": -7,
+     "cat": "NCI"
+    }
+   ]
+  },
+  "intermediate_recast_oct2020": {
+   "source": "https://www.sec.gov/Archives/edgar/data/101829/000010182920000072/utx-20201027_d2.htm",
+   "note": "Form 8-K Ex. 99.2 (27-Oct-2020) recast of the FY2019 10-K: continuing operations but the OLD segment measurement (acquisition accounting in segments, no corporate allocation).",
+   "seg": {
+    "segments": [
+     {
+      "name": "Pratt & Whitney",
+      "sales": 20892,
+      "op_profit": 1668
+     },
+     {
+      "name": "Collins Aerospace Systems",
+      "sales": 26028,
+      "op_profit": 4100
+     }
+    ],
+    "total_seg_sales": 46920,
+    "elim_sales": -1571,
+    "elim_op": -339,
+    "elim_adj_op": null,
+    "corp_op": -515,
+    "corp_adj_op": null,
+    "fas_cas": null,
+    "acq_acct_adj": null,
+    "total_seg_op": 5768,
+    "consol_sales": 45349,
+    "consol_op": 4914,
+    "consol_adj_op": null,
+    "seg_note": null
+   },
+   "cust_product_type": {
+    "Pratt & Whitney": {
+     "Commercial and industrial, non aerospace": 102,
+     "Commercial aerospace": 14516,
+     "Military aerospace": 6274,
+     "Products": 12977,
+     "Services": 7915
+    },
+    "Collins Aerospace Systems": {
+     "Commercial and industrial, non aerospace": 51,
+     "Commercial aerospace": 19005,
+     "Military aerospace": 6972,
+     "Products": 21440,
+     "Services": 4588
+    }
+   },
+   "seg_capex": {
+    "Pratt & Whitney": 822,
+    "Collins Aerospace Systems": 959,
+    "Eliminations and other": 87,
+    "Consolidated": 1868
+   },
+   "seg_dda": {
+    "Pratt & Whitney": 980,
+    "Collins Aerospace Systems": 1749,
+    "Eliminations and other": -21,
+    "Consolidated": 2708
+   },
+   "seg_assets": {
+    "Pratt & Whitney": 31271,
+    "Collins Aerospace Systems": 74049,
+    "Eliminations and other": 2472,
+    "Assets related to discontinued operations": 31823,
+    "Consolidated": 139615
+   },
+   "employees_continuing": 121600
+  }
+ },
+ "py2": {
+  "restated": false,
+  "reason": "FY2021 10-K presents 2019 identically to the FY2020 10-K (py) for IS totals and segments.",
+  "source": "https://www.sec.gov/Archives/edgar/data/101829/000010182922000005/rtx-20211231.htm",
+  "is": {
+   "sales": 45349,
+   "sales_products": 32998,
+   "sales_services": 12351,
+   "cogs": 34598,
+   "cogs_products": 26910,
+   "cogs_services": 7688,
+   "rnd": 2452,
+   "sga": 3711,
+   "other_income": 326,
+   "op_profit": 4914,
+   "nonservice_pension": 829,
+   "interest_exp_net": 1591,
+   "ebt": 4152,
+   "tax": 421,
+   "cont_ops": 3731,
+   "nci_cont": 221,
+   "ni_parent_cont": 3510,
+   "disc_ops": 2217,
+   "ni_parent_disc": 2027,
+   "ni_parent": 5537,
+   "eps_basic_cont": 4.11,
+   "eps_dil_cont": 4.06,
+   "eps_dil": 6.41
+  },
+  "seg": {
+   "segments": [
+    {
+     "name": "Collins Aerospace Systems",
+     "sales": 26028,
+     "op_profit": 4508,
+     "margin_pct": 17.3
+    },
+    {
+     "name": "Pratt & Whitney",
+     "sales": 20902,
+     "op_profit": 1801,
+     "margin_pct": 8.6
+    }
+   ],
+   "total_seg_sales": 46930,
+   "elim_sales": -1581,
+   "elim_op": -140,
+   "elim_adj_op": null,
+   "corp_op": -367,
+   "corp_adj_op": null,
+   "fas_cas": null,
+   "acq_acct_adj": -888,
+   "total_seg_op": 6309,
+   "consol_sales": 45349,
+   "consol_op": 4914,
+   "consol_adj_op": null,
+   "seg_note": "FY2021 10-K segment note, 2019 column."
+  },
+  "ngaap": {
+   "note": "FY2021 10-K does not present adjusted EPS for 2019."
+  }
+ },
+ "extra": {
+  "employees": 243200,
+  "employees_note": "FY2019 10-K: approximately 243,200 at 31-Dec-2019 (incl. Otis and Carrier), ~64% outside the U.S.; continuing operations 121,600 (recast five-year summary).",
+  "seg_dda": {
+   "Collins Aerospace Systems": 695,
+   "Pratt & Whitney": 614,
+   "Corporate, eliminations and other": 165,
+   "Acquisition accounting adjustments": 1234,
+   "Consolidated": 2708
+  },
+  "seg_capex": {
+   "Collins Aerospace Systems": 959,
+   "Pratt & Whitney": 822,
+   "Corporate, eliminations and other": 87,
+   "Consolidated": 1868
+  },
+  "seg_assets": {
+   "Collins Aerospace Systems": 74049,
+   "Pratt & Whitney": 31170,
+   "Corporate, eliminations and other": 2573,
+   "Assets related to discontinued operations": 31823,
+   "Consolidated": 139615
+  },
+  "seg_basis_note": "Segment D&A / capex / assets for 2019 from the FY2020 10-K Note 22 (continuing operations, post-merger measurement); the as-reported FY2019 Exhibit 13 table (incl. Otis and Carrier) is not among the local files. Oct-2020 recast values in py.intermediate_recast_oct2020.",
+  "backlog_bn": {
+   "Otis (RPO)": 16.3,
+   "Carrier (RPO)": 4.7,
+   "Pratt & Whitney (RPO)": 85.2,
+   "Collins Aerospace Systems (RPO)": 29.5,
+   "Total RPO": 132.7,
+   "Defense backlog (continuing, per 2020 10-Qs)": 22.3,
+   "Total backlog continuing operations (FY2020 10-K five-year summary)": 111.665
+  },
+  "debt_maturities": [
+   [
+    "2020",
+    3258
+   ],
+   [
+    "2021",
+    4091
+   ],
+   [
+    "2022",
+    3904
+   ],
+   [
+    "2023",
+    3490
+   ],
+   [
+    "2024",
+    2592
+   ],
+   [
+    "Thereafter",
+    23939
+   ],
+   [
+    "Total",
+    41274
+   ]
+  ],
+  "amort_schedule": [
+   [
+    "2020",
+    1248
+   ],
+   [
+    "2021",
+    1249
+   ],
+   [
+    "2022",
+    1283
+   ],
+   [
+    "2023",
+    1290
+   ],
+   [
+    "2024",
+    1277
+   ]
+  ],
+  "pension": {
+   "fas_service_cost": 261,
+   "cas_expense": null,
+   "fas_cas_adj": null,
+   "nonservice_pension_income": 829,
+   "contributions": 55,
+   "funded_status": -1802,
+   "expected_return_pct": 6.8,
+   "discount_rate_pct": 3.1,
+   "note": "Continuing-operations basis (FY2020 10-K): pension service cost 261 (PRB 2); non-service income 829 = pension 805 + PRB 24; global pension contributions (cash flow) 55, trust contributions U.S. qualified 25 + international 30; pension employer contributions 137 and PRB 69 in the obligation roll-forward; funded status pension -1,802, PRB -745; EROA 6.8% (2019 expense); PBO discount rate 3.1% at 31-Dec-2019. As-reported UTC (incl. Otis/Carrier) global pension contributions 118 (Q4-19 release CF). Sept-2019 amendment ceased non-union accruals from 31-Dec-2019 (curtailment gain $98m in Q3-19)."
+  },
+  "acquisitions": [],
+  "divestitures": [
+   [
+    "Businesses sold in connection with the Rockwell Acquisition (incl. Collins loss on sale $25m, Q1-19)",
+    "2019",
+    "dispositions of businesses $134m (continuing CF); Taylor Company sold 2018"
+   ]
+  ],
+  "share_repurchases": {
+   "shares_m": 1.133,
+   "amount_m": 151,
+   "authorization_remaining_m": 1812
+  },
+  "notes": "Raytheon merger agreement signed 9-Jun-2019 (closed 3-Apr-2020). Portfolio separation costs 2019: $1.46 per share in GAAP EPS."
+ },
+ "notes": "Annual as originally reported (UTC incl. Otis and Carrier) from the Q4-19 release twelve-month columns. The FY2019 10-K incorporates the financial statements by reference to the 2019 Annual Report (Exhibit 13), which is not among the local files, so the release figures could not be cross-checked against the 10-K and products/services splits and the as-reported FY disaggregation are null. dps 2.94 per FY2020 10-K / Oct-2020 recast (2019 dividends per share). employees from the FY2019 10-K Item 1; repurchase authorization remaining from Item 5. CF / BS as Q4-19."
+}

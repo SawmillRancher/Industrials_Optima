@@ -1,0 +1,923 @@
+{
+ "period": "Q2-18",
+ "period_end": "2018-06-30",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/101829/000010182918000025/a2018-06x308xkerexhibit99.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/101829/000010182918000027/a2018-06x3010xq.htm",
+  "next_release": "https://www.sec.gov/Archives/edgar/data/101829/000010182919000035/a2019-06x308xkerexhibit99.htm",
+  "next_filing": "https://www.sec.gov/Archives/edgar/data/101829/000010182919000038/a2019-06x3010xq.htm"
+ },
+ "is": {
+  "sales": 16705,
+  "sales_products": 11520,
+  "sales_services": 5185,
+  "cogs": 12422,
+  "cogs_products": 9154,
+  "cogs_services": 3268,
+  "rnd": 589,
+  "sga": 1759,
+  "other_op_lines": [],
+  "other_income": 941,
+  "op_profit": 2876,
+  "nonservice_pension": 192,
+  "interest_exp_net": 234,
+  "other_nonop": null,
+  "ebt": 2834,
+  "tax": 695,
+  "net_income": 2139,
+  "nci": 91,
+  "ni_parent": 2048,
+  "shares_basic": 791,
+  "shares_diluted": 800,
+  "eps_basic": 2.59,
+  "eps_dil": 2.56,
+  "dps": 0.7
+ },
+ "seg": {
+  "segments": [
+   {
+    "name": "Otis",
+    "sales": 3344,
+    "op_profit": 488,
+    "adj_sales": 3344,
+    "adj_op": 511,
+    "restr": 23,
+    "other_items": 0,
+    "margin_pct": 14.6,
+    "adj_margin_pct": 15.3
+   },
+   {
+    "name": "UTC Climate, Controls & Security",
+    "sales": 5035,
+    "op_profit": 1645,
+    "adj_sales": 5035,
+    "adj_op": 871,
+    "restr": 21,
+    "other_items": 795,
+    "margin_pct": 32.7,
+    "adj_margin_pct": 17.3
+   },
+   {
+    "name": "Pratt & Whitney",
+    "sales": 4736,
+    "op_profit": 397,
+    "adj_sales": 4736,
+    "adj_op": 400,
+    "restr": 3,
+    "other_items": 0,
+    "margin_pct": 8.4,
+    "adj_margin_pct": 8.4
+   },
+   {
+    "name": "UTC Aerospace Systems",
+    "sales": 3962,
+    "op_profit": 569,
+    "adj_sales": 3962,
+    "adj_op": 650,
+    "restr": 33,
+    "other_items": -48,
+    "margin_pct": 14.4,
+    "adj_margin_pct": 16.4
+   }
+  ],
+  "fas_cas": null,
+  "acq_acct_adj": null,
+  "total_seg_adj_op": 2432,
+  "seg_margin_pct": 18.1,
+  "seg_adj_margin_pct": 14.2,
+  "seg_note": "Four segments as printed; CCS operating profit includes the $795m gain on sale of Taylor Company; UTAS includes a $48m asset impairment.",
+  "total_seg_sales": 17077,
+  "elim_sales": -372,
+  "elim_op": -97,
+  "elim_adj_op": -77,
+  "corp_op": -126,
+  "corp_adj_op": -124,
+  "total_seg_op": 3099,
+  "consol_sales": 16705,
+  "consol_op": 2876,
+  "consol_adj_op": 2231
+ },
+ "cust": {
+  "note": "Segment sales disaggregated by product type and by sales type (ASC 606), exact row labels; keys 'Products' / 'Services' hold the rows printed 'Product' / 'Service' under 'Sales Type'. Rows are per segment and sum to segment sales including inter-segment sales; the disclosure prints no inter-segment row (only consolidated 'Eliminations and other'). Primary Geographical Markets (by location of origin) are in the geo_<segment> keys. Source: Q2-18 10-Q Note 16 (quarter tables; six-month tables also printed).",
+  "Otis": {
+   "Commercial and industrial, non aerospace": 3344,
+   "Commercial aerospace": 0,
+   "Military aerospace": 0,
+   "Products": 1525,
+   "Services": 1819
+  },
+  "UTC Climate, Controls & Security": {
+   "Commercial and industrial, non aerospace": 5035,
+   "Commercial aerospace": 0,
+   "Military aerospace": 0,
+   "Products": 4213,
+   "Services": 822
+  },
+  "Pratt & Whitney": {
+   "Commercial and industrial, non aerospace": 5,
+   "Commercial aerospace": 3369,
+   "Military aerospace": 1362,
+   "Products": 2775,
+   "Services": 1961
+  },
+  "UTC Aerospace Systems": {
+   "Commercial and industrial, non aerospace": 15,
+   "Commercial aerospace": 3024,
+   "Military aerospace": 923,
+   "Products": 3340,
+   "Services": 622
+  },
+  "geo_Otis": {
+   "United States": 859,
+   "Europe": 1054,
+   "Asia Pacific": 1169,
+   "Other": 262
+  },
+  "geo_UTC Climate, Controls & Security": {
+   "United States": 2618,
+   "Europe": 1455,
+   "Asia Pacific": 720,
+   "Other": 242
+  },
+  "geo_Pratt & Whitney": {
+   "United States": 3652,
+   "Europe": 126,
+   "Asia Pacific": 312,
+   "Other": 646
+  },
+  "geo_UTC Aerospace Systems": {
+   "United States": 2776,
+   "Europe": 585,
+   "Asia Pacific": 85,
+   "Other": 516
+  }
+ },
+ "kpi": {
+  "organic_growth_pct": 6,
+  "fx_pct": 2,
+  "acq_div_pct": 0,
+  "other_pct": 1,
+  "seg_organic_pct": {
+   "Otis": 3,
+   "UTC Climate, Controls & Security": 4,
+   "Pratt & Whitney": 12,
+   "UTC Aerospace Systems": 8
+  },
+  "seg_fx_pct": {
+   "Otis": 4,
+   "UTC Climate, Controls & Security": 3,
+   "Pratt & Whitney": 0,
+   "UTC Aerospace Systems": 1
+  },
+  "seg_acq_div_pct": {
+   "Otis": 0,
+   "UTC Climate, Controls & Security": 0,
+   "Pratt & Whitney": 0,
+   "UTC Aerospace Systems": 0
+  },
+  "seg_other_pct": {
+   "Otis": 0,
+   "UTC Climate, Controls & Security": 0,
+   "Pratt & Whitney": 4,
+   "UTC Aerospace Systems": 0
+  },
+  "ytd_organic_growth_pct": 6,
+  "ytd_seg_organic_pct": {
+   "Otis": 2,
+   "UTC Climate, Controls & Security": 5,
+   "Pratt & Whitney": 11,
+   "UTC Aerospace Systems": 7
+  },
+  "narrative_growth_pct": {
+   "pw_commercial_aftermarket": 12,
+   "utas_commercial_aftermarket": 12,
+   "otis_new_equipment_orders_organic": 10,
+   "ccs_equipment_orders_organic": 8
+  },
+  "other": {
+   "reported sales growth %": 9,
+   "net income excluding the Taylor Company gain $bn": 1.5,
+   "ASC 606 effect on net sales $m": 184,
+   "ASC 606 effect on operating profit $m": -19,
+   "ASC 606 effect on net income attributable to common shareowners $m": -18,
+   "ASC 606 effect by segment sales / OP $m": {
+    "Otis": [
+     20,
+     1
+    ],
+    "UTC Climate, Controls & Security": [
+     0,
+     0
+    ],
+    "Pratt & Whitney": [
+     169,
+     -26
+    ],
+    "UTC Aerospace Systems": [
+     -5,
+     6
+    ]
+   }
+  }
+ },
+ "ngaap": {
+  "adj_sales_pub": 16705,
+  "adj_op_pub": 2231,
+  "adj_ni_pub": 1576,
+  "adj_eps_pub": 1.97,
+  "adj_etr_pct_pub": 23.8,
+  "etr_pct": 24.5,
+  "fcf_pub": 1730,
+  "fcf_pub_ytd": 1846,
+  "eps_bridge_start": 2.56,
+  "eps_bridge_start_label": "Diluted Earnings Per Share",
+  "eps_bridge": [
+   [
+    "Less: Impact on Diluted Earnings Per Share (release prints +0.59; removal of the items incl. the Taylor gain)",
+    -0.59
+   ]
+  ],
+  "items": [
+   {
+    "label": "Restructuring Costs included in Operating Profit - Otis",
+    "segment": "Otis",
+    "where": "op",
+    "pretax": -23,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring Costs included in Operating Profit - UTC Climate, Controls & Security",
+    "segment": "UTC Climate, Controls & Security",
+    "where": "op",
+    "pretax": -21,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring Costs included in Operating Profit - Pratt & Whitney",
+    "segment": "Pratt & Whitney",
+    "where": "op",
+    "pretax": -3,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring Costs included in Operating Profit - UTC Aerospace Systems",
+    "segment": "UTC Aerospace Systems",
+    "where": "op",
+    "pretax": -33,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Restructuring Costs included in Operating Profit - Eliminations and other",
+    "segment": "Eliminations and other",
+    "where": "op",
+    "pretax": -2,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Non-service pension cost (restructuring)",
+    "segment": "Consolidated",
+    "where": "nonservice_pension",
+    "pretax": 2,
+    "aftertax": null,
+    "cat": "RESTR"
+   },
+   {
+    "label": "Gain on sale of Taylor Company",
+    "segment": "UTC Climate, Controls & Security",
+    "where": "op",
+    "pretax": 795,
+    "aftertax": null,
+    "cat": "GAIN"
+   },
+   {
+    "label": "Asset Impairment",
+    "segment": "UTC Aerospace Systems",
+    "where": "op",
+    "pretax": -48,
+    "aftertax": null,
+    "cat": "IMPAIR"
+   },
+   {
+    "label": "Transaction and integration costs related to merger agreement with Rockwell Collins, Inc.",
+    "segment": "Eliminations and other",
+    "where": "op",
+    "pretax": -20,
+    "aftertax": null,
+    "cat": "ACQ"
+   },
+   {
+    "label": "Tax effect of restructuring and significant non-recurring and non-operational items above",
+    "segment": "Consolidated",
+    "where": "tax",
+    "pretax": null,
+    "aftertax": -173,
+    "cat": "TAX"
+   },
+   {
+    "label": "Unfavorable income tax adjustments related to the estimated impact of the U.S. tax reform legislation enacted on December 22, 2017",
+    "segment": "Consolidated",
+    "where": "tax",
+    "pretax": null,
+    "aftertax": -2,
+    "cat": "TAXD"
+   }
+  ],
+  "restr_total": 82,
+  "restr_total_incl_nonservice": 80,
+  "acq_acct_adj_total": null,
+  "sig_items_op_total": 727,
+  "sig_items_op_impact_total": 647,
+  "sig_items_sales": null,
+  "sig_items_interest": null,
+  "tax_effect": -173,
+  "sig_items_tax": -2,
+  "items_impact_ni_parent": 472,
+  "items_impact_eps_dil": 0.59,
+  "etr_impact_pts": -0.7,
+  "ytd": {
+   "adj_op_pub": 4258,
+   "adj_ni_pub": 2997,
+   "adj_eps_pub": 3.74,
+   "adj_etr_pct_pub": 24.4,
+   "restr_total_incl_nonservice": 149,
+   "sig_items_op_total": 697
+  },
+  "guidance": "UTC updates its 2018 outlook and now anticipates: Adjusted EPS of $7.10 to $7.25,* excluding Rockwell Collins, up from $6.95 to $7.15; Adjusted EPS dilution of $0.10 to $0.15 from the pending acquisition of Rockwell Collins, assuming a third quarter close; Sales of $63.5 to $64.5 billion, up from $63.0 to $64.5 billion; Organic sales growth of 5 to 6 percent,* up from 4 to 6 percent; There is no change in the Company's previously provided 2018 expectations for free cash flow of $4.5 to $5.0 billion.*",
+  "definitions": "Adjusted net sales represents consolidated net sales from continuing operations (a GAAP measure), excluding significant items of a non-recurring and/or nonoperational nature (\"other significant items\"). Organic sales represents consolidated net sales excluding the impact of foreign currency translation, acquisitions and divestitures completed in the preceding twelve months and other significant items. Adjusted operating profit represents income from continuing operations excluding restructuring costs and other significant items. Adjusted net income represents net income from continuing operations excluding restructuring costs and other significant items. Adjusted diluted EPS represents diluted earnings per share from continuing operations excluding restructuring costs and other significant items. Segment adjustments similarly exclude restructuring and other significant items. Free cash flow represents cash flow from operations less capital expenditures."
+ },
+ "cf": {
+  "ytd_months": 6,
+  "ni": 3507,
+  "ni_label": "Net income from operations",
+  "dda": 1173,
+  "deferred_tax": 45,
+  "sbc": 117,
+  "pension_noncash": null,
+  "k401_match": null,
+  "pension_contrib": -59,
+  "wc_lines": [
+   [
+    "Change in working capital",
+    -489
+   ]
+  ],
+  "wc_total": -489,
+  "other_op": -1739,
+  "cfo": 2555,
+  "capex": -709,
+  "acq": 960,
+  "divest": null,
+  "other_intang": -181,
+  "customer_financing": null,
+  "other_inv": -308,
+  "cfi": -238,
+  "debt_issue": 337,
+  "debt_repay": null,
+  "cp_change": null,
+  "st_debt_change": 642,
+  "dividends": -1070,
+  "nci_dividends": null,
+  "buyback": -52,
+  "other_fin": -68,
+  "cff": -211,
+  "fx": -18,
+  "net_change": 2088,
+  "cash_begin": 9018,
+  "cash_end": 11106,
+  "restricted_cash": 38,
+  "cash_basis": "cash+restricted",
+  "disc_ops_cf": {
+   "cfo": null,
+   "cfi": null,
+   "cff": null
+  },
+  "quarter": {
+   "cfo": 2102,
+   "capex": -372,
+   "fcf": 1730,
+   "acq": 1050
+  },
+  "lines_raw": [
+   [
+    "Net income from operations",
+    3507
+   ],
+   [
+    "Depreciation and amortization",
+    1173
+   ],
+   [
+    "Deferred income tax provision",
+    45
+   ],
+   [
+    "Stock compensation cost",
+    117
+   ],
+   [
+    "Gain on sale of Taylor Company",
+    -795
+   ],
+   [
+    "Change in working capital",
+    -489
+   ],
+   [
+    "Global pension contributions",
+    -59
+   ],
+   [
+    "Canadian government settlement",
+    -221
+   ],
+   [
+    "Other operating activities, net",
+    -723
+   ],
+   [
+    "Net cash flows provided by operating activities",
+    2555
+   ],
+   [
+    "Capital expenditures",
+    -709
+   ],
+   [
+    "Acquisitions and dispositions of businesses, net",
+    960
+   ],
+   [
+    "Proceeds from sale of investments in Watsco, Inc.",
+    0
+   ],
+   [
+    "Increase in collaboration intangible assets",
+    -181
+   ],
+   [
+    "Payments from settlements of derivative contracts",
+    82
+   ],
+   [
+    "Other investing activities, net",
+    -390
+   ],
+   [
+    "Net cash flows provided by (used in) investing activities",
+    -238
+   ],
+   [
+    "Issuance of long-term debt, net",
+    337
+   ],
+   [
+    "(Decrease) increase in short-term borrowings, net",
+    642
+   ],
+   [
+    "Dividends paid on Common Stock",
+    -1070
+   ],
+   [
+    "Repurchase of Common Stock",
+    -52
+   ],
+   [
+    "Other financing activities, net",
+    -68
+   ],
+   [
+    "Net cash flows provided by (used in) financing activities",
+    -211
+   ],
+   [
+    "Effect of foreign exchange rate changes on cash and cash equivalents",
+    -18
+   ],
+   [
+    "Net increase in cash, cash equivalents and restricted cash",
+    2088
+   ],
+   [
+    "Cash, cash equivalents and restricted cash, beginning of period",
+    9018
+   ],
+   [
+    "Cash, cash equivalents and restricted cash, end of period",
+    11106
+   ],
+   [
+    "Less: Restricted cash, included in Other assets",
+    38
+   ],
+   [
+    "Cash and cash equivalents, end of period",
+    11068
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 11068,
+  "ar": 11973,
+  "contract_assets": 3273,
+  "inventory": 8979,
+  "other_ca": 1263,
+  "tca": 36556,
+  "customer_financing": null,
+  "ppe": 10115,
+  "rou": null,
+  "goodwill": 27699,
+  "intangibles": 15739,
+  "other_nca": 11460,
+  "ta": 101569,
+  "st_debt": 1063,
+  "ap": 9623,
+  "accrued_comp": null,
+  "other_accrued": 8730,
+  "contract_liabilities": 5652,
+  "ltd_current": null,
+  "tcl": 25068,
+  "ltd": 27246,
+  "lease_ltl": null,
+  "pension_obl": null,
+  "other_ncl": 15779,
+  "tl": 68093,
+  "redeemable_nci": 130,
+  "common_stock": 17666,
+  "treasury": -35645,
+  "retained": 57027,
+  "aoci": -7684,
+  "equity_parent": 31364,
+  "nci": 1982,
+  "te": 33346,
+  "tle": 101569,
+  "shares_out": 800.1,
+  "shares_out_date": "2018-06-30",
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    11068
+   ],
+   [
+    "Accounts receivable, net",
+    11973
+   ],
+   [
+    "Contract assets, current",
+    3273
+   ],
+   [
+    "Inventories and contracts in progress, net",
+    8979
+   ],
+   [
+    "Other assets, current",
+    1263
+   ],
+   [
+    "Total Current Assets",
+    36556
+   ],
+   [
+    "Fixed assets, net",
+    10115
+   ],
+   [
+    "Goodwill",
+    27699
+   ],
+   [
+    "Intangible assets, net",
+    15739
+   ],
+   [
+    "Other assets",
+    11460
+   ],
+   [
+    "Total Assets",
+    101569
+   ],
+   [
+    "Short-term debt",
+    1063
+   ],
+   [
+    "Accounts payable",
+    9623
+   ],
+   [
+    "Accrued liabilities",
+    8730
+   ],
+   [
+    "Contract liabilities, current",
+    5652
+   ],
+   [
+    "Total Current Liabilities",
+    25068
+   ],
+   [
+    "Long-term debt",
+    27246
+   ],
+   [
+    "Other long-term liabilities",
+    15779
+   ],
+   [
+    "Total Liabilities",
+    68093
+   ],
+   [
+    "Redeemable noncontrolling interest",
+    130
+   ],
+   [
+    "Common Stock",
+    17666
+   ],
+   [
+    "Treasury Stock",
+    -35645
+   ],
+   [
+    "Retained earnings",
+    57027
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -7684
+   ],
+   [
+    "Total Shareowners' Equity",
+    31364
+   ],
+   [
+    "Noncontrolling interest",
+    1982
+   ],
+   [
+    "Total Equity",
+    33346
+   ],
+   [
+    "Total Liabilities and Equity",
+    101569
+   ],
+   [
+    "Debt to total capitalization %",
+    46
+   ],
+   [
+    "Net debt to net capitalization %",
+    34
+   ]
+  ]
+ },
+ "py": {
+  "restated": false,
+  "reason": "Values identical in the Q2-19 release / 10-Q; segments renamed Carrier and Collins Aerospace Systems (Q2-18 excludes Rockwell Collins); 'Asset impairment' label in lower case; adjusted segment sales no longer printed.",
+  "source": "https://www.sec.gov/Archives/edgar/data/101829/000010182919000035/a2019-06x308xkerexhibit99.htm ; https://www.sec.gov/Archives/edgar/data/101829/000010182919000038/a2019-06x3010xq.htm",
+  "is": {
+   "sales": 16705,
+   "cogs": 12422,
+   "rnd": 589,
+   "sga": 1759,
+   "other_income": 941,
+   "op_profit": 2876,
+   "nonservice_pension": 192,
+   "interest_exp_net": 234,
+   "ebt": 2834,
+   "tax": 695,
+   "net_income": 2139,
+   "nci": 91,
+   "ni_parent": 2048,
+   "shares_basic": 791,
+   "shares_diluted": 800,
+   "eps_basic": 2.59,
+   "eps_dil": 2.56
+  },
+  "seg": {
+   "segments": [
+    {
+     "name": "Otis",
+     "sales": 3344,
+     "op_profit": 488,
+     "adj_sales": 3344,
+     "adj_op": 511,
+     "restr": 23,
+     "other_items": 0,
+     "margin_pct": 14.6,
+     "adj_margin_pct": 15.3
+    },
+    {
+     "name": "Carrier",
+     "sales": 5035,
+     "op_profit": 1645,
+     "adj_sales": 5035,
+     "adj_op": 871,
+     "restr": 21,
+     "other_items": 795,
+     "margin_pct": 32.7,
+     "adj_margin_pct": 17.3
+    },
+    {
+     "name": "Pratt & Whitney",
+     "sales": 4736,
+     "op_profit": 397,
+     "adj_sales": 4736,
+     "adj_op": 400,
+     "restr": 3,
+     "other_items": 0,
+     "margin_pct": 8.4,
+     "adj_margin_pct": 8.4
+    },
+    {
+     "name": "Collins Aerospace Systems",
+     "sales": 3962,
+     "op_profit": 569,
+     "adj_sales": 3962,
+     "adj_op": 650,
+     "restr": 33,
+     "other_items": -48,
+     "margin_pct": 14.4,
+     "adj_margin_pct": 16.4
+    }
+   ],
+   "total_seg_sales": 17077,
+   "elim_sales": -372,
+   "elim_op": -97,
+   "elim_adj_op": -77,
+   "corp_op": -126,
+   "corp_adj_op": -124,
+   "total_seg_op": 3099,
+   "consol_sales": 16705,
+   "consol_op": 2876,
+   "consol_adj_op": 2231
+  },
+  "cust": {
+   "note": "Segment sales disaggregated by product type and by sales type (ASC 606), exact row labels; keys 'Products' / 'Services' hold the rows printed 'Product' / 'Service' under 'Sales Type'. Rows are per segment and sum to segment sales including inter-segment sales; the disclosure prints no inter-segment row (only consolidated 'Eliminations and other'). Primary Geographical Markets (by location of origin) are in the geo_<segment> keys. Source: Q2-19 10-Q (2018 columns).",
+   "Otis": {
+    "Commercial and industrial, non aerospace": 3344,
+    "Commercial aerospace": 0,
+    "Military aerospace": 0,
+    "Products": 1525,
+    "Services": 1819
+   },
+   "Carrier": {
+    "Commercial and industrial, non aerospace": 5035,
+    "Commercial aerospace": 0,
+    "Military aerospace": 0,
+    "Products": 4213,
+    "Services": 822
+   },
+   "Pratt & Whitney": {
+    "Commercial and industrial, non aerospace": 5,
+    "Commercial aerospace": 3369,
+    "Military aerospace": 1362,
+    "Products": 2775,
+    "Services": 1961
+   },
+   "Collins Aerospace Systems": {
+    "Commercial and industrial, non aerospace": 15,
+    "Commercial aerospace": 3024,
+    "Military aerospace": 923,
+    "Products": 3340,
+    "Services": 622
+   },
+   "geo_Otis": {
+    "United States": 859,
+    "Europe": 1054,
+    "Asia Pacific": 1169,
+    "Other": 262
+   },
+   "geo_Carrier": {
+    "United States": 2618,
+    "Europe": 1455,
+    "Asia Pacific": 720,
+    "Other": 242
+   },
+   "geo_Pratt & Whitney": {
+    "United States": 3652,
+    "Europe": 126,
+    "Asia Pacific": 312,
+    "Other": 646
+   },
+   "geo_Collins Aerospace Systems": {
+    "United States": 2776,
+    "Europe": 585,
+    "Asia Pacific": 85,
+    "Other": 516
+   }
+  },
+  "ngaap": {
+   "adj_sales_pub": null,
+   "adj_op_pub": 2231,
+   "adj_ni_pub": 1576,
+   "adj_eps_pub": 1.97,
+   "adj_etr_pct_pub": 23.8,
+   "etr_pct": 24.5,
+   "items": [
+    {
+     "label": "Restructuring Costs included in Operating Profit - Otis",
+     "segment": "Otis",
+     "where": "op",
+     "pretax": -23,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Restructuring Costs included in Operating Profit - Carrier",
+     "segment": "Carrier",
+     "where": "op",
+     "pretax": -21,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Restructuring Costs included in Operating Profit - Pratt & Whitney",
+     "segment": "Pratt & Whitney",
+     "where": "op",
+     "pretax": -3,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Restructuring Costs included in Operating Profit - Collins Aerospace Systems",
+     "segment": "Collins Aerospace Systems",
+     "where": "op",
+     "pretax": -33,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Restructuring Costs included in Operating Profit - Eliminations and other",
+     "segment": "Eliminations and other",
+     "where": "op",
+     "pretax": -2,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Non-service pension cost (restructuring)",
+     "segment": "Consolidated",
+     "where": "nonservice_pension",
+     "pretax": 2,
+     "aftertax": null,
+     "cat": "RESTR"
+    },
+    {
+     "label": "Gain on sale of Taylor Company",
+     "segment": "Carrier",
+     "where": "op",
+     "pretax": 795,
+     "aftertax": null,
+     "cat": "GAIN"
+    },
+    {
+     "label": "Asset impairment",
+     "segment": "Collins Aerospace Systems",
+     "where": "op",
+     "pretax": -48,
+     "aftertax": null,
+     "cat": "IMPAIR"
+    },
+    {
+     "label": "Transaction and integration costs related to merger agreement with Rockwell Collins, Inc.",
+     "segment": "Eliminations and other",
+     "where": "op",
+     "pretax": -20,
+     "aftertax": null,
+     "cat": "ACQ"
+    },
+    {
+     "label": "Tax effect of restructuring and significant non-recurring and non-operational items above",
+     "segment": "Consolidated",
+     "where": "tax",
+     "pretax": null,
+     "aftertax": -173,
+     "cat": "TAX"
+    },
+    {
+     "label": "Unfavorable income tax adjustments related to the estimated impact of the U.S. tax reform legislation enacted on December 22, 2017",
+     "segment": "Consolidated",
+     "where": "tax",
+     "pretax": null,
+     "aftertax": -2,
+     "cat": "TAXD"
+    }
+   ],
+   "restr_total": 82,
+   "restr_total_incl_nonservice": 80,
+   "sig_items_op_total": 727
+  }
+ },
+ "notes": "Quarter IS / segments / non-GAAP from the Q2-18 release; product / service split from the Q2-18 10-Q. Taylor Company (Carrier / CCS) sold June 21, 2018: pre-tax gain 795 in Q2 (799 for the year after a +4 adjustment in Q3), in Other income, net. Restructuring: OP (82) and 'Non-service pension cost' +2, total (80); restr_total = OP restructuring 82 (so adj OP = 2,876 + 82 - 727 = 2,231). CF six-month column: other_op (1,739) = Gain on sale of Taylor Company (795) + Canadian government settlement (221) + Other operating activities, net (723); other_inv (308) = derivatives 82 + other (390). Quarter FCF 1,730 (fcf_pub); six months 1,846. dps 0.70 (Q2 dividend; $0.70 declared June 13, 2018 payable Sept 10). shares_out 800,093,285 (10-Q cover, as of June 30, 2018)."
+}
