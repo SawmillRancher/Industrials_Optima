@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, TDG). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -275,12 +275,12 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
 ### 5.1 Sources and extraction
-- **Share price fallback.** With market sites blocked and no price from the user, use the latest SEC-filed price: the 10-Q Part II Item 2 average repurchase price, or a Form 4 transaction / withholding price. Cite the form and date, and flag "update to market". Don't use unverifiable web quotes. [WWD, BWXT, MLM, CLH, WAB, CSGP, CTAS, UBER]
+- **Share price fallback.** With market sites blocked and no price from the user, use the latest SEC-filed price: the 10-Q Part II Item 2 average repurchase price, a Form 4 transaction / withholding price, or the exercise price of options granted at market. Cite the form and date, and flag "update to market". Don't use unverifiable web quotes. [WWD, BWXT, MLM, CLH, WAB, CSGP, CTAS, UBER, TDG]
 - **XBRL can be wrong, not just incomplete.** Facts tagged 0, tags retired mid-history into a combined concept, and sign flips all occur. Tie every XBRL-sourced fact to the face statement before using it as a primary input. For as-originally-reported checks, use the earliest-filed fact, and compare absolute values where the tag's sign convention changed. [TFI, ODFL]
 - **Foreign filers' EDGAR history starts at the US listing.** Record reporting-currency switches and keep an FX reference series for any manually entered earlier data. For non-SEC issuers, confirm EDGAR holds only F-6 ADR CIKs, say so in header row 3, and source from the home regulator's filings. [TFI, RBA, RMS]
 - **Derivations when releases are thin:**
@@ -288,6 +288,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Working capital from a single-line CFO = CFO − NI − D&A − SBC − deferred tax, using XBRL for the components and noting missing tags. [WWD]
   - Recast Q4 = FY recast − 9M recast; quarters that were never recast stay blank. [LECO]
   - Each derivation is noted in the cell comment.
+- **Units and dropped cells.** Detect thousands vs millions per table (issuers switch, e.g. TDG in FY2020) and widen check tolerances from that period. A row with a dropped empty cell shifts left; right-align it only where a printed total proves the column, and log it. Treat an EDGAR "File Unavailable" page as a failed download. [TDG]
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
 
@@ -297,6 +298,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Disc-ops recast published only in totals:** scale minor opex lines to the restated totals, with SG&A as the plug, and comment the cells. [STE]
 - **After a spin:** start the BS at the first post-spin balance sheet even if the P&L uses earlier recast comparatives, and fill earlier y/y with company-reported change % memos. Spin-cos put carve-out (Form 10) years in the main columns, with the former parent's segment history as a flagged memo under the parent's CIK. [XPO, ESAB]
 - **Half-year reporters:** carry quarterly revenue as "1st / 2nd quarter of the half" memo rows inside the half-year columns, with a Σ check. [RMS, BC]
+- **Latest-filing segments, as-reported statements:** when segment / end-market data come from later comparatives but the consolidated statements stay as first reported, add a derived basis-difference row (also covering years with no segment split) so the build ties in every period. [TDG]
 - **Two builds of one company:** diff their dated facts (split dates, deconsolidation quarter, label cut-overs) and resolve each from the filing. [LECO]
 
 ### 5.3 Operating build
@@ -313,6 +315,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Re-map a target's costs to the acquirer's presentation before applying margins.
 
   [ESAB, LECO, MLM, TDY, VMC, TMO, CTAS]
+- **Acquisition contribution in the forecast:** inorganic sales = revenue from future deals in excess of the prior year's acquired base grown organically (≈ sales owned under twelve months); subtracting the whole acquired stock understates organic growth. Known closed deals go in as explicit inorganic inputs until their anniversary. [TDG, LOAR]
 - **Strip one-offs and calendar effects before compounding:** restructuring out of base unit costs; extra workday or 53rd week out of the YTD trend. [CHRW, CTAS]
 - **Operational calendars** (work days) are rebuilt in code and validated against every published count before filling unpublished periods. [ODFL]
 - **Marketplaces:** receivables and payables run as days of GTV, not revenue. [RBA]
@@ -341,6 +344,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Two-class / participating preferred:** the adjusted-NI bridge needs an "allocation to preferred" line, and the preferred is deducted in the EV bridge. [RBA]
 
 ### 5.5 Calibration
+- **Fiscal year just closed:** if the 10-K is already filed, the forecast year has four estimated quarters; solve each calibration Δ once in the annual column and reference it from every quarter. A published guidance-midpoint reconciliation supplies D&A, interest, tax and adjusting items; using it lands net income on guidance and validates the bridge. [TDG]
 - **Order of operations.** Apply every explicitly guided driver first, then solve one uniform Δ on the least-guided driver. Use a "sensitivity to +1.00" helper row for a closed-form linear solve, with no goal-seek and no circularity. [VMC, MLM, TDY, WAB, DHR, LOAR, CSGP]
 - **EPS guidance → operating target:** required adjusted OI = EPS × guidance share count (ex future buybacks) ÷ (1 − guided ETR) + net interest − adjusted other income, less the actual YTD. Then solve margins to it. [DHR, CTAS, STE, WAB, WWD]
 - **Two anchors in one year:** if a quarterly guide and a FY guide both exist, solve Q3 to the quarter and Q4 to the year with separate Δs and checks. For one-quarter-ahead guidance only, carry the solved Δ forward. [DHR, ONON, TDY, UBER]
@@ -361,6 +365,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Limit the buyback row to the remaining quarters; actual share counts already include YTD repurchases.
 
   [TMO, STE, UBER, CTAS, CSGP, DHR, ONON, RBA]
+- **Serial recapitalisers:** size the capital return with a leverage target and split it into special dividends and buybacks; with two-class EPS, deduct the participating-security share of each dividend from GAAP EPS only. [TDG]
 - **Dividends = DPS × beginning shares,** so they aren't circular with plug-driven buybacks. [TMO, CTAS, CSGP]
 - **Deal year:** size working capital, leverage, the buyback floor and EV multiples on pro forma full-year revenue and Adj. EBITDA (memo rows), and exclude acquired NWC from ΔNWC. Check whether acquired intangibles are tax-deductible; if not, add a DTL unwind. [MLM, CSGP, DHR, CTAS, TMO, UBER, ESAB, KRMN]
 - **Choose the buyback plug to fit the capital structure:**

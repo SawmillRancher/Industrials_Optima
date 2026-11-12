@@ -1,0 +1,671 @@
+{
+ "period": "Q2-20",
+ "fy": 2020,
+ "q": 2,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1260221/000126022120000044/a2020q2earningsrelease.htm",
+  "release_date": "2020-05-05",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1260221/000126022120000050/tdg2020q210-q.htm",
+  "filing_date": "2020-05-05"
+ },
+ "notes": [],
+ "is": {
+  "rev": 1443.0,
+  "cogs": 625.0,
+  "gp": 818.0,
+  "sga": 180.0,
+  "amort": 46.0,
+  "oi": 592.0,
+  "int_net": 252.0,
+  "refin": 3.0,
+  "other": 0.0,
+  "ebt": 337.0,
+  "tax": 14.0,
+  "ni_cont": 323.0,
+  "disc": -4.0,
+  "ni": 319.0,
+  "nci": 0.0,
+  "ni_td": 319.0,
+  "ni_common": 319.0,
+  "eps_cont": 5.63,
+  "eps_cont_label": "Earnings per share from continuing operations - basic and diluted",
+  "eps_disc": -0.07,
+  "eps_disc_label": "(Loss) Earnings per share from discontinued operations - basic and diluted",
+  "eps_d": 5.56,
+  "eps_d_label": "Earnings per share",
+  "dps": 0.0,
+  "dps_label": "Cash dividends declared per common share",
+  "sh_b": 57.4,
+  "sh_d": 57.4,
+  "other_op_lines": [],
+  "below_oi_lines": [],
+  "units": "millions"
+ },
+ "ngaap": {
+  "ebitda": {
+   "items": [
+    {
+     "label": "Acquisition-related expenses and adjustments (1)",
+     "val": 9.0,
+     "cat": "ACQ"
+    },
+    {
+     "label": "Non-cash stock compensation expense (2)",
+     "val": 11.0,
+     "cat": "SBC"
+    },
+    {
+     "label": "Refinancing costs (3)",
+     "val": 3.0,
+     "cat": "DEBT"
+    },
+    {
+     "label": "Other, net (4)",
+     "val": -9.0,
+     "cat": "OTHER"
+    }
+   ],
+   "post_items": [],
+   "ni_cont": 323.0,
+   "dda": 72.0,
+   "int_net": 252.0,
+   "tax": 14.0,
+   "ebitda_pub": 661.0,
+   "ebitda_label": "EBITDA",
+   "gross_adj": 14.0,
+   "ebitda_ad_pub": 675.0,
+   "ebitda_ad_margin_pub": 46.8
+  },
+  "adj": {
+   "items": [],
+   "nci": 0.0,
+   "div_part": 0.0,
+   "sh_common": 53.8,
+   "sh_part": 3.6,
+   "sh_total": 57.4,
+   "start": 323.0,
+   "start_label": "Net income from continuing operations attributable to TD Group",
+   "gross_adj": 14.0,
+   "backlog_amort": 16.0,
+   "tax_adj": -61.0,
+   "adj_ni_pub": 292.0,
+   "adj_eps_pub": 5.1,
+   "eps_div_equiv": 0.0,
+   "sh_adj": 57.4
+  },
+  "organic_growth_pct": 4.8,
+  "narr_com_oem": [
+   "commercial OEM sales over the long term"
+  ],
+  "narr_com_aft": [
+   "commercial aftermarket and OEM sales from the COVID-19 pandemic as approximately the last three weeks of our second fiscal quarter were negati",
+   "commercial aftermarket sales"
+  ],
+  "narr_defense": [
+   "defense customers and their demand for our products and services",
+   "defense budget and risks associated with being a government supplier including government audits and investigations; failure to"
+  ]
+ },
+ "period_end": "2020-03-28",
+ "is_filing": {
+  "rev": 1443.0,
+  "cogs": 625.0,
+  "gp": 818.0,
+  "sga": 180.0,
+  "amort": 46.0,
+  "oi": 592.0,
+  "int_net": 252.0,
+  "refin": 3.0,
+  "other": 0.0,
+  "ebt": 337.0,
+  "tax": 14.0,
+  "ni_cont": 323.0,
+  "disc": -4.0,
+  "ni": 319.0,
+  "nci": 0.0,
+  "ni_td": 319.0,
+  "ni_common": 319.0,
+  "eps_cont": 5.63,
+  "eps_cont_label": "Earnings per share from continuing operations - basic and diluted",
+  "eps_disc": -0.07,
+  "eps_disc_label": "(Loss) Earnings per share from discontinued operations - basic and diluted",
+  "eps_d": 5.56,
+  "eps_d_label": "Earnings per share",
+  "dps": 0.0,
+  "dps_label": "Cash dividends declared per common share",
+  "sh_b": 57.4,
+  "sh_d": 57.4,
+  "other_op_lines": [],
+  "below_oi_lines": [],
+  "units": "millions"
+ },
+ "bs": {
+  "cash": 2668.0,
+  "ar": 999.0,
+  "inv": 1313.0,
+  "tca": 5200.0,
+  "ppe": 748.0,
+  "gw": 7846.0,
+  "intang": 2669.0,
+  "deftax": 13.0,
+  "ta": 16635.0,
+  "cltd": 279.0,
+  "std": 350.0,
+  "ap": 266.0,
+  "accrued": 761.0,
+  "tcl": 1656.0,
+  "ltd": 17933.0,
+  "other_ncl": 866.0,
+  "tl": 20840.0,
+  "shares_issued": 58.233574,
+  "shares_treasury": 4.198226,
+  "eq_td": -4209.0,
+  "nci": 4.0,
+  "te": -4205.0,
+  "tle": 16635.0,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    2668.0
+   ],
+   [
+    "Trade accounts receivable\u2014Net",
+    999.0
+   ],
+   [
+    "Inventories\u2014Net",
+    1313.0
+   ],
+   [
+    "Assets held-for-sale",
+    0.0
+   ],
+   [
+    "Prepaid expenses and other",
+    220.0
+   ],
+   [
+    "Total current assets",
+    5200.0
+   ],
+   [
+    "PROPERTY, PLANT AND EQUIPMENT\u2014NET",
+    748.0
+   ],
+   [
+    "GOODWILL",
+    7846.0
+   ],
+   [
+    "OTHER INTANGIBLE ASSETS\u2014NET",
+    2669.0
+   ],
+   [
+    "DEFERRED INCOME TAXES",
+    13.0
+   ],
+   [
+    "OTHER",
+    159.0
+   ],
+   [
+    "TOTAL ASSETS",
+    16635.0
+   ],
+   [
+    "Current portion of long-term debt",
+    279.0
+   ],
+   [
+    "Short-term borrowings\u2014trade receivable securitization facility",
+    350.0
+   ],
+   [
+    "Accounts payable",
+    266.0
+   ],
+   [
+    "Accrued liabilities",
+    761.0
+   ],
+   [
+    "Liabilities held-for-sale",
+    0.0
+   ],
+   [
+    "Total current liabilities",
+    1656.0
+   ],
+   [
+    "LONG-TERM DEBT",
+    17933.0
+   ],
+   [
+    "DEFERRED INCOME TAXES",
+    385.0
+   ],
+   [
+    "OTHER NON-CURRENT LIABILITIES",
+    866.0
+   ],
+   [
+    "Total liabilities",
+    20840.0
+   ],
+   [
+    "Common stock - $.01 par value; authorized 224,400,000 shares; issued 58,233,574 and 57,623,311 at March 28, 2020 and September 30, 2019, respectively",
+    1.0
+   ],
+   [
+    "Additional paid-in capital",
+    1488.0
+   ],
+   [
+    "Accumulated deficit",
+    -4401.0
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -503.0
+   ],
+   [
+    "Treasury stock, at cost; 4,198,226 and 4,161,326 shares at March 28, 2020 and September 30, 2019, respectively",
+    -794.0
+   ],
+   [
+    "Total TD Group stockholders\u2019 deficit",
+    -4209.0
+   ],
+   [
+    "NONCONTROLLING INTERESTS",
+    4.0
+   ],
+   [
+    "Total stockholders' deficit",
+    -4205.0
+   ],
+   [
+    "TOTAL LIABILITIES AND STOCKHOLDERS\u2019 DEFICIT",
+    16635.0
+   ]
+  ]
+ },
+ "cf": {
+  "ytd_months": 6,
+  "ni": 624.0,
+  "dep": 55.0,
+  "amort": 86.0,
+  "amort_debt": 16.0,
+  "refin": 26.0,
+  "sbc": 37.0,
+  "deferred_tax": -9.0,
+  "cfo": 594.0,
+  "capex": -50.0,
+  "cfi": 854.0,
+  "stock_proc": 69.0,
+  "dividends": -1928.0,
+  "buyback": -19.0,
+  "cff": -248.0,
+  "fx": 1.0,
+  "net": 1201.0,
+  "beg": 1467.0,
+  "end": 2668.0,
+  "wc_change": -148.0,
+  "debt_lines": [
+   [
+    "Proceeds from revolving credit facility",
+    200.0
+   ],
+   [
+    "Repayments on term loans",
+    -19.0
+   ],
+   [
+    "Cash tender and redemption of senior subordinated notes due 2020",
+    0.0
+   ],
+   [
+    "Redemption of senior subordinated notes due 2022, net",
+    -1168.0
+   ],
+   [
+    "Proceeds from 5.50% senior subordinated notes due 2027, net",
+    2625.0
+   ],
+   [
+    "Proceeds from senior subordinated notes, net",
+    0.0
+   ],
+   [
+    "Proceeds from senior secured notes due 2026, net",
+    0.0
+   ]
+  ],
+  "debt_net": 1638.0,
+  "lines_raw": [
+   [
+    "Net income",
+    624.0
+   ],
+   [
+    "Net income from discontinued operations",
+    -68.0
+   ],
+   [
+    "Depreciation",
+    55.0
+   ],
+   [
+    "Amortization of intangible assets",
+    86.0
+   ],
+   [
+    "Amortization of debt issuance costs, original issue discount and premium",
+    16.0
+   ],
+   [
+    "Amortization of inventory step-up",
+    0.0
+   ],
+   [
+    "Amortization of loss contract reserves",
+    -25.0
+   ],
+   [
+    "Refinancing costs",
+    26.0
+   ],
+   [
+    "Non-cash equity compensation",
+    37.0
+   ],
+   [
+    "Deferred income taxes",
+    -9.0
+   ],
+   [
+    "Trade accounts receivable",
+    74.0
+   ],
+   [
+    "Inventories",
+    -97.0
+   ],
+   [
+    "Income taxes receivable/payable",
+    -73.0
+   ],
+   [
+    "Other assets",
+    -32.0
+   ],
+   [
+    "Accounts payable",
+    -12.0
+   ],
+   [
+    "Accrued interest",
+    68.0
+   ],
+   [
+    "Accrued and other liabilities",
+    -76.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    594.0
+   ],
+   [
+    "Capital expenditures",
+    -50.0
+   ],
+   [
+    "Payments made in connection with acquisitions, net of cash acquired",
+    0.0
+   ],
+   [
+    "Proceeds in connection with the sale of discontinued operations, net",
+    904.0
+   ],
+   [
+    "Net cash provided by (used in) investing activities",
+    854.0
+   ],
+   [
+    "Proceeds from exercise of stock options",
+    69.0
+   ],
+   [
+    "Dividends and dividend equivalent payments",
+    -1928.0
+   ],
+   [
+    "Treasury stock purchased",
+    -19.0
+   ],
+   [
+    "Proceeds from revolving credit facility",
+    200.0
+   ],
+   [
+    "Repayments on term loans",
+    -19.0
+   ],
+   [
+    "Cash tender and redemption of senior subordinated notes due 2020",
+    0.0
+   ],
+   [
+    "Redemption of senior subordinated notes due 2022, net",
+    -1168.0
+   ],
+   [
+    "Proceeds from 5.50% senior subordinated notes due 2027, net",
+    2625.0
+   ],
+   [
+    "Proceeds from senior subordinated notes, net",
+    0.0
+   ],
+   [
+    "Proceeds from senior secured notes due 2026, net",
+    0.0
+   ],
+   [
+    "Financing fees and other, net",
+    -8.0
+   ],
+   [
+    "Net cash (used in) provided by financing activities",
+    -248.0
+   ],
+   [
+    "EFFECT OF EXCHANGE RATE CHANGES ON CASH AND CASH EQUIVALENTS",
+    1.0
+   ],
+   [
+    "NET INCREASE IN CASH AND CASH EQUIVALENTS",
+    1201.0
+   ],
+   [
+    "CASH AND CASH EQUIVALENTS, BEGINNING OF PERIOD",
+    1467.0
+   ],
+   [
+    "CASH AND CASH EQUIVALENTS, END OF PERIOD",
+    2668.0
+   ],
+   [
+    "Cash paid during the period for interest",
+    424.0
+   ],
+   [
+    "Cash paid during the period for income taxes, net of refunds",
+    183.0
+   ]
+  ]
+ },
+ "seg": {
+  "pc_ebitda": 381.0,
+  "af_ebitda": 296.0,
+  "na_ebitda": 14.0,
+  "seg_ebitda_tot": 691.0,
+  "corp": 16.0,
+  "ebitda_ad": 675.0,
+  "dda": 72.0,
+  "int_net": 252.0,
+  "acq": 9.0,
+  "sbc": 12.0,
+  "refin": 3.0,
+  "other": -10.0,
+  "ebt": 337.0,
+  "format": "legacy"
+ },
+ "organic": {
+  "org_sales": 1128.0,
+  "org_sales_py": 1072.0,
+  "acq_sales": 315.0,
+  "acq_sales_py": 96.0
+ },
+ "em": {
+  "pc_coem": 191.0,
+  "pc_caft": 225.0,
+  "pc_def": 331.0,
+  "pc_tot": 747.0,
+  "af_coem": 243.0,
+  "af_caft": 220.0,
+  "af_def": 192.0,
+  "af_tot": 655.0,
+  "na": 41.0
+ },
+ "py": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1260221/000126022121000057/exhibit991tdg2021q2earning.htm",
+  "is": {
+   "rev": 1443.0,
+   "cogs": 625.0,
+   "gp": 818.0,
+   "sga": 180.0,
+   "amort": 46.0,
+   "oi": 592.0,
+   "int_net": 252.0,
+   "refin": 3.0,
+   "other": 0.0,
+   "ebt": 337.0,
+   "tax": 14.0,
+   "ni_cont": 323.0,
+   "disc": -4.0,
+   "ni": 319.0,
+   "nci": 0.0,
+   "ni_td": 319.0,
+   "ni_common": 319.0,
+   "eps_cont": 5.63,
+   "eps_cont_label": "Earnings per share from continuing operations\u2014basic and diluted",
+   "eps_disc": -0.07,
+   "eps_disc_label": "(Loss) Earnings per share from discontinued operations\u2014basic and diluted",
+   "eps_d": 5.56,
+   "eps_d_label": "Earnings per share",
+   "dps": 0.0,
+   "dps_label": "Cash dividends paid per common share",
+   "sh_b": 57.4,
+   "sh_d": 57.4,
+   "other_op_lines": [],
+   "below_oi_lines": [],
+   "units": "millions"
+  },
+  "ebitda": {
+   "items": [
+    {
+     "label": "Acquisition-related expenses and adjustments (1)",
+     "val": 9.0,
+     "cat": "ACQ"
+    },
+    {
+     "label": "Non-cash stock compensation expense (2)",
+     "val": 11.0,
+     "cat": "SBC"
+    },
+    {
+     "label": "Refinancing costs (3)",
+     "val": 3.0,
+     "cat": "DEBT"
+    },
+    {
+     "label": "COVID-19 pandemic restructuring costs (4)",
+     "val": 1.0,
+     "cat": "OTHER"
+    },
+    {
+     "label": "Other, net (5)",
+     "val": -10.0,
+     "cat": "OTHER"
+    }
+   ],
+   "post_items": [],
+   "ni_cont": 323.0,
+   "dda": 72.0,
+   "int_net": 252.0,
+   "tax": 14.0,
+   "ebitda_pub": 661.0,
+   "ebitda_label": "EBITDA",
+   "gross_adj": 14.0,
+   "ebitda_ad_pub": 675.0,
+   "ebitda_ad_margin_pub": 46.8
+  },
+  "adj": {
+   "items": [],
+   "nci": 0.0,
+   "div_part": 0.0,
+   "sh_common": 53.8,
+   "sh_part": 3.6,
+   "sh_total": 57.4,
+   "start": 323.0,
+   "start_label": "Income from continuing operations",
+   "gross_adj": 14.0,
+   "backlog_amort": 16.0,
+   "tax_adj": -61.0,
+   "adj_ni_pub": 292.0,
+   "adj_eps_pub": 5.1,
+   "eps_div_equiv": 0.0,
+   "sh_adj": 57.4
+  }
+ },
+ "seg_py": {
+  "pc_ebitda": 381.0,
+  "af_ebitda": 296.0,
+  "na_ebitda": 14.0,
+  "seg_ebitda_tot": 691.0,
+  "corp": 16.0,
+  "ebitda_ad": 675.0,
+  "dda": 72.0,
+  "int_net": 252.0,
+  "acq": 9.0,
+  "sbc": 12.0,
+  "refin": 3.0,
+  "other": -10.0,
+  "ebt": 337.0,
+  "format": "legacy"
+ },
+ "em_py": {
+  "pc_coem": 191.0,
+  "pc_caft": 225.0,
+  "pc_def": 331.0,
+  "pc_tot": 747.0,
+  "af_coem": 243.0,
+  "af_caft": 220.0,
+  "af_def": 192.0,
+  "af_tot": 655.0,
+  "na": 41.0
+ },
+ "x": {
+  "sbc_ytd": 37.0,
+  "deftax_ytd": null,
+  "dep_ytd": 55.0,
+  "amort_ytd": 86.0,
+  "rev": 1443.0,
+  "ni": 319.0,
+  "ta": 16635.0,
+  "sh_out": null,
+  "sh_issued": 57.792781,
+  "sh_treasury": 4.198226
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "corrections": [],
+ "realigned_rows_note": "FY2006 release (8-K 17-Nov-2006, Ex. 99.1) EBITDA As Defined reconciliation: the row 'Non-Recurring IPO Costs (6)' prints three cells for four columns ('\u2014 | 2,650 | \u2014'). The fifty-two-week 2006 Gross Adjustments of $60,159k = sum of the other items ($57,509k) + $2,650k, so the value belongs to FY2006 (twelve months); extract.py right-aligns short rows in that table.",
+ "guidance_fy27": {
+  "src": "Q4 FY26 release (8-K 10-Nov-2026, Ex. 99.1), 'Fiscal 2027 Outlook' and Table 6 (guidance midpoint reconciliation)",
+  "url": "https://www.sec.gov/Archives/edgar/data/1260221/000126022126000073/exhibit991tdg2026q4earning.htm",
+  "sales": [
+   12150.0,
+   12050.0,
+   11950.0
+  ],
+  "ebitda_ad": [
+   6345.0,
+   6270.0,
+   6195.0
+  ],
+  "ni": [
+   2490.0,
+   2466.0,
+   2442.0
+  ],
+  "eps": [
+   42.91,
+   42.48,
+   42.06
+  ],
+  "adj_eps": [
+   47.94,
+   47.51,
+   47.09
+  ],
+  "shares": 56.7,
+  "mid_dda": 525.0,
+  "mid_int": 2255.0,
+  "mid_tax": 741.0,
+  "mid_ebitda": 5987.0,
+  "mid_acq": 42.0,
+  "mid_sbc": 225.0,
+  "mid_other": 16.0,
+  "mid_gross": 283.0,
+  "eps_div_equiv": 0.95,
+  "markets": "Commercial OEM revenue growth in the high single-digit to low double-digit percentage range; commercial aftermarket revenue growth in the high single-digit percentage range; defense revenue growth in the high single-digit percentage range.",
+  "history": "FY26 guidance: 12-Nov-2025 initial; raised 3-Feb-2026, 5-May-2026 (net sales $10,300-10,420m, EBITDA As Defined $5,370-5,470m, adjusted EPS $38.83-40.21) and 4-Aug-2026 (net sales $10,470-10,550m, EBITDA As Defined $5,490-5,550m, adjusted EPS $40.62-41.46). FY26 actual: net sales $10,557m, EBITDA As Defined $5,563m, adjusted EPS $41.35."
+ },
+ "deals": {
+  "prince_izant": "Prince & Izant (brazing alloys and specialty metal components; Power & Control): agreement 27-Jul-2026 (8-K); closed 28-Sep-2026 for ~$1,058m net of cash acquired (FY2026 10-K). Expected calendar-2026 revenue ~$390m (8-K 28-Sep-2026; $360m in the 27-Jul-2026 announcement).",
+  "jpe_vsa": "Jet Parts Engineering and Victor Sierra Aviation (PMA commercial aftermarket; Power & Control): closed 7-Apr-2026 for ~$2,142m net of cash acquired (FY2026 10-K); ~95% / 96% acquired (redeemable NCI). Calendar-2025 revenue ~$280m (8-K 16-Jan-2026 / 7-Apr-2026).",
+  "simmonds": "Simmonds Precision Products (from RTX; Power & Control): closed 6-Oct-2025 for ~$757m (FY2026 10-K); expected calendar-2025 revenue ~$350m (8-K 6-Oct-2025).",
+  "stellant": "Stellant Systems: agreement 31-Dec-2025 (~$960m); TransDigm withdrew 13-Jul-2026 (8-K) - not modelled.",
+  "extant_assets": "Extant Aerospace asset purchase (commercial rotorcraft, land systems and business-jet products incl. a California facility), ~$240m cash, agreement 21-Sep-2026, close expected in FY2027 (8-K 21-Sep-2026); revenue not disclosed.",
+  "fy26_other": "FY2026: twelve bolt-on 'Other Acquisitions' at the operating-unit level (FY2026 10-K); total FY2026 acquisitions ~$4.4bn net of cash."
+ },
+ "amort_sched": {
+  "2027": 294.0,
+  "2028": 271.0,
+  "2029": 265.0,
+  "2030": 262.0,
+  "2031": 253.0,
+  "src": "FY2026 10-K Note 8 (intangible assets): estimated amortization expense, fiscal years ending 30 September."
+ },
+ "debt": {
+  "at_2026_09_30": "Gross debt $34,124m (carrying $33,890m): securitization facility $875m (capacity $1,000m, matures 9-Jul-2027); term loans $12,803m (Tranche K $3,508m Mar-2030 SOFR+2.25%; J $3,559m Feb-2031; L $1,470m Jan-2032; M $2,475m Aug-2032; N $1,791m Feb-2033; SOFR+2.50%; ~1% p.a. amortization); notes $20,969m (2028 secured 6.750% $269m; 2029: 4.625% sub $1,200m Jan, 6.375% secured $2,750m Mar, 4.875% sub $750m May; 2030 secured 6.875% $1,450m Dec-2030; 2031 secured 7.125% $1,000m Dec-2031; 2032 secured 6.625% $2,200m Mar; 2033: 6.000% secured $1,500m Jan, 6.375% sub $2,650m May; 2034: 6.250% secured $500m Jan, 6.750% sub $2,000m Jan, 6.125% sub $1,700m Jul; 2035 secured 6.750% $3,000m Jan-2035); government refundable advances $8m; finance leases $344m. Revolver $910m undrawn ($865m available after $45m letters of credit). ~75% fixed rate.",
+  "src": "FY2026 10-K Note 10 (debt) and Liquidity section; 8-K 29-Sep-2026 (2035 secured notes); 8-K 13-Feb-2026 / 17-Apr-2026 (Tranche N, 6.125% 2034 notes).",
+  "maturities_fy": {
+   "2027": 130.0,
+   "2028": 399.0,
+   "2029": 4830.0,
+   "2030": 3524.0,
+   "2031": 5056.0
+  },
+  "maturities_note": "Scheduled principal by fiscal year (model input): term-loan amortization ~$130m p.a. (10-K contractual obligations: $130m within one year) plus note / tranche maturities: FY2028 2028 secured notes $269m (Aug-2028; ~$2m tendered Oct-2026); FY2029 $4,700m of 2029 notes; FY2030 Tranche K (~$3,394m after amortization, Mar-2030); FY2031 2030 secured notes $1,450m (Dec-2030) + Tranche J (~$3,476m after amortization, Feb-2031). Maturities assumed refinanced with new notes (assumption; TransDigm has refinanced every maturity since its 2006 IPO).",
+  "fy27_interest": 2255.0
+ },
+ "buyback": "Existing stock repurchase program (Jan-2022, $2.2bn; increased by $5.0bn in Nov-2025, no expiration): $3,038m remaining at 30-Sep-2026 (FY2026 10-K Item 5 / Note 14). FY2026 repurchases 2,316,439 shares at an average $1,187.21 ($2,750m); Q4 FY2026 820,056 shares at $1,150.18.",
+ "dividends": "No regular dividend; special cash dividends declared periodically with dividend-equivalent payments on vested options: FY2010 $7.65; FY2013 $12.85 + $22.00; FY2014 $25.00; FY2017 $24.00 + $22.00; FY2020 $32.50; FY2022 $18.50; FY2024 $35.00 (paid) and $75.00 (declared Sep-2024, paid 18-Oct-2024); FY2025 $90.00 (paid 12-Sep-2025). FY2027 Q1 dividend-equivalent payments: $54m accrued at 30-Sep-2026 (FY2026 10-K Note 9).",
+ "price": {
+  "px": 1208.04,
+  "note": "Exercise price of the stock options granted on 3-Nov-2026 to the CEO and directors (Forms 4 filed 5-Nov-2026; TransDigm grants options at the closing market price on the grant date) - the latest share price in an SEC filing. Cross-check: average repurchase price 23-Aug to 30-Sep-2026 $1,130.02 (FY2026 10-K Item 5). Update to market."
+ },
+ "ppa": {
+  "Q1-26": {
+   "names": "Simmonds Precision Products (from RTX / Goodrich) - closed 6-Oct-2025 (final allocation, FY2026 10-K Note 2)",
+   "cons": 757.0,
+   "gw": 370.0,
+   "intang": 425.0,
+   "onet": -38.0,
+   "src": "FY2026 10-K Note 2: goodwill $370m, other intangibles $425m (technology $219m / 20y, customer relationships $160m / 20y, trade names $46m indefinite); all tax-deductible over 15 years. Other net assets derived = consideration - goodwill - intangibles."
+  },
+  "Q3-26": {
+   "names": "Jet Parts Engineering and Victor Sierra Aviation (95% / 96%) - closed 7-Apr-2026 (preliminary allocation, FY2026 10-K Note 2)",
+   "cons": 2142.0,
+   "gw": 1183.0,
+   "intang": 996.0,
+   "onet": -37.0,
+   "src": "FY2026 10-K Note 2: goodwill $1,183m, other intangibles $996m (customer relationships $625m / 20y, technology $280m / 20y, trade names $91m); Q4 measurement-period adjustment +$47m goodwill (+$90m deferred tax liabilities, +$43m intangibles). Other net assets (incl. deferred taxes and redeemable NCI) derived."
+  },
+  "Q4-26": {
+   "names": "Prince & Izant (~99%) - closed 28-Sep-2026 (preliminary allocation, FY2026 10-K Note 2)",
+   "cons": 1058.0,
+   "gw": 627.0,
+   "intang": 410.0,
+   "onet": 21.0,
+   "src": "FY2026 10-K Note 2: goodwill $627m, other intangibles $410m (technology $198m / 20y, customer relationships $135m / 20y, trade names $65m, backlog $12m / 1y). Other net assets (incl. working capital, deferred taxes and redeemable NCI) derived."
+  },
+  "2026": {
+   "names": "FY2026 Other Acquisitions (twelve operating-unit bolt-ons, several quarters; FY2026 10-K Note 2)",
+   "cons": 434.0,
+   "gw": 176.0,
+   "intang": 134.0,
+   "onet": 124.0,
+   "src": "FY2026 10-K Note 2: aggregate purchase price $434m, goodwill $176m, other intangibles $134m. Other net assets derived."
+  }
+ }
+}

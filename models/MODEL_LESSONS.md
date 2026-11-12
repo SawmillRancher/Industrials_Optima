@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -16,7 +16,8 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
-| Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
+| Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP, TDG |
+| Highly levered recapitalisations (debt-funded special dividends, equity deficit) | TDG |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
@@ -25,9 +26,9 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
-| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
+| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), TDG (Sep, 13-week quarters), CPRT (Jul), TDY (52/53-week) |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
-| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
+| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), TDG (participating options, two-class EPS), ONON, HEI (share classes) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
 | Private company, LBO | R&Y |
 
@@ -165,6 +166,50 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [calibration] For EPS guidance, back-solve the required adjusted EBIT through tax and interest, then solve the margin Δ.
   - [valuation] When FY end ≈ valuation date, roll the DCF: that FY is the base year and net debt is taken at its end.
   - [BS/CF] Add a revolver-headroom memo row so the minimum-cash plug can't silently exceed the commitment.
+
+### TDG — TransDigm Group (MLM template via the WWD kit; US GAAP / USD / FY ends 30-Sep, 13-week fiscal quarters)
+- **Coverage & basis:**
+  - FY2006–12 annual (IPO March 2006) and Q1/13–Q4/26 quarterly. FY2026 is actual: the Q4 release and 10-K were filed 10-Nov-2026, so FY2027 has four estimated quarters. CIK 1260221.
+  - Hybrid basis: the income statement, bridges, BS and CF are as originally reported. Segments and end markets come from the latest filing presenting the period (next year's 10-Q / 10-K comparatives).
+  - That basis applies the FY2018 Power & Control → Non-aviation reclassification to FY2017 and the FY2020 allocation of the Q2–Q3 FY2019 Esterline segment. A derived "not on the segment basis" row reconciles to consolidated sales and EBITDA As Defined; it is all of FY2006–10 (one segment).
+  - Documents are in thousands to the FY2019 10-K and in millions from FY2020, so check tolerances widen from FY2020 (±1; EPS ±0.06 because shares are published to 0.1m).
+- **Operating build:**
+  - Power & Control and Airframe × commercial OEM / commercial aftermarket / defense (end markets from the FY2019 10-K with FY2017–18 comparatives), plus Non-aviation. Segment EBITDA As Defined margin; less unallocated corporate.
+  - The company's organic-sales table (from FY2012) gives organic vs acquisition growth with a check. Q4 FY2017 / FY2019 are not derived because their 10-K tables are on the discontinued-operations basis.
+  - FY27E inorganic sales (P&I, JPE / VSA until the anniversary, FY2026 bolt-ons) are an explicit Power & Control input, allocated to end markets, so the guided market growth stays organic.
+- **Bridges & definitions:**
+  - Net income → EBITDA → EBITDA As Defined, with item labels changing over twenty years: FY2006–07 IPO items and special bonus; FY2011 discontinued-operations EBITDA; FY2020–22 COVID-19 / 737 MAX restructuring; FY2021–23 gains on sale; FY2022 deferred compensation moved into the stock-compensation line at year end.
+  - Adjusted net income = continuing operations + gross adjustments to EBITDA + backlog amortization + tax adjustment. Q1–Q4 FY2020 start from income attributable to TD Group (start-line difference row).
+  - Two-class EPS from FY2010: dividend-equivalent payments on vested options reduce GAAP EPS but not adjusted EPS. In a loss-to-common quarter (Q1 FY2021) adjusted EPS uses a larger share base (58.4m vs 54.7m).
+  - TransDigm publishes no adjusted EBIT or FCF; both are model definitions.
+- **Data quirks & corrections:**
+  - The FY2006 release row "Non-Recurring IPO Costs" lost a cell. Gross Adjustments proves the column, and short rows in that table are right-aligned.
+  - Restricted cash (note-redemption escrow) appears in Q2 FY2019, Q2 FY2023 and Q2 FY2024.
+  - Discontinued-operations recasts (FY2011 McKechnie fasteners / AQS, FY2017 SCHROTH, FY2019–20 Esterline businesses) and FY2016 ASU 2016-09 early adoption break Σ quarters = year. These 18 checks are documented exceptions, none forced.
+  - Four EDGAR downloads returned "File Unavailable" pages and were re-fetched.
+- **Deals & special blocks:**
+  - FY2026 PPAs (Simmonds, JPE / VSA, P&I, bolt-ons) from 10-K Note 2. Only goodwill and intangibles are disclosed per deal, so other net assets (incl. deferred taxes and redeemable NCI) are a labelled derived line.
+  - The Extant asset purchase (~$240m, revenue undisclosed) runs through the M&A lever with revenue from FY2028E. The withdrawn Stellant deal is not modelled.
+- **Calibration & scenarios:**
+  - FY27 guidance (10-Nov-2026): net sales $11.95–12.15bn and EBITDA As Defined $6.195–6.345bn. Market growth is narrative ("high single-digit to low double-digit"), read numerically as an assumption.
+  - With all four quarters open, one uniform growth Δ and one uniform margin Δ are solved in the FY27E annual column and referenced by every quarter (Base −0.05 pp, −0.68 pp).
+  - D&A, interest, tax and each adjusting item come from the company's guidance-midpoint reconciliation (Table 6) ÷ 4, so model net income lands within $0.2m of guided net income. Adjusted / GAAP EPS are information rows; they differ by the FY27 buyback input.
+- **Balance sheet, cash & capital:**
+  - Debt is ~$34bn at carrying value. Maturities are refinanced with new notes (assumption), term loans amortize ~$130m p.a., and non-cash interest accretes to carrying value.
+  - Incremental borrowings keep a $1.5bn minimum cash balance, with a memo against the $865m revolver availability.
+  - From 2028E a leverage target (6.25x / 5.75x / 5.0x net debt / EBITDA As Defined) sizes the capital return, split 50 / 50 between special dividends and buybacks. The participating-option share of special dividends feeds two-class EPS.
+  - Working-capital days are on FY2026 pro forma sales including a full year of P&I, which closed two days before year end.
+  - The equity deficit (−$10.0bn) makes ROE n/m and IC small; ROIC is ~17–22%.
+- **Valuation:** $1,208.04 = the exercise price of options granted at market on 3-Nov-2026 (Forms 4, 5-Nov-2026). NOPAT deducts stock compensation and acquisition costs again, because EBITDA As Defined excludes them. Net debt and redeemable NCI are taken at 30-Sep-2026 with FY2026A as the base year. Base DCF $1,380 (WACC 8.3%, g 3.5%).
+- **Reusable lessons:**
+  - [calibration] When the fiscal year has just closed and the 10-K is filed, re-base: the new year has four estimated quarters, and each calibration Δ sits once in the annual column with every quarter referencing it.
+  - [calibration] A company's guidance-midpoint reconciliation (EBITDA → net income → EPS) gives every point estimate; using it makes net income land on guidance, which validates the bridge.
+  - [basis] With segments on the latest-filing basis and the consolidated statements as first reported, carry a derived basis-difference row so the build ties in every period.
+  - [extraction] Detect units per table: issuers switch from thousands to millions (TransDigm in FY2020) and the tolerances must switch with them.
+  - [extraction] A row with a dropped empty cell shifts values one column left. Right-align only where a printed total proves it, and log it.
+  - [BS/CF] For serial recapitalisers, size the capital return with a leverage target and split it into special dividends and buybacks. Two-class EPS needs the participating share of each dividend.
+  - [build] Forecast acquisition contribution as revenue from future deals in excess of the prior year's acquired base grown organically; subtracting the whole acquired stock understates organic growth.
+  - [sources] Form 4 option-grant exercise prices (granted at market) are a dated SEC-filed share price.
 
 ### HII — Huntington Ingalls Industries (DSV template, US GAAP as reported / USD millions / FY Dec)
 - **Coverage & basis:** 2015–1H26 from 10-K/10-Q XBRL and 8-K Ex. 99.1 (CIK 0001501585). FY2015–16 are as originally reported; FY2017+ are as recast for ASU 2017-07 in the 2018 10-K (non-service pension moved below OI). Technical Solutions was formed Dec-2016 (renamed Mission Technologies 2022). Q1–Q3/15 stay on the original "Other" basis; Q4/15 and FY2015 are recast. Q4 = FY − 9M. Restricted cash is included from FY2019. Unbilled receivables are separate from FY2017 (ASC 606).
