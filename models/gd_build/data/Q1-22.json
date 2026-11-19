@@ -1,0 +1,453 @@
+{
+ "period": "Q1-22",
+ "fy": 2022,
+ "q": 1,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/40533/000004053322000011/gd-20220403exhibit991.htm",
+  "release_date": "2022-04-27",
+  "filing": "https://www.sec.gov/Archives/edgar/data/40533/000004053322000013/gd-20220403.htm"
+ },
+ "notes": [],
+ "is": {
+  "rev": 9392.0,
+  "costs": 8484.0,
+  "oi": 908.0,
+  "oth": 39.0,
+  "int": -98.0,
+  "ebt": 849.0,
+  "tax": 119.0,
+  "ni": 730.0,
+  "eps_b_ni": 2.63,
+  "sh_b": 277.1,
+  "eps_d_ni": 2.61,
+  "sh_d": 279.9,
+  "cont": 730.0,
+  "disc": 0.0,
+  "eps_b_cont": 2.63,
+  "eps_d_cont": 2.61
+ },
+ "seg": {
+  "rev": {
+   "aero": 1903.0,
+   "marine": 2651.0,
+   "combat": 1675.0,
+   "tech": 3163.0,
+   "total": 9392.0
+  },
+  "oi": {
+   "aero": 243.0,
+   "marine": 211.0,
+   "combat": 227.0,
+   "tech": 298.0,
+   "corp": -71.0,
+   "total": 908.0
+  },
+  "margin": {
+   "aero": 12.8,
+   "marine": 8.0,
+   "combat": 13.6,
+   "tech": 9.4,
+   "total": 9.7
+  }
+ },
+ "backlog": {
+  "aero": {
+   "funded": 17114.0,
+   "unfunded": 501.0,
+   "total": 17615.0,
+   "pcv": 1829.0,
+   "tecv": 19444.0
+  },
+  "marine": {
+   "funded": 27656.0,
+   "unfunded": 15258.0,
+   "total": 42914.0,
+   "pcv": 4316.0,
+   "tecv": 47230.0
+  },
+  "combat": {
+   "funded": 12760.0,
+   "unfunded": 299.0,
+   "total": 13059.0,
+   "pcv": 6298.0,
+   "tecv": 19357.0
+  },
+  "tech": {
+   "funded": 9067.0,
+   "unfunded": 4579.0,
+   "total": 13646.0,
+   "pcv": 29347.0,
+   "tecv": 42993.0
+  },
+  "total": {
+   "funded": 66597.0,
+   "unfunded": 20637.0,
+   "total": 87234.0,
+   "pcv": 41790.0,
+   "tecv": 129024.0
+  }
+ },
+ "deliv": {
+  "large_q": 21.0,
+  "large_ytd": 21.0,
+  "mid_q": 4.0,
+  "mid_ytd": 4.0,
+  "total_q": 25.0,
+  "total_ytd": 25.0,
+  "aero_orders_q": 3243.0,
+  "aero_orders_ytd": 3243.0,
+  "aero_b2b_rev_q": 1903.0,
+  "aero_b2b_rev_ytd": 1903.0,
+  "basis": "outfitted"
+ },
+ "fin": {
+  "shares_out": 277.705115,
+  "rnd_q": 107.0,
+  "fcf_q": 1827.0,
+  "fcf_ytd": 1827.0,
+  "total_debt": 11496.0,
+  "net_debt": 8589.0
+ },
+ "cf": {
+  "ytd_months": 3,
+  "ni": 730.0,
+  "dep": 139.0,
+  "amort": 74.0,
+  "sbc": 96.0,
+  "deferred_tax": -106.0,
+  "wc_ar": 26.0,
+  "wc_unbilled": 617.0,
+  "wc_inv": -234.0,
+  "wc_ap": 23.0,
+  "wc_adv": 675.0,
+  "other_op": -72.0,
+  "cfo": 1968.0,
+  "capex": -141.0,
+  "other_inv": -6.0,
+  "cfi": -147.0,
+  "div": -330.0,
+  "bb": -294.0,
+  "other_fin": 107.0,
+  "cff": -517.0,
+  "disc_cash": 0.0,
+  "net": 1304.0,
+  "beg": 1603.0,
+  "end": 2907.0,
+  "lines_raw": [
+   [
+    "Net earnings",
+    730.0,
+    "op"
+   ],
+   [
+    "Depreciation of property, plant and equipment",
+    139.0,
+    "op"
+   ],
+   [
+    "Amortization of intangible and finance lease right-of-use assets",
+    74.0,
+    "op"
+   ],
+   [
+    "Equity-based compensation expense",
+    96.0,
+    "op"
+   ],
+   [
+    "Deferred income tax benefit",
+    -106.0,
+    "op"
+   ],
+   [
+    "Accounts receivable",
+    26.0,
+    "op"
+   ],
+   [
+    "Unbilled receivables",
+    617.0,
+    "op"
+   ],
+   [
+    "Inventories",
+    -234.0,
+    "op"
+   ],
+   [
+    "Accounts payable",
+    23.0,
+    "op"
+   ],
+   [
+    "Customer advances and deposits",
+    675.0,
+    "op"
+   ],
+   [
+    "Other, net",
+    -72.0,
+    "op"
+   ],
+   [
+    "Net cash provided by operating activities",
+    1968.0,
+    "op"
+   ],
+   [
+    "Capital expenditures",
+    -141.0,
+    "inv"
+   ],
+   [
+    "Other, net",
+    -6.0,
+    "inv"
+   ],
+   [
+    "Net cash used by investing activities",
+    -147.0,
+    "inv"
+   ],
+   [
+    "Dividends paid",
+    -330.0,
+    "fin"
+   ],
+   [
+    "Purchases of common stock",
+    -294.0,
+    "fin"
+   ],
+   [
+    "Other, net",
+    107.0,
+    "fin"
+   ],
+   [
+    "Net cash used by financing activities",
+    -517.0,
+    "fin"
+   ],
+   [
+    "Net cash used by discontinued operations",
+    0.0,
+    "fin"
+   ],
+   [
+    "Net increase (decrease) in cash and equivalents",
+    1304.0,
+    "fin"
+   ],
+   [
+    "Cash and equivalents at beginning of period",
+    1603.0,
+    "fin"
+   ],
+   [
+    "Cash and equivalents at end of period",
+    2907.0,
+    "fin"
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 2907.0,
+  "ar": 3015.0,
+  "unbilled": 7888.0,
+  "inv": 5548.0,
+  "oca": 1436.0,
+  "tca": 20794.0,
+  "ppe": 5450.0,
+  "intang": 1926.0,
+  "gw": 20114.0,
+  "oa": 2592.0,
+  "tnca": 30082.0,
+  "ta": 50876.0,
+  "std": 1005.0,
+  "ap": 3190.0,
+  "adv": 6363.0,
+  "ocl": 3478.0,
+  "tcl": 14036.0,
+  "ltd": 10491.0,
+  "ol": 8335.0,
+  "tncl": 18826.0,
+  "cs": 482.0,
+  "surplus": 3434.0,
+  "re": 35800.0,
+  "ts": -19837.0,
+  "aoci": -1865.0,
+  "te": 18014.0,
+  "tle": 50876.0,
+  "lines_raw": [
+   [
+    "Cash and equivalents",
+    2907.0
+   ],
+   [
+    "Accounts receivable",
+    3015.0
+   ],
+   [
+    "Unbilled receivables",
+    7888.0
+   ],
+   [
+    "Inventories",
+    5548.0
+   ],
+   [
+    "Other current assets",
+    1436.0
+   ],
+   [
+    "Total current assets",
+    20794.0
+   ],
+   [
+    "Property, plant and equipment, net",
+    5450.0
+   ],
+   [
+    "Intangible assets, net",
+    1926.0
+   ],
+   [
+    "Goodwill",
+    20114.0
+   ],
+   [
+    "Other assets",
+    2592.0
+   ],
+   [
+    "Total noncurrent assets",
+    30082.0
+   ],
+   [
+    "Total assets",
+    50876.0
+   ],
+   [
+    "Short-term debt and current portion of long-term debt",
+    1005.0
+   ],
+   [
+    "Accounts payable",
+    3190.0
+   ],
+   [
+    "Customer advances and deposits",
+    6363.0
+   ],
+   [
+    "Other current liabilities",
+    3478.0
+   ],
+   [
+    "Total current liabilities",
+    14036.0
+   ],
+   [
+    "Long-term debt",
+    10491.0
+   ],
+   [
+    "Other liabilities",
+    8335.0
+   ],
+   [
+    "Total noncurrent liabilities",
+    18826.0
+   ],
+   [
+    "Common stock",
+    482.0
+   ],
+   [
+    "Surplus",
+    3434.0
+   ],
+   [
+    "Retained earnings",
+    35800.0
+   ],
+   [
+    "Treasury stock",
+    -19837.0
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -1865.0
+   ],
+   [
+    "Total shareholders\u2019 equity",
+    18014.0
+   ],
+   [
+    "Total liabilities and shareholders\u2019 equity",
+    50876.0
+   ]
+  ]
+ },
+ "py": {
+  "release": "https://www.sec.gov/Archives/edgar/data/40533/000004053323000025/gd-20230402exhibit991.htm",
+  "is": {
+   "rev": 9392.0,
+   "costs": 8484.0,
+   "oi": 908.0,
+   "oth": 39.0,
+   "int": -98.0,
+   "ebt": 849.0,
+   "tax": 119.0,
+   "ni": 730.0,
+   "eps_b_ni": 2.63,
+   "sh_b": 277.1,
+   "eps_d_ni": 2.61,
+   "sh_d": 279.9,
+   "cont": 730.0,
+   "disc": 0.0,
+   "eps_b_cont": 2.63,
+   "eps_d_cont": 2.61
+  },
+  "seg": {
+   "rev": {
+    "aero": 1903.0,
+    "marine": 2651.0,
+    "combat": 1675.0,
+    "tech": 3163.0,
+    "total": 9392.0
+   },
+   "oi": {
+    "aero": 243.0,
+    "marine": 211.0,
+    "combat": 227.0,
+    "tech": 298.0,
+    "corp": -71.0,
+    "total": 908.0
+   },
+   "margin": {
+    "aero": 12.8,
+    "marine": 8.0,
+    "combat": 13.6,
+    "tech": 9.4,
+    "total": 9.7
+   }
+  }
+ },
+ "x": {
+  "sbc_ytd": 96.0,
+  "deftax_ytd": -106.0,
+  "dep_ytd": 139.0,
+  "amort_ytd": 50.0,
+  "dps": 1.26,
+  "ga": 626.0,
+  "oi_xbrl": 908.0,
+  "ni_xbrl": 730.0,
+  "rev_xbrl": 9392.0,
+  "ta_xbrl": 50876.0,
+  "cfo_xbrl": 1968.0,
+  "shares_cover": 277.705115,
+  "shares_out": null
+ }
+}

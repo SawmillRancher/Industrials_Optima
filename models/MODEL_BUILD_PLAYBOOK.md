@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, GD). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -29,7 +29,7 @@ Each row is a change that is now part of the standard. The checklist in section 
 | TDY → MLM template | MLM and every build since | Unit-economics build (shipments × ASP, price / volume bridge, fall-through). Pending / closed acquisitions modelled as their own block with a PPA and synergies. Legacy segments kept as memo rows. Leverage-targeted buybacks. DuPont ROIC and RONTA. Modelling Notes column, CAGR columns and the scenario table on the right of the forecast. |
 | MLM build-kit process | WAB, ODFL, SAIA, LOAR, ONON, STE, DHR | Standard kit: `fw.py` (column map, archetype-row style cloning, row registry), `spec.py` / `spec2.py` (row specs), `build.py` (inputs, compute, scenario table, definition flags), `other_sheets.py` (rewire BBB / DCF / Charts, re-inject chart XML), `extract.py` / `normalize.py` / `check_data.py`, `inspect_model.py`, `cyc.py`. Columns re-based to the company's history (template column − N). `--snap` fills Bull/Bear snapshots; `--recalc` stores values. |
 | MLM template update (6-Oct-26) | ONON, DHR, CTAS, STE, LECO, ESAB | DCF: live valuation date, 5-year fade, implied ROIC / RONIC, target-IRR max entry price, WACC × g grid, reverse DCF, Mauboussin EV/NOPAT. Bull-Base-Bear: buyback rows (40–42). `DCF_old` dropped. View: frozen at C8, quarterly columns grouped and collapsed. Cached values stored so the file reads correctly in any viewer. |
-| Special cases | RMS, BC, ONON, CHRW, UBER, CTAS, DHR, STE | Non-SEC / IFRS / foreign-currency reporters (half-year columns, constant-currency + FX build). Deal pro forma tabs (CHRW RXO PF: S&U, PPA, synergies, accretion). Pending deals behind a toggle (CTAS UniFirst, UBER Delivery Hero). Hybrid recast basis around spin-offs (DHR). Non-calendar fiscal years (STE March, CTAS May). |
+| Special cases | RMS, BC, ONON, CHRW, UBER, CTAS, DHR, STE, GD | Non-SEC / IFRS / foreign-currency reporters (half-year columns, constant-currency + FX build). Deal pro forma tabs (CHRW RXO PF: S&U, PPA, synergies, accretion). Pending deals behind a toggle (CTAS UniFirst, UBER Delivery Hero). Hybrid recast basis around spin-offs (DHR). Non-calendar fiscal years (STE March, CTAS May). Call-only guidance with optional, blank-by-default calibration targets (GD). |
 
 ---
 
@@ -275,7 +275,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -289,6 +289,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Recast Q4 = FY recast − 9M recast; quarters that were never recast stay blank. [LECO]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
+- **KPIs dropped from the release** (GD's Gulfstream deliveries 2010–16) usually survive in the 10-Q / 10-K MD&A tables; read the variance column to fix the column order and derive Q4 = FY − 9M. Over two decades, release layouts change (prior-year-first columns, "Quarter | Year-to-date" sub-headings, footnoted years), so resolve every value column from the header text, never by position. [GD]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
 
 ### 5.2 Basis
@@ -353,6 +354,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
 - **Apply the Δ only to genuinely uncommitted lines** (retail rather than order-book wholesale). Constant-FX guidance needs a separate FX-translation Δ for the reporting-currency figure. EPS guidance made stale by post-guidance buybacks becomes an information row. [BC, ONON, BWXT]
 - **No guidance:** leave targets as optional blank inputs; don't invent them. [HEI, BC]
+- **Call-only guidance (nothing on EDGAR):** the same optional targets, holding "none" so the calibration Δ reads 0, with the outlook block stating that any figure entered is UNVERIFIED. Don't transcribe call numbers into the data. [GD]
 
 ### 5.6 Balance sheet, cash and capital
 - **Current year with actual quarters:**
@@ -384,9 +386,10 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   [BWXT, ESAB]
 - **Pension:** CAS / FAS and non-service pension income from overfunded plans are non-cash. Accrete the prepaid pension asset, reverse the income in CFO and exclude it from UFCF. [HII, CW]
 - **Leverage ratios use LTM EBITDA** (carried in the quarter columns), not annualised 1H. [VMC, HEI]
-- **Working-capital ratios** come from fiscal-year-end balances, not annualised quarters. [STE, CTAS]
+- **Working-capital ratios** come from fiscal-year-end balances, not annualised quarters, unless the latest quarter reflects a structural change (GD's customer advances after the Q3-26 multi-year submarine awards); then use the latest balance sheet and quote the year-end levels in the note. [STE, CTAS, GD]
 - **Use the company's own capex / FCF definition** when it is guided, so guided and modelled figures are comparable. [RBA, HII]
 - **Reconcile BS cash vs CF ending cash with a memo line** when definitions differ (overdraft, restricted cash, disc-ops cash). [ONON, CSGP, DHR]
+- **Every forecast cash-flow line needs a balance-sheet counterpart.** Derived "other operating items" (pension, accruals) and non-cash ROU additions roll through other liabilities; otherwise the BS tie-out drifts by exactly those amounts each year. [GD]
 
 ### 5.7 Valuation
 - **Standard NOPAT basis** (the builds diverged here; this is now the rule):
