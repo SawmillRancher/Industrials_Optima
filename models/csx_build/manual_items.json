@@ -1,0 +1,176 @@
+{
+ "company": {
+  "name": "CSX Corporation",
+  "ticker": "CSX",
+  "exchange": "NASDAQ",
+  "cik": "0000277948",
+  "fiscal": "Calendar year. 52/53-week fiscal years through 2016 (quarters ended on the last Friday of the month; 53-week years 2010 and 2016 with 14-week fourth quarters); calendar quarters from 2017.",
+  "splits": "3-for-1 stock split effective 28-Jun-2021 (8-K 4-Jun-2021; XBRL StockholdersEquityNoteStockSplitConversionRatio1 = 3). The 2-for-1 split of May-2006 predates every document used. Documents filed before 28-Jun-2021 are restated x3 (shares) and /3 (per share).",
+  "segments": "One rail operating segment (Rail) plus the Quality Carriers trucking segment (acquired 1-Jul-2021; not a reportable segment). Rail and Intermodal were reportable segments until the Q1-2010 release (memo rows)."
+ },
+ "outlook_fy26": {
+  "verified_edgar": {
+   "capex": "Q3-26 10-Q (21-Oct-2026), Liquidity: 'Planned capital investments for 2026 are expected to be less than $2.4 billion.'",
+   "dividend": "Q3-26 10-Q Note 2: quarterly dividend raised 8% to $0.14 per share effective March 2026.",
+   "buyback": "Q3-26 10-Q Part II Item 2: $5.161bn of repurchase authority remaining at 30-Sep-2026 (Oct-2023 $5bn program plus $5bn added May-2026)."
+  },
+  "unverified_call": {
+   "source": "Q3-26 earnings call (21-Oct-2026), as summarised by a third-party transcript aggregator found by web search (benzinga.com); the transcript itself and the investor presentation at investors.csx.com are not reachable from the build environment. UNVERIFIED - not in any EDGAR filing.",
+   "revenue_growth_2026": "high single digits (model: Bull 9% / Base 8% / Bear 7%)",
+   "operating_margin_expansion_2026": "more than 350 bps vs 2025 adjusted operating margin (33.2%); fourth-quarter y/y margin improvement 'above 300-350 bps' (model: Bull 400 / Base 350 / Bear 300 bps on Q4/25 31.6%)",
+   "note": "CSX gives no numeric revenue / EPS guidance in its 8-K releases or 10-Q. These anchors are optional calibration inputs flagged 'unverified'; clear the cells to run the Q4/26E purely on the seasonality drivers."
+  }
+ },
+ "adjusting_items": {
+  "_doc": "Company 'comparable' (2006-2009) / 'adjusted' (2017, 2024-25) measures as published in the releases. Pre-tax amounts in USD m (positive = expense added back; negative = gain removed); EPS items as published in the release (pre-split dollars where the release predates 28-Jun-2021; normalize.py divides by 3). oa_nonop = items outside operating income. tax_items = discrete tax items (per share, as published) included in comparable EPS. basis_pre = difference between the company's bridge start (Surface Transportation operating income, 2006-07) and consolidated operating income.",
+  "2006": {
+   "label": "Gain on insurance recoveries (op.) $168m; gain on Conrail property (other income) $0.06/sh after tax; income tax benefits $0.32/sh (resolution of 1997-98 audits and other tax matters)",
+   "gain_pre": -168.0,
+   "nonop_pre": -30.0,
+   "tax_items": -0.32,
+   "adj_oi_pub": 1958.0,
+   "adj_eps_cont_pub": 2.22,
+   "src": "Q4-2006 release (8-K 22-Jan-2007, Ex. 99.1 / 99.2 GAAP reconciliation). Comparable Surface Transportation operating income $1,958m (= $2,126m - $168m); comparable EPS from continuing operations $2.22 = $2.82 - 0.22 - 0.06 - 0.32. Conrail property gain pre-tax from the cash-flow statement 'Gain on Conrail (after tax) $26m' -> ~$30m pre-tax (model estimate noted; check uses EPS). Company comparable operating income is on the Surface Transportation basis ($2,126m), i.e. before Other Operating Income of $12m; the model bridge starts from consolidated operating income ($2,138m) and carries the $12m as a basis-difference line.",
+   "basis_pre": -12.0
+  },
+  "2007": {
+   "label": "Gain on insurance recoveries $27m ($0.04/sh); discontinued operations $0.25/sh (IRS pre-filing agreement, $110m income tax benefit)",
+   "gain_pre": -27.0,
+   "tax_items": 0.0,
+   "adj_oi_pub": 2224.0,
+   "adj_eps_cont_pub": 2.7,
+   "src": "Q4-2007 release (8-K 22-Jan-2008): comparable Surface Transportation operating income $2,224m (= $2,251m - $27m); comparable EPS $2.70 = $2.99 - 0.04 - 0.25 (discontinued operations). Comparable operating income is on the Surface Transportation basis ($2,251m) before Other Operating Income of $5m (consolidated $2,256m); basis-difference line in the model.",
+   "basis_pre": -5.0
+  },
+  "2008": {
+   "label": "Greenbrier resort impairment (other income) $166m non-cash, $0.27/sh; equity earnings adjustment $(0.05)/sh (Q1); income tax benefits $(0.04)/sh (Q2, $18m)",
+   "nonop_pre": 166.0,
+   "tax_items": -0.04,
+   "adj_oi_pub": 2768.0,
+   "adj_eps_cont_pub": 3.52,
+   "src": "Q4-2008 release (8-K 20-Jan-2009): comparable EPS from continuing operations $3.52 = $3.34 + 0.27 - 0.05 - 0.04; comparable operating income $2,768m (no operating items in 2008). Equity earnings adjustment (Q1-08, $0.05/sh) relates to a Conrail accounting adjustment within other income; carried in the tax/other per-share row."
+  },
+  "Q1-17": {
+   "label": "Restructuring charge $173m pre-tax ($108m after tax, $0.12/sh): management workforce reduction, executive equity award proration, advisory fees",
+   "restr_pre": 173.0,
+   "adj_oi_pub": 885.0,
+   "adj_ni_pub": 470.0,
+   "adj_eps_pub": 0.51,
+   "src": "Q1-2017 release (8-K 19-Apr-2017) non-GAAP reconciliation."
+  },
+  "Q2-17": {
+   "label": "Restructuring charge $122m pre-tax ($81m after tax, $0.09/sh): workforce reduction, reimbursement arrangements $84m, executive equity award proration",
+   "restr_pre": 122.0,
+   "adj_oi_pub": 1080.0,
+   "adj_ni_pub": 591.0,
+   "adj_eps_pub": 0.64,
+   "src": "Q2-2017 release (8-K 18-Jul-2017)."
+  },
+  "Q3-17": {
+   "label": "Restructuring charge $1m pre-tax ($4m after tax)",
+   "restr_pre": 1.0,
+   "adj_oi_pub": 877.0,
+   "adj_ni_pub": 463.0,
+   "adj_eps_pub": 0.51,
+   "src": "Q3-2017 release (8-K 17-Oct-2017)."
+  },
+  "Q4-17": {
+   "label": "Restructuring charge $29m pre-tax ($10m after tax, $0.01/sh); Tax Reform benefit (net) $(3,577)m ($(3.99)/sh), of which $(142)m in operating income (equity earnings of affiliates remeasurement)",
+   "restr_pre": 29.0,
+   "other_pre": -142.0,
+   "tax_items": -3577.0,
+   "adj_oi_pub": 1008.0,
+   "adj_ni_pub": 573.0,
+   "adj_eps_pub": 0.64,
+   "src": "Q4-2017 release (8-K 16-Jan-2018). tax_items here is the after-tax $m of the Tax Reform benefit (net), not per share."
+  },
+  "2017": {
+   "label": "Restructuring charge $325m pre-tax ($203m after tax, $0.22/sh); Tax Reform benefit (net) $(3,577)m ($(3.91)/sh), of which $(142)m in operating income",
+   "restr_pre": 325.0,
+   "other_pre": -142.0,
+   "tax_items": -3577.0,
+   "adj_oi_pub": 3850.0,
+   "adj_ni_pub": 2097.0,
+   "adj_eps_pub": 2.3,
+   "src": "Q4-2017 release (8-K 16-Jan-2018). Restated in the 2018 releases for ASU 2017-07 (restructuring split $240m operating / $85m non-operating; adjusted operating income $3,818m) - memo, not applied."
+  },
+  "Q4-24": {
+   "label": "Goodwill impairment (Quality Carriers) $108m pre-tax, $82m after tax, $0.04/sh",
+   "impair_pre": 108.0,
+   "adj_oi_pub": 1214.0,
+   "adj_ni_pub": 815.0,
+   "adj_eps_pub": 0.42,
+   "src": "Q4-2024 release (8-K 23-Jan-2025) non-GAAP reconciliation."
+  },
+  "2024": {
+   "label": "Goodwill impairment (Quality Carriers) $108m pre-tax, $82m after tax, $0.04/sh",
+   "impair_pre": 108.0,
+   "adj_oi_pub": 5353.0,
+   "adj_ni_pub": 3552.0,
+   "adj_eps_pub": 1.83,
+   "src": "Q4-2024 release (8-K 23-Jan-2025)."
+  },
+  "Q3-25": {
+   "label": "Goodwill impairment (Quality Carriers, remaining goodwill) $164m pre-tax, $124m after tax, $0.07/sh",
+   "impair_pre": 164.0,
+   "adj_oi_pub": 1251.0,
+   "adj_ni_pub": 818.0,
+   "adj_eps_pub": 0.44,
+   "src": "Q3-2025 release (8-K 16-Oct-2025) non-GAAP reconciliation."
+  },
+  "2025": {
+   "label": "Goodwill impairment (Quality Carriers) $164m pre-tax, $124m after tax, $0.07/sh. Named but not adjusted: Q4-25 ~$50m severance and technology rationalization expense ($0.02/sh)",
+   "impair_pre": 164.0,
+   "adj_oi_pub": 4685.0,
+   "adj_ni_pub": 3013.0,
+   "adj_eps_pub": 1.61,
+   "src": "Q4-2025 release (8-K 22-Jan-2026)."
+  }
+ },
+ "restated_2017_asu_2017_07": {
+  "src": "2018 releases (8-K 17-Apr-2018 ... 16-Jan-2019): 2017 reclassified for ASU 2017-07 (net pension and other post-retirement expense moved below operating income). FY2017 operating income $3,667m as reported -> $3,720m as reclassified; adjusted operating income $3,850m -> $3,818m; restructuring charge $325m split operating $240m / non-operating $85m. Quarters: Q1 712 -> 769, Q2 958 -> 957, Q3 876 -> 868, Q4 1,121 -> 1,126.",
+  "oi_restated": {
+   "Q1-17": 769.0,
+   "Q2-17": 957.0,
+   "Q3-17": 868.0,
+   "Q4-17": 1126.0,
+   "2017": 3720.0
+  }
+ },
+ "deals": {
+  "quality_carriers": "Quality Carriers, Inc. acquired from Quality Distribution, Inc. on 1-Jul-2021 for $544m in cash ($541m net of cash acquired); trucking segment. FY2021 10-K (16-Feb-2022). Intangibles recognised $180m ($150m customer relationships); goodwill subsequently impaired ($108m Q4-24, $164m Q3-25; no trucking goodwill remains).",
+  "pan_am": "Pan Am Systems, Inc. acquired 1-Jun-2022 for $600m (common stock $422m + cash $178m); rail. FY2022 10-K (15-Feb-2023).",
+  "other": "Several immaterial trucking acquisitions in 2024-25 ($22m / $5m goodwill, $25m / $5m other intangibles). No pending acquisitions disclosed."
+ },
+ "goodwill_intangibles": {
+  "src": "FY2025 10-K Note 18: goodwill $80m (rail) at 31-Dec-2025; trucking intangibles cost $236m, accumulated amortization $(49)m, net $187m; amortization $12m p.a. (2024, 2025); total goodwill and other intangibles net $267m (2024: $433m; 2023: $506m).",
+  "amort_pa": 12.0
+ },
+ "debt": {
+  "src": "FY2025 10-K Note 10; Q3-26 10-Q Note 7.",
+  "at_2025_12_31": "Long-term debt $18,873m incl. current portion $708m: notes 2026-2068 at a 4.4% average rate $18,858m; finance leases $15m. Maturities: 2026 $708m, 2027 $1,001m, 2028 $1,002m, 2029 $951m, 2030 $400m, thereafter $14,811m.",
+  "maturities": {
+   "2026": 708.0,
+   "2027": 1001.0,
+   "2028": 1002.0,
+   "2029": 951.0,
+   "2030": 400.0,
+   "thereafter": 14811.0
+  },
+  "at_2026_09_30": "Current maturities $1,702m + long-term debt $17,102m = $18,804m (Q3-26 10-Q balance sheet). $850m 3.25% notes due 2027 (cash-flow hedge note).",
+  "issues": "Mar-2025 $600m + Oct-2025 $300m 5.05% notes due 2035; Sep-2024 $550m 4.90% notes due 2055; Sep-2023 $600m 5.20% notes due 2033. No issuance in 9M-26.",
+  "revolver": "$1.2bn unsecured revolving credit facility to Feb-2028 (undrawn at 30-Sep-2026); $1.0bn commercial paper program (none outstanding at 30-Sep-2026; $75m at 30-Jun-2025).",
+  "avg_rate": 0.044
+ },
+ "buyback": "Q3-26 10-Q: 11.1m shares repurchased in Q3-26 at $48.75 average (July $50.04 / August $50.73 / September $47.67); 9M-26 23m shares for $1,049m at $45.42. Authority remaining $5,161m at 30-Sep-2026.",
+ "dividend": "Quarterly $0.14 from March 2026 (+8%; 2025: $0.13; 2024: $0.12).",
+ "price": {
+  "px": 47.67,
+  "note": "Average price paid per share for shares repurchased 1-30 September 2026 (Q3-26 10-Q Part II Item 2, CSX Purchases of Equity Securities) - the latest share price in an SEC filing; update to market."
+ },
+ "cover_shares": {
+  "val": 1843.398,
+  "date": "2026-09-30",
+  "src": "Q3-26 10-Q cover page (dei:EntityCommonStockSharesOutstanding, 1,843,398,210 shares)"
+ }
+}
