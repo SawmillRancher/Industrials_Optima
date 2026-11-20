@@ -1,0 +1,1710 @@
+{
+ "period": "2019",
+ "fy": 2019,
+ "q": null,
+ "period_end": "2019-12-31",
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1133421/000113342120000005/noc-12312019xearningsex99.htm",
+  "release_date": "2020-01-30",
+  "filing": "https://www.sec.gov/Archives/edgar/data/1133421/000113342120000006/noc-12312019x10k.htm"
+ },
+ "notes": [
+  "income statement: twelve-month column taken from a two-column schedule (first column)"
+ ],
+ "seg": {
+  "sales": {
+   "Aerospace Systems": 13862.0,
+   "Innovation Systems": 6119.0,
+   "Mission Systems": 12263.0,
+   "Technology Services": 4110.0
+  },
+  "elim_sales": -2513.0,
+  "total_sales": 33841.0,
+  "oi": {
+   "Aerospace Systems": 1434.0,
+   "Innovation Systems": 671.0,
+   "Mission Systems": 1639.0,
+   "Technology Services": 457.0
+  },
+  "elim_oi": -292.0,
+  "seg_oi": 3909.0,
+  "recon": [
+   [
+    "Net FAS (service)/CAS pension adjustment",
+    465.0
+   ],
+   [
+    "Intangible asset amortization and PP&E step-up depreciation",
+    -390.0
+   ],
+   [
+    "MTM-related deferred state tax benefit",
+    81.0
+   ],
+   [
+    "Other unallocated corporate expense",
+    -96.0
+   ],
+   [
+    "Unallocated corporate expense",
+    -405.0
+   ]
+  ],
+  "oi_total": 3969.0,
+  "below": [
+   [
+    "Interest expense",
+    -528.0
+   ],
+   [
+    "FAS (non-service) pension benefit",
+    800.0
+   ],
+   [
+    "Mark-to-market pension and OPB expense",
+    -1800.0
+   ],
+   [
+    "Other, net",
+    107.0
+   ],
+   [
+    "(Loss) earnings before income taxes",
+    2548.0
+   ],
+   [
+    "Federal and foreign income tax (benefit) expense",
+    300.0
+   ],
+   [
+    "Net (loss) earnings",
+    2248.0
+   ]
+  ],
+  "layout": [
+   "v",
+   "v",
+   "c",
+   "v",
+   "v",
+   "c"
+  ]
+ },
+ "is": {
+  "prod_sales": 23852.0,
+  "svc_sales": 9989.0,
+  "sales": 33841.0,
+  "cost_prod": 18675.0,
+  "cost_svc": 7907.0,
+  "ga": 3290.0,
+  "oi": 3969.0,
+  "int_exp": -528.0,
+  "nonop_fas": 800.0,
+  "mtm": -1800.0,
+  "other_net": 107.0,
+  "ebt": 2548.0,
+  "tax": 300.0,
+  "ni": 2248.0,
+  "eps_b": 13.28,
+  "sh_b": 169.3,
+  "eps_d": 13.22,
+  "sh_d": 170.0,
+  "other_op": []
+ },
+ "bs": {
+  "cash": 2245.0,
+  "ar": 1326.0,
+  "unbilled": 5334.0,
+  "inv": 783.0,
+  "prepaid": 997.0,
+  "tca": 10685.0,
+  "ppe": 6912.0,
+  "rou": 1511.0,
+  "gw": 18708.0,
+  "intang": 1040.0,
+  "dta": 508.0,
+  "other_nca": 1725.0,
+  "ta": 41089.0,
+  "ap": 2226.0,
+  "accrued_comp": 1865.0,
+  "advances": 2237.0,
+  "other_cl": 3106.0,
+  "tcl": 9434.0,
+  "ltd": 12770.0,
+  "pension_liab": 6979.0,
+  "lease_liab": 1308.0,
+  "other_ncl": 1779.0,
+  "tl": 32270.0,
+  "common": 168.0,
+  "pic": 0.0,
+  "re": 8748.0,
+  "aoci": -97.0,
+  "equity": 8819.0,
+  "tle": 41089.0,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    2245.0
+   ],
+   [
+    "Accounts receivable, net",
+    1326.0
+   ],
+   [
+    "Unbilled receivables, net",
+    5334.0
+   ],
+   [
+    "Inventoried costs, net",
+    783.0
+   ],
+   [
+    "Prepaid expenses and other current assets",
+    997.0
+   ],
+   [
+    "Total current assets",
+    10685.0
+   ],
+   [
+    "Property, plant and equipment, net of accumulated depreciation of $5,850 for 2019 and $5,369 for 2018",
+    6912.0
+   ],
+   [
+    "Operating lease right-of-use assets",
+    1511.0
+   ],
+   [
+    "Goodwill",
+    18708.0
+   ],
+   [
+    "Intangible assets, net",
+    1040.0
+   ],
+   [
+    "Deferred tax assets",
+    508.0
+   ],
+   [
+    "Other non-current assets",
+    1725.0
+   ],
+   [
+    "Total assets",
+    41089.0
+   ],
+   [
+    "Trade accounts payable",
+    2226.0
+   ],
+   [
+    "Accrued employee compensation",
+    1865.0
+   ],
+   [
+    "Advance payments and billings in excess of costs incurred",
+    2237.0
+   ],
+   [
+    "Other current liabilities",
+    3106.0
+   ],
+   [
+    "Total current liabilities",
+    9434.0
+   ],
+   [
+    "Long-term debt, net of current portion of $1,109 for 2019 and $517 for 2018",
+    12770.0
+   ],
+   [
+    "Pension and other postretirement benefit plan liabilities",
+    6979.0
+   ],
+   [
+    "Operating lease liabilities",
+    1308.0
+   ],
+   [
+    "Deferred tax liabilities",
+    0.0
+   ],
+   [
+    "Other non-current liabilities",
+    1779.0
+   ],
+   [
+    "Total liabilities",
+    32270.0
+   ],
+   [
+    "Preferred stock, $1 par value; 10,000,000 shares authorized; no shares issued and outstanding",
+    0.0
+   ],
+   [
+    "Common stock, $1 par value; 800,000,000 shares authorized; issued and outstanding: 2019\u2014167,848,424 and 2018\u2014170,607,336",
+    168.0
+   ],
+   [
+    "Paid-in capital",
+    0.0
+   ],
+   [
+    "Retained earnings",
+    8748.0
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -97.0
+   ],
+   [
+    "Total shareholders\u2019 equity",
+    8819.0
+   ],
+   [
+    "Total liabilities and shareholders\u2019 equity",
+    41089.0
+   ]
+  ]
+ },
+ "cf": {
+  "ytd_months": 12,
+  "ni": 2248.0,
+  "dda": 1018.0,
+  "mtm": 1800.0,
+  "lease_noncash": 247.0,
+  "sbc": 127.0,
+  "deftax": -509.0,
+  "wc_ar": 122.0,
+  "wc_unbilled": -335.0,
+  "wc_inv": -135.0,
+  "wc_prepaid": -78.0,
+  "wc_ap": 617.0,
+  "wc_tax": -63.0,
+  "retiree": -703.0,
+  "other_noncash": -59.0,
+  "cfo": 4297.0,
+  "acq": 0.0,
+  "capex": -1264.0,
+  "cfi": -1207.0,
+  "debt_rep": -500.0,
+  "debt_iss": 0.0,
+  "credit": -31.0,
+  "bb": -744.0,
+  "div": -880.0,
+  "tax_withheld": -65.0,
+  "cff": -2424.0,
+  "net": 666.0,
+  "beg": 1579.0,
+  "end": 2245.0,
+  "lines_raw": [
+   [
+    "Net earnings",
+    2248.0
+   ],
+   [
+    "Depreciation and amortization",
+    1018.0
+   ],
+   [
+    "Mark-to-market pension and OPB expense (benefit)",
+    1800.0
+   ],
+   [
+    "Non-cash lease expense",
+    247.0
+   ],
+   [
+    "Stock-based compensation",
+    127.0
+   ],
+   [
+    "Deferred income taxes",
+    -509.0
+   ],
+   [
+    "Accounts receivable, net",
+    122.0
+   ],
+   [
+    "Unbilled receivables, net",
+    -335.0
+   ],
+   [
+    "Inventoried costs, net",
+    -135.0
+   ],
+   [
+    "Prepaid expenses and other assets",
+    -78.0
+   ],
+   [
+    "Accounts payable and other liabilities",
+    617.0
+   ],
+   [
+    "Income taxes payable, net",
+    -63.0
+   ],
+   [
+    "Retiree benefits",
+    -703.0
+   ],
+   [
+    "Other, net",
+    -59.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    4297.0
+   ],
+   [
+    "Acquisition of Orbital ATK, net of cash acquired",
+    0.0
+   ],
+   [
+    "Capital expenditures",
+    -1264.0
+   ],
+   [
+    "Other, net",
+    57.0
+   ],
+   [
+    "Net cash used in investing activities",
+    -1207.0
+   ],
+   [
+    "Payments of long-term debt",
+    -500.0
+   ],
+   [
+    "Net proceeds from issuance of long-term debt",
+    0.0
+   ],
+   [
+    "Payments to credit facilities",
+    -31.0
+   ],
+   [
+    "Net (repayments of) borrowings on commercial paper",
+    -198.0
+   ],
+   [
+    "Common stock repurchases",
+    -744.0
+   ],
+   [
+    "Cash dividends paid",
+    -880.0
+   ],
+   [
+    "Payments of employee taxes withheld from share-based awards",
+    -65.0
+   ],
+   [
+    "Other, net",
+    -6.0
+   ],
+   [
+    "Net cash (used in) provided by financing activities",
+    -2424.0
+   ],
+   [
+    "Increase (decrease) in cash and cash equivalents",
+    666.0
+   ],
+   [
+    "Cash and cash equivalents, beginning of year",
+    1579.0
+   ],
+   [
+    "Cash and cash equivalents, end of period",
+    2245.0
+   ]
+  ]
+ },
+ "ng": [
+  [
+   "Net (loss) earnings",
+   2248.0,
+   2248.0,
+   4
+  ],
+  [
+   "MTM expense",
+   1800.0,
+   1800.0,
+   4
+  ],
+  [
+   "MTM-related deferred state tax benefit 2",
+   -81.0,
+   -81.0,
+   4
+  ],
+  [
+   "Federal tax benefit of items above 2",
+   -361.0,
+   -361.0,
+   4
+  ],
+  [
+   "After-tax MTM expense",
+   1358.0,
+   1358.0,
+   4
+  ],
+  [
+   "MTM-adjusted net earnings 1",
+   3606.0,
+   3606.0,
+   4
+  ],
+  [
+   "Diluted EPS 3",
+   13.22,
+   13.22,
+   4
+  ],
+  [
+   "MTM expense per share",
+   10.59,
+   10.59,
+   4
+  ],
+  [
+   "MTM-related deferred state tax benefit per share 2",
+   -0.48,
+   -0.48,
+   4
+  ],
+  [
+   "Federal tax benefit of items above per share 2",
+   -2.12,
+   -2.12,
+   4
+  ],
+  [
+   "After-tax MTM expense per share",
+   7.99,
+   7.99,
+   4
+  ],
+  [
+   "MTM-adjusted diluted EPS 1,3",
+   21.21,
+   21.21,
+   4
+  ],
+  [
+   "Segment operating income 1",
+   3909.0,
+   3909.0,
+   4
+  ],
+  [
+   "Net FAS (service)/CAS pension adjustment",
+   465.0,
+   465.0,
+   4
+  ],
+  [
+   "Intangible asset amortization and PP&E step-up depreciation",
+   -390.0,
+   -390.0,
+   4
+  ],
+  [
+   "MTM-related deferred state tax benefit",
+   81.0,
+   81.0,
+   4
+  ],
+  [
+   "Other unallocated corporate expense",
+   -96.0,
+   -96.0,
+   4
+  ],
+  [
+   "Unallocated corporate expense",
+   -405.0,
+   -405.0,
+   4
+  ],
+  [
+   "Total operating income",
+   3969.0,
+   3969.0,
+   4
+  ],
+  [
+   "Interest expense",
+   -528.0,
+   -528.0,
+   4
+  ],
+  [
+   "FAS (non-service) pension benefit",
+   800.0,
+   800.0,
+   4
+  ],
+  [
+   "Mark-to-market pension and OPB expense",
+   -1800.0,
+   -1800.0,
+   4
+  ],
+  [
+   "Other, net",
+   107.0,
+   107.0,
+   4
+  ],
+  [
+   "Federal and foreign income tax (benefit) expense",
+   300.0,
+   300.0,
+   4
+  ],
+  [
+   "Effective income tax rate",
+   11.8,
+   11.8,
+   4
+  ],
+  [
+   "Net (loss) earnings",
+   2248.0,
+   2248.0,
+   4
+  ],
+  [
+   "Diluted (loss) earnings per share 2",
+   13.22,
+   13.22,
+   4
+  ],
+  [
+   "Weighted-average diluted shares outstanding, in millions 2",
+   170.0,
+   170.0,
+   4
+  ],
+  [
+   "Net cash provided by operating activities",
+   4297.0,
+   4297.0,
+   4
+  ],
+  [
+   "Less: capital expenditures",
+   -1264.0,
+   -1264.0,
+   4
+  ],
+  [
+   "Free cash flow 1",
+   3033.0,
+   3033.0,
+   4
+  ],
+  [
+   "Operating income",
+   1434.0,
+   1434.0,
+   4
+  ],
+  [
+   "Operating income",
+   671.0,
+   671.0,
+   4
+  ],
+  [
+   "Operating income",
+   1639.0,
+   1639.0,
+   4
+  ],
+  [
+   "Operating income",
+   457.0,
+   457.0,
+   4
+  ],
+  [
+   "Total net FAS/CAS pension adjustment 2",
+   null,
+   null,
+   1
+  ],
+  [
+   "Intangible asset amortization & PP&E step-up depreciation",
+   null,
+   null,
+   1
+  ],
+  [
+   "Interest expense",
+   null,
+   null,
+   1
+  ],
+  [
+   "Weighted average diluted shares outstanding",
+   null,
+   null,
+   1
+  ],
+  [
+   "MTM-adjusted EPS 1",
+   22.75,
+   22.75,
+   1
+  ],
+  [
+   "Capital expenditures",
+   null,
+   null,
+   1
+  ],
+  [
+   "Free cash flow 1",
+   3150.0,
+   3150.0,
+   1
+  ],
+  [
+   "Operating income",
+   null,
+   3969.0,
+   3
+  ],
+  [
+   "Interest expense",
+   null,
+   -528.0,
+   3
+  ],
+  [
+   "FAS (non-service) pension benefit",
+   null,
+   800.0,
+   3
+  ],
+  [
+   "Mark-to-market pension and OPB (expense) benefit",
+   null,
+   -1800.0,
+   3
+  ],
+  [
+   "Other, net",
+   null,
+   107.0,
+   3
+  ],
+  [
+   "Earnings before income taxes",
+   null,
+   2548.0,
+   3
+  ],
+  [
+   "Federal and foreign income tax expense",
+   null,
+   300.0,
+   3
+  ],
+  [
+   "Net earnings",
+   null,
+   2248.0,
+   3
+  ],
+  [
+   "Basic earnings per share",
+   null,
+   13.28,
+   3
+  ],
+  [
+   "Weighted-average common shares outstanding, in millions",
+   null,
+   169.3,
+   3
+  ],
+  [
+   "Diluted earnings per share",
+   null,
+   13.22,
+   3
+  ],
+  [
+   "Weighted-average diluted shares outstanding, in millions",
+   null,
+   170.0,
+   3
+  ],
+  [
+   "Net earnings (from above)",
+   null,
+   2248.0,
+   3
+  ],
+  [
+   "Cash and cash equivalents",
+   null,
+   2245.0,
+   2
+  ],
+  [
+   "Net earnings",
+   null,
+   2248.0,
+   3
+  ],
+  [
+   "Mark-to-market pension and OPB expense (benefit)",
+   null,
+   1800.0,
+   3
+  ],
+  [
+   "Non-cash lease expense",
+   null,
+   247.0,
+   3
+  ],
+  [
+   "Other, net",
+   null,
+   -59.0,
+   3
+  ],
+  [
+   "Net cash provided by operating activities",
+   null,
+   4297.0,
+   3
+  ],
+  [
+   "Acquisition of Orbital ATK, net of cash acquired",
+   null,
+   0.0,
+   3
+  ],
+  [
+   "Capital expenditures",
+   null,
+   -1264.0,
+   3
+  ],
+  [
+   "Other, net",
+   null,
+   57.0,
+   3
+  ],
+  [
+   "Net cash used in investing activities",
+   null,
+   -1207.0,
+   3
+  ],
+  [
+   "Cash dividends paid",
+   null,
+   -880.0,
+   3
+  ],
+  [
+   "Other, net",
+   null,
+   -6.0,
+   3
+  ],
+  [
+   "Net cash (used in) provided by financing activities",
+   null,
+   -2424.0,
+   3
+  ],
+  [
+   "Increase (decrease) in cash and cash equivalents",
+   null,
+   666.0,
+   3
+  ],
+  [
+   "Cash and cash equivalents, beginning of year",
+   null,
+   1579.0,
+   3
+  ],
+  [
+   "Cash and cash equivalents, end of period",
+   null,
+   2245.0,
+   3
+  ],
+  [
+   "Total backlog",
+   null,
+   30277.0,
+   2
+  ],
+  [
+   "Net FAS (service)/CAS pension adjustment",
+   465.0,
+   465.0,
+   4
+  ],
+  [
+   "FAS (non-service) pension benefit",
+   800.0,
+   800.0,
+   4
+  ],
+  [
+   "Total net FAS/CAS pension adjustment",
+   1265.0,
+   1265.0,
+   4
+  ],
+  [
+   "Tax effect 1",
+   -266.0,
+   -266.0,
+   4
+  ],
+  [
+   "After-tax impact",
+   999.0,
+   999.0,
+   4
+  ],
+  [
+   "Weighted-average diluted shares outstanding, in millions 2",
+   170.0,
+   170.0,
+   4
+  ],
+  [
+   "Per share impact",
+   5.88,
+   5.88,
+   4
+  ],
+  [
+   "Intangible asset amortization and PP&E step-up depreciation",
+   -390.0,
+   -390.0,
+   4
+  ],
+  [
+   "Tax effect 1",
+   82.0,
+   82.0,
+   4
+  ],
+  [
+   "After-tax impact",
+   -308.0,
+   -308.0,
+   4
+  ],
+  [
+   "Weighted-average diluted shares outstanding, in millions 2",
+   170.0,
+   170.0,
+   4
+  ],
+  [
+   "Per share impact",
+   -1.81,
+   -1.81,
+   4
+  ]
+ ],
+ "backlog": {
+  "total_row": [
+   30277.0,
+   34563.0,
+   64840.0,
+   53500.0,
+   21.0
+  ],
+  "segments": {
+   "Aerospace Systems": [
+    11587.0,
+    21875.0,
+    33462.0,
+    26440.0,
+    27.0
+   ],
+   "Innovation Systems": [
+    5575.0,
+    3905.0,
+    9480.0,
+    8207.0,
+    16.0
+   ],
+   "Mission Systems": [
+    10317.0,
+    7806.0,
+    18123.0,
+    15408.0,
+    18.0
+   ],
+   "Technology Services": [
+    2798.0,
+    977.0,
+    3775.0,
+    3445.0,
+    10.0
+   ]
+  },
+  "header": "A 22042-4511 news.northropgrumman.com Northrop Grumman Fourth Quarter and Full-Year 2019 Financial Results | 14 SCHEDULE 4 NORTHROP GRUMMAN CORPORATION TOTAL BACKLOG AND CONTRACT AWARDS (Unaudited) 2019 | 2018 | % Change in 2019 $ in millions | Funded 1 | Unfunded | Total Backlog 2 | Total Backlog 2",
+  "total_bn_text": 64.8,
+  "awards_bn_text": 9.3
+ },
+ "guidance": "2020 Guidance\n2020 financial guidance, as well as outlook, trends, expectations and other forward looking statements provided by the company for 2020 and beyond, reflect the company's judgment based on the information available to the company at the time of this release. The government budget, appropriations and procurement processes can impact our customers, programs and financial results. These processes, including the timing of appropriations and the occurrence of an extended continuing resolution and/or prolonged government shutdown, as well as a breach of the debt ceiling, can impact the company's ability to achieve guidance or meet expectations.\n2020 Guidance*\n($ in millions, except per share amounts) | As of 1/30/20\nSales | 35,300 | \u2014 | 35,800\nSegment operating margin % 1 | 11.3 | \u2014 | 11.5\nTotal net FAS/CAS pension adjustment 2 | ~1,600\nUnallocated corporate expense\nIntangible asset amortization & PP&E step-up depreciation | ~315\nOther items | ~250\nOperating margin % | 10.8 | \u2014 | 11.0\nInterest expense | ~500\nEffective tax rate % | ~16.5%\nWeighted average diluted shares outstanding | ~168\nMTM-adjusted EPS 1 | 22.75 | \u2014 | 23.15\nCapital expenditures | ~1,350\nFree cash flow 1 | 3,150 | \u2014 | 3,450\nSector Guidance\nAeronautics Systems\nSales $B | Mid to High 11\nOM Rate | Low to Mid 10%\nDefense Systems\nSales $B | Mid 7\nOM Rate | Mid 10%\nMission Systems\nSales $B | High 9\nOM Rate | Low 14%\nSpace Systems\nSales $B | Low 8\nOM Rate | Low to Mid 10%\n* | 2020 guidance contemplates Northrop Grumman is selected for the next phase of the Ground Based Strategic Deterrent program in accordance with the U.S. Air Force's current acquisition strategy.\n1 | Non-GAAP measure - see definitions at the end of this earnings release.\n2 | Total Net FAS/CAS pension adjustment is presented as a single amount consistent with our historical presentation, and includes $800 million of expected CAS pension cost and $800 million of expected FAS pension benefit. In accordance with ASU No. 2017-07, $410 million of FAS (service-related) pension cost is reflected in operating income and $1,210 million of FAS (non-service) pension benefit is reflected below operating income. CAS pension cost continues to be recorded in operating income.",
+ "py": {
+  "release": "https://www.sec.gov/Archives/edgar/data/1133421/000113342121000005/noc-12312020xearningsrelea.htm",
+  "release_date": "2021-01-28",
+  "seg": {
+   "sales": {
+    "Aeronautics Systems": 11116.0,
+    "Defense Systems": 7495.0,
+    "Mission Systems": 9410.0,
+    "Space Systems": 7425.0
+   },
+   "elim_sales": -1605.0,
+   "total_sales": 33841.0,
+   "oi": {
+    "Aeronautics Systems": 1188.0,
+    "Defense Systems": 793.0,
+    "Mission Systems": 1408.0,
+    "Space Systems": 794.0
+   },
+   "elim_oi": -205.0,
+   "seg_oi": 3978.0,
+   "recon": [
+    [
+     "Net FAS (service)/CAS pension adjustment",
+     465.0
+    ],
+    [
+     "Intangible asset amortization and PP&E step-up depreciation",
+     -390.0
+    ],
+    [
+     "MTM-related deferred state tax benefit",
+     81.0
+    ],
+    [
+     "Other unallocated corporate expense",
+     -165.0
+    ],
+    [
+     "Unallocated corporate expense",
+     -474.0
+    ]
+   ],
+   "oi_total": 3969.0,
+   "below": [
+    [
+     "Interest expense",
+     -528.0
+    ],
+    [
+     "FAS (non-service) pension benefit",
+     800.0
+    ],
+    [
+     "Mark-to-market pension and OPB expense",
+     -1800.0
+    ],
+    [
+     "Other, net",
+     107.0
+    ],
+    [
+     "Earnings (loss) before income taxes",
+     2548.0
+    ],
+    [
+     "Federal and foreign income tax (benefit) expense",
+     300.0
+    ],
+    [
+     "Net earnings (loss)",
+     2248.0
+    ]
+   ]
+  },
+  "is": {
+   "prod_sales": 23852.0,
+   "svc_sales": 9989.0,
+   "sales": 33841.0,
+   "cost_prod": 18675.0,
+   "cost_svc": 7907.0,
+   "ga": 3290.0,
+   "oi": 3969.0,
+   "int_exp": -528.0,
+   "nonop_fas": 800.0,
+   "mtm": -1800.0,
+   "other_net": 107.0,
+   "ebt": 2548.0,
+   "tax": 300.0,
+   "ni": 2248.0,
+   "eps_b": 13.28,
+   "sh_b": 169.3,
+   "eps_d": 13.22,
+   "sh_d": 170.0,
+   "other_op": []
+  },
+  "ng": [
+   [
+    "Net earnings (loss)",
+    2248.0,
+    2248.0,
+    4
+   ],
+   [
+    "MTM expense",
+    1800.0,
+    1800.0,
+    4
+   ],
+   [
+    "MTM-related deferred state tax benefit 2",
+    -81.0,
+    -81.0,
+    4
+   ],
+   [
+    "Federal tax benefit of items above 3",
+    -361.0,
+    -361.0,
+    4
+   ],
+   [
+    "MTM expense, net of tax",
+    1358.0,
+    1358.0,
+    4
+   ],
+   [
+    "MTM-adjusted net earnings 1",
+    3606.0,
+    3606.0,
+    4
+   ],
+   [
+    "Diluted EPS 4",
+    13.22,
+    13.22,
+    4
+   ],
+   [
+    "MTM expense per share",
+    10.59,
+    10.59,
+    4
+   ],
+   [
+    "MTM-related deferred state tax benefit per share 2",
+    -0.48,
+    -0.48,
+    4
+   ],
+   [
+    "Federal tax benefit of items above per share 3",
+    -2.12,
+    -2.12,
+    4
+   ],
+   [
+    "MTM expense, net of tax, per share",
+    7.99,
+    7.99,
+    4
+   ],
+   [
+    "MTM-adjusted diluted EPS 1,4",
+    21.21,
+    21.21,
+    4
+   ],
+   [
+    "Segment operating income 1",
+    3978.0,
+    3978.0,
+    4
+   ],
+   [
+    "Net FAS (service)/CAS pension adjustment",
+    465.0,
+    465.0,
+    4
+   ],
+   [
+    "Intangible asset amortization and PP&E step-up depreciation",
+    -390.0,
+    -390.0,
+    4
+   ],
+   [
+    "MTM-related deferred state tax benefit",
+    81.0,
+    81.0,
+    4
+   ],
+   [
+    "Other unallocated corporate expense",
+    -165.0,
+    -165.0,
+    4
+   ],
+   [
+    "Unallocated corporate expense",
+    -474.0,
+    -474.0,
+    4
+   ],
+   [
+    "Total operating income",
+    3969.0,
+    3969.0,
+    4
+   ],
+   [
+    "Interest expense",
+    -528.0,
+    -528.0,
+    4
+   ],
+   [
+    "FAS (non-service) pension benefit",
+    800.0,
+    800.0,
+    4
+   ],
+   [
+    "Mark-to-market pension and OPB expense",
+    -1800.0,
+    -1800.0,
+    4
+   ],
+   [
+    "Other, net",
+    107.0,
+    107.0,
+    4
+   ],
+   [
+    "Federal and foreign income tax (benefit) expense",
+    300.0,
+    300.0,
+    4
+   ],
+   [
+    "Effective income tax rate",
+    11.8,
+    11.8,
+    4
+   ],
+   [
+    "Net earnings (loss)",
+    2248.0,
+    2248.0,
+    4
+   ],
+   [
+    "Diluted earnings (loss) per share 2",
+    13.22,
+    13.22,
+    4
+   ],
+   [
+    "Weighted-average diluted shares outstanding, in millions 2",
+    170.0,
+    170.0,
+    4
+   ],
+   [
+    "Net cash provided by operating activities",
+    4297.0,
+    4297.0,
+    4
+   ],
+   [
+    "Capital expenditures",
+    -1264.0,
+    -1264.0,
+    4
+   ],
+   [
+    "Proceeds from sale of equipment to a customer",
+    0.0,
+    0.0,
+    4
+   ],
+   [
+    "After-tax discretionary pension contributions",
+    95.0,
+    95.0,
+    4
+   ],
+   [
+    "Adjusted free cash flow 1",
+    3128.0,
+    3128.0,
+    4
+   ],
+   [
+    "Net cash provided by operating activities",
+    4297.0,
+    4297.0,
+    4
+   ],
+   [
+    "After-tax discretionary pension contributions",
+    95.0,
+    95.0,
+    4
+   ],
+   [
+    "Cash provided by operating activities before after-tax discretionary pension contributions 1",
+    4392.0,
+    4392.0,
+    4
+   ],
+   [
+    "Net cash provided by operating activities",
+    4297.0,
+    4297.0,
+    4
+   ],
+   [
+    "Capital expenditures",
+    -1264.0,
+    -1264.0,
+    4
+   ],
+   [
+    "Proceeds from sale of equipment to a customer",
+    0.0,
+    0.0,
+    4
+   ],
+   [
+    "After-tax discretionary pension contributions",
+    95.0,
+    95.0,
+    4
+   ],
+   [
+    "Adjusted free cash flow 1",
+    3128.0,
+    3128.0,
+    4
+   ],
+   [
+    "Operating income",
+    1188.0,
+    1188.0,
+    4
+   ],
+   [
+    "Operating income",
+    793.0,
+    793.0,
+    4
+   ],
+   [
+    "Operating income",
+    1408.0,
+    1408.0,
+    4
+   ],
+   [
+    "Operating income",
+    794.0,
+    794.0,
+    4
+   ],
+   [
+    "Total net FAS/CAS pension adjustment 3",
+    null,
+    null,
+    1
+   ],
+   [
+    "Intangible asset amortization & PP&E step-up depreciation",
+    null,
+    null,
+    1
+   ],
+   [
+    "Interest expense",
+    null,
+    null,
+    1
+   ],
+   [
+    "Weighted average diluted shares outstanding",
+    null,
+    null,
+    1
+   ],
+   [
+    "MTM-adjusted EPS 1",
+    null,
+    null,
+    1
+   ],
+   [
+    "Operating cash flow",
+    null,
+    null,
+    1
+   ],
+   [
+    "Adjusted free cash flow 1",
+    null,
+    null,
+    1
+   ],
+   [
+    "Operating income",
+    null,
+    null,
+    3
+   ],
+   [
+    "Interest expense",
+    null,
+    null,
+    3
+   ],
+   [
+    "FAS (non-service) pension benefit",
+    null,
+    null,
+    3
+   ],
+   [
+    "Mark-to-market pension and OPB expense",
+    null,
+    null,
+    3
+   ],
+   [
+    "Other, net",
+    null,
+    null,
+    3
+   ],
+   [
+    "Earnings before income taxes",
+    null,
+    null,
+    3
+   ],
+   [
+    "Federal and foreign income tax expense",
+    null,
+    null,
+    3
+   ],
+   [
+    "Net earnings",
+    null,
+    null,
+    3
+   ],
+   [
+    "Basic earnings per share",
+    null,
+    null,
+    3
+   ],
+   [
+    "Weighted-average common shares outstanding, in millions",
+    null,
+    null,
+    3
+   ],
+   [
+    "Diluted earnings per share",
+    null,
+    null,
+    3
+   ],
+   [
+    "Weighted-average diluted shares outstanding, in millions",
+    null,
+    null,
+    3
+   ],
+   [
+    "Net earnings (from above)",
+    null,
+    null,
+    3
+   ],
+   [
+    "Cash and cash equivalents",
+    null,
+    null,
+    2
+   ],
+   [
+    "Net earnings",
+    null,
+    null,
+    3
+   ],
+   [
+    "Mark-to-market pension and OPB expense",
+    null,
+    null,
+    3
+   ],
+   [
+    "Other, net",
+    null,
+    null,
+    3
+   ],
+   [
+    "Net cash provided by operating activities",
+    null,
+    null,
+    3
+   ],
+   [
+    "Acquisition of Orbital ATK, net of cash acquired",
+    null,
+    null,
+    3
+   ],
+   [
+    "Capital expenditures",
+    null,
+    null,
+    3
+   ],
+   [
+    "Proceeds from sale of equipment to a customer",
+    null,
+    null,
+    3
+   ],
+   [
+    "Other, net",
+    null,
+    null,
+    3
+   ],
+   [
+    "Net cash used in investing activities",
+    null,
+    null,
+    3
+   ],
+   [
+    "Cash dividends paid",
+    null,
+    null,
+    3
+   ],
+   [
+    "Other, net",
+    null,
+    null,
+    3
+   ],
+   [
+    "Net cash used in financing activities",
+    null,
+    null,
+    3
+   ],
+   [
+    "Increase (decrease) in cash and cash equivalents",
+    null,
+    null,
+    3
+   ],
+   [
+    "Cash and cash equivalents, beginning of year",
+    null,
+    null,
+    3
+   ],
+   [
+    "Cash and cash equivalents, end of year",
+    null,
+    null,
+    3
+   ],
+   [
+    "Total backlog",
+    null,
+    null,
+    2
+   ],
+   [
+    "Net FAS (service)/CAS pension adjustment",
+    465.0,
+    465.0,
+    4
+   ],
+   [
+    "FAS (non-service) pension benefit",
+    800.0,
+    800.0,
+    4
+   ],
+   [
+    "Total net FAS/CAS pension adjustment",
+    1265.0,
+    1265.0,
+    4
+   ],
+   [
+    "Tax effect 1",
+    -266.0,
+    -266.0,
+    4
+   ],
+   [
+    "After-tax impact",
+    999.0,
+    999.0,
+    4
+   ],
+   [
+    "Weighted-average diluted shares outstanding, in millions 2",
+    170.0,
+    170.0,
+    4
+   ],
+   [
+    "Per share impact",
+    5.88,
+    5.88,
+    4
+   ],
+   [
+    "Intangible asset amortization and PP&E step-up depreciation",
+    -390.0,
+    -390.0,
+    4
+   ],
+   [
+    "Tax effect 1",
+    82.0,
+    82.0,
+    4
+   ],
+   [
+    "After-tax impact",
+    -308.0,
+    -308.0,
+    4
+   ],
+   [
+    "Weighted-average diluted shares outstanding, in millions 2",
+    170.0,
+    170.0,
+    4
+   ],
+   [
+    "Per share impact",
+    -1.81,
+    -1.81,
+    4
+   ],
+   [
+    "Total segment operating income 1",
+    967.0,
+    967.0,
+    5
+   ],
+   [
+    "Net FAS (service)/CAS pension adjustment",
+    108.0,
+    108.0,
+    5
+   ],
+   [
+    "Unallocated corporate expense",
+    -139.0,
+    -139.0,
+    5
+   ],
+   [
+    "Total operating income",
+    936.0,
+    936.0,
+    5
+   ],
+   [
+    "Total segment operating income 1",
+    978.0,
+    978.0,
+    5
+   ],
+   [
+    "Net FAS (service)/CAS pension adjustment",
+    108.0,
+    108.0,
+    5
+   ],
+   [
+    "Unallocated corporate expense",
+    -150.0,
+    -150.0,
+    5
+   ],
+   [
+    "Total operating income",
+    936.0,
+    936.0,
+    5
+   ]
+  ]
+ },
+ "x": {
+  "rev": 33841.0,
+  "oi": 3969.0,
+  "ni": 2248.0,
+  "eps_d": 13.22,
+  "cfo_ytd": 4297.0,
+  "ta": 41089.0,
+  "sbc_ytd": 127.0,
+  "deftax_ytd": -509.0,
+  "dda_ytd": 1018.0,
+  "retiree_ytd": -703.0,
+  "excess_tax_ytd": null,
+  "sh_out": 167.848424,
+  "dei_sh_out": null,
+  "dps": 5.16,
+  "amort_intang": 332.0,
+  "rpo": 64800.0,
+  "intang_bs": 1040.0,
+  "ltd_cur": 1109.0,
+  "ltd_total": 12770.0,
+  "pension_noncash_ytd": 1800.0,
+  "pension_contrib_ytd": -263.0
+ }
+}

@@ -1,0 +1,210 @@
+{
+ "company": {
+  "name": "Northrop Grumman Corporation",
+  "ticker": "NOC",
+  "exchange": "NYSE",
+  "cik": "0001133421",
+  "fiscal_year_end": "31 December",
+  "basis": "US GAAP, USD millions",
+  "src": "EDGAR submissions JSON, CIK 0001133421 (former name NNG Inc, Feb-Apr 2001)"
+ },
+ "guidance_fy26": {
+  "src": "Q3 2026 earnings release (Form 8-K Ex. 99, 20-Oct-2026), '2026 Guidance' and '2026 Segment Guidance' tables",
+  "url": "https://www.sec.gov/Archives/edgar/data/1133421/000113342126000037/noc-09302026xearningsrelea.htm",
+  "sales": [
+   44250.0,
+   44000.0,
+   43750.0
+  ],
+  "segment_oi": [
+   5040.0,
+   4990.0,
+   4940.0
+  ],
+  "mtm_adj_eps": [
+   29.75,
+   29.55,
+   29.35
+  ],
+  "adj_fcf": [
+   3500.0,
+   3300.0,
+   3100.0
+  ],
+  "segments": {
+   "as": {
+    "sales_bn": "~$14",
+    "om": "High 9%",
+    "sales_mid": 14000.0,
+    "om_mid": 0.098
+   },
+   "ds": {
+    "sales_bn": "Mid to High $8",
+    "om": "~10%",
+    "sales_mid": 8650.0,
+    "om_mid": 0.1
+   },
+   "ms": {
+    "sales_bn": "High $12",
+    "om": "Mid 15%",
+    "sales_mid": 12800.0,
+    "om_mid": 0.155
+   },
+   "ss": {
+    "sales_bn": "~$11",
+    "om": "Low 10%",
+    "sales_mid": 11000.0,
+    "om_mid": 0.102
+   },
+   "elim": {
+    "sales_bn": "~($2.7)",
+    "om": "Mid 13%",
+    "sales_mid": -2700.0,
+    "om_mid": 0.135
+   }
+  },
+  "history": "27-Jan-2026 (Q4-25 release): sales $43,500-44,000m, segment OI $4,850-5,000m, MTM-adjusted EPS $27.40-27.90, FCF $3,100-3,500m; AS mid $13bn / low-to-mid 9%, DS mid-to-high $8bn / ~10%, MS high $12bn / high 14%, SS ~$11bn / ~11%, eliminations ~($2.4bn) / high 13%. 21-Apr-2026: unchanged. 21-Jul-2026: sales raised to $43,750-44,250m, MTM-adjusted EPS to $28.60-29.10, 'free cash flow' relabelled 'adjusted free cash flow' (unchanged $3,100-3,500m); AS ~$14bn / mid-to-high 9%, MS ~15%, SS low 10%, eliminations ~($2.7bn) / mid 13%. 20-Oct-2026: segment OI raised to $4,940-5,040m, MTM-adjusted EPS to $29.35-29.75; AS high 9%, MS mid 15%.",
+  "not_on_edgar": "The company no longer publishes FAS/CAS, unallocated corporate expense, interest, tax-rate or share-count guidance in the release; items of that kind quoted on the earnings call are not verifiable from EDGAR and are not used. Q4/26E point estimates for those lines are derived from the year-to-date run-rate (see the scenario table notes)."
+ },
+ "share_price": {
+  "px": 555.32,
+  "date": "2026-11-02",
+  "src": "Form 4 filed 4-Nov-2026 (Benjamin R. Davies): 281 shares disposed at $555.32 on 2-Nov-2026 (shares withheld); a Form 4 filed 3-Nov-2026 (Mark A. Welsh III) shows open-market sales the same day at $553.39-557.47. Latest share price in an SEC filing; no repurchases in Q3 2026 so the 10-Q carries no average repurchase price. Update to market.",
+  "url": "https://www.sec.gov/Archives/edgar/data/1133421/000162828026070174/wk-form4_1793827081.xml"
+ },
+ "debt": {
+  "src": "FY2025 Form 10-K Note 9 (maturities of long-term debt at 31-Dec-2025) and Q3 2026 Form 10-Q Note 8 / liquidity section",
+  "maturities_at_ye25": {
+   "2026": 534.0,
+   "2027": 755.0,
+   "2028": 2044.0,
+   "2029": 592.0,
+   "2030": 1252.0,
+   "thereafter": 10621.0,
+   "total_principal": 15798.0,
+   "unamortized_premium_net_of_discount": -21.0,
+   "issuance_costs": -81.0,
+   "carrying": 15696.0
+  },
+  "repaid_2026": "March 2026: $270m 7.875% notes and $257m 7.75% notes repaid at maturity ($527m; Q3 2026 10-Q)",
+  "at_2026_09_30": "Long-term debt $14,433m plus current portion $764m = $15,197m (Q3 2026 10-Q); current portion recorded in other current liabilities",
+  "issued_2025": "May 2025: $500m 4.65% notes due 2030 and $500m 5.25% notes due 2035 ($1.0bn)",
+  "facilities": "$3.0bn five-year senior unsecured revolving credit facility (2025 Credit Agreement, matures Sep-2030; supports the commercial paper programme), $500m one-year uncommitted facility renewed Apr-2025; no borrowings outstanding at 31-Dec-2025 or 30-Sep-2026",
+  "interest": "Interest expense 2025 $665m, 9M 2026 $481m; capitalized interest 2025 $100m (FY2025 10-K)",
+  "model": "Scheduled maturities repaid (2027E $755m, 2028E $2,044m, 2029E $592m, 2030E $1,252m, 2031E: first tranche of 'thereafter', input) and refinanced with new notes at an assumed 5.25% (2025 issue coupons 4.65-5.25%); commercial paper / revolver drawn to a minimum cash balance."
+ },
+ "amort_sched": {
+  "src": "FY2025 Form 10-K Note 7: expected future amortization of purchased intangibles; net customer-related and other intangibles $208m at 31-Dec-2025 (gross $3,372m); amortization expense $45m (2025), $57m (2024), $80m (2023)",
+  "2026": 42.0,
+  "2027": 31.0,
+  "2028": 31.0,
+  "2029": 31.0,
+  "2030": 31.0,
+  "net_at_ye25": 208.0,
+  "model": "Intangible asset amortization and PP&E step-up depreciation are reported in unallocated corporate expense ($84m in 2025, of which amortization $45m); the model drives the unallocated line directly and shows the schedule as memo."
+ },
+ "pension": {
+  "src": "FY2025 Form 10-K Note 12 and MD&A (FAS/CAS operating adjustment table); Q3 2026 release",
+  "fy2025": {
+   "cas_pension_expense": 475.0,
+   "fas_service_cost": 217.0,
+   "fas_cas_operating_adjustment": 258.0,
+   "non_operating_fas_pension_benefit": 541.0,
+   "mtm_benefit": 527.0,
+   "net_periodic_benefit_cost_pension": -838.0,
+   "interest_cost": 1612.0,
+   "expected_return": -2159.0,
+   "discount_rate_ye25": 5.58,
+   "eroa_2026": 7.5,
+   "plan_assets_pension_bs": 3167.0,
+   "plan_liabilities_bs": 1110.0
+  },
+  "ytd_2026": {
+   "fas_cas_operating_adjustment_9m": 29.0,
+   "non_operating_fas_pension_benefit_9m": 499.0,
+   "net_periodic_pension_and_opb_income_9m_cf": -361.0,
+   "contributions_9m_cf": -92.0
+  },
+  "mtm_sensitivity": "FY2025 10-K: +/-100bp of actual vs expected return on plan assets changes 2026 MTM (expense) benefit by about $314m; +/-25bp discount rate about $796m / $(761)m on the obligation",
+  "model": "FAS/CAS operating adjustment and the non-operating FAS pension benefit are modelled explicitly (non-cash; the pension asset accretes). MTM is nil in the forecast (actuarial gains and losses are not forecast). Contributions held at the 2025-26 run-rate (~$125m p.a., mostly OPB)."
+ },
+ "buybacks_dividends": {
+  "src": "Q3 2026 Form 10-Q Note 2 and Part II Item 2; XBRL CommonStockDividendsPerShareDeclared",
+  "authorization": "$2.5bn of the share repurchase authorization remained at 30-Sep-2026 (Dec-2024 programme); no repurchases in Q3 2026; 9M 2026 repurchases $68m (Q1); 2025 $1,168m through 9M / FY2025 per the cash-flow statement",
+  "dps": {
+   "2024": [
+    1.87,
+    2.06,
+    2.06,
+    2.06
+   ],
+   "2025": [
+    2.06,
+    2.31,
+    2.31,
+    2.31
+   ],
+   "2026": [
+    2.31,
+    2.47,
+    2.47
+   ]
+  },
+  "shares_out": {
+   "2025-12-31": 141.997194,
+   "2026-09-30": 142.064132
+  }
+ },
+ "deals": {
+  "orbital_atk": "Acquired 6-Jun-2018 for $7.7bn net of cash acquired plus $1.4bn of debt assumed (Innovation Systems; FY2018 10-K Note 3). Earlier periods as reported.",
+  "it_services_divestiture": "IT and mission support services business sold to Peraton on 30-Jan-2021 for $3.4bn; pre-tax gain $1,980m in unallocated corporate (expense) income, after-tax ~$1.1bn; divestiture-related unallowable state taxes and transaction costs $(192)m (Q1 2021 release).",
+  "training_services_divestiture": "Training services business (Defense Systems) sold in Q2 2025: proceeds $333m, pre-tax gain $231m in unallocated corporate expense, $(20)m of unallowable state taxes and transaction costs; 'organic sales' in the 2026 releases exclude $112m of 9M 2025 training services sales (Q3 2026 release).",
+  "shipbuilding_spin": "Huntington Ingalls Industries spun off 31-Mar-2011; Shipbuilding is in continuing operations in the FY2006-FY2010 columns as originally reported and in discontinued operations from 2011 (FY2011 10-K recast 2010 continuing-operations sales to $28,143m and 2009 to $27,650m: memo rows).",
+  "tasc": "TASC sold Dec-2009 ($1.65bn); discontinued operations in the FY2009 10-K, which recast 2008 sales to $32,315m (memo).",
+  "b21": "B-21 LRIP loss provisions: $1,560m pre-tax in Q4 2023 (Aeronautics Systems) and $477m in Q1 2025 (FY2023 / FY2025 10-K).",
+  "goodwill_impairment_2008": "Q4 2008 goodwill impairment of $3,060m pre-tax (Aerospace $570m, Shipbuilding $2,490m); non-cash, included in operating costs in the FY2008 10-K statement of operations."
+ },
+ "realignments": [
+  [
+   "2006-2008",
+   "Information & Services (Mission Systems, Information Technology, Technical Services), Aerospace (Integrated Systems, Space Technology), Electronics, Ships (Newport News and Ship Systems merged into Shipbuilding in Jan-2008); Radio Systems to Mission Systems (2007); Electronics businesses to Mission Systems and missile systems to Space Technology (2008)"
+  ],
+  [
+   "2009-01-01",
+   "Aerospace Systems, Electronic Systems, Information Systems, Shipbuilding, Technical Services (FY2009 10-K recast 2008 and 2007)"
+  ],
+  [
+   "2011-03-31",
+   "Shipbuilding spun off (HII); four segments 2011-2015"
+  ],
+  [
+   "2016-01-01",
+   "Aerospace Systems, Mission Systems, Technology Services (2015 and 2014 recast in the FY2016 10-K; 2015 quarters in the 2016 releases)"
+  ],
+  [
+   "2018-06-06",
+   "Innovation Systems added (Orbital ATK)"
+  ],
+  [
+   "2020-01-01",
+   "Aeronautics Systems, Defense Systems, Mission Systems, Space Systems; intangible amortization and PP&E step-up depreciation moved from segment operating income to unallocated corporate expense (2019 and 2018 recast in the FY2020 10-K; 2019 quarters in the 2020 releases)"
+  ],
+  [
+   "2024-01-01",
+   "Programs realigned between Defense Systems and Space Systems (Space Systems 2023 sales $13,946m as reported vs $11,873m recast; Defense Systems $5,862m vs $8,289m); 2023 and 2022 recast in the FY2024 10-K, 2023 quarters in the 2024 releases"
+  ],
+  [
+   "2025-01-01",
+   "Strike and Surveillance Aircraft Solutions (SSAS) from Defense Systems to Aeronautics Systems and related intersegment changes (Defense Systems 2024 sales $8,560m as reported vs $7,399m recast; Aeronautics $12,030m vs $12,396m); 2024 and 2023 recast in the FY2025 10-K, 2024 quarters in the 2025 releases"
+  ]
+ ],
+ "accounting": {
+  "asu_2017_07": "From Q1 2018 the non-service components of FAS pension cost are presented below operating income ('Non-operating FAS pension benefit'); the FAS/CAS operating adjustment is service-cost-only from 2018 (net total FAS/CAS adjustment through 2017). 2017 comparatives were recast in the 2018 releases (memo keys); 2017 and earlier columns are as originally reported.",
+  "asc_606": "Adopted 1-Jan-2018 (full retrospective); 2017 recast sales $26,004m vs $25,803m as reported (memo).",
+  "mtm": "Mark-to-market (MTM) pension and OPB accounting adopted in Q4 2018 (actuarial gains and losses recognised in the fourth quarter; 'Mark-to-market pension and OPB (benefit) expense' below operating income). The Q4 2018 release (Schedule 6) recast 2016, 2017 and Q1-Q3 2018: the model's Q1-Q3 2018 columns use that recast (originally reported figures in the cell comments); 2016-17 stay as reported with the recast totals as memo rows. Through 2017 pension cost was recognised with amortization of actuarial gains / losses (no MTM line).",
+  "cash_basis_2018_19": "The 2018-2019 cash-flow statements reconcile cash, cash equivalents and restricted cash; the balance sheet shows cash and cash equivalents (difference = restricted cash, memo)."
+ },
+ "corrections": {
+  "none": "No company figure is overridden. Known data exceptions are documented in the kit README (sparse rows in the FY2006-08 10-K cash-flow statements that cannot be placed are left blank and absorbed in the derived 'other' lines)."
+ }
+}
