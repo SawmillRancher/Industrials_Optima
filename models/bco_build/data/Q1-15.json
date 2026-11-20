@@ -1,0 +1,671 @@
+{
+ "period": "Q1-15",
+ "year": 2015,
+ "quarter": 1,
+ "sources": [
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889015000018/form_10-q.htm",
+  "https://data.sec.gov/api/xbrl/companyfacts/CIK0000078890.json",
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889016000053/ex991q4.htm",
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889015000016/exhibit_99-1.htm"
+ ],
+ "notes": [
+  "Statements: XBRL company facts, value as first filed in the 10-K / 10-Q for the period (as originally reported).",
+  "Segments / non-GAAP reconciliations: quarterly tables of the Q4-2015 earnings release (Ex. 99.1)."
+ ],
+ "is": {
+  "rev": 776.1,
+  "cor": 629.1,
+  "sga": 112.3,
+  "tce": 741.4,
+  "ooi": -21.8,
+  "op": 12.9,
+  "int": 4.9,
+  "oth": 0.4,
+  "ebt": 8.4,
+  "tax": 15.5,
+  "cont": -7.1,
+  "disc": -2.4,
+  "pl": -9.5,
+  "nci": -6.5,
+  "ni": -3.0,
+  "cont_att": -0.6,
+  "disc_att": -2.4,
+  "eps_d": -0.06,
+  "eps_cont_d": -0.01,
+  "eps_b": -0.06,
+  "sh_d": 49.1,
+  "sh_b": 49.1,
+  "dps": 0.1,
+  "sh_ng": 49.1
+ },
+ "cf": {
+  "ni": -9.5,
+  "disc": -2.4,
+  "da": 36.7,
+  "sbc": 5.2,
+  "def_tax": -4.6,
+  "cfo": -23.4,
+  "capex": 14.3,
+  "acq": 0.0,
+  "ppe_sale": 0.2,
+  "cfi": -7.4,
+  "div": 4.9,
+  "div_nci": 0.2,
+  "cff": 40.6,
+  "fx": -17.2,
+  "net": -7.4,
+  "tax_paid": 11.4,
+  "int_paid": 5.6,
+  "ytd_months": 3,
+  "cash_beg": 176.2,
+  "cash_end": 168.8
+ },
+ "bs": {
+  "cash": 168.8,
+  "ar": 491.8,
+  "tca": 857.9,
+  "ppe": 614.6,
+  "gw": 196.0,
+  "intang": 35.4,
+  "ta": 2052.0,
+  "stb": 47.0,
+  "cltd": 38.4,
+  "ap": 127.3,
+  "accr": 412.7,
+  "tcl": 625.4,
+  "ltd": 422.4,
+  "pension": 201.3,
+  "opeb": 254.2,
+  "tl": 1630.8,
+  "eq": 389.5,
+  "nci": 31.7,
+  "teq": 421.2,
+  "tle": 2052.0
+ },
+ "seg": [
+  {
+   "basis": "mkts",
+   "rev": [
+    [
+     "U.S.",
+     183.6
+    ],
+    [
+     "France",
+     105.7
+    ],
+    [
+     "Mexico",
+     85.7
+    ],
+    [
+     "Brazil",
+     73.8
+    ],
+    [
+     "Canada",
+     38.8
+    ],
+    [
+     "Largest 5 Markets",
+     487.6
+    ],
+    [
+     "Latin America",
+     90.8
+    ],
+    [
+     "EMEA",
+     115.7
+    ],
+    [
+     "Asia",
+     38.7
+    ],
+    [
+     "Global Markets",
+     245.2
+    ],
+    [
+     "Payment Services",
+     22.8
+    ],
+    [
+     "Revenue - non-GAAP",
+     755.6
+    ],
+    [
+     "Other items not allocated to segments",
+     20.5
+    ],
+    [
+     "Revenues - GAAP",
+     776.1
+    ]
+   ],
+   "op": [
+    [
+     "U.S.",
+     8.3
+    ],
+    [
+     "France",
+     4.1
+    ],
+    [
+     "Mexico",
+     7.9
+    ],
+    [
+     "Brazil",
+     6.1
+    ],
+    [
+     "Canada",
+     1.7
+    ],
+    [
+     "Largest 5 Markets",
+     28.1
+    ],
+    [
+     "Latin America",
+     16.5
+    ],
+    [
+     "EMEA",
+     8.2
+    ],
+    [
+     "Asia",
+     6.5
+    ],
+    [
+     "Global Markets",
+     31.2
+    ],
+    [
+     "Payment Services",
+     0.5
+    ],
+    [
+     "Corporate items",
+     -19.2
+    ],
+    [
+     "Operating profit - non-GAAP",
+     40.6
+    ],
+    [
+     "Other items not allocated to segments",
+     -27.7
+    ],
+    [
+     "Operating profit (loss) - GAAP",
+     12.9
+    ]
+   ]
+  }
+ ],
+ "ngaap": {
+  "rev": [
+   [
+    "Non-GAAP",
+    755.6
+   ],
+   [
+    "Other items not allocated to segments",
+    20.5
+   ],
+   [
+    "GAAP",
+    776.1
+   ]
+  ],
+  "op": [
+   [
+    "Non-GAAP",
+    40.6
+   ],
+   [
+    "Other items not allocated to segments",
+    -27.7
+   ],
+   [
+    "GAAP",
+    12.9
+   ]
+  ],
+  "eps": [
+   [
+    "Non-GAAP",
+    0.44
+   ],
+   [
+    "Other items not allocated to segments",
+    -0.36
+   ],
+   [
+    "Income tax rate adjustment",
+    -0.1
+   ],
+   [
+    "GAAP",
+    -0.01
+   ],
+   [
+    "Non-GAAP margin",
+    5.4
+   ]
+  ],
+  "inc": [
+   [
+    "Non-GAAP",
+    21.9
+   ],
+   [
+    "Other items not allocated to segments",
+    -17.6
+   ],
+   [
+    "Income tax rate adjustment",
+    -4.9
+   ],
+   [
+    "GAAP",
+    -0.6
+   ]
+  ],
+  "tax": [
+   [
+    "Non-GAAP",
+    13.4
+   ],
+   [
+    "Other items not allocated to segments",
+    -3.9
+   ],
+   [
+    "Income tax rate adjustment",
+    6.0
+   ],
+   [
+    "GAAP",
+    15.5
+   ]
+  ],
+  "nci": [
+   [
+    "Non-GAAP",
+    0.8
+   ],
+   [
+    "Other items not allocated to segments",
+    -6.2
+   ],
+   [
+    "Income tax rate adjustment",
+    -1.1
+   ],
+   [
+    "GAAP",
+    -6.5
+   ]
+  ],
+  "op_items": [
+   [
+    "Venezuela operations",
+    -17.9
+   ],
+   [
+    "Reorganization and Restructuring",
+    -1.5
+   ],
+   [
+    "U.S. and Mexican retirement plans",
+    -8.3
+   ],
+   [
+    "Acquisitions and dispositions",
+    0.0
+   ],
+   [
+    "Share-based compensation adj.",
+    0.0
+   ],
+   [
+    "Operating profit",
+    -27.7
+   ]
+  ],
+  "rev_items": [
+   [
+    "Venezuela operations",
+    20.5
+   ]
+  ]
+ },
+ "growth": [
+  [
+   [
+    "Revenues",
+    "U.S.",
+    [
+     176.0,
+     8.0,
+     0.0,
+     0.0,
+     184.0
+    ]
+   ],
+   [
+    "Revenues",
+    "France",
+    [
+     129.0,
+     0.0,
+     0.0,
+     -23.0,
+     106.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Mexico",
+    [
+     100.0,
+     -4.0,
+     0.0,
+     -11.0,
+     86.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Brazil",
+    [
+     86.0,
+     3.0,
+     0.0,
+     -16.0,
+     74.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Canada",
+    [
+     44.0,
+     -1.0,
+     0.0,
+     -5.0,
+     39.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Largest 5 Markets",
+    [
+     536.0,
+     7.0,
+     0.0,
+     -55.0,
+     488.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Latin America",
+    [
+     91.0,
+     15.0,
+     0.0,
+     -14.0,
+     91.0
+    ]
+   ],
+   [
+    "Revenues",
+    "EMEA",
+    [
+     137.0,
+     0.0,
+     0.0,
+     -21.0,
+     116.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Asia",
+    [
+     33.0,
+     5.0,
+     3.0,
+     -2.0,
+     39.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Global Markets",
+    [
+     261.0,
+     19.0,
+     3.0,
+     -37.0,
+     245.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Payment Services",
+    [
+     22.0,
+     5.0,
+     0.0,
+     -4.0,
+     23.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Revenues - non-GAAP",
+    [
+     818.0,
+     31.0,
+     3.0,
+     -96.0,
+     756.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Other items not allocated to segments",
+    [
+     131.0,
+     122.0,
+     0.0,
+     -233.0,
+     21.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Revenues - GAAP",
+    [
+     950.0,
+     153.0,
+     3.0,
+     -329.0,
+     776.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "U.S.",
+    [
+     1.0,
+     7.0,
+     0.0,
+     0.0,
+     8.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "France",
+    [
+     7.0,
+     -2.0,
+     0.0,
+     -1.0,
+     4.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Mexico",
+    [
+     4.0,
+     5.0,
+     0.0,
+     -1.0,
+     8.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Brazil",
+    [
+     10.0,
+     -2.0,
+     0.0,
+     -1.0,
+     6.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Canada",
+    [
+     2.0,
+     0.0,
+     0.0,
+     0.0,
+     2.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Largest 5 Markets",
+    [
+     24.0,
+     8.0,
+     0.0,
+     -4.0,
+     28.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Latin America",
+    [
+     10.0,
+     8.0,
+     0.0,
+     -1.0,
+     17.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "EMEA",
+    [
+     9.0,
+     -1.0,
+     0.0,
+     0.0,
+     8.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Asia",
+    [
+     5.0,
+     1.0,
+     0.0,
+     0.0,
+     7.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Global Markets",
+    [
+     25.0,
+     9.0,
+     0.0,
+     -2.0,
+     31.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Payment Services",
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Corporate expenses",
+    [
+     -28.0,
+     14.0,
+     0.0,
+     -5.0,
+     -19.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Operating profit - non-GAAP",
+    [
+     21.0,
+     31.0,
+     0.0,
+     -11.0,
+     41.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Other items not allocated to segments",
+    [
+     -95.0,
+     -27.0,
+     -1.0,
+     95.0,
+     -28.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Operating profit (loss) - GAAP",
+    [
+     -74.0,
+     3.0,
+     -1.0,
+     84.0,
+     13.0
+    ]
+   ]
+  ]
+ ]
+}

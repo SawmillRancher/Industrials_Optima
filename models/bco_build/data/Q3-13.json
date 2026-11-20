@@ -1,0 +1,136 @@
+{
+ "period": "Q3-13",
+ "year": 2013,
+ "quarter": 3,
+ "sources": [
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889013000027/form_10-q.htm",
+  "https://data.sec.gov/api/xbrl/companyfacts/CIK0000078890.json",
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889014000001/exhibit_99-1.htm"
+ ],
+ "notes": [
+  "Statements: XBRL company facts, value as first filed in the 10-K / 10-Q for the period (as originally reported).",
+  "Other operating income (expense) not tagged in XBRL for this period: derived as operating profit − revenues + total costs and expenses (face-statement identity).",
+  "Income statement recast: Re-presented at year end (discontinued operations): comparative as filed in the 2014 Form 10-Q, consistent with the fourth-quarter 2013 release tables. Originally reported: revenues 1003.0, operating profit 61.0, income from continuing operations attributable to Brink's 31.1.",
+  "Segments / non-GAAP reconciliations: quarterly tables of the Q4-2013 earnings release (Ex. 99.1)."
+ ],
+ "is": {
+  "rev": 982.4,
+  "cor": 783.2,
+  "sga": 141.2,
+  "tce": 924.4,
+  "op": 59.2,
+  "int": 6.5,
+  "oth": 0.3,
+  "ebt": 53.0,
+  "tax": 15.0,
+  "cont": 38.0,
+  "disc": -6.0,
+  "pl": 32.0,
+  "nci": 8.2,
+  "ni": 23.8,
+  "cont_att": 29.8,
+  "disc_att": -6.0,
+  "eps_d": 0.49,
+  "eps_cont_d": 0.61,
+  "eps_b": 0.49,
+  "sh_d": 49.0,
+  "sh_b": 48.7,
+  "dps": 0.1,
+  "sh_ng": 49.0,
+  "ooi": 1.2
+ },
+ "cf": {
+  "ni": 31.1,
+  "disc": -31.9,
+  "da": 132.6,
+  "sbc": 7.5,
+  "def_tax": -26.8,
+  "cfo": 104.4,
+  "capex": 124.3,
+  "acq": 18.1,
+  "ppe_sale": 2.8,
+  "cfi": -131.6,
+  "div": 14.4,
+  "div_nci": 4.2,
+  "cff": 83.1,
+  "fx": -15.3,
+  "net": 40.6,
+  "tax_paid": 68.1,
+  "int_paid": 18.4,
+  "ytd_months": 9,
+  "cash_beg": 201.7,
+  "cash_end": 242.3
+ },
+ "bs": {
+  "cash": 242.3,
+  "ar": 674.1,
+  "tca": 1136.3,
+  "ppe": 776.3,
+  "gw": 253.0,
+  "intang": 58.7,
+  "ta": 2699.0,
+  "stb": 76.5,
+  "cltd": 25.9,
+  "ap": 168.1,
+  "accr": 559.0,
+  "tcl": 829.5,
+  "ltd": 419.8,
+  "pension": 372.2,
+  "opeb": 299.6,
+  "tl": 2109.6,
+  "eq": 510.4,
+  "nci": 79.0,
+  "teq": 589.4,
+  "tle": 2699.0
+ },
+ "seg": [
+  {
+   "basis": "intl2",
+   "rev": [
+    [
+     "International",
+     759.9
+    ],
+    [
+     "North America",
+     222.5
+    ]
+   ],
+   "op": [
+    [
+     "International",
+     79.7
+    ],
+    [
+     "North America",
+     0.2
+    ],
+    [
+     "Non-segment",
+     -20.7
+    ]
+   ]
+  }
+ ],
+ "ngaap": {},
+ "ngaap_tot": {
+  "rev": 982.4,
+  "op": 72.3,
+  "inc": 35.4,
+  "eps": 0.72
+ },
+ "gaap_tbl": {
+  "op": 59.2,
+  "inc": 29.8,
+  "eps": 0.61,
+  "rev": 982.4
+ },
+ "recast": {
+  "reason": "Re-presented at year end (discontinued operations): comparative as filed in the 2014 Form 10-Q, consistent with the fourth-quarter 2013 release tables.",
+  "original": {
+   "rev": 1003.0,
+   "op": 61.0,
+   "cont_att": 31.1
+  }
+ }
+}

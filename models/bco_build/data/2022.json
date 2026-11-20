@@ -1,0 +1,588 @@
+{
+ "period": "2022",
+ "year": 2022,
+ "quarter": null,
+ "sources": [
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889023000090/bco-20221231.htm",
+  "https://data.sec.gov/api/xbrl/companyfacts/CIK0000078890.json",
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889023000069/ex991q42022.htm"
+ ],
+ "notes": [
+  "Statements: XBRL company facts, value as first filed in the 10-K / 10-Q for the period (as originally reported).",
+  "Segments / non-GAAP reconciliations: quarterly tables of the Q4-2022 earnings release (Ex. 99.1)."
+ ],
+ "is": {
+  "rev": 4535.5,
+  "cor": 3461.9,
+  "sga": 687.0,
+  "tce": 4148.9,
+  "ooi": -25.3,
+  "op": 361.3,
+  "int": 138.8,
+  "oth": 3.7,
+  "ebt": 226.2,
+  "tax": 41.4,
+  "cont": 184.8,
+  "disc": -2.9,
+  "pl": 181.9,
+  "nci": 11.3,
+  "ni": 170.6,
+  "cont_att": 173.5,
+  "disc_att": -2.9,
+  "eps_d": 3.57,
+  "eps_cont_d": 3.63,
+  "eps_b": 3.61,
+  "sh_d": 47.8,
+  "sh_b": 47.3,
+  "dps": 0.8,
+  "sh_ng": 47.8
+ },
+ "cf": {
+  "ni": 181.9,
+  "disc": -2.9,
+  "da": 245.8,
+  "sbc": 48.6,
+  "def_tax": -62.3,
+  "cfo": 479.9,
+  "capex": 182.6,
+  "acq": 173.9,
+  "ppe_sale": 5.7,
+  "divest": 0.0,
+  "cfi": -331.2,
+  "buyback": 52.2,
+  "div": 37.6,
+  "div_nci": 7.1,
+  "cff": 245.2,
+  "fx": -70.1,
+  "net": 323.8,
+  "amort": 52.0,
+  "tax_paid": 127.8,
+  "int_paid": 117.5,
+  "ytd_months": 12,
+  "cash_beg": 1086.7,
+  "cash_end": 1410.5
+ },
+ "bs": {
+  "cash": 972.0,
+  "rcash": 438.5,
+  "ar": 862.2,
+  "tca": 2597.4,
+  "rou": 314.5,
+  "ppe": 935.3,
+  "gw": 1450.9,
+  "intang": 535.5,
+  "ta": 6366.0,
+  "stb": 47.2,
+  "cltd": 82.4,
+  "ap": 296.5,
+  "accr": 1019.4,
+  "tcl": 1674.8,
+  "ltd": 3273.2,
+  "pension": 131.0,
+  "opeb": 174.5,
+  "lease": 249.9,
+  "tl": 5795.8,
+  "eq": 447.1,
+  "nci": 123.1,
+  "teq": 570.2,
+  "tle": 6366.0,
+  "shares": 46.3,
+  "cash_cf": 1410.5
+ },
+ "seg": [
+  {
+   "basis": "cur4",
+   "rev": [
+    [
+     "North America",
+     1584.1
+    ],
+    [
+     "Latin America",
+     1210.6
+    ],
+    [
+     "Europe",
+     931.4
+    ],
+    [
+     "Rest of World",
+     809.4
+    ],
+    [
+     "Segment revenues - GAAP and Non-GAAP",
+     4535.5
+    ]
+   ],
+   "op": [
+    [
+     "North America",
+     159.1
+    ],
+    [
+     "Latin America",
+     277.7
+    ],
+    [
+     "Europe",
+     98.4
+    ],
+    [
+     "Rest of World",
+     163.9
+    ],
+    [
+     "Corporate",
+     -148.8
+    ],
+    [
+     "Non-GAAP",
+     550.3
+    ],
+    [
+     "Reorganization and Restructuring",
+     -38.8
+    ],
+    [
+     "Acquisitions and dispositions",
+     -86.6
+    ],
+    [
+     "Argentina highly inflationary impact",
+     -41.7
+    ],
+    [
+     "Change in allowance estimate",
+     -15.6
+    ],
+    [
+     "Ship loss matter",
+     -4.9
+    ],
+    [
+     "Chile antitrust matter",
+     -1.4
+    ],
+    [
+     "Internal loss",
+     0.0
+    ],
+    [
+     "GAAP",
+     361.3
+    ]
+   ]
+  }
+ ],
+ "ngaap": {
+  "rev": [
+   [
+    "GAAP",
+    4535.5
+   ],
+   [
+    "Non-GAAP",
+    4535.5
+   ]
+  ],
+  "op": [
+   [
+    "GAAP",
+    361.3
+   ],
+   [
+    "Reorganization and Restructuring",
+    38.8
+   ],
+   [
+    "Acquisitions and dispositions",
+    86.6
+   ],
+   [
+    "Argentina highly inflationary impact",
+    41.7
+   ],
+   [
+    "Change in allowance estimate",
+    15.6
+   ],
+   [
+    "Ship loss matter",
+    4.9
+   ],
+   [
+    "Chile antitrust matter",
+    1.4
+   ],
+   [
+    "Internal loss",
+    0.0
+   ],
+   [
+    "Non-GAAP",
+    550.3
+   ]
+  ],
+  "eps": [
+   [
+    "GAAP",
+    3.63
+   ],
+   [
+    "Retirement plans",
+    0.17
+   ],
+   [
+    "Reorganization and Restructuring",
+    0.64
+   ],
+   [
+    "Acquisitions and dispositions",
+    1.33
+   ],
+   [
+    "Argentina highly inflationary impact",
+    1.0
+   ],
+   [
+    "Change in allowance estimate",
+    0.25
+   ],
+   [
+    "Valuation allowance on tax credits",
+    -1.11
+   ],
+   [
+    "Ship loss matter",
+    0.08
+   ],
+   [
+    "Chile antitrust matter",
+    0.02
+   ],
+   [
+    "Internal loss",
+    0.0
+   ],
+   [
+    "Deferred tax valuation allowance",
+    0.0
+   ],
+   [
+    "Income tax rate adjustment",
+    0.0
+   ],
+   [
+    "Non-GAAP",
+    5.99
+   ]
+  ],
+  "inc": [
+   [
+    "GAAP",
+    173.5
+   ],
+   [
+    "Retirement plans",
+    8.1
+   ],
+   [
+    "Reorganization and Restructuring",
+    30.5
+   ],
+   [
+    "Acquisitions and dispositions",
+    63.5
+   ],
+   [
+    "Argentina highly inflationary impact",
+    47.6
+   ],
+   [
+    "Change in allowance estimate",
+    11.9
+   ],
+   [
+    "Valuation allowance on tax credits",
+    -53.2
+   ],
+   [
+    "Ship loss matter",
+    3.6
+   ],
+   [
+    "Chile antitrust matter",
+    0.9
+   ],
+   [
+    "Internal loss",
+    0.0
+   ],
+   [
+    "Deferred tax valuation allowance",
+    0.0
+   ],
+   [
+    "Income tax rate adjustment",
+    0.0
+   ],
+   [
+    "Non-GAAP",
+    286.4
+   ]
+  ],
+  "ebitda": [
+   [
+    "Net income (loss) attributable to Brink's - GAAP",
+    170.6
+   ],
+   [
+    "Interest expense - GAAP",
+    138.8
+   ],
+   [
+    "Income tax provision - GAAP",
+    41.4
+   ],
+   [
+    "Depreciation and amortization - GAAP",
+    245.8
+   ],
+   [
+    "EBITDA",
+    596.6
+   ],
+   [
+    "Discontinued operations - GAAP",
+    2.9
+   ],
+   [
+    "Retirement plans",
+    11.0
+   ],
+   [
+    "Reorganization and Restructuring",
+    37.7
+   ],
+   [
+    "Acquisitions and dispositions",
+    30.9
+   ],
+   [
+    "Argentina highly inflationary impact",
+    42.7
+   ],
+   [
+    "Change in allowance estimate",
+    15.6
+   ],
+   [
+    "Valuation allowance on tax credits",
+    0.0
+   ],
+   [
+    "Ship loss matter",
+    4.9
+   ],
+   [
+    "Chile antitrust matter",
+    1.4
+   ],
+   [
+    "Internal loss",
+    0.0
+   ],
+   [
+    "Income tax rate adjustment",
+    0.0
+   ],
+   [
+    "Share-based compensation",
+    48.6
+   ],
+   [
+    "Marketable securities (gain) loss",
+    -4.0
+   ],
+   [
+    "Adjusted EBITDA",
+    788.3
+   ]
+  ],
+  "da": [
+   [
+    "GAAP",
+    245.8
+   ],
+   [
+    "Reorganization and Restructuring",
+    -1.0
+   ],
+   [
+    "Acquisitions and dispositions",
+    -52.1
+   ],
+   [
+    "Argentina highly inflationary impact",
+    -2.9
+   ],
+   [
+    "Non-GAAP",
+    189.8
+   ]
+  ],
+  "int": [
+   [
+    "GAAP",
+    -138.8
+   ],
+   [
+    "Acquisitions and dispositions",
+    1.2
+   ],
+   [
+    "Non-GAAP",
+    -137.6
+   ]
+  ],
+  "oth": [
+   [
+    "GAAP",
+    3.7
+   ],
+   [
+    "Retirement plans",
+    11.1
+   ],
+   [
+    "Acquisitions and dispositions",
+    -2.6
+   ],
+   [
+    "Argentina highly inflationary impact",
+    3.9
+   ],
+   [
+    "Non-GAAP",
+    16.1
+   ]
+  ],
+  "tax": [
+   [
+    "GAAP",
+    41.4
+   ],
+   [
+    "Retirement plans",
+    2.9
+   ],
+   [
+    "Reorganization and Restructuring",
+    8.2
+   ],
+   [
+    "Acquisitions and dispositions",
+    20.7
+   ],
+   [
+    "Argentina highly inflationary impact",
+    -2.0
+   ],
+   [
+    "Change in allowance estimate",
+    3.7
+   ],
+   [
+    "Valuation allowance on tax credits",
+    53.2
+   ],
+   [
+    "Ship loss matter",
+    1.3
+   ],
+   [
+    "Chile antitrust matter",
+    0.5
+   ],
+   [
+    "Internal loss",
+    0.0
+   ],
+   [
+    "Deferred tax valuation allowance",
+    0.0
+   ],
+   [
+    "Income tax rate adjustment",
+    0.0
+   ],
+   [
+    "Non-GAAP",
+    129.9
+   ]
+  ],
+  "nci": [
+   [
+    "GAAP",
+    11.3
+   ],
+   [
+    "Retirement plans",
+    0.1
+   ],
+   [
+    "Reorganization and Restructuring",
+    0.1
+   ],
+   [
+    "Acquisitions and dispositions",
+    1.0
+   ],
+   [
+    "Income tax rate adjustment",
+    0.0
+   ],
+   [
+    "Non-GAAP",
+    12.5
+   ]
+  ]
+ },
+ "fcf": {
+  "ytd_months": 12,
+  "rows": [
+   [
+    "Operating activities - GAAP",
+    479.9
+   ],
+   [
+    "Increase in restricted cash held for customers",
+    -50.0
+   ],
+   [
+    "Increase in certain customer obligations",
+    -50.0
+   ],
+   [
+    "G4S intercompany payments",
+    0.0
+   ],
+   [
+    "Operating activities - non-GAAP",
+    379.9
+   ],
+   [
+    "Capital expenditures - GAAP",
+    -182.6
+   ],
+   [
+    "Proceeds from sale of property, equipment and investments",
+    5.7
+   ],
+   [
+    "Free cash flow before dividends",
+    203.0
+   ]
+  ]
+ }
+}

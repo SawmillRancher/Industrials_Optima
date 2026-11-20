@@ -1,15 +1,15 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, BCO). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
 - **Fill-in docs:** [`templates/NEW_MODEL_README_TEMPLATE.md`](templates/NEW_MODEL_README_TEMPLATE.md) and [`templates/EXTRACTION_SCHEMA_TEMPLATE.md`](templates/EXTRACTION_SCHEMA_TEMPLATE.md).
 - **QA tools:** [`tools/inspect_model.py`](tools/inspect_model.py) (formula errors and non-zero check rows), [`tools/cyc.py`](tools/cyc.py) (circular references) and [`tools/residue_scan.py`](tools/residue_scan.py) (leftover template-company text in values and comments).
 - **Per-model lessons:** [`MODEL_LESSONS.md`](MODEL_LESSONS.md) records each model's specific nuances (basis, bridges, data quirks, deals, calibration, valuation) and reusable rules. Read the entries for the most similar companies before you start.
-- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`) and WWD (`wwd_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
+- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`), WWD (`wwd_build`) and BCO (`bco_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
 
 ---
 
@@ -275,12 +275,14 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
 ### 5.1 Sources and extraction
 - **Share price fallback.** With market sites blocked and no price from the user, use the latest SEC-filed price: the 10-Q Part II Item 2 average repurchase price, or a Form 4 transaction / withholding price. Cite the form and date, and flag "update to market". Don't use unverifiable web quotes. [WWD, BWXT, MLM, CLH, WAB, CSGP, CTAS, UBER]
+- **Statements from XBRL when releases carry none.** Take each fact as first filed (= as originally reported), tie every period to the face-statement identities and to the release's GAAP rows, and derive noncontrolling interests from the two net-income facts. Where the year-end release re-presents earlier quarters, use the comparative filed in the following year's 10-Q, but only if it ties to the release table; comment the cell with the original figures. [BCO]
+- **Rolling two-year quarterly tables:** parse one release per year (the fourth-quarter one) for segments and bridges, and every quarterly release only for tables that appear once (growth decomposition, free cash flow). [BCO]
 - **XBRL can be wrong, not just incomplete.** Facts tagged 0, tags retired mid-history into a combined concept, and sign flips all occur. Tie every XBRL-sourced fact to the face statement before using it as a primary input. For as-originally-reported checks, use the earliest-filed fact, and compare absolute values where the tag's sign convention changed. [TFI, ODFL]
 - **Foreign filers' EDGAR history starts at the US listing.** Record reporting-currency switches and keep an FX reference series for any manually entered earlier data. For non-SEC issuers, confirm EDGAR holds only F-6 ADR CIKs, say so in header row 3, and source from the home regulator's filings. [TFI, RBA, RMS]
 - **Derivations when releases are thin:**
@@ -336,12 +338,14 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Store each period's company adjusting-item wording and amounts as a comment** on the total-items cell, so the category rows can stay few without losing the audit trail. [WAB]
 - **Use the company's own share count** (adjusted / fully diluted in loss quarters, unrounded) in the adjusted EPS bridge. [WAB, XPO]
 - **Don't force FY = Σ quarters** for adjusted measures the company computes annually (annual tax effect, FY cc rates), or for a measure whose definition changed mid-year. Exempt them from the quarter-sum check with a comment. [ONON, VMC]
+- **Long, changing item lists:** group them into a few stable categories with the labels per period in comments. Where the company reconciles item by item after tax, derive one "non-operating, tax and NCI" line from the published total, and in loss periods use the share count implied by the published non-GAAP income and EPS. [BCO]
 - **Known, explained source differences** (a restated starting NI, a release issued before a 10-Q impairment) can stay as documented check exceptions rather than plugs. [WCN]
 - **Long-term target base years** stay "as first published", with a note that definitions have since changed. [XPO]
 - **Two-class / participating preferred:** the adjusted-NI bridge needs an "allocation to preferred" line, and the preferred is deducted in the EV bridge. [RBA]
 
 ### 5.5 Calibration
 - **Order of operations.** Apply every explicitly guided driver first, then solve one uniform Δ on the least-guided driver. Use a "sensitivity to +1.00" helper row for a closed-form linear solve, with no goal-seek and no circularity. [VMC, MLM, TDY, WAB, DHR, LOAR, CSGP]
+- **Adjusted-EBITDA guidance → operating target:** required non-GAAP operating profit = guided adjusted EBITDA − D&A excluding acquisition amortization − share-based compensation − other income + NCI (whatever sits between the two measures in the company's definition). Then solve the margin Δ. [BCO]
 - **EPS guidance → operating target:** required adjusted OI = EPS × guidance share count (ex future buybacks) ÷ (1 − guided ETR) + net interest − adjusted other income, less the actual YTD. Then solve margins to it. [DHR, CTAS, STE, WAB, WWD]
 - **Two anchors in one year:** if a quarterly guide and a FY guide both exist, solve Q3 to the quarter and Q4 to the year with separate Δs and checks. For one-quarter-ahead guidance only, carry the solved Δ forward. [DHR, ONON, TDY, UBER]
 - **Guidance that excludes a deal or one-off:** calibrate a legacy / guidance-basis memo series with its own check, and add the deal block and excluded items on top. Deals already inside guidance go inside segment acquisition %. Check the deal close date against the outlook date. [MLM, KRMN, CLH, CSGP, CTAS, UBER, TMO, ONON, DHR]
@@ -370,6 +374,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 
   Book buyback equity the way the company does (treasury vs retired; APIC first, then retained earnings). [ODFL, WCN, HEI, BC, CPRT, XPO, CLH, WAB]
 - **Net-cash companies:** replace the revolver with yield on opening net cash (HTM securities count as cash), and keep exceptional dividends as their own lever. Split country-specific tax levies into an "of which" row so the recurring ETR is clean. [RMS, CPRT]
+- **Cash-handling and float businesses:** state the net-debt and minimum-cash definitions explicitly, because much of the balance-sheet cash is operating or customer cash. Tie the company's free-cash-flow definition to the model with a derived customer-cash adjustment row. [BCO, UBER, RBA]
 - **Financing labels:**
   - Revolver draws above the commitment are labelled financing assumptions.
   - Add a revolver-headroom memo.
@@ -396,6 +401,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 
   [DHR, TMO, CSGP, ONON, CLH, WAB, XPO, CPRT, RBA, KRMN]
 - **Don't double-count the current year:** when valuation net debt is taken at the current fiscal year end, exclude that year's UFCF. When the FY ended just before the valuation date, make it the base year. [BWXT, CW, WWD, BC, HEI]
+- **Deal closing just after the net-debt date:** put the cash consideration in the first forecast year's UFCF, add the debt (and pension) assumed to the EV bridge, and use the post-deal share count. The toggle must remove all three. [BCO]
 - **EV bridge items:**
   - Add legacy debt-like items (asbestos net of insurance) and redeemable NCI.
   - Carry equity stakes and retained divestiture stakes at carrying value outside invested capital.
@@ -408,6 +414,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 
 ### 5.8 QA
 - **Template residue is the most common defect.** At least 10 builds shipped MLM text in Bull-Base-Bear N26 / P40 comments or DCF rationale, and TFI kept Moog comments. `tools/residue_scan.py` is a hard gate. [CLH, WAB, SAIA, ODFL, WCN, LOAR, ONON, LECO, ESAB, STE, CTAS, UBER, TFI, CPRT]
+- **Template-identical layouts:** if the new model keeps the template's column map, its switch cell is the template's own (CF2) and the scanner flags the literal reference. Reword the text rather than using `--allow`. Pick a Charts window in which every series has data, so that `inspect_model.py` reports 0 error cells with no exceptions. [BCO]
 - **Check also:** foreign row numbers and switch-cell addresses in comments, the wrong currency symbol on non-USD models, and modelling-note dates that contradict the definition flags. [ONON, DHR]
 - **Check tolerances** are set by period when the issuer changes rounding units, and stated in the label. [STE, TMO, CSGP, ONON, DHR]
 - **Private-company implied CF:** related-party balances are financing; explain the sign of implied capex; leave first-year ratios n/a when there is no opening BS. [R&Y]

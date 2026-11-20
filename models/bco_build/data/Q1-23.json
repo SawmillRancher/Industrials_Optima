@@ -1,0 +1,831 @@
+{
+ "period": "Q1-23",
+ "year": 2023,
+ "quarter": 1,
+ "sources": [
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889023000253/bco-20230331.htm",
+  "https://data.sec.gov/api/xbrl/companyfacts/CIK0000078890.json",
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889024000053/ex991q42023.htm",
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889023000250/ex991q12023.htm"
+ ],
+ "notes": [
+  "Statements: XBRL company facts, value as first filed in the 10-K / 10-Q for the period (as originally reported).",
+  "Segments / non-GAAP reconciliations: quarterly tables of the Q4-2023 earnings release (Ex. 99.1)."
+ ],
+ "is": {
+  "rev": 1185.4,
+  "cor": 920.3,
+  "sga": 177.0,
+  "tce": 1097.3,
+  "ooi": -8.3,
+  "op": 79.8,
+  "int": 46.6,
+  "oth": 4.7,
+  "ebt": 37.9,
+  "tax": 20.3,
+  "cont": 17.6,
+  "disc": 0.7,
+  "pl": 18.3,
+  "nci": 3.3,
+  "ni": 15.0,
+  "cont_att": 14.3,
+  "disc_att": 0.7,
+  "eps_d": 0.32,
+  "eps_cont_d": 0.3,
+  "eps_b": 0.32,
+  "sh_d": 47.4,
+  "sh_b": 46.7,
+  "dps": 0.2,
+  "sh_ng": 47.4
+ },
+ "cf": {
+  "ni": 18.3,
+  "disc": 0.7,
+  "da": 67.6,
+  "sbc": 10.9,
+  "def_tax": -0.2,
+  "cfo": -45.1,
+  "capex": 45.2,
+  "acq": 0.0,
+  "ppe_sale": 0.3,
+  "divest": 1.1,
+  "cfi": -57.6,
+  "buyback": 16.0,
+  "div": 9.3,
+  "div_nci": 0.4,
+  "cff": -97.1,
+  "fx": 7.7,
+  "net": -192.1,
+  "tax_paid": 23.3,
+  "int_paid": 59.1,
+  "ytd_months": 3,
+  "cash_beg": 1410.5,
+  "cash_end": 1218.4
+ },
+ "bs": {
+  "cash": 816.6,
+  "rcash": 401.8,
+  "ar": 876.9,
+  "tca": 2448.1,
+  "rou": 322.3,
+  "ppe": 953.5,
+  "gw": 1459.2,
+  "intang": 526.7,
+  "ta": 6253.1,
+  "stb": 94.1,
+  "cltd": 86.6,
+  "ap": 248.7,
+  "accr": 985.7,
+  "tcl": 1602.6,
+  "ltd": 3190.2,
+  "pension": 131.9,
+  "opeb": 169.5,
+  "lease": 257.3,
+  "tl": 5648.1,
+  "eq": 478.8,
+  "nci": 126.2,
+  "teq": 605.0,
+  "tle": 6253.1,
+  "shares": 46.4,
+  "cash_cf": 1218.4
+ },
+ "seg": [
+  {
+   "basis": "cur4",
+   "rev": [
+    [
+     "North America",
+     401.9
+    ],
+    [
+     "Latin America",
+     315.5
+    ],
+    [
+     "Europe",
+     268.7
+    ],
+    [
+     "Rest of World",
+     199.3
+    ],
+    [
+     "Segment revenues - GAAP and Non-GAAP",
+     1185.4
+    ]
+   ],
+   "op": [
+    [
+     "North America",
+     38.6
+    ],
+    [
+     "Latin America",
+     66.6
+    ],
+    [
+     "Europe",
+     22.0
+    ],
+    [
+     "Rest of World",
+     37.3
+    ],
+    [
+     "Corporate",
+     -37.1
+    ],
+    [
+     "Non-GAAP",
+     127.4
+    ],
+    [
+     "Reorganization and Restructuring",
+     -14.2
+    ],
+    [
+     "Acquisitions and dispositions",
+     -22.0
+    ],
+    [
+     "Argentina highly inflationary impact",
+     -11.2
+    ],
+    [
+     "Transformation initiatives",
+     0.0
+    ],
+    [
+     "Non-routine auto loss matter",
+     0.0
+    ],
+    [
+     "Change in allowance estimate",
+     0.0
+    ],
+    [
+     "Ship loss matter",
+     0.0
+    ],
+    [
+     "Chile antitrust matter",
+     -0.2
+    ],
+    [
+     "Reporting compliance",
+     0.0
+    ],
+    [
+     "GAAP",
+     79.8
+    ]
+   ]
+  }
+ ],
+ "ngaap": {
+  "rev": [
+   [
+    "GAAP",
+    1185.4
+   ],
+   [
+    "Non-GAAP",
+    1185.4
+   ]
+  ],
+  "op": [
+   [
+    "GAAP",
+    79.8
+   ],
+   [
+    "Reorganization and Restructuring",
+    14.2
+   ],
+   [
+    "Acquisitions and dispositions",
+    22.0
+   ],
+   [
+    "Argentina highly inflationary impact",
+    11.2
+   ],
+   [
+    "Transformation initiatives",
+    0.0
+   ],
+   [
+    "Non-routine auto loss matter",
+    0.0
+   ],
+   [
+    "Change in allowance estimate",
+    0.0
+   ],
+   [
+    "Ship loss matter",
+    0.0
+   ],
+   [
+    "Chile antitrust matter",
+    0.2
+   ],
+   [
+    "Reporting compliance",
+    0.0
+   ],
+   [
+    "Non-GAAP",
+    127.4
+   ]
+  ],
+  "eps": [
+   [
+    "GAAP",
+    0.3
+   ],
+   [
+    "Retirement plans",
+    -0.03
+   ],
+   [
+    "Reorganization and Restructuring costs",
+    0.24
+   ],
+   [
+    "Acquisitions and dispositions",
+    0.42
+   ],
+   [
+    "Argentina highly inflationary impact",
+    0.26
+   ],
+   [
+    "Transformation initiatives",
+    0.0
+   ],
+   [
+    "Non-routine auto loss matter",
+    0.0
+   ],
+   [
+    "Change in allowance estimate",
+    0.0
+   ],
+   [
+    "Valuation allowance on tax credits",
+    0.05
+   ],
+   [
+    "Ship loss matter",
+    0.0
+   ],
+   [
+    "Chile antitrust matter",
+    0.0
+   ],
+   [
+    "Reporting compliance",
+    0.0
+   ],
+   [
+    "Income tax rate adjustment",
+    0.02
+   ],
+   [
+    "Non-GAAP",
+    1.27
+   ]
+  ],
+  "inc": [
+   [
+    "GAAP",
+    14.3
+   ],
+   [
+    "Retirement plans",
+    -1.6
+   ],
+   [
+    "Reorganization and Restructuring",
+    11.5
+   ],
+   [
+    "Acquisitions and dispositions",
+    20.1
+   ],
+   [
+    "Argentina highly inflationary impact",
+    12.0
+   ],
+   [
+    "Transformation initiatives",
+    0.0
+   ],
+   [
+    "Non-routine auto loss matter",
+    0.0
+   ],
+   [
+    "Change in allowance estimate",
+    0.0
+   ],
+   [
+    "Valuation allowance on tax credits",
+    2.6
+   ],
+   [
+    "Ship loss matter",
+    0.0
+   ],
+   [
+    "Chile antitrust matter",
+    0.2
+   ],
+   [
+    "Reporting compliance",
+    0.0
+   ],
+   [
+    "Income tax rate adjustment",
+    1.1
+   ],
+   [
+    "Non-GAAP",
+    60.2
+   ]
+  ],
+  "ebitda": [
+   [
+    "Net income (loss) attributable to Brink's - GAAP",
+    15.0
+   ],
+   [
+    "Interest expense - GAAP",
+    46.6
+   ],
+   [
+    "Income tax provision - GAAP",
+    20.3
+   ],
+   [
+    "Depreciation and amortization - GAAP",
+    67.6
+   ],
+   [
+    "EBITDA",
+    149.5
+   ],
+   [
+    "Discontinued operations - GAAP",
+    -0.7
+   ],
+   [
+    "Retirement plans",
+    -2.2
+   ],
+   [
+    "Reorganization and Restructuring",
+    13.1
+   ],
+   [
+    "Acquisitions and dispositions",
+    8.3
+   ],
+   [
+    "Argentina highly inflationary impact",
+    10.4
+   ],
+   [
+    "Transformation initiatives",
+    0.0
+   ],
+   [
+    "Non-routine auto loss matter",
+    0.0
+   ],
+   [
+    "Change in allowance estimate",
+    0.0
+   ],
+   [
+    "Ship loss matter",
+    0.0
+   ],
+   [
+    "Chile antitrust matter",
+    0.2
+   ],
+   [
+    "Reporting compliance",
+    0.0
+   ],
+   [
+    "Income tax rate adjustment",
+    0.3
+   ],
+   [
+    "Share-based compensation",
+    11.8
+   ],
+   [
+    "Marketable securities (gain) loss",
+    -0.2
+   ],
+   [
+    "Adjusted EBITDA",
+    190.5
+   ]
+  ],
+  "da": [
+   [
+    "GAAP",
+    67.6
+   ],
+   [
+    "Reorganization and Restructuring costs",
+    -1.1
+   ],
+   [
+    "Acquisitions and dispositions",
+    -14.0
+   ],
+   [
+    "Argentina highly inflationary impact",
+    -1.1
+   ],
+   [
+    "Non-GAAP",
+    51.4
+   ]
+  ],
+  "int": [
+   [
+    "GAAP",
+    -46.6
+   ],
+   [
+    "Acquisitions and dispositions",
+    0.2
+   ],
+   [
+    "Non-GAAP",
+    -46.4
+   ]
+  ],
+  "oth": [
+   [
+    "GAAP",
+    4.7
+   ],
+   [
+    "Retirement plans",
+    -2.2
+   ],
+   [
+    "Acquisitions and dispositions",
+    0.5
+   ],
+   [
+    "Argentina highly inflationary impact",
+    0.3
+   ],
+   [
+    "Non-GAAP",
+    3.3
+   ]
+  ],
+  "tax": [
+   [
+    "GAAP",
+    20.3
+   ],
+   [
+    "Retirement plans",
+    -0.6
+   ],
+   [
+    "Reorganization and Restructuring",
+    2.7
+   ],
+   [
+    "Acquisitions and dispositions",
+    2.4
+   ],
+   [
+    "Argentina highly inflationary impact",
+    -0.5
+   ],
+   [
+    "Transformation initiatives",
+    0.0
+   ],
+   [
+    "Non-routine auto loss matter",
+    0.0
+   ],
+   [
+    "Change in allowance estimate",
+    0.0
+   ],
+   [
+    "Valuation allowance on tax credits",
+    -2.6
+   ],
+   [
+    "Ship loss matter",
+    0.0
+   ],
+   [
+    "Chile antitrust matter",
+    0.0
+   ],
+   [
+    "Reporting compliance",
+    0.0
+   ],
+   [
+    "Income tax rate adjustment",
+    -0.8
+   ],
+   [
+    "Non-GAAP",
+    20.9
+   ]
+  ],
+  "nci": [
+   [
+    "GAAP",
+    3.3
+   ],
+   [
+    "Retirement plans",
+    0.0
+   ],
+   [
+    "Reorganization and Restructuring",
+    0.0
+   ],
+   [
+    "Acquisitions and dispositions",
+    0.2
+   ],
+   [
+    "Income tax rate adjustment",
+    -0.3
+   ],
+   [
+    "Non-GAAP",
+    3.2
+   ]
+  ]
+ },
+ "growth": [
+  [
+   [
+    "Revenues",
+    "North America",
+    [
+     369.0,
+     34.0,
+     1.0,
+     -2.0,
+     402.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Latin America",
+    [
+     291.0,
+     56.0,
+     1.0,
+     -33.0,
+     316.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Europe",
+    [
+     222.0,
+     25.0,
+     36.0,
+     -14.0,
+     269.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Rest of World",
+    [
+     192.0,
+     21.0,
+     -2.0,
+     -11.0,
+     199.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Segment revenues",
+    [
+     1074.0,
+     135.0,
+     36.0,
+     -60.0,
+     1185.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Revenues - GAAP",
+    [
+     1074.0,
+     135.0,
+     36.0,
+     -60.0,
+     1185.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "North America",
+    [
+     24.0,
+     14.0,
+     0.0,
+     0.0,
+     39.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Latin America",
+    [
+     63.0,
+     16.0,
+     0.0,
+     -12.0,
+     67.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Europe",
+    [
+     15.0,
+     6.0,
+     2.0,
+     -1.0,
+     22.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Rest of World",
+    [
+     33.0,
+     6.0,
+     0.0,
+     -2.0,
+     37.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Segment operating profit",
+    [
+     135.0,
+     41.0,
+     3.0,
+     -15.0,
+     165.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Corporate",
+    [
+     -23.0,
+     -17.0,
+     0.0,
+     3.0,
+     -37.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Operating profit - non-GAAP",
+    [
+     112.0,
+     24.0,
+     3.0,
+     -12.0,
+     127.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Other items not allocated to segments",
+    [
+     -50.0,
+     14.0,
+     -7.0,
+     -4.0,
+     -48.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Operating profit - GAAP",
+    [
+     62.0,
+     38.0,
+     -4.0,
+     -16.0,
+     80.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Segment revenues - GAAP/non-GAAP",
+    [
+     1074.0,
+     135.0,
+     36.0,
+     -60.0,
+     1185.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Non-GAAP operating profit",
+    [
+     112.0,
+     24.0,
+     3.0,
+     -12.0,
+     127.0
+    ]
+   ]
+  ],
+  [
+   [
+    "",
+    "Segment revenues - GAAP/non-GAAP",
+    [
+     1074.0,
+     135.0,
+     36.0,
+     -60.0,
+     1185.0
+    ]
+   ],
+   [
+    "",
+    "Non-GAAP operating profit",
+    [
+     112.0,
+     24.0,
+     3.0,
+     -12.0,
+     127.0
+    ]
+   ]
+  ]
+ ],
+ "fcf": {
+  "ytd_months": 3,
+  "rows": [
+   [
+    "Operating activities - GAAP",
+    -45.1
+   ],
+   [
+    "(Increase) decrease in restricted cash held for customers",
+    43.7
+   ],
+   [
+    "(Increase) decrease in certain customer obligations",
+    9.6
+   ],
+   [
+    "Operating activities - non-GAAP",
+    8.2
+   ],
+   [
+    "Capital expenditures - GAAP",
+    -45.2
+   ],
+   [
+    "Proceeds from sale of property, equipment and investments",
+    0.3
+   ],
+   [
+    "Free cash flow before dividends",
+    -36.7
+   ]
+  ]
+ }
+}

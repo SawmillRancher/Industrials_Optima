@@ -1,0 +1,53 @@
+{
+ "period": "Q4-13",
+ "year": 2013,
+ "quarter": 4,
+ "sources": [
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889014000001/exhibit_99-1.htm"
+ ],
+ "notes": [
+  "Fourth quarter: segments / non-GAAP from the three-month column of the release tables; income statement and cash flow = full year − nine months (normalize.py); balance sheet = year end."
+ ],
+ "seg": [
+  {
+   "basis": "intl2",
+   "rev": [
+    [
+     "International",
+     813.0
+    ],
+    [
+     "North America",
+     226.4
+    ]
+   ],
+   "op": [
+    [
+     "International",
+     84.0
+    ],
+    [
+     "North America",
+     0.2
+    ],
+    [
+     "Non-segment",
+     -21.8
+    ]
+   ]
+  }
+ ],
+ "ngaap": {},
+ "ngaap_tot": {
+  "rev": 1039.4,
+  "op": 78.8,
+  "inc": 39.0,
+  "eps": 0.79
+ },
+ "gaap_tbl": {
+  "op": 62.4,
+  "inc": 26.0,
+  "eps": 0.53,
+  "rev": 1039.4
+ }
+}

@@ -1,0 +1,357 @@
+{
+ "period": "Q2-14",
+ "year": 2014,
+ "quarter": 2,
+ "sources": [
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889014000018/form_10-q.htm",
+  "https://data.sec.gov/api/xbrl/companyfacts/CIK0000078890.json",
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889015000003/exhibit_99-1.htm"
+ ],
+ "notes": [
+  "Statements: XBRL company facts, value as first filed in the 10-K / 10-Q for the period (as originally reported).",
+  "Other operating income (expense) not tagged in XBRL for this period: derived as operating profit − revenues + total costs and expenses (face-statement identity).",
+  "Income statement recast: Re-presented at year end (discontinued operations): comparative as filed in the 2015 Form 10-Q, consistent with the fourth-quarter 2014 release tables. Originally reported: revenues 901.5, operating profit 10.7, income from continuing operations attributable to Brink's 2.3.",
+  "Segments / non-GAAP reconciliations: quarterly tables of the Q4-2014 earnings release (Ex. 99.1)."
+ ],
+ "is": {
+  "rev": 859.0,
+  "cor": 718.9,
+  "sga": 130.8,
+  "tce": 849.7,
+  "op": 8.7,
+  "int": 5.9,
+  "oth": 0.6,
+  "ebt": 3.4,
+  "tax": 4.1,
+  "cont": -0.7,
+  "disc": 0.7,
+  "pl": 0.0,
+  "nci": -1.6,
+  "ni": 1.6,
+  "cont_att": 0.9,
+  "disc_att": 0.7,
+  "eps_d": 0.03,
+  "eps_cont_d": 0.02,
+  "eps_b": 0.03,
+  "sh_d": 49.4,
+  "sh_b": 49.0,
+  "dps": 0.1,
+  "sh_ng": 49.4,
+  "ooi": -0.6
+ },
+ "cf": {
+  "ni": -87.7,
+  "disc": -0.8,
+  "da": 86.2,
+  "sbc": 13.5,
+  "def_tax": -23.0,
+  "cfo": 47.6,
+  "capex": 56.9,
+  "acq": 0.0,
+  "ppe_sale": 1.6,
+  "cfi": -58.8,
+  "div": 9.7,
+  "div_nci": 6.2,
+  "cff": 74.6,
+  "fx": -94.2,
+  "net": -30.8,
+  "tax_paid": 39.3,
+  "int_paid": 11.6,
+  "ytd_months": 6,
+  "cash_beg": 255.5,
+  "cash_end": 224.7
+ },
+ "bs": {
+  "cash": 224.7,
+  "ar": 590.3,
+  "tca": 1021.0,
+  "ppe": 730.3,
+  "gw": 242.9,
+  "intang": 44.9,
+  "ta": 2400.0,
+  "stb": 79.1,
+  "cltd": 35.2,
+  "ap": 181.9,
+  "accr": 481.5,
+  "tcl": 777.7,
+  "ltd": 413.8,
+  "pension": 169.6,
+  "opeb": 182.8,
+  "tl": 1695.0,
+  "eq": 655.6,
+  "nci": 49.4,
+  "teq": 705.0,
+  "tle": 2400.0
+ },
+ "seg": [
+  {
+   "basis": "mkts",
+   "rev": [
+    [
+     "U.S.",
+     180.3
+    ],
+    [
+     "France",
+     133.1
+    ],
+    [
+     "Mexico",
+     98.1
+    ],
+    [
+     "Brazil",
+     91.5
+    ],
+    [
+     "Canada",
+     45.3
+    ],
+    [
+     "Largest 5 Markets",
+     548.3
+    ],
+    [
+     "Latin America",
+     115.4
+    ],
+    [
+     "EMEA",
+     137.5
+    ],
+    [
+     "Asia",
+     34.0
+    ],
+    [
+     "Global Markets",
+     286.9
+    ],
+    [
+     "Payment Services",
+     23.8
+    ],
+    [
+     "Total revenues",
+     859.0
+    ]
+   ],
+   "op": [
+    [
+     "U.S.",
+     5.9
+    ],
+    [
+     "France",
+     4.9
+    ],
+    [
+     "Mexico",
+     -0.9
+    ],
+    [
+     "Brazil",
+     5.4
+    ],
+    [
+     "Canada",
+     2.4
+    ],
+    [
+     "Largest 5 Markets",
+     17.7
+    ],
+    [
+     "Latin America",
+     12.2
+    ],
+    [
+     "EMEA",
+     12.0
+    ],
+    [
+     "Asia",
+     5.1
+    ],
+    [
+     "Global Markets",
+     29.3
+    ],
+    [
+     "Payment Services",
+     -1.3
+    ],
+    [
+     "Corporate items",
+     -19.8
+    ],
+    [
+     "Operating profit - non-GAAP",
+     25.9
+    ],
+    [
+     "Other items not allocated to segments",
+     -17.2
+    ],
+    [
+     "Operating profit (loss) - GAAP",
+     8.7
+    ]
+   ]
+  }
+ ],
+ "ngaap": {
+  "rev": [
+   [
+    "Adjusted non-GAAP",
+    859.0
+   ],
+   [
+    "Effect of Ven. at 50 VEF/USD",
+    0.0
+   ],
+   [
+    "Non-GAAP and GAAP",
+    859.0
+   ]
+  ],
+  "op": [
+   [
+    "Adjusted non-GAAP",
+    25.9
+   ],
+   [
+    "Effect of Ven. at 50 VEF/USD",
+    0.0
+   ],
+   [
+    "Non-GAAP",
+    25.9
+   ],
+   [
+    "Other items not allocated to segments",
+    -17.2
+   ],
+   [
+    "GAAP",
+    8.7
+   ]
+  ],
+  "eps": [
+   [
+    "Adjusted non-GAAP",
+    0.2
+   ],
+   [
+    "Effect of Ven. at 50 VEF/USD",
+    0.02
+   ],
+   [
+    "Non-GAAP",
+    0.21
+   ],
+   [
+    "Other items not allocated to segments",
+    -0.23
+   ],
+   [
+    "Income tax rate adjustment",
+    0.04
+   ],
+   [
+    "GAAP",
+    0.02
+   ],
+   [
+    "Adjusted non-GAAP margin",
+    3.0
+   ]
+  ],
+  "inc": [
+   [
+    "Adjusted non-GAAP",
+    9.7
+   ],
+   [
+    "Effect of Ven. at 50 VEF/USD",
+    0.8
+   ],
+   [
+    "Non-GAAP",
+    10.5
+   ],
+   [
+    "Other items not allocated to segments",
+    -11.4
+   ],
+   [
+    "Income tax rate adjustment",
+    1.8
+   ],
+   [
+    "GAAP",
+    0.9
+   ]
+  ],
+  "tax": [
+   [
+    "Adjusted non-GAAP",
+    8.7
+   ],
+   [
+    "Effect of Ven. at 50 VEF/USD",
+    -0.8
+   ],
+   [
+    "Non-GAAP",
+    7.9
+   ],
+   [
+    "Other items not allocated to segments",
+    -2.0
+   ],
+   [
+    "Income tax rate adjustment",
+    -1.8
+   ],
+   [
+    "GAAP",
+    4.1
+   ]
+  ],
+  "nci": [
+   [
+    "Adjusted non-GAAP",
+    2.2
+   ],
+   [
+    "Effect of Ven. at 50 VEF/USD",
+    0.0
+   ],
+   [
+    "Non-GAAP",
+    2.2
+   ],
+   [
+    "Other items not allocated to segments",
+    -3.8
+   ],
+   [
+    "Income tax rate adjustment",
+    0.0
+   ],
+   [
+    "GAAP",
+    -1.6
+   ]
+  ]
+ },
+ "recast": {
+  "reason": "Re-presented at year end (discontinued operations): comparative as filed in the 2015 Form 10-Q, consistent with the fourth-quarter 2014 release tables.",
+  "original": {
+   "rev": 901.5,
+   "op": 10.7,
+   "cont_att": 2.3
+  }
+ }
+}

@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -12,14 +12,14 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 
 | Situation | Read |
 |---|---|
-| Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
+| Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW, BCO |
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
-| Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
-| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
-| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
+| Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO, BCO (NCR Atleos) |
+| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM, BCO |
+| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO, BCO |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
@@ -30,6 +30,9 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
 | Private company, LBO | R&Y |
+| Statements taken from XBRL company facts | BCO (first-filed values), CSGP, TFII |
+| Hyperinflation / deconsolidated country in the non-GAAP definition | BCO (Argentina, Venezuela), LECO (Venezuela) |
+| Operating cash that is not free cash (customer cash, restricted cash) | BCO, UBER, RBA |
 
 ---
 
@@ -558,6 +561,26 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [bridges] If a company stops publishing adjusted EPS (CLH after Q1/24), keep the series as a model rebuild and flag the column "not published from …".
   - [valuation] When Adj. EBITDA adds back SBC, deduct SBC (and transaction costs) in DCF NOPAT.
   - [QA] Grep every cell comment and note for template-company tokens (MLM, aggregates, cement, LNA, $518.70). Comment leakage survived QA here even though the cell values were clean.
+
+### BCO — The Brink's Company, incl. pending NCR Atleos block (MLM template via WWD kit, US GAAP / USD m / Dec FY)
+- **Coverage & basis:** FY2006–12 annual, Q1/13–Q3/26 quarterly, Q4/26E, 2027E–30E (template column map, no shift). Statements are XBRL company facts **as first filed** (as originally reported), tied to the face-statement identities and to the release tables. The 2013–Q3/14 quarters are recast: Brink's re-presented them for discontinued operations at year end, so the model takes the comparative filed in the following year's 10-Q and comments each cell with the original figures. FY2006–08 come from the FY2008 10-K (continuing operations after the Brink's Home Security spin-off on 31-Oct-2008); FY2006–07 are income-statement-only and the balance sheet starts at 31-Dec-2008. CIK 78890 (The Pittston Company to 2003).
+- **Operating build:** four segments from 2019 (North America, Latin America, Europe, Rest of World; 2019 recast in the fourth-quarter 2020 release). Revenue = prior year × (1 + organic + acquisitions / dispositions + currency), from the "nQ'YY vs" table of each release (whole $m ÷ prior-year amount; segment detail from Q4/20, totals from 2015 on the non-GAAP basis, which excludes Venezuela). Segment profit = revenue × margin; corporate expenses are separate. Three earlier structures are memo rows with Σ checks: North America / South America / Rest of World (2017–18), nine reporting units (2014–16), International / North America (2006–13). The fourth-quarter 2025 release moved about $20m a quarter from Rest of World to Europe; the growth tables stay as first published.
+- **Bridges & definitions:** (1) operating profit → non-GAAP operating profit, with the "other items not allocated to segments" grouped into seven categories and the company's labels per period in cell comments; 2009–14 carry only the total. (2) Net income → EBITDA → adjusted EBITDA: company definition from 2018; in 2016–17 the company built it from non-GAAP income, so the items row is derived from the published total; before 2016 it is a model measure. (3) Non-GAAP EPS: the non-operating, tax and NCI effects are derived as published non-GAAP income − GAAP income − operating items. In GAAP-loss periods the company counts dilutive awards, so the share count there is implied by published non-GAAP income ÷ EPS. 2009–12 annual non-GAAP figures are as first published; later re-presentations are in comments.
+- **Data quirks & corrections:** the FY2014 XBRL noncontrolling-interest fact has the wrong sign (NCI = net income incl. NCI − attributable). Other operating income is untagged in some periods (derived from the face identity). The Q2/16 six-month cash flow opens $16.4m below the Q1/16 close; the model shows that on its own memo line. The Q1/19 release was filed without tables, so that quarter's growth decomposition is blank. Brink's releases stopped carrying an income statement in 2017. Not extracted: AMS / DRS mix (narrative only).
+- **Deals & special blocks:** NCR Atleos (agreement 26-Feb-2026; $30.00 cash + 0.1574 shares; closing expected early January 2027) sits behind a toggle with an assumed 4-Jan-2027 closing. Standalone path = NCR Atleos management projections from the 424B3, with revenue and margin levers. Its adjusted EBITDA is mapped to Brink's non-GAAP operating profit by deducting its depreciation and stock-based compensation. Synergies = the $200m target × a realisation lever, with assumed phasing. Purchase accounting is the 424B3 pro forma (intangibles $2,895m, amortization $296m a year, DTL unwind at 22.5%), with goodwill recomputed at the model share price. Financing: $2,276m bridge plus $1,468m of refinanced facilities in the prepayable pool; the remaining assumed debt at an assumed 9.5%. Integration costs are an assumption.
+- **Calibration & scenarios:** Brink's guides one quarter ahead plus a full-year "framework". Q4/26E: a uniform organic-growth Δ solves revenue ($1,365–1,415m) and a uniform segment-margin Δ solves adjusted EBITDA ($275–295m); the EBITDA target is converted to non-GAAP operating profit by removing D&A excluding acquisition amortization, share-based compensation, other income and NCI. The 40–45% free-cash-flow conversion framework is hit by solving the Q4 working-capital line, with the offset in other current liabilities. Q4 non-GAAP EPS guidance and both sets of 424B3 management projections are information rows.
+- **Balance sheet, cash & capital:** cash includes operating cash of the cash-management network and restricted cash held for customers. Model net debt = total debt − cash and cash equivalents (restricted cash not netted), which is lower than the company's own measure, so the buyback thresholds (2.5x / 2.0x / 1.5x) sit at and below the low end of the company's 2.0–3.0x target. The minimum cash balance is the current cash plus restricted cash. Revolver, term loans and acquisition facilities form one prepayable pool. Company free cash flow excludes customer-cash movements: a derived adjustment row ties the model to the published figure. Working-capital balances grow with pro forma revenue growth, with the NCR Atleos balances added at closing and excluded from ΔNWC.
+- **Valuation:** $114.00, provided by the user (20-Nov-2026). NOPAT on non-GAAP operating profit less cash adjusting costs; D&A add-back excludes acquisition amortization. Net debt is taken at 31-Dec-2026, so the 2026E cash flow is excluded; the NCR Atleos cash consideration is in 2027E UFCF, its debt and pension are added to the EV bridge and its consideration shares are in the share count. Pension and retiree liabilities are debt-like. Charts cover 2011–2030E so that every series has data.
+- **Reusable lessons:**
+  - [sources] When releases stop carrying statements, take them from XBRL company facts as first filed. Tie every period to the face identities and to the release's GAAP rows, and derive NCI from the two net-income facts rather than trusting its sign.
+  - [basis] Where the year-end release re-presents earlier quarters, pull the comparative filed in the following year's 10-Q (first value filed on or after 1-Jan of the next year) and accept it only if it ties to the release table. Comment the cell with the original figures.
+  - [extraction] If each release carries quarterly tables for two years, parse one release per year (the fourth-quarter one) for segments and bridges. Parse every quarterly release only for tables that exist once (growth decomposition, free cash flow).
+  - [bridges] Group a long, changing list of adjusting items into a few stable categories and keep the labels per period in comments. Where the company reconciles after tax item by item, derive one "non-operating, tax and NCI" line from the published total.
+  - [calibration] Convert an adjusted-EBITDA guide to the operating-profit target in closed form (EBITDA − D&A excl. acquisition amortization − SBC − other income + NCI), then solve the margin Δ.
+  - [deals] For a pending deal closing just after year end: keep the current year clean, consolidate from an assumed date behind a toggle, base the target on the proxy's management projections, and re-map its EBITDA to the acquirer's operating-profit definition.
+  - [valuation] With a deal closing just after the valuation net-debt date: put the cash consideration in the first forecast year's UFCF, add the assumed debt to the EV bridge and use the post-deal share count.
+  - [BS/CF] For cash-handling businesses, state the net-debt and minimum-cash definitions explicitly: much of the balance-sheet cash is operating or customer cash.
+  - [QA] When the new model keeps the template's column map, the switch cell is the template's own (CF2) and `residue_scan.py` flags the literal reference; reword the text rather than using `--allow`. Choose a Charts window in which every series has data, so that `inspect_model.py` reports 0 error cells without exceptions.
 
 ### CSGP — CoStar Group (MLM template, US GAAP / USD m / Dec FYE)
 - **Coverage & basis:** 2006–25 annual and Q1/13–Q2/26 quarterly. History comes from XBRL statements, with 2006–10 from 10-K HTML. Q4 = FY − 9M throughout. The 10-for-1 split (Jun-2021) is applied ×10 to earlier shares. Template columns are not re-based (notes in CF). From Q1-25 the 10-Qs show only total equity; components come from the 10-K. CF cash includes restricted cash from 2020.

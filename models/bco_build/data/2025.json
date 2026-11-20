@@ -1,0 +1,444 @@
+{
+ "period": "2025",
+ "year": 2025,
+ "quarter": null,
+ "sources": [
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889026000010/bco-20251231.htm",
+  "https://data.sec.gov/api/xbrl/companyfacts/CIK0000078890.json",
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889026000008/ex991q42025.htm"
+ ],
+ "notes": [
+  "Statements: XBRL company facts, value as first filed in the 10-K / 10-Q for the period (as originally reported).",
+  "Segments / non-GAAP reconciliations: quarterly tables of the Q4-2025 earnings release (Ex. 99.1)."
+ ],
+ "is": {
+  "rev": 5261.2,
+  "cor": 3903.2,
+  "sga": 778.0,
+  "tce": 4681.2,
+  "ooi": 5.5,
+  "op": 585.5,
+  "int": 245.5,
+  "oth": 13.9,
+  "ebt": 353.9,
+  "tax": 143.3,
+  "cont": 210.6,
+  "disc": -0.4,
+  "pl": 210.2,
+  "nci": 10.5,
+  "ni": 199.7,
+  "cont_att": 200.1,
+  "disc_att": -0.4,
+  "eps_d": 4.69,
+  "eps_cont_d": 4.7,
+  "eps_b": 4.73,
+  "sh_d": 42.5,
+  "sh_b": 42.2,
+  "dps": 1.01,
+  "sh_ng": 42.5
+ },
+ "cf": {
+  "ni": 210.2,
+  "disc": -0.4,
+  "da": 290.8,
+  "sbc": 26.0,
+  "def_tax": 21.3,
+  "cfo": 639.5,
+  "capex": 203.1,
+  "acq": 6.0,
+  "ppe_sale": 18.5,
+  "divest": 0.0,
+  "cfi": -202.4,
+  "buyback": 209.4,
+  "div": 42.3,
+  "div_nci": 6.5,
+  "cff": -114.1,
+  "fx": 103.5,
+  "net": 426.5,
+  "amort": 58.9,
+  "tax_paid": 135.7,
+  "int_paid": 239.6,
+  "ytd_months": 12,
+  "cash_beg": 1840.4,
+  "cash_end": 2266.9
+ },
+ "bs": {
+  "cash": 1725.9,
+  "rcash": 541.0,
+  "ar": 766.0,
+  "tca": 3329.0,
+  "rou": 388.7,
+  "ppe": 1130.5,
+  "gw": 1515.3,
+  "intang": 385.2,
+  "ta": 7339.2,
+  "stb": 241.1,
+  "cltd": 163.1,
+  "ap": 319.3,
+  "accr": 1180.2,
+  "tcl": 2197.9,
+  "ltd": 3810.1,
+  "pension": 147.8,
+  "opeb": 120.4,
+  "lease": 310.2,
+  "tl": 6931.9,
+  "eq": 277.7,
+  "nci": 129.6,
+  "teq": 407.3,
+  "tle": 7339.2,
+  "shares": 41.1,
+  "cash_cf": 2266.9
+ },
+ "seg": [
+  {
+   "basis": "cur4",
+   "rev": [
+    [
+     "North America",
+     1742.6
+    ],
+    [
+     "Latin America",
+     1289.6
+    ],
+    [
+     "Europe",
+     1429.5
+    ],
+    [
+     "Rest of World",
+     799.5
+    ],
+    [
+     "Segment revenues",
+     5261.2
+    ]
+   ],
+   "op": [
+    [
+     "North America",
+     246.7
+    ],
+    [
+     "Latin America",
+     243.9
+    ],
+    [
+     "Europe",
+     177.2
+    ],
+    [
+     "Rest of World",
+     178.2
+    ],
+    [
+     "Segment operating profit",
+     846.0
+    ],
+    [
+     "Corporate expenses",
+     -136.1
+    ],
+    [
+     "Reorganization and Restructuring",
+     -1.4
+    ],
+    [
+     "Acquisitions and dispositions",
+     -78.5
+    ],
+    [
+     "Argentina highly inflationary impact",
+     -10.2
+    ],
+    [
+     "Transformation initiatives",
+     -26.0
+    ],
+    [
+     "DOJ/FinCEN investigations",
+     -6.5
+    ],
+    [
+     "Chile antitrust matter",
+     -0.8
+    ],
+    [
+     "Non-routine auto loss matter",
+     -1.0
+    ],
+    [
+     "Operating profit",
+     585.5
+    ]
+   ]
+  }
+ ],
+ "ngaap": {
+  "op": [
+   [
+    "GAAP",
+    585.5
+   ],
+   [
+    "Reorganization and Restructuring",
+    1.4
+   ],
+   [
+    "Acquisitions and dispositions",
+    78.5
+   ],
+   [
+    "Argentina highly inflationary impact",
+    10.2
+   ],
+   [
+    "Transformation initiatives",
+    26.0
+   ],
+   [
+    "DOJ/FinCEN investigations",
+    6.5
+   ],
+   [
+    "Chile antitrust matter",
+    0.8
+   ],
+   [
+    "Non-routine auto loss matter",
+    1.0
+   ],
+   [
+    "Non-GAAP",
+    709.9
+   ]
+  ],
+  "eps": [
+   [
+    "GAAP",
+    4.7
+   ],
+   [
+    "Reorganization and Restructuring",
+    0.03
+   ],
+   [
+    "Acquisitions and dispositions",
+    1.52
+   ],
+   [
+    "Argentina highly inflationary impact",
+    0.63
+   ],
+   [
+    "Transformation initiatives",
+    0.59
+   ],
+   [
+    "DOJ/FinCEN investigations",
+    0.15
+   ],
+   [
+    "Chile antitrust matter",
+    0.01
+   ],
+   [
+    "Non-routine auto loss matter",
+    0.02
+   ],
+   [
+    "Argentina debt securities impairment",
+    0.02
+   ],
+   [
+    "Retirement plans",
+    -0.11
+   ],
+   [
+    "Tax on return of capital",
+    0.13
+   ],
+   [
+    "Valuation allowance on tax credits",
+    0.34
+   ],
+   [
+    "Income tax rate adjustment",
+    0.0
+   ],
+   [
+    "Non-GAAP",
+    8.05
+   ]
+  ],
+  "inc": [
+   [
+    "GAAP",
+    200.1
+   ],
+   [
+    "Reorganization and Restructuring",
+    1.2
+   ],
+   [
+    "Acquisitions and dispositions",
+    64.6
+   ],
+   [
+    "Argentina highly inflationary impact",
+    26.8
+   ],
+   [
+    "Transformation initiatives",
+    25.2
+   ],
+   [
+    "DOJ/FinCEN investigations",
+    6.4
+   ],
+   [
+    "Chile antitrust matter",
+    0.6
+   ],
+   [
+    "Non-routine auto loss matter",
+    1.0
+   ],
+   [
+    "Argentina debt securities impairment",
+    1.0
+   ],
+   [
+    "Retirement plans",
+    -4.7
+   ],
+   [
+    "Tax on return of capital",
+    5.4
+   ],
+   [
+    "Valuation allowance on tax credits",
+    14.4
+   ],
+   [
+    "Income tax rate adjustment",
+    0.0
+   ],
+   [
+    "Non-GAAP",
+    342.0
+   ]
+  ],
+  "ebitda": [
+   [
+    "Net income (loss) attributable to Brink's",
+    199.7
+   ],
+   [
+    "Interest expense",
+    245.5
+   ],
+   [
+    "Income tax provision",
+    143.3
+   ],
+   [
+    "Depreciation and amortization",
+    290.8
+   ],
+   [
+    "EBITDA",
+    879.3
+   ],
+   [
+    "Discontinued operations",
+    0.4
+   ],
+   [
+    "Reorganization and Restructuring",
+    1.4
+   ],
+   [
+    "Acquisitions and dispositions",
+    20.3
+   ],
+   [
+    "Argentina highly inflationary impact",
+    30.5
+   ],
+   [
+    "Transformation initiatives",
+    26.0
+   ],
+   [
+    "DOJ/FinCEN investigations",
+    6.5
+   ],
+   [
+    "Chile antitrust matter",
+    0.8
+   ],
+   [
+    "Non-routine auto loss matter",
+    1.0
+   ],
+   [
+    "Argentina debt securities impairment",
+    1.5
+   ],
+   [
+    "Retirement plans",
+    -6.4
+   ],
+   [
+    "Income tax rate adjustment",
+    0.0
+   ],
+   [
+    "Share-based compensation",
+    26.0
+   ],
+   [
+    "Marketable securities (gain) loss",
+    -10.2
+   ],
+   [
+    "Adjusted EBITDA",
+    977.1
+   ]
+  ]
+ },
+ "fcf": {
+  "ytd_months": 12,
+  "rows": [
+   [
+    "Cash flows provided from (used in) operating activities - GAAP",
+    639.5
+   ],
+   [
+    "(Increase) decrease in restricted cash held for customers",
+    -46.1
+   ],
+   [
+    "(Increase) decrease in certain customer obligations",
+    -16.5
+   ],
+   [
+    "Capital expenditures",
+    -203.1
+   ],
+   [
+    "Cash proceeds from sale of property and equipment",
+    18.5
+   ],
+   [
+    "Proceeds from lessor debt financing",
+    43.2
+   ],
+   [
+    "Free cash flow before dividends",
+    435.5
+   ]
+  ]
+ }
+}

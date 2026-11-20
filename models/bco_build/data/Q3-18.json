@@ -1,0 +1,767 @@
+{
+ "period": "Q3-18",
+ "year": 2018,
+ "quarter": 3,
+ "sources": [
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889018000041/bco0930201810-q.htm",
+  "https://data.sec.gov/api/xbrl/companyfacts/CIK0000078890.json",
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889019000006/ex991q4201810-k.htm",
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889018000039/ex991q32018.htm"
+ ],
+ "notes": [
+  "Statements: XBRL company facts, value as first filed in the 10-K / 10-Q for the period (as originally reported).",
+  "Segments / non-GAAP reconciliations: quarterly tables of the Q4-2018 earnings release (Ex. 99.1)."
+ ],
+ "is": {
+  "rev": 852.4,
+  "cor": 652.6,
+  "sga": 125.4,
+  "tce": 778.0,
+  "ooi": -7.4,
+  "op": 67.0,
+  "int": 17.0,
+  "oth": -8.1,
+  "ebt": 41.9,
+  "tax": 23.0,
+  "cont": 18.9,
+  "disc": -0.1,
+  "pl": 18.8,
+  "nci": 1.4,
+  "ni": 17.4,
+  "cont_att": 17.5,
+  "disc_att": -0.1,
+  "eps_d": 0.34,
+  "eps_cont_d": 0.34,
+  "eps_b": 0.34,
+  "sh_d": 52.0,
+  "sh_b": 51.1,
+  "dps": 0.15,
+  "sh_ng": 52.0
+ },
+ "cf": {
+  "ni": -63.3,
+  "disc": 0.0,
+  "da": 119.5,
+  "sbc": 18.8,
+  "def_tax": -18.2,
+  "cfo": 148.6,
+  "capex": 104.0,
+  "acq": 521.0,
+  "ppe_sale": 2.8,
+  "divest": 8.4,
+  "cfi": -623.3,
+  "div": 22.9,
+  "div_nci": 3.8,
+  "cff": 184.3,
+  "fx": -29.6,
+  "tax_paid": 72.8,
+  "int_paid": 38.5,
+  "ytd_months": 9,
+  "cash_beg": 726.9,
+  "cash_end": 406.9
+ },
+ "bs": {
+  "cash": 314.2,
+  "rcash": 92.7,
+  "ar": 630.7,
+  "tca": 1174.2,
+  "ppe": 694.2,
+  "gw": 651.9,
+  "intang": 254.2,
+  "ta": 3185.3,
+  "stb": 23.6,
+  "cltd": 54.2,
+  "ap": 147.8,
+  "accr": 495.7,
+  "tcl": 768.2,
+  "ltd": 1441.3,
+  "pension": 184.0,
+  "opeb": 358.3,
+  "tl": 2940.5,
+  "eq": 223.2,
+  "nci": 21.6,
+  "teq": 244.8,
+  "tle": 3185.3,
+  "shares": 50.6,
+  "cash_cf": 406.9
+ },
+ "seg": [
+  {
+   "basis": "three",
+   "rev": [
+    [
+     "North America",
+     383.4
+    ],
+    [
+     "South America",
+     215.5
+    ],
+    [
+     "Rest of World",
+     253.5
+    ],
+    [
+     "Segment revenues - GAAP and Non-GAAP",
+     852.4
+    ],
+    [
+     "Venezuela operations",
+     0.0
+    ],
+    [
+     "GAAP",
+     852.4
+    ]
+   ],
+   "op": [
+    [
+     "North America",
+     33.6
+    ],
+    [
+     "South America",
+     46.3
+    ],
+    [
+     "Rest of World",
+     30.8
+    ],
+    [
+     "Corporate",
+     -15.4
+    ],
+    [
+     "Non-GAAP",
+     95.3
+    ],
+    [
+     "Venezuela operations",
+     0.0
+    ],
+    [
+     "Reorganization and Restructuring",
+     -7.3
+    ],
+    [
+     "Acquisitions and dispositions",
+     -10.7
+    ],
+    [
+     "Argentina highly inflationary impact",
+     -8.3
+    ],
+    [
+     "Reporting compliance",
+     -2.0
+    ],
+    [
+     "GAAP",
+     67.0
+    ]
+   ]
+  }
+ ],
+ "ngaap": {
+  "rev": [
+   [
+    "GAAP",
+    852.4
+   ],
+   [
+    "Venezuela operations",
+    0.0
+   ],
+   [
+    "Non-GAAP",
+    852.4
+   ]
+  ],
+  "op": [
+   [
+    "GAAP",
+    67.0
+   ],
+   [
+    "Venezuela operations",
+    0.0
+   ],
+   [
+    "Reorganization and Restructuring",
+    7.3
+   ],
+   [
+    "Acquisitions and dispositions",
+    10.7
+   ],
+   [
+    "Argentina highly inflationary impact",
+    8.3
+   ],
+   [
+    "Reporting compliance",
+    2.0
+   ],
+   [
+    "Non-GAAP",
+    95.3
+   ]
+  ],
+  "eps": [
+   [
+    "GAAP",
+    0.34
+   ],
+   [
+    "Retirement plans",
+    0.12
+   ],
+   [
+    "Venezuela operations",
+    0.01
+   ],
+   [
+    "Reorganization and Restructuring costs",
+    0.09
+   ],
+   [
+    "Acquisitions and dispositions",
+    0.16
+   ],
+   [
+    "Prepayment penalties",
+    0.0
+   ],
+   [
+    "Interest on Brazil tax claim",
+    0.0
+   ],
+   [
+    "Tax reform",
+    0.0
+   ],
+   [
+    "Tax on accelerated income",
+    0.0
+   ],
+   [
+    "Argentina highly inflationary impact",
+    0.14
+   ],
+   [
+    "Reporting compliance",
+    0.03
+   ],
+   [
+    "Loss on deconsolidation of Venezuela operations",
+    0.0
+   ],
+   [
+    "Income tax rate adjustment",
+    0.08
+   ],
+   [
+    "Share adjustment",
+    0.0
+   ],
+   [
+    "Non-GAAP",
+    0.95
+   ]
+  ],
+  "inc": [
+   [
+    "GAAP",
+    17.5
+   ],
+   [
+    "Retirement plans",
+    6.1
+   ],
+   [
+    "Venezuela operations",
+    0.3
+   ],
+   [
+    "Reorganization and Restructuring",
+    4.9
+   ],
+   [
+    "Acquisitions and dispositions",
+    8.2
+   ],
+   [
+    "Prepayment penalties",
+    0.0
+   ],
+   [
+    "Interest on Brazil tax claim",
+    0.0
+   ],
+   [
+    "Tax reform",
+    0.0
+   ],
+   [
+    "Tax on accelerated income",
+    0.0
+   ],
+   [
+    "Argentina highly inflationary impact",
+    7.2
+   ],
+   [
+    "Reporting compliance",
+    1.5
+   ],
+   [
+    "Loss on deconsolidation of Venezuela operations",
+    -0.1
+   ],
+   [
+    "Income tax rate adjustment",
+    4.0
+   ],
+   [
+    "Non-GAAP",
+    49.6
+   ]
+  ],
+  "ebitda": [
+   [
+    "Net income (loss) attributable to Brink's - GAAP",
+    17.4
+   ],
+   [
+    "Interest expense - GAAP",
+    17.0
+   ],
+   [
+    "Income tax provision - GAAP",
+    23.0
+   ],
+   [
+    "Depreciation and amortization - GAAP",
+    41.6
+   ],
+   [
+    "EBITDA",
+    99.0
+   ],
+   [
+    "Discontinued operations - GAAP",
+    0.1
+   ],
+   [
+    "Retirement plans",
+    8.1
+   ],
+   [
+    "Venezuela operations",
+    0.3
+   ],
+   [
+    "Reorganization and Restructuring",
+    6.9
+   ],
+   [
+    "Acquisitions and dispositions",
+    6.4
+   ],
+   [
+    "Prepayment penalties",
+    0.0
+   ],
+   [
+    "Interest on Brazil tax claim",
+    0.0
+   ],
+   [
+    "Argentina highly inflationary impact",
+    7.8
+   ],
+   [
+    "Reporting compliance",
+    2.0
+   ],
+   [
+    "Loss on deconsolidation of Venezuela operations",
+    0.0
+   ],
+   [
+    "Income tax rate adjustment",
+    -0.6
+   ],
+   [
+    "Share-based compensation",
+    6.3
+   ],
+   [
+    "Adjusted EBITDA",
+    136.3
+   ]
+  ],
+  "da": [
+   [
+    "GAAP",
+    41.6
+   ],
+   [
+    "Venezuela operations",
+    0.0
+   ],
+   [
+    "Reorganization and Restructuring",
+    -0.4
+   ],
+   [
+    "Acquisitions and dispositions",
+    -4.5
+   ],
+   [
+    "Non-GAAP",
+    36.7
+   ]
+  ],
+  "int": [
+   [
+    "GAAP",
+    -17.0
+   ],
+   [
+    "Venezuela operations",
+    0.0
+   ],
+   [
+    "Acquisitions and dispositions",
+    0.1
+   ],
+   [
+    "Argentina highly inflationary impact",
+    0.0
+   ],
+   [
+    "Non-GAAP",
+    -16.9
+   ]
+  ],
+  "oth": [
+   [
+    "GAAP",
+    -8.1
+   ],
+   [
+    "Retirement plans",
+    8.1
+   ],
+   [
+    "Venezuela operations",
+    0.3
+   ],
+   [
+    "Acquisitions and dispositions",
+    0.2
+   ],
+   [
+    "Prepayment penalties",
+    0.0
+   ],
+   [
+    "Interest on Brazil tax claim",
+    0.0
+   ],
+   [
+    "Argentina highly inflationary impact",
+    -0.5
+   ],
+   [
+    "Non-GAAP",
+    0.0
+   ]
+  ],
+  "tax": [
+   [
+    "GAAP",
+    23.0
+   ],
+   [
+    "Retirement plans",
+    2.0
+   ],
+   [
+    "Venezuela operations",
+    0.0
+   ],
+   [
+    "Reorganization and Restructuring",
+    2.4
+   ],
+   [
+    "Acquisitions and dispositions",
+    2.8
+   ],
+   [
+    "Prepayment penalties",
+    0.0
+   ],
+   [
+    "Interest on Brazil tax claim",
+    0.0
+   ],
+   [
+    "Tax reform",
+    0.0
+   ],
+   [
+    "Tax on accelerated income",
+    0.0
+   ],
+   [
+    "Argentina highly inflationary impact",
+    0.6
+   ],
+   [
+    "Reporting compliance",
+    0.5
+   ],
+   [
+    "Loss on deconsolidation of Venezuela operations",
+    0.1
+   ],
+   [
+    "Income tax rate adjustment",
+    -4.6
+   ],
+   [
+    "Non-GAAP",
+    26.8
+   ]
+  ],
+  "nci": [
+   [
+    "GAAP",
+    1.4
+   ],
+   [
+    "Venezuela operations",
+    0.0
+   ],
+   [
+    "Reorganization and Restructuring",
+    0.0
+   ],
+   [
+    "Income tax rate adjustment",
+    0.6
+   ],
+   [
+    "Non-GAAP",
+    2.0
+   ]
+  ]
+ },
+ "growth": [
+  [
+   [
+    "Revenues",
+    "North America",
+    [
+     317.0,
+     22.0,
+     52.0,
+     -8.0,
+     383.0
+    ]
+   ],
+   [
+    "Revenues",
+    "South America",
+    [
+     247.0,
+     35.0,
+     3.0,
+     -70.0,
+     216.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Rest of World",
+    [
+     265.0,
+     3.0,
+     -9.0,
+     -5.0,
+     254.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Segment revenues",
+    [
+     829.0,
+     60.0,
+     46.0,
+     -82.0,
+     852.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Other items not allocated to segments",
+    [
+     21.0,
+     -21.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Revenues - GAAP",
+    [
+     850.0,
+     39.0,
+     46.0,
+     -82.0,
+     852.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "North America",
+    [
+     17.0,
+     14.0,
+     4.0,
+     -1.0,
+     34.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "South America",
+    [
+     48.0,
+     19.0,
+     2.0,
+     -22.0,
+     46.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Rest of World",
+    [
+     33.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     31.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Segment operating profit",
+    [
+     98.0,
+     32.0,
+     4.0,
+     -23.0,
+     111.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Corporate",
+    [
+     -22.0,
+     6.0,
+     0.0,
+     0.0,
+     -15.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Operating profit - non-GAAP",
+    [
+     76.0,
+     38.0,
+     4.0,
+     -24.0,
+     95.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Other items not allocated to segments",
+    [
+     -10.0,
+     -12.0,
+     -5.0,
+     -1.0,
+     -28.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Operating profit - GAAP",
+    [
+     66.0,
+     26.0,
+     -1.0,
+     -24.0,
+     67.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Segment revenues - GAAP/non-GAAP",
+    [
+     829.0,
+     60.0,
+     46.0,
+     -82.0,
+     852.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Non-GAAP operating profit",
+    [
+     76.0,
+     38.0,
+     4.0,
+     -24.0,
+     95.0
+    ]
+   ]
+  ],
+  [
+   [
+    "",
+    "Segment revenues - GAAP/non-GAAP",
+    [
+     829.0,
+     60.0,
+     46.0,
+     -82.0,
+     852.0
+    ]
+   ],
+   [
+    "",
+    "Non-GAAP operating profit",
+    [
+     76.0,
+     38.0,
+     4.0,
+     -24.0,
+     95.0
+    ]
+   ]
+  ]
+ ]
+}

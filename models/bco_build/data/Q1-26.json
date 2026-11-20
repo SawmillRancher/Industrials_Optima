@@ -1,0 +1,647 @@
+{
+ "period": "Q1-26",
+ "year": 2026,
+ "quarter": 1,
+ "sources": [
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889026000041/bco-20260331.htm",
+  "https://data.sec.gov/api/xbrl/companyfacts/CIK0000078890.json",
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889026000068/ex991q32026.htm",
+  "https://www.sec.gov/Archives/edgar/data/78890/000007889026000040/ex991q12026.htm"
+ ],
+ "notes": [
+  "Statements: XBRL company facts, value as first filed in the 10-K / 10-Q for the period (as originally reported).",
+  "Segments / non-GAAP reconciliations: quarterly tables of the Q3-2026 earnings release (Ex. 99.1)."
+ ],
+ "is": {
+  "rev": 1375.1,
+  "cor": 1019.4,
+  "sga": 250.8,
+  "tce": 1270.2,
+  "ooi": 5.3,
+  "op": 110.2,
+  "int": 63.5,
+  "oth": -0.9,
+  "ebt": 45.8,
+  "tax": 11.0,
+  "cont": 34.8,
+  "pl": 34.8,
+  "nci": 2.7,
+  "ni": 32.1,
+  "cont_att": 32.1,
+  "eps_d": 0.77,
+  "eps_cont_d": 0.77,
+  "eps_b": 0.78,
+  "sh_d": 41.5,
+  "sh_b": 41.3,
+  "dps": 0.26,
+  "sh_ng": 41.5
+ },
+ "cf": {
+  "ni": 34.8,
+  "da": 79.7,
+  "sbc": 7.1,
+  "def_tax": -8.7,
+  "cfo": 28.7,
+  "capex": 40.1,
+  "acq": 0.0,
+  "ppe_sale": 3.3,
+  "cfi": -36.2,
+  "buyback": 30.2,
+  "div": 10.5,
+  "div_nci": 0.2,
+  "cff": -151.8,
+  "fx": -12.1,
+  "net": -171.4,
+  "amort": 14.9,
+  "tax_paid": 30.4,
+  "int_paid": 55.9,
+  "ytd_months": 3,
+  "cash_beg": 2266.9,
+  "cash_end": 2095.5
+ },
+ "bs": {
+  "cash": 1547.3,
+  "rcash": 548.2,
+  "ar": 833.3,
+  "tca": 3274.9,
+  "rou": 392.7,
+  "ppe": 1116.1,
+  "gw": 1508.7,
+  "intang": 368.3,
+  "ta": 7275.4,
+  "stb": 229.2,
+  "cltd": 92.8,
+  "ap": 307.8,
+  "accr": 1218.8,
+  "tcl": 2139.5,
+  "ltd": 3833.9,
+  "pension": 148.9,
+  "opeb": 116.4,
+  "lease": 310.6,
+  "tl": 6882.3,
+  "eq": 262.0,
+  "nci": 131.1,
+  "teq": 393.1,
+  "tle": 7275.4,
+  "shares": 41.2,
+  "cash_cf": 2095.5
+ },
+ "seg": [
+  {
+   "basis": "cur4",
+   "rev": [
+    [
+     "North America",
+     439.6
+    ],
+    [
+     "Latin America",
+     343.8
+    ],
+    [
+     "Europe",
+     365.9
+    ],
+    [
+     "Rest of World",
+     225.8
+    ],
+    [
+     "Segment revenues",
+     1375.1
+    ]
+   ],
+   "op": [
+    [
+     "North America",
+     60.9
+    ],
+    [
+     "Latin America",
+     57.4
+    ],
+    [
+     "Europe",
+     39.9
+    ],
+    [
+     "Rest of World",
+     55.0
+    ],
+    [
+     "Segment operating profit",
+     213.2
+    ],
+    [
+     "Corporate expenses",
+     -44.8
+    ],
+    [
+     "Reorganization and Restructuring",
+     0.0
+    ],
+    [
+     "Acquisitions and dispositions",
+     -15.6
+    ],
+    [
+     "Argentina highly inflationary impact",
+     0.5
+    ],
+    [
+     "NCR Atleos acquisition and transformation initiatives",
+     -38.9
+    ],
+    [
+     "Incident-related losses",
+     0.0
+    ],
+    [
+     "Non-routine legal matters",
+     -2.8
+    ],
+    [
+     "DOJ/FinCEN investigations",
+     -1.2
+    ],
+    [
+     "Chile antitrust matter",
+     -0.2
+    ],
+    [
+     "Non-routine auto loss matter",
+     0.0
+    ],
+    [
+     "Operating profit",
+     110.2
+    ]
+   ]
+  }
+ ],
+ "ngaap": {
+  "op": [
+   [
+    "GAAP",
+    110.2
+   ],
+   [
+    "Reorganization and Restructuring",
+    0.0
+   ],
+   [
+    "Acquisitions and dispositions",
+    15.6
+   ],
+   [
+    "Argentina highly inflationary impact",
+    -0.5
+   ],
+   [
+    "NCR Atleos acquisition and transformation initiatives",
+    38.9
+   ],
+   [
+    "Incident-related losses",
+    0.0
+   ],
+   [
+    "Non-routine legal matters",
+    2.8
+   ],
+   [
+    "DOJ/FinCEN investigations",
+    1.2
+   ],
+   [
+    "Chile antitrust matter",
+    0.2
+   ],
+   [
+    "Non-routine auto loss matter",
+    0.0
+   ],
+   [
+    "Non-GAAP",
+    168.4
+   ]
+  ],
+  "eps": [
+   [
+    "GAAP",
+    0.77
+   ],
+   [
+    "Reorganization and Restructuring costs",
+    0.0
+   ],
+   [
+    "Acquisitions and dispositions",
+    0.28
+   ],
+   [
+    "Argentina highly inflationary impact",
+    0.02
+   ],
+   [
+    "NCR Atleos acquisition and transformation initiatives",
+    0.82
+   ],
+   [
+    "Incident-related losses",
+    0.0
+   ],
+   [
+    "Non-routine legal matters",
+    0.05
+   ],
+   [
+    "DOJ/FinCEN investigations",
+    0.02
+   ],
+   [
+    "Chile antitrust matter",
+    0.0
+   ],
+   [
+    "Non-routine auto loss matter",
+    0.0
+   ],
+   [
+    "Argentina debt securities impairment",
+    0.0
+   ],
+   [
+    "Retirement plans",
+    0.03
+   ],
+   [
+    "Tax on return of capital",
+    0.0
+   ],
+   [
+    "Valuation allowance on tax credits",
+    0.0
+   ],
+   [
+    "Income tax rate adjustment",
+    -0.19
+   ],
+   [
+    "Non-GAAP",
+    1.81
+   ]
+  ],
+  "inc": [
+   [
+    "GAAP",
+    32.1
+   ],
+   [
+    "Reorganization and Restructuring",
+    0.0
+   ],
+   [
+    "Acquisitions and dispositions",
+    11.6
+   ],
+   [
+    "Argentina highly inflationary impact",
+    1.0
+   ],
+   [
+    "NCR Atleos acquisition and transformation initiatives",
+    34.1
+   ],
+   [
+    "Incident-related losses",
+    0.0
+   ],
+   [
+    "Non-routine legal matters",
+    2.1
+   ],
+   [
+    "DOJ/FinCEN investigations",
+    0.9
+   ],
+   [
+    "Chile antitrust matter",
+    0.1
+   ],
+   [
+    "Non-routine auto loss matter",
+    0.0
+   ],
+   [
+    "Argentina debt securities impairment",
+    0.0
+   ],
+   [
+    "Retirement plans",
+    1.1
+   ],
+   [
+    "Tax on return of capital",
+    0.0
+   ],
+   [
+    "Valuation allowance on tax credits",
+    0.0
+   ],
+   [
+    "Income tax rate adjustment",
+    -7.9
+   ],
+   [
+    "Non-GAAP",
+    75.1
+   ]
+  ],
+  "ebitda": [
+   [
+    "Net income attributable to Brink's",
+    32.1
+   ],
+   [
+    "Interest expense",
+    63.5
+   ],
+   [
+    "Income tax provision",
+    11.0
+   ],
+   [
+    "Depreciation and amortization",
+    79.7
+   ],
+   [
+    "EBITDA",
+    186.3
+   ],
+   [
+    "Discontinued operations",
+    0.0
+   ],
+   [
+    "Reorganization and Restructuring",
+    0.0
+   ],
+   [
+    "Acquisitions and dispositions",
+    0.1
+   ],
+   [
+    "Argentina highly inflationary impact",
+    0.1
+   ],
+   [
+    "NCR Atleos acquisition and transformation initiatives",
+    38.9
+   ],
+   [
+    "Incident-related losses",
+    0.0
+   ],
+   [
+    "Non-routine legal matters",
+    2.8
+   ],
+   [
+    "DOJ/FinCEN investigations",
+    1.2
+   ],
+   [
+    "Chile antitrust matter",
+    0.2
+   ],
+   [
+    "Non-routine auto loss matter",
+    0.0
+   ],
+   [
+    "Argentina debt securities impairment",
+    0.0
+   ],
+   [
+    "Retirement plans",
+    1.5
+   ],
+   [
+    "Income tax rate adjustment",
+    0.3
+   ],
+   [
+    "Share-based compensation",
+    7.1
+   ],
+   [
+    "Marketable securities (gain) loss",
+    -1.0
+   ],
+   [
+    "Adjusted EBITDA",
+    237.5
+   ]
+  ]
+ },
+ "growth": [
+  [
+   [
+    "Revenues",
+    "North America",
+    [
+     418.0,
+     20.0,
+     0.0,
+     2.0,
+     440.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Latin America",
+    [
+     308.0,
+     11.0,
+     1.0,
+     24.0,
+     344.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Europe",
+    [
+     319.0,
+     11.0,
+     1.0,
+     35.0,
+     366.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Rest of World",
+    [
+     203.0,
+     13.0,
+     0.0,
+     10.0,
+     226.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Segment revenues",
+    [
+     1247.0,
+     56.0,
+     2.0,
+     71.0,
+     1375.0
+    ]
+   ],
+   [
+    "Revenues",
+    "Revenues",
+    [
+     1247.0,
+     56.0,
+     2.0,
+     71.0,
+     1375.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "North America",
+    [
+     53.0,
+     8.0,
+     0.0,
+     0.0,
+     61.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Latin America",
+    [
+     54.0,
+     1.0,
+     0.0,
+     3.0,
+     57.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Europe",
+    [
+     28.0,
+     8.0,
+     1.0,
+     4.0,
+     40.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Rest of World",
+    [
+     47.0,
+     6.0,
+     0.0,
+     2.0,
+     55.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Segment operating profit",
+    [
+     182.0,
+     22.0,
+     0.0,
+     8.0,
+     213.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Corporate expenses",
+    [
+     -32.0,
+     -12.0,
+     0.0,
+     -2.0,
+     -45.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Other items not allocated to segments",
+    [
+     -32.0,
+     -30.0,
+     3.0,
+     0.0,
+     -58.0
+    ]
+   ],
+   [
+    "Operating profit",
+    "Operating profit",
+    [
+     119.0,
+     -19.0,
+     4.0,
+     7.0,
+     110.0
+    ]
+   ]
+  ]
+ ],
+ "fcf": {
+  "ytd_months": 3,
+  "rows": [
+   [
+    "Cash flows provided from operating activities - GAAP",
+    28.7
+   ],
+   [
+    "(Increase) decrease in restricted cash held for customers",
+    -3.2
+   ],
+   [
+    "(Increase) decrease in certain customer obligations",
+    -30.0
+   ],
+   [
+    "Capital expenditures",
+    -40.1
+   ],
+   [
+    "Cash proceeds from sale of property and equipment",
+    3.3
+   ],
+   [
+    "Proceeds from lessor debt financing",
+    3.2
+   ],
+   [
+    "Subtotal",
+    -38.1
+   ],
+   [
+    "NCR Atleos acquisition cash flows",
+    2.1
+   ],
+   [
+    "Free cash flow before dividends",
+    -36.0
+   ]
+  ]
+ }
+}
