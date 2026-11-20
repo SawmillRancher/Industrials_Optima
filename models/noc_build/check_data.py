@@ -69,6 +69,7 @@ for y in range(2013, 2026):
             chk(f'FY{y} {k} sum-q', sum(qs), x(str(y)).get(k), tol)
         elif x(str(y)).get(k) is not None and k in ('rev', 'oi', 'ni', 'cf_cfo'): bad.append(f'FY{y} {k}: quarters missing {[i + 1 for i, q in enumerate(qs) if q is None]}')
 EXPECTED = {
+    'FY2018 rc_unalloc sum-q': 'the FY2018 annual column is on the 2020 four-sector structure (FY2020 10-K: intangible amortization moved from segment operating income to unallocated, $67m), while the 2018 quarters were never recast and stay as reported',
     'FY2019 cur_seg_oi sum-q': 'the 2019 quarters recast on the 2020 segment structure in the 2020 releases sum to $3,967m segment operating income vs $3,978m for the year in the Q4 2020 release and FY2020 10-K (company recast; the $11m sits in unallocated corporate expense)',
     'FY2019 rc_unalloc sum-q': 'counterpart of the segment operating income difference above (same $11m)',
 }

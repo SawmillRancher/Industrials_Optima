@@ -198,7 +198,7 @@ def ng_part(ng, qcol, ycol):
         q = x['vals'][qcol] if qcol is not None and qcol < nv else None
         y = x['vals'][ycol] if ycol is not None and ycol < nv else None
         if nv == 1 and qcol == 0: q, y = x['vals'][0], None
-        out.append([x['label'], q, y, nv])
+        out.append([x['label'], q, y, nv, x['vals']])
     return out
 
 def xbrl_extras(fy, q, annual):
@@ -247,7 +247,7 @@ def rec_release(rel, fy, q, annual):
     qcol, ycol = (None, 2) if annual else (0, 2)
     if annual:
         rec['ng'] = ng_part(R['ng'], 2, 2)
-        rec['ng'] = [[l, y, y, nv] if nv >= 4 else [l, (q_ if nv == 1 else None), (q_ if nv in (1, 2, 3) else y), nv] for l, q_, y, nv in ng_part(R['ng'], 0, 2)]
+        rec['ng'] = [[l, y, y, nv, raw] if nv >= 4 else [l, (q_ if nv == 1 else None), (q_ if nv in (1, 2, 3) else y), nv, raw] for l, q_, y, nv, raw in ng_part(R['ng'], 0, 2)]
     else:
         rec['ng'] = ng_part(R['ng'], 0, 2)
     rec['backlog'] = R['backlog']
@@ -263,7 +263,7 @@ def rec_release(rel, fy, q, annual):
             nv = tn['layout'].count('v')
             col = 1 if not annual else (3 if nv >= 4 else 1)
             rec['py']['is'] = ext_is(tn, col)
-        rec['py']['ng'] = ng_part(nxt['r']['ng'], 1, 3) if not annual else [[l, y, y, nv] for l, q_, y, nv in ng_part(nxt['r']['ng'], 1, 3)]
+        rec['py']['ng'] = ng_part(nxt['r']['ng'], 1, 3) if not annual else [[l, y, y, nv, raw] for l, q_, y, nv, raw in ng_part(nxt['r']['ng'], 1, 3)]
     if not (rec['backlog'].get('total_row') or rec['backlog'].get('total_bn_text')):
         fq = FILINGS.get((fy, 4 if annual else q))
         if fq and os.path.exists(fq):

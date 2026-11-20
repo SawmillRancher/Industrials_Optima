@@ -213,28 +213,38 @@ def do_pl(p):
 
     mtm_eps = rec_find(ng, r'^mtm-adjusted (diluted )?eps', idx)
     src = 'release'
-    if mtm_eps is None and pens_eps is None and ngpy:
-        mtm_eps = rec_find(ngpy, r'^mtm-adjusted (diluted )?eps', idx); src = "following year's release (comparative)"
-        if mtm_eps is None: pens_eps = rec_find(ngpy, r'^pension-adjusted diluted eps', idx)
     tr_eps = None
     if mtm_eps is None and pens_eps is None:
         tr_eps = rec_find(ng, r'^earnings per share excluding the impact of tax reform', idx)
+        if tr_eps is not None and annual:          # Q4 release table prints (fourth quarter, total year): take the year
+            for row in ng:
+                if re.search(r'^earnings per share excluding the impact of tax reform', row[0], re.I) and len(row) > 4 and row[3] == 2: tr_eps = row[4][1]; break
         if tr_eps is not None: src = 'release (EPS excluding the impact of tax reform and the related discretionary pension contribution)'
+    if mtm_eps is None and pens_eps is None and tr_eps is None and ngpy:
+        mtm_eps = rec_find(ngpy, r'^mtm-adjusted (diluted )?eps', idx); src = "following year's release (comparative)"
+        if mtm_eps is None: pens_eps = rec_find(ngpy, r'^pension-adjusted diluted eps', idx)
     if mtm_eps is None and pens_eps is None and fy >= 2018 and not annual and q != 4:
         mtm_eps = x_(p, 'eps_d'); src = 'MTM nil in interim quarters: MTM-adjusted EPS = diluted EPS'
     put(p, 'adj_eps_pub', mtm_eps if mtm_eps is not None else (pens_eps if pens_eps is not None else tr_eps))
     put(p, 'adj_eps_src', src if (mtm_eps is not None or pens_eps is not None or tr_eps is not None) else None)
     if tr_eps is not None and mtm_eps is None and pens_eps is None:
         put(p, 'adj_def', 'TAXREFORM'); put(p, 'taxreform_ni_pub', rec_find(ng, r'^net earnings excluding tax reform', idx))
+
     if annual:            # FAS / CAS components (10-K MD&A table; own 10-K first, else the latest 10-K presenting the year)
         for fyk in sorted(FASCAS10K, key=lambda s: (s != str(fy), s)):
             t = FASCAS10K[fyk].get(str(fy))
             if t and t.get('cas') is not None:
-                put(p, 'cas_cost', t['cas']); put(p, 'fas_svc', t.get('fas_svc')); put(p, 'fas_total_10k', t.get('fas_total')); put(p, 'fascas_10k_src', fyk); break
+                put(p, 'cas_cost', abs(t['cas'])); put(p, 'fas_svc', abs(t['fas_svc']) if t.get('fas_svc') is not None else None); put(p, 'fas_total_10k', t.get('fas_total')); put(p, 'fascas_10k_src', fyk); break
     if pens_eps is not None:
         cont = rec_find(ng, r'^pension-adjusted (diluted )?eps from continuing', idx) is not None or rec_find(ngpy, r'^pension-adjusted (diluted )?eps from continuing', idx) is not None
         put(p, 'adj_eps_basis', 'continuing operations' if cont else 'net earnings')
-    put(p, 'adj_def', 'MTM' if mtm_eps is not None else ('PENSION' if pens_eps is not None else None))
+    put(p, 'adj_def', 'MTM' if mtm_eps is not None else ('PENSION' if pens_eps is not None else ('TAXREFORM' if tr_eps is not None else None)))
+    put(p, 'e_def_flag', {'PENSION': 1, 'MTM': 2, 'TAXREFORM': 3}.get(x_(p, 'adj_def'), 0) if x_(p, 'adj_eps_pub') is not None else 0)
+    put(p, 'e_cont_flag', 1 if x_(p, 'adj_eps_basis') == 'continuing operations' else 0)
+    ps = rec_find(ng, r'^after-tax net pension adjustment per share', idx)
+    if ps is None: ps = rec_find(ng, r'^(after-tax mtm (adjustment|expense|benefit) per share|mtm (adjustment|expense|benefit), net of tax, per share)', idx)
+    if ps is None and ngpy and x_(p, 'adj_def') == 'MTM': ps = rec_find(ngpy, r'^(after-tax mtm (adjustment|expense|benefit) per share|mtm (adjustment|expense|benefit), net of tax, per share)', idx)
+    put(p, 'e_ps_pub', ps)
     put(p, 'pens_adj_ps', rec_find(ng, r'^after-tax net pension adjustment per share', idx))
     put(p, 'pens_adj_pre_ps', rec_find(ng, r'^pre-tax net pension adjustment per share', idx))
     put(p, 'pens_adj_tax_ps', rec_find(ng, r'^tax effect on net pension adjustment per share', idx))
@@ -295,7 +305,8 @@ def latest_current_basis(p, r, fy, q, annual):
                 k = t['years'].index(fy)
                 d = {'sales': {n: v[k] for n, v in t['sales'].items()}, 'oi': {n: v[k] for n, v in t['oi'].items()},
                      'elim_sales': t['elim_sales'][k] if t['elim_sales'] else None, 'elim_oi': t['elim_oi'][k] if t['elim_oi'] else None,
-                     'seg_oi': t['seg_oi'][k] if t['seg_oi'] else None, 'total_sales': t['total_sales'][k] if t['total_sales'] else None}
+                     'seg_oi': t['seg_oi'][k] if t['seg_oi'] else None, 'total_sales': t['total_sales'][k] if t['total_sales'] else None,
+                     'recon': [(l, v[k]) for l, v in t.get('recon', [])], 'oi_total': t['oi_total'][k] if t.get('oi_total') else None}
                 cands.append((t['date'], d, f"as presented in the FY{fyk} Form 10-K segment note ({t['date']})"))
     if not cands: return None, None, None
     cands.sort(key=lambda c: c[0])
@@ -354,7 +365,7 @@ def do_seg(p, r, fy, q, annual):
             put(p, 'l06_oth_derived', 1)
     # reconciliation
     rsrc = s
-    if d and note and note.startswith('as recast') and d.get('recon') and d.get('seg_oi') is not None:
+    if d and note and note != 'as reported' and d.get('recon') and d.get('seg_oi') is not None:
         rsrc = d; put(p, 'rc_basis', note)
         for k, kk in (('seg_oi', 'orig_seg_oi_pub'),): put(p, kk, s.get('seg_oi'))
         put(p, 'seg_oi_pub', d.get('seg_oi'))
@@ -398,11 +409,12 @@ def cf_ytd(p):
     if any(v is not None for v in pens): o['pens'] = sum(N(v) for v in pens)
     else: o['pens'] = N(x.get('retiree_ytd')) if fy <= 2015 else 0.0
     o['gain'] = N(c.get('gain_sale')) + N(c.get('b21')) + N(c.get('impairment'))
+    o['b21'] = N(c.get('b21'))
     o['src'] = 'release' if c.get('dda') is not None else ('10-K' if p.isdigit() and fy <= 2008 else 'XBRL')
     return o
 
 def cf_lines(c, ni):
-    o = {'cf_ni': ni, 'cf_dda': N(c['dda']), 'cf_sbc': N(c['sbc']), 'cf_def': N(c['deftax']), 'cf_pens': c['pens'], 'cf_gain': c['gain']}
+    o = {'cf_ni': ni, 'cf_dda': N(c['dda']), 'cf_sbc': N(c['sbc']), 'cf_def': N(c['deftax']), 'cf_pens': c['pens'], 'cf_gain': c['gain'], 'b21': c['b21']}
     o['cf_wc'] = N(c['cfo']) - ni - o['cf_dda'] - o['cf_sbc'] - o['cf_def'] - o['cf_pens'] - o['cf_gain']
     o['cf_cfo'] = N(c['cfo']); o['cf_capex'] = c['capex']; o['cf_acq'] = c['acq']; o['cf_divest'] = c['divest'] + c['equip'] + c['sale_inv']
     o['cf_oinv'] = c['cfi'] - c['capex'] - c['acq'] - o['cf_divest']; o['cf_cfi'] = c['cfi']

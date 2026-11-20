@@ -1,8 +1,8 @@
-"""Row specification of the WWD Model sheet, part 1 (MLM template layout and process):
-segment x primary-market sales build (Aerospace: commercial OEM / commercial services / defense OEM / defense services;
-Industrial: power generation / transportation / oil and gas) -> segment earnings at the segment margin -> + adjusted nonsegment
-expenses = adjusted EBIT -> M&A lever and pending divestitures -> group total & FY26 guidance calibration -> cost drivers ->
-income statement -> GAAP-to-adjusted bridges -> growth & margins."""
+"""Row specification of the NOC Model sheet, part 1 (MLM template layout and process):
+segment build (Aeronautics / Defense / Mission / Space Systems: sales × segment operating margin, intersegment eliminations) ->
+segment operating income (company non-GAAP) -> + FAS/CAS operating adjustment + unallocated corporate expense = operating income ->
+M&A lever -> group total & FY26 guidance calibration -> backlog -> legacy segment structures (memo) -> cost drivers -> income
+statement -> GAAP-to-adjusted bridges -> growth & margins."""
 from fw import *
 
 def CH(r):
@@ -24,35 +24,38 @@ def incr(n, d):
 def nsum(keys): return '+'.join(f'N({V(k)})' for k in keys)
 def QEa(key): return f'${QE}${R[key]}'                    # Q4/26E (absolute)
 def QEc(key): return f'{QE}{R[key]}'                      # Q4/26E
-def ACT(key): return f'SUM({Q1}{R[key]}:{Q3}{R[key]})'    # 9M FY26 actual (Q1-Q3/26)
-def ACT0(key): return f'SUM({PQ1}{R[key]}:{PQ3}{R[key]})' # 9M FY25 actual (Q1-Q3/25)
-def B1(key): return f'{LQ}{R[key]}'                       # 30-Jun-2026 balance
+def ACT(key): return f'SUM({Q1}{R[key]}:{Q3}{R[key]})'    # 9M 2026 actual (Q1-Q3/26)
+def ACT0(key): return f'SUM({PQ1}{R[key]}:{PQ3}{R[key]})' # 9M 2025 actual (Q1-Q3/25)
+def B1(key): return f'{LQ}{R[key]}'                       # 30-Sep-2026 balance
+def chk(expr_a, expr_b, tol=0.6, cond=None, dp=1):
+    c = cond or f'AND(ISNUMBER({expr_a}),ISNUMBER({expr_b}))'
+    return f'=IF({c},IF(ABS({expr_a}-{expr_b})<={tol},0,ROUND({expr_a}-{expr_b},{dp})),"")'
 
-SEG = [('aero', 'Aerospace', 'AERO', [('coem', 'Commercial OEM', 'em_com_oem'), ('cserv', 'Commercial services (aftermarket)', 'em_com_aft'),
-                                      ('doem', 'Defense OEM', 'em_def_oem'), ('dserv', 'Defense services (aftermarket)', 'em_def_aft')], 'sr_aero', 'se_aero'),
-       ('ind', 'Industrial', 'IND', [('pg', 'Power generation', 'em_pg'), ('trans', 'Transportation', 'em_trans'), ('og', 'Oil and gas', 'em_og')], 'sr_ind', 'se_ind')]
-LINES = [f'{s}_{t}' for s, _, _, ts, _, _ in SEG for t, _, _ in ts]
-SEGK = [s for s, *_ in SEG]
-ADJ = ['d_restr', 'd_acq', 'd_pa', 'd_gain', 'd_impair', 'd_oadj']
+SEG = [('as', 'Aeronautics Systems', 'AS'), ('ds', 'Defense Systems', 'DS'), ('ms', 'Mission Systems', 'MS'), ('ss', 'Space Systems', 'SS')]
+SEGK = [s for s, _, _ in SEG]
+DESCR = {'as': 'Aeronautics Systems (B-21, F-35 centre fuselage and sustainment, E-2D, Triton / Global Hawk, B-2; strike and surveillance aircraft solutions from 1-Jan-2025)',
+         'ds': 'Defense Systems (Sentinel ICBM from the 1-Jan-2024 realignment, tactical weapons and solid rocket motors, armament systems, battle management; training services sold Q2 2025)',
+         'ms': 'Mission Systems (airborne and maritime radar, restricted advanced microelectronics, navigation / targeting, C4ISR, marine systems; IT services sold Jan-2021)',
+         'ss': 'Space Systems (restricted space, launch and strategic missiles, satellites, Commercial Resupply Services; Sentinel moved to Defense Systems from 1-Jan-2024)'}
 
 # ====================================================================== scenario table
 SCEN_ROWS = []
 def scen_layout(V0):
     r = 9
     SCEN_ROWS.append((r, 'hdr', 'SCENARIO INPUT TABLE — driver assumptions per Bull / Base / Bear', 'Bull', 'Base', 'Bear',
-                      'Bull / Bear = Base + Δ (Δ inputs on each block header). Outlook block = high / mid / low end of the FY26 guidance ranges.'))
+                      'Bull / Bear = Base + Δ (Δ inputs on each block header). Outlook block = high / mid / low end of the 2026 guidance ranges (Q3 2026 release, 20-Oct-2026).'))
     r = 11
     SCEN_ROWS.append((r, 'out_hdr', V0['out_hdr'], 'High', 'Mid', 'Low', V0['out_note'])); r += 1
     for key, lab, (hi, mid, lo), nf, note in V0['outlook']:
         SC[key] = r; SCEN_ROWS.append((r, 'out', lab, hi, mid, lo, note, nf)); r += 1
     r += 1
-    SCEN_ROWS.append((r, 'pt_hdr', 'Q4/26E and FY26 point estimates (all cases)', None, None, None, None)); r += 1
+    SCEN_ROWS.append((r, 'pt_hdr', 'Q4/26E and 2026E point estimates (all cases)', None, None, None, None)); r += 1
     for key, lab, vals, nf, note in V0['points']:
         SC[key] = r
         SCEN_ROWS.append((r, 'pt', lab, None, vals, None, note, nf)); r += 1
     r += 1
     SC['LEV'] = r
-    SCEN_ROWS.append((r, 'lev', '  Maximum net debt / adjusted EBITDA before buybacks (x) — buyback floor 2027E+', *V0['lev'], V0['lev_note']))
+    SCEN_ROWS.append((r, 'lev', '  Target net debt / adjusted EBITDA (x) — buyback plug 2027E+', *V0['lev'], V0['lev_note']))
     r += 2
     for name, lab, dbull, dbear, base, note, nf, clamp in V0['blocks']:
         SCEN_ROWS.append((r, 'blk', lab, dbull, 'Δ →', dbear, note, nf)); hdr = r; r += 1
@@ -65,357 +68,355 @@ def scen_layout(V0):
 def build_spec(V0):
     S = add
     # ------------------------------------------------------------------ SEGMENT BUILD
-    S('sec_seg', 'SEGMENT P&L — AEROSPACE · INDUSTRIAL (sales by primary market × segment earnings margin)', 'section',
-      note='SEGMENT BUILD — modelling logic (sales by primary market → segment sales → segment earnings at the segment margin → + adjusted nonsegment expenses = adjusted EBIT → GAAP P&L)')
+    S('sec_seg', 'SEGMENT P&L — AERONAUTICS · DEFENSE · MISSION · SPACE SYSTEMS (sales × segment operating margin; current four-sector structure)', 'section',
+      note=('SEGMENT BUILD — modelling logic (segment sales → segment operating income at the segment margin → less intersegment eliminations = segment operating income '
+            '(company non-GAAP) → + FAS/CAS operating adjustment + unallocated corporate expense = GAAP operating income). Basis per column in the definition row below.'))
     blank()
-    descr = {'aero': 'Aerospace (fuel, combustion, actuation, motion & flight-control systems for commercial and defense aircraft, guided weapons; OEM and aftermarket)',
-             'ind': 'Industrial ("Energy" to FY2015; fuel, combustion, ignition & control systems for gas turbines, reciprocating engines and compressors; L\'Orange fuel injection from Jun-2018)'}
-    for s, title, code, types, pub, earn in SEG:
-        S(f'{s}_hdr', descr[s], 'block', note=f'{title.upper()} — modelling logic')
-        for t, tl, dk in types:
-            key = f'{s}_{t}'
-            S(key, f'  {tl} sales', 'line', 'm1', data=dk, flow=True,
-              qe=lambda key=key: f'={P(key)}*(1+{V(key + "_g")})', ae=lambda key=key: f'={P(key)}*(1+{V(key + "_g")})',
-              note=('Sales by primary market (10-Q / 10-K revenue-disaggregation note, from FY2019; Q4 = fiscal year − nine months). Q4/26E: prior-year quarter × (1 + growth). '
-                    '2027E+: prior year × (1 + scenario lever).') if t == types[0][0] else None)
-            S(key + '_g', '    y/y %', 'growth', 'pct', all=growth(key),
-              qe=lambda key=key: f'={V(key + "_pre")}+{QEa("cal_g")}',
-              ae=lambda key=key, code=code, t=t: '=' + CH(SC[f'{code}_{t.upper()}'][CTX.col.year]),
-              note='Q4/26E: 9M FY26 y/y growth of the market + sales-guidance calibration Δ (Group block). 2027E–2031E: scenario lever (Bull/Base/Bear table →).' if t == types[0][0] else None)
-            S(key + '_pre', '    Q4/26E growth before sales calibration (9M FY26 y/y)', 'driver', 'pct',
-              qe=lambda key=key: f'=IFERROR({ACT(key)}/{ACT0(key)}-1,0)')
-        first = f'{s}_{types[0][0]}'
-        S(f'{s}_rev', f'  {title} — segment net sales', 'line_b', 'm1',
-          hist=lambda s=s, types=types, first=first: f'=IF(ISNUMBER({V(first)}),{"+".join(V(s + "_" + t) for t, _, _ in types)},{V(s + "_pub")})',
-          fc=lambda s=s, types=types: '=' + '+'.join(V(s + '_' + t) for t, _, _ in types),
-          note='History: Σ primary markets where published, otherwise segment net sales as reported.' if s == 'aero' else None)
-        S(f'{s}_rev_g', '  Segment sales y/y %', 'growth', 'pct', all=growth(f'{s}_rev'))
-        S(f'{s}_mix', '  % of total net sales', 'pct', 'pct', all=ratio(f'{s}_rev', 'g_rev'))
-        if s == 'aero':
-            S('aero_aft', '  Aftermarket (commercial + defense services) % of Aerospace sales', 'pct', 'pct',
-              all=lambda: f'=IF(ISNUMBER({V("aero_cserv")}),IFERROR(({V("aero_cserv")}+{V("aero_dserv")})/{V("aero_rev")},""),"")')
-        S(f'{s}_pub', f'  Memo: {title} segment net sales as reported (segment schedule)', 'memo', 'm1', data=pub, flow=True)
-        S(f'{s}_chk', '  Check: primary markets vs segment net sales (should be 0)', 'check', 'm1',
-          hist=lambda s=s, first=first: f'=IF(AND(ISNUMBER({V(first)}),ISNUMBER({V(s + "_pub")})),IF(ABS({V(s + "_rev")}-{V(s + "_pub")})<=0.15,0,ROUND({V(s + "_rev")}-{V(s + "_pub")},1)),"")')
-        S(f'{s}_oi', f'  {title} segment earnings', 'line', 'm1', data=earn, flow=True,
-          qe=lambda s=s: f'={V(s + "_rev")}*{V(s + "_m")}', ae=lambda s=s: f'={V(s + "_rev")}*{V(s + "_m")}',
-          note=('Segment earnings as reported (company measure: after amortization of intangibles; excludes nonsegment expenses). Forecast = segment sales × segment margin.')
-          if s == 'aero' else None)
-        S(f'{s}_m', '  Segment margin %', 'pct', 'pct', all=ratio(f'{s}_oi', f'{s}_rev'),
+    for s, title, code in SEG:
+        S(f'{s}_hdr', DESCR[s], 'block', note=f'{title.upper()} — modelling logic')
+        S(f'{s}_s', f'  {title} sales', 'line', 'm', data=f'cur_{s}_s', flow=True,
+          qe=lambda s=s: f'={P(s + "_s")}*(1+{V(s + "_g")})', ae=lambda s=s: f'={P(s + "_s")}*(1+{V(s + "_g")})',
+          note=('Segment sales incl. intersegment sales (release segment table). Q4/26E: prior-year quarter × (1 + growth). 2027E+: prior year × (1 + scenario lever).') if s == 'as' else None)
+        S(f'{s}_g', '    y/y %', 'growth', 'pct', all=growth(f'{s}_s'),
+          qe=lambda s=s: f'={V(s + "_g_pre")}+{QEa("cal_g")}', ae=lambda s=s, code=code: '=' + CH(SC[f'{code}_G'][CTX.col.year]),
+          note='Q4/26E: growth implied by the segment sales guidance + total-sales calibration Δ (Group block). 2027E–2031E: scenario lever (table →).' if s == 'as' else None)
+        S(f'{s}_g_pre', '    Q4/26E growth before sales calibration (implied by the segment sales guidance mid-point: (guided FY − 9M actual) ÷ Q4 2025 − 1)', 'driver', 'pct',
+          qe=lambda s=s: f'=IFERROR(({PT("pt_g_" + s + "_s")}-{ACT(s + "_s")})/{P(s + "_s")}-1,0)',
+          note=('Segment end-points first (Q3 2026 release segment guidance, mid-points of the ranges in words), then one total-level Δ to the consolidated sales guidance (CW precedent: segment ranges do not sum to the total). '
+                'The plain 9M y/y rate would overstate Aeronautics (Q4 2025 was +25% q/q).') if s == 'as' else None)
+        S(f'{s}_mix', '    % of gross segment sales', 'pct', 'pct', all=ratio(f'{s}_s', 'g_gross'))
+        S(f'{s}_oi', f'  {title} operating income', 'line', 'm', data=f'cur_{s}_oi', flow=True,
+          qe=lambda s=s: f'={V(s + "_s")}*{V(s + "_m")}', ae=lambda s=s: f'={V(s + "_s")}*{V(s + "_m")}',
+          note='Segment operating income as reported (includes CAS pension cost; excludes FAS service cost and unallocated corporate items). Forecast = sales × margin.' if s == 'as' else None)
+        S(f'{s}_m', '    Operating margin rate %', 'pct', 'pct', all=ratio(f'{s}_oi', f'{s}_s'),
           qe=lambda s=s: f'={V(s + "_m_pre")}+{QEa("cal_m")}', ae=lambda s=s, code=code: '=' + CH(SC[f'{code}_M'][CTX.col.year]),
-          note='Q4/26E: margin before calibration + adjusted-EPS-guidance calibration Δ (Group block). 2027E+: scenario lever.' if s == 'aero' else None)
-        S(f'{s}_m_pre', '  Q4/26E margin before EPS calibration (prior-year quarter + 9M FY26 y/y drift)', 'driver', 'pct',
-          qe=lambda s=s: f'={P(s + "_m")}+IFERROR({ACT(s + "_oi")}/{ACT(s + "_rev")}-{ACT0(s + "_oi")}/{ACT0(s + "_rev")},0)')
-        S(f'{s}_inc', '  Incremental segment margin (Δ earnings / Δ sales)', 'pct', 'pct', all=incr(f'{s}_oi', f'{s}_rev'))
-        S(f'{s}_oi_py', f'  Memo: {title} segment earnings as restated in the following year\'s release (where different)', 'memo', 'm1', data=f'{earn}_py', flow=True,
-          note='FY2018 restated in the FY2019 release (pension-cost reclassification, ASU 2017-07); the model keeps the originally reported figure.' if s == 'aero' else None)
-        if s == 'ind':
-            S('ind_leg_h', '  Legacy primary markets (as originally reported FY2019–FY2022; replaced in the FY2023 10-K):', 'sub', 'gen')
-            for k, lab in (('recip', 'Reciprocating engines'), ('ind_turb', 'Industrial turbines'), ('renew', 'Renewables (sold May-2020)')):
-                S(f'ind_l_{k}', f'    {lab}', 'memo', 'm1', data=f'em_{k}', flow=True)
-            S('ind_l_chk', '    Check: legacy markets vs segment net sales (should be 0)', 'check', 'm1',
-              hist=lambda: f'=IF(ISNUMBER({V("ind_l_recip")}),IF(ABS({V("ind_l_recip")}+N({V("ind_l_ind_turb")})+N({V("ind_l_renew")})-{V("ind_pub")})<=0.15,0,ROUND({V("ind_l_recip")}+N({V("ind_l_ind_turb")})+N({V("ind_l_renew")})-{V("ind_pub")},1)),"")')
+          note='Q4/26E: margin implied by the segment guidance + segment-OI calibration Δ (Group block). 2027E+: scenario lever.' if s == 'as' else None)
+        S(f'{s}_m_pre', '    Q4/26E margin before calibration (implied by the segment margin guidance: (guided FY margin × guided FY sales − 9M actual OI) ÷ Q4 sales)', 'driver', 'pct',
+          qe=lambda s=s: f'=IFERROR(({PT("pt_g_" + s + "_m")}*{PT("pt_g_" + s + "_s")}-{ACT(s + "_oi")})/{V(s + "_s")},0)',
+          note='Segment margin end-points first, then one total-level Δ to the segment-operating-income guidance. (The prior-year-quarter-plus-drift method is distorted by the Q1 2025 B-21 loss provision.)' if s == 'as' else None)
+        S(f'{s}_inc', '    Incremental margin (Δ operating income / Δ sales)', 'pct', 'pct', all=incr(f'{s}_oi', f'{s}_s'))
+        S(f'{s}_orig_s', f'  Memo: {title} sales as originally reported (periods later recast for realignments)', 'memo', 'm', data=f'orig_{s}_s', flow=True)
+        S(f'{s}_orig_oi', f'  Memo: {title} operating income as originally reported', 'memo', 'm', data=f'orig_{s}_oi', flow=True)
+        S(f'{s}_10k_s', f'  Memo: {title} sales on the latest structure (10-K segment note; annual only)', 'memo', 'm', data=f'c10k_{s}_s', flow=True,
+          note='FY2022 on the 1-Jan-2024 structure (FY2024 10-K) and FY2023 on the 1-Jan-2025 structure (FY2025 10-K): later recasts than the one the quarters of those years carry.' if s == 'as' else None)
         blank()
-    S('co_hdr', 'Nonsegment expenses (corporate costs, restructuring and other items not allocated to the segments)', 'block',
-      note='NONSEGMENT — corporate office costs (compensation, benefits, depreciation, administration); adjusting items are recorded here')
-    S('ns_gaap', '  Nonsegment expenses, as reported (incl. adjusting items)', 'line', 'm1', data='nonseg', flow=True,
-      fc=lambda: f'={V("corp")}-{V("o_tot")}')
-    S('corp', '  Adjusted nonsegment expenses (model: as reported + adjusting items)', 'line', 'm1', flow=True,
-      hist=lambda: f'=IF(ISNUMBER({V("ns_gaap")}),{V("ns_gaap")}+{V("o_tot")},"")',
-      qe=lambda: f'={P("corp")}*(1+{V("corp_g")})', ae=lambda: f'={V("is_rev")}*{V("corp_pct")}',
-      note=('Equals the company\'s adjusted nonsegment expenses where all adjusting items sit in nonsegment (FY2021+); FY2018–19 L\'Orange purchase accounting sat in Industrial segment earnings. '
-            'Q4/26E: prior-year quarter × (1 + 9M FY26 y/y). 2027E+: % of net sales.'))
-    S('corp_g', '  Adjusted nonsegment expenses y/y %', 'growth', 'pct', all=growth('corp'), qe=lambda: f'=IFERROR({ACT("corp")}/{ACT0("corp")}-1,0)')
-    S('corp_pct', '  Adjusted nonsegment expenses % of net sales', 'pct', 'pct', all=ratio('corp', 'is_rev'), ae_in=V0['corp_pct'])
-    blank()
-    S('mx_hdr', 'Sales by end market (outputs)', 'block', note='MIX — outputs')
-    S('mx_com', '  Commercial aerospace (OEM + services)', 'line', 'm1', all=lambda: f'=IF(ISNUMBER({V("aero_coem")}),{V("aero_coem")}+{V("aero_cserv")},"")')
-    S('mx_def', '  Defense (OEM + services)', 'line', 'm1', all=lambda: f'=IF(ISNUMBER({V("aero_doem")}),{V("aero_doem")}+{V("aero_dserv")},"")')
-    S('mx_com_p', '  Commercial aerospace % of total sales', 'pct', 'pct', all=lambda: f'=IF(ISNUMBER({V("mx_com")}),IFERROR({V("mx_com")}/{V("g_rev")},""),"")')
-    S('mx_def_p', '  Defense % of total sales', 'pct', 'pct', all=lambda: f'=IF(ISNUMBER({V("mx_def")}),IFERROR({V("mx_def")}/{V("g_rev")},""),"")')
-    S('mx_com_g', '  Commercial aerospace y/y %', 'growth', 'pct', all=growth('mx_com'))
-    S('mx_def_g', '  Defense y/y %', 'growth', 'pct', all=growth('mx_def'))
-    S('gc_aero', '  Contribution to total sales growth — Aerospace (pp)', 'growth', 'pct',
-      all=lambda: (f'=IFERROR(({V("aero_rev")}-{P("aero_rev")})/{P("g_rev")},"")' if CTX.col.prior else None))
-    S('gc_ind', '  Contribution to total sales growth — Industrial (pp)', 'growth', 'pct',
-      all=lambda: (f'=IFERROR(({V("ind_rev")}-{P("ind_rev")})/{P("g_rev")},"")' if CTX.col.prior else None))
+    S('el_hdr', 'Intersegment eliminations', 'block', note='ELIMINATIONS — intersegment sales and the profit on them')
+    S('el_s', '  Intersegment sales eliminated (negative)', 'line', 'm', data='cur_elim_s', flow=True,
+      qe=lambda: f'=-{V("g_gross")}*{V("el_p")}', ae=lambda: f'=-{V("g_gross")}*{V("el_p")}',
+      note='Forecast = − eliminations % × gross segment sales. 2026 guidance ~($2.7bn) (Q3 2026 release).')
+    S('el_p', '  Eliminations % of gross segment sales', 'pct', 'pct', all=lambda: f'=IF(ISNUMBER({V("el_s")}),IFERROR(-{V("el_s")}/{V("g_gross")},""),"")',
+      qe=lambda: f'={PT("pt_elim_p")}', ae=lambda: '=' + CH(SC['ELIM_P'][CTX.col.year]),
+      note='9M 2026 6.0%; 2025 5.2%; 2024 (recast) 4.4%. Q4/26E point estimate; 2027E+ scenario lever (higher intersegment content as Sentinel / B-21 subcontracting grows).')
+    S('el_oi', '  Intersegment operating income eliminated (negative)', 'line', 'm', data='cur_elim_oi', flow=True,
+      qe=lambda: f'={V("el_s")}*{V("el_m")}', ae=lambda: f'={V("el_s")}*{V("el_m")}', note='Forecast = eliminated sales × eliminations margin rate.')
+    S('el_m', '  Eliminations margin rate %', 'pct', 'pct', all=lambda: f'=IF(ISNUMBER({V("el_oi")}),IFERROR({V("el_oi")}/{V("el_s")},""),"")',
+      qe=lambda: f'={PT("pt_elim_m")}', ae=lambda: f'={PT("pt_elim_m")}', note='2026 guidance "mid 13%" (Q3 2026 release); 9M 2026 13.5%; 2025 13.7%.')
     blank()
 
     # ------------------------------------------------------------------ future M&A lever
-    S('m_hdr', 'Future acquisitions (M&A lever — Aerospace / Industrial bolt-ons, unallocated; deals closed from 2027E)', 'block',
-      note='M&A LEVER — acquired revenue = spend ÷ EV/sales; mid-year convention')
+    S('m_hdr', 'Future acquisitions (M&A lever — bolt-ons, unallocated; deals closed from 2027E)', 'block', note='M&A LEVER — acquired sales = spend ÷ EV/sales; mid-year convention')
     S('m_spend', '  Acquisition spend (USDm, scenario)', 'line', 'm', e26_in=0.0, ae=lambda: f'=MAX(0,{CH(SC["MNA"][CTX.col.year])})', note=V0['mna_note'])
-    S('m_mult', '  Purchase multiple — EV / sales (x)', 'driver', 'x2', ae_in=3.0, e26_in=0.0,
-      note='L\'Orange (Jun-2018) $771m on ~$290m annual sales (~2.7x); Valve Research (Apr-2026) $121m; Safran EMA (Jul-2025) $40m. 3.0x input (assumption).')
-    S('m_acq_sales', '  Annualised revenue acquired in the year', 'line', 'm', e26_in=0.0, ae=lambda: f'=IFERROR({V("m_spend")}/{V("m_mult")},0)')
+    S('m_mult', '  Purchase multiple — EV / sales (x)', 'driver', 'x2', ae_in=2.0, e26_in=0.0,
+      note='Orbital ATK (Jun-2018): $7.7bn net of cash + $1.4bn debt assumed on ~$5.0bn of sales (~1.8x). 2.0x input (assumption).')
+    S('m_acq_sales', '  Annualised sales acquired in the year', 'line', 'm', e26_in=0.0, ae=lambda: f'=IFERROR({V("m_spend")}/{V("m_mult")},0)')
     S('m_g', '  Growth of acquired businesses after acquisition %', 'driver', 'pct', e26_in=0.0, ae_in=0.05)
-    S('m_run', '  Run-rate revenue of businesses acquired (year end)', 'line', 'm', e26_in=0.0, ae=lambda: f'={P("m_run")}*(1+{V("m_g")})+{V("m_acq_sales")}')
-    S('m_rev', '  Revenue from future acquisitions', 'line_b', 'm', e26_in=0.0, ae=lambda: f'={P("m_run")}*(1+{V("m_g")})+0.5*{V("m_acq_sales")}',
-      note='Mid-year convention.')
-    S('m_m', '  Earnings margin of acquired businesses (after amortization) %', 'driver', 'pct', e26_in=0.0, ae_in=0.15)
-    S('m_oi', '  Earnings from future acquisitions', 'line', 'm', e26_in=0.0, ae=lambda: f'={V("m_rev")}*{V("m_m")}')
+    S('m_run', '  Run-rate sales of businesses acquired (year end)', 'line', 'm', e26_in=0.0, ae=lambda: f'={P("m_run")}*(1+{V("m_g")})+{V("m_acq_sales")}')
+    S('m_rev', '  Sales from future acquisitions', 'line_b', 'm', e26_in=0.0, ae=lambda: f'={P("m_run")}*(1+{V("m_g")})+0.5*{V("m_acq_sales")}', note='Mid-year convention.')
+    S('m_m', '  Operating margin of acquired businesses (before purchase-accounting amortization) %', 'driver', 'pct', e26_in=0.0, ae_in=0.11)
+    S('m_oi', '  Operating income from future acquisitions', 'line', 'm', e26_in=0.0, ae=lambda: f'={V("m_rev")}*{V("m_m")}')
     S('m_ppe', '  PP&E % of spend', 'driver', 'pct', e26_in=0.0, ae_in=0.10)
-    S('m_intp', '  Acquired intangibles % of spend', 'driver', 'pct', e26_in=0.0, ae_in=0.40,
-      note='PPAs: L\'Orange 74% of the purchase price in intangibles, Valve Research 30%, Safran EMA 0%.')
-    S('m_life', '  Intangible amortization life (years)', 'driver', 'gen', e26_in=0, ae_in=15)
+    S('m_intp', '  Acquired intangibles % of spend', 'driver', 'pct', e26_in=0.0, ae_in=0.30, note='Orbital ATK PPA (FY2018 10-K Note 3): ~$2.7bn of intangibles on $9.2bn of consideration incl. debt (~30%).')
+    S('m_life', '  Intangible amortization life (years)', 'driver', 'gen', e26_in=0, ae_in=12)
     S('m_cum', '  Cumulative acquired intangibles (gross)', 'line', 'm', e26_in=0.0, ae=lambda: f'={P("m_cum")}+{V("m_spend")}*{V("m_intp")}')
-    S('m_amort', '  Amortization of future-acquisition intangibles (inside segment earnings)', 'line', 'm', e26_in=0.0,
+    S('m_amort', '  Amortization of future-acquisition intangibles (in unallocated corporate expense)', 'line', 'm', e26_in=0.0,
       ae=lambda: f'=IFERROR(({P("m_cum")}+0.5*{V("m_spend")}*{V("m_intp")})/{V("m_life")},0)',
-      note='Woodward does not adjust out amortization; the acquired-business margin above is after amortization.')
+      note='Northrop Grumman reports purchased-intangible amortization in unallocated corporate expense, outside segment operating income.')
     blank()
 
-    # ------------------------------------------------------------------ pending divestitures
-    S('dv_hdr', 'Pending divestitures — Aerospace pilot controls (to ONTIC, $180m; close expected FY2027) · Santa Clarita product lines & campus (terms not disclosed)', 'block',
-      note='DIVESTITURES — gain recorded in other income, net and excluded from adjusted earnings (company practice for divestitures)')
-    S('dv_proc', '  Cash proceeds (USDm; ONTIC $180m in 2027E)', 'line', 'm1', e26_in=0.0, ae_in=V0['dv_proc'], note=MAN['deals']['ontic_pilot_controls'])
-    S('dv_nav', '  Net assets held for sale (30-Jun-2026: assets $20.0m − liabilities $3.6m)', 'driver', 'm1', e26_in=0.0, ae_in=V0['dv_nav'])
-    S('dv_gain', '  Pre-tax gain on sale (assumption: proceeds − net assets held for sale; goodwill allocation not disclosed)', 'line', 'm1', e26_in=0.0,
-      ae=lambda: f'={V("dv_proc")}-{V("dv_nav")}')
-    S('dv_rev', '  Sales of the divested product lines (not disclosed — input 0; flag)', 'driver', 'm1', e26_in=0.0, ae_in=0.0,
-      note='Neither the pilot-controls nor the Santa Clarita product-line sales are disclosed; no revenue is removed from the Aerospace build (assumption).')
-    blank()
-
-    # ------------------------------------------------------------------ group total & guidance calibration
-    S('g_hdr', 'Group Total — net sales & adjusted EBIT (segment build) → FY26 guidance calibration', 'block',
-      note='GROUP TOTAL (CONSOLIDATED) — modelling logic')
-    S('g_rev', 'Net sales (segment build)', 'total', 'm1',
-      hist=lambda: f'=IF(ISNUMBER({V("aero_rev")}),{V("aero_rev")}+{V("ind_rev")},{V("is_rev")})',
-      fc=lambda: f'={V("aero_rev")}+{V("ind_rev")}+N({V("m_rev")})-N({V("dv_rev")})',
-      note='Σ segment sales (+ future acquisitions − divested product lines from 2027E).')
-    S('g_rev_g', '  Net sales y/y %', 'growth', 'pct', all=growth('g_rev'))
-    S('g_chk_rev', '  Check: segment build vs consolidated net sales (should be 0)', 'check', 'm1',
-      all=lambda: f'=IF(ISNUMBER({V("g_rev")}),IF(ABS({V("g_rev")}-{V("is_rev")})<=0.15,0,ROUND({V("g_rev")}-{V("is_rev")},1)),"")')
-    S('g_adj', 'Adjusted EBIT (segment build)', 'total', 'm1',
-      all=lambda: f'=IF(ISNUMBER({V("aero_oi")}),{V("aero_oi")}+{V("ind_oi")}+{V("corp")}+N({V("m_oi")}),"")',
-      note="Σ segment earnings + adjusted nonsegment expenses (+ future acquisitions). Woodward's adjusted EBIT (company definition); drives the GAAP P&L below.")
-    S('g_adjm', '  Adjusted EBIT margin %', 'pct', 'pct', all=ratio('g_adj', 'is_rev'))
-    S('g_adj_g', '  Adjusted EBIT y/y %', 'growth', 'pct', all=growth('g_adj'))
-    S('g_chk_adj', '  Check: segment build vs adjusted EBIT bridge (should be 0)', 'check', 'm1',
-      all=lambda: f'=IF(AND(ISNUMBER({V("g_adj")}),ISNUMBER({V("o_adj")})),IF(ABS({V("g_adj")}-{V("o_adj")})<=0.15,0,ROUND({V("g_adj")}-{V("o_adj")},1)),"")')
-    S('cal_guid', '  Memo: FY26 net sales guidance (scenario end-point = FY2025 × (1 + guided sales growth))', 'memo', 'm1',
-      e26=lambda: f'={Y("is_rev", 2025)}*(1+{CH(SC["out_g"])})', note=V0['rev_guid_note'])
-    S('cal_pre', '  Net sales before calibration (Q4/26E helper)', 'line', 'm1', qe=lambda: '=' + '+'.join(f'{P(k)}*(1+{V(k + "_pre")})' for k in LINES))
-    S('cal_sens', '  Net sales sensitivity to +1.00 of growth (Q4/26E helper)', 'line', 'm1', qe=lambda: '=' + '+'.join(P(k) for k in LINES))
-    S('cal_g', '  Guidance calibration: Δ y/y growth applied to all primary markets (Q4/26E)', 'driver', 'pct',
+    # ------------------------------------------------------------------ group total & calibration
+    S('g_hdr', 'Group Total — sales & segment operating income (segment build) → 2026 guidance calibration', 'block', note='GROUP TOTAL (CONSOLIDATED) — modelling logic')
+    S('g_gross', '  Gross segment sales (Σ segments, incl. intersegment)', 'line', 'm', all=lambda: f'=IF(ISNUMBER({V("as_s")}),{"+".join(V(s + "_s") for s in SEGK)}+N({V("m_rev")}),"")')
+    S('g_rev', 'Total sales (segment build)', 'total', 'm', hist=lambda: f'=IF(ISNUMBER({V("as_s")}),{V("g_gross")}+{V("el_s")},{V("is_rev")})',
+      fc=lambda: f'={V("g_gross")}+{V("el_s")}', note='Σ segment sales + intersegment eliminations (+ future acquisitions from 2027E). History before 2019 falls back to reported sales.')
+    S('g_rev_g', '  Total sales y/y %', 'growth', 'pct', all=growth('g_rev'))
+    S('g_chk_rev', '  Check: segment build vs consolidated sales (should be 0; ±0.5 rounding)', 'check', 'm', all=lambda: chk(V('g_rev'), V('is_rev')))
+    S('g_soi', 'Segment operating income (segment build; company non-GAAP)', 'total', 'm',
+      all=lambda: f'=IF(ISNUMBER({V("as_oi")}),{"+".join(V(s + "_oi") for s in SEGK)}+N({V("el_oi")})+N({V("m_oi")}),"")',
+      note='Σ segment operating income + intersegment eliminations (+ future acquisitions). Company non-GAAP measure; reconciled to GAAP operating income below.')
+    S('g_som', '  Segment operating margin rate %', 'pct', 'pct', all=ratio('g_soi', 'g_rev'))
+    S('g_soi_g', '  Segment operating income y/y %', 'growth', 'pct', all=growth('g_soi'))
+    S('g_soi_pub', '  Company-published segment operating income', 'memo', 'm', data='seg_oi_pub', flow=True)
+    S('g_chk_soi', '  Check: segment build vs company-published segment operating income (should be 0; ±0.5 rounding)', 'check', 'm', hist=lambda: chk(V('g_soi'), V('g_soi_pub')))
+    S('cal_guid', '  Memo: 2026 sales guidance (scenario end-point)', 'memo', 'm', e26=lambda: '=' + CH(SC['out_sales']), note=V0['rev_guid_note'])
+    S('cal_pre', '  Sales before calibration (Q4/26E helper)', 'line', 'm',
+      qe=lambda: f'=(1-{V("el_p")})*(' + '+'.join(f'{P(s + "_s")}*(1+{V(s + "_g_pre")})' for s in SEGK) + ')')
+    S('cal_sens', '  Sales sensitivity to +1.00 of growth (Q4/26E helper)', 'line', 'm', qe=lambda: f'=(1-{V("el_p")})*(' + '+'.join(P(s + '_s') for s in SEGK) + ')')
+    S('cal_g', '  Guidance calibration: Δ y/y growth applied to all segments (Q4/26E)', 'driver', 'pct',
       qe=lambda: f'=({V("cal_guid", E26)}-{ACT("g_rev")}-{V("cal_pre")})/{V("cal_sens")}',
-      note='Solves the uniform growth shift (vs 9M FY26 y/y rates) so that FY26 net sales = the guidance end-point for the active scenario.')
-    S('cal_rev_chk', '  Check: FY26 net sales vs guidance end-point (should be 0)', 'check', 'm1', e26=lambda: f'=ROUND({V("g_rev")}-{V("cal_guid")},1)')
-    S('cal_eps', '  Memo: FY26 adjusted EPS guidance (scenario end-point, $)', 'eps_memo', 'ps', e26=lambda: '=' + CH(SC['out_eps']), note=V0['eps_guid_note'])
-    S('cal_ni', '  Adjusted net earnings required (FY26E diluted shares × EPS guidance)', 'memo_calc', 'm1', e26=lambda: f'={V("cal_eps")}*{V("e_sh")}')
-    S('cal_oi', '  Q4/26E adjusted EBIT required ((NI − 9M actual) ÷ (1 − Q4 tax rate) + Q4 interest expense − interest income)', 'memo_calc', 'm1',
-      e26=lambda: f'=({V("cal_ni")}-{ACT("e_adjni")})/(1-{PT("pt_etr")})+{QEc("is_int")}-{QEc("is_intinc")}')
-    S('cal_oi_pre', '  Adjusted EBIT before margin calibration (Q4/26E helper)', 'line', 'm1',
-      qe=lambda: '=' + '+'.join(f'{V(s + "_rev")}*{V(s + "_m_pre")}' for s in SEGK) + f'+{V("corp")}')
-    S('cal_segrev', '  Segment sales (Q4/26E helper)', 'line', 'm1', qe=lambda: '=' + '+'.join(V(s + '_rev') for s in SEGK))
+      note='Solves the uniform growth shift (vs the segment-guidance-implied Q4 rates) so that 2026 sales = the consolidated guidance end-point for the active scenario. Closed form, no circularity.')
+    S('cal_rev_chk', '  Check: 2026 sales vs guidance end-point (should be 0; ±0.5 rounding)', 'check', 'm', e26=lambda: f'=ROUND({V("g_rev")}-{V("cal_guid")},1)')
+    S('cal_soi', '  Memo: 2026 segment operating income guidance (scenario end-point)', 'memo', 'm', e26=lambda: '=' + CH(SC['out_soi']), note=V0['soi_guid_note'])
+    S('cal_soi_pre', '  Segment operating income before margin calibration (Q4/26E helper)', 'line', 'm',
+      qe=lambda: '=' + '+'.join(f'{V(s + "_s")}*{V(s + "_m_pre")}' for s in SEGK) + f'+{V("el_oi")}')
+    S('cal_segs', '  Segment sales (Q4/26E helper)', 'line', 'm', qe=lambda: '=' + '+'.join(V(s + '_s') for s in SEGK))
     S('cal_m', '  Guidance calibration: Δ segment margin (Q4/26E)', 'driver', 'pct',
-      qe=lambda: f'=({V("cal_oi", E26)}-{V("cal_oi_pre")})/{V("cal_segrev")}',
-      note='Solves the uniform segment-margin shift so that FY26 adjusted EPS = the guidance end-point for the active scenario.')
-    S('cal_eps_chk', '  Check: FY26 adjusted EPS vs guidance end-point (should be 0.00)', 'check', 'ps', e26=lambda: f'=ROUND({V("e_eps")}-{V("cal_eps")},2)')
-    S('cal_ag', '  Memo: FY26 Aerospace sales growth guidance (scenario end-point) — information, not forced', 'memo', 'pct', e26=lambda: '=' + CH(SC['out_ag']))
-    S('cal_ag_d', '    Model Aerospace sales growth − guidance (pp)', 'memo_calc', 'pct', e26=lambda: f'={V("aero_rev_g")}-{V("cal_ag")}')
-    S('cal_ig', '  Memo: FY26 Industrial sales growth guidance (scenario end-point) — information', 'memo', 'pct', e26=lambda: '=' + CH(SC['out_ig']))
-    S('cal_ig_d', '    Model Industrial sales growth − guidance (pp)', 'memo_calc', 'pct', e26=lambda: f'={V("ind_rev_g")}-{V("cal_ig")}')
-    S('cal_am', '  Memo: FY26 segment margin guidance — Aerospace ~23.5% / Industrial ~19% (information)', 'memo', 'pct', e26=lambda: f'={PT("pt_am")}')
-    S('cal_am_d', '    Model Aerospace margin − guidance (pp)', 'memo_calc', 'pct', e26=lambda: f'={V("aero_m")}-{V("cal_am")}')
-    S('cal_im_d', '    Model Industrial margin − guidance (pp)', 'memo_calc', 'pct', e26=lambda: f'={V("ind_m")}-{PT("pt_im")}')
-    S('cal_fcf', '  Memo: FY26 free cash flow guidance (scenario end-point)', 'memo', 'm1', e26=lambda: '=' + CH(SC['out_fcf']))
-    S('cal_fcf_d', '  Model FY26 free cash flow − guidance (information)', 'memo_calc', 'm1', e26=lambda: f'={V("fcf")}-{V("cal_fcf")}')
+      qe=lambda: f'=({V("cal_soi", E26)}-{ACT("g_soi")}-{V("cal_soi_pre")})/{V("cal_segs")}',
+      note='Solves the uniform segment-margin shift so that 2026 segment operating income = the guidance end-point for the active scenario (the KPI the company guides).')
+    S('cal_soi_chk', '  Check: 2026 segment operating income vs guidance end-point (should be 0; ±0.5 rounding)', 'check', 'm', e26=lambda: f'=ROUND({V("g_soi")}-{V("cal_soi")},1)')
+    S('cal_eps', '  Memo: 2026 MTM-adjusted EPS guidance (scenario end-point, $) — information, not forced', 'eps_memo', 'ps', e26=lambda: '=' + CH(SC['out_eps']), note=V0['eps_guid_note'])
+    S('cal_eps_d', '    Model 2026E MTM-adjusted EPS − guidance ($)', 'memo_calc', 'ps', e26=lambda: f'={V("e_eps")}-{V("cal_eps")}')
+    S('cal_fcf', '  Memo: 2026 adjusted free cash flow guidance (scenario end-point) — drives the year-end unbilled-receivables calibration', 'memo', 'm', e26=lambda: '=' + CH(SC['out_fcf']),
+      note='Guided $3,100–3,500m. The 2026E unbilled receivables balance (the dominant working-capital swing item) is solved so that adjusted FCF = this end-point (closed form; working-capital calibration as in the HII / WCN builds).')
+    S('cal_fcf_pre', '  2026E free cash flow before the unbilled calibration (unbilled held at 30-Sep-2026; helper)', 'line', 'm',
+      e26=lambda: (f'={ACT("cf_cfo")}+{QEc("is_ni")}+{QEc("is_dda")}+{QEc("is_sbc")}+{PT("pt_def")}+{QEc("cf_pens_q")}'
+                   f'-({V("bs_ar")}-{B1("bs_ar")})-({V("bs_inv")}-{B1("bs_inv")})-({V("bs_oca")}-{B1("bs_oca")})'
+                   f'+({V("bs_ap")}-{B1("bs_ap")})+({V("bs_accr")}-{B1("bs_accr")})+({V("bs_adv")}-{B1("bs_adv")})+({V("bs_ocl")}-{B1("bs_ocl")})+{V("cf_capex")}'))
+    S('cal_unb', '  2026E unbilled receivables solved to the FCF guidance (= 30-Sep balance + FCF before calibration − guidance)', 'line', 'm',
+      e26=lambda: f'={B1("bs_unb")}+{V("cal_fcf_pre")}-{V("cal_fcf")}')
+    S('cal_fcf_chk', '  Check: 2026E adjusted free cash flow vs guidance end-point (should be 0; ±0.5 rounding)', 'check', 'm', e26=lambda: f'=ROUND({V("afcf")}-{V("cal_fcf")},1)')
+    S('cal_seg_h', '  Memo: 2026 segment guidance (Q3 2026 release; mid-points of the ranges in words) — information rows', 'sub', 'gen')
+    for s, title, code in SEG:
+        S(f'cal_{s}_s', f'    {title}: model 2026E sales − guided sales (~mid-point)', 'memo_calc', 'm', e26=lambda s=s: f'={V(s + "_s")}-{PT("pt_g_" + s + "_s")}')
+        S(f'cal_{s}_m', f'    {title}: model 2026E margin − guided margin (pp)', 'memo_calc', 'pct', e26=lambda s=s: f'={V(s + "_m")}-{PT("pt_g_" + s + "_m")}')
+    blank()
+
+    # ------------------------------------------------------------------ backlog
+    S('bl_hdr', 'Backlog & awards (total backlog excludes unexercised options and IDIQ; funded = appropriated)', 'block',
+      note='BACKLOG — net awards = Δ backlog + sales (implied where awards are not quoted); forecast awards = sales × book-to-bill lever')
+    S('bl_tot', '  Total backlog (period end)', 'line', 'm', data='backlog', bs=True,
+      qe=lambda: f'={PQ("bl_tot")}+{V("bl_awd")}-{V("is_rev")}', ae=lambda: f'={P("bl_tot")}+{V("bl_awd")}-{V("is_rev")}',
+      note='Release backlog schedule ($m; FY2010–2015 and some 2016–18 quarters from the release / 10-Q narrative in $bn). Forecast roll-forward: opening + net awards − sales.')
+    S('bl_fund', '  of which funded', 'memo', 'm', data='backlog_funded', bs=True)
+    S('bl_awd', '  Net awards (quoted in the release where available; else implied = Δ backlog + sales)', 'line', 'm', data='awards', flow=True,
+      hist=lambda: (f'=IF(AND(ISNUMBER({V("bl_tot")}),ISNUMBER({(PQ("bl_tot") if CTX.col.q else P("bl_tot"))}),ISNUMBER({V("is_rev")})),{V("bl_tot")}-{(PQ("bl_tot") if CTX.col.q else P("bl_tot"))}+{V("is_rev")},"")'
+                    if (CTX.col.prevq if CTX.col.q else CTX.col.prior) else None),
+      qe=lambda: f'={V("is_rev")}*{V("bl_b2b")}', ae=lambda: f'={V("is_rev")}*{V("bl_b2b")}',
+      note='Quoted net awards ($bn, rounded in the release text) where given; otherwise implied from the backlog roll-forward (includes adjustments / de-bookings). Forecast = sales × book-to-bill.')
+    S('bl_b2b', '  Book-to-bill (net awards ÷ sales, x)', 'pct', 'x2', all=lambda: f'=IF(AND(ISNUMBER({V("bl_awd")}),ISNUMBER({V("is_rev")})),IFERROR({V("bl_awd")}/{V("is_rev")},""),"")',
+      qe=lambda: f'={PT("pt_b2b")}', ae=lambda: '=' + CH(SC['B2B'][CTX.col.year]),
+      note='Q3 2026 1.5x; 9M 2026 ~1.4x; 2025 1.1x; 2024 1.1x. Q4/26E point estimate; 2027E+ scenario lever (government awards are lumpy; Base 1.05x = backlog growing slightly faster than sales).')
+    S('bl_cov', '  Backlog / sales (years of sales)', 'pct', 'x2', all=lambda: f'=IF(ISNUMBER({V("bl_tot")}),IFERROR({V("bl_tot")}/({V("is_rev")}*{4 if CTX.col.q else 1}),""),"")')
+    S('bl_rpo', '  Memo: remaining performance obligations (10-Q / 10-K, XBRL; from 2018)', 'memo', 'm', data='rpo', bs=True)
+    blank()
+
+    # ------------------------------------------------------------------ legacy structures (memo)
+    S('lg_hdr', 'Legacy segment structures — as originally reported (memo; sales incl. intersegment; eliminations shown)', 'block',
+      note='LEGACY SEGMENTS — 2016–19 (Aerospace / Innovation / Mission / Technology Services), 2009–15 (Aerospace / Electronic / Information / Shipbuilding / Technical Services), 2006–08 (four businesses). Σ checks vs reported sales and segment operating income.')
+    L16 = [('aer', 'Aerospace Systems'), ('inn', 'Innovation Systems (Orbital ATK, from 6-Jun-2018)'), ('mis', 'Mission Systems (legacy, 2016–19)'), ('tsv', 'Technology Services')]
+    L09 = [('aer', 'Aerospace Systems'), ('ele', 'Electronic Systems'), ('inf', 'Information Systems'), ('shp', 'Shipbuilding (spun off as HII 31-Mar-2011)'), ('tec', 'Technical Services')]
+    L06 = [('ins', 'Information & Services (Mission Systems, Information Technology, Technical Services)'), ('aer', 'Aerospace (Integrated Systems, Space Technology)'), ('ele', 'Electronics'), ('shp', 'Ships / Shipbuilding'), ('oth', 'Other (derived residual; row prints blank cells)')]
+    for blk, items, lab in (('l16', L16, '2016–2019 structure'), ('l09', L09, '2009–2015 structure'), ('l06', L06, '2006–2008 structure')):
+        S(f'{blk}_sh', f'  {lab}: sales', 'sub', 'gen')
+        for k, t in items: S(f'{blk}_{k}_s', f'    {t}', 'memo', 'm', data=f'{blk}_{k}_s', flow=True)
+        S(f'{blk}_el_s', '    Intersegment eliminations', 'memo', 'm', data=f'{blk}_elim_s', flow=True)
+        S(f'{blk}_chk_s', '    Check: Σ segments + eliminations vs consolidated sales (should be 0; ±0.5 rounding)', 'check', 'm',
+          hist=lambda blk=blk, items=items: chk('+'.join(f'N({V(blk + "_" + k + "_s")})' for k, _ in items) + f'+N({V(blk + "_el_s")})', V('is_rev'), cond=f'ISNUMBER({V(blk + "_" + items[0][0] + "_s")})'))
+        S(f'{blk}_oh', f'  {lab}: segment operating income', 'sub', 'gen')
+        for k, t in items: S(f'{blk}_{k}_oi', f'    {t}', 'memo', 'm', data=f'{blk}_{k}_oi', flow=True)
+        S(f'{blk}_el_oi', '    Intersegment eliminations', 'memo', 'm', data=f'{blk}_elim_oi', flow=True)
+        S(f'{blk}_soi', '    Segment operating income as published', 'memo', 'm', data=f'{blk}_seg_oi', flow=True)
+        S(f'{blk}_chk_oi', '    Check: Σ segments + eliminations vs published segment operating income (should be 0; ±0.5 rounding)', 'check', 'm',
+          hist=lambda blk=blk, items=items: chk('+'.join(f'N({V(blk + "_" + k + "_oi")})' for k, _ in items) + f'+N({V(blk + "_el_oi")})', V(blk + '_soi'), cond=f'ISNUMBER({V(blk + "_" + items[0][0] + "_oi")})'))
+    blank()
+
+    # ------------------------------------------------------------------ reconciliation to operating income (pension block)
+    S('sec_rc', 'RECONCILIATION: SEGMENT OPERATING INCOME (NON-GAAP) → GAAP OPERATING INCOME (FAS/CAS pension adjustment, unallocated corporate expense)', 'section',
+      note=('PENSION / CORPORATE BLOCK — segment operating income carries CAS pension cost; the FAS/CAS operating adjustment converts to FAS service cost (service-cost-only from 2018 under ASU 2017-07; '
+            'net total FAS/CAS through 2017, incl. the non-service components). Unallocated corporate expense = unallowable costs, purchased-intangible amortization and PP&E step-up depreciation, deferred state taxes.'))
+    S('rc_soi', 'Segment operating income (build; company non-GAAP)', 'line_b', 'm', all=lambda: f'={V("g_soi")}')
+    S('rc_cas', '  Memo: CAS pension cost allocated to the segments (10-K; annual)', 'memo', 'm', data='cas_cost', flow=True,
+      ae=lambda: f'={V("rc_cas_in")}', e26=lambda: f'={V("rc_cas_in")}', note='CAS pension expense recovered through contracts (FY2025 10-K MD&A table: $475m 2025, $279m 2024, $154m 2023). Forecast input.')
+    S('rc_cas_in', '  CAS pension cost — forecast input (USDm, assumption)', 'driver', 'm', e26_in=V0['cas_26'], ae_in=V0['cas_ae'],
+      note=('Assumption: CAS cost driven by prior plan-asset returns and CAS actuarial assumptions; 2026E implied by the 9M FAS/CAS operating adjustment of $29m (vs $193m in 9M 2025) '
+            'and a FAS service cost of ~$200m. Held at the 2026E level (no guidance on EDGAR).'))
+    S('rc_svc', '  Memo: FAS pension service cost (10-K; annual)', 'memo', 'm', data='fas_svc', flow=True, ae=lambda: f'={V("rc_svc_in")}', e26=lambda: f'={V("rc_svc_in")}',
+      note='FAS pension service cost (FY2025 10-K: $217m 2025, $239m 2024, $236m 2023; included in operating costs). Forecast input.')
+    S('rc_svc_in', '  FAS pension service cost — forecast input (USDm, assumption)', 'driver', 'm', e26_in=V0['svc_26'], ae_in=V0['svc_ae'],
+      note='Assumption: ~$200m p.a. (2025 $217m, declining with the higher discount rate at 31-Dec-2025, 5.58%).')
+    S('rc_fascas', '  (+) FAS/CAS operating adjustment (CAS pension cost − FAS service cost; net total FAS/CAS pension adjustment through 2017)', 'line', 'm', data='rc_fascas', flow=True,
+      qe=lambda: f'={PT("pt_fascas")}', ae=lambda: f'={V("rc_cas")}-{V("rc_svc")}',
+      note=('As published in the release reconciliation ("Net pension adjustment" 2006–11; "Net FAS/CAS pension adjustment" 2012–17; "Net FAS (service)/CAS pension adjustment" 2018–20; '
+            '"FAS/CAS operating adjustment" 2021+). Q4/26E: point estimate (9M 2026 $29m). 2027E+ = CAS cost − FAS service cost inputs.'))
+    S('rc_unalloc', '  (+) Unallocated corporate expense (total; negative = expense)', 'line', 'm', data='rc_unalloc', flow=True,
+      qe=lambda: f'={PT("pt_unalloc")}', ae=lambda: f'=-{V("is_rev")}*{V("rc_unalloc_p")}-N({V("m_amort")})',
+      note=('Unallowable corporate costs, intangible amortization & PP&E step-up depreciation, deferred state taxes (incl. the deferred state tax effect of MTM and the B-21 provisions), '
+            'divestiture gains / costs from 2021. Q4/26E point estimate; 2027E+ = % of sales input + future-acquisition amortization.'))
+    S('rc_unalloc_p', '  Unallocated corporate expense % of sales (excl. gains / divestiture items)', 'pct', 'pct',
+      all=lambda: f'=IF(ISNUMBER({V("rc_unalloc")}),IFERROR(-({V("rc_unalloc")}-N({V("rc_gain")})-N({V("rc_divest")}))/{V("is_rev")},""),"")', ae_in=V0['unalloc_pct'],
+      note='2025 0.3% (−$124m incl. the $231m gain), 9M 2026 0.8% (−$250m; intangible amortization & step-up depreciation −$51m), 2024 0.5%. Input (assumption).')
+    S('rc_intang', '    of which: intangible asset amortization & PP&E step-up depreciation (2018+)', 'memo', 'm', data='rc_intang', flow=True,
+      note='Component of unallocated corporate expense (released separately from 2018; $84m 2025). Purchased-intangible amortization schedule (FY2025 10-K): $42m 2026, $31m p.a. 2027–30.')
+    S('rc_mtm_state', '    of which: MTM-related / B-21 deferred state tax (benefit) expense (Q4)', 'memo', 'm', data='rc_mtm_state', flow=True)
+    S('rc_oth_un', '    of which: other unallocated corporate expense', 'memo', 'm', data='rc_other_unalloc', flow=True)
+    S('rc_gain', '  (+) Gain on sale of business (IT services Jan-2021 $1,980m; training services Q2 2025 $231m)', 'line', 'm', data='rc_gain', flow=True, fc=lambda: '=0',
+      note='Shown inside unallocated corporate (expense) income by the company from 2021; the total row above includes it in those periods (the Σ check reconciles only the items that are not already in the total).')
+    S('rc_divest', '  (+) Divestiture-related unallowable state taxes and transaction costs', 'line', 'm', data='rc_divest', flow=True, fc=lambda: '=0')
+    S('rc_royalty', '  (+) Reversal of royalty income included in segment operating income (2006–2013)', 'line', 'm', data='rc_royalty', flow=True, fc=lambda: '=0')
+    S('rc_other', '  (+) Other reconciling items (derived residual; labelled items in cell comments)', 'line', 'm', data='rc_other', flow=True, fc=lambda: '=0', labkey='rc_other_lab')
+    S('rc_oi', '  = Operating income (model)', 'total', 'm',
+      all=lambda: (f'=IF(ISNUMBER({V("rc_soi")}),{V("rc_soi")}+N({V("rc_fascas")})+N({V("rc_unalloc")})+IF(ISNUMBER({V("rc_intang")}),0,N({V("rc_gain")})+N({V("rc_divest")}))'
+                   f'+N({V("rc_royalty")})+N({V("rc_other")}),"")'),
+      note='Segment operating income + FAS/CAS + unallocated (+ gains / divestiture items where not already inside the published unallocated total) + royalty reversal + other.')
+    S('rc_chk', '  Check: model vs reported operating income (should be 0; ±0.5 rounding)', 'check', 'm', hist=lambda: chk(V('rc_oi'), V('is_oi')))
+    S('rc_def', '  Definition / basis (segment structure and pension presentation in force)', 'text', 'gen',
+      note='Basis flags per column: segment structure of each period and the FAS/CAS presentation (cell comments give the detail and the recast sources).')
+    S('rc_nonop', '  Memo: non-operating FAS pension benefit (below operating income, 2018+; incl. in the net FAS/CAS adjustment through 2017)', 'memo_calc', 'm', all=lambda: f'={V("is_nonop")}')
+    S('rc_tot', '  Memo: total net FAS/CAS pension adjustment (operating + non-operating; company supplemental per-share schedule)', 'memo_calc', 'm',
+      all=lambda: f'=IF(ISNUMBER({V("rc_fascas")}),{V("rc_fascas")}+N({V("is_nonop")}),"")')
     blank()
 
     # ------------------------------------------------------------------ cost drivers
-    S('d_hdr', 'Cost drivers, D&A & adjusting items', 'block', note='COST DRIVERS — inputs that drive forecast cost lines (Q4/26E: point estimates; 2027E+: % of sales or schedules)')
-    S('d_dda', '  Depreciation & amortization (total; EBITDA reconciliation)', 'line', 'm1', flow=True,
-      all=lambda: f'=IF(AND(ISNUMBER({V("d_dep")}),ISNUMBER({V("d_amort")})),{V("d_dep")}+{V("d_amort")},"")',
-      note='Release EBIT / EBITDA reconciliations: depreciation expense + amortization of intangible assets.')
-    S('d_amort', '  Amortization of intangible assets (inside segment earnings; not adjusted out)', 'line', 'm1', data='d_amort', flow=True,
-      qe=lambda: f'={PT("pt_amort")}', ae=lambda: f'={V("d_amort_sch")}+N({V("m_amort")})',
-      note='Q4/26E: 10-Q schedule ($8.4m remaining FY26). 2027E+: schedule of intangibles held at 30-Jun-2026 + future-acquisition amortization.')
-    S('d_amort_sch', '  Amortization schedule — intangibles held at 30-Jun-2026 (10-Q, input)', 'driver', 'm1', ae_in=V0['amort_sched'], note=V0['amort_note'])
-    S('d_dep', '  Depreciation expense', 'line', 'm1', data='d_dep', flow=True, qe=lambda: f'={PT("pt_dep")}', ae=lambda: f'={V("is_rev")}*{V("d_dep_pct")}')
-    S('d_dep_pct', '  Depreciation % of net sales', 'pct', 'pct', all=ratio('d_dep', 'is_rev'), ae_in=V0['dep_pct'],
-      note='Rising with the Spartanburg, SC aerospace campus (online summer 2027) and capacity additions.')
-    S('d_sga', '  SG&A % of net sales', 'pct', 'pct', all=ratio('is_sga', 'is_rev'),
-      qe=lambda: f'={P("d_sga")}+IFERROR({ACT("is_sga")}/{ACT("is_rev")}-{ACT0("is_sga")}/{ACT0("is_rev")},0)', ae_in=V0['sga_pct'],
-      note='Q4/26E: prior-year quarter ratio + 9M FY26 y/y drift; 2027E+ input. Gross profit is implied: EBIT (from the adjusted build) + operating costs − other income.')
-    S('d_rd', '  R&D % of net sales', 'pct', 'pct', all=ratio('is_rd', 'is_rev'), qe=lambda: f'=IFERROR({ACT("is_rd")}/{ACT("is_rev")},"")', ae_in=V0['rd_pct'])
-    S('d_sbc', '  Share-based compensation (cash-flow statement, XBRL)', 'line', 'm1', data='cf_sbc', flow=True,
-      qe=lambda: f'={P("d_sbc")}*(1+IFERROR({ACT("d_sbc")}/{ACT0("d_sbc")}-1,0))', ae=lambda: f'={V("is_rev")}*{V("d_sbc_pct")}',
-      note='Q4/26E: prior-year quarter × 9M FY26 y/y; 2027E+: % of net sales. Woodward does not adjust out share-based compensation.')
-    S('d_sbc_pct', '  Share-based compensation % of net sales', 'pct', 'pct', all=ratio('d_sbc', 'is_rev'), ae_in=V0['sbc_pct'])
-    S('d_othinc', '  Other income, net — recurring (excl. divestiture gains), input', 'line', 'm1', qe=lambda: f'={PT("pt_othinc")}', ae_in=V0['othinc'],
-      note='Other income includes the amortization of deferred revenue from the GE joint venture (Jan-2016), rental income, pension and investment items. 9M FY26 $60.3m. Input (assumption).')
-    S('d_adj_h', '  Adjusting items (pre-tax, adjusted out by the company; forecast inputs):', 'sub', 'gen')
-    S('d_restr', '  Restructuring charges', 'line', 'm1', data='oa_restr', flow=True, labkey='oa_restr_lab', qe=lambda: f'={PT("pt_restr")}', ae_in=V0['ae_restr'],
-      note=MAN['restructuring']['model'])
-    S('d_acq', '  Acquisition, transaction, integration & business development costs', 'line', 'm1', data='oa_acq', flow=True, labkey='oa_acq_lab',
-      qe_in=0.0, ae=lambda: f'={V("m_spend")}*{V("d_acq_pct")}')
-    S('d_acq_pct', '  Acquisition & integration costs % of acquisition spend', 'pct', 'pct', ae_in=0.02)
-    S('d_pa', '  Purchase accounting (L\'Orange inventory step-up and backlog amortization)', 'line', 'm1', data='oa_pa', flow=True, labkey='oa_pa_lab', fc=lambda: '=0')
-    S('d_gain', '  (Gains) / losses on sales of businesses, properties & product lines; swaps (product rationalization)', 'line', 'm1', data='oa_gain', flow=True,
-      labkey='oa_gain_lab', qe_in=0.0, ae=lambda: f'=-{V("dv_gain")}', note='2027E: gain on the pending pilot-controls sale (negative = gain adjusted out).')
-    S('d_impair', '  Impairments (Senvion FY2019; assets sold FY2020)', 'line', 'm1', data='oa_impair', flow=True, labkey='oa_impair_lab', fc=lambda: '=0')
-    S('d_oadj', '  Other items (inventory / collections charges, non-recurring matters, stock-compensation acceleration, Forward Option)', 'line', 'm1',
-      data='oa_other', flow=True, labkey='oa_other_lab', fc=lambda: '=0')
-    S('d_indda', '  Memo: adjusting items recorded in D&A (L\'Orange backlog amortization; not added back again in adjusted EBITDA)', 'memo', 'm1', data='oa_in_dda', flow=True, fc=lambda: '=0')
+    S('d_hdr', 'Cost drivers, D&A & other items', 'block', note='COST DRIVERS — inputs that drive forecast cost lines (Q4/26E: point estimates; 2027E+: % of sales or schedules)')
+    S('d_svc_p', '  Service sales % of total sales', 'pct', 'pct', all=ratio('is_svc', 'is_rev'), qe=lambda: f'=IFERROR({ACT("is_svc")}/{ACT("is_rev")},"")', ae=lambda: f'={P("d_svc_p")}',
+      note='Mix memo (product vs service sales); forecast holds the 9M 2026 share.')
+    S('d_ga', '  General & administrative expenses % of sales', 'pct', 'pct', all=ratio('is_ga', 'is_rev'),
+      qe=lambda: f'={P("d_ga")}+IFERROR({ACT("is_ga")}/{ACT("is_rev")}-{ACT0("is_ga")}/{ACT0("is_rev")},0)', ae_in=V0['ga_pct'],
+      note='Q4/26E: prior-year quarter ratio + 9M 2026 y/y drift; 2027E+ input (2025 9.6%, 9M 2026 9.7%). Cost of sales is the implied balancing line to the operating-income build.')
+    S('d_dda', '  Depreciation & amortization (cash-flow statement)', 'line', 'm', data='cf_dda', flow=True, qe=lambda: f'={PT("pt_dda")}', ae=lambda: f'={V("is_rev")}*{V("d_dda_p")}',
+      note='Cash-flow statement D&A (2009–15 from XBRL; incl. purchased-intangible amortization). Q4/26E point estimate; 2027E+ % of sales.')
+    S('d_dda_p', '  D&A % of sales', 'pct', 'pct', all=ratio('d_dda', 'is_rev'), ae_in=V0['dda_pct'], note='2025 3.5%, 9M 2026 3.5% (capacity investments in solid rocket motors, microelectronics, Sentinel / B-21).')
+    S('d_amort', '  of which: purchased-intangible amortization (10-K schedule, input; in unallocated corporate expense)', 'driver', 'm', e26_in=V0['amort'][2026], ae_in={y: V0['amort'][y] for y in range(2027, 2032)},
+      note=MAN['amort_sched']['src'] + '. 2031E: $31m assumed (schedule ends 2030).')
+    S('d_dep', '  Depreciation (D&A − intangible amortization − future-acquisition amortization)', 'line', 'm', fc=lambda: f'={V("d_dda")}-{V("d_amort")}-N({V("m_amort")})')
+    S('d_sbc', '  Stock-based compensation (cash-flow statement)', 'line', 'm', data='cf_sbc', flow=True, qe=lambda: f'={PT("pt_sbc")}', ae=lambda: f'={V("is_rev")}*{V("d_sbc_p")}')
+    S('d_sbc_p', '  Stock-based compensation % of sales', 'pct', 'pct', all=ratio('d_sbc', 'is_rev'), ae_in=V0['sbc_pct'])
+    S('d_nonop', '  Non-operating FAS pension benefit — forecast input (USDm, assumption)', 'driver', 'm', qe=lambda: f'={PT("pt_nonop")}', ae_in=V0['nonop_ae'],
+      note='Non-cash (interest cost − expected return on assets, incl. OPB). 2025 $541m; 9M 2026 $499m (~$665m annualised). Held near the 2026E run-rate (assumption; EROA 7.5%, discount rate 5.58% at 31-Dec-2025).')
+    S('d_oth', '  Other, net excl. interest income — forecast input (USDm, assumption)', 'driver', 'm', qe=lambda: f'={PT("pt_oth")}', ae_in=V0['oth_ae'],
+      note='Marketable-securities returns on non-qualified plan assets, equity-method results and other. Interest income on cash is modelled separately below.')
+    S('d_mtm', '  Mark-to-market pension & OPB (benefit) expense — forecast (nil: actuarial gains / losses are not forecast)', 'driver', 'm', fc=lambda: '=0',
+      note='Fourth-quarter remeasurement (2025 +$527m benefit; 2024 +$443m; 2023 −$422m). Not forecast; the FY2025 10-K sensitivity is ±$314m per 100bp of actual vs expected return.')
+    S('d_b21', '  Memo: B-21 loss provisions (company-quantified; Q4 2023 $1,560m, Q1 2025 $477m — model adjusting item in the EBITDA bridge)', 'driver', 'm', data='b21', flow=True, fc=lambda: '=0')
     blank()
 
     # ------------------------------------------------------------------ INCOME STATEMENT
-    S('sec_is', 'CONSOLIDATED STATEMENT OF EARNINGS (US GAAP)', 'section',
-      note='CONSOLIDATED IS — forecast logic (EBIT = adjusted EBIT − adjusting items; gross profit implied)')
-    S('is_rev', 'Net sales', 'total', 'm1', data='rev', flow=True, fc=lambda: f'={V("g_rev")}', note='Forecast linked to the segment build.')
-    S('is_cogs', 'Cost of goods sold', 'line', 'm1', data='cogs', flow=True, fc=lambda: f'={V("is_rev")}-{V("is_gp")}')
-    S('is_gp', 'Gross profit', 'line_b', 'm1', hist=lambda: f'=IF(ISNUMBER({V("is_cogs")}),{V("is_rev")}-{V("is_cogs")},"")',
-      fc=lambda: f'={V("is_ebit")}+{V("is_sga")}+{V("is_rd")}+{V("is_amort")}+{V("is_restr")}+{V("is_othop")}-{V("is_othinc")}',
-      note='Forecast = EBIT + operating costs − other income (implied by the adjusted EBIT build).')
+    S('sec_is', 'CONSOLIDATED STATEMENT OF EARNINGS (US GAAP)', 'section', note='CONSOLIDATED IS — forecast logic (operating income from the segment build + pension / corporate block; cost of sales implied)')
+    S('is_prod', 'Product sales', 'line', 'm', data='prod_sales', flow=True, fc=lambda: f'={V("is_rev")}-{V("is_svc")}')
+    S('is_svc', 'Service sales', 'line', 'm', data='svc_sales', flow=True, fc=lambda: f'={V("is_rev")}*{V("d_svc_p")}')
+    S('is_rev', 'Total sales', 'total', 'm', data='rev', flow=True, fc=lambda: f'={V("g_rev")}', note='Forecast linked to the segment build.')
+    S('is_cos', 'Cost of sales (product and service operating costs; incl. CAS pension cost and FAS service cost)', 'line', 'm', data='cos', flow=True,
+      fc=lambda: f'={V("is_rev")}-{V("is_ga")}-{V("is_othop")}-{V("is_oi")}', note='Forecast = sales − G&A − other operating items − operating income (implied by the build).')
+    S('is_gp', 'Gross profit (sales − cost of sales)', 'line_b', 'm', all=lambda: f'=IF(ISNUMBER({V("is_cos")}),{V("is_rev")}-{V("is_cos")},"")')
     S('is_gm', '  Gross margin %', 'pct', 'pct', all=ratio('is_gp', 'is_rev'))
-    S('is_sga', 'Selling, general & administrative expenses', 'line', 'm1', data='sga', flow=True, fc=lambda: f'={V("is_rev")}*{V("d_sga")}')
-    S('is_rd', 'Research & development costs', 'line', 'm1', data='rd', flow=True, fc=lambda: f'={V("is_rev")}*{V("d_rd")}')
-    S('is_amort', 'Amortization of intangible assets (separate line to FY2020; in cost of goods sold / SG&A from FY2021)', 'line', 'm1', data='amort_is', flow=True, fc=lambda: '=0')
-    S('is_restr', 'Restructuring charges', 'line', 'm1', data='restr', flow=True, fc=lambda: f'={V("d_restr")}')
-    S('is_othop', 'Other items shown separately (gain on cross-currency swaps FY2020, impairments)', 'line', 'm1', data='oth_op', flow=True, fc=lambda: '=0',
-      labkey='oth_op_labels')
-    S('is_othinc', 'Other income, net (income +)', 'line', 'm1', data='oth_inc', flow=True, fc=lambda: f'={V("d_othinc")}-{V("d_gain")}',
-      note='Forecast = recurring other income + divestiture gains (adjusted out in the bridge).')
-    S('is_ebit', 'EBIT (earnings before interest and taxes — company definition)', 'total', 'm1',
-      hist=lambda: f'=IF(ISNUMBER({V("is_gp")}),{V("is_gp")}-{V("is_sga")}-{V("is_rd")}-{V("is_amort")}-{V("is_restr")}-{V("is_othop")}+{V("is_othinc")},"")',
-      fc=lambda: f'={V("g_adj")}-{V("o_tot")}',
-      note='Woodward presents no operating-income line; EBIT = net earnings + income taxes + interest expense − interest income (= segment earnings + nonsegment expenses). Forecast = adjusted EBIT − adjusting items.')
-    S('is_ebit_m', '  EBIT margin %', 'pct', 'pct', all=ratio('is_ebit', 'is_rev'))
-    S('is_int', 'Interest expense', 'line', 'm1', data='int_exp', flow=True, qe=lambda: f'={PT("pt_int")}',
+    S('is_ga', 'General and administrative expenses', 'line', 'm', data='ga', flow=True, fc=lambda: f'={V("is_rev")}*{V("d_ga")}')
+    S('is_othop', 'Other operating items (goodwill impairment 2008 +$3,060m; gains on sale of business 2021 / 2025 shown negative; expense = +)', 'line', 'm', data='oth_op', flow=True, fc=lambda: '=0', labkey='oth_op_lab')
+    S('is_oi', 'Operating income', 'total', 'm', data='oi', flow=True, fc=lambda: f'={V("rc_oi")}', note='Forecast = segment operating income + FAS/CAS operating adjustment + unallocated corporate expense (reconciliation block).')
+    S('is_oim', '  Operating margin rate %', 'pct', 'pct', all=ratio('is_oi', 'is_rev'))
+    S('is_int', 'Interest expense', 'line', 'm', data='int_exp', flow=True, qe=lambda: f'={PT("pt_int")}',
       ae=lambda: f'={P("ds_notes")}*{V("ds_r_notes")}+{P("ds_rev")}*{V("ds_r_rev")}+{V("ds_fees")}',
-      note='Q4/26E point estimate. 2027E+ = rate × opening notes & term loan + rate × opening revolver + fees (no circularity).')
-    S('is_intinc', 'Interest income', 'line', 'm1', data='int_inc', flow=True, qe=lambda: f'={PT("pt_intinc")}', ae=lambda: f'={P("cf_end")}*{V("ds_r_cash")}')
-    S('is_ebt', 'Earnings before income taxes', 'line_b', 'm1', all=lambda: f'=IF(ISNUMBER({V("is_ebit")}),{V("is_ebit")}-{V("is_int")}+{V("is_intinc")},"")')
-    S('is_tax', 'Income taxes', 'line', 'm1', data='tax', flow=True, fc=lambda: f'={V("is_ebt")}*{V("is_etr")}')
+      note='Q4/26E point estimate (Q3 $158m). 2027E+ = rate × opening notes + rate × opening commercial paper / revolver + fees and amortization (no circularity).')
+    S('is_intinc', 'Interest income (within "Other, net"; 2006–08 separate line)', 'line', 'm', data='int_inc', flow=True, qe=lambda: '=0', ae=lambda: f'={P("cf_end")}*{V("ds_r_cash")}',
+      note='Separate line only in 2006–08; inside Other, net otherwise (Q4/26E: inside the Other, net point estimate). 2027E+ = yield × opening cash.')
+    S('is_nonop', 'Non-operating FAS pension benefit (2018+; in operating income through 2017)', 'line', 'm', data='nonop_fas', flow=True, fc=lambda: f'={V("d_nonop")}')
+    S('is_mtm', 'Mark-to-market pension and OPB benefit (expense) (Q4, 2018+)', 'line', 'm', data='mtm', flow=True, fc=lambda: f'={V("d_mtm")}')
+    S('is_oth', 'Other, net (incl. interest income from 2009; 2010–11 debt-redemption charges) (income +)', 'line', 'm', data='oth_nonop', flow=True, fc=lambda: f'={V("d_oth")}')
+    S('is_ebt', 'Earnings before income taxes', 'line_b', 'm',
+      all=lambda: f'=IF(ISNUMBER({V("is_oi")}),{V("is_oi")}-{V("is_int")}+N({V("is_intinc")})+N({V("is_nonop")})+N({V("is_mtm")})+N({V("is_oth")}),"")')
+    S('is_tax', 'Federal and foreign income tax expense', 'line', 'm', data='tax', flow=True, fc=lambda: f'={V("is_ebt")}*{V("is_etr")}')
     S('is_etr', '  Effective tax rate', 'pct', 'pct', all=ratio('is_tax', 'is_ebt'), qe=lambda: f'={PT("pt_etr")}', ae_in=V0['etr'],
-      note='Q4/26E: point estimate consistent with the ~22.5% FY26 adjusted-rate guidance. 2027E+: input.')
-    S('is_ni', 'Net earnings', 'total', 'm1', all=lambda: f'=IF(ISNUMBER({V("is_ebt")}),{V("is_ebt")}-{V("is_tax")},"")')
-    S('is_ni_chk', '  Check: net earnings vs reported (should be 0; ±0.1 rounding)', 'check', 'm1',
-      hist=lambda: f'=IF(ISNUMBER({V("is_ni_pub")}),IF(ABS({V("is_ni")}-{V("is_ni_pub")})<=0.15,0,ROUND({V("is_ni")}-{V("is_ni_pub")},1)),"")')
-    S('is_ni_pub', '  Memo: net earnings as reported (attributable to Woodward)', 'memo', 'm1', data='ni', flow=True)
-    S('is_nci', '  Memo: net earnings attributable to noncontrolling interests (none since FY2011)', 'memo', 'm1', data='nci', flow=True, fc=lambda: '=0')
-    S('is_dda', '  Memo: depreciation & amortization (total)', 'memo_calc', 'm1', all=lambda: f'={V("d_dda")}')
-    S('is_sbc', '  Memo: share-based compensation', 'memo_calc', 'm1', all=lambda: f'={V("d_sbc")}')
-    S('eps_hdr', '(Earnings per share — Woodward common stock)', 'sub', 'gen')
+      note='9M 2026 11.5% (higher research credits); 2025 17.5%; 2024 16.8%. Q4/26E point estimate; 2027E+ input (assumption).')
+    S('is_cont', 'Earnings from continuing operations', 'line', 'm', all=lambda: f'=IF(ISNUMBER({V("is_ebt")}),{V("is_ebt")}-{V("is_tax")},"")')
+    S('is_disc', 'Earnings from discontinued operations, net of tax (Shipbuilding to 2011; TASC 2009)', 'line', 'm', data='disc_ops', flow=True, fc=lambda: '=0')
+    S('is_ni', 'Net earnings', 'total', 'm', all=lambda: f'=IF(ISNUMBER({V("is_cont")}),{V("is_cont")}+N({V("is_disc")}),"")')
+    S('is_ni_chk', '  Check: net earnings vs reported (should be 0; ±0.5 rounding)', 'check', 'm', hist=lambda: chk(V('is_ni'), V('is_ni_pub')))
+    S('is_ni_pub', '  Memo: net earnings as reported', 'memo', 'm', data='ni', flow=True)
+    S('is_ni_py', '  Memo: net earnings as restated in the following year\'s release / 10-K (where different)', 'memo', 'm', data='ni_py', flow=True)
+    S('is_rev_py', '  Memo: sales as restated in the following year\'s release / 10-K (where different: TASC 2008, Shipbuilding 2010, ASC 606 2017)', 'memo', 'm', data='rev_py', flow=True)
+    S('is_dda', '  Memo: depreciation & amortization', 'memo_calc', 'm', all=lambda: f'={V("d_dda")}')
+    S('is_sbc', '  Memo: stock-based compensation', 'memo_calc', 'm', all=lambda: f'={V("d_sbc")}')
+    S('eps_hdr', '(Earnings per share)', 'sub', 'gen')
     S('sh_basic', '  Weighted-average basic shares (m)', 'line', 'm1', data='sh_b', avg=True,
-      qe=lambda: f'={B1("bs_shares")}-${E26}${R["bb_sh"]}*0.5+${E26}${R["bb_iss"]}*0.5',
-      ae=lambda: f'=AVERAGE({V("bb_beg")},{V("bb_end")})',
-      note='Q4/26E: shares outstanding at 30-Jun-2026 − Q4 buybacks (mid-quarter) + equity-plan issuance. 2027E+: average of beginning and ending shares.')
+      qe=lambda: f'={B1("bs_shares")}-${E26}${R["bb_sh"]}*0.5+${E26}${R["bb_iss"]}*0.5', ae=lambda: f'=AVERAGE({V("bb_beg")},{V("bb_end")})',
+      note='Q4/26E: shares outstanding at 30-Sep-2026 − Q4 buybacks (mid-quarter) + equity-plan issuance. 2027E+: average of beginning and ending shares.')
     S('sh_dil', '  Weighted-average diluted shares (m)', 'line', 'm1', data='sh_d', avg=True,
       qe=lambda: f'={V("sh_basic")}+({Q3}{R["sh_dil"]}-{Q3}{R["sh_basic"]})', ae=lambda: f'={V("sh_basic")}+{V("ds_dil")}')
-    S('eps_dil', 'EPS – diluted ($)', 'eps_total', 'ps', all=lambda: f'=IF(ISNUMBER({V("sh_dil")}),IFERROR({V("is_ni")}/{V("sh_dil")},""),"")',
-      note='Net earnings / weighted diluted shares (±$0.01 vs reported).')
+    S('eps_dil', 'EPS – diluted ($)', 'eps_total', 'ps', all=lambda: f'=IF(ISNUMBER({V("sh_dil")}),IFERROR(({V("is_ni")}+N({V("eps_adj")}))/{V("sh_dil")},""),"")',
+      note='Net earnings ÷ weighted diluted shares (2006–07: + dividends on the convertible preferred added back under the if-converted method, derived).')
+    S('eps_adj', '  Memo: diluted EPS numerator adjustment (convertible preferred dividends, 2006–07; derived from published EPS)', 'memo', 'm', data='eps_num_adj')
     S('eps_dil_g', '  EPS – diluted y/y %', 'growth', 'pct', all=growth('eps_dil'))
+    S('eps_cont', '  Memo: EPS – diluted, continuing operations as reported ($) (2006–2013)', 'eps_memo', 'ps', data='eps_d_cont')
     S('eps_pub', '  Memo: EPS – diluted as reported ($)', 'eps_memo', 'ps', data='eps_d')
     S('eps_chk', '  Check: model vs reported diluted EPS (should be 0.00; ±0.01 rounding)', 'check', 'ps',
       hist=lambda: f'=IF(AND(ISNUMBER({V("eps_pub")}),ISNUMBER({V("eps_dil")})),IF(ABS({V("eps_dil")}-{V("eps_pub")})<=0.0101,0,ROUND({V("eps_dil")}-{V("eps_pub")},2)),"n/p")')
-    S('dps', '  Cash dividends paid per share ($)', 'line', 'ps', data='dps', flow=True, qe_in=V0['dps_q'],
-      ae=lambda: f'={P("dps")}*(1+{V("dps_g")})', note='Quarterly dividend $0.32 (declared Jun-2026 and Sep-2026). 2027E+: prior year × (1 + growth).')
+    S('dps', '  Dividends declared per share ($)', 'line', 'ps', data='dps', flow=True, qe_in=V0['dps_q'], ae=lambda: f'={P("dps")}*(1+{V("dps_g")})',
+      note='XBRL CommonStockDividendsPerShareDeclared. Quarterly $2.47 from Q2 2026 (raised from $2.31). 2027E+: prior year × (1 + growth).')
     S('dps_g', '  Dividend per share growth %', 'driver', 'pct', all=growth('dps'), ae_in=V0['dps_g'])
     blank()
 
-    # ------------------------------------------------------------------ RECON 1: EBIT -> adjusted EBIT
-    S('sec_r1', 'RECONCILIATION: EBIT → ADJUSTED EBIT (company definition, as published from Q2 FY2018)', 'section',
-      note='ADJUSTED EBIT — per the release reconciliations ("Reconciliation of Net Earnings to EBIT and Adjusted EBIT"); items in the labels of each period are in the cell comments of the cost-driver rows')
-    S('o_op', 'EBIT (GAAP basis, company definition)', 'line_b', 'm1', all=lambda: f'={V("is_ebit")}')
-    for k, lab, d in (('o_restr', '  (+) Restructuring charges', 'd_restr'), ('o_acq', '  (+) Acquisition, transaction, integration & business development costs', 'd_acq'),
-                      ('o_pa', '  (+) Purchase accounting (inventory step-up, backlog amortization)', 'd_pa'),
-                      ('o_gain', '  (+) (Gains) / losses on sales of businesses, properties, product lines; swaps', 'd_gain'),
-                      ('o_impair', '  (+) Impairments', 'd_impair'), ('o_oth', '  (+) Other items', 'd_oadj')):
-        S(k, lab, 'line', 'm1', all=lambda d=d: f'={V(d)}')
-    S('o_tot', '  Total adjusting items (pre-tax)', 'line_b', 'm1',
-      all=lambda: f'=IF(ISNUMBER({V("o_restr")}),{nsum(["o_restr", "o_acq", "o_pa", "o_gain", "o_impair", "o_oth"])},"")')
-    S('o_adj', '  = Adjusted EBIT (model bridge)', 'total', 'm1', all=lambda: f'=IF(ISNUMBER({V("o_op")}),{V("o_op")}+{V("o_tot")},"")',
-      note='Rebuilt from the published reconciliation items; forecast = EBIT + forecast adjusting items (equals the segment build — check in the Group block).')
-    S('o_adj_m', '  Adjusted EBIT margin %', 'pct', 'pct', all=ratio('o_adj', 'is_rev'))
-    S('o_pub', '  Company-published adjusted EBIT', 'memo', 'm1', data='adj_ebit_pub', flow=True)
-    S('o_chk', '  Check: model bridge vs company-published (should be 0)', 'check', 'm1',
-      hist=lambda: f'=IF(ISNUMBER({V("o_pub")}),IF(ABS({V("o_adj")}-{V("o_pub")})<=0.15,0,ROUND({V("o_adj")}-{V("o_pub")},1)),"n/p")')
-    S('o_def', '  Definition / basis (company adjusted definition in force)', 'text', 'gen',
-      note='Basis changes are flagged in the column where they take effect (cell comment gives the detail).')
-    S('o_adj_g', '  Adjusted EBIT y/y %', 'growth', 'pct', all=growth('o_adj'))
-    S('o_inc', '  Incremental adjusted EBIT margin (Δ adjusted EBIT / Δ net sales)', 'pct', 'pct', all=incr('o_adj', 'is_rev'))
-    blank()
-
-    # ------------------------------------------------------------------ RECON 2: net earnings -> EBIT -> EBITDA -> adjusted EBITDA
-    S('sec_r2', 'RECONCILIATION: NET EARNINGS → EBIT → EBITDA → ADJUSTED EBITDA (company definitions, as published)', 'section',
-      note='EBITDA — net earnings + income taxes + interest expense − interest income = EBIT; + depreciation + amortization = EBITDA; + adjusting items not already in D&A = adjusted EBITDA')
-    S('r_ni', 'Net earnings (GAAP)', 'line_b', 'm1', all=lambda: f'={V("is_ni")}')
-    S('r_tax', '  (+) Income taxes', 'line', 'm1', all=lambda: f'={V("is_tax")}')
-    S('r_int', '  (+) Interest expense', 'line', 'm1', all=lambda: f'={V("is_int")}')
-    S('r_intinc', '  (−) Interest income', 'line', 'm1', all=lambda: f'=-{V("is_intinc")}')
-    S('r_gebit', '  = EBIT', 'line_b', 'm1', all=lambda: f'=IF(ISNUMBER({V("r_ni")}),{V("r_ni")}+{V("r_tax")}+{V("r_int")}+{V("r_intinc")},"")')
-    S('r_gebit_pub', '  Company-published EBIT', 'memo', 'm1', data='ebit_pub', flow=True)
-    S('r_gebit_chk', '  Check: model vs company-published EBIT (should be 0)', 'check', 'm1',
-      hist=lambda: f'=IF(ISNUMBER({V("r_gebit_pub")}),IF(ABS({V("r_gebit")}-{V("r_gebit_pub")})<=0.15,0,ROUND({V("r_gebit")}-{V("r_gebit_pub")},1)),"n/p")')
-    S('r_dep', '  (+) Depreciation expense', 'line', 'm1', all=lambda: f'={V("d_dep")}')
-    S('r_amort', '  (+) Amortization of intangible assets', 'line', 'm1', all=lambda: f'={V("d_amort")}')
-    S('r_ebitda', '  = EBITDA', 'total', 'm1', all=lambda: f'=IF(AND(ISNUMBER({V("r_gebit")}),ISNUMBER({V("r_dep")})),{V("r_gebit")}+{V("r_dep")}+{V("r_amort")},"")')
-    S('r_ebitda_pub', '  Company-published EBITDA', 'memo', 'm1', data='ebitda_pub', flow=True)
-    S('r_ebitda_chk', '  Check: model vs company-published EBITDA (should be 0)', 'check', 'm1',
-      hist=lambda: f'=IF(AND(ISNUMBER({V("r_ebitda_pub")}),ISNUMBER({V("r_ebitda")})),IF(ABS({V("r_ebitda")}-{V("r_ebitda_pub")})<=0.15,0,ROUND({V("r_ebitda")}-{V("r_ebitda_pub")},1)),"n/p")')
-    S('r_adjx', '  (+) Adjusting items not already in D&A (total adjusting items − backlog amortization)', 'line', 'm1',
-      all=lambda: f'=IF(ISNUMBER({V("o_tot")}),{V("o_tot")}-N({V("d_indda")}),"")')
-    S('r_adj', '  = Adjusted EBITDA', 'total', 'm1', all=lambda: f'=IF(AND(ISNUMBER({V("r_ebitda")}),ISNUMBER({V("r_adjx")})),{V("r_ebitda")}+{V("r_adjx")},"")',
-      note='Company definition (published from Q2 FY2018; = EBITDA before). Used for leverage (net debt / adjusted EBITDA) and EV / EBITDA.')
+    # ------------------------------------------------------------------ RECON 2: NI -> EBITDA -> adjusted EBITDA (model)
+    S('sec_r2', 'RECONCILIATION: NET EARNINGS → EBITDA → ADJUSTED EBITDA (model definitions — Northrop Grumman publishes no EBITDA)', 'section',
+      note=('EBITDA (model) = operating income + D&A. Adjusted EBITDA (model) adds back only items the company itself quantified: gains on sales of businesses, divestiture costs, '
+            'the 2008 goodwill impairment and the B-21 loss provisions (Q4 2023, Q1 2025). MTM sits below operating income from 2018.'))
+    S('r_ni', 'Net earnings (GAAP)', 'line_b', 'm', all=lambda: f'={V("is_ni")}')
+    S('r_disc', '  (−) Discontinued operations', 'line', 'm', all=lambda: f'=-N({V("is_disc")})')
+    S('r_tax', '  (+) Income taxes', 'line', 'm', all=lambda: f'={V("is_tax")}')
+    S('r_int', '  (+) Interest expense', 'line', 'm', all=lambda: f'={V("is_int")}')
+    S('r_nonop', '  (−) Non-operating FAS pension benefit, MTM, other net and interest income', 'line', 'm', all=lambda: f'=-(N({V("is_intinc")})+N({V("is_nonop")})+N({V("is_mtm")})+N({V("is_oth")}))')
+    S('r_ebit', '  = Operating income (EBIT)', 'line_b', 'm', all=lambda: f'=IF(ISNUMBER({V("r_ni")}),{V("r_ni")}+{V("r_disc")}+{V("r_tax")}+{V("r_int")}+{V("r_nonop")},"")')
+    S('r_ebit_chk', '  Check: EBIT vs operating income (should be 0; ±0.5 rounding)', 'check', 'm', all=lambda: chk(V('r_ebit'), V('is_oi')))
+    S('r_dda', '  (+) Depreciation & amortization', 'line', 'm', all=lambda: f'={V("d_dda")}')
+    S('r_ebitda', '  = EBITDA (model)', 'total', 'm', all=lambda: f'=IF(AND(ISNUMBER({V("r_ebit")}),ISNUMBER({V("r_dda")})),{V("r_ebit")}+{V("r_dda")},"")')
+    S('r_gain', '  (−) Gains on sales of businesses / (+) divestiture costs (unallocated corporate)', 'line', 'm', all=lambda: f'=IF(ISNUMBER({V("r_ebitda")}),-N({V("rc_gain")})-N({V("rc_divest")}),"")')
+    S('r_impair', '  (+) Goodwill impairment (Q4 2008)', 'line', 'm', all=lambda: f'=IF(ISNUMBER({V("r_ebitda")}),IF(N({V("is_othop")})>0,{V("is_othop")},0),"")')
+    S('r_b21', '  (+) B-21 loss provisions (company-quantified; model item)', 'line', 'm', all=lambda: f'=IF(ISNUMBER({V("r_ebitda")}),N({V("d_b21")}),"")')
+    S('r_adj', '  = Adjusted EBITDA (model)', 'total', 'm', all=lambda: f'=IF(ISNUMBER({V("r_ebitda")}),{V("r_ebitda")}+{V("r_gain")}+{V("r_impair")}+{V("r_b21")},"")',
+      note='Model definition; used for leverage (net debt / adjusted EBITDA) and EV / EBITDA. Includes the FAS/CAS operating adjustment (part of GAAP operating income).')
     S('r_adj_m', '  Adjusted EBITDA margin %', 'pct', 'pct', all=ratio('r_adj', 'is_rev'))
-    S('r_adj_pub', '  Company-published adjusted EBITDA', 'memo', 'm1', data='adj_ebitda_pub', flow=True)
-    S('r_chk', '  Check: model vs company-published adjusted EBITDA (should be 0)', 'check', 'm1',
-      hist=lambda: f'=IF(AND(ISNUMBER({V("r_adj_pub")}),ISNUMBER({V("r_adj")})),IF(ABS({V("r_adj")}-{V("r_adj_pub")})<=0.15,0,ROUND({V("r_adj")}-{V("r_adj_pub")},1)),"n/p")')
-    S('r_ebit_h', 'To adjusted EBIT, full-cost (for NOPAT, ROIC and the DCF):', 'sub', 'gen')
-    S('r_ddan', '  (−) Depreciation & amortization (total)', 'line', 'm1', all=lambda: f'=IF(ISNUMBER({V("d_dda")}),-{V("d_dda")},"")')
-    S('r_ebit', '  = Adjusted EBIT, full-cost (adjusted EBITDA − total D&A; = adjusted EBIT except purchase-accounting amortization)', 'total', 'm1',
-      all=lambda: f'=IF(ISNUMBER({V("r_adj")}),{V("r_adj")}+{V("r_ddan")},"")',
-      note='Woodward does not adjust out amortization, so adjusted EBIT is already full-cost; this line also charges the FY2018–19 L\'Orange backlog amortization.')
-    S('r_ebit_m', '  Adjusted EBIT (full-cost) margin %', 'pct', 'pct', all=ratio('r_ebit', 'is_rev'))
-    S('r_cash', '  Memo: acquisition, integration & restructuring costs (cash costs adjusted out; deducted in the DCF)', 'memo_calc', 'm1',
-      all=lambda: f'=IF(ISNUMBER({V("o_acq")}),{V("o_acq")}+{V("o_restr")},"")')
+    S('r_def', '  Definition / basis', 'text', 'gen')
+    S('r_ebit_h', 'To adjusted EBIT (for NOPAT, ROIC and the DCF):', 'sub', 'gen')
+    S('r_ddan', '  (−) Depreciation & amortization', 'line', 'm', all=lambda: f'=IF(ISNUMBER({V("d_dda")}),-{V("d_dda")},"")')
+    S('r_aebit', '  = Adjusted EBIT (model; after purchased-intangible amortization, incl. the FAS/CAS operating adjustment)', 'total', 'm', all=lambda: f'=IF(ISNUMBER({V("r_adj")}),{V("r_adj")}+{V("r_ddan")},"")',
+      note='Full-cost: amortization and the FAS/CAS adjustment are not added back. The DCF deducts the FAS/CAS operating adjustment (non-cash pension accounting) from NOPAT.')
+    S('r_aebit_m', '  Adjusted EBIT margin %', 'pct', 'pct', all=ratio('r_aebit', 'is_rev'))
+    S('r_cash', '  Memo: divestiture costs (cash; added back above, deducted in the DCF)', 'memo_calc', 'm', all=lambda: f'=IF(ISNUMBER({V("rc_divest")}),-N({V("rc_divest")}),0)')
     blank()
 
     # ------------------------------------------------------------------ RECON 3: adjusted EPS
-    S('sec_r3', 'RECONCILIATION: NET EARNINGS / DILUTED EPS → ADJUSTED NET EARNINGS → ADJUSTED EPS (company definition)', 'section',
-      note='ADJUSTED EPS — net earnings + pre-tax adjusting items − tax effect of the adjustments (incl. discrete tax items: US tax reform FY2018–19, German tax-rate change FY2025)')
-    S('e_ni', 'Net earnings (GAAP)', 'line_b', 'm1', all=lambda: f'={V("is_ni")}')
-    S('e_op', '  (+) Adjusting items (pre-tax; bridge above)', 'line', 'm1', all=lambda: f'={V("o_tot")}')
-    S('e_tax', '  (−) Tax effect of the adjustments & discrete tax items', 'line', 'm1', flow=True,
-      hist=lambda: f'=IF(ISNUMBER({V("e_pubni")}),{V("e_pubni")}-{V("e_ni")}-{V("e_op")},IF(ISNUMBER({V("e_ni")}),0,""))',
-      fc=lambda: f'={V("is_tax")}-{V("e_adjtax")}',
-      note='Historical: published adjusted net earnings − net earnings − pre-tax items (FY2011–17: none published; adjusted = GAAP). Forecast: GAAP tax − adjusted tax.')
-    S('e_adjni', '  = Adjusted net earnings (model bridge)', 'total', 'm1',
-      all=lambda: f'=IF(ISNUMBER({V("e_tax")}),{V("e_ni")}+{V("e_op")}+{V("e_tax")},"")')
-    S('e_pubni', '  Company-published adjusted net earnings', 'memo', 'm1', data='adj_ni_pub', flow=True)
+    S('sec_r3', 'RECONCILIATION: NET EARNINGS / DILUTED EPS → ADJUSTED NET EARNINGS → ADJUSTED EPS (company definitions in force: pension-adjusted 2009–17, MTM-adjusted 2018+)', 'section',
+      note=('ADJUSTED EPS — 2009–2016 "pension-adjusted diluted EPS" (excludes the net FAS/CAS pension adjustment after tax at the statutory rate; continuing operations in the 2009–12 releases); '
+            '2017 "EPS excluding the impact of tax reform and the related discretionary pension contribution"; 2018+ "MTM-adjusted EPS" (excludes the Q4 MTM (benefit) expense net of federal and deferred state tax). '
+            'Interim quarters from 2018 carry no MTM, so MTM-adjusted EPS = diluted EPS. 2006–08: none published (adjusted = GAAP, flagged).'))
+    S('e_ni', 'Net earnings (GAAP)', 'line_b', 'm', all=lambda: f'={V("is_ni")}')
+    S('e_basis', '  (−) Basis difference: discontinued operations (company adjusted EPS on continuing operations, 2009–12)', 'line', 'm', flow=True,
+      hist=lambda: f'=IF(ISNUMBER({V("e_pub")}),IF({V("e_cont_flag")}=1,-N({V("is_disc")}),0),IF(ISNUMBER({V("e_ni")}),0,""))', fc=lambda: '=0')
+    S('e_cont_flag', '  Flag: company adjusted EPS on continuing operations (1 = yes)', 'driver', 'gen', data='e_cont_flag', fc=lambda: '=0')
+    S('e_item', '  (+/−) Company adjusting item, pre-tax: − net FAS/CAS pension adjustment (2009–17) / − MTM benefit, + MTM expense (2018+)', 'line', 'm', flow=True,
+      hist=lambda: f'=IF(ISNUMBER({V("e_pub")}),IF({V("e_def_flag")}=2,-N({V("is_mtm")}),IF({V("e_def_flag")}=1,-N({V("rc_tot")}),0)),IF(ISNUMBER({V("e_ni")}),0,""))',
+      fc=lambda: f'=-N({V("is_mtm")})',
+      note='Definition 1 (pension-adjusted): the whole net FAS/CAS pension adjustment is removed. Definition 2 (MTM-adjusted): only the Q4 MTM (benefit) expense. Forecast: MTM nil.')
+    S('e_def_flag', '  Flag: definition (1 = pension-adjusted, 2 = MTM-adjusted, 3 = tax-reform-adjusted 2017, 0 = none published)', 'driver', 'gen', data='e_def_flag', fc=lambda: '=2')
+    S('e_tax', '  (−) Tax effect of the adjustment & other company items (derived: published adjusted net earnings − net earnings − item)', 'line', 'm', flow=True,
+      hist=lambda: f'=IF(AND(ISNUMBER({V("e_pub")}),ISNUMBER({V("e_sh")})),{V("e_pub")}*{V("e_sh")}-{V("e_ni")}-{V("e_basis")}-{V("e_item")},IF(ISNUMBER({V("e_ni")}),0,""))',
+      fc=lambda: f'=-{V("e_item")}*{V("e_rate")}',
+      note=('Historical: derived from the published adjusted EPS × diluted shares (the company publishes the per-share bridge: statutory federal tax at 35% / 21% plus deferred state tax; '
+            '2017 also removes the tax-reform charge and the related discretionary pension contribution). Forecast: 26.25% (21% federal + 5.25% blended state, as in the company\'s per-share schedule).'))
+    S('e_rate', '  Tax rate on the adjusting item (forecast)', 'pct', 'pct', fc_in=0.2625)
+    S('e_adjni', '  = Adjusted net earnings (model bridge)', 'total', 'm', all=lambda: f'=IF(ISNUMBER({V("e_tax")}),{V("e_ni")}+{V("e_basis")}+{V("e_item")}+{V("e_tax")},"")')
+    S('e_pubni', '  Company-published MTM-adjusted net earnings (2018+)', 'memo', 'm', data='mtm_adj_ni_pub', flow=True)
     S('e_sh', '  Weighted-average diluted shares (m)', 'line', 'm1', all=lambda: f'=IF(ISNUMBER({V("sh_dil")}),{V("sh_dil")},"")')
-    S('e_eps', 'Adjusted EPS – diluted ($) (model bridge)', 'eps_total', 'ps', all=ratio('e_adjni', 'e_sh'))
-    S('e_pub', '  Company-published adjusted EPS ($)', 'eps_memo', 'ps', data='e_pub')
+    S('e_eps', 'Adjusted EPS – diluted ($) (model bridge; = MTM-adjusted EPS in the forecast)', 'eps_total', 'ps', all=lambda: f'=IF(ISNUMBER({V("e_sh")}),IFERROR(({V("e_adjni")}+N({V("eps_adj")}))/{V("e_sh")},""),"")')
+    S('e_pub', '  Company-published adjusted EPS ($) (pension-adjusted / tax-reform-adjusted / MTM-adjusted)', 'eps_memo', 'ps', data='adj_eps_pub')
     S('e_chk', '  Check: model vs company-published (should be 0.00; ±0.01 rounding)', 'check', 'ps',
       hist=lambda: f'=IF(AND(ISNUMBER({V("e_pub")}),ISNUMBER({V("e_eps")})),IF(ABS({V("e_eps")}-{V("e_pub")})<=0.0101,0,ROUND({V("e_eps")}-{V("e_pub")},2)),"n/p")')
     S('e_eps_g', '  Adjusted EPS y/y %', 'growth', 'pct', all=growth('e_eps'))
-    S('e_adjebt', '  Adjusted earnings before tax (adjusted EBIT − interest expense + interest income)', 'line', 'm1',
-      all=lambda: f'=IF(ISNUMBER({V("o_adj")}),{V("o_adj")}-N({V("is_int")})+N({V("is_intinc")}),"")')
-    S('e_adjtax', '  Adjusted income tax (adjusted earnings before tax − adjusted net earnings)', 'line', 'm1', flow=True,
-      hist=lambda: f'=IF(AND(ISNUMBER({V("e_adjni")}),ISNUMBER({V("e_adjebt")})),{V("e_adjebt")}-{V("e_adjni")},"")',
-      fc=lambda: f'={V("e_adjebt")}*{V("e_rate")}')
-    S('e_rate', '  Adjusted effective tax rate', 'pct', 'pct', all=ratio('e_adjtax', 'e_adjebt'), qe=lambda: f'={PT("pt_etr")}', ae=lambda: f'={V("is_etr")}',
-      note='9M FY26 adjusted rate 21.9%; FY26 guidance ~22.5%. Forecast = GAAP effective tax rate.')
-    S('e_def', '  Definition / basis (company adjusted EPS definition)', 'text', 'gen')
+    S('e_ps_pub', '  Memo: company per-share impact of the adjustment, net of tax (after-tax net pension adjustment / MTM adjustment per share)', 'eps_memo', 'ps', data='e_ps_pub')
+    S('e_def', '  Definition / basis (company adjusted EPS definition in force)', 'text', 'gen')
     blank()
 
     # ------------------------------------------------------------------ growth & margins
     S('sec_gm', 'GROWTH & MARGINS', 'section', note='GROWTH & MARGINS (consolidated) — forecast outputs')
-    S('gm_rev', '  Net sales y/y %', 'growth', 'pct', all=growth('is_rev'))
-    S('gm_aero', '  Aerospace segment sales y/y %', 'growth', 'pct', all=growth('aero_rev'))
-    S('gm_ind', '  Industrial segment sales y/y %', 'growth', 'pct', all=growth('ind_rev'))
-    S('gm_adjop', '  Adjusted EBIT y/y %', 'growth', 'pct', all=growth('o_adj'))
-    S('gm_ebitda', '  Adjusted EBITDA y/y %', 'growth', 'pct', all=growth('r_adj'))
-    S('gm_op', '  EBIT (GAAP) y/y %', 'growth', 'pct', all=growth('is_ebit'))
+    S('gm_rev', '  Sales y/y %', 'growth', 'pct', all=growth('is_rev'))
+    for s, title, code in SEG: S(f'gm_{s}', f'  {title} sales y/y %', 'growth', 'pct', all=growth(f'{s}_s'))
+    S('gm_soi', '  Segment operating income y/y %', 'growth', 'pct', all=growth('g_soi'))
+    S('gm_ebitda', '  Adjusted EBITDA (model) y/y %', 'growth', 'pct', all=growth('r_adj'))
+    S('gm_op', '  Operating income y/y %', 'growth', 'pct', all=growth('is_oi'))
     S('gm_ni', '  Net earnings y/y %', 'growth', 'pct', all=growth('is_ni'))
     S('gm_eps', '  Adjusted EPS y/y %', 'growth', 'pct', all=growth('e_eps'))
-    S('gm_gm', '  Gross margin %', 'pct', 'pct', all=ratio('is_gp', 'is_rev'))
-    S('gm_adjop_m', '  Adjusted EBIT margin %', 'pct', 'pct', all=ratio('o_adj', 'is_rev'))
-    S('gm_inc', '  Incremental adjusted EBIT margin (Δ adjusted EBIT / Δ net sales)', 'pct', 'pct', all=incr('o_adj', 'is_rev'))
+    S('gm_som', '  Segment operating margin rate %', 'pct', 'pct', all=ratio('g_soi', 'is_rev'))
+    S('gm_inc', '  Incremental segment operating margin (Δ segment OI / Δ sales)', 'pct', 'pct', all=incr('g_soi', 'is_rev'))
     S('gm_ebitda_m', '  Adjusted EBITDA margin %', 'pct', 'pct', all=ratio('r_adj', 'is_rev'))
-    S('gm_op_m', '  EBIT margin (GAAP) %', 'pct', 'pct', all=ratio('is_ebit', 'is_rev'))
+    S('gm_op_m', '  Operating margin rate %', 'pct', 'pct', all=ratio('is_oi', 'is_rev'))
     S('gm_net_m', '  Net margin %', 'pct', 'pct', all=ratio('is_ni', 'is_rev'))
-    S('gm_sga', '  SG&A % of net sales', 'pct', 'pct', all=ratio('is_sga', 'is_rev'))
-    S('gm_rd', '  R&D % of net sales', 'pct', 'pct', all=ratio('is_rd', 'is_rev'))
+    S('gm_ga', '  G&A % of sales', 'pct', 'pct', all=ratio('is_ga', 'is_rev'))
+    S('gm_fascas', '  FAS/CAS operating adjustment % of sales', 'pct', 'pct', all=ratio('rc_fascas', 'is_rev'))
     blank()

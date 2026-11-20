@@ -1,9 +1,10 @@
-"""Framework: MLM-template layout re-based on Woodward's fiscal (30-September year-end) columns, style cloning, row registry and
-per-column formula context.
+"""Framework: MLM-template layout re-based on Northrop Grumman's calendar-year columns, style cloning, row registry and per-column
+formula context.
 
-Columns (Model sheet): C-L FY2011-FY2020 (annual) | M-AK Q1/21-Q4/25 with FY subtotals | AL-AN Q1/26-Q3/26 (actual) |
-AO Q4/26E | AP 2026E | AQ-AU 2027E-2031E | AV modelling notes | AX-BA CAGRs | BD-BH scenario input table. Fiscal year N =
-October N-1 to September N. Template columns right of the forecast block keep their order (template letter - 36).
+Columns (Model sheet): C-I FY2006-FY2012 (annual) | J-BV Q1/13-Q4/25 with FY subtotals | BW-BY Q1/26-Q3/26 (actual) | BZ Q4/26E |
+CA 2026E | CB-CF 2027E-2031E | CG modelling notes | CI-CL CAGRs | BO-BS... (scenario input table: CO-CS). The template's blocks
+right of the forecast keep their order, one column further right than in the template (template letter + 1), because NOC carries
+five scenario years (2027E-2031E) against the template's four.
 """
 import copy, json, os
 import openpyxl
@@ -21,7 +22,7 @@ class Col:
         self.prior = None; self.prevq = None
     def __repr__(self): return f'{self.c}:{self.label}'
 
-FY0, FYQ0, FYC = 2011, 2021, 2026          # first annual year, first quarterly year, current (partly estimated) year
+FY0, FYQ0, FYC = 2006, 2013, 2026          # first annual year, first quarterly year, current (partly estimated) year
 FYL = 2031
 COLS, ANN, QC = [], {}, {}
 _i = CI('C')
@@ -39,7 +40,7 @@ for y in range(FYQ0, FYC + 1):
         COLS.append(col); _i += 1
 for y in range(FYC + 1, FYL + 1):
     col = Col(L(_i), f'{y}E', 'AE', y); COLS.append(col); ANN[y] = col; _i += 1
-assert ANN[2025].c == 'AK' and QC[(2026, 3)].c == 'AN' and QC[(2026, 4)].c == 'AO' and ANN[2026].c == 'AP' and ANN[2031].c == 'AU', (ANN[2025], ANN[2026], ANN[2031])
+assert ANN[2012].c == 'I' and ANN[2025].c == 'BV' and QC[(2026, 3)].c == 'BY' and QC[(2026, 4)].c == 'BZ' and ANN[2026].c == 'CA' and ANN[2031].c == 'CF', (ANN[2025], ANN[2026], ANN[2031])
 for col in COLS:
     if col.q is None:
         if col.year - 1 in ANN: col.prior = ANN[col.year - 1].c
@@ -51,16 +52,17 @@ COLMAP = {c.c: c for c in COLS}
 HISTK = ('A', 'Q')
 FCK = ('QE', 'E26', 'AE')
 
-Q1, Q2, Q3, QE, E26 = 'AL', 'AM', 'AN', 'AO', 'AP'         # FY26 quarters (Q1-Q3 actual, Q4 estimate) / FY2026E
-LQ = Q3                                                     # last actual quarter (30-Jun-2026)
-A25, A24 = 'AK', 'AF'
-PQ1, PQ3 = 'AG', 'AI'                                       # Q1/25 - Q3/25 (prior-year year to date)
-NOTE = 'AV'
-SW = '$AV$2'                                                # scenario switch
-SL, SBULL, SBASE, SBEAR, SNOTE = 'BD', 'BE', 'BF', 'BG', 'BH'
-CAGR = ('AX', 'AY', 'AZ', 'BA')
-LASTC = 'BH'
-TSHIFT = 36                                                 # template column index - TSHIFT = WWD column index (right block)
+Q1, Q2, Q3, QE, E26 = 'BW', 'BX', 'BY', 'BZ', 'CA'          # 2026 quarters (Q1-Q3 actual, Q4 estimate) / 2026E
+LQ = Q3                                                     # last actual quarter (30-Sep-2026)
+A25, A24 = ANN[2025].c, ANN[2024].c
+PQ1, PQ3 = QC[(2025, 1)].c, QC[(2025, 3)].c                 # Q1/25 - Q3/25 (prior-year year to date)
+PQ4 = QC[(2025, 4)].c
+NOTE = 'CG'
+SW = '$CG$2'                                                # scenario switch
+SL, SBULL, SBASE, SBEAR, SNOTE = 'CO', 'CP', 'CQ', 'CR', 'CS'
+CAGR = ('CI', 'CJ', 'CK', 'CL')
+LASTC = 'CS'
+TSHIFT = -1                                                 # template column index + TSHIFT = NOC column index (right block)
 
 def pkey(col):
     if col.kind == 'A': return str(col.year)
@@ -100,7 +102,7 @@ def set_color(cell, rgb, bold=None):
     cell.font = Font(name=f.name, sz=f.sz, b=f.b if bold is None else bold, i=f.i, u=f.u, color=rgb)
 
 def comment(cell, text, w=420, h=160):
-    c = Comment(text, 'WWD model'); c.width, c.height = w, h
+    c = Comment(text, 'NOC model'); c.width, c.height = w, h
     cell.comment = c
 
 class Row:
