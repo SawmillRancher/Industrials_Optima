@@ -1,0 +1,87 @@
+{
+ "guidance_2026": {
+  "src": "Q3 2026 earnings release (Form 8-K Ex. 99.1, 22-Oct-2026), '2026 Financial Outlook' table and the business-segment-operating-profit reconciliation; prior columns from the Q4-25 (29-Jan-2026), Q1-26 (23-Apr-2026) and Q2-26 (23-Jul-2026) releases",
+  "url": "https://www.sec.gov/Archives/edgar/data/936468/000162828026066780/ex991q32026.htm",
+  "sales": [82000.0, 81000.0, 80000.0],
+  "seg_op": [8675.0, 8625.0, 8575.0],
+  "fascas_total": 1365.0,
+  "eps": [30.75, 30.55, 30.35],
+  "cfo": [10200.0, 10100.0, 10000.0],
+  "capex": [2100.0, 2200.0, 2300.0],
+  "fcf": [8000.0, 7900.0, 7800.0],
+  "bridge": {"fascas_op": 1685.0, "amort": -200.0, "other_net": -540.0, "cons_op": [9620.0, 9570.0, 9520.0]},
+  "history": "29-Jan-2026: sales $77.5-80.0bn, segment OP $8,425-8,675m, FAS/CAS ~$1,365m, EPS $29.35-30.25, CFO $9,150-9,450m, capex $2.5-2.8bn, FCF $6.5-6.8bn. 23-Jul-2026: sales $79.75-81.75bn, segment OP $8,500-8,700m, EPS $29.95-30.65, CFO $9.2-9.4bn, capex $2.0-2.4bn, FCF $7.0-7.2bn; other, net ~$(490)m. 22-Oct-2026: sales ~$80-82bn, segment OP ~$8,575-8,675m, EPS ~$30.35-30.75, CFO ~$10.0-10.2bn, capex ~$2.1-2.3bn, FCF ~$7.8-8.0bn; other, net ~$(540)m. LMT does not incorporate pending acquisitions (Ultra Maritime) in its outlook."
+ },
+ "pension_2026": {
+  "src": "Q3 2026 release, 'Selected Financial Data' (2026 Outlook column): FAS pension expense $(370)m; CAS pension cost $1,735m; total FAS/CAS pension adjustment $1,365m; FAS pension service cost $(50)m; FAS/CAS pension operating adjustment $1,685m; non-service FAS pension expense $(320)m. 2025 actual: FAS expense $(924)m incl. $479m settlement charge; CAS $1,568m; total $644m; service cost $(50)m; operating adjustment $1,518m; non-service $(874)m.",
+  "fas_exp": -370.0, "cas": 1735.0, "fascas_total": 1365.0, "fas_svc": -50.0, "fascas_op": 1685.0, "nonsvc": -320.0,
+  "contributions": "FY2025 10-K Note 11: $860m of cash contributions to the qualified plans in 2025; no required contributions expected in 2026. Estimated benefit payments: $1,760m 2026, $1,810m 2027, $1,860m 2028, $1,890m 2029, $1,920m 2030."
+ },
+ "asu_2017_07_reclass_2017": {
+  "src": "Q1 2018 release (8-K Ex. 99.1, 24-Apr-2018), 'Consolidated Statements of Earnings - Adjusted for Impacts of New Accounting Standards': reclassification of non-service pension cost out of operating profit into other non-operating expense, by 2017 quarter",
+  "url": "https://www.sec.gov/Archives/edgar/data/936468/000093646818000019/ex991q12018.htm",
+  "Q1-17": 213.0, "Q2-17": 212.0, "Q3-17": 211.0, "Q4-17": 210.0, "2017": 846.0
+ },
+ "special_items": {
+  "note": "Items Lockheed Martin itself quantified in its releases (pre-tax $m; after-tax $m and per share as published). Signed by their effect on earnings. Severance / restructuring / impairment charges come from the unallocated-items tables (data/*.json) and are not repeated here.",
+  "items": [
+   {"period": "Q4-17", "label": "Net one-time charge related to the Tax Cuts and Jobs Act (income tax expense)", "cat": "TAXD", "where": "tax", "pretax": 0.0, "aftertax": -1944.0, "ps": -6.80,
+    "src": "Q4 2017 release (8-K 29-Jan-2018): 'net one-time charge of $1.9 billion ($6.80 per share in the fourth quarter and $6.69 per share in 2017)'; $m = $6.80 x 285.9m diluted shares; adjusted EPS from continuing operations $4.30 (Q4) / $13.33 (2017) as published"},
+   {"period": "2017", "label": "Net one-time charge related to the Tax Cuts and Jobs Act (income tax expense)", "cat": "TAXD", "where": "tax", "pretax": 0.0, "aftertax": -1944.0, "ps": -6.69,
+    "src": "Q4 2017 release: $6.69 per share in 2017 x 290.6m diluted shares; published adjusted EPS from continuing operations $13.33"},
+   {"period": "Q3-21", "label": "Noncash pension settlement charge (group annuity contracts; non-service FAS pension expense)", "cat": "PENSION", "where": "nonop", "pretax": -1665.0, "aftertax": -1300.0, "ps": -4.72,
+    "src": "Q3 2021 release (8-K 26-Oct-2021): 'noncash pension settlement charge of $1.7 billion ($1.3 billion, or $4.72 per share, after-tax)'; $1,665m per the FAS/CAS table"},
+   {"period": "2021", "label": "Noncash pension settlement charge (Q3 2021)", "cat": "PENSION", "where": "nonop", "pretax": -1665.0, "aftertax": -1300.0, "ps": -4.72, "src": "as Q3-21"},
+   {"period": "Q2-22", "label": "Noncash pension settlement charge (group annuity contracts; non-service FAS pension expense)", "cat": "PENSION", "where": "nonop", "pretax": -1470.0, "aftertax": -1156.0, "ps": -4.33,
+    "src": "Q2 2022 release (8-K 19-Jul-2022): pension settlement charge $1,470m, $1,156m after tax, $4.33 per share"},
+   {"period": "2022", "label": "Noncash pension settlement charge (Q2 2022)", "cat": "PENSION", "where": "nonop", "pretax": -1470.0, "aftertax": -1156.0, "ps": -4.33, "src": "as Q2-22"},
+   {"period": "Q4-24", "label": "Classified program losses (Aeronautics $410m, MFC $1,310m), net of the $86m state-tax offset in unallocated other", "cat": "OTHER", "where": "op", "pretax": -1634.0, "aftertax": -1291.0, "ps": -5.45,
+    "src": "Q4 2024 release (8-K 28-Jan-2025), 'Earnings Impacts of Classified Program Losses and Other Items': business segment OP $(1,720)m, unallocated other $86m, consolidated OP $(1,634)m, tax benefit $343m, net earnings $(1,291)m, $5.45 per share. The year 2024 column shows $(1,965)m / $(1,475)m / $6.16 incl. $245m recognised in Q1-Q3 2024 that was not quantified by quarter; the model carries the Q4 amounts only (annual = Q4) so that quarters sum to the year."},
+   {"period": "2024", "label": "Classified program losses (Q4 2024 amounts; see note)", "cat": "OTHER", "where": "op", "pretax": -1634.0, "aftertax": -1291.0, "ps": -5.45, "src": "as Q4-24 (annual published: $(1,965)m pre-tax, $(1,475)m after tax, $6.16 per share)"},
+   {"period": "Q2-25", "label": "Program losses (Aeronautics classified $950m, CMHP $570m, TUHP $95m), net of the $81m state-tax offset in unallocated other (the $66m fixed-asset write-off is in the impairment row)", "cat": "OTHER", "where": "op", "pretax": -1534.0, "aftertax": -1314.9, "ps": -5.83,
+    "src": "Q2 2025 release (8-K 22-Jul-2025) supplemental table: segment OP $(1,615)m, fixed asset write-off $(66)m, unallocated other $81m, consolidated OP $(1,600)m, tax benefit $233m, net earnings $(1,367)m, $5.83 per share (234.3m shares). After-tax here = $(1,367)m less the write-off net of 21% tax $(52.1)m, which the impairment row carries; the published $5.83 covers both."},
+   {"period": "2025", "label": "Program losses (Q2 2025)", "cat": "OTHER", "where": "op", "pretax": -1534.0, "aftertax": -1314.9, "ps": -5.83, "src": "as Q2-25"},
+   {"period": "Q4-25", "label": "Noncash pension settlement charge (non-service FAS pension expense)", "cat": "PENSION", "where": "nonop", "pretax": -479.0, "aftertax": -377.0, "ps": -1.63,
+    "src": "Q4 2025 release (8-K 29-Jan-2026): 'pension settlement charge of $479 million ($377 million, or $1.63 per share, after-tax)'"},
+   {"period": "2025", "label": "Noncash pension settlement charge (Q4 2025)", "cat": "PENSION", "where": "nonop", "pretax": -479.0, "aftertax": -377.0, "ps": -1.63, "src": "as Q4-25"}
+  ],
+  "statutory_rate": {"to_2017": 0.35, "from_2018": 0.21, "note": "Tax effect of severance / impairment / unusual items (not tax-effected by the company) at the US federal statutory rate in force (model assumption)."}
+ },
+ "dps_pre_xbrl": {
+  "src": "FY2008 Form 10-K Item 6 Selected Financial Data, 'Cash dividends per common share': 2008 $1.83, 2007 $1.47, 2006 $1.25 (XBRL CommonStockDividendsPerShareDeclared is available from FY2009)",
+  "url": "https://www.sec.gov/Archives/edgar/data/936468/000119312509038670/d10k.htm",
+  "2006": 1.25, "2007": 1.47, "2008": 1.83
+ },
+ "dividends": {
+  "src": "Q3 2026 10-Q, Liquidity - Dividends: $3.45 per share paid in each of Q1-Q3 2026; in October 2026 the Board authorized a Q4 2026 dividend of $3.60 per share (+$0.15).",
+  "q4_2026_rate": 3.60, "q3_2026_rate": 3.45
+ },
+ "ultra_maritime": {
+  "src": "Q3 2026 10-Q Note 13 - Other: 'In July 2026, we entered into a definitive agreement to acquire Ultra Maritime Solutions (Ultra Maritime), a global defense company specializing in advanced undersea warfare and anti-submarine capabilities for allied naval forces, for $3.45 billion. Upon closing, Ultra Maritime will be reported within our RMS business segment. We expect to fund the acquisition with cash on hand. The transaction is expected to close in the fourth quarter of 2026.' No 8-K with deal terms was filed; the target is privately held and its revenue is not disclosed on EDGAR.",
+  "consideration": 3450.0, "segment": "RMS", "close_assumed": "2026-12-31",
+  "assumptions": "Model assumptions (flagged): closing 31-Dec-2026 (no 2026 contribution); annual sales ~$900m (EV/sales ~3.8x, in line with recent defense-electronics deals; NOT DISCLOSED); segment margin 12%; PPA 40% intangibles (12-year life), 10% PP&E, remainder goodwill; no synergies assumed."
+ },
+ "debt": {
+  "src": "FY2025 Form 10-K Note 10 - Debt (total debt $22,914m face at 31-Dec-2025; $21,700m net of $1,214m unamortized discounts and issuance costs; current portion $1,168m) and Q3 2026 10-Q (principal $21.7bn at 27-Sep-2026 after repaying $1,168m of notes at scheduled maturity in 2026; current maturities nil at 27-Sep-2026).",
+  "notes_face_2025": 22914.0, "net_2025": 21700.0, "discount_2025": 1214.0,
+  "ladder": {"2026": 1168.0, "2027": 750.0, "2028": 1000.0, "2029": 650.0, "2030": 1150.0, "2031": 600.0, "2032": 800.0, "2033": 1000.0, "2034": 1450.0, "2035": 1250.0},
+  "ladder_note": "Notes by maturity year (10-K Note 10): 3.55% due 2026 $1,000m (+$168m other notes due 2026, repaid: current maturities $1,168m at 31-Dec-2025, nil at 27-Sep-2026); 5.10% due 2027 $750m; 4.45%/4.15% due 2028 $1,000m; 4.50% due 2029 $650m; 1.85%/4.40% due 2030 $1,150m; 4.70% due 2031 $600m; 3.90% due 2032 $800m; 5.25% due 2033 $1,000m; 4.75%/4.80% due 2034 $1,450m; 3.60%/5.00% due 2035 $1,250m; later maturities $13,095m (2036-2064) plus other notes 4.85-8.50% due 2026-2041 $1,169m (allocation of the other notes by year not disclosed; model treats them as maturing after 2031 except the 2026 portion).",
+  "revolver": "Q3 2026 10-Q: $3.0bn 364-day revolving credit agreement (24-Aug-2026) and $3.0bn 5-year revolving credit facility extended to 24-Aug-2031; both undrawn; support commercial paper (none outstanding).",
+  "interest": "FY2025 interest expense $1,118m on ~$22bn face (~5.1%); 9M 2026 $799m."
+ },
+ "amort_sched": {
+  "src": "FY2025 Form 10-K Note 7 (acquired intangibles $1,887m net at 31-Dec-2025): amortization $254m 2025, $247m 2024 and 2023; estimated future amortization $199m 2026, $198m 2027, $193m 2028, $184m 2029, $121m 2030.",
+  "2026": 199.0, "2027": 198.0, "2028": 193.0, "2029": 184.0, "2030": 121.0
+ },
+ "employees": {"src": "FY2025 Form 10-K Item 1: approximately 123,000 employees at 31-Dec-2025, including approximately 72,000 engineers, scientists and IT professionals."},
+ "fiscal_calendar": {"src": "Q3 2026 release: the company closes its books on the last Sunday of the calendar quarter; 2026 quarters have 12 / 13 / 13 / 14 weeks (2025: 13 each); the fiscal year ends 31 December."},
+ "price": {
+  "px": 601.50,
+  "src": "Form 4 filed 27-Oct-2026 for Frank A. St John (open-market sales on 23-Oct-2026 in three lots at weighted-average prices within $600.00-$600.83, $601.14-$602.04 and $602.22-$602.98); $601.50 = mid-point of the overall range. Latest share price observable on EDGAR (no repurchases in Q3 2026; Q3 10-Q withholding price $579.17 on 27-Sep-2026 quarter). UPDATE TO MARKET.",
+  "url": "https://www.sec.gov/Archives/edgar/data/936468/000122520826008537/doc4.xml",
+  "date": "2026-10-23"
+ },
+ "sikorsky": {
+  "src": "FY2015 Form 10-K Note 3 (Sikorsky Aircraft, acquired 6-Nov-2015 for $9.0bn ($9,003m net cash paid per the 2015 cash-flow statement), reported in the Mission Systems and Training segment); PPA detail not re-extracted (purchased intangibles ~$3.1bn, goodwill ~$2.8bn per the 10-K). Within the historical window; no forecast impact."
+ }
+}

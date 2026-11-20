@@ -1,0 +1,838 @@
+{
+ "period": "2016",
+ "fy": 2016,
+ "q": null,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/936468/000114420417003517/v457219_ex99-1.htm",
+  "release_date": "2017-01-24",
+  "filing": "https://www.sec.gov/Archives/edgar/data/936468/000119312517036192/d290249d10k.htm"
+ },
+ "notes": [],
+ "is": {
+  "rev": 47248.0,
+  "cos": 42186.0,
+  "gp": 5062.0,
+  "othinc": 487.0,
+  "op": 5549.0,
+  "int": 663.0,
+  "othnonop": 0.0,
+  "ebt": 4886.0,
+  "tax": 1133.0,
+  "cont": 3753.0,
+  "disc": 1549.0,
+  "ni": 5302.0,
+  "etr": 23.2,
+  "eps_b_cont": 12.54,
+  "eps_b_disc": 5.17,
+  "eps_b": 17.71,
+  "eps_d_cont": 12.38,
+  "eps_d_disc": 5.11,
+  "eps_d": 17.49,
+  "sh_b": 299.3,
+  "sh_d": 303.1,
+  "sh_end": 289.0
+ },
+ "seg": {
+  "sales": {
+   "aero": 17769.0,
+   "mfc": 6608.0,
+   "rms": 13462.0,
+   "space": 9409.0
+  },
+  "op": {
+   "aero": 1887.0,
+   "mfc": 1018.0,
+   "rms": 906.0,
+   "space": 1289.0
+  },
+  "unalloc": [
+   [
+    "FAS pension expense",
+    "fas_exp",
+    -1019.0
+   ],
+   [
+    "Less: CAS pension cost",
+    "cas",
+    1921.0
+   ],
+   [
+    "FAS/CAS pension adjustment",
+    "fascas",
+    902.0
+   ],
+   [
+    "Special item - severance charges",
+    "sev",
+    -80.0
+   ],
+   [
+    "Stock-based compensation",
+    "sbc",
+    -149.0
+   ],
+   [
+    "Other, net",
+    "other",
+    -224.0
+   ]
+  ],
+  "margin": {
+   "aero": 10.6,
+   "mfc": 15.4,
+   "rms": 6.7,
+   "space": 13.7
+  },
+  "sales_tot": 47248.0,
+  "op_tot": 5100.0,
+  "unalloc_tot": 449.0,
+  "op_cons": 5549.0
+ },
+ "pension": {
+  "fascas": 902.0,
+  "fas_exp": -1019.0,
+  "cas": 1921.0,
+  "cas_label": "Less: CAS pension cost"
+ },
+ "cf": {
+  "ytd_months": 12,
+  "ni": 5302.0,
+  "dda": 1215.0,
+  "sbc": 149.0,
+  "sev": 99.0,
+  "deftax": -152.0,
+  "divest": 558.0,
+  "wc_ar": -811.0,
+  "wc_inv": -46.0,
+  "wc_ap": -188.0,
+  "wc_cl": 3.0,
+  "pens": 1028.0,
+  "wc_tax": 146.0,
+  "wc_oth": -210.0,
+  "cfo": 5189.0,
+  "capex": -1063.0,
+  "acq": 0.0,
+  "inv_oth": 78.0,
+  "cfi": -985.0,
+  "debt_rep": -952.0,
+  "bb": -2096.0,
+  "div": -2048.0,
+  "stock_iss": 106.0,
+  "fin_oth": -267.0,
+  "cff": -3457.0,
+  "net": 747.0,
+  "beg": 1090.0,
+  "end": 1837.0,
+  "lines_raw": [
+   [
+    "Net earnings",
+    5302.0
+   ],
+   [
+    "Depreciation and amortization",
+    1215.0
+   ],
+   [
+    "Stock-based compensation",
+    149.0
+   ],
+   [
+    "Severance charges",
+    99.0
+   ],
+   [
+    "Deferred income taxes",
+    -152.0
+   ],
+   [
+    "Gain on divestiture of IS&GS business",
+    -1242.0
+   ],
+   [
+    "Gain on step acquisition of AWE",
+    -104.0
+   ],
+   [
+    "Receivables, net",
+    -811.0
+   ],
+   [
+    "Inventories, net",
+    -46.0
+   ],
+   [
+    "Accounts payable",
+    -188.0
+   ],
+   [
+    "Customer advances and amounts in excess of costs incurred",
+    3.0
+   ],
+   [
+    "Postretirement benefit plans",
+    1028.0
+   ],
+   [
+    "Income taxes",
+    146.0
+   ],
+   [
+    "Other, net",
+    -210.0
+   ],
+   [
+    "Net cash provided by operating activities 1",
+    5189.0
+   ],
+   [
+    "Capital expenditures",
+    -1063.0
+   ],
+   [
+    "Acquisitions of businesses and investments in affiliates 2",
+    0.0
+   ],
+   [
+    "Other, net",
+    78.0
+   ],
+   [
+    "Net cash used for investing activities",
+    -985.0
+   ],
+   [
+    "Special cash payment from divestiture of IS&GS business",
+    1800.0
+   ],
+   [
+    "Proceeds from the issuance of long-term debt",
+    0.0
+   ],
+   [
+    "Repayments of long-term debt",
+    -952.0
+   ],
+   [
+    "Proceeds from borrowings under revolving credit facilities",
+    0.0
+   ],
+   [
+    "Repayments of borrowings under revolving credit facilities",
+    0.0
+   ],
+   [
+    "Repurchases of common stock",
+    -2096.0
+   ],
+   [
+    "Dividends paid",
+    -2048.0
+   ],
+   [
+    "Proceeds from stock option exercises",
+    106.0
+   ],
+   [
+    "Other, net",
+    -267.0
+   ],
+   [
+    "Net cash (used for) provided by financing activities",
+    -3457.0
+   ],
+   [
+    "Net change in cash and cash equivalents",
+    747.0
+   ],
+   [
+    "Cash and cash equivalents at beginning of period",
+    1090.0
+   ],
+   [
+    "Cash and cash equivalents at end of period",
+    1837.0
+   ]
+  ]
+ },
+ "bs": {
+  "cash": 1837.0,
+  "ar": 8202.0,
+  "inv": 4670.0,
+  "oca": 399.0,
+  "tca": 15108.0,
+  "ppe": 5549.0,
+  "gw": 10764.0,
+  "intang": 4093.0,
+  "dta": 6625.0,
+  "onca": 5667.0,
+  "ta": 47806.0,
+  "ap": 1653.0,
+  "cl": 6776.0,
+  "sal": 1764.0,
+  "std": 0.0,
+  "ocl": 2349.0,
+  "tcl": 12542.0,
+  "ltd": 14282.0,
+  "pens": 13855.0,
+  "opeb": 862.0,
+  "oncl": 4659.0,
+  "tl": 46200.0,
+  "cs": 289.0,
+  "apic": 0.0,
+  "re": 13324.0,
+  "aoci": -12102.0,
+  "eq": 1511.0,
+  "nci": 95.0,
+  "te": 1606.0,
+  "tle": 47806.0,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    1837.0
+   ],
+   [
+    "Receivables, net",
+    8202.0
+   ],
+   [
+    "Inventories, net",
+    4670.0
+   ],
+   [
+    "Other current assets",
+    399.0
+   ],
+   [
+    "Assets of discontinued operations 2",
+    0.0
+   ],
+   [
+    "Total current assets",
+    15108.0
+   ],
+   [
+    "Property, plant and equipment, net",
+    5549.0
+   ],
+   [
+    "Goodwill",
+    10764.0
+   ],
+   [
+    "Intangible assets, net",
+    4093.0
+   ],
+   [
+    "Deferred income taxes",
+    6625.0
+   ],
+   [
+    "Other noncurrent assets",
+    5667.0
+   ],
+   [
+    "Assets of discontinued operations 2",
+    0.0
+   ],
+   [
+    "Total assets",
+    47806.0
+   ],
+   [
+    "Accounts payable",
+    1653.0
+   ],
+   [
+    "Customer advances and amounts in excess of costs incurred",
+    6776.0
+   ],
+   [
+    "Salaries, benefits and payroll taxes",
+    1764.0
+   ],
+   [
+    "Current maturities of long-term debt",
+    0.0
+   ],
+   [
+    "Other current liabilities",
+    2349.0
+   ],
+   [
+    "Liabilities of discontinued operations 2",
+    0.0
+   ],
+   [
+    "Total current liabilities",
+    12542.0
+   ],
+   [
+    "Long-term debt, net",
+    14282.0
+   ],
+   [
+    "Accrued pension liabilities",
+    13855.0
+   ],
+   [
+    "Other postretirement benefit liabilities",
+    862.0
+   ],
+   [
+    "Other noncurrent liabilities",
+    4659.0
+   ],
+   [
+    "Liabilities of discontinued operations 2",
+    0.0
+   ],
+   [
+    "Total liabilities",
+    46200.0
+   ],
+   [
+    "Common stock, $1 par value per share",
+    289.0
+   ],
+   [
+    "Additional paid-in capital",
+    0.0
+   ],
+   [
+    "Retained earnings",
+    13324.0
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -12102.0
+   ],
+   [
+    "Total stockholders' equity",
+    1511.0
+   ],
+   [
+    "Noncontrolling interests in subsidiary",
+    95.0
+   ],
+   [
+    "Total equity",
+    1606.0
+   ],
+   [
+    "Total liabilities and equity",
+    47806.0
+   ]
+  ]
+ },
+ "bs_py": {
+  "cash": 1090.0,
+  "ar": 7254.0,
+  "inv": 4819.0,
+  "oca": 441.0,
+  "tca": 14573.0,
+  "ppe": 5389.0,
+  "gw": 10695.0,
+  "intang": 4022.0,
+  "dta": 6068.0,
+  "onca": 5396.0,
+  "ta": 49304.0,
+  "ap": 1745.0,
+  "cl": 6703.0,
+  "sal": 1707.0,
+  "std": 956.0,
+  "ocl": 1859.0,
+  "tcl": 13918.0,
+  "ltd": 14305.0,
+  "pens": 11807.0,
+  "opeb": 1070.0,
+  "oncl": 4902.0,
+  "tl": 46207.0,
+  "cs": 303.0,
+  "apic": 0.0,
+  "re": 14238.0,
+  "aoci": -11444.0,
+  "eq": 3097.0,
+  "nci": 0.0,
+  "te": 3097.0,
+  "tle": 49304.0,
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    1090.0
+   ],
+   [
+    "Receivables, net",
+    7254.0
+   ],
+   [
+    "Inventories, net",
+    4819.0
+   ],
+   [
+    "Other current assets",
+    441.0
+   ],
+   [
+    "Assets of discontinued operations 2",
+    969.0
+   ],
+   [
+    "Total current assets",
+    14573.0
+   ],
+   [
+    "Property, plant and equipment, net",
+    5389.0
+   ],
+   [
+    "Goodwill",
+    10695.0
+   ],
+   [
+    "Intangible assets, net",
+    4022.0
+   ],
+   [
+    "Deferred income taxes",
+    6068.0
+   ],
+   [
+    "Other noncurrent assets",
+    5396.0
+   ],
+   [
+    "Assets of discontinued operations 2",
+    3161.0
+   ],
+   [
+    "Total assets",
+    49304.0
+   ],
+   [
+    "Accounts payable",
+    1745.0
+   ],
+   [
+    "Customer advances and amounts in excess of costs incurred",
+    6703.0
+   ],
+   [
+    "Salaries, benefits and payroll taxes",
+    1707.0
+   ],
+   [
+    "Current maturities of long-term debt",
+    956.0
+   ],
+   [
+    "Other current liabilities",
+    1859.0
+   ],
+   [
+    "Liabilities of discontinued operations 2",
+    948.0
+   ],
+   [
+    "Total current liabilities",
+    13918.0
+   ],
+   [
+    "Long-term debt, net",
+    14305.0
+   ],
+   [
+    "Accrued pension liabilities",
+    11807.0
+   ],
+   [
+    "Other postretirement benefit liabilities",
+    1070.0
+   ],
+   [
+    "Other noncurrent liabilities",
+    4902.0
+   ],
+   [
+    "Liabilities of discontinued operations 2",
+    205.0
+   ],
+   [
+    "Total liabilities",
+    46207.0
+   ],
+   [
+    "Common stock, $1 par value per share",
+    303.0
+   ],
+   [
+    "Additional paid-in capital",
+    0.0
+   ],
+   [
+    "Retained earnings",
+    14238.0
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -11444.0
+   ],
+   [
+    "Total stockholders' equity",
+    3097.0
+   ],
+   [
+    "Noncontrolling interests in subsidiary",
+    0.0
+   ],
+   [
+    "Total equity",
+    3097.0
+   ],
+   [
+    "Total liabilities and equity",
+    49304.0
+   ]
+  ]
+ },
+ "backlog": {
+  "aero": 34200.0,
+  "mfc": 14700.0,
+  "rms": 28400.0,
+  "space": 18900.0,
+  "total": 96200.0
+ },
+ "backlog_py": {
+  "aero": 31800.0,
+  "mfc": 15500.0,
+  "rms": 30100.0,
+  "space": 17400.0,
+  "total": 94800.0
+ },
+ "deliv": {
+  "f16": 12.0,
+  "f35": 46.0,
+  "c130j": 24.0,
+  "c5": 9.0
+ },
+ "summary": {
+  "cfo": 5189.0,
+  "seg_op": 5100.0
+ },
+ "py": {
+  "release": "https://www.sec.gov/Archives/edgar/data/936468/000093646818000004/ex991q42017.htm",
+  "release_date": "2018-01-29",
+  "is": {
+   "rev": 47248.0,
+   "cos": 42186.0,
+   "gp": 5062.0,
+   "othinc": 487.0,
+   "op": 5549.0,
+   "int": 663.0,
+   "othnonop": 0.0,
+   "ebt": 4886.0,
+   "tax": 1133.0,
+   "cont": 3753.0,
+   "disc": 1549.0,
+   "ni": 5302.0,
+   "etr": 23.2,
+   "eps_b_cont": 12.54,
+   "eps_b_disc": 5.17,
+   "eps_b": 17.71,
+   "eps_d_cont": 12.38,
+   "eps_d_disc": 5.11,
+   "eps_d": 17.49,
+   "sh_b": 299.3,
+   "sh_d": 303.1
+  },
+  "seg": {
+   "sales": {
+    "aero": 17769.0,
+    "mfc": 6608.0,
+    "rms": 13462.0,
+    "space": 9409.0
+   },
+   "op": {
+    "aero": 1887.0,
+    "mfc": 1018.0,
+    "rms": 906.0,
+    "space": 1289.0
+   },
+   "unalloc": [
+    [
+     "FAS/CAS pension adjustment",
+     "fascas",
+     902.0
+    ],
+    [
+     "Special item - severance charges",
+     "sev",
+     -80.0
+    ],
+    [
+     "Other, net",
+     "other",
+     -373.0
+    ]
+   ],
+   "margin": {},
+   "sales_tot": 47248.0,
+   "op_tot": 5100.0,
+   "unalloc_tot": 449.0,
+   "op_cons": 5549.0
+  },
+  "pension": {
+   "fascas": 902.0
+  },
+  "cf": {
+   "ytd_months": 12,
+   "ni": 5302.0,
+   "dda": 1215.0,
+   "sbc": 149.0,
+   "deftax": -152.0,
+   "sev": 99.0,
+   "divest": 558.0,
+   "wc_ar": -811.0,
+   "wc_inv": -46.0,
+   "wc_ap": -188.0,
+   "wc_cl": 3.0,
+   "pens": 1028.0,
+   "wc_tax": 146.0,
+   "wc_oth": -210.0,
+   "cfo": 5189.0,
+   "capex": -1063.0,
+   "inv_oth": 78.0,
+   "cfi": -985.0,
+   "bb": -2096.0,
+   "div": -2048.0,
+   "debt_rep": -952.0,
+   "stock_iss": 106.0,
+   "fin_oth": -267.0,
+   "cff": -3457.0,
+   "net": 747.0,
+   "beg": 1090.0,
+   "end": 1837.0,
+   "lines_raw": [
+    [
+     "Net earnings",
+     5302.0
+    ],
+    [
+     "Depreciation and amortization",
+     1215.0
+    ],
+    [
+     "Stock-based compensation",
+     149.0
+    ],
+    [
+     "Deferred income taxes",
+     -152.0
+    ],
+    [
+     "Severance charges",
+     99.0
+    ],
+    [
+     "Gain on property sale",
+     0.0
+    ],
+    [
+     "Gain on divestiture of IS&GS business",
+     -1242.0
+    ],
+    [
+     "Gain on step acquisition of AWE",
+     -104.0
+    ],
+    [
+     "Receivables, net",
+     -811.0
+    ],
+    [
+     "Inventories, net",
+     -46.0
+    ],
+    [
+     "Accounts payable",
+     -188.0
+    ],
+    [
+     "Customer advances and amounts in excess of costs incurred",
+     3.0
+    ],
+    [
+     "Postretirement benefit plans",
+     1028.0
+    ],
+    [
+     "Income taxes",
+     146.0
+    ],
+    [
+     "Other, net",
+     -210.0
+    ],
+    [
+     "Net cash provided by operating activities",
+     5189.0
+    ],
+    [
+     "Capital expenditures",
+     -1063.0
+    ],
+    [
+     "Other, net",
+     78.0
+    ],
+    [
+     "Net cash used for investing activities",
+     -985.0
+    ],
+    [
+     "Repurchases of common stock",
+     -2096.0
+    ],
+    [
+     "Dividends paid",
+     -2048.0
+    ],
+    [
+     "Special cash payment from divestiture of IS&GS business",
+     1800.0
+    ],
+    [
+     "Repayments of long-term debt",
+     -952.0
+    ],
+    [
+     "Proceeds from stock option exercises",
+     106.0
+    ],
+    [
+     "Other, net",
+     -267.0
+    ],
+    [
+     "Net cash used for financing activities",
+     -3457.0
+    ],
+    [
+     "Net change in cash and cash equivalents",
+     747.0
+    ],
+    [
+     "Cash and cash equivalents at beginning of period",
+     1090.0
+    ],
+    [
+     "Cash and cash equivalents at end of period",
+     1837.0
+    ]
+   ]
+  }
+ },
+ "x": {
+  "dps": 6.77,
+  "dps_ytd": null
+ }
+}
