@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -14,7 +14,7 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 |---|---|
 | Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
-| Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
+| Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate), TLN (TWh × margin per MWh) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
@@ -24,12 +24,15 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
-| Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
+| Recent IPO or re-listing (short history from the prospectus) | LOAR, ONON, KRMN, TLN |
 | Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
 | Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
 | Private company, LBO | R&Y |
+| Emergence from bankruptcy (fresh-start accounting, predecessor / successor) | TLN, LOAR (predecessor / successor year) |
+| Commodity exposure, hedges marked to market, contracted revenue schedules | TLN |
+| EBITDA and free-cash-flow guidance only (no EPS) | TLN, KRMN, WCN |
 
 ---
 
@@ -698,6 +701,32 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [bridges] If the company computes adjusted tax annually, the FY column uses the FY table rather than Σ Q.
   - [BS/CF] The cash check must net overdrafts the CF statement nets.
   - [QA] Template residue survived here: the Bull-Base-Bear N26 comment cites MLM; the P40 comment cites "Model rows 290–292 / Model!CF2" (another build's rows) with author "User"; DCF headers say "USDm" / "($)" in a CHF model.
+
+## Power generation
+
+### TLN — Talen Energy Corporation (MLM template 6-Oct-26 via WWD kit; US GAAP / USD m / Dec FYE)
+- **Coverage & basis:** FY2021–22 annual (Predecessor, Talen Energy Supply, from the S-1 of 20-Jun-2024), Q1/23–Q3/26 quarterly, Q4/26E, 2027E–31E. All as originally reported (first filing that presents the period). CIK 1622536; the same CIK holds the 2015–16 filings of the first public Talen, which are out of scope. Emergence from Chapter 11 on 17-May-2023 with fresh-start accounting:
+  - FY2023 = Predecessor (1-Jan to 17-May) + Successor (18-May to 31-Dec), summed as presented and flagged as not comparable.
+  - Q2/23 = 1-Apr to 17-May + 18-May to 30-Jun, from the Q2-24 10-Q; Q4 = FY − 9M throughout (no three-month Q4 statements).
+  - No balance sheet for FY2021 or the 2023 quarter ends. Per-share data from 18-May-2023 only; Q4 weighted shares = 4 × FY − Σ Q1–Q3.
+- **Operating build:** Adjusted EBITDA = generation (TWh) × adjusted energy margin per MWh + capacity revenues − adjusted operating costs. The energy margin strips the non-cash amortization of acquired fuel-contract liabilities, which the company nets inside the D&A line of its reconciliation. Capacity revenues 2027E+ = the 10-Q schedule of contracted fixed-fee obligations + future auctions (MW × $/MW-day × uncovered days). Operating costs are a derived line (Adjusted EBITDA − margin − capacity), so the build ties in every period. PJM segment Adjusted EBITDA is a memo block. Generation is published only from 2023 (Q3/23 and FY2023 via comparatives).
+- **Bridges & definitions:** (1) net income → EBITDA → Adjusted EBITDA (company): about 25 company lines grouped into eight rows, with the wording per period in cell comments. (2) Adjusted EBITDA → Adjusted Free Cash Flow (company; from Q2/24, FY2023 via the Q4-24 release, Q1/23 and Q1/24 derived). (3) Adjusted EPS is a model definition (items after 25% tax); Talen publishes none. Reconciliation interest and D&A differ from the face statement (finance charges; contract amortization), so both are carried as their own bridge inputs.
+- **Data quirks & corrections:** bridge categories do not sum Q1–Q4 = FY by up to $9m (S-1 vs release groupings); Adjusted EBITDA ties. Q3/25 diluted EPS $4.26 computed vs $4.25. Share counts come from balance-sheet footnotes. 58 XBRL comparisons, 0 differences.
+- **Deals & special blocks:** Freedom & Guernsey (25-Nov-2025, $3.8bn) and Cornerstone (15-Jun-2026, $3.5bn incl. 2.4m shares) are in actuals, with provisional PPAs (no goodwill; acquired contract liabilities $667m and $151m). The 2026E pro forma generation base (81 TWh) is a flagged analyst estimate. The 1-Oct-2026 PJM capacity monetization ($1.5bn advanced less a $157m discount) is a deferred capacity obligation with its own roll-forward: accretion in interest expense, repayment from capacity settlements 2027–29. There is no M&A lever.
+- **Calibration & scenarios:** guidance is Adjusted EBITDA and Adjusted FCF only (8-K 3-Nov-2026): FY26 $2,050–2,200m and FY27 $2,500–2,850m. Guided and contracted drivers go in first (capacity revenues, D&A, nuclear fuel amortization, cash items); one Δ on the Q4/26E energy margin per MWh closes FY26, and the 2027E margin per MWh is solved directly to FY27. Adjusted FCF is an information row (Base $1,275m / $1,617m vs mid-points $1,275m / $1,625m). The guidance reconciliation's net income, interest and tax lines are a simplified bridge and are not used for GAAP. Levers: generation growth, margin per MWh growth, capacity price from 2029/30, cost growth, leverage target.
+- **Balance sheet, cash & capital:** $9.7bn of debt (term loans amortizing 1%, unsecured notes 2031–36); revolver to $350m minimum cash; surplus cash sweeps the term loans. ASR of $1.5bn on 1-Oct-2026: 3.81m shares retired at once, the balance at final settlement in 2027E for no cash. Buybacks plug to the company's 3.5x net leverage target, with a switch for whether the deferred capacity obligation counts. Derivative balances held flat; NDT gains accrete the trust (non-cash). Cash taxes follow the Adjusted FCF line, and the difference to book tax goes to deferred taxes.
+- **Valuation:** $354.52 from a Form 4 open-market sale (17-Nov-2026). 2026E is the DCF base year. NOPAT = (Adjusted EBITDA − D&A − nuclear fuel amortization − stock compensation − restructuring and acquisition costs) × (1 − 25%). The deferred capacity obligation is debt in the EV bridge because the monetized revenues stay in UFCF. Terminal-year capex = D&A, because depreciation of fair-valued acquired plants exceeds sustaining capex.
+- **Reusable lessons:**
+  - [basis] After fresh-start accounting, sum predecessor and successor stubs as presented, comment every combined cell, and build split quarters from the next year's comparatives.
+  - [build] Where the company discloses a contracted-revenue schedule (performance obligations), use it as the forecast for that line and model only the uncontracted remainder with a price lever.
+  - [build] Make the cost block a derived line (company adjusted profit − modelled margins) when the company gives no cost detail on the adjusted basis; show the GAAP cost lines as a memo.
+  - [bridges] If reconciliation lines (interest, D&A) differ from the face statement, carry them as separate bridge inputs and explain the difference in a driver row.
+  - [calibration] When next-year guidance exists, solve the least-guided driver for that year too instead of setting a lever by eye.
+  - [calibration] A guidance reconciliation that shows only interest, tax and D&A between net income and EBITDA is not a GAAP forecast; use its cash lines, not its net income.
+  - [BS/CF] Monetized future revenue: book the advance as a debt-like obligation with accretion and scheduled repayment, keep the revenue in the P&L, and count the obligation in valuation net debt.
+  - [BS/CF] An ASR retires most shares at the payment date and the rest at final settlement; split the share count across the two periods.
+  - [valuation] When book depreciation exceeds sustaining capex (assets acquired at fair value), set terminal-year capex equal to D&A.
+  - [QA] Bull / Bear = Base + Δ compounds over five years on commodity levers; size the Δs from the ending-year outcome and check the financing they imply.
 
 ## Private company / LBO
 

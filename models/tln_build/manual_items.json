@@ -1,0 +1,268 @@
+{
+ "_readme": "Items not machine-extracted: guidance, debt, deals / PPAs, capacity auctions and contracts, share data, share price. Every item cites its EDGAR source. USD m unless stated.",
+ "base": "https://www.sec.gov/Archives/edgar/data/1622536/",
+ "guidance": {
+  "fy26": {
+   "adj_ebitda": [
+    2200.0,
+    2125.0,
+    2050.0
+   ],
+   "adj_fcf": [
+    1325.0,
+    1275.0,
+    1225.0
+   ],
+   "recon_low_high": {
+    "net_income": [
+     960,
+     1080
+    ],
+    "interest": [
+     460,
+     480
+    ],
+    "tax": [
+     15,
+     25
+    ],
+    "dda": [
+     515,
+     515
+    ],
+    "nfa": [
+     100,
+     100
+    ],
+    "capex_net": [
+     325,
+     335
+    ],
+    "interest_paid": [
+     460,
+     480
+    ],
+    "taxes_paid": [
+     15,
+     25
+    ],
+    "pension": [
+     25,
+     35
+    ]
+   },
+   "history": "Sep-2024 Investor Day outlook 2026E: not carried; 27-Feb-2025 n/a; FY26 first guided 15-Jan-2026 (Cornerstone call); 26-Feb-2026 Adj. EBITDA $1,750-2,050m (ex Cornerstone); 3-Nov-2026 $2,050-2,200m and Adj. FCF $1,225-1,325m (narrowed, midpoint reaffirmed)",
+   "src": "8-K 3-Nov-2026 Ex. 99.1 (Q3-26 release): 000162253626000084/a20261103q32026earningsrel.htm"
+  },
+  "fy27": {
+   "adj_ebitda": [
+    2850.0,
+    2675.0,
+    2500.0
+   ],
+   "adj_fcf": [
+    1750.0,
+    1625.0,
+    1500.0
+   ],
+   "recon_low_high": {
+    "net_income": [
+     1105,
+     1405
+    ],
+    "interest": [
+     585,
+     615
+    ],
+    "tax": [
+     50,
+     70
+    ],
+    "dda": [
+     650,
+     650
+    ],
+    "nfa": [
+     110,
+     110
+    ],
+    "capex_net": [
+     355,
+     385
+    ],
+    "interest_paid": [
+     585,
+     615
+    ],
+    "taxes_paid": [
+     50,
+     70
+    ],
+    "pension": [
+     10,
+     30
+    ]
+   },
+   "src": "8-K 3-Nov-2026 Ex. 99.1: 2027 guidance introduced (figures rounded to the nearest $5m)"
+  },
+  "leverage_target": "Net leverage target 3.5x net debt / Adjusted EBITDA (Q3-26 release)",
+  "hedges": "30-Sep-2026, incl. the Nuclear PTC: ~80% of expected Oct-Dec 2026 generation hedged, ~70% of 2027, ~35% of 2028 (Q3-26 release)"
+ },
+ "capacity": {
+  "bra": {
+   "2024/2025": {
+    "price_mwd": 49.49,
+    "note": "MAAC / PPL 49.49; RTO 28.92"
+   },
+   "2025/2026": {
+    "mw": 6820,
+    "price_mwd": 269.92,
+    "rev": 670,
+    "src": "8-K 31-Jul-2024 Ex. 99.1"
+   },
+   "2026/2027": {
+    "mw": 6702,
+    "price_mwd": 329.17,
+    "src": "8-K 22-Jul-2025 Ex. 99.1"
+   },
+   "2027/2028": {
+    "mw": 8745,
+    "price_mwd": 333.44,
+    "rev": 1067,
+    "src": "8-K 17-Dec-2025 Ex. 99.1"
+   },
+   "2028/2029": {
+    "mw": 10180,
+    "price_mwd": 325.0,
+    "rev": 1208,
+    "src": "8-K 14-Jul-2026 Ex. 99.1; Q3-26 10-Q MD&A"
+   }
+  },
+  "expected_capacity_revenues": {
+   "2026_q4": 319,
+   "2027": 1270,
+   "2028": 1248,
+   "2029": 529,
+   "2030": 36,
+   "thereafter": 109,
+   "total": 3511,
+   "src": "Q3-26 10-Q Note 3 (future fixed-fee performance obligations at 30-Sep-2026; includes volumes awarded in PJM BRAs through May 2029; thereafter = contracts through 2035)"
+  },
+  "monetization": {
+   "date": "2026-10-01",
+   "gross": 1500,
+   "discount": 157,
+   "net": 1343,
+   "repay": {
+    "2027": 432,
+    "2028": 757,
+    "2029": 311
+   },
+   "note": "TEM transferred rights to $1.5bn of PJM capacity cash flows (c. 6.5 GW 2027/28 and 6.0 GW 2028/29). Advanced proceeds are a liability; revenue is still recognised; the $157m discount is an implied finance charge amortised to interest expense through May-2029; PJM pays the third party from Jun-2027.",
+   "src": "Q3-26 10-Q Note 3; 8-K 29-Sep-2026"
+  },
+  "guernsey_sale": "8-K 12-Nov-2026 (Item 8.01): Guernsey 750 MW UCAP sold for PJM delivery years 2029/30-2035/36 (~$100m a year) plus 588 MW for 2029/30; Waterford capacity sale to the same investment-grade counterparty"
+ },
+ "contracts": {
+  "aws_ppa": "Amended AWS PPA (Jun-2025): up to 1,920 MW of Susquehanna output through 2042, front-of-the-meter transition spring 2026-spring 2027 (FY2025 10-K Item 1)",
+  "fuel_contract_amort": {
+   "2026": 93,
+   "2027": 101,
+   "2028": 102,
+   "2029": 83,
+   "2030": 84,
+   "thereafter": 198,
+   "src": "FY2025 10-K Note 17: amortization of acquired fuel supply contract liabilities (Freedom to Jul-2028, Guernsey to Feb-2033), a reduction of fuel and energy purchases"
+  },
+  "capacity_contract_amort": {
+   "2028": 18,
+   "2029": 29,
+   "2030": 29,
+   "2031": 24,
+   "2032": 21,
+   "thereafter": 30,
+   "src": "Q3-26 10-Q Note 17: acquired capacity contract liability (Cornerstone), an increase to capacity revenues from 2028"
+  }
+ },
+ "ppa": {
+  "Q4-25": {
+   "names": "Freedom & Guernsey (25-Nov-2025; cash $3,840m)",
+   "cons": 3793.0,
+   "ca": 39.0,
+   "ppe": 4509.0,
+   "intang": 0.0,
+   "gw": 0.0,
+   "onca": 0.0,
+   "cl": 28.0,
+   "debt": 0.0,
+   "ncl": 727.0,
+   "note": "FY2025 10-K Note 17 (provisional): cash 47, receivables 29, other assets 10, PP&E 4,509; payables 28, derivatives 49, other liabilities 11, acquired fuel supply contract liabilities 667; purchase price 3,840 (3,793 net of cash acquired). No goodwill."
+  },
+  "Q2-26": {
+   "names": "Cornerstone (15-Jun-2026; cash $2,617m + 2.4m shares $927m)",
+   "cons": 3497.0,
+   "ca": 81.0,
+   "ppe": 4214.0,
+   "intang": 0.0,
+   "gw": 0.0,
+   "onca": 0.0,
+   "cl": 136.0,
+   "debt": 0.0,
+   "ncl": 662.0,
+   "note": "Q3-26 10-Q Note 17 (provisional, as revised in Q3-26): cash 47, receivables 38, inventory 31, other current 12, PP&E 4,214; payables 43, current derivative liabilities 93, ARO 5, acquired contract liabilities 151, deferred taxes 457, noncurrent derivatives 49; consideration 3,544 = cash 2,617 + 2,399,998 shares at $386.21 (927); 3,497 net of cash acquired. No goodwill."
+  }
+ },
+ "deals": {
+  "freedom_guernsey": "Acquired 25-Nov-2025 from Caithness: Freedom (PA) and Guernsey (OH) CCGTs, ~2.8 GW, $3.8bn cash; financed with TLB-3 $1.2bn and 2034 / 2036 unsecured notes $2.69bn (8-Ks 27-Oct-2025, 25-Nov-2025). Since acquisition to 31-Dec-2025: revenues $153m, net income $62m.",
+  "cornerstone": "Acquired 15-Jun-2026: ~2.6 GW (Waterford and Darby, OH; Lawrenceburg, IN), $3.5bn = $2,617m cash + 2.4m shares; financed with $1.5bn 6.125% 2031 and $2.5bn 6.375% 2033 unsecured notes (Apr-2026), which also redeemed the $1.2bn 8.625% secured notes. 15-Jun to 30-Sep-2026: revenues $835m, net income $273m (incl. unrealized derivative results).",
+  "keystone": "Sep-2026: 12.34% Keystone interest sold for $73m (gain $66m). Sep-2025: Camden and Dartmouth sold for $25m (gain $22m).",
+  "2024": "Cumulus data campus sold to AWS (Mar-2024, $650m) and the ERCOT fleet sold (May-2024): aggregate gain ~$888m."
+ },
+ "debt": {
+  "at_2026_09_30": "Q3-26 10-Q Note 10: TLB-1 $842m (5.48%, Nov-2032), TLB-2 $835m (5.48%, Dec-2031), TLB-3 $1,191m (5.32%, 2032); unsecured notes 6.125% 2031 $1,500m, 6.375% 2033 $2,500m, 6.25% 2034 $1,400m, 6.50% 2036 $1,290m; PEDFA bonds $131m (5.25%); principal $9,689m, carrying value $9,569m. RCF $1.35bn undrawn (Dec-2029); LCF $1.5bn.",
+  "principal": 9689.0,
+  "carrying": 9569.0,
+  "term_loans": 2868.0,
+  "notes": 6690.0,
+  "pedfa": 131.0,
+  "tl_amort_pa": 29.0,
+  "rates": {
+   "term_loans": 0.0541,
+   "notes": 0.0633,
+   "pedfa": 0.0525
+  },
+  "one_offs_2026": "Q2-26: $60m make-whole and write-off on the redemption of the secured notes and $18m on the TLB-1 extension, in interest expense (Q3-26 10-Q Note 10)."
+ },
+ "equity": {
+  "asr": "ASR of $1.5bn entered 29-Sep-2026; 3,811,460 shares received and retired on 1-Oct-2026 (80% of $1.5bn at $314.84); final settlement by Q1-2027 (Q3-26 10-Q Note 15 and Part II Item 2)",
+  "asr_initial_shares": 3.81146,
+  "asr_ref_price": 314.84,
+  "srp_remaining_after_asr": 1500.0,
+  "shares_out_2026_09_30": 47.316772,
+  "srp_9m26": "9M-26: 1,450,000 shares at $345.77 = $501m; Aug-2026: 600,000 at $339.47 (Part II Item 2)",
+  "sbc_2025": "Q4-25: $501m charge on the change in accounting for existing stock-based awards (liability-classified); $500m cash-settled in 2026 (cash-flow statement)"
+ },
+ "price": {
+  "px": 354.52,
+  "date": "2026-11-17",
+  "form": "Form 4 (filed 19-Nov-2026), open-market sale by a director/officer (E. T. Casulli), 3,602 shares at $354.52",
+  "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828026075083/",
+  "other": "Same day Form 4 (B. Berryman) sales at $345.44-348.73; 11-Nov-2026 sale at $382.74; ASR reference price 1-Oct-2026 $314.84; Aug-2026 average repurchase price $339.47 (Q3-26 10-Q Part II Item 2).",
+  "flag": "update to market"
+ },
+ "shares_out": {
+  "2023": 59.028843,
+  "Q1-24": 58.535843,
+  "Q2-24": 53.254954,
+  "Q3-24": 50.855417,
+  "2024": 45.96191,
+  "Q1-25": 45.50978,
+  "Q2-25": 45.659227,
+  "Q3-25": 45.687828,
+  "2025": 45.687828,
+  "Q1-26": 45.395007,
+  "Q2-26": 47.900355,
+  "Q3-26": 47.316772,
+  "src": "Balance-sheet footnotes of the S-1 (31-Dec-2023; 31-Mar-2024 from the capitalization table: 59,028,843 issued, 58,535,843 outstanding), 10-Qs and 10-Ks (shares issued and outstanding; 30-Jun-2024: 53,259,981 issued, 53,254,954 outstanding)"
+ }
+}

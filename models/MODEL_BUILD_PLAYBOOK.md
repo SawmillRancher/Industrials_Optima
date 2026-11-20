@@ -1,15 +1,15 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, TLN). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
 - **Fill-in docs:** [`templates/NEW_MODEL_README_TEMPLATE.md`](templates/NEW_MODEL_README_TEMPLATE.md) and [`templates/EXTRACTION_SCHEMA_TEMPLATE.md`](templates/EXTRACTION_SCHEMA_TEMPLATE.md).
 - **QA tools:** [`tools/inspect_model.py`](tools/inspect_model.py) (formula errors and non-zero check rows), [`tools/cyc.py`](tools/cyc.py) (circular references) and [`tools/residue_scan.py`](tools/residue_scan.py) (leftover template-company text in values and comments).
 - **Per-model lessons:** [`MODEL_LESSONS.md`](MODEL_LESSONS.md) records each model's specific nuances (basis, bridges, data quirks, deals, calibration, valuation) and reusable rules. Read the entries for the most similar companies before you start.
-- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`) and WWD (`wwd_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
+- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`), WWD (`wwd_build`) and TLN (`tln_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
 
 ---
 
@@ -258,6 +258,8 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | Pending / new acquisition | DHR, MLM, CTAS, ESAB, CSGP, UBER, CHRW | Separate block, PPA, financing, synergies, closing-date toggle; deal tab for large deals |
 | Dual-class / splits | ONON, HEI, CTAS, ODFL | Class-equivalent shares; split-adjust by source filing date |
 | Private company | R&Y | Compilation statements; implied CF from BS changes; LBO tab |
+| Emergence from bankruptcy (fresh-start) | TLN | Predecessor + successor stubs summed as presented and flagged; quarters split at the emergence date built from the next year's comparatives; per-share data from emergence |
+| Commodity producer with contracted revenues | TLN | Volume × margin per unit; contracted-revenue schedule as the forecast for that line; unrealized hedge results excluded; derived adjusted-cost line |
 
 ### 4.3 Pitfalls that have bitten before
 - Template-company constants left in forecast formulas or notes (Moog `888`, MLM LNA rows, MLM-specific DCF text).
@@ -275,7 +277,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -316,6 +318,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Strip one-offs and calendar effects before compounding:** restructuring out of base unit costs; extra workday or 53rd week out of the YTD trend. [CHRW, CTAS]
 - **Operational calendars** (work days) are rebuilt in code and validated against every published count before filling unpublished periods. [ODFL]
 - **Marketplaces:** receivables and payables run as days of GTV, not revenue. [RBA]
+- **Contracted-revenue schedules** (10-Q performance obligations, cleared capacity auctions, order books): use the schedule as the forecast for that line and model only the uncontracted remainder with a price lever. [TLN]
+- **No cost detail on the adjusted basis:** make adjusted costs a derived line (company adjusted profit − modelled margins) so the build ties in every period, with the GAAP cost lines as a memo. [TLN]
 
 ### 5.4 Bridges
 - **Tax effect of adjusting items: derive it, don't assume it.**
@@ -339,6 +343,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Known, explained source differences** (a restated starting NI, a release issued before a 10-Q impairment) can stay as documented check exceptions rather than plugs. [WCN]
 - **Long-term target base years** stay "as first published", with a note that definitions have since changed. [XPO]
 - **Two-class / participating preferred:** the adjusted-NI bridge needs an "allocation to preferred" line, and the preferred is deducted in the EV bridge. [RBA]
+- **Reconciliation lines that differ from the face statement** (interest incl. other finance charges, D&A net of contract amortization): carry them as their own bridge inputs and explain the difference in a driver row. [TLN]
 
 ### 5.5 Calibration
 - **Order of operations.** Apply every explicitly guided driver first, then solve one uniform Δ on the least-guided driver. Use a "sensitivity to +1.00" helper row for a closed-form linear solve, with no goal-seek and no circularity. [VMC, MLM, TDY, WAB, DHR, LOAR, CSGP]
@@ -352,6 +357,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Guided cost items** (D&A, interest, SBC) for the remaining halves = (FY mid − 1H) ÷ 2. Add post-guidance financing events (new notes) on top. Take point estimates from the company's own outlook reconciliation rather than guessing. [CLH, XPO, WAB, VMC, MLM, TDY]
 - **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
 - **Apply the Δ only to genuinely uncommitted lines** (retail rather than order-book wholesale). Constant-FX guidance needs a separate FX-translation Δ for the reporting-currency figure. EPS guidance made stale by post-guidance buybacks becomes an information row. [BC, ONON, BWXT]
+- **Next-year guidance already published:** solve the least-guided driver for that year as well (a second closed-form solve with its own check), then let the levers run from the year after. [TLN]
+- **Simplified guidance reconciliations** (net income → EBITDA with only interest, tax and D&A) are not GAAP forecasts: use their cash lines as point estimates, never their net income. [TLN]
 - **No guidance:** leave targets as optional blank inputs; don't invent them. [HEI, BC]
 
 ### 5.6 Balance sheet, cash and capital
@@ -387,6 +394,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Working-capital ratios** come from fiscal-year-end balances, not annualised quarters. [STE, CTAS]
 - **Use the company's own capex / FCF definition** when it is guided, so guided and modelled figures are comparable. [RBA, HII]
 - **Reconcile BS cash vs CF ending cash with a memo line** when definitions differ (overdraft, restricted cash, disc-ops cash). [ONON, CSGP, DHR]
+- **Monetized future revenue** (capacity or receivable monetizations): book the advance as a debt-like obligation with accretion and scheduled repayment, keep the revenue in the P&L, and count the obligation in valuation net debt. State whether the leverage target includes it. [TLN]
+- **Accelerated share repurchases** retire most shares at the payment date and the rest at final settlement; split the share count across the two periods. [TLN]
 
 ### 5.7 Valuation
 - **Standard NOPAT basis** (the builds diverged here; this is now the rule):
@@ -405,9 +414,11 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   [ESAB, BWXT, HEI, UBER]
 - **Deal tabs** show accretion both vs the standalone with buybacks and on the company's comparison basis, and solve for the synergies or margin needed to meet the stated accretion. [CHRW]
 - **Historical average share prices** come from 10-K Item 5 only where disclosed; leave later years blank. [HII]
+- **Terminal capex:** when book depreciation exceeds sustaining capex (assets acquired at fair value), set terminal-year capex equal to D&A. [TLN]
 
 ### 5.8 QA
 - **Template residue is the most common defect.** At least 10 builds shipped MLM text in Bull-Base-Bear N26 / P40 comments or DCF rationale, and TFI kept Moog comments. `tools/residue_scan.py` is a hard gate. [CLH, WAB, SAIA, ODFL, WCN, LOAR, ONON, LECO, ESAB, STE, CTAS, UBER, TFI, CPRT]
 - **Check also:** foreign row numbers and switch-cell addresses in comments, the wrong currency symbol on non-USD models, and modelling-note dates that contradict the definition flags. [ONON, DHR]
 - **Check tolerances** are set by period when the issuer changes rounding units, and stated in the label. [STE, TMO, CSGP, ONON, DHR]
+- **Scenario Δs compound.** Size Bull / Bear Δs from the ending-year outcome, and check the financing they imply (revolver above its commitment, cash piling up without a sweep). [TLN]
 - **Private-company implied CF:** related-party balances are financing; explain the sign of implied capex; leave first-year ratios n/a when there is no opening BS. [R&Y]
