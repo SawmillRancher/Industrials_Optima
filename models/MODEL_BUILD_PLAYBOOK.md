@@ -1,15 +1,15 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, UNP). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
 - **Fill-in docs:** [`templates/NEW_MODEL_README_TEMPLATE.md`](templates/NEW_MODEL_README_TEMPLATE.md) and [`templates/EXTRACTION_SCHEMA_TEMPLATE.md`](templates/EXTRACTION_SCHEMA_TEMPLATE.md).
 - **QA tools:** [`tools/inspect_model.py`](tools/inspect_model.py) (formula errors and non-zero check rows), [`tools/cyc.py`](tools/cyc.py) (circular references) and [`tools/residue_scan.py`](tools/residue_scan.py) (leftover template-company text in values and comments).
 - **Per-model lessons:** [`MODEL_LESSONS.md`](MODEL_LESSONS.md) records each model's specific nuances (basis, bridges, data quirks, deals, calibration, valuation) and reusable rules. Read the entries for the most similar companies before you start.
-- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`) and WWD (`wwd_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
+- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`), WWD (`wwd_build`) and UNP (`unp_build`, incl. a pending stock-and-cash merger block) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
 
 ---
 
@@ -246,7 +246,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | Situation | Precedent | Adaptation |
 |---|---|---|
 | Single reportable segment | RBA, KRMN, LOAR | Revenue-stream or end-market build; margins at group level; anchor on the company's guided KPI |
-| Unit economics disclosed | MLM, VMC, ODFL, SAIA, XPO, CHRW | Volume × price build, price / volume bridge, fall-through; fuel surcharge from DOE diesel × surcharge table (SAIA) |
+| Unit economics disclosed | MLM, VMC, ODFL, SAIA, XPO, CHRW, UNP | Volume × price build, price / volume bridge, fall-through; fuel surcharge from DOE diesel × surcharge table (SAIA); railroads: carloads × revenue per car, GTMs → fuel gallons × price, employees × cost per employee (UNP) |
 | No guidance | ODFL, RMS | Mid-quarter updates; seasonality best / avg / worst; scenario-only forecast |
 | No non-GAAP published | ODFL, DHR (EBITDA), STE (EBITDA) | Model-defined bridges, clearly labelled, checked against XBRL / GAAP |
 | Definition changed over time | TDY, LOAR, RBA, MLM | Definition-flag row, in-force definition per period, current-definition memo series |
@@ -255,7 +255,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | Half-year reporters | RMS, BC | H1 / H2 / FY columns (H2 = FY − H1); quarterly revenue memo |
 | Recent IPO | LOAR, ONON, KRMN | Annual columns from the prospectus; P&L-only years flagged; BS / CF start when available |
 | Non-December fiscal year | STE (Mar), CTAS (May), HEI (Oct) | Column labels by fiscal year; DCF discount dates moved to FY ends |
-| Pending / new acquisition | DHR, MLM, CTAS, ESAB, CSGP, UBER, CHRW | Separate block, PPA, financing, synergies, closing-date toggle; deal tab for large deals |
+| Pending / new acquisition | DHR, MLM, CTAS, ESAB, CSGP, UBER, CHRW, UNP | Separate block, PPA, financing, synergies, closing-date toggle; deal tab for large deals; stock consideration valued at the modelled closing price and deducted at PV in the DCF equity bridge (UNP) |
 | Dual-class / splits | ONON, HEI, CTAS, ODFL | Class-equivalent shares; split-adjust by source filing date |
 | Private company | R&Y | Compilation statements; implied CF from BS changes; LBO tab |
 
@@ -268,6 +268,8 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 - Circular interest. Always calculate on opening balances.
 - Mixing restated and original bases in one y/y comparison. Pick a basis policy and comment the recast cells.
 - Missing Q4s / release-only quarters (no MD&A exhibit). Derive FY − 9M and note it.
+- Exhibit names without "99" (UNP 2022–24 `ex_<n>.htm`): a filter on the exhibit number silently drops releases. Check the release count against the expected quarters.
+- Modelling-note text that starts with "=" is evaluated as a formula by LibreOffice and shows as an error; start notes with a word.
 - Issuer sign flips between years (TFI FinanceCosts). Normalise signs in `normalize.py` and note them.
 - Saving with openpyxl drops chart formatting. Re-inject the template chart XML after every save.
 - Files without cached values look blank in viewers. Store calculated values.
@@ -275,7 +277,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -289,6 +291,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Recast Q4 = FY recast − 9M recast; quarters that were never recast stay blank. [LECO]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
+- **Target companies in pending deals** can be extracted by a parallel agent from the target's own filings, then cross-checked to the target's XBRL company facts before use. [UNP]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
 
 ### 5.2 Basis
@@ -343,6 +346,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 ### 5.5 Calibration
 - **Order of operations.** Apply every explicitly guided driver first, then solve one uniform Δ on the least-guided driver. Use a "sensitivity to +1.00" helper row for a closed-form linear solve, with no goal-seek and no circularity. [VMC, MLM, TDY, WAB, DHR, LOAR, CSGP]
 - **EPS guidance → operating target:** required adjusted OI = EPS × guidance share count (ex future buybacks) ÷ (1 − guided ETR) + net interest − adjusted other income, less the actual YTD. Then solve margins to it. [DHR, CTAS, STE, WAB, WWD]
+- **EPS-growth-only guidance** ("high-single digit"): read the range explicitly (7 / 8 / 9%), apply it to the prior-year reported EPS, fix fuel / depreciation / interest / other income / tax as point estimates and solve one proportional shift on the variable cost lines; show the operating ratio it implies. [UNP]
 - **Two anchors in one year:** if a quarterly guide and a FY guide both exist, solve Q3 to the quarter and Q4 to the year with separate Δs and checks. For one-quarter-ahead guidance only, carry the solved Δ forward. [DHR, ONON, TDY, UBER]
 - **Guidance that excludes a deal or one-off:** calibrate a legacy / guidance-basis memo series with its own check, and add the deal block and excluded items on top. Deals already inside guidance go inside segment acquisition %. Check the deal close date against the outlook date. [MLM, KRMN, CLH, CSGP, CTAS, UBER, TMO, ONON, DHR]
 - **Incremental-margin guidance:** target = prior-year half + incremental % × Δ sales. [LECO]
@@ -377,6 +381,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Calibrate a fees / capitalized-interest row to YTD interest when coupons overstate actual expense.
 
   [KRMN, MLM, WWD, BWXT]
+- **Purchase-accounting non-cash interest** (debt-discount accretion, capitalised fee amortisation) is added back in CFO; weighted shares after a stock deal = ex-deal average + deal shares × fraction of the year, with a cumulative deal-share memo so year 2 does not double count. [UNP]
 - **Convertibles and preferred:**
   - Convertibles: treasury-stock dilution above the conversion price, driven by the forecast share price; capped calls ignored; counted at face in net debt.
   - Mandatory convertible preferred: if-converted shares until conversion, with dividends added back in adjusted EPS.
@@ -396,6 +401,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 
   [DHR, TMO, CSGP, ONON, CLH, WAB, XPO, CPRT, RBA, KRMN]
 - **Don't double-count the current year:** when valuation net debt is taken at the current fiscal year end, exclude that year's UFCF. When the FY ended just before the valuation date, make it the base year. [BWXT, CW, WWD, BC, HEI]
+- **Stock-and-cash mergers in the DCF:** keep the pre-deal share count and deduct the PV of the stock consideration (valued at the modelled closing price) in the equity bridge, with the cash consideration in the explicit-year UFCF. [UNP]
 - **EV bridge items:**
   - Add legacy debt-like items (asbestos net of insurance) and redeemable NCI.
   - Carry equity stakes and retained divestiture stakes at carrying value outside invested capital.
@@ -409,5 +415,6 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 ### 5.8 QA
 - **Template residue is the most common defect.** At least 10 builds shipped MLM text in Bull-Base-Bear N26 / P40 comments or DCF rationale, and TFI kept Moog comments. `tools/residue_scan.py` is a hard gate. [CLH, WAB, SAIA, ODFL, WCN, LOAR, ONON, LECO, ESAB, STE, CTAS, UBER, TFI, CPRT]
 - **Check also:** foreign row numbers and switch-cell addresses in comments, the wrong currency symbol on non-USD models, and modelling-note dates that contradict the definition flags. [ONON, DHR]
+- **`residue_scan` and the switch cell:** `Model!CF2` is a default token because other builds shifted columns; a build that keeps the template columns must `--allow "Model!CF2"` and say so in its README. [UNP]
 - **Check tolerances** are set by period when the issuer changes rounding units, and stated in the label. [STE, TMO, CSGP, ONON, DHR]
 - **Private-company implied CF:** related-party balances are financing; explain the sign of implied capex; leave first-year ratios n/a when there is no opening BS. [R&Y]

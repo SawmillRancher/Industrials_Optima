@@ -1,0 +1,1511 @@
+{
+ "source_note": "Norfolk Southern Corporation (NSC, CIK 702165) standalone historicals for the UNP pending-merger block. Sources: SEC EDGAR filings only (8-K Ex. 99.1 earnings releases and Ex. 99.2 financial tables, 10-Q and 10-K primary documents) as listed per period. USD millions as published; shares in millions; per-share in dollars; percentages as numbers. Costs positive (credits, e.g. Eastern Ohio net recoveries or line-sale gains in Materials and other, are negative as published). Quarters are discrete three-month figures; Q1-24..Q3-24 come from 10-Qs because NSC's own 2024 Q1-Q3 releases are not in the source set (cross-checked to the comparative columns of the 2025 releases). Fields marked DERIVED in notes are FY minus 9M. short_term_investments is null throughout: NSC's balance sheet has no short-term investments line (only non-current 'Investments'). total_debt = current maturities + long-term debt. operating_lease_liabilities_total only printed in 10-Ks (null for quarters other than Q4). shares_outstanding_m: 10-Q cover / balance-sheet parenthetical at period end.",
+ "periods": {
+  "2023": {
+   "period_end": "2023-12-31",
+   "source": [
+    "2024-02-05_10-K_0000702165-24-000005_nsc-20231231.txt",
+    "2025-02-10_10-K_0000702165-25-000008_nsc-20241231.txt",
+    "2025-01-29_8-K_0001193125-25-014968_d945030dex992.txt"
+   ],
+   "is": {
+    "railway_operating_revenues": 12156,
+    "opex_compensation_and_benefits": 2819,
+    "opex_purchased_services_and_rents": 2070,
+    "opex_fuel": 1170,
+    "opex_depreciation": 1298,
+    "opex_materials_and_other": 832,
+    "opex_other_lines": [
+     [
+      "Eastern Ohio incident",
+      1116
+     ]
+    ],
+    "total_operating_expenses": 9305,
+    "income_from_railway_operations": 2851,
+    "other_income_net": 191,
+    "other_income_label": "Other income – net",
+    "interest_expense_on_debt": 722,
+    "income_before_income_taxes": 2320,
+    "income_taxes": 493,
+    "net_income": 1827,
+    "eps_diluted": 8.02,
+    "shares_diluted_weighted_m": 227.4,
+    "operating_ratio_pct": 76.5,
+    "dividends_declared_per_share": 5.4
+   },
+   "ngaap": {
+    "adjusted_operating_ratio_pct": 67.4,
+    "adjusted_income_from_railway_operations": 3967,
+    "adjusted_net_income": 2673,
+    "adjusted_eps_diluted": 11.74,
+    "items": [
+     [
+      "Eastern Ohio Incident",
+      1116,
+      846,
+      "opex"
+     ]
+    ],
+    "definition_note": "Items list = the itemised non-GAAP reconciliation columns (exact column headers) from the 10-Q/10-K MD&A, as [label, pre-tax $m added back to GAAP income from railway operations (or to pre-tax income for nonop items), after-tax $m added back to GAAP net income, where]. Positive = adds to adjusted income. release_items = the exact rows of the earnings release's own non-GAAP table [label, effect on income from railway operations $m, effect on diluted EPS $]. 2023 10-K 'Non-GAAP Reconciliation for 2023' (repeated in 2024 and 2025 10-Ks): adjusted results exclude the effects of the Incident. Adjusted income taxes 763 (GAAP 493 + 270)."
+   },
+   "volume": {
+    "total_units_thousands": 6744.4,
+    "revenue_per_unit_dollars": 1802,
+    "merchandise_revenue": 7353,
+    "intermodal_revenue": 3090,
+    "coal_revenue": 1713,
+    "merchandise_units_thousands": 2244.9,
+    "intermodal_units_thousands": 3822.4,
+    "coal_units_thousands": 677.1
+   },
+   "cf_ytd": {
+    "ytd_months": 12,
+    "cash_from_operations": 3179,
+    "property_additions": 2327,
+    "dividends_paid": 1225,
+    "share_repurchases": 622,
+    "depreciation": 1298
+   },
+   "bs": {
+    "cash_and_cash_equivalents": 1568,
+    "short_term_investments": null,
+    "total_assets": 41652,
+    "current_maturities_of_long_term_debt": 4,
+    "long_term_debt": 17175,
+    "total_debt": 17179,
+    "operating_lease_liabilities_total": 392,
+    "total_stockholders_equity": 12781,
+    "shares_outstanding_m": 225.681254
+   },
+   "notes": "IS/BS/volume from 2023 10-K (identical in 2024 10-K comparatives). Property additions: 2,327 per the 2024 10-K cash-flow statement, which shows 'Acquisition of assets of CSR' (22) separately; the 2023 10-K's own cash-flow statement printed Property additions (2,349) including that $22m. Operating ratio 76.5 from the 10-K non-GAAP table. Dividends $5.40/share from the stockholders' equity statement. Operating lease liabilities = 'Total lease liabilities' (current 105 + non-current 287). total_debt = current maturities + long-term debt (sum of printed lines). No Q4-23 release in source set, so no 2023 quarterly data.",
+   "self_check_failures": []
+  },
+  "2024": {
+   "period_end": "2024-12-31",
+   "source": [
+    "2025-02-10_10-K_0000702165-25-000008_nsc-20241231.txt",
+    "2025-01-29_8-K_0001193125-25-014968_d945030dex991.txt",
+    "2025-01-29_8-K_0001193125-25-014968_d945030dex992.txt"
+   ],
+   "is": {
+    "railway_operating_revenues": 12123,
+    "opex_compensation_and_benefits": 2823,
+    "opex_purchased_services_and_rents": 2048,
+    "opex_fuel": 987,
+    "opex_depreciation": 1353,
+    "opex_materials_and_other": 333,
+    "opex_other_lines": [
+     [
+      "Restructuring and other charges",
+      183
+     ],
+     [
+      "Eastern Ohio incident",
+      325
+     ]
+    ],
+    "total_operating_expenses": 8052,
+    "income_from_railway_operations": 4071,
+    "other_income_net": 65,
+    "other_income_label": "Other income – net",
+    "interest_expense_on_debt": 807,
+    "income_before_income_taxes": 3329,
+    "income_taxes": 707,
+    "net_income": 2622,
+    "eps_diluted": 11.57,
+    "shares_diluted_weighted_m": 226.4,
+    "operating_ratio_pct": 66.4,
+    "dividends_declared_per_share": 5.4
+   },
+   "ngaap": {
+    "adjusted_operating_ratio_pct": 65.8,
+    "adjusted_income_from_railway_operations": 4146,
+    "adjusted_net_income": 2684,
+    "adjusted_eps_diluted": 11.85,
+    "items": [
+     [
+      "Gains on Railway Line Sales",
+      -433,
+      -327,
+      "opex"
+     ],
+     [
+      "Restructuring and Other Charges",
+      183,
+      125,
+      "opex"
+     ],
+     [
+      "Eastern Ohio Incident",
+      325,
+      247,
+      "opex"
+     ],
+     [
+      "Shareholder Advisory Costs",
+      59,
+      44,
+      "nonop"
+     ],
+     [
+      "Deferred Income Tax Adjustment",
+      0,
+      -27,
+      "tax"
+     ]
+    ],
+    "definition_note": "Items list = the itemised non-GAAP reconciliation columns (exact column headers) from the 10-Q/10-K MD&A, as [label, pre-tax $m added back to GAAP income from railway operations (or to pre-tax income for nonop items), after-tax $m added back to GAAP net income, where]. Positive = adds to adjusted income. release_items = the exact rows of the earnings release's own non-GAAP table [label, effect on income from railway operations $m, effect on diluted EPS $]. 2024 10-K 'Non-GAAP Reconciliation for 2024'. Shareholder advisory pre-tax $59m from Q4-24 release note 4. Restructuring after-tax also removes the $20m OPEB curtailment gain in other income.",
+    "release_items": [
+     [
+      "Effect of railway line sales",
+      -433,
+      -1.44
+     ],
+     [
+      "Effect of Eastern Ohio incident",
+      325,
+      1.09
+     ],
+     [
+      "Effect of restructuring and other charges",
+      183,
+      0.55
+     ],
+     [
+      "Effect of favorable deferred tax benefit",
+      null,
+      -0.12
+     ],
+     [
+      "Effect of shareholder advisory costs",
+      null,
+      0.2
+     ]
+    ]
+   },
+   "volume": {
+    "total_units_thousands": 7056.8,
+    "revenue_per_unit_dollars": 1718,
+    "merchandise_revenue": 7470,
+    "intermodal_revenue": 3042,
+    "coal_revenue": 1611,
+    "merchandise_units_thousands": 2264.3,
+    "intermodal_units_thousands": 4107.7,
+    "coal_units_thousands": 684.8
+   },
+   "cf_ytd": {
+    "ytd_months": 12,
+    "cash_from_operations": 4052,
+    "property_additions": 2381,
+    "dividends_paid": 1221,
+    "share_repurchases": 0,
+    "depreciation": 1353
+   },
+   "bs": {
+    "cash_and_cash_equivalents": 1641,
+    "short_term_investments": null,
+    "total_assets": 43682,
+    "current_maturities_of_long_term_debt": 555,
+    "long_term_debt": 16651,
+    "total_debt": 17206,
+    "operating_lease_liabilities_total": 272,
+    "total_stockholders_equity": 14306,
+    "shares_outstanding_m": 226.320894
+   },
+   "notes": "10-K and Q4-24 release agree on every field taken. Property additions 2,381 exclude 'Acquisition of assets of CSR' (1,643), shown separately; the 10-K Railway Property table's total of 4,024 includes it. Operating lease liabilities = 10-K 'Total lease liabilities' (81 + 191).",
+   "self_check_failures": []
+  },
+  "2025": {
+   "period_end": "2025-12-31",
+   "source": [
+    "2026-02-09_10-K_0001628280-26-006268_nsc-20251231.txt",
+    "2026-01-29_8-K_0001193125-26-028244_nsc-ex99_1.txt",
+    "2026-01-29_8-K_0001193125-26-028244_nsc-ex99_2.txt"
+   ],
+   "is": {
+    "railway_operating_revenues": 12180,
+    "opex_compensation_and_benefits": 2922,
+    "opex_purchased_services_and_rents": 2095,
+    "opex_fuel": 932,
+    "opex_depreciation": 1393,
+    "opex_materials_and_other": 634,
+    "opex_other_lines": [
+     [
+      "Merger-related expenses",
+      80
+     ],
+     [
+      "Restructuring and other charges",
+      22
+     ],
+     [
+      "Eastern Ohio incident",
+      -254
+     ]
+    ],
+    "total_operating_expenses": 7824,
+    "income_from_railway_operations": 4356,
+    "other_income_net": 101,
+    "other_income_label": "Other income – net",
+    "interest_expense_on_debt": 792,
+    "income_before_income_taxes": 3665,
+    "income_taxes": 792,
+    "net_income": 2873,
+    "eps_diluted": 12.75,
+    "shares_diluted_weighted_m": 225.3,
+    "operating_ratio_pct": 64.2,
+    "dividends_declared_per_share": 5.4
+   },
+   "ngaap": {
+    "adjusted_operating_ratio_pct": 65.0,
+    "adjusted_income_from_railway_operations": 4268,
+    "adjusted_net_income": 2816,
+    "adjusted_eps_diluted": 12.49,
+    "items": [
+     [
+      "Merger-Related Expenses",
+      80,
+      69,
+      "opex"
+     ],
+     [
+      "Restructuring and Other Charges",
+      22,
+      17,
+      "opex"
+     ],
+     [
+      "Eastern Ohio Incident",
+      -190,
+      -143,
+      "opex"
+     ]
+    ],
+    "definition_note": "Items list = the itemised non-GAAP reconciliation columns (exact column headers) from the 10-Q/10-K MD&A, as [label, pre-tax $m added back to GAAP income from railway operations (or to pre-tax income for nonop items), after-tax $m added back to GAAP net income, where]. Positive = adds to adjusted income. release_items = the exact rows of the earnings release's own non-GAAP table [label, effect on income from railway operations $m, effect on diluted EPS $]. NSC's 2025 'Eastern Ohio Incident' adjustment is 'the overall impact on operating expenses resulting from costs and recoveries associated with the Incident', which differs from the 'Eastern Ohio incident' income-statement line (part of the cost sits in other expense lines). FY: IS line (254) vs adjustment (190). Itemised from 2025 10-K 'Non-GAAP Reconciliation for 2025'.",
+    "release_items": [
+     [
+      "Merger-related expenses, restructuring and other charges, and effect of the Incident",
+      -88,
+      -0.26
+     ]
+    ]
+   },
+   "volume": {
+    "total_units_thousands": 7063.2,
+    "revenue_per_unit_dollars": 1724,
+    "merchandise_revenue": 7684,
+    "intermodal_revenue": 3009,
+    "coal_revenue": 1487,
+    "merchandise_units_thousands": 2313.2,
+    "intermodal_units_thousands": 4055.0,
+    "coal_units_thousands": 695.0
+   },
+   "cf_ytd": {
+    "ytd_months": 12,
+    "cash_from_operations": 4361,
+    "property_additions": 2204,
+    "dividends_paid": 1215,
+    "share_repurchases": 534,
+    "depreciation": 1393
+   },
+   "bs": {
+    "cash_and_cash_equivalents": 1530,
+    "short_term_investments": null,
+    "total_assets": 45236,
+    "current_maturities_of_long_term_debt": 607,
+    "long_term_debt": 16480,
+    "total_debt": 17087,
+    "operating_lease_liabilities_total": 218,
+    "total_stockholders_equity": 15547,
+    "shares_outstanding_m": 224.420699
+   },
+   "notes": "10-K and Q4-25 release agree on every field taken. Operating lease liabilities = 10-K 'Total lease liabilities' (70 + 148).",
+   "self_check_failures": []
+  },
+  "Q1-24": {
+   "period_end": "2024-03-31",
+   "source": [
+    "2024-04-24_10-Q_0000702165-24-000009_nsc-20240331.txt",
+    "2025-04-23_8-K_0001193125-25-090057_d937673dex991.txt",
+    "2025-04-23_8-K_0001193125-25-090057_d937673dex992.txt"
+   ],
+   "is": {
+    "railway_operating_revenues": 3004,
+    "opex_compensation_and_benefits": 736,
+    "opex_purchased_services_and_rents": 528,
+    "opex_fuel": 284,
+    "opex_depreciation": 337,
+    "opex_materials_and_other": 215,
+    "opex_other_lines": [
+     [
+      "Restructuring and other charges",
+      99
+     ],
+     [
+      "Eastern Ohio incident",
+      592
+     ]
+    ],
+    "total_operating_expenses": 2791,
+    "income_from_railway_operations": 213,
+    "other_income_net": 18,
+    "other_income_label": "Other income – net",
+    "interest_expense_on_debt": 201,
+    "income_before_income_taxes": 30,
+    "income_taxes": -23,
+    "net_income": 53,
+    "eps_diluted": 0.23,
+    "shares_diluted_weighted_m": 226.2,
+    "operating_ratio_pct": 92.9,
+    "dividends_declared_per_share": 1.35
+   },
+   "ngaap": {
+    "adjusted_operating_ratio_pct": 69.9,
+    "adjusted_income_from_railway_operations": 904,
+    "adjusted_net_income": 565,
+    "adjusted_eps_diluted": 2.49,
+    "items": [
+     [
+      "Eastern Ohio Incident",
+      592,
+      448,
+      "opex"
+     ],
+     [
+      "Restructuring and Other Charges",
+      99,
+      75,
+      "opex"
+     ],
+     [
+      "Shareholder Advisory Costs",
+      21,
+      16,
+      "nonop"
+     ],
+     [
+      "Deferred Income Tax Adjustment",
+      0,
+      -27,
+      "tax"
+     ]
+    ],
+    "definition_note": "Items list = the itemised non-GAAP reconciliation columns (exact column headers) from the 10-Q/10-K MD&A, as [label, pre-tax $m added back to GAAP income from railway operations (or to pre-tax income for nonop items), after-tax $m added back to GAAP net income, where]. Positive = adds to adjusted income. release_items = the exact rows of the earnings release's own non-GAAP table [label, effect on income from railway operations $m, effect on diluted EPS $]. Itemised table from Q1-24 10-Q. Shareholder advisory pre-tax $21m from Q1-25 release note 3 (in 'Other income – net'). Deferred tax: $27m reduction to deferred income taxes from a subsidiary restructuring.",
+    "release_items": [
+     [
+      "Effect of the Incident and restructuring and other charges",
+      691,
+      null
+     ],
+     [
+      "Effect of the Incident, restructuring and other charges, shareholder advisory costs, and deferred tax adjustment",
+      null,
+      2.26
+     ]
+    ]
+   },
+   "volume": {
+    "total_units_thousands": 1719.4,
+    "revenue_per_unit_dollars": 1747,
+    "merchandise_revenue": 1863,
+    "intermodal_revenue": 745,
+    "coal_revenue": 396,
+    "merchandise_units_thousands": 563.5,
+    "intermodal_units_thousands": 988.8,
+    "coal_units_thousands": 167.1
+   },
+   "cf_ytd": {
+    "ytd_months": 3,
+    "cash_from_operations": 839,
+    "property_additions": 557,
+    "dividends_paid": 305,
+    "share_repurchases": 0,
+    "depreciation": 337
+   },
+   "bs": {
+    "cash_and_cash_equivalents": 652,
+    "short_term_investments": null,
+    "total_assets": 42128,
+    "current_maturities_of_long_term_debt": 4,
+    "long_term_debt": 17179,
+    "total_debt": 17183,
+    "operating_lease_liabilities_total": null,
+    "total_stockholders_equity": 12536,
+    "shares_outstanding_m": 225.914028
+   },
+   "notes": "NSC's own Q1-24 earnings release (8-K Ex. 99.1/99.2) is not in the source set; IS/BS/CF/volume from the Q1-24 10-Q, cross-checked to the Q1-24 comparative column of the Q1-25 release (identical). release_items are from the Q1-25 release's Q1-24 comparative table. Diluted shares 226.2 from 10-Q EPS note. Operating lease liabilities not printed in 10-Q -> null. Shares outstanding from 10-Q cover (225,914,028 at 2024-03-31).",
+   "self_check_failures": []
+  },
+  "Q2-24": {
+   "period_end": "2024-06-30",
+   "source": [
+    "2024-07-26_10-Q_0000702165-24-000028_nsc-20240630.txt",
+    "2025-07-29_8-K_0001193125-25-167198_d17753dex991.txt",
+    "2025-07-29_8-K_0001193125-25-167198_d17753dex992.txt"
+   ],
+   "is": {
+    "railway_operating_revenues": 3044,
+    "opex_compensation_and_benefits": 700,
+    "opex_purchased_services_and_rents": 516,
+    "opex_fuel": 257,
+    "opex_depreciation": 335,
+    "opex_materials_and_other": 173,
+    "opex_other_lines": [
+     [
+      "Restructuring and other charges",
+      -3
+     ],
+     [
+      "Eastern Ohio incident",
+      -65
+     ]
+    ],
+    "total_operating_expenses": 1913,
+    "income_from_railway_operations": 1131,
+    "other_income_net": 17,
+    "other_income_label": "Other income – net",
+    "interest_expense_on_debt": 204,
+    "income_before_income_taxes": 944,
+    "income_taxes": 207,
+    "net_income": 737,
+    "eps_diluted": 3.25,
+    "shares_diluted_weighted_m": 226.4,
+    "operating_ratio_pct": 62.8,
+    "dividends_declared_per_share": 1.35
+   },
+   "ngaap": {
+    "adjusted_operating_ratio_pct": 65.1,
+    "adjusted_income_from_railway_operations": 1063,
+    "adjusted_net_income": 694,
+    "adjusted_eps_diluted": 3.06,
+    "items": [
+     [
+      "Eastern Ohio Incident",
+      -65,
+      -49,
+      "opex"
+     ],
+     [
+      "Restructuring and Other Charges",
+      -3,
+      -16,
+      "opex"
+     ],
+     [
+      "Shareholder Advisory Costs",
+      29,
+      22,
+      "nonop"
+     ]
+    ],
+    "definition_note": "Items list = the itemised non-GAAP reconciliation columns (exact column headers) from the 10-Q/10-K MD&A, as [label, pre-tax $m added back to GAAP income from railway operations (or to pre-tax income for nonop items), after-tax $m added back to GAAP net income, where]. Positive = adds to adjusted income. release_items = the exact rows of the earnings release's own non-GAAP table [label, effect on income from railway operations $m, effect on diluted EPS $]. Itemised table from Q2-24 10-Q. Restructuring after-tax (16) exceeds the (3) opex credit because it also removes the $20m OPEB curtailment gain recorded in 'Other income – net' in Q2-24 (per Q2-25 release note 1). Shareholder advisory pre-tax $29m from Q2-25 release note 3.",
+    "release_items": [
+     [
+      "Effect of the Incident and restructuring and other charges",
+      -68,
+      null
+     ],
+     [
+      "Effect of the Incident, restructuring and other charges, and shareholder advisory costs",
+      null,
+      -0.19
+     ]
+    ]
+   },
+   "volume": {
+    "total_units_thousands": 1742.8,
+    "revenue_per_unit_dollars": 1747,
+    "merchandise_revenue": 1904,
+    "intermodal_revenue": 742,
+    "coal_revenue": 398,
+    "merchandise_units_thousands": 576.4,
+    "intermodal_units_thousands": 1003.5,
+    "coal_units_thousands": 162.9
+   },
+   "cf_ytd": {
+    "ytd_months": 6,
+    "cash_from_operations": 1875,
+    "property_additions": 1125,
+    "dividends_paid": 610,
+    "share_repurchases": 0,
+    "depreciation": 672
+   },
+   "bs": {
+    "cash_and_cash_equivalents": 659,
+    "short_term_investments": null,
+    "total_assets": 42558,
+    "current_maturities_of_long_term_debt": 255,
+    "long_term_debt": 16937,
+    "total_debt": 17192,
+    "operating_lease_liabilities_total": null,
+    "total_stockholders_equity": 12979,
+    "shares_outstanding_m": 226.096433
+   },
+   "notes": "Own Q2-24 release not in source set; IS/BS/CF/volume from Q2-24 10-Q, cross-checked to the Q2-24 comparative column of the Q2-25 release (identical). Operating lease liabilities not printed in 10-Q -> null.",
+   "self_check_failures": []
+  },
+  "Q3-24": {
+   "period_end": "2024-09-30",
+   "source": [
+    "2024-10-22_10-Q_0000702165-24-000035_nsc-20240930.txt",
+    "2025-10-23_8-K_0001193125-25-248775_d77323dex991.txt",
+    "2025-10-23_8-K_0001193125-25-248775_d77323dex992.txt"
+   ],
+   "is": {
+    "railway_operating_revenues": 3051,
+    "opex_compensation_and_benefits": 690,
+    "opex_purchased_services_and_rents": 497,
+    "opex_fuel": 216,
+    "opex_depreciation": 339,
+    "opex_materials_and_other": -188,
+    "opex_other_lines": [
+     [
+      "Restructuring and other charges",
+      60
+     ],
+     [
+      "Eastern Ohio incident",
+      -159
+     ]
+    ],
+    "total_operating_expenses": 1455,
+    "income_from_railway_operations": 1596,
+    "other_income_net": 34,
+    "other_income_label": "Other income – net",
+    "interest_expense_on_debt": 203,
+    "income_before_income_taxes": 1427,
+    "income_taxes": 328,
+    "net_income": 1099,
+    "eps_diluted": 4.85,
+    "shares_diluted_weighted_m": 226.5,
+    "operating_ratio_pct": 47.7,
+    "dividends_declared_per_share": 1.35
+   },
+   "ngaap": {
+    "adjusted_operating_ratio_pct": 63.4,
+    "adjusted_income_from_railway_operations": 1117,
+    "adjusted_net_income": 737,
+    "adjusted_eps_diluted": 3.25,
+    "items": [
+     [
+      "Gains on Railway Line Sales",
+      -380,
+      -287,
+      "opex"
+     ],
+     [
+      "Restructuring and Other Charges",
+      60,
+      45,
+      "opex"
+     ],
+     [
+      "Eastern Ohio Incident",
+      -159,
+      -120,
+      "opex"
+     ],
+     [
+      "Shareholder advisory costs",
+      1,
+      null,
+      "nonop"
+     ]
+    ],
+    "definition_note": "Items list = the itemised non-GAAP reconciliation columns (exact column headers) from the 10-Q/10-K MD&A, as [label, pre-tax $m added back to GAAP income from railway operations (or to pre-tax income for nonop items), after-tax $m added back to GAAP net income, where]. Positive = adds to adjusted income. release_items = the exact rows of the earnings release's own non-GAAP table [label, effect on income from railway operations $m, effect on diluted EPS $]. Itemised table from Q3-24 10-Q (three columns). 'Shareholder advisory costs' is named in the Q3-25 release's Q3-24 EPS row and its note 5 gives $1m pre-tax for Q3-24, but the 10-Q table has no column for it (after-tax null; 9M after-tax 38 = 6M 38). Line-sale gains ($380m) sit inside 'Materials and other' (hence negative).",
+    "release_items": [
+     [
+      "Restructuring and other charges, effect of the Incident, and gains on railway line sales",
+      -479,
+      null
+     ],
+     [
+      "Restructuring and other charges, effect of the Incident, gains on railway line sales, and shareholder advisory costs",
+      null,
+      -1.6
+     ]
+    ]
+   },
+   "volume": {
+    "total_units_thousands": 1801.4,
+    "revenue_per_unit_dollars": 1694,
+    "merchandise_revenue": 1861,
+    "intermodal_revenue": 763,
+    "coal_revenue": 427,
+    "merchandise_units_thousands": 563.9,
+    "intermodal_units_thousands": 1052.2,
+    "coal_units_thousands": 185.3
+   },
+   "cf_ytd": {
+    "ytd_months": 9,
+    "cash_from_operations": 3101,
+    "property_additions": 1706,
+    "dividends_paid": 915,
+    "share_repurchases": 0,
+    "depreciation": 1011
+   },
+   "bs": {
+    "cash_and_cash_equivalents": 975,
+    "short_term_investments": null,
+    "total_assets": 43255,
+    "current_maturities_of_long_term_debt": 555,
+    "long_term_debt": 16644,
+    "total_debt": 17199,
+    "operating_lease_liabilities_total": null,
+    "total_stockholders_equity": 13785,
+    "shares_outstanding_m": 226.239662
+   },
+   "notes": "Own Q3-24 release not in source set; IS/BS/CF/volume from Q3-24 10-Q, cross-checked to the Q3-24 comparative column of the Q3-25 release (identical). opex_materials_and_other is negative (-188) as published (includes $380m gains on railway line sales). Operating lease liabilities not printed -> null.",
+   "self_check_failures": []
+  },
+  "Q4-24": {
+   "period_end": "2024-12-31",
+   "source": [
+    "2025-01-29_8-K_0001193125-25-014968_d945030dex991.txt",
+    "2025-01-29_8-K_0001193125-25-014968_d945030dex992.txt",
+    "2025-02-10_10-K_0000702165-25-000008_nsc-20241231.txt",
+    "2024-10-22_10-Q_0000702165-24-000035_nsc-20240930.txt"
+   ],
+   "is": {
+    "railway_operating_revenues": 3024,
+    "opex_compensation_and_benefits": 697,
+    "opex_purchased_services_and_rents": 507,
+    "opex_fuel": 230,
+    "opex_depreciation": 342,
+    "opex_materials_and_other": 133,
+    "opex_other_lines": [
+     [
+      "Restructuring and other charges",
+      27
+     ],
+     [
+      "Eastern Ohio incident",
+      -43
+     ]
+    ],
+    "total_operating_expenses": 1893,
+    "income_from_railway_operations": 1131,
+    "other_income_net": -4,
+    "other_income_label": "Other income (expense) – net",
+    "interest_expense_on_debt": 199,
+    "income_before_income_taxes": 928,
+    "income_taxes": 195,
+    "net_income": 733,
+    "eps_diluted": 3.23,
+    "shares_diluted_weighted_m": 226.7,
+    "operating_ratio_pct": 62.6,
+    "dividends_declared_per_share": 1.35
+   },
+   "ngaap": {
+    "adjusted_operating_ratio_pct": 64.9,
+    "adjusted_income_from_railway_operations": 1062,
+    "adjusted_net_income": 688,
+    "adjusted_eps_diluted": 3.04,
+    "items": [
+     [
+      "Gains on Railway Line Sales",
+      -53,
+      -40,
+      "opex"
+     ],
+     [
+      "Restructuring and Other Charges",
+      27,
+      21,
+      "opex"
+     ],
+     [
+      "Eastern Ohio Incident",
+      -43,
+      -32,
+      "opex"
+     ],
+     [
+      "Shareholder Advisory Costs",
+      8,
+      6,
+      "nonop"
+     ],
+     [
+      "Deferred Income Tax Adjustment",
+      0,
+      0,
+      "tax"
+     ]
+    ],
+    "definition_note": "Items list = the itemised non-GAAP reconciliation columns (exact column headers) from the 10-Q/10-K MD&A, as [label, pre-tax $m added back to GAAP income from railway operations (or to pre-tax income for nonop items), after-tax $m added back to GAAP net income, where]. Positive = adds to adjusted income. release_items = the exact rows of the earnings release's own non-GAAP table [label, effect on income from railway operations $m, effect on diluted EPS $]. Q4 release prints only the IFRO/OR/EPS effects. Labels from the 2024 10-K table; pre-tax amounts match the release (line sales (53), Incident (43), restructuring 27; shareholder advisory $8m from release note 4). After-tax amounts and adjusted net income 688 are DERIVED as FY-2024 10-K minus 9M-2024 10-Q (not printed for Q4).",
+    "release_items": [
+     [
+      "Effect of railway line sales",
+      -53,
+      -0.17
+     ],
+     [
+      "Effect of Eastern Ohio incident",
+      -43,
+      -0.14
+     ],
+     [
+      "Effect of restructuring and other charges",
+      27,
+      0.09
+     ],
+     [
+      "Effect of shareholder advisory costs",
+      null,
+      0.03
+     ]
+    ]
+   },
+   "volume": {
+    "total_units_thousands": 1793.2,
+    "revenue_per_unit_dollars": null,
+    "merchandise_revenue": 1842,
+    "intermodal_revenue": 792,
+    "coal_revenue": 390,
+    "merchandise_units_thousands": 560.5,
+    "intermodal_units_thousands": 1063.2,
+    "coal_units_thousands": 169.5
+   },
+   "cf_ytd": {
+    "ytd_months": 12,
+    "cash_from_operations": 4052,
+    "property_additions": 2381,
+    "dividends_paid": 1221,
+    "share_repurchases": 0,
+    "depreciation": 1353
+   },
+   "bs": {
+    "cash_and_cash_equivalents": 1641,
+    "short_term_investments": null,
+    "total_assets": 43682,
+    "current_maturities_of_long_term_debt": 555,
+    "long_term_debt": 16651,
+    "total_debt": 17206,
+    "operating_lease_liabilities_total": 272,
+    "total_stockholders_equity": 14306,
+    "shares_outstanding_m": 226.320894
+   },
+   "notes": "IS from the Q4-24 release (Ex. 99.2 fourth-quarter column). Units are DERIVED as FY-2024 (10-K) minus 9M-2024 (Q3-24 10-Q): no quarterly unit table printed; revenue per unit not printed and not derivable by subtraction -> null. Dividends/share 1.35 DERIVED as FY $5.40 minus 3 x $1.35. cf_ytd = full year. Shares outstanding from year-end balance sheet (226,320,894).",
+   "self_check_failures": []
+  },
+  "Q1-25": {
+   "period_end": "2025-03-31",
+   "source": [
+    "2025-04-23_8-K_0001193125-25-090057_d937673dex991.txt",
+    "2025-04-23_8-K_0001193125-25-090057_d937673dex992.txt",
+    "2025-04-23_10-Q_0000702165-25-000013_nsc-20250331.txt"
+   ],
+   "is": {
+    "railway_operating_revenues": 2993,
+    "opex_compensation_and_benefits": 739,
+    "opex_purchased_services_and_rents": 498,
+    "opex_fuel": 244,
+    "opex_depreciation": 346,
+    "opex_materials_and_other": 205,
+    "opex_other_lines": [
+     [
+      "Restructuring and other charges",
+      0
+     ],
+     [
+      "Eastern Ohio incident",
+      -185
+     ]
+    ],
+    "total_operating_expenses": 1847,
+    "income_from_railway_operations": 1146,
+    "other_income_net": 31,
+    "other_income_label": "Other income – net",
+    "interest_expense_on_debt": 199,
+    "income_before_income_taxes": 978,
+    "income_taxes": 228,
+    "net_income": 750,
+    "eps_diluted": 3.31,
+    "shares_diluted_weighted_m": 226.5,
+    "operating_ratio_pct": 61.7,
+    "dividends_declared_per_share": 1.35
+   },
+   "ngaap": {
+    "adjusted_operating_ratio_pct": 67.9,
+    "adjusted_income_from_railway_operations": 961,
+    "adjusted_net_income": 609,
+    "adjusted_eps_diluted": 2.69,
+    "items": [
+     [
+      "Eastern Ohio Incident",
+      -185,
+      -141,
+      "opex"
+     ]
+    ],
+    "definition_note": "Items list = the itemised non-GAAP reconciliation columns (exact column headers) from the 10-Q/10-K MD&A, as [label, pre-tax $m added back to GAAP income from railway operations (or to pre-tax income for nonop items), after-tax $m added back to GAAP net income, where]. Positive = adds to adjusted income. release_items = the exact rows of the earnings release's own non-GAAP table [label, effect on income from railway operations $m, effect on diluted EPS $]. Release table plus Q1-25 10-Q itemised table (after-tax).",
+    "release_items": [
+     [
+      "Effect of Eastern Ohio incident",
+      -185,
+      -0.62
+     ]
+    ]
+   },
+   "volume": {
+    "total_units_thousands": 1739.8,
+    "revenue_per_unit_dollars": 1720,
+    "merchandise_revenue": 1863,
+    "intermodal_revenue": 760,
+    "coal_revenue": 370,
+    "merchandise_units_thousands": 552.2,
+    "intermodal_units_thousands": 1022.9,
+    "coal_units_thousands": 164.7
+   },
+   "cf_ytd": {
+    "ytd_months": 3,
+    "cash_from_operations": 950,
+    "property_additions": 449,
+    "dividends_paid": 306,
+    "share_repurchases": 248,
+    "depreciation": 346
+   },
+   "bs": {
+    "cash_and_cash_equivalents": 1006,
+    "short_term_investments": null,
+    "total_assets": 43800,
+    "current_maturities_of_long_term_debt": 555,
+    "long_term_debt": 16660,
+    "total_debt": 17215,
+    "operating_lease_liabilities_total": null,
+    "total_stockholders_equity": 14511,
+    "shares_outstanding_m": 225.443501
+   },
+   "notes": "Restructuring line printed '—' (0) for Q1-25. Volume from Q1-25 10-Q. Operating lease liabilities not printed -> null.",
+   "self_check_failures": []
+  },
+  "Q2-25": {
+   "period_end": "2025-06-30",
+   "source": [
+    "2025-07-29_8-K_0001193125-25-167198_d17753dex991.txt",
+    "2025-07-29_8-K_0001193125-25-167198_d17753dex992.txt",
+    "2025-07-29_10-Q_0000702165-25-000028_nsc-20250630.txt"
+   ],
+   "is": {
+    "railway_operating_revenues": 3110,
+    "opex_compensation_and_benefits": 692,
+    "opex_purchased_services_and_rents": 520,
+    "opex_fuel": 219,
+    "opex_depreciation": 346,
+    "opex_materials_and_other": 195,
+    "opex_other_lines": [
+     [
+      "Restructuring and other charges",
+      10
+     ],
+     [
+      "Eastern Ohio incident",
+      -47
+     ]
+    ],
+    "total_operating_expenses": 1935,
+    "income_from_railway_operations": 1175,
+    "other_income_net": 24,
+    "other_income_label": "Other income – net",
+    "interest_expense_on_debt": 201,
+    "income_before_income_taxes": 998,
+    "income_taxes": 230,
+    "net_income": 768,
+    "eps_diluted": 3.41,
+    "shares_diluted_weighted_m": 225.2,
+    "operating_ratio_pct": 62.2,
+    "dividends_declared_per_share": 1.35
+   },
+   "ngaap": {
+    "adjusted_operating_ratio_pct": 63.4,
+    "adjusted_income_from_railway_operations": 1138,
+    "adjusted_net_income": 741,
+    "adjusted_eps_diluted": 3.29,
+    "items": [
+     [
+      "Restructuring and Other Charges",
+      10,
+      8,
+      "opex"
+     ],
+     [
+      "Eastern Ohio Incident",
+      -47,
+      -35,
+      "opex"
+     ]
+    ],
+    "definition_note": "Items list = the itemised non-GAAP reconciliation columns (exact column headers) from the 10-Q/10-K MD&A, as [label, pre-tax $m added back to GAAP income from railway operations (or to pre-tax income for nonop items), after-tax $m added back to GAAP net income, where]. Positive = adds to adjusted income. release_items = the exact rows of the earnings release's own non-GAAP table [label, effect on income from railway operations $m, effect on diluted EPS $]. Release shows one combined row; itemised amounts from Q2-25 10-Q.",
+    "release_items": [
+     [
+      "Effect of the Incident and restructuring and other charges",
+      -37,
+      -0.12
+     ]
+    ]
+   },
+   "volume": {
+    "total_units_thousands": 1793.2,
+    "revenue_per_unit_dollars": 1734,
+    "merchandise_revenue": 1972,
+    "intermodal_revenue": 743,
+    "coal_revenue": 395,
+    "merchandise_units_thousands": 600.6,
+    "intermodal_units_thousands": 1010.9,
+    "coal_units_thousands": 181.7
+   },
+   "cf_ytd": {
+    "ytd_months": 6,
+    "cash_from_operations": 2027,
+    "property_additions": 924,
+    "dividends_paid": 609,
+    "share_repurchases": 456,
+    "depreciation": 692
+   },
+   "bs": {
+    "cash_and_cash_equivalents": 1303,
+    "short_term_investments": null,
+    "total_assets": 44155,
+    "current_maturities_of_long_term_debt": 903,
+    "long_term_debt": 16464,
+    "total_debt": 17367,
+    "operating_lease_liabilities_total": null,
+    "total_stockholders_equity": 14787,
+    "shares_outstanding_m": 224.614894
+   },
+   "notes": "Earnings release is 8-K 0001193125-25-167198 (same day as the UNP merger 8-K -167156). Operating lease liabilities not printed -> null.",
+   "self_check_failures": []
+  },
+  "Q3-25": {
+   "period_end": "2025-09-30",
+   "source": [
+    "2025-10-23_8-K_0001193125-25-248775_d77323dex991.txt",
+    "2025-10-23_8-K_0001193125-25-248775_d77323dex992.txt",
+    "2025-10-23_10-Q_0001628280-25-046128_nsc-20250930.txt"
+   ],
+   "is": {
+    "railway_operating_revenues": 3103,
+    "opex_compensation_and_benefits": 738,
+    "opex_purchased_services_and_rents": 519,
+    "opex_fuel": 237,
+    "opex_depreciation": 348,
+    "opex_materials_and_other": 147,
+    "opex_other_lines": [
+     [
+      "Merger-related expenses",
+      15
+     ],
+     [
+      "Restructuring and other charges",
+      12
+     ],
+     [
+      "Eastern Ohio incident",
+      -11
+     ]
+    ],
+    "total_operating_expenses": 2005,
+    "income_from_railway_operations": 1098,
+    "other_income_net": 23,
+    "other_income_label": "Other income – net",
+    "interest_expense_on_debt": 197,
+    "income_before_income_taxes": 924,
+    "income_taxes": 213,
+    "net_income": 711,
+    "eps_diluted": 3.16,
+    "shares_diluted_weighted_m": 224.7,
+    "operating_ratio_pct": 64.6,
+    "dividends_declared_per_share": 1.35
+   },
+   "ngaap": {
+    "adjusted_operating_ratio_pct": 63.3,
+    "adjusted_income_from_railway_operations": 1138,
+    "adjusted_net_income": 741,
+    "adjusted_eps_diluted": 3.3,
+    "items": [
+     [
+      "Merger-Related Expenses",
+      15,
+      11,
+      "opex"
+     ],
+     [
+      "Restructuring and Other Charges",
+      12,
+      9,
+      "opex"
+     ],
+     [
+      "Eastern Ohio Incident",
+      13,
+      10,
+      "opex"
+     ]
+    ],
+    "definition_note": "Items list = the itemised non-GAAP reconciliation columns (exact column headers) from the 10-Q/10-K MD&A, as [label, pre-tax $m added back to GAAP income from railway operations (or to pre-tax income for nonop items), after-tax $m added back to GAAP net income, where]. Positive = adds to adjusted income. release_items = the exact rows of the earnings release's own non-GAAP table [label, effect on income from railway operations $m, effect on diluted EPS $]. NSC's 2025 'Eastern Ohio Incident' adjustment is 'the overall impact on operating expenses resulting from costs and recoveries associated with the Incident', which differs from the 'Eastern Ohio incident' income-statement line (part of the cost sits in other expense lines). Q3-25: IS line (11) vs adjustment +13 (release note 4: 'net expenses of $13 million'). Itemised amounts from Q3-25 10-Q.",
+    "release_items": [
+     [
+      "Merger-related expenses, restructuring and other charges, and effect of the Incident",
+      40,
+      0.14
+     ]
+    ]
+   },
+   "volume": {
+    "total_units_thousands": 1803.9,
+    "revenue_per_unit_dollars": 1721,
+    "merchandise_revenue": 1969,
+    "intermodal_revenue": 759,
+    "coal_revenue": 375,
+    "merchandise_units_thousands": 595.1,
+    "intermodal_units_thousands": 1032.1,
+    "coal_units_thousands": 176.7
+   },
+   "cf_ytd": {
+    "ytd_months": 9,
+    "cash_from_operations": 3298,
+    "property_additions": 1475,
+    "dividends_paid": 912,
+    "share_repurchases": 534,
+    "depreciation": 1040
+   },
+   "bs": {
+    "cash_and_cash_equivalents": 1418,
+    "short_term_investments": null,
+    "total_assets": 44580,
+    "current_maturities_of_long_term_debt": 607,
+    "long_term_debt": 16476,
+    "total_debt": 17083,
+    "operating_lease_liabilities_total": null,
+    "total_stockholders_equity": 15141,
+    "shares_outstanding_m": 224.386617
+   },
+   "notes": "Operating lease liabilities not printed -> null.",
+   "self_check_failures": []
+  },
+  "Q4-25": {
+   "period_end": "2025-12-31",
+   "source": [
+    "2026-01-29_8-K_0001193125-26-028244_nsc-ex99_1.txt",
+    "2026-01-29_8-K_0001193125-26-028244_nsc-ex99_2.txt",
+    "2026-02-09_10-K_0001628280-26-006268_nsc-20251231.txt",
+    "2025-10-23_10-Q_0001628280-25-046128_nsc-20250930.txt"
+   ],
+   "is": {
+    "railway_operating_revenues": 2974,
+    "opex_compensation_and_benefits": 753,
+    "opex_purchased_services_and_rents": 558,
+    "opex_fuel": 232,
+    "opex_depreciation": 353,
+    "opex_materials_and_other": 87,
+    "opex_other_lines": [
+     [
+      "Merger-related expenses",
+      65
+     ],
+     [
+      "Restructuring and other charges",
+      0
+     ],
+     [
+      "Eastern Ohio incident",
+      -11
+     ]
+    ],
+    "total_operating_expenses": 2037,
+    "income_from_railway_operations": 937,
+    "other_income_net": 23,
+    "other_income_label": "Other income (expense) – net",
+    "interest_expense_on_debt": 195,
+    "income_before_income_taxes": 765,
+    "income_taxes": 121,
+    "net_income": 644,
+    "eps_diluted": 2.87,
+    "shares_diluted_weighted_m": 224.8,
+    "operating_ratio_pct": 68.5,
+    "dividends_declared_per_share": 1.35
+   },
+   "ngaap": {
+    "adjusted_operating_ratio_pct": 65.3,
+    "adjusted_income_from_railway_operations": 1031,
+    "adjusted_net_income": 725,
+    "adjusted_eps_diluted": 3.22,
+    "items": [
+     [
+      "Merger-Related Expenses",
+      65,
+      58,
+      "opex"
+     ],
+     [
+      "Restructuring and Other Charges",
+      0,
+      0,
+      "opex"
+     ],
+     [
+      "Eastern Ohio Incident",
+      29,
+      23,
+      "opex"
+     ]
+    ],
+    "definition_note": "Items list = the itemised non-GAAP reconciliation columns (exact column headers) from the 10-Q/10-K MD&A, as [label, pre-tax $m added back to GAAP income from railway operations (or to pre-tax income for nonop items), after-tax $m added back to GAAP net income, where]. Positive = adds to adjusted income. release_items = the exact rows of the earnings release's own non-GAAP table [label, effect on income from railway operations $m, effect on diluted EPS $]. NSC's 2025 'Eastern Ohio Incident' adjustment is 'the overall impact on operating expenses resulting from costs and recoveries associated with the Incident', which differs from the 'Eastern Ohio incident' income-statement line (part of the cost sits in other expense lines). Q4-25 release prints one combined row (+94). Itemised pre-tax: merger 65 (release note 2), Incident 29 net expense (release note 4; IS line shows (11)). After-tax amounts and adjusted net income 725 are DERIVED as FY-2025 10-K minus 9M-2025 10-Q (not printed for Q4).",
+    "release_items": [
+     [
+      "Merger-related expenses and effect of the Incident",
+      94,
+      0.35
+     ]
+    ]
+   },
+   "volume": {
+    "total_units_thousands": 1726.3,
+    "revenue_per_unit_dollars": null,
+    "merchandise_revenue": 1880,
+    "intermodal_revenue": 747,
+    "coal_revenue": 347,
+    "merchandise_units_thousands": 565.3,
+    "intermodal_units_thousands": 989.1,
+    "coal_units_thousands": 171.9
+   },
+   "cf_ytd": {
+    "ytd_months": 12,
+    "cash_from_operations": 4361,
+    "property_additions": 2204,
+    "dividends_paid": 1215,
+    "share_repurchases": 534,
+    "depreciation": 1393
+   },
+   "bs": {
+    "cash_and_cash_equivalents": 1530,
+    "short_term_investments": null,
+    "total_assets": 45236,
+    "current_maturities_of_long_term_debt": 607,
+    "long_term_debt": 16480,
+    "total_debt": 17087,
+    "operating_lease_liabilities_total": 218,
+    "total_stockholders_equity": 15547,
+    "shares_outstanding_m": 224.420699
+   },
+   "notes": "IS from Q4-25 release fourth-quarter column. Q4-25 includes an $85m net gain on a large land sale (release text) inside 'Materials and other', not adjusted. Units DERIVED as FY-2025 10-K minus 9M-2025 10-Q; revenue per unit null (not printed). Dividends/share 1.35 DERIVED (FY 5.40 - 3 x 1.35).",
+   "self_check_failures": []
+  },
+  "Q1-26": {
+   "period_end": "2026-03-31",
+   "source": [
+    "2026-04-24_8-K_0001193125-26-175084_nsc-ex99_1.txt",
+    "2026-04-24_8-K_0001193125-26-175084_nsc-ex99_2.txt",
+    "2026-04-24_10-Q_0001628280-26-027051_nsc-20260331.txt"
+   ],
+   "is": {
+    "railway_operating_revenues": 2998,
+    "opex_compensation_and_benefits": 740,
+    "opex_purchased_services_and_rents": 522,
+    "opex_fuel": 256,
+    "opex_depreciation": 352,
+    "opex_materials_and_other": 189,
+    "opex_other_lines": [
+     [
+      "Merger-related expenses",
+      52
+     ],
+     [
+      "Eastern Ohio incident",
+      10
+     ]
+    ],
+    "total_operating_expenses": 2121,
+    "income_from_railway_operations": 877,
+    "other_income_net": 35,
+    "other_income_label": "Other income – net",
+    "interest_expense_on_debt": 197,
+    "income_before_income_taxes": 715,
+    "income_taxes": 168,
+    "net_income": 547,
+    "eps_diluted": 2.43,
+    "shares_diluted_weighted_m": 225.0,
+    "operating_ratio_pct": 70.7,
+    "dividends_declared_per_share": 1.35
+   },
+   "ngaap": {
+    "adjusted_operating_ratio_pct": 68.7,
+    "adjusted_income_from_railway_operations": 939,
+    "adjusted_net_income": 597,
+    "adjusted_eps_diluted": 2.65,
+    "items": [
+     [
+      "Merger-Related Expenses",
+      52,
+      43,
+      "opex"
+     ],
+     [
+      "Eastern Ohio Incident",
+      10,
+      7,
+      "opex"
+     ]
+    ],
+    "definition_note": "Items list = the itemised non-GAAP reconciliation columns (exact column headers) from the 10-Q/10-K MD&A, as [label, pre-tax $m added back to GAAP income from railway operations (or to pre-tax income for nonop items), after-tax $m added back to GAAP net income, where]. Positive = adds to adjusted income. release_items = the exact rows of the earnings release's own non-GAAP table [label, effect on income from railway operations $m, effect on diluted EPS $]. Itemised after-tax from Q1-26 10-Q.",
+    "release_items": [
+     [
+      "Merger-related expenses and effect of the Incident",
+      62,
+      0.22
+     ]
+    ]
+   },
+   "volume": {
+    "total_units_thousands": 1717.2,
+    "revenue_per_unit_dollars": 1746,
+    "merchandise_revenue": 1885,
+    "intermodal_revenue": 749,
+    "coal_revenue": 364,
+    "merchandise_units_thousands": 557.8,
+    "intermodal_units_thousands": 980.6,
+    "coal_units_thousands": 178.8
+   },
+   "cf_ytd": {
+    "ytd_months": 3,
+    "cash_from_operations": 344,
+    "property_additions": 382,
+    "dividends_paid": 303,
+    "share_repurchases": 5,
+    "depreciation": 352
+   },
+   "bs": {
+    "cash_and_cash_equivalents": 1341,
+    "short_term_investments": null,
+    "total_assets": 45113,
+    "current_maturities_of_long_term_debt": 609,
+    "long_term_debt": 16492,
+    "total_debt": 17101,
+    "operating_lease_liabilities_total": null,
+    "total_stockholders_equity": 15804,
+    "shares_outstanding_m": 224.594001
+   },
+   "notes": "No restructuring line in Q1-26 IS. Share repurchases 5 = excise tax paid on 2025 buybacks (no shares repurchased in 2026). Operating lease liabilities not printed -> null.",
+   "self_check_failures": []
+  },
+  "Q2-26": {
+   "period_end": "2026-06-30",
+   "source": [
+    "2026-07-23_8-K_0001193125-26-313393_nsc-ex99_1.txt",
+    "2026-07-23_8-K_0001193125-26-313393_nsc-ex99_2.txt",
+    "2026-07-23_10-Q_0001628280-26-049326_nsc-20260630.txt"
+   ],
+   "is": {
+    "railway_operating_revenues": 3465,
+    "opex_compensation_and_benefits": 744,
+    "opex_purchased_services_and_rents": 550,
+    "opex_fuel": 405,
+    "opex_depreciation": 358,
+    "opex_materials_and_other": 212,
+    "opex_other_lines": [
+     [
+      "Merger-related expenses",
+      51
+     ],
+     [
+      "Restructuring and other charges",
+      6
+     ],
+     [
+      "Eastern Ohio incident",
+      15
+     ]
+    ],
+    "total_operating_expenses": 2341,
+    "income_from_railway_operations": 1124,
+    "other_income_net": 32,
+    "other_income_label": "Other income – net",
+    "interest_expense_on_debt": 197,
+    "income_before_income_taxes": 959,
+    "income_taxes": 225,
+    "net_income": 734,
+    "eps_diluted": 3.26,
+    "shares_diluted_weighted_m": 225.0,
+    "operating_ratio_pct": 67.6,
+    "dividends_declared_per_share": 1.35
+   },
+   "ngaap": {
+    "adjusted_operating_ratio_pct": 65.5,
+    "adjusted_income_from_railway_operations": 1196,
+    "adjusted_net_income": 793,
+    "adjusted_eps_diluted": 3.52,
+    "items": [
+     [
+      "Merger-Related Expenses",
+      51,
+      42,
+      "opex"
+     ],
+     [
+      "Restructuring and Other Charges",
+      6,
+      5,
+      "opex"
+     ],
+     [
+      "Eastern Ohio Incident",
+      15,
+      12,
+      "opex"
+     ]
+    ],
+    "definition_note": "Items list = the itemised non-GAAP reconciliation columns (exact column headers) from the 10-Q/10-K MD&A, as [label, pre-tax $m added back to GAAP income from railway operations (or to pre-tax income for nonop items), after-tax $m added back to GAAP net income, where]. Positive = adds to adjusted income. release_items = the exact rows of the earnings release's own non-GAAP table [label, effect on income from railway operations $m, effect on diluted EPS $]. Itemised after-tax from Q2-26 10-Q.",
+    "release_items": [
+     [
+      "Merger-related expenses, restructuring and other charges, and effect of the Incident",
+      72,
+      0.26
+     ]
+    ]
+   },
+   "volume": {
+    "total_units_thousands": 1862.1,
+    "revenue_per_unit_dollars": 1861,
+    "merchandise_revenue": 2133,
+    "intermodal_revenue": 908,
+    "coal_revenue": 424,
+    "merchandise_units_thousands": 610.7,
+    "intermodal_units_thousands": 1064.1,
+    "coal_units_thousands": 187.3
+   },
+   "cf_ytd": {
+    "ytd_months": 6,
+    "cash_from_operations": 1398,
+    "property_additions": 821,
+    "dividends_paid": 606,
+    "share_repurchases": 5,
+    "depreciation": 710
+   },
+   "bs": {
+    "cash_and_cash_equivalents": 1069,
+    "short_term_investments": null,
+    "total_assets": 45122,
+    "current_maturities_of_long_term_debt": 649,
+    "long_term_debt": 15967,
+    "total_debt": 16616,
+    "operating_lease_liabilities_total": null,
+    "total_stockholders_equity": 16253,
+    "shares_outstanding_m": 224.608373
+   },
+   "notes": "Share repurchases 5 = excise tax on 2025 buybacks. In April 2026 NSC replaced its HQ operating lease with a finance lease ($115m liability, inside debt lines). Operating lease liabilities not printed -> null.",
+   "self_check_failures": []
+  },
+  "Q3-26": {
+   "period_end": "2026-09-30",
+   "source": [
+    "2026-10-22_8-K_0001193125-26-428384_nsc-ex99_1.txt",
+    "2026-10-22_8-K_0001193125-26-428384_nsc-ex99_2.txt",
+    "2026-10-22_10-Q_0001628280-26-066836_nsc-20260930.txt"
+   ],
+   "is": {
+    "railway_operating_revenues": 3526,
+    "opex_compensation_and_benefits": 753,
+    "opex_purchased_services_and_rents": 546,
+    "opex_fuel": 420,
+    "opex_depreciation": 363,
+    "opex_materials_and_other": 224,
+    "opex_other_lines": [
+     [
+      "Merger-related expenses",
+      42
+     ],
+     [
+      "Restructuring and other charges",
+      0
+     ],
+     [
+      "Eastern Ohio incident",
+      28
+     ]
+    ],
+    "total_operating_expenses": 2376,
+    "income_from_railway_operations": 1150,
+    "other_income_net": 30,
+    "other_income_label": "Other income – net",
+    "interest_expense_on_debt": 193,
+    "income_before_income_taxes": 987,
+    "income_taxes": 228,
+    "net_income": 759,
+    "eps_diluted": 3.37,
+    "shares_diluted_weighted_m": 225.2,
+    "operating_ratio_pct": 67.4,
+    "dividends_declared_per_share": 1.35
+   },
+   "ngaap": {
+    "adjusted_operating_ratio_pct": 65.4,
+    "adjusted_income_from_railway_operations": 1220,
+    "adjusted_net_income": 815,
+    "adjusted_eps_diluted": 3.62,
+    "items": [
+     [
+      "Merger-Related Expenses",
+      42,
+      35,
+      "opex"
+     ],
+     [
+      "Eastern Ohio Incident",
+      28,
+      21,
+      "opex"
+     ]
+    ],
+    "definition_note": "Items list = the itemised non-GAAP reconciliation columns (exact column headers) from the 10-Q/10-K MD&A, as [label, pre-tax $m added back to GAAP income from railway operations (or to pre-tax income for nonop items), after-tax $m added back to GAAP net income, where]. Positive = adds to adjusted income. release_items = the exact rows of the earnings release's own non-GAAP table [label, effect on income from railway operations $m, effect on diluted EPS $]. Itemised after-tax from Q3-26 10-Q.",
+    "release_items": [
+     [
+      "Merger-related expenses and effects of the Incident",
+      70,
+      0.25
+     ]
+    ]
+   },
+   "volume": {
+    "total_units_thousands": 1853.5,
+    "revenue_per_unit_dollars": 1902,
+    "merchandise_revenue": 2188,
+    "intermodal_revenue": 919,
+    "coal_revenue": 419,
+    "merchandise_units_thousands": 611.5,
+    "intermodal_units_thousands": 1060.6,
+    "coal_units_thousands": 181.4
+   },
+   "cf_ytd": {
+    "ytd_months": 9,
+    "cash_from_operations": 2720,
+    "property_additions": 1407,
+    "dividends_paid": 910,
+    "share_repurchases": 5,
+    "depreciation": 1073
+   },
+   "bs": {
+    "cash_and_cash_equivalents": 1598,
+    "short_term_investments": null,
+    "total_assets": 45949,
+    "current_maturities_of_long_term_debt": 649,
+    "long_term_debt": 15964,
+    "total_debt": 16613,
+    "operating_lease_liabilities_total": null,
+    "total_stockholders_equity": 16730,
+    "shares_outstanding_m": 224.616686
+   },
+   "notes": "Restructuring line printed '—' (0) for Q3-26. Share repurchases 5 = excise tax on 2025 buybacks. Operating lease liabilities not printed -> null.",
+   "self_check_failures": []
+  }
+ },
+ "annual_extra": {
+  "2025": {
+   "employees_year_end": 19300,
+   "route_miles": 19119,
+   "capital_expenditures": 2204,
+   "notes": "2025 10-K: 'We employed an average of 19,400 employees during 2025 and 19,300 employees at the end of 2025.' Route miles 19,119 = 'Total' route miles in the Mileage Operated at December 31, 2025 table (14,594 owned + 4,525 leased/contract/trackage rights; text says 'approximately 19,100'). Capital expenditures = property additions $2,204m (Road and other property 1,824 + Equipment 380), equal to cash-flow 'Property additions'. 2026 guidance in 10-K: property additions to approximate $1.9 billion.",
+   "source": "2026-02-09_10-K_0001628280-26-006268_nsc-20251231.txt"
+  }
+ }
+}

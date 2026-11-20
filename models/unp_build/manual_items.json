@@ -1,0 +1,607 @@
+{
+ "price": {
+  "px": 300.62,
+  "date": "2026-11-10",
+  "src": "Form 4 filed 12-Nov-2026 (director C. B. Conlin; dividend-reinvestment acquisition of 2.112 shares at $300.62 on 10-Nov-2026, transaction code A) \u2014 the latest share price in an SEC filing. Earlier: Form 4 10-Oct-2026 $278.34; phantom-stock credit 1-Oct-2026 $272.42. Update to market.",
+  "url": "https://www.sec.gov/Archives/edgar/data/100885/000010088526000327/"
+ },
+ "guidance_fy26": {
+  "src": "Q3-26 release (8-K Ex. 99.1, 22-Oct-2026) '2026 Outlook \u2014 On Track with Investor Day Targets'",
+  "url": "https://www.sec.gov/Archives/edgar/data/100885/000010088526000319/a2026-10x228xkex991earning.htm",
+  "eps_growth_reported": {
+   "label": "Reported earnings per share growth of high-single digit",
+   "hi": 0.09,
+   "mid": 0.08,
+   "lo": 0.07,
+   "note": "'High-single digit' read as 7\u20139%; Base = 8% (model assumption for the end-point). Applied to FY2025 reported diluted EPS $11.98."
+  },
+  "capex": 3500.0,
+  "other": "Pricing dollars in excess of inflation dollars; operating ratio improvement from the core business, reported operating ratio challenged by high fuel prices; industry-leading OR and ROIC; consistent annual dividend increases; 3-year EPS CAGR target high-single to low-double digit through 2027 (Investor Day, Sep-2024 \u2014 call/deck material, not an 8-K).",
+  "history": "27-Jan-2026 (Q4-25 release): EPS growth mid-single digit, capex $3.3bn. 23-Apr-2026: affirmed (reported EPS growth mid-single digit). 23-Jul-2026: improved to reported EPS growth high-single digit; capex $3.3bn. 22-Oct-2026: affirmed high-single digit; capex updated to $3.5bn; 'reported operating ratio challenged by high fuel prices'."
+ },
+ "fy25_reported_eps": 11.98,
+ "adjusted_items": {
+  "note": "Company 'Financial Performance' non-GAAP tables in the releases (items identified as affecting comparability). Signs: oi = effect on adjusted operating income (positive = expense excluded), oth_inc = effect on adjusted other income, tax_exp = effect on adjusted income tax expense (positive = more tax), ni / eps = effect on adjusted net income / diluted EPS, or = effect on the operating ratio (pts). pub = published adjusted figures. Periods not listed: no adjusted measures published (adjusted = GAAP).",
+  "Q4-17": {
+   "src": "Q4-17 release 25-Jan-2018, 'Adjustments for Tax Cuts and Jobs Act'",
+   "items": [
+    {
+     "label": "Equity-method affiliates",
+     "cat": "TAXREFORM",
+     "oi": -212,
+     "tax_exp": -73,
+     "ni": -139,
+     "eps": -0.18,
+     "or": 3.9
+    },
+    {
+     "label": "Deferred taxes",
+     "cat": "TAXD",
+     "oi": 0,
+     "tax_exp": 5935,
+     "ni": -5935,
+     "eps": -7.54,
+     "or": 0
+    }
+   ],
+   "pub": {
+    "adj_oi": 2039,
+    "adj_ni": 1204,
+    "adj_eps": 1.53,
+    "adj_or": 62.6
+   }
+  },
+  "2017": {
+   "src": "Q4-17 release 25-Jan-2018 (years ended)",
+   "items": [
+    {
+     "label": "Equity-method affiliates",
+     "cat": "TAXREFORM",
+     "oi": -212,
+     "tax_exp": -73,
+     "ni": -139,
+     "eps": -0.17,
+     "or": 1.0
+    },
+    {
+     "label": "Deferred taxes",
+     "cat": "TAXD",
+     "oi": 0,
+     "tax_exp": 5935,
+     "ni": -5935,
+     "eps": -7.4,
+     "or": 0
+    }
+   ],
+   "pub": {
+    "adj_oi": 7849,
+    "adj_ni": 4638,
+    "adj_eps": 5.79,
+    "adj_or": 63.0
+   }
+  },
+  "Q4-20": {
+   "src": "Q4-20 release 21-Jan-2021",
+   "items": [
+    {
+     "label": "Brazos Yard impairment",
+     "cat": "IMPAIR",
+     "oi": 278,
+     "tax_exp": 69,
+     "ni": 209,
+     "eps": 0.31,
+     "or": -5.4
+    }
+   ],
+   "pub": {
+    "adj_oi": 2284,
+    "adj_ni": 1589,
+    "adj_eps": 2.36,
+    "adj_or": 55.6
+   }
+  },
+  "2020": {
+   "src": "Q4-20 release 21-Jan-2021",
+   "items": [
+    {
+     "label": "Brazos Yard impairment",
+     "cat": "IMPAIR",
+     "oi": 278,
+     "tax_exp": 69,
+     "ni": 209,
+     "eps": 0.31,
+     "or": -1.4
+    }
+   ],
+   "pub": {
+    "adj_oi": 8112,
+    "adj_ni": 5558,
+    "adj_eps": 8.19,
+    "adj_or": 58.5
+   }
+  },
+  "Q3-22": {
+   "src": "Q3-22 release 20-Oct-2022",
+   "items": [
+    {
+     "label": "Labor accrual",
+     "cat": "OTHER",
+     "oi": 114,
+     "tax_exp": 28,
+     "ni": 86,
+     "eps": 0.14,
+     "or": -1.7
+    }
+   ],
+   "pub": {
+    "adj_oi": 2747,
+    "adj_ni": 1981,
+    "adj_eps": 3.19,
+    "adj_or": 58.2
+   }
+  },
+  "Q4-22": {
+   "src": "Derived: FY2022 (Q4-22 release 24-Jan-2023) less Q3-22; the Q4-22 release published the full-year adjustment only (labor accrual true-up)",
+   "derived": true,
+   "items": [
+    {
+     "label": "Labor accrual (Q4 true-up, derived FY \u2212 Q3)",
+     "cat": "OTHER",
+     "oi": -22,
+     "tax_exp": -5,
+     "ni": -17,
+     "eps": -0.02,
+     "or": 0.4
+    }
+   ],
+   "pub": {
+    "adj_oi": 2390,
+    "adj_ni": 1621,
+    "adj_eps": 2.65,
+    "adj_or": null
+   },
+   "pub_note": "Q4-22 adjusted figures derived as FY2022 published adjusted (OI 10,009; NI 7,067) less 9M-22 published adjusted (7,619; 5,446); EPS = GAAP Q4 EPS 2.67 + the derived \u22120.02."
+  },
+  "2022": {
+   "src": "Q4-22 release 24-Jan-2023",
+   "items": [
+    {
+     "label": "Labor accrual",
+     "cat": "OTHER",
+     "oi": 92,
+     "tax_exp": 23,
+     "ni": 69,
+     "eps": 0.12,
+     "or": -0.3
+    }
+   ],
+   "pub": {
+    "adj_oi": 10009,
+    "adj_ni": 7067,
+    "adj_eps": 11.33,
+    "adj_or": 59.8
+   }
+  },
+  "Q2-24": {
+   "src": "First published in the Q2-25 release (24-Jul-2025) as prior-year comparatives; the Q2-24 release itself published no adjusted figures",
+   "retro": true,
+   "items": [
+    {
+     "label": "Gain on sale of intermodal equipment",
+     "cat": "GAIN",
+     "oi": -46,
+     "tax_exp": -11,
+     "ni": -35,
+     "eps": -0.06,
+     "or": 0.8
+    },
+    {
+     "label": "Environmental remediation",
+     "cat": "OTHER",
+     "oi": 23,
+     "tax_exp": 6,
+     "ni": 17,
+     "eps": 0.03,
+     "or": -0.4
+    }
+   ],
+   "pub": {
+    "adj_oi": 2377,
+    "adj_ni": 1655,
+    "adj_eps": 2.71,
+    "adj_or": 60.4
+   }
+  },
+  "Q4-24": {
+   "src": "First published in the Q4-25 release (27-Jan-2026) as prior-year comparatives",
+   "retro": true,
+   "items": [
+    {
+     "label": "Crew staffing agreement",
+     "cat": "OTHER",
+     "oi": 40,
+     "tax_exp": 10,
+     "ni": 30,
+     "eps": 0.05,
+     "or": -0.6
+    }
+   ],
+   "pub": {
+    "adj_oi": 2565,
+    "adj_ni": 1792,
+    "adj_eps": 2.96,
+    "adj_or": 58.1
+   }
+  },
+  "2024": {
+   "src": "Q4-25 release 27-Jan-2026 (year ended December 31, 2024 comparatives)",
+   "retro": true,
+   "items": [
+    {
+     "label": "Crew staffing agreement",
+     "cat": "OTHER",
+     "oi": 40,
+     "tax_exp": 9,
+     "ni": 31,
+     "eps": 0.05,
+     "or": -0.1
+    },
+    {
+     "label": "Gain on sale of intermodal equipment",
+     "cat": "GAIN",
+     "oi": -46,
+     "tax_exp": -11,
+     "ni": -35,
+     "eps": -0.06,
+     "or": 0.2
+    },
+    {
+     "label": "Environmental remediation",
+     "cat": "OTHER",
+     "oi": 23,
+     "tax_exp": 6,
+     "ni": 17,
+     "eps": 0.03,
+     "or": -0.1
+    }
+   ],
+   "pub": {
+    "adj_oi": 9730,
+    "adj_ni": 6760,
+    "adj_eps": 11.11,
+    "adj_or": 59.9
+   }
+  },
+  "Q2-25": {
+   "src": "Q2-25 release 24-Jul-2025",
+   "items": [
+    {
+     "label": "Deferred tax adjustment",
+     "cat": "TAXD",
+     "oi": 0,
+     "tax_exp": 115,
+     "ni": -115,
+     "eps": -0.19,
+     "or": 0
+    },
+    {
+     "label": "Crew staffing agreement",
+     "cat": "OTHER",
+     "oi": 55,
+     "tax_exp": 13,
+     "ni": 42,
+     "eps": 0.07,
+     "or": -0.9
+    }
+   ],
+   "pub": {
+    "adj_oi": 2580,
+    "adj_ni": 1803,
+    "adj_eps": 3.03,
+    "adj_or": 58.1
+   }
+  },
+  "Q3-25": {
+   "src": "Q3-25 release 23-Oct-2025",
+   "items": [
+    {
+     "label": "Acquisition-related expense",
+     "cat": "ACQ",
+     "oi": 41,
+     "tax_exp": 0,
+     "ni": 41,
+     "eps": 0.07,
+     "or": -0.7
+    }
+   ],
+   "pub": {
+    "adj_oi": 2590,
+    "adj_ni": 1829,
+    "adj_eps": 3.08,
+    "adj_or": 58.5
+   },
+   "note": "The 9M-25 table shows acquisition-related expense of $42m (Q3 $41m); the $1m difference is not attributed to a quarter."
+  },
+  "Q4-25": {
+   "src": "Q4-25 release 27-Jan-2026",
+   "items": [
+    {
+     "label": "Acquisition-related expense",
+     "cat": "ACQ",
+     "oi": 30,
+     "tax_exp": 0,
+     "ni": 30,
+     "eps": 0.05,
+     "or": -0.5
+    },
+    {
+     "label": "Industrial park land sales",
+     "cat": "GAIN",
+     "oi": 0,
+     "oth_inc": -234,
+     "tax_exp": -56,
+     "ni": -178,
+     "eps": -0.3,
+     "or": 0
+    }
+   ],
+   "pub": {
+    "adj_oi": 2431,
+    "adj_ni": 1700,
+    "adj_eps": 2.86,
+    "adj_or": 60.0,
+    "adj_oth_inc": 98
+   }
+  },
+  "2025": {
+   "src": "Q4-25 release 27-Jan-2026",
+   "items": [
+    {
+     "label": "Acquisition-related expense",
+     "cat": "ACQ",
+     "oi": 72,
+     "tax_exp": 0,
+     "ni": 72,
+     "eps": 0.12,
+     "or": -0.3
+    },
+    {
+     "label": "Industrial park land sales",
+     "cat": "GAIN",
+     "oi": 0,
+     "oth_inc": -250,
+     "tax_exp": -60,
+     "ni": -190,
+     "eps": -0.32,
+     "or": 0
+    },
+    {
+     "label": "Deferred tax adjustment",
+     "cat": "TAXD",
+     "oi": 0,
+     "tax_exp": 115,
+     "ni": -115,
+     "eps": -0.19,
+     "or": 0
+    },
+    {
+     "label": "Crew staffing agreement",
+     "cat": "OTHER",
+     "oi": 55,
+     "tax_exp": 13,
+     "ni": 42,
+     "eps": 0.07,
+     "or": -0.2
+    }
+   ],
+   "pub": {
+    "adj_oi": 9973,
+    "adj_ni": 6947,
+    "adj_eps": 11.66,
+    "adj_or": 59.3,
+    "adj_oth_inc": 379
+   },
+   "note": "Full-year land sales ($250m) exceed the Q4 amount ($234m) by $16m recorded in earlier quarters that were not adjusted when first reported; full-year acquisition-related expense $72m vs Q3 + Q4 $71m. \u03a3 quarters \u2260 FY for these items by design."
+  },
+  "Q1-26": {
+   "src": "Q1-26 release 23-Apr-2026",
+   "items": [
+    {
+     "label": "Acquisition-related expense",
+     "cat": "ACQ",
+     "oi": 36,
+     "tax_exp": 0,
+     "ni": 36,
+     "eps": 0.06,
+     "or": -0.6
+    }
+   ],
+   "pub": {
+    "adj_oi": 2494,
+    "adj_ni": 1737,
+    "adj_eps": 2.93,
+    "adj_or": 59.9
+   }
+  },
+  "Q2-26": {
+   "src": "Q2-26 release 23-Jul-2026",
+   "items": [
+    {
+     "label": "Acquisition-related expense",
+     "cat": "ACQ",
+     "oi": 35,
+     "tax_exp": 0,
+     "ni": 35,
+     "eps": 0.05,
+     "or": -0.5
+    }
+   ],
+   "pub": {
+    "adj_oi": 2798,
+    "adj_ni": 2028,
+    "adj_eps": 3.41,
+    "adj_or": 59.2
+   }
+  },
+  "Q3-26": {
+   "src": "Q3-26 release 22-Oct-2026",
+   "items": [
+    {
+     "label": "Acquisition-related expense",
+     "cat": "ACQ",
+     "oi": 22,
+     "tax_exp": 0,
+     "ni": 22,
+     "eps": 0.04,
+     "or": -0.3
+    }
+   ],
+   "pub": {
+    "adj_oi": 2965,
+    "adj_ni": 2098,
+    "adj_eps": 3.53,
+    "adj_or": 58.8
+   }
+  }
+ },
+ "recast_2006_2007": {
+  "src": "FY2008 Form 10-K (6-Feb-2009) Consolidated Statements of Income, 2007 and 2006 comparatives re-presented on the 2008 line structure (freight / other revenues; compensation and benefits, fuel, purchased services and materials, depreciation, equipment and other rents, other). The 2006\u201307 releases used 'Operating Revenues' and six legacy expense lines (salaries, wages & employee benefits; equipment & other rents; depreciation; fuel & utilities; materials & supplies; purchased services & other). Totals (revenues, operating expenses, operating income, net income) are unchanged.",
+  "url": "https://www.sec.gov/Archives/edgar/data/100885/000119312509020788/d10k.htm",
+  "2007": {
+   "frt": 15486,
+   "oth_rev": 797,
+   "rev": 16283,
+   "comp": 4526,
+   "fuel": 3104,
+   "psm": 1856,
+   "dep": 1321,
+   "rents": 1368,
+   "oth_exp": 733,
+   "opex": 12908,
+   "oi": 3375
+  },
+  "2006": {
+   "frt": 14791,
+   "oth_rev": 787,
+   "rev": 15578,
+   "comp": 4535,
+   "fuel": 2968,
+   "psm": 1756,
+   "dep": 1237,
+   "rents": 1396,
+   "oth_exp": 802,
+   "opex": 12694,
+   "oi": 2884
+  }
+ },
+ "debt": {
+  "maturities_src": "FY2025 Form 10-K Note 14, aggregate debt maturities at 31-Dec-2025 excluding market value adjustments: 2026 $1,521m; 2027 $1,291m; 2028 $1,239m; 2029 $1,276m; 2030 $753m; thereafter $27,412m (total $33,492m vs total debt $31,814m: the difference is market value adjustments / unamortized discounts and issuance costs).",
+  "maturities": {
+   "2026": 1521,
+   "2027": 1291,
+   "2028": 1239,
+   "2029": 1276,
+   "2030": 753,
+   "thereafter": 27412
+  },
+  "total_debt_ye25": 31814,
+  "total_debt_q3_26": 30324,
+  "revolver": "$2.0bn revolving credit facility renewed in 2026 (expires 20-May-2031), undrawn at 30-Sep-2026; $0 commercial paper outstanding at 30-Sep-2026; covenant allows up to $51.3bn of debt (as defined) vs $32.0bn outstanding (Q3-26 10-Q Note 14).",
+  "rate_note": "FY2025 interest expense $1,309m on an average debt level of $32.1bn (10-K MD&A) = 4.1%; 9M-26 interest $945m on ~$31bn = 4.1% annualised.",
+  "short_term_investments": "Time deposits and government agency securities (Level 2, amortized cost): $875m at 30-Sep-2026 ($250m at 31-Dec-2025) \u2014 cash being accumulated toward the Norfolk Southern cash consideration (10-Q Note 18: 'funded through a combination of new debt and cash accumulated through cash provided by operating activities')."
+ },
+ "leases": {
+  "op_lease_liab": {
+   "2019": 1600,
+   "2024": 1271,
+   "2025": 1008,
+   "Q3-26": 788
+  },
+  "src": "Releases' adjusted debt tables; FY2025 10-K Note 16: current $270m + noncurrent $738m; Q3-26 10-Q: $225m + $563m; interest on operating lease liabilities (TTM) $40m (2025), $33m (Sep-26 TTM)."
+ },
+ "pension": {
+  "funded_status_ye25": 703,
+  "src": "FY2025 10-K pension note: PBO $3,275m, plan assets $3,978m, funded status +$703m (overfunded; noncurrent asset $1,083m). OPEB obligations remain in other liabilities."
+ },
+ "shares": {
+  "outstanding_2026_09_30": 594.224,
+  "src": "Q3-26 10-Q balance sheet (XBRL CommonStockSharesOutstanding 594,223,957 at 30-Sep-2026); cover page 594,250,416 at 16-Oct-2026.",
+  "buyback": "2025 authorization effective 1-Apr-2025 (through 2028); repurchases paused since the Norfolk Southern merger agreement (28-Jul-2025): 9M-26 repurchases $26m (settlement of the 2025 ASRs / plan shares), 9M-25 $2,679m.",
+  "dividend": "Quarterly dividend raised 3% to $1.42 per share from Q3-26 (from $1.38; $1.34 in 2025). Declared per share: 2025 $5.44; 9M-26 $4.18."
+ },
+ "employees": {
+  "avg_2025": 29287,
+  "avg_q3_26": 28540,
+  "src": "FY2025 10-K / Q3-26 release operating statistics (total employees, average)."
+ },
+ "nsc_deal": {
+  "announced": "2025-07-29",
+  "agreement_date": "2025-07-28",
+  "src": "Joint proxy statement / prospectus (Form 424B3 filed 1-Oct-2025 by Union Pacific; NSC DEFM14A 1-Oct-2025): terms, unaudited pro forma condensed combined financial information (Notes 4\u20137), management assumed synergies; Q3-26 10-Q Note 18 (timing); 8-K 19-Dec-2025 (STB application).",
+  "url": "https://www.sec.gov/Archives/edgar/data/100885/000119312525226560/d908896d424b3.htm",
+  "terms": "Each NSC share receives 1.0 UNP share plus $88.82 in cash ($320 per NSC share at announcement). NSC shares outstanding 224,614,894 at 30-Jun-2025 (pro forma basis); UNP shares to be issued ~224.6m plus ~0.3m for equity awards; cash consideration ~$19,950m plus $20m award settlements.",
+  "pro_forma": {
+   "consideration_total_at_216_05": 68711,
+   "stock_component": 48528,
+   "cash_component": 19950,
+   "award_settlement_cash": 20,
+   "award_settlement_shares": 213,
+   "unp_price_used": 216.05,
+   "nsc_shares_m": 224.615,
+   "new_unp_shares_m": 224.9,
+   "ppa_note": "Preliminary PPA at NSC book values except: debt fair-value adjustment \u2212$1,348m (debt due after one year 16,464 \u2192 15,116), related deferred tax +$310m (23.0%), retention bonus accrual +$192m; goodwill $53,078m (residual at the $216.05 UNP price; \u00b120% UNP price = \u00b1$10bn goodwill). Properties kept at NSC book value ($35,921m): 'once detailed valuations are completed, a material portion could be attributed to properties'; a $10bn property step-up would add ~$275m p.a. of depreciation (2.75% composite rate).",
+   "nsc_net_assets_adjusted_historical": 14787,
+   "goodwill": 53078,
+   "debt_fv_adj": -1348,
+   "dtl_adj": 310,
+   "retention_accrual": 192,
+   "financing": "Pro forma assumes the entire cash consideration funded with $19,970m of new debt at 5% plus $190m issuance / liability-management costs (amortized over 15 years); \u00b10.125% rate = \u00b1$25m annual interest; $5bn of accumulated cash would reduce annual interest by $250m. Merger costs for UNP estimated at $190m.",
+   "nsc_debt_assumed_2025_06_30": {
+    "current": 903,
+    "noncurrent": 16464
+   }
+  },
+  "synergies": {
+   "gross_ebitda_run_rate": 2750,
+   "revenue_ebitda": 1750,
+   "cost": 1000,
+   "net_after_concessions_used_by_advisors": 2000,
+   "cost_to_achieve_opex_year1": 170,
+   "capex_to_achieve": 2000,
+   "capex_phasing": "half in year 1, half in year 2 of the phase-in",
+   "stb_application_dec_2025": "~$2.1bn incremental capital to support synergies; $133m annual capital synergies; ~900 net new union jobs by year 3",
+   "phasing_note": "Run-rate reached by the third year after closing per the merger announcement materials (8-K 29-Jul-2025 Ex. 99.1 investor presentation); the model phases 25% / 60% / 100% of the net $2.0bn in the first / second / third year after closing (assumption)."
+  },
+  "timing": "Joint STB application filed 19-Dec-2025; STB decision of 16-Jan-2026 accepted the application as complete (Q3-26 10-Q Note 18); 'currently expected to be completed in the second half of 2027'. Model assumption: closing 1-Jul-2027 (toggle and date inputs).",
+  "shareholder_votes": "Approved by UNP and NSC shareholders on 14-Nov-2025 (8-Ks 17-Nov-2025).",
+  "buybacks": "UNP share repurchases paused for the merger (Q3-25 release); the model resumes leverage-targeted buybacks only once pro forma leverage falls below the target.",
+  "bs_2026_09_30": {
+   "src": "NSC Form 10-Q for Q3-2026 (22-Oct-2026), consolidated balance sheet at 30-Sep-2026, USDm",
+   "cash": 1598,
+   "ar": 1229,
+   "materials": 353,
+   "other_ca": 145,
+   "tca": 3325,
+   "investments": 4186,
+   "ppe_net": 36857,
+   "other_assets": 1581,
+   "total_assets": 45949,
+   "ap": 2064,
+   "income_taxes": 236,
+   "other_cl": 732,
+   "current_debt": 649,
+   "tcl": 3681,
+   "ltd": 15964,
+   "other_liabilities": 1702,
+   "dtl": 7872,
+   "total_liabilities": 29219,
+   "equity": 16730
+  }
+ },
+ "fuel_surcharge_annual": {
+  "src": "10-K MD&A (fuel surcharge revenue / fuel surcharge programs generated freight revenues); quarterly figures from 10-Q MD&A where stated in dollars."
+ },
+ "investor_day_2024": {
+  "src": "Not on EDGAR (Sep-2024 Investor Day deck / call): 3-year 2025\u201327 EPS CAGR target high-single to low-double digit, industry-leading OR; referenced in the releases' outlook sections. Marked unverified beyond the release wording."
+ }
+}
