@@ -1,0 +1,209 @@
+{
+ "_note": "Items not machine-extracted from the period documents. Every entry carries its SEC EDGAR source (CIK 702165 unless stated). Nothing here is an estimate of a historical number.",
+ "price": {
+  "px": 332.09,
+  "date": "2026-10-24",
+  "src": "Forms 4 filed 26-Oct-2026 (A. Bhatt, B. Barr): price of shares withheld for taxes on restricted stock units vesting 24-Oct-2026 (transaction code F), https://www.sec.gov/Archives/edgar/data/702165/000122520826008516/doc4.xml . Latest share price in an SEC filing; investor-relations / market-data sites are not reachable from the build environment. Update to market.",
+  "unp_px": 300.62,
+  "unp_date": "2026-11-10",
+  "unp_src": "Union Pacific Forms 4 filed 12-Nov-2026 (C. Powers, K. Rocker, C. Conlin; CIK 100885): acquisition price $300.62 per UNP share on 10-Nov-2026, https://www.sec.gov/Archives/edgar/data/100885/000010088526000325/ . Used only for the merger-consideration memo; update to market."
+ },
+ "merger": {
+  "counterparty": "Union Pacific Corporation (NYSE: UNP)",
+  "agreement_date": "2025-07-28",
+  "consideration": "1.0 UNP common share plus $88.82 in cash per NSC share",
+  "cash_per_share": 88.82,
+  "exchange_ratio": 1.0,
+  "termination_fee_usd_m": 2500,
+  "end_date": "2028-01-28 (subject to automatic extensions)",
+  "shareholder_approval": "NSC special meeting 14-Nov-2025: ~99% of votes cast in favour (8-K 17-Nov-2025, Ex. 99.1)",
+  "stb_application": "Filed with the Surface Transportation Board 19-Dec-2025 (8-K 19-Dec-2025, Ex. 99.1)",
+  "expected_close": "'by early 2027, subject to Surface Transportation Board review and approval within its statutory timeline' (8-K 17-Nov-2025); no closing date had been announced on EDGAR by 19-Nov-2026",
+  "model_assumed_close": "2027-06-30 (model assumption for the deal-spread memo; the STB's statutory review timeline from the Dec-2025 application runs into 2027)",
+  "restrictions": "Share repurchases suspended (prohibited without UNP consent); restrictions on incurring additional indebtedness (Q3-26 10-Q Notes 1, 10; Part II Item 2)",
+  "merger_costs": "Merger-related expenses $80m in 2025 ($15m Q3, $65m Q4), $145m 9M-26 ($42m Q3-26): retention agreements, advisors, legal (releases)",
+  "synergies_public": "Companies' joint estimate: $2.75bn annualised EBITDA synergies ($1.75bn revenue, $1.0bn cost); ~$2.1bn incremental capital (DEFM14A 1-Oct-2025; 8-K 19-Dec-2025)",
+  "src": [
+   "https://www.sec.gov/Archives/edgar/data/702165/000119312525168147/d877267d8k.htm",
+   "https://www.sec.gov/Archives/edgar/data/702165/000119312525226601/d64358ddefm14a.htm",
+   "https://www.sec.gov/Archives/edgar/data/702165/000119312525283950/d30760dex991.htm",
+   "https://www.sec.gov/Archives/edgar/data/702165/000119312525327039/d48129dex991.htm",
+   "https://www.sec.gov/Archives/edgar/data/702165/000162828026066836/nsc-20260930.htm"
+  ]
+ },
+ "lrp": {
+  "_note": "Norfolk Southern management unaudited projections (long-range plan, prepared mid-2025, standalone) as summarised in the joint proxy statement/prospectus (DEFM14A filed 1-Oct-2025, 'Certain Norfolk Southern Unaudited Prospective Financial Information'). Not guidance ('These projections are not, and should not be viewed as, public guidance or targets'). Used as information rows only.",
+  "years": [
+   2025,
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_bn": [
+   12.4,
+   12.9,
+   13.6,
+   14.2,
+   14.8,
+   15.5
+  ],
+  "adj_oi_bn": [
+   4.4,
+   4.8,
+   5.2,
+   5.6,
+   6.0,
+   6.4
+  ],
+  "adj_ebitda_bn": [
+   5.8,
+   6.2,
+   6.7,
+   7.1,
+   7.6,
+   8.1
+  ],
+  "capex_bn": [
+   2.2,
+   2.3,
+   2.3,
+   2.3,
+   2.4,
+   2.4
+  ],
+  "adj_eps": [
+   12.67,
+   14.17,
+   16.04,
+   17.78,
+   19.95,
+   22.36
+  ],
+  "ufcf_bn": [
+   1.0,
+   3.2,
+   3.5,
+   3.9,
+   4.2,
+   4.7
+  ],
+  "ufcf_note": "2025 = 1-Jul-2025 to 31-Dec-2025 only",
+  "src": "https://www.sec.gov/Archives/edgar/data/702165/000119312525226601/d64358ddefm14a.htm"
+ },
+ "guidance": {
+  "_note": "NSC publishes no numeric revenue / operating-ratio / EPS outlook in its EDGAR-filed releases or 10-Qs (outlook commentary is given on earnings calls, which are not on EDGAR). The only EDGAR-filed 2026 planning items are below.",
+  "capex_2026": 2100.0,
+  "capex_src": "Q3-26 10-Q MD&A: 'For 2026, we expect property additions to approximate $2.1 billion.'",
+  "fuel_q4_26": "Q3-26 10-Q MD&A: fuel expense and fuel surcharge revenues for the remainder of 2026 are expected to increase compared with the prior year based on current fuel commodity prices.",
+  "src": "https://www.sec.gov/Archives/edgar/data/702165/000162828026066836/nsc-20260930.htm"
+ },
+ "debt": {
+  "at_2025_12_31": "Total debt $17,087m (notes & debentures $17,945m face: 4.19% maturing to 2030 $3,030m; 4.28% 2031-35 $2,684m; 4.28% 2037-64 $10,847m; 5.22% 2097-2121 $1,384m; finance leases $18m; discounts, premiums & issuance costs -$876m); current maturities $607m; long-term debt $16,480m (FY2025 10-K Note 11).",
+  "maturities": {
+   "2026": 607,
+   "2027": 625,
+   "2028": 602,
+   "2029": 611,
+   "2030": 600,
+   "2031+": 14042
+  },
+  "maturities_src": "FY2025 10-K Note 11 ('Long-term debt maturities subsequent to 2026'); 2026 = current maturities at 31-Dec-2025.",
+  "at_2026_09_30": "Current maturities $649m; long-term debt $15,964m; total $16,613m (Q3-26 10-Q). 9M-26 debt repayments $618m; no borrowings. Apr-2026 finance lease (Atlanta headquarters) $115m liability recorded (Q3-26 10-Q Note 10; 8-K 2-Apr-2026).",
+  "facilities": "$800m revolving credit agreement (renewed Jan-2024, expires Jan-2029, undrawn); $800m commercial paper program (Jun-2024, none outstanding); $400m accounts receivable securitization (renewed May-2025, expires May-2026, none outstanding). FY2025 10-K Note 11.",
+  "new_notes_2025": "May-2025 $400m 5.10% senior notes due 2035 (FY2025 10-K Note 11).",
+  "interest_2026": "Interest expense on debt 9M-26 $587m ($193m Q3-26); 2025 $792m.",
+  "merger_restriction": "Merger Agreement restricts incurring additional indebtedness (Q3-26 10-Q Note 10).",
+  "src": "https://www.sec.gov/Archives/edgar/data/702165/000162828026006268/nsc-20251231.htm"
+ },
+ "buyback": {
+  "program": "$10.0bn authorization from 1-Apr-2022 (board 29-Mar-2022); $6.3bn remaining at 30-Sep-2026; repurchases suspended under the Merger Agreement (no repurchases in 9M-26; $533m / 2.2m shares in 2025). Q3-26 10-Q Part II Item 2.",
+  "src": "https://www.sec.gov/Archives/edgar/data/702165/000162828026066836/nsc-20260930.htm"
+ },
+ "dividend": {
+  "dps_q_2026": 1.35,
+  "note": "Quarterly dividend $1.35 per share in 2025 and 2026 (dividends paid $910m in 9M-26; XBRL CommonStockDividendsPerShareDeclared).",
+  "src": "https://www.sec.gov/Archives/edgar/data/702165/000162828026066836/nsc-20260930.htm"
+ },
+ "eoi": {
+  "note": "Eastern Ohio incident (East Palestine derailment, 3-Feb-2023): operating-expense impact $1,116m 2023; $325m 2024 (net of $650m recoveries); -$190m 2025 (net recoveries; $418m recoveries); $53m 9M-26 ($7m recoveries). Liabilities at 31-Dec-2025: current $609m, non-current $56m (FY2025 10-K Notes 13, 19).",
+  "liab_current_2025": 609,
+  "liab_noncurrent_2025": 56,
+  "src": "https://www.sec.gov/Archives/edgar/data/702165/000162828026006268/nsc-20251231.htm"
+ },
+ "pension": {
+  "note": "Funded status at 31-Dec-2025: pension +$672m (plan assets $2,766m vs obligation $2,094m; $949m in other assets), other postretirement -$125m. FY2025 10-K Note 14.",
+  "src": "https://www.sec.gov/Archives/edgar/data/702165/000162828026006268/nsc-20251231.htm"
+ },
+ "employees": {
+  "2025_avg": 19400,
+  "2025_ye": 19300,
+  "src": "FY2025 10-K Item 1 Human Capital Management."
+ },
+ "restructuring": {
+  "note": "Restructuring and other charges: 2024 $183m (voluntary / involuntary separation programs, software rationalization, new COO costs, asset-class disposition; plus $20m OPEB curtailment gain in other income); 2025 $22m (technology restructuring, software rationalization); 9M-26 $6m (severance). Releases.",
+  "src": "https://www.sec.gov/Archives/edgar/data/702165/000119312526028244/nsc-ex99_2.htm"
+ },
+ "line_sales_2024": {
+  "note": "2024 gains on railway line sales (Virginia, North Carolina) $433m in 'Materials and other' ($53m in Q4-24); proceeds $389m (Q4-24 release Ex. 99.2 note 1).",
+  "src": "https://www.sec.gov/Archives/edgar/data/702165/000119312525014968/d945030dex992.htm"
+ },
+ "csr_2024": {
+  "note": "Acquisition of the assets of Cincinnati Southern Railway (CSR) for $1,643m in 2024 (investing cash flow 'Acquisition of assets of CSR').",
+  "src": "https://www.sec.gov/Archives/edgar/data/702165/000119312525014968/d945030dex992.htm"
+ },
+ "adjusting_items_manual": {
+  "_note": "Company-identified items that sit inside a regular expense / income line (not on their own income-statement line), with the quarter they were booked in. Used by the GAAP -> adjusted bridges.",
+  "Q3-20": {
+   "IMPAIR": 99.0,
+   "label": "Impairment of an equity-method investment ($99m, in 'Purchased services and rents'; $74m after tax) \u2014 Q3-20 release Ex. 99.2 note 1",
+   "src": "https://www.sec.gov/Archives/edgar/data/702165/000155278120000553/e40553_ex99-2.htm"
+  },
+  "2020": {
+   "IMPAIR": 99.0,
+   "label": "Q3-20 investment impairment (FY2020 reconciliation: 'locomotive & investment impairment charges' $484m = $385m loss on asset disposal + $99m)"
+  },
+  "Q4-17": {
+   "TAXD_OPEX": -151.0,
+   "TAXD_TAX": -3482.0,
+   "label": "2017 tax reform: remeasurement of net deferred tax liabilities ($3,482m benefit in income taxes) and $151m favourable effect within railway operating expenses \u2014 Q4-17 / FY2017 reconciliation (press release 24-Jan-2018; FY2017 10-K)",
+   "src": "https://www.sec.gov/Archives/edgar/data/702165/000070216518000007/nspr-0124181.htm"
+  },
+  "2017": {
+   "TAXD_OPEX": -151.0,
+   "TAXD_TAX": -3482.0
+  },
+  "Q1-24": {
+   "ADVIS": 21.0,
+   "TAXD_TAX": -27.0,
+   "label": "Shareholder advisory costs $21m (6M $50m less Q2 $29m) in other income - net; $27m favourable deferred tax adjustment (subsidiary restructuring) \u2014 2024 releases Ex. 99.2 notes"
+  },
+  "Q2-24": {
+   "ADVIS": 29.0,
+   "label": "Shareholder advisory costs $29m in other income - net (Q2-24 release Ex. 99.2 note 3)"
+  },
+  "Q3-24": {
+   "ADVIS": 1.0,
+   "label": "Shareholder advisory costs $1m (9M $51m) (Q3-24 release Ex. 99.2 note 4)"
+  },
+  "Q4-24": {
+   "ADVIS": 8.0,
+   "label": "Shareholder advisory costs $8m (Q4-24 release Ex. 99.2 note 4)"
+  },
+  "2024": {
+   "ADVIS": 59.0,
+   "TAXD_TAX": -27.0,
+   "GAIN": -433.0,
+   "label": "Shareholder advisory costs $59m; deferred tax adjustment $27m; railway line sale gains $433m in 'Materials and other' (Q4-24 release Ex. 99.2 notes 1, 4, 5)"
+  },
+  "Q3-24_GAIN": {
+   "GAIN": -380.0,
+   "label": "Railway line sale gain $380m (Q3-24) in 'Materials and other' (Q3-24 press release reconciliation)"
+  },
+  "Q4-24_GAIN": {
+   "GAIN": -53.0,
+   "label": "Railway line sale gain $53m (Q4-24) in 'Materials and other' (Q4-24 release Ex. 99.2 note 1)"
+  }
+ }
+}
