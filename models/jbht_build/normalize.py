@@ -108,7 +108,7 @@ def do_items():
         for t in tgt:
             put(t, 'oa_items', N(x_(t, 'oa_items')) + it['pre'])
             put(t, 'oa_taxd', N(x_(t, 'oa_taxd')) + it['tax_discrete'])
-            if it['after'] is not None: put(t, 'oa_after', N(x_(t, 'oa_after')) + it['after'])
+            if it['after'] is not None and t == p: put(t, 'oa_after', N(x_(t, 'oa_after')) + it['after'])
             lab = x_(t, 'oa_lab')
             put(t, 'oa_lab', (lab + ' | ' if lab else '') + it['label'])
 
@@ -157,13 +157,17 @@ def do_derived():
         if x_(qk(y, 4), 'dps') is None and all(x_(q, 'dps') is not None for q in qs) and x_(fy, 'dps') is not None:
             put(qk(y, 4), 'dps', x_(fy, 'dps') - sum(x_(q, 'dps') for q in qs))
 
+def do_debt():
+    d = MAN['debt']; p = qk(YC, QC_LAST)
+    put(p, 'debt_st', d['revolver']); put(p, 'debt_lt', x_(p, 'bs_std') + x_(p, 'bs_ltd') - d['revolver'])
+
 _done = False
 def run():
     global _done
     if _done: return DATA
     load()
     for p in periods(): do_pl(p)
-    do_items(); do_cf(); do_derived()
+    do_items(); do_cf(); do_derived(); do_debt()
     _done = True
     return DATA
 

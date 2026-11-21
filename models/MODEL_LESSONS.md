@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -14,14 +14,15 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 |---|---|
 | Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
-| Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
+| Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), JBHT (loads / trucks / stops × revenue per unit), RBA (GTV × take rate), UBER (gross bookings × take rate) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
-| Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
+| Company publishes no non-GAAP measures or no guidance | ODFL, JBHT, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
+| Intermodal, dedicated and brokerage trucking (multi-segment, seasonality-based quarter) | JBHT, CHRW, XPO |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
@@ -421,6 +422,29 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [bridges] Separate "model items" from "company items" within one adjusting row, and say which is which in the cell comment.
   - [build] Strip one-offs (restructuring) out of the base-year unit cost before growing it into the out-years.
   - [valuation] On deal tabs, show accretion both against the standalone with buybacks and on the company's comparison basis, and solve for the synergies/margins needed to hit the company's claim.
+
+### JBHT — J.B. Hunt Transport Services (MLM template 6-Oct-26 via the WWD kit, US GAAP / USD m / Dec FY)
+- **Coverage & basis:** FY2006–12 annual, Q1/13–Q3/26 quarterly, Q4/26E, 2027E–30E, as originally reported (CIK 0000728535; no split since May-2005). JBHT uses the template column map unchanged. Two segment recasts come from the next year's release comparatives, each with a cell comment: FY2006 (ICS separated from Truck in 2007) and 2019 (Final Mile Services separated from Dedicated in Q1-20). Dedicated for 2018 and earlier includes final mile and was never recast, so "Dedicated + Final Mile" memo rows carry the like-for-like series.
+- **Operating build:** unit economics for all five segments: loads × revenue per load (Intermodal, ICS, Truckload), average trucks × revenue per truck (Dedicated), stops × revenue per stop (Final Mile). Revenue per unit = segment revenue ÷ volume on gross revenue, so no statistics-to-revenue adjustment row is needed; the published revenue per load is a memo, checked to ±$1 in `check_data.py`. Fuel surcharge sits inside revenue per unit (18% of revenue in Q2–Q3/26 vs 12–13% in 2025) and is flagged as a pass-through in every lever note. A volume / revenue-per-unit / other bridge closes to the change in revenue with a check row.
+- **Bridges & definitions:** JBHT publishes no non-GAAP measures and no EBITDA. All three bridges are model definitions that add back only the items the company quantified in release text (18 items, e.g. the $134.0m Q4-18 and $44.2m Q3-19 BNSF arbitration charges, the $64.0m Q4-22 and $53.4m Q4-23 insurance charges). The definition row flags each period and the cell comment quotes the release. Checks run against XBRL facts (operating income, net earnings) and identities. The tax effect uses the company's after-tax figure where stated (Q4-16, Q3-18), otherwise the period rate bounded 15–40%; FY columns of quarterly years sum the quarters.
+- **Data quirks & corrections:**
+  - Q3-19: the release pre-dated the arbitration award, so the 10-Q booked $44.2m of charges the release lacks. The model takes the Q3-19 statement from the Q3-20 release comparative.
+  - The releases carry no cash-flow statement, only operating cash flow and net capex, and those preliminary figures differ from the filings in six periods. Cash flow comes from XBRL as first filed; FY2006–07 from the FY2008 10-K.
+  - HTML artifacts: split last letters ("revenue s", "Balance Sheet s") and two releases without schedule headings. The parser matches headings with whitespace removed and types sections by content.
+  - "Trucks (end of period)" is a Dedicated sub-heading, not the Truck segment; segment headings must match the full name.
+  - Q1-13 DPS is nil (dividend accelerated into Dec-2012). XBRL dividend tags switch between "declared" and "paid".
+- **Calibration & scenarios:** no revenue or EPS guidance. Q4/26E volume, revenue per unit and margin = Q3/26 × or + the 2016–25 Q3→Q4 change: upper quartile / average / lower quartile by scenario (`QUARTILE` over a helper row filled only in Q4 columns). The two forward statements JBHT does file are applied and checked: FY26 tax rate ~24% (Q4 tax solved to the full-year rate) and net capex ~$700m. The FY26 EPS target cell is optional and blank. Long-term margin ranges and a ~1x leverage target come from investor presentations / calls: labelled UNVERIFIED in the scenario table and not used as inputs.
+- **Balance sheet, cash & capital:** capex is modelled net (the company's measure): gross additions = net ÷ (1 − sale-proceeds ratio), and PP&E falls by the book value sold. Working capital is on a revenue basis (no COGS), with year-end 2026E balances sized on Q4/26E × 4. Term loans (Nov-2028) and the 4.90% notes (Mar-2030) are refinanced; the revolver plugs to $20m minimum cash. Buybacks plug to 1.0x / 0.8x / 0.6x net debt / adjusted EBITDA; in Bull the revolver passes its $1.0bn commitment, flagged by the headroom memo as a financing assumption.
+- **Valuation:** $237.64 = average September-2026 repurchase price (Q3-26 10-Q Part II Item 2). The DCF keeps a 2026E column for the invested-capital roll but zeroes its present value, because net debt is taken at year-end 2026E. NOPAT is full-cost (after all D&A and SBC); operating leases are not debt.
+- **Reusable lessons:**
+  - [calibration] For seasonality-based quarters, use quartiles (upper / average / lower) rather than best / worst: one outlier year (Q4-20) otherwise sets the Bull or Bear case for every driver at once.
+  - [calibration] Even without earnings guidance, apply any forward statement the company does file (tax rate, capex) and give each its own "vs company outlook" check row.
+  - [extraction] Compare each release's key lines with the same period's XBRL facts: a mismatch in one quarter usually means the release pre-dated a charge booked in the 10-Q, and the next year's comparative column gives the corrected statement.
+  - [extraction] When a release carries only supplemental cash-flow figures, use the filed statements and keep the release figures as an information-only cross-check.
+  - [build] If revenue per unit is defined as reported revenue ÷ volume, the statistics tie by construction; keep the published statistic as a memo and check it within rounding in the data checks.
+  - [build] When a segment split is recast for only one prior year, add a combined memo series that is comparable across the break and comment the first recast y/y.
+  - [tooling] Match table headings with whitespace removed and type sections by their contents; filings split letters and drop headings.
+  - [QA] A note or label that starts with "=" becomes a formula (`#N/A` in the notes column). Start text with a word.
 
 ### UBER — Uber Technologies (MLM template, US GAAP / USD m / calendar FY)
 - **Coverage & basis:** FY2016 (S-1), Q1/18–Q2/26, Q3/Q4-26E, 2027E–30E. IPO 10-May-2019; pre-IPO EPS is on pre-conversion common shares (n/m). 2018–19 revenue is as originally reported ($11,270m / $14,147m, against $10,433m / $13,000m restated in the 2020 10-K for excess Driver payments; no OI effect). Interest income is shown separately for all periods on the 2026 presentation, using XBRL InvestmentIncomeInterest. CIK 0001543151.
