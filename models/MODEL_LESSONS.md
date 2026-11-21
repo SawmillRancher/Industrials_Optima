@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -14,11 +14,11 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 |---|---|
 | Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
-| Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
+| Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), UPS (daily volume × revenue per piece × days), RBA (GTV × take rate), UBER (gross bookings × take rate) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
-| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
+| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM, UPS (segment recast inside a year) |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
@@ -27,8 +27,8 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
 | Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
-| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
-| Pension (CAS / FAS, non-service income) | HII, CW |
+| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI, UPS (share classes) |
+| Pension (CAS / FAS, non-service income, mark-to-market) | HII, CW, UPS |
 | Private company, LBO | R&Y |
 
 ---
@@ -404,6 +404,29 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [calibration] When the company gives planning assumptions only, use them as point estimates and info rows rather than forcing a revenue/EBITDA solve.
   - [bridges] For LT targets set on an old base year, freeze the base "as first published" in the scenario table and note that the definitions have since changed.
   - [BS/CF] Follow the company's equity mechanics for buybacks (retire vs treasury; APIC-first then retained earnings) so equity ties.
+
+### UPS — United Parcel Service (MLM template via WWD kit, US GAAP / USD m / Dec FY)
+- **Coverage & basis:** FY2006–12 annual, Q1/13–Q3/26 quarterly, Q4/26E, 2027E–30E. The template's own column layout applies unchanged (shift 0, switch CF2). As originally reported: FY2006–10 are on the pre-2011 pension accounting (the 8-K of 27-Jan-2012 recast to mark-to-market is not used), and periods before Q1-18 are before ASU 2017-07. Two documented exceptions: FY2020 / Q4-20 take the 10-K (UPS Freight impairment $686m vs $556m in the release), and Q1–Q3/24 segments take the 2025 prior-year columns, because the Q4-24 release moved air cargo from Supply Chain Solutions to U.S. Domestic. CIK 1090727.
+- **Operating build:** average daily volume × revenue per piece × operating days by product (Next Day Air / Deferred / Ground; International Domestic / Export), plus "Cargo and Other" and the Supply Chain Solutions revenue lines. A ratio row shows the published statistics reproduce product revenue (≈ 1.000), so the forecast needs no adjustment row. UPS allocates every cost to a segment, so there is no corporate line. Expense lines by nature are presentation only; compensation and benefits is the balancing line.
+- **Bridges & definitions:** adjusted segment profit is published only in periods with items, so adjusted = GAAP elsewhere (flagged). Items are not classified: operating items by segment = adjusted − GAAP segment profit; items below operating profit = the remainder of the pre-tax difference (the pension mark-to-market from 2018); tax effect = published adjusted net income − net income − items. The company's wording per period is a cell comment on the total row. Adjusted EBITDA is a model definition (UPS reconciles one only on a trailing basis for its debt ratio). In GAAP-loss quarters (Q4/16, Q4/19, Q4/20) adjusted EPS uses the share count stated in the release footnote.
+- **Data quirks & corrections:**
+  - The Q3-26 8-K has no Ex. 99.2, so statements and operating data come from the 10-Q MD&A tables.
+  - The Q4-18 release labels the three-month Logistics row "Forwarding and Logistics".
+  - The cash-flow disposal line includes business sales from 2021; divestiture proceeds are split out using the PP&E disposals in the free-cash-flow reconciliation (UPS Freight $848m, Coyote $1,002m).
+  - Release free-cash-flow reconciliations before 2016 are "preliminary" and differ from the filed statements, so the comparison is an information row, not a check.
+  - Coyote held-for-sale cash (±$10m, Q2/Q3-24) and restricted cash (2018–19) need memo rows for the cash checks.
+  - check_data runs 2,357 checks.
+- **Calibration & scenarios:** the Q3-26 release gives point guidance for both Q4 and the year (revenue ~$92.6bn, adjusted operating profit ~$8.75bn). The model solves a uniform volume / revenue-line Δ to FY revenue and a uniform segment-margin Δ to FY adjusted operating profit; the Q4 points, adjusted EPS and adjusted free cash flow are information rows (Base lands within $0.02 of the EPS guide). Because UPS gives no range, the High / Low end-points are model assumptions and are labelled that way. The trend seed is the latest quarter's y/y, not the year-to-date rate, because the largest customer's volume reduction completed in Q2-26.
+- **Balance sheet, cash & capital:** notes ladder refinanced at maturity; commercial paper to a $5.0bn minimum cash, with a headroom memo vs the $3.0bn credit commitments and extra notes issued (labelled) so buybacks are not funded with paper beyond them. Working capital runs on revenue (no cost of goods sold). The pension liability rolls with expense less contributions; a $450m in-kind note contribution in Q3-26 is non-cash. Capitalized software is moved from the PP&E roll-forward to intangibles so the intangible balance does not run down.
+- **Valuation:** $105.39 from a Form 4 class A sale (28-Oct-26). The DCF switches off the 2026E cash flow with an inclusion flag, deducts the pension and postretirement obligation with net debt, and leaves operating leases in operating costs. P/E 15x Base on adjusted EPS.
+- **Reusable lessons:**
+  - [calibration] Point guidance has no range: put the point in Mid and label the High / Low end-points as model assumptions, not company guidance.
+  - [calibration] Seed the remaining quarter from the latest quarter's y/y when a known step change (a customer exit, a divestiture) ended inside the year-to-date period.
+  - [basis] When a segment recast lands in the Q4 release, take the earlier quarters of that year from the next year's prior-year columns so all four quarters and the year are on one basis; comment each cell with the original figure.
+  - [extraction] If an earnings 8-K has no financial schedules, take the statements and operating data from the 10-Q and only the segment and reconciliation data from the release; say so in the record's notes.
+  - [bridges] Where items are published only as adjusted-vs-GAAP differences by segment, carry them by segment rather than by category and keep the company wording in comments.
+  - [BS/CF] Split business-disposal proceeds out of a combined "disposal of businesses, property, plant and equipment" line using the company's free-cash-flow reconciliation.
+  - [QA] A build with no column shift legitimately uses `Model!CF2` as its switch; pass `--allow 'Model!CF2'` to the residue scan and say why in the README.
 
 ### CHRW — C.H. Robinson Worldwide (MLM template + RXO PF deal tab, US GAAP / USD / Dec FY)
 - **Coverage & basis:** FY2006–12 annual, quarterly Q1/13–Q2/26; Q3–Q4/26E, 2026E, 2027E–30E. Each period is taken as originally reported in its own 8-K Ex. 99.1. Segments (NAST / GF / Robinson Fresh / All Other) start in Q4/16 and are recast to 2014 from the FY2016 10-K and the Jan-2017 Ex. 99.3. Robinson Fresh was folded into All Other in 2019, and the current-basis row = Robinson Fresh + legacy All Other (memo rows, 2014–18). The headline profit line was renamed over time: "gross profits" (to 2008), then "net revenues" (2009–18), then AGP (2019+). GAAP gross profit is presented only from Q1/23 (with 2022 comparatives).

@@ -1,15 +1,15 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, UPS). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
 - **Fill-in docs:** [`templates/NEW_MODEL_README_TEMPLATE.md`](templates/NEW_MODEL_README_TEMPLATE.md) and [`templates/EXTRACTION_SCHEMA_TEMPLATE.md`](templates/EXTRACTION_SCHEMA_TEMPLATE.md).
 - **QA tools:** [`tools/inspect_model.py`](tools/inspect_model.py) (formula errors and non-zero check rows), [`tools/cyc.py`](tools/cyc.py) (circular references) and [`tools/residue_scan.py`](tools/residue_scan.py) (leftover template-company text in values and comments).
 - **Per-model lessons:** [`MODEL_LESSONS.md`](MODEL_LESSONS.md) records each model's specific nuances (basis, bridges, data quirks, deals, calibration, valuation) and reusable rules. Read the entries for the most similar companies before you start.
-- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`) and WWD (`wwd_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
+- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`), WWD (`wwd_build`) and UPS (`ups_build`, volume × price) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
 
 ---
 
@@ -246,7 +246,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | Situation | Precedent | Adaptation |
 |---|---|---|
 | Single reportable segment | RBA, KRMN, LOAR | Revenue-stream or end-market build; margins at group level; anchor on the company's guided KPI |
-| Unit economics disclosed | MLM, VMC, ODFL, SAIA, XPO, CHRW | Volume × price build, price / volume bridge, fall-through; fuel surcharge from DOE diesel × surcharge table (SAIA) |
+| Unit economics disclosed | MLM, VMC, ODFL, SAIA, XPO, CHRW, UPS | Volume × price build, price / volume bridge, fall-through; fuel surcharge from DOE diesel × surcharge table (SAIA); daily volume × revenue per piece × operating days (UPS) |
 | No guidance | ODFL, RMS | Mid-quarter updates; seasonality best / avg / worst; scenario-only forecast |
 | No non-GAAP published | ODFL, DHR (EBITDA), STE (EBITDA) | Model-defined bridges, clearly labelled, checked against XBRL / GAAP |
 | Definition changed over time | TDY, LOAR, RBA, MLM | Definition-flag row, in-force definition per period, current-definition memo series |
@@ -275,7 +275,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -289,6 +289,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Recast Q4 = FY recast − 9M recast; quarters that were never recast stay blank. [LECO]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
+- **An earnings 8-K without financial schedules:** take the statements and operating data from the 10-Q (face statements, MD&A tables) and only the segment and reconciliation data from the release, and note it in the record. [UPS]
+- **Combined disposal lines:** split business-disposal proceeds out of "disposal of businesses, property, plant and equipment" using the PP&E disposals in the company's free-cash-flow reconciliation. [UPS]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
 
 ### 5.2 Basis
@@ -298,6 +300,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **After a spin:** start the BS at the first post-spin balance sheet even if the P&L uses earlier recast comparatives, and fill earlier y/y with company-reported change % memos. Spin-cos put carve-out (Form 10) years in the main columns, with the former parent's segment history as a flagged memo under the parent's CIK. [XPO, ESAB]
 - **Half-year reporters:** carry quarterly revenue as "1st / 2nd quarter of the half" memo rows inside the half-year columns, with a Σ check. [RMS, BC]
 - **Two builds of one company:** diff their dated facts (split dates, deconsolidation quarter, label cut-overs) and resolve each from the filing. [LECO]
+- **Segment recast first shown in a Q4 release:** take that year's earlier quarters from the next year's prior-year columns, so the four quarters and the year are on one basis; comment each cell with the original figure. [UPS]
 
 ### 5.3 Operating build
 - **When a segment or product table changes revenue basis** (net sales → ex-freight → total revenue; pre-ASC 606), add a derived "outside the lines" row (consolidated − Σ lines) so the build check ties in every period. [MLM, VMC]
@@ -332,6 +335,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 
   [RBA, LOAR, VMC, TDY]
 - **Rebuild a company measure exactly as published,** even if it isn't tax-effected or excludes SBC. Add a tax-effected memo variant if useful. [KRMN, TDY, VMC, MLM]
+- **Items published only as adjusted-vs-GAAP differences by segment** are carried by segment (adjusted − GAAP), with the non-operating remainder and the derived tax effect on their own rows, and the company wording in comments. [UPS]
 - **Adjust only for items the company itself quantified,** and list the items it named but didn't adjust. Keep model items and company items distinguishable within a row via per-period comments, and use a labelled plug row only for definitional drift or overlapping company measures in published periods. [ODFL, BC, HEI, CHRW, UBER]
 - **Store each period's company adjusting-item wording and amounts as a comment** on the total-items cell, so the category rows can stay few without losing the audit trail. [WAB]
 - **Use the company's own share count** (adjusted / fully diluted in loss quarters, unrounded) in the adjusted EPS bridge. [WAB, XPO]
@@ -353,6 +357,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
 - **Apply the Δ only to genuinely uncommitted lines** (retail rather than order-book wholesale). Constant-FX guidance needs a separate FX-translation Δ for the reporting-currency figure. EPS guidance made stale by post-guidance buybacks becomes an information row. [BC, ONON, BWXT]
 - **No guidance:** leave targets as optional blank inputs; don't invent them. [HEI, BC]
+- **Point guidance (no range):** Mid = the guided point; label the High / Low end-points as model assumptions, not company guidance. [UPS]
+- **Step change inside the year to date** (a customer exit, a divestiture): seed the remaining quarters from the latest quarter's y/y rather than the year-to-date rate. [UPS]
 
 ### 5.6 Balance sheet, cash and capital
 - **Current year with actual quarters:**
@@ -408,6 +414,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 
 ### 5.8 QA
 - **Template residue is the most common defect.** At least 10 builds shipped MLM text in Bull-Base-Bear N26 / P40 comments or DCF rationale, and TFI kept Moog comments. `tools/residue_scan.py` is a hard gate. [CLH, WAB, SAIA, ODFL, WCN, LOAR, ONON, LECO, ESAB, STE, CTAS, UBER, TFI, CPRT]
+- **No column shift:** a build that keeps the template's own columns legitimately has `Model!CF2` as its switch; pass `--allow 'Model!CF2'` to the residue scan and say why in the kit README. [UPS]
 - **Check also:** foreign row numbers and switch-cell addresses in comments, the wrong currency symbol on non-USD models, and modelling-note dates that contradict the definition flags. [ONON, DHR]
 - **Check tolerances** are set by period when the issuer changes rounding units, and stated in the label. [STE, TMO, CSGP, ONON, DHR]
 - **Private-company implied CF:** related-party balances are financing; explain the sign of implied capex; leave first-year ratios n/a when there is no opening BS. [R&Y]

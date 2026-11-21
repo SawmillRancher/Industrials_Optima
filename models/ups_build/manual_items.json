@@ -1,0 +1,62 @@
+{
+ "guidance_fy26": {
+  "source": "https://www.sec.gov/Archives/edgar/data/1090727/000162828026067381/exhibit991-earningspressre.htm",
+  "date": "2026-10-27",
+  "text": "Q3-2026 release (8-K Ex. 99.1, 27-Oct-2026): Q4-2026 consolidated revenue ~$25.7bn and non-GAAP adjusted operating profit ~$3.3bn; FY2026 consolidated revenue ~$92.6bn, non-GAAP adjusted operating profit ~$8.75bn, non-GAAP adjusted diluted EPS ~$7.28, non-GAAP adjusted free cash flow ~$6.1bn; capital expenditures ~$3.0bn; dividends ~$5.4bn (subject to board approval); effective tax rate ~23%; $1.3bn pension contributions.",
+  "verified": "SEC EDGAR (the guidance is in the release filed as Ex. 99.1; no call-only guidance is used)",
+  "revenue": 92600.0,
+  "adj_op": 8750.0,
+  "adj_eps": 7.28,
+  "adj_fcf": 6100.0,
+  "q4_revenue": 25700.0,
+  "q4_adj_op": 3300.0,
+  "capex": 3000.0,
+  "dividends": 5400.0,
+  "etr": 0.23,
+  "pension_contributions": 1300.0,
+  "transformation_costs_range": [
+   1400.0,
+   1600.0
+  ],
+  "range_note": "UPS gives point ('approximately') guidance, not ranges. The High / Low scenario end-points are model assumptions: revenue +/- $300m and adjusted operating profit +/- $150m around the guided point."
+ },
+ "transformation": {
+  "source": "https://www.sec.gov/Archives/edgar/data/1090727/000162828026070246/ups-20260930.htm",
+  "text": "Q3-2026 10-Q / release: Network Reconfiguration and Efficiency Reimagined - non-GAAP adjusted operating expense expected to exclude $1.4-1.6bn of cost in FY2026 (of which $1.2bn the Driver Choice Program); $1.4bn incurred in the first nine months of 2026 and $1.9bn in total. ~$1.8bn of program benefits in 9M-2026, nearly $3bn expected for the year. The planned volume reduction from the largest customer (more than 50% vs 2024 levels) was completed in Q2-2026; Efficiency Reimagined continues."
+ },
+ "debt": {
+  "source": "https://www.sec.gov/Archives/edgar/data/1090727/000162828026070246/ups-20260930.htm",
+  "at_2026_09_30": "Total debt $26,078m at 30-Sep-2026 (principal $26,321m): fixed-rate senior notes 2.400% Nov-2026 to 6.050% 2065, floating-rate senior notes $2,205m (2049-2076, puttable), 7.620% debentures $276m 2030, euro notes EUR 2028 / 2032 ($568m each), finance leases $1,467m, facility notes & other $322m. No commercial paper outstanding. Issued Aug-2026: $1.0bn 4.850% notes due 2031 (of which $450m principal contributed to the pension plans) and $325m floating-rate notes due 2076.",
+  "maturities_principal": {
+   "2026_Q4": 500.0,
+   "2027": 1000.0,
+   "2028": 568.0,
+   "2029": 1149.0,
+   "2030": 1526.0
+  },
+  "maturities_note": "Senior notes by maturity year (principal): 2.400% $500m Nov-2026; 3.050% $1,000m 2027; EUR 1.000% $568m 2028; 3.400% $750m + 2.500% $400m 2029; 4.450% $750m + 4.650% $500m + 7.620% debentures $276m 2030 (10-K 2025 schedule: 2030 $1,526m). Finance-lease and facility-note amortization is not scheduled separately.",
+  "credit_facilities": "Two revolving credit agreements: $1.0bn (expires 23-Nov-2026) and $2.0bn; U.S. and European commercial paper programs; no balances outstanding at 30-Sep-2026."
+ },
+ "buybacks": {
+  "source": "https://www.sec.gov/Archives/edgar/data/1090727/000162828026070246/ups-20260930.htm",
+  "text": "$5.0bn share repurchase authorization approved January 2023; no shares repurchased in the nine months ended 30-Sep-2026 ($1.0bn repurchased in Q1-2025); $1.3bn available at 30-Sep-2026."
+ },
+ "deals": {
+  "andlauer": "Frigo-Trans and Biotech & Pharma Logistics acquired January 2025 and Andlauer Healthcare Group (AHG) November 2025 (2025 Form 10-K); AHG purchase accounting preliminary at 30-Sep-2026 (Q3-2026 10-Q). 2025 acquisitions, net of cash acquired: $1,968m (cash-flow statement).",
+  "coyote": "Coyote (truckload brokerage, reported within Forwarding in Supply Chain Solutions): divestiture completed 16-Sep-2024 (Q3-2024 10-Q); cash proceeds $1,002m = cash-flow line 'proceeds from disposal of businesses, property, plant and equipment' less the PP&E disposals in the free-cash-flow reconciliation.",
+  "ups_freight": "UPS Freight (LTL): agreement of 24-Jan-2021 to divest to TFI International Inc.; closed 30-Apr-2021 (Q2-2021 10-Q); proceeds $848m (same derivation). Supply Chain & Freight is named Supply Chain Solutions from the Q2-2021 release.",
+  "scs_impairment_q3_26": "Q3-2026: $182m goodwill and asset impairment for a reporting unit within Supply Chain Solutions (adjusted out)."
+ },
+ "corrections": {
+  "2020": "The 10-K wins over the Q4-2020 release (UPS Freight held-for-sale impairment $686m in the 10-K vs $556m in the release): FY2020 operating profit 7,684, net income 1,343, diluted EPS 1.54; Q4-2020 = 10-K fiscal year less nine months as reported.",
+  "Q4-18": "Release row label typo: the three-month 'Forwarding and Logistics' row (878) is Logistics; the twelve-month table shows Forwarding 6,580 / Logistics 3,234.",
+  "Q1-Q3 2024": "Segment revenue / operating profit for U.S. Domestic Package and Supply Chain Solutions on the recast basis of the 2025 releases (air cargo moved to U.S. Domestic 'Cargo and Other' in the Q4-2024 release); original figures in the cell comments."
+ },
+ "price": {
+  "px": 105.39,
+  "date": "2026-10-28",
+  "form": "Form 4 (filed 30-Oct-2026): sale of 8,318 class A shares at $105.39 on 28-Oct-2026 (transaction code S)",
+  "source": "https://www.sec.gov/Archives/edgar/data/1090727/000122520826008572/",
+  "note": "Latest share price in an SEC filing; market-data sites are not reachable from the build environment. Update to market."
+ }
+}
