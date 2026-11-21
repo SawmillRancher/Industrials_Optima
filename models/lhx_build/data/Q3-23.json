@@ -1,0 +1,777 @@
+{
+ "period": "Q3-23",
+ "period_end": "2023-09-29",
+ "weeks": 13,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/202058/000020205823000054/exhibit991q3cy23pressrelea.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/202058/000020205823000057/hrs-20230929.htm"
+ },
+ "is": {
+  "lines_raw": [
+   [
+    "Revenue from product sales and services",
+    4915
+   ],
+   [
+    "Cost of product sales and services",
+    -3608
+   ],
+   [
+    "Engineering, selling and administrative expenses",
+    -828.0
+   ],
+   [
+    "Sale of asset group and business divestiture-related gains, net",
+    0.0
+   ],
+   [
+    "Impairment of goodwill and other assets",
+    0.0
+   ],
+   [
+    "Non-operating income, net",
+    80.0
+   ],
+   [
+    "Interest expense, net",
+    -159.0
+   ],
+   [
+    "Income (loss) before income taxes",
+    400.0
+   ],
+   [
+    "Income taxes",
+    -18.0
+   ],
+   [
+    "Net income (loss)",
+    382.0
+   ],
+   [
+    "Noncontrolling interests, net of income taxes",
+    1.0
+   ],
+   [
+    "Net income (loss) attributable to L3Harris Technologies, Inc.",
+    383.0
+   ],
+   [
+    "Net income (loss) per common share attributable to L3Harris Technologies, Inc. common shareholders",
+    null
+   ],
+   [
+    "Basic",
+    2.02
+   ],
+   [
+    "Diluted",
+    2.02
+   ],
+   [
+    "Basic weighted-average common shares outstanding",
+    189.3
+   ],
+   [
+    "Diluted weighted-average common shares outstanding",
+    190.1
+   ]
+  ],
+  "sales": 4915,
+  "cogs": 3608,
+  "sga": 828.0,
+  "other_op_lines": [
+   [
+    "Sale of asset group and business divestiture-related gains, net",
+    0.0
+   ],
+   [
+    "Impairment of goodwill and other assets",
+    0.0
+   ]
+  ],
+  "nonop_lines": [
+   [
+    "Non-operating income, net",
+    80.0
+   ]
+  ],
+  "interest_net": 159.0,
+  "ebt": 400.0,
+  "tax": 18.0,
+  "net_income": 382.0,
+  "nci": -1.0,
+  "ni_parent": 383.0,
+  "eps_basic": 2.02,
+  "eps_dil": 2.02,
+  "shares_basic": 189.3,
+  "shares_diluted": 190.1,
+  "op_income": 479.0,
+  "dps": 1.14
+ },
+ "seg": {
+  "basis": "segment operating income (GAAP); non-GAAP segment operating income excludes segment impairment charges (none in the quarter)",
+  "segments": [
+   {
+    "name": "Space & Airborne Systems",
+    "sales": 1686,
+    "op_income": 210,
+    "adj_op_income": 210
+   },
+   {
+    "name": "Integrated Mission Systems",
+    "sales": 1568,
+    "op_income": 187,
+    "adj_op_income": 187
+   },
+   {
+    "name": "Communication Systems",
+    "sales": 1255,
+    "op_income": 282,
+    "adj_op_income": 282,
+    "organic_growth": 8
+   },
+   {
+    "name": "Aerojet Rocketdyne",
+    "sales": 455,
+    "op_income": 56
+   }
+  ],
+  "intersegment": -49,
+  "corp_lines": [
+   [
+    "Unallocated corporate department income (expense), net",
+    14
+   ],
+   [
+    "Amortization of acquisition-related intangibles",
+    -208
+   ],
+   [
+    "Additional cost of sales related to the fair value step-up in inventory sold",
+    0.0
+   ],
+   [
+    "Merger, acquisition, and divestiture-related expenses",
+    -56
+   ],
+   [
+    "Sale of asset group and business divestiture-related gains, net",
+    0.0
+   ],
+   [
+    "Impairment of goodwill and other assets",
+    0.0
+   ],
+   [
+    "LHX NeXt",
+    -33
+   ],
+   [
+    "Charges for severance and other termination costs",
+    0.0
+   ],
+   [
+    "Charges related to an additional pre-merger legal contingency",
+    0.0
+   ],
+   [
+    "FAS/CAS operating adjustment",
+    27
+   ]
+  ],
+  "seg_op_total_pub": 735,
+  "adj_seg_op_pub": 735,
+  "adj_seg_margin_pub": 15.0,
+  "kpis": {
+   "orders": 5012,
+   "book_to_bill": 1.02,
+   "backlog": 31810,
+   "organic_growth": 3,
+   "organic_rev_cur": 4363,
+   "organic_rev_py": 4238
+  },
+  "seg_note": "Four segments from 3Q23: Space & Airborne Systems, Integrated Mission Systems, Communication Systems and Aerojet Rocketdyne (AR; acquired 28-Jul-2023; August-September results: revenue $455M, operating income $56M). AR pension income is reported in the FAS/CAS pension adjustments, not in segment margin. Organic revenue excludes AR ($455M) and TDL ($97M). Orders $5,012M (prior year 5,052), funded book-to-bill 1.02 (not published by segment), total backlog 31,810 (prior year 21,351). CS organic +8% (1,158 vs 1,068). Year-to-date impairment of goodwill and other assets is shown as (78) in the statement of operations with (39) unallocated and 39 in segments (the Q2-23 letter showed 60 = 21 unallocated + 39 segment)."
+ },
+ "ngaap": {
+  "adj_eps_pub": 3.19,
+  "adj_eps_label": "Non-GAAP EPS",
+  "eps_bridge_start": 2.02,
+  "eps_bridge_start_label": "EPS",
+  "eps_bridge": [
+   [
+    "Per share amount of above adjustments",
+    1.17
+   ]
+  ],
+  "item_amounts": [
+   [
+    "Amortization of acquisition-related intangibles",
+    208,
+    "op",
+    "AMORT"
+   ],
+   [
+    "Additional cost of sales related to the fair value step-up in inventory sold",
+    0.0,
+    "op",
+    "STEPUP"
+   ],
+   [
+    "Merger, acquisition, and divestiture-related expenses",
+    56,
+    "op",
+    "ACQ"
+   ],
+   [
+    "Sale of asset group and business divestiture-related gains, net",
+    0.0,
+    "op",
+    "GAIN"
+   ],
+   [
+    "Impairment of goodwill and other assets",
+    0.0,
+    "op",
+    "IMPAIR"
+   ],
+   [
+    "LHX NeXt",
+    33,
+    "op",
+    "RESTR"
+   ],
+   [
+    "Charges for severance and other termination costs",
+    0.0,
+    "op",
+    "RESTR"
+   ],
+   [
+    "Charges related to an additional pre-merger legal contingency",
+    0.0,
+    "op",
+    "LEGAL"
+   ],
+   [
+    "Non-operating income adjustments",
+    0.0,
+    "nonop",
+    "OTHER"
+   ]
+  ],
+  "items_tax_effect": -72,
+  "adj_ni_pub": 607,
+  "nongaap_tax_rate_pub": 12.9,
+  "adj_fcf_pub": 635,
+  "fcf_bridge": [
+   [
+    "Net cash provided by operating activities",
+    543
+   ],
+   [
+    "Additions to property, plant and equipment",
+    -148
+   ],
+   [
+    "Proceeds from sale of property, plant and equipment, net",
+    0.0
+   ],
+   [
+    "Cash used for merger, acquisition, and divestiture-related expenses",
+    215
+   ],
+   [
+    "Cash used for LHX NeXt",
+    25
+   ],
+   [
+    "Adjusted free cash flow",
+    635
+   ]
+  ],
+  "guidance": "2023 guidance updated to incorporate Aerojet Rocketdyne for the five post-acquisition months; legacy LHX unchanged (26-Oct-2023; assumes no U.S. Government shutdown): Revenue $19.2B - $19.4B, up ~13% - 14% (prior / legacy $18.0B - $18.3B, up ~5.5% - 7.0%; AR $1.0B+); segment operating income $2.8B - $2.9B (prior / legacy $2.7B - $2.8B; AR ~$120M); segment operating margin ~14.8% (legacy ~15%); non-GAAP EPS $12.25 - $12.45 (prior $12.15 - $12.55; midpoint unchanged; AR contribution offset by acquisition interest); adjusted free cash flow $2.0B+ (unchanged). By segment (no change): SAS revenue $6.7B - $6.8B (bias higher), operating income $735M - $760M (bias higher); IMS $6.7B - $6.8B (bias lower), $765M - $800M (bias lower); CS $4.9B - $5.0B (bias higher), $1.20B - $1.23B; AR $1.0B+, ~$120M. Other: FAS/CAS pension adjustment, net ~$410M (prior ~$395M; service cost ~(30) vs ~(25), CAS pension cost ~(130) vs ~(120), FAS/CAS operating adjustment ~100 vs ~95, non-service FAS pension income ~310 vs ~300); net interest expense ~$545M (prior ~$420M; ~$125M for AR financing); non-GAAP effective tax rate 13.0% - 13.5%; average diluted shares ~191M; capex ~$330M (prior ~$275M). LHX NeXt: gross run-rate savings ~$500M exiting year 3 for ~$400M of cash costs over three years. Debt reduction goal ~$3.0B; leverage target below 3.0x (3.7x at quarter end).",
+  "notes": "2023 basis: 'Segment operating income' in the tables is GAAP segment operating income; 'Non-GAAP segment operating income' excludes segment-level impairment charges. Non-GAAP EPS = EPS (no discontinued operations in 2023) plus the after-tax adjustments listed: amortization of acquisition-related intangibles; additional cost of sales related to the fair value step-up in inventory sold (TDL, new 1Q23); L3Harris merger-related integration expenses (2022 only); acquisition-related transaction and integration expenses (TDL, AJRD); pre-acquisition and other divestiture-related expenses; business divestiture-related gains; impairment of other assets; and the enterprise transformation program, renamed LHX NeXt in 2Q23 (new 1Q23). Pension (FAS/CAS operating adjustment, non-service FAS pension income) is NOT excluded. Adjusted free cash flow = operating cash flow less capex (net of proceeds) plus cash used for merger / acquisition-related transaction and integration costs. The FCF bridge in the release is the quarter column; cf in this file is year to date. 3Q23 label changes: integration and transaction lines combined into 'Merger, acquisition, and divestiture-related expenses' (TDL and AR in 2023; L3Harris merger in 2022; includes the former pre-acquisition and other divestiture-related expenses), and 'Sale of asset group and business divestiture-related gains, net'. Adjustments: amortization 208, merger/acquisition/divestiture-related 56, LHX NeXt 33; income taxes (72); total after tax 225; non-GAAP net income 607. Adjusted FCF now also adds back cash used for LHX NeXt (25 in the quarter, 45 YTD; new this quarter) and cash used for merger, acquisition and divestiture-related expenses (215; 267 YTD); YTD adjusted FCF 1,307. YTD non-GAAP EPS $9.01. Net debt / adjusted EBITDA 3.7x. No adjusted EBIT published (GAAP EBIT 559, 11.4%)."
+ },
+ "cf": {
+  "ytd_months": 9,
+  "lines_raw": [
+   [
+    "Operating Activities",
+    null
+   ],
+   [
+    "Net income",
+    1072
+   ],
+   [
+    "Adjustments to reconcile net income to net cash provided by operating activities:",
+    null
+   ],
+   [
+    "Amortization of acquisition-related intangibles",
+    546.0
+   ],
+   [
+    "Depreciation and other amortization",
+    270.0
+   ],
+   [
+    "Share-based compensation",
+    67.0
+   ],
+   [
+    "Share-based matching contributions under defined contribution plans",
+    172.0
+   ],
+   [
+    "Pension and other postretirement benefit plan income",
+    -209.0
+   ],
+   [
+    "Impairment of goodwill and other assets",
+    78.0
+   ],
+   [
+    "Sale of asset group and business divestiture-related gains, net",
+    -26.0
+   ],
+   [
+    "Deferred income taxes",
+    -277.0
+   ],
+   [
+    "Receivables, net",
+    53.0
+   ],
+   [
+    "Contract assets",
+    -136.0
+   ],
+   [
+    "Inventories",
+    -195.0
+   ],
+   [
+    "Other current assets",
+    -87.0
+   ],
+   [
+    "Increase (decrease) in:",
+    null
+   ],
+   [
+    "Accounts payable",
+    -18.0
+   ],
+   [
+    "Contract liabilities",
+    202.0
+   ],
+   [
+    "Compensation and benefits",
+    -55.0
+   ],
+   [
+    "Other accrued items",
+    -27.0
+   ],
+   [
+    "Income taxes",
+    15.0
+   ],
+   [
+    "Other operating activities",
+    -138.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    1307
+   ],
+   [
+    "Investing Activities",
+    null
+   ],
+   [
+    "Net cash paid for acquired businesses",
+    -6688
+   ],
+   [
+    "Additions to property, plant and equipment",
+    -312.0
+   ],
+   [
+    "Proceeds from sale of property, plant and equipment, net",
+    0.0
+   ],
+   [
+    "Proceeds from sales of businesses, net",
+    71.0
+   ],
+   [
+    "Proceeds from sale of asset group, net",
+    0.0
+   ],
+   [
+    "Cash used for equity investments",
+    -11.0
+   ],
+   [
+    "Other investing activities",
+    2.0
+   ],
+   [
+    "Net cash used in investing activities",
+    -6938
+   ],
+   [
+    "Financing Activities",
+    null
+   ],
+   [
+    "Proceeds from borrowings, net of issuance cost",
+    7568
+   ],
+   [
+    "Repayments of borrowings",
+    -3159
+   ],
+   [
+    "Change in commercial paper, net (1)",
+    2031
+   ],
+   [
+    "Proceeds from exercises of employee stock options",
+    18.0
+   ],
+   [
+    "Repurchases of common stock",
+    -518.0
+   ],
+   [
+    "Cash dividends",
+    -652.0
+   ],
+   [
+    "Tax withholding payments associated with vested share-based awards",
+    -28.0
+   ],
+   [
+    "Other financing activities",
+    -6.0
+   ],
+   [
+    "Net cash provided by (used in) financing activities",
+    5254
+   ],
+   [
+    "Effect of exchange rate changes on cash and cash equivalents",
+    -4.0
+   ],
+   [
+    "Net decrease in cash and cash equivalents",
+    -381.0
+   ],
+   [
+    "Cash and cash equivalents, beginning of period",
+    880.0
+   ],
+   [
+    "Cash and cash equivalents, end of period",
+    499.0
+   ]
+  ],
+  "net_income": 1072,
+  "da": 816.0,
+  "amort_acq": 546.0,
+  "sbc": 67.0,
+  "deferred_tax": -277.0,
+  "pension_income": -209.0,
+  "cfo": 1307,
+  "capex": -312.0,
+  "ppe_proceeds": 0.0,
+  "acquisitions": -6688,
+  "divest": 71.0,
+  "cfi": -6938,
+  "debt_proceeds": 7568,
+  "debt_repay": -3159,
+  "cp_net": 2031,
+  "dividends": -652.0,
+  "buyback": -518.0,
+  "stock_iss": 18.0,
+  "cff": 5254,
+  "fx": -4.0,
+  "net_change": -381.0,
+  "cash_begin": 880.0,
+  "cash_end": 499.0
+ },
+ "bs": {
+  "lines_raw": [
+   [
+    "Assets",
+    null
+   ],
+   [
+    "Current assets",
+    null
+   ],
+   [
+    "Cash and cash equivalents",
+    499.0
+   ],
+   [
+    "Receivables, net of allowances for collection losses of $ 24 and $ 40 , respectively",
+    1381
+   ],
+   [
+    "Contract assets",
+    3477
+   ],
+   [
+    "Inventories",
+    1638
+   ],
+   [
+    "Income taxes receivable",
+    43.0
+   ],
+   [
+    "Other current assets",
+    463.0
+   ],
+   [
+    "Assets of business held for sale",
+    0.0
+   ],
+   [
+    "Total current assets",
+    7501
+   ],
+   [
+    "Non-current assets",
+    null
+   ],
+   [
+    "Property, plant and equipment, net",
+    2818
+   ],
+   [
+    "Operating lease right-of-use assets",
+    758.0
+   ],
+   [
+    "Goodwill",
+    20736
+   ],
+   [
+    "Other intangible assets, net",
+    9050
+   ],
+   [
+    "Deferred income taxes",
+    87.0
+   ],
+   [
+    "Recoverable environmental remediation costs",
+    382.0
+   ],
+   [
+    "Other non-current assets",
+    961.0
+   ],
+   [
+    "Total assets",
+    42293
+   ],
+   [
+    "Liabilities and equity",
+    null
+   ],
+   [
+    "Current liabilities",
+    null
+   ],
+   [
+    "Short-term debt",
+    2033
+   ],
+   [
+    "Accounts payable",
+    2112
+   ],
+   [
+    "Contract liabilities",
+    1940
+   ],
+   [
+    "Compensation and benefits",
+    461.0
+   ],
+   [
+    "Other accrued items",
+    1190
+   ],
+   [
+    "Income taxes payable",
+    383.0
+   ],
+   [
+    "Current portion of long-term debt, net",
+    363.0
+   ],
+   [
+    "Liabilities of business held for sale",
+    0.0
+   ],
+   [
+    "Total current liabilities",
+    8482
+   ],
+   [
+    "Non-current liabilities",
+    null
+   ],
+   [
+    "Defined benefit plans",
+    404.0
+   ],
+   [
+    "Operating lease liabilities",
+    736.0
+   ],
+   [
+    "Long-term debt, net",
+    11140
+   ],
+   [
+    "Deferred income taxes",
+    812.0
+   ],
+   [
+    "Reserves for environmental remediation costs",
+    524.0
+   ],
+   [
+    "Other long-term liabilities",
+    1479
+   ],
+   [
+    "Total liabilities",
+    23577
+   ],
+   [
+    "Equity",
+    null
+   ],
+   [
+    "Shareholders’ Equity:",
+    null
+   ],
+   [
+    "Preferred stock, without par value; 1,000,000 shares authorized; none issued",
+    0.0
+   ],
+   [
+    "Common stock, $ 1.00 par value; 500,000,000 shares authorized; issued and outstanding 189,439,991 and 190,611,458 shares at September 29, 2023 and December 30, 2022, respectively",
+    189.0
+   ],
+   [
+    "Other capital",
+    15470
+   ],
+   [
+    "Retained earnings",
+    3278
+   ],
+   [
+    "Accumulated other comprehensive loss",
+    -321.0
+   ],
+   [
+    "Total shareholders’ equity",
+    18616
+   ],
+   [
+    "Noncontrolling interests",
+    100.0
+   ],
+   [
+    "Total equity",
+    18716
+   ],
+   [
+    "Total liabilities and equity",
+    42293
+   ]
+  ],
+  "cash": 499.0,
+  "ar": 1381,
+  "contract_assets": 3477,
+  "inventories": 1638,
+  "held_for_sale_a": 0.0,
+  "tca": 7501,
+  "ppe": 2818,
+  "rou": 758.0,
+  "goodwill": 20736,
+  "intangibles": 9050,
+  "ta": 42293,
+  "st_debt": 2396,
+  "ap": 2112,
+  "contract_liab": 1940,
+  "comp_benefits": 461.0,
+  "held_for_sale_l": 0.0,
+  "tcl": 8482,
+  "ltd": 11140,
+  "pension_liab": 404.0,
+  "deferred_tax_l": 812.0,
+  "tl": 23577,
+  "equity_parent": 18616,
+  "nci": 100.0,
+  "te": 18716,
+  "tle": 42293,
+  "shares_out": 189.44,
+  "shares_out_cover": [
+   189.540249,
+   "2023-10-20"
+  ]
+ },
+ "py": {
+  "restated": true,
+  "notes": "Prior-year quarter recast for the strategic realignment of classified programs (~$300M a year) from IMS to SAS, effective 2023 (see Table 10 of the Q1-23 letter: 2022 quarters as reported vs recast). Prior-year segment operating (loss) income recast: SAS 92 (goodwill impairment 80), IMS (143) (impairment 367), CS (97) (impairment 355); non-GAAP 172 / 224 / 258; total non-GAAP 654 (originally 652).",
+  "is": {
+   "sales": 4246,
+   "ni_parent": -300.0,
+   "eps_dil": -1.56
+  },
+  "segments": [
+   {
+    "name": "Space & Airborne Systems",
+    "sales": 1593,
+    "op_income": 92
+   },
+   {
+    "name": "Integrated Mission Systems",
+    "sales": 1630,
+    "op_income": -143
+   },
+   {
+    "name": "Communication Systems",
+    "sales": 1068,
+    "op_income": -97
+   }
+  ],
+  "adj_eps_pub": 3.26,
+  "adj_seg_op_pub": 654
+ },
+ "extra": {
+  "buyback": "Q3-23: no share repurchases in the quarter; three quarters YTD 2.5 million shares for $518 million, average $204.40 including commissions; remaining authorization $3.9 billion at 29-Sep-2023; debt repayment is the top capital-deployment priority.",
+  "pension": {
+   "fas_cas_operating_adj": 27,
+   "non_service_fas_pension_income": 78,
+   "cas_cost": 37,
+   "fas_service_cost": 10
+  },
+  "notes": "Pension cost items positive = cost; 2023 includes AR. FAS/CAS pension adjustment, net 105 (prior year 133)."
+ },
+ "notes": "Segments, non-GAAP, KPIs and guidance from the quarterly investor letter (Ex. 99.2; tables are flattened text). is / bs / cf lines_raw are taken from the 10-Q statements (same figures as the letter's Tables 1, 3 and 4, with full line detail: the letter's balance sheet and cash flow are condensed). Cash flow is year to date. op_income 479 is computed (sales - cogs - sga = segment operating income 735 + unallocated (256)); no operating income line is printed. Investor letter (Ex. 99.2, carries the financial tables): https://www.sec.gov/Archives/edgar/data/202058/000020205823000054/l3harrisq32023investorle.htm . Self-checks (IS, segments, non-GAAP EPS bridge, cash flow, balance sheet): all pass."
+}

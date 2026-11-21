@@ -1,0 +1,724 @@
+{
+ "period": "Q1-20",
+ "period_end": "2020-04-03",
+ "weeks": 13,
+ "sources": {
+  "release": "https://www.sec.gov/Archives/edgar/data/202058/000020205820000034/exhibit991q1cy20earnin.htm",
+  "filing": "https://www.sec.gov/Archives/edgar/data/202058/000020205820000040/l3harrisq1cy2010-q.htm"
+ },
+ "is": {
+  "lines_raw": [
+   [
+    "Revenue from product sales and services",
+    4626.0
+   ],
+   [
+    "Cost of product sales and services",
+    -3298.0
+   ],
+   [
+    "Engineering, selling and administrative expenses",
+    -815.0
+   ],
+   [
+    "Impairment of goodwill and other assets",
+    -324.0
+   ],
+   [
+    "Non-operating income",
+    95.0
+   ],
+   [
+    "Interest income",
+    5.0
+   ],
+   [
+    "Interest expense",
+    -68.0
+   ],
+   [
+    "Income from continuing operations before income taxes",
+    221.0
+   ],
+   [
+    "Income taxes",
+    -26.0
+   ],
+   [
+    "Income from continuing operations",
+    195.0
+   ],
+   [
+    "Discontinued operations, net of income taxes",
+    -1.0
+   ],
+   [
+    "Net income",
+    194.0
+   ],
+   [
+    "Noncontrolling interests, net of income taxes",
+    23.0
+   ],
+   [
+    "Net income attributable to L3Harris Technologies, Inc.",
+    217.0
+   ],
+   [
+    "Basic: Continuing operations",
+    1.0
+   ],
+   [
+    "Basic: Discontinued operations",
+    0.0
+   ],
+   [
+    "Basic: [Total]",
+    1.0
+   ],
+   [
+    "Diluted: Continuing operations",
+    0.99
+   ],
+   [
+    "Diluted: Discontinued operations",
+    0.0
+   ],
+   [
+    "Diluted: [Total]",
+    0.99
+   ],
+   [
+    "Basic weighted average common shares outstanding",
+    217.3
+   ],
+   [
+    "Diluted weighted average common shares outstanding",
+    219.3
+   ]
+  ],
+  "sales": 4626.0,
+  "cogs": 3298.0,
+  "sga": 815.0,
+  "other_op_lines": [
+   [
+    "Impairment of goodwill and other assets",
+    324.0
+   ]
+  ],
+  "op_income": 189.0,
+  "nonop_lines": [
+   [
+    "Non-operating income",
+    95.0
+   ]
+  ],
+  "interest_exp": 68.0,
+  "interest_inc": 5.0,
+  "ebt": 221.0,
+  "tax": 26.0,
+  "cont_ops": 195.0,
+  "disc_ops": -1.0,
+  "net_income": 194.0,
+  "nci": -23.0,
+  "ni_parent": 217.0,
+  "shares_basic": 217.3,
+  "shares_diluted": 219.3,
+  "eps_basic": 1.0,
+  "eps_dil": 0.99,
+  "eps_dil_cont": 0.99,
+  "dps": 0.85
+ },
+ "seg": {
+  "basis": "segment operating income (loss) (includes pension income; 'Pension adjustment' removes the non-service FAS pension income, which is reported in non-operating income)",
+  "segments": [
+   {
+    "name": "Integrated Mission Systems",
+    "sales": 1370,
+    "op_income": 201,
+    "book_to_bill": 1.37
+   },
+   {
+    "name": "Space and Airborne Systems",
+    "sales": 1192,
+    "op_income": 221,
+    "book_to_bill": 1.16
+   },
+   {
+    "name": "Communication Systems",
+    "sales": 1094,
+    "op_income": 250,
+    "book_to_bill": 0.8
+   },
+   {
+    "name": "Aviation Systems",
+    "sales": 1011,
+    "op_income": -177,
+    "adj_op_income": 147,
+    "book_to_bill": 1.05
+   }
+  ],
+  "intersegment": -41,
+  "other_rev": 0.0,
+  "corp_lines": [
+   [
+    "Other non-reportable business segments",
+    0.0
+   ],
+   [
+    "Unallocated corporate expenses",
+    -33
+   ],
+   [
+    "L3Harris Merger-related transaction and integration expenses",
+    -31
+   ],
+   [
+    "Amortization of acquisition-related intangibles",
+    -145
+   ],
+   [
+    "Pension adjustment",
+    -97
+   ]
+  ],
+  "kpis": {
+   "book_to_bill": 1.11,
+   "backlog": 20400
+  },
+  "seg_note": "Four reportable segments in force since the 29-Jun-2019 merger: Integrated Mission Systems, Space and Airborne Systems, Communication Systems, Aviation Systems. As originally reported in this period's release. 'Other non-reportable business segments' (Harris Night Vision, sold Sep-2019) is nil in 2020 (py revenue 35, op income 6). Aviation Systems non-GAAP operating income 147 (adds back 324 of the 330 impairment / COVID-19 charges; Table 8). Funded book-to-bill 'since the merger': IMS 1.09, SAS 0.98, CS 1.03, AS 1.09. Backlog $20.4 billion from the 10-Q (rounded as printed, converted to $m); no organic growth published this quarter."
+ },
+ "ngaap": {
+  "adj_ebit_pub": 808,
+  "adj_ebit_margin_pub": 17.5,
+  "adj_ebit_bridge": [
+   [
+    "Net income",
+    194
+   ],
+   [
+    "Discontinued operations, net of income taxes",
+    1
+   ],
+   [
+    "Net interest expense",
+    63
+   ],
+   [
+    "Income taxes",
+    26
+   ],
+   [
+    "Pre-merger L3 integration costs",
+    0.0
+   ],
+   [
+    "L3Harris Merger integration costs",
+    31
+   ],
+   [
+    "Amortization of acquisition-related intangibles",
+    145
+   ],
+   [
+    "Impairment of goodwill and other assets and other COVID-19-related charges",
+    330
+   ],
+   [
+    "Additional cost of sales related to the fair value step-up in inventory sold",
+    15
+   ],
+   [
+    "Divestiture expenses",
+    3
+   ],
+   [
+    "Total adjustments",
+    614
+   ],
+   [
+    "Adjusted EBIT (A)",
+    808
+   ]
+  ],
+  "adj_eps_pub": 2.8,
+  "adj_eps_label": "Non-GAAP income from continuing operations per diluted common share",
+  "eps_bridge_start": 0.99,
+  "eps_bridge_start_label": "Income from continuing operations attributable to L3Harris Technologies, Inc. common shareholders",
+  "eps_bridge": [
+   [
+    "Pre-merger L3 integration costs",
+    0.0
+   ],
+   [
+    "L3Harris Merger integration costs",
+    0.14
+   ],
+   [
+    "Amortization of acquisition-related intangibles",
+    0.66
+   ],
+   [
+    "Impairment of goodwill and other assets and other COVID-19-related charges",
+    1.5
+   ],
+   [
+    "Noncontrolling portion of goodwill impairment charge",
+    -0.12
+   ],
+   [
+    "Additional cost of sales related to the fair value step-up in inventory sold",
+    0.07
+   ],
+   [
+    "Divestiture expenses",
+    0.02
+   ],
+   [
+    "Income taxes on above adjustments",
+    -0.46
+   ]
+  ],
+  "item_amounts": [
+   [
+    "L3Harris Merger integration costs",
+    31,
+    "op",
+    "ACQ"
+   ],
+   [
+    "Amortization of acquisition-related intangibles",
+    145,
+    "op",
+    "AMORT"
+   ],
+   [
+    "Impairment of goodwill and other assets and other COVID-19-related charges",
+    330,
+    "op",
+    "IMPAIR"
+   ],
+   [
+    "Additional cost of sales related to the fair value step-up in inventory sold",
+    15,
+    "op",
+    "STEPUP"
+   ],
+   [
+    "Divestiture expenses",
+    3,
+    "op",
+    "ACQ"
+   ]
+  ],
+  "fcf_pub": 485,
+  "adj_fcf_pub": 533,
+  "fcf_bridge": [
+   [
+    "Net cash provided by operating activities",
+    533
+   ],
+   [
+    "Net additions of property, plant and equipment",
+    -48
+   ],
+   [
+    "Free cash flow",
+    485
+   ],
+   [
+    "Cash used for L3Harris Merger transaction costs",
+    0.0
+   ],
+   [
+    "Cash used for L3Harris Merger integration costs",
+    48
+   ],
+   [
+    "Adjusted free cash flow",
+    533
+   ]
+  ],
+  "guidance": "2020 guidance updated 5-May-2020 for COVID-19 risks: Revenue $18.3 billion - $18.6 billion, up organically 3% - 5% on an adjusted pro forma basis (reduced from previous range of up 5% - 7%); primarily reflects downturn in commercial aerospace business, as well as some weakness in international and public safety demand and risks from supply chain disruptions. GAAP net income margin of 8.2% - 8.5% and adjusted EBIT margin of 17.4% - 17.6% (expanded at upper end of previous range of 17.0% - 17.5%). GAAP EPS of $6.95 - $7.35 and non-GAAP EPS of $11.15 - $11.55 (reduced from previous guidance of $8.35 - $8.75 GAAP and $11.35 - $11.75 non-GAAP). Operating cash flow and adjusted free cash flow unchanged at $2.8 - $2.9 billion and $2.6 - $2.7 billion. ~$1.7 billion in share repurchases, inclusive of proceeds from divestitures announced year-to-date. Guidance tables: revenue $18,300 to $18,600; net income $1,503 to $1,578; net interest expense ~255; income taxes 269 to 284; L3Harris Merger integration costs ~158; amortization of acquisition-related intangibles ~650; impairment / COVID-19 charges ~330; inventory step-up ~15; divestiture expenses ~3; adjusted EBIT $3,184 to $3,274 (17.4% to 17.6%). EPS bridge: GAAP $6.95 to $7.35; integration ~0.72; amortization ~3.00; impairment/COVID ~1.52; NCI portion ~(0.13); step-up ~0.07; divestiture ~0.02; total pre-tax ~5.20; taxes ~(1.00); non-GAAP $11.15 to $11.55. Cash flow: operating cash flow $2,800 to $2,900; net additions of PP&E ~(400); free cash flow $2,400 to $2,500; cash used for integration ~200; adjusted FCF $2,600 to $2,700.",
+  "notes": "Non-GAAP EPS = income from continuing operations per diluted share attributable to common shareholders, excluding L3Harris Merger integration costs, amortization of acquisition-related intangibles (ALL acquired intangibles, incl. Exelis), fair-value inventory step-up, divestiture expenses/losses, restructuring and other items, impairment of goodwill and other assets / COVID-19 charges, net of the noncontrolling-interest portion and of income taxes. Adjusted EBIT = net income + discontinued operations + net interest expense + income taxes + the same pre-tax items (i.e. it INCLUDES non-operating income / non-service FAS pension income). Adjusted free cash flow = operating cash flow - net additions of PP&E + cash used for L3Harris Merger integration (and transaction) costs. Of the 330 impairment / COVID-19 item, 324 is the 'Impairment of goodwill and other assets' line (Aviation Systems: commercial aviation goodwill and other assets) and 6 is other COVID-19 charges. Dollar tax effect and dollar NCI portion of the adjustments are not published (per share only: taxes (0.46), NCI (0.12)). Prior-year comparatives in the bridges are pro forma (adjusted EBIT 693, EPS 2.32) and are not recorded."
+ },
+ "cf": {
+  "ytd_months": 3,
+  "lines_raw": [
+   [
+    "Net income",
+    194.0
+   ],
+   [
+    "Depreciation and amortization",
+    230.0
+   ],
+   [
+    "Postretirement benefit plan income and share-based compensation",
+    7.0
+   ],
+   [
+    "Qualified pension plan contributions",
+    -2.0
+   ],
+   [
+    "Impairment of goodwill and other assets",
+    324.0
+   ],
+   [
+    "Accounts receivable",
+    -164.0
+   ],
+   [
+    "Contract assets",
+    -110.0
+   ],
+   [
+    "Inventories",
+    40.0
+   ],
+   [
+    "Accounts payable",
+    253.0
+   ],
+   [
+    "Contract liabilities",
+    -47.0
+   ],
+   [
+    "Other",
+    -192.0
+   ],
+   [
+    "Net cash provided by operating activities",
+    533.0
+   ],
+   [
+    "Net additions of property, plant and equipment",
+    -48.0
+   ],
+   [
+    "Other investing activities",
+    -10.0
+   ],
+   [
+    "Net cash used in investing activities",
+    -58.0
+   ],
+   [
+    "Net proceeds from borrowings",
+    245.0
+   ],
+   [
+    "Repayments of borrowings",
+    -1.0
+   ],
+   [
+    "Proceeds from exercises of employee stock options",
+    33.0
+   ],
+   [
+    "Repurchases of common stock",
+    -700.0
+   ],
+   [
+    "Cash dividends",
+    -183.0
+   ],
+   [
+    "Distributions to noncontrolling interests",
+    -5.0
+   ],
+   [
+    "Tax withholding payments associated with vested share-based awards",
+    -1.0
+   ],
+   [
+    "Net cash used in financing activities",
+    -612.0
+   ],
+   [
+    "Effect of exchange rate changes on cash and cash equivalents",
+    -24.0
+   ],
+   [
+    "Net decrease in cash and cash equivalents",
+    -161.0
+   ],
+   [
+    "Cash and cash equivalents, beginning of year",
+    824.0
+   ],
+   [
+    "Cash and cash equivalents, end of quarter",
+    663.0
+   ]
+  ],
+  "net_income": 194.0,
+  "da": 230.0,
+  "pension_contrib": -2.0,
+  "cfo": 533.0,
+  "capex": -48.0,
+  "cfi": -58.0,
+  "debt_proceeds": 245.0,
+  "debt_repay": -1.0,
+  "dividends": -183.0,
+  "buyback": -700.0,
+  "stock_iss": 33.0,
+  "cff": -612.0,
+  "fx": -24.0,
+  "net_change": -161.0,
+  "cash_begin": 824.0,
+  "cash_end": 663.0
+ },
+ "bs": {
+  "lines_raw": [
+   [
+    "Cash and cash equivalents",
+    663.0
+   ],
+   [
+    "Receivables",
+    1278.0
+   ],
+   [
+    "Contract assets",
+    2467.0
+   ],
+   [
+    "Inventories",
+    990.0
+   ],
+   [
+    "Inventory prepayments",
+    50.0
+   ],
+   [
+    "Assets of disposal group held for sale",
+    1208.0
+   ],
+   [
+    "Property, plant and equipment",
+    2032.0
+   ],
+   [
+    "Operating lease right-of-use assets",
+    784.0
+   ],
+   [
+    "Goodwill",
+    19265.0
+   ],
+   [
+    "Other intangible assets",
+    8171.0
+   ],
+   [
+    "Other assets",
+    1197.0
+   ],
+   [
+    "[Total assets]",
+    38105.0
+   ],
+   [
+    "Short-term debt",
+    2.0
+   ],
+   [
+    "Accounts payable",
+    1422.0
+   ],
+   [
+    "Contract liabilities",
+    1138.0
+   ],
+   [
+    "Compensation and benefits",
+    329.0
+   ],
+   [
+    "Current portion of long-term debt, net",
+    896.0
+   ],
+   [
+    "Liabilities of disposal group held for sale",
+    204.0
+   ],
+   [
+    "Defined benefit plans",
+    1744.0
+   ],
+   [
+    "Operating lease liabilities",
+    729.0
+   ],
+   [
+    "Long-term debt, net",
+    6294.0
+   ],
+   [
+    "Other liabilities",
+    3320.0
+   ],
+   [
+    "Equity",
+    22027.0
+   ],
+   [
+    "[Total liabilities and equity]",
+    38105.0
+   ],
+   [
+    "10-Q: Income taxes receivable",
+    205.0
+   ],
+   [
+    "10-Q: Other current assets",
+    400.0
+   ],
+   [
+    "10-Q: Total current assets",
+    7211.0
+   ],
+   [
+    "10-Q: Deferred income taxes (asset)",
+    112.0
+   ],
+   [
+    "10-Q: Other non-current assets",
+    530.0
+   ],
+   [
+    "10-Q: Total non-current assets",
+    30894.0
+   ],
+   [
+    "10-Q: Other accrued items",
+    1095.0
+   ],
+   [
+    "10-Q: Income taxes payable",
+    37.0
+   ],
+   [
+    "10-Q: Total current liabilities",
+    5123.0
+   ],
+   [
+    "10-Q: Deferred income taxes (liability)",
+    1402.0
+   ],
+   [
+    "10-Q: Other long-term liabilities",
+    786.0
+   ],
+   [
+    "10-Q: Total non-current liabilities",
+    10955.0
+   ],
+   [
+    "10-Q: Common stock, $1.00 par value",
+    216.0
+   ],
+   [
+    "10-Q: Other capital",
+    20182.0
+   ],
+   [
+    "10-Q: Retained earnings",
+    2151.0
+   ],
+   [
+    "10-Q: Accumulated other comprehensive loss",
+    -651.0
+   ],
+   [
+    "10-Q: Total shareholders’ equity",
+    21898.0
+   ],
+   [
+    "10-Q: Noncontrolling interests",
+    129.0
+   ]
+  ],
+  "cash": 663.0,
+  "ar": 1278.0,
+  "contract_assets": 2467.0,
+  "inventories": 990.0,
+  "held_for_sale_a": 1208.0,
+  "tca": 7211.0,
+  "ppe": 2032.0,
+  "rou": 784.0,
+  "goodwill": 19265.0,
+  "intangibles": 8171.0,
+  "ta": 38105.0,
+  "st_debt": 898.0,
+  "ap": 1422.0,
+  "contract_liab": 1138.0,
+  "comp_benefits": 329.0,
+  "held_for_sale_l": 204.0,
+  "tcl": 5123.0,
+  "ltd": 6294.0,
+  "pension_liab": 1744.0,
+  "deferred_tax_l": 1402.0,
+  "tl": 16078.0,
+  "equity_parent": 21898.0,
+  "nci": 129.0,
+  "te": 22027.0,
+  "tle": 38105.0,
+  "shares_out": 215.7595,
+  "shares_out_cover": [
+   215.8703,
+   "2020-05-01"
+  ]
+ },
+ "py": {
+  "restated": false,
+  "notes": "Prior-year GAAP column = Harris Corporation quarter ended 29-Mar-2019 (fiscal Q3 FY2019, pre-merger), as printed. py.is.op_income computed from the printed lines. Prior-year non-GAAP EPS (2.32) and adjusted EBIT (693) are pro forma and are omitted.",
+  "is": {
+   "sales": 1728,
+   "op_income": 279,
+   "ni_parent": 243,
+   "eps_dil": 2.02,
+   "eps_dil_cont": 2.02
+  },
+  "segments": [
+   {
+    "name": "Integrated Mission Systems",
+    "sales": 14,
+    "op_income": 3
+   },
+   {
+    "name": "Space and Airborne Systems",
+    "sales": 956,
+    "op_income": 174
+   },
+   {
+    "name": "Communication Systems",
+    "sales": 580,
+    "op_income": 167
+   },
+   {
+    "name": "Aviation Systems",
+    "sales": 144,
+    "op_income": 17
+   },
+   {
+    "name": "Other non-reportable business segments",
+    "sales": 35,
+    "op_income": 6
+   }
+  ]
+ },
+ "extra": {
+  "pension": {
+   "non_service_fas_pension_income": 97,
+   "fas_service_cost": 16,
+   "notes": "10-Q: 'Pension adjustment' 97 = non-service component of net periodic pension and postretirement benefit income, in non-operating income. Pension service cost 16 (other benefits: nil); net periodic benefit income: pension (77), other benefits (3)."
+  },
+  "buyback": "Q1-20: 3,277,559 shares repurchased for $700 million, average price $213.57 incl. commissions ($213.55 excl.); remaining authorization ~$1.8 billion ($1,800,204,462) under the $4 billion 2019 Repurchase Program (10-Q).",
+  "notes": "Dividends $.85 per share ($183m). Completed sale of airport security and automation business 4-May-2020 for $1 billion (after quarter-end; held for sale at 3-Apr-2020 with EOTech and Applied Kilovolts)."
+ },
+ "notes": "is.op_income is COMPUTED (revenue - cost of sales - ESA - other operating lines): neither the release nor the 10-Q prints an operating income line (the statement goes straight to income before income taxes); it equals the sum of segment operating income and the reconciling lines. Unlabeled totals in lines_raw carry bracketed labels; EPS lines are prefixed 'Basic:' / 'Diluted:'. bs.lines_raw = the release's condensed balance sheet (unclassified, no subtotals; '[Total ...]' labels are unlabeled totals) followed by the extra lines of the 10-Q classified balance sheet prefixed '10-Q: '. tca / tcl / deferred_tax_l / equity_parent / nci / shares_out are from the 10-Q; bs.tl is COMPUTED = total current liabilities + total non-current liabilities (the 10-Q prints no total-liabilities line). The release compares with 'pro forma' prior-year figures (Article 11 combined Harris + L3, 8-K of 4-May-2020) and 'adjusted pro forma'; those are NOT used in any main key or in py (py = prior-year GAAP column as printed). CF is the quarter = year to date (3 months). seg.kpis.backlog converted from '$20.4 billion'. All schema self-checks pass."
+}
