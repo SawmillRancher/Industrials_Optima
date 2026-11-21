@@ -1,15 +1,15 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, NSC). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
 - **Fill-in docs:** [`templates/NEW_MODEL_README_TEMPLATE.md`](templates/NEW_MODEL_README_TEMPLATE.md) and [`templates/EXTRACTION_SCHEMA_TEMPLATE.md`](templates/EXTRACTION_SCHEMA_TEMPLATE.md).
 - **QA tools:** [`tools/inspect_model.py`](tools/inspect_model.py) (formula errors and non-zero check rows), [`tools/cyc.py`](tools/cyc.py) (circular references) and [`tools/residue_scan.py`](tools/residue_scan.py) (leftover template-company text in values and comments).
 - **Per-model lessons:** [`MODEL_LESSONS.md`](MODEL_LESSONS.md) records each model's specific nuances (basis, bridges, data quirks, deals, calibration, valuation) and reusable rules. Read the entries for the most similar companies before you start.
-- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`) and WWD (`wwd_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
+- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`), WWD (`wwd_build`) and NSC (`nsc_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
 
 ---
 
@@ -29,7 +29,7 @@ Each row is a change that is now part of the standard. The checklist in section 
 | TDY → MLM template | MLM and every build since | Unit-economics build (shipments × ASP, price / volume bridge, fall-through). Pending / closed acquisitions modelled as their own block with a PPA and synergies. Legacy segments kept as memo rows. Leverage-targeted buybacks. DuPont ROIC and RONTA. Modelling Notes column, CAGR columns and the scenario table on the right of the forecast. |
 | MLM build-kit process | WAB, ODFL, SAIA, LOAR, ONON, STE, DHR | Standard kit: `fw.py` (column map, archetype-row style cloning, row registry), `spec.py` / `spec2.py` (row specs), `build.py` (inputs, compute, scenario table, definition flags), `other_sheets.py` (rewire BBB / DCF / Charts, re-inject chart XML), `extract.py` / `normalize.py` / `check_data.py`, `inspect_model.py`, `cyc.py`. Columns re-based to the company's history (template column − N). `--snap` fills Bull/Bear snapshots; `--recalc` stores values. |
 | MLM template update (6-Oct-26) | ONON, DHR, CTAS, STE, LECO, ESAB | DCF: live valuation date, 5-year fade, implied ROIC / RONIC, target-IRR max entry price, WACC × g grid, reverse DCF, Mauboussin EV/NOPAT. Bull-Base-Bear: buyback rows (40–42). `DCF_old` dropped. View: frozen at C8, quarterly columns grouped and collapsed. Cached values stored so the file reads correctly in any viewer. |
-| Special cases | RMS, BC, ONON, CHRW, UBER, CTAS, DHR, STE | Non-SEC / IFRS / foreign-currency reporters (half-year columns, constant-currency + FX build). Deal pro forma tabs (CHRW RXO PF: S&U, PPA, synergies, accretion). Pending deals behind a toggle (CTAS UniFirst, UBER Delivery Hero). Hybrid recast basis around spin-offs (DHR). Non-calendar fiscal years (STE March, CTAS May). |
+| Special cases | RMS, BC, ONON, CHRW, UBER, CTAS, DHR, STE, NSC | Non-SEC / IFRS / foreign-currency reporters (half-year columns, constant-currency + FX build). Deal pro forma tabs (CHRW RXO PF: S&U, PPA, synergies, accretion). Pending deals behind a toggle (CTAS UniFirst, UBER Delivery Hero). Hybrid recast basis around spin-offs (DHR). Non-calendar fiscal years (STE March, CTAS May). Target of a pending takeover (NSC: standalone model + merger-consideration block). |
 
 ---
 
@@ -246,8 +246,8 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | Situation | Precedent | Adaptation |
 |---|---|---|
 | Single reportable segment | RBA, KRMN, LOAR | Revenue-stream or end-market build; margins at group level; anchor on the company's guided KPI |
-| Unit economics disclosed | MLM, VMC, ODFL, SAIA, XPO, CHRW | Volume × price build, price / volume bridge, fall-through; fuel surcharge from DOE diesel × surcharge table (SAIA) |
-| No guidance | ODFL, RMS | Mid-quarter updates; seasonality best / avg / worst; scenario-only forecast |
+| Unit economics disclosed | MLM, VMC, ODFL, SAIA, XPO, CHRW, NSC | Volume × price build, price / volume bridge, fall-through; fuel surcharge from DOE diesel × surcharge table (SAIA); railroads: units × published revenue per unit by commodity group with an operating-ratio cost build (NSC) |
+| No guidance | ODFL, RMS, NSC | Mid-quarter updates; seasonality best / avg / worst (live min / mean / max formulas, distorted years excluded); scenario-only forecast |
 | No non-GAAP published | ODFL, DHR (EBITDA), STE (EBITDA) | Model-defined bridges, clearly labelled, checked against XBRL / GAAP |
 | Definition changed over time | TDY, LOAR, RBA, MLM | Definition-flag row, in-force definition per period, current-definition memo series |
 | Spin-offs / disc ops | DHR, STE, BWXT, XPO | Hybrid recast or post-spin history; recast cell comments; rebuild originally reported adjusted EPS in memo |
@@ -256,6 +256,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | Recent IPO | LOAR, ONON, KRMN | Annual columns from the prospectus; P&L-only years flagged; BS / CF start when available |
 | Non-December fiscal year | STE (Mar), CTAS (May), HEI (Oct) | Column labels by fiscal year; DCF discount dates moved to FY ends |
 | Pending / new acquisition | DHR, MLM, CTAS, ESAB, CSGP, UBER, CHRW | Separate block, PPA, financing, synergies, closing-date toggle; deal tab for large deals |
+| Company is the target of a pending takeover | NSC | Standalone operating model in every scenario; buybacks suspended while the agreement binds; merger block with consideration at an input acquirer price, premium, spread / annualised return to an assumed close, termination fee per share |
 | Dual-class / splits | ONON, HEI, CTAS, ODFL | Class-equivalent shares; split-adjust by source filing date |
 | Private company | R&Y | Compilation statements; implied CF from BS changes; LBO tab |
 
@@ -275,7 +276,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -289,6 +290,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Recast Q4 = FY recast − 9M recast; quarters that were never recast stay blank. [LECO]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
+- **Release HTML quirks:** closing brackets and percent signs can sit in their own cells and a nil percent change prints as "—" (which parses as 0). Merge the closers into the previous cell and map table rows to the header's year / percent-column pattern rather than counting numbers; header-less follow-on tables ("Units", "Revenue per Unit") inherit the preceding table's period structure. Old releases can put every statement in one HTML table (split at the statement titles), and iXBRL text can break words ("Incom e"). [NSC]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
 
 ### 5.2 Basis
@@ -303,6 +305,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **When a segment or product table changes revenue basis** (net sales → ex-freight → total revenue; pre-ASC 606), add a derived "outside the lines" row (consolidated − Σ lines) so the build check ties in every period. [MLM, VMC]
 - **Tie operating statistics to reported revenue with an explicit ratio row** (revenue ÷ (volume × yield)). Derive orders from a backlog roll-forward when they aren't published; backlog builds need a derived "adjustments / de-bookings" line. [XPO, WAB, BWXT]
 - **Pass-through or intermediary businesses:** drive the net-revenue measure (AGP, statistics-basis revenue) and derive gross revenue through a margin or adjustment row. [CHRW, ODFL]
+- **Railroads:** units × published revenue per unit by commodity group, with the market-group detail as memo rows on each published basis; the $1 rounding of revenue per unit sets the build-check tolerance. [NSC]
 - **Commodity pass-through "price"** (metals, fuel surcharge) is a separate lever from real pricing. Fuel surcharge = DOE diesel × the published surcharge table (from its effective date) × trailing capture ratio. [LECO, SAIA]
 - **Two disclosed revenue cuts** (channel × region): drive one and scale the other pro rata, with a Σ check. [BC]
 - **Acquisition timing:**
@@ -337,6 +340,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Use the company's own share count** (adjusted / fully diluted in loss quarters, unrounded) in the adjusted EPS bridge. [WAB, XPO]
 - **Don't force FY = Σ quarters** for adjusted measures the company computes annually (annual tax effect, FY cc rates), or for a measure whose definition changed mid-year. Exempt them from the quarter-sum check with a comment. [ONON, VMC]
 - **Known, explained source differences** (a restated starting NI, a release issued before a 10-Q impairment) can stay as documented check exceptions rather than plugs. [WCN]
+- **When the company's stated "effect" of an item differs from its income-statement line** (NSC's Eastern Ohio incident), carry the difference as an explicit "effects outside the line" bridge row derived from the published adjusted figure. If a reconciliation gives adjusted operating expenses only, derive adjusted OI as revenues − adjusted expenses and note it. [NSC]
 - **Long-term target base years** stay "as first published", with a note that definitions have since changed. [XPO]
 - **Two-class / participating preferred:** the adjusted-NI bridge needs an "allocation to preferred" line, and the preferred is deducted in the EV bridge. [RBA]
 
@@ -353,6 +357,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Use mid-quarter operating-data 8-Ks** (Item 7.01 / 8.01) as current-quarter volume inputs. "Planning assumptions" without a revenue or profit guide are information rows, not solve targets. [XPO, SAIA, ODFL]
 - **Apply the Δ only to genuinely uncommitted lines** (retail rather than order-book wholesale). Constant-FX guidance needs a separate FX-translation Δ for the reporting-currency figure. EPS guidance made stale by post-guidance buybacks becomes an information row. [BC, ONON, BWXT]
 - **No guidance:** leave targets as optional blank inputs; don't invent them. [HEI, BC]
+- **No guidance, current-quarter margin:** anchor on the latest quarter plus the historical sequential change computed as live min / mean / max formulas on the model's own history, excluding years whose base was distorted by one-offs. Show company long-range-plan figures from proxy filings as information rows labelled "not guidance". [NSC]
 
 ### 5.6 Balance sheet, cash and capital
 - **Current year with actual quarters:**
@@ -387,6 +392,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Working-capital ratios** come from fiscal-year-end balances, not annualised quarters. [STE, CTAS]
 - **Use the company's own capex / FCF definition** when it is guided, so guided and modelled figures are comparable. [RBA, HII]
 - **Reconcile BS cash vs CF ending cash with a memo line** when definitions differ (overdraft, restricted cash, disc-ops cash). [ONON, CSGP, DHR]
+- **No SBC line in the cash-flow statement** (it sits in "other – net"): forecast other-net net of it and add no separate SBC back in the equity roll-forward, or the balance sheet drifts by the SBC each year. [NSC]
+- **Target of a pending takeover:** keep the operating model standalone, set buybacks to nil while the merger agreement binds, and pace the resumption with an annual cap so the leverage plug does not produce a one-year catch-up. [NSC]
 
 ### 5.7 Valuation
 - **Standard NOPAT basis** (the builds diverged here; this is now the rule):

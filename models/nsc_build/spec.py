@@ -188,7 +188,7 @@ def build_spec(V0):
     S('or_tgt', '  Q4/26E adjusted operating-ratio anchor: Q3/26 adjusted OR + 2016–25 Q3→Q4 sequential change (scenario: best / average / worst)', 'pct', 'pct',
       qe=lambda: f'={Q3c("or_adj")}+{CH(SC["seq_or"])}',
       note='No company guidance is filed on EDGAR (outlook is given on earnings calls only). Anchor = Q3/26 adjusted operating ratio (65.4%) + the Q3→Q4 change in adjusted OR, '
-           'min / average / max over 2016–25 (−4.7 / −0.4 / +2.6 pts; 2024 excluded: Q3/24 included $380m of line-sale gains inside the adjusted figures\' base).')
+           'min / average / max over 2016–25 excl. 2024 (−2.6 pts in 2018 / +0.4 / +2.0 pts in 2025; 2024 excluded because the Q3/24 base carried $380m of line-sale gains inside "materials and other").')
     S('or_cal', '  Calibration: proportional shift on the variable cost ratios (Q4/26E)', 'driver', 'pct',
       qe=lambda: f'=({V("or_tgt")}-{V("c_fuel")}-{V("c_dep")})/(' + '+'.join(V(f'c_{k}_pre') for k in VAR) + ')-1',
       note='Solves the uniform % change in compensation & benefits, purchased services & rents and materials & other (vs prior-year quarter + 9M drift) so the Q4/26E adjusted operating ratio equals the anchor.')

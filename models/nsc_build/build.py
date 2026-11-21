@@ -39,7 +39,7 @@ V0 = {
         ('q4_rpu_d', '  Q4/26E revenue per unit y/y: Δ vs the Q3-26 y/y trend (pts, all groups)', (0.010, 0.0, -0.010), 'pct',
          'Base = Q3-26 y/y revenue-per-unit growth by group (merchandise +8%, intermodal +18%, coal +9%, of which fuel surcharge ≈ 8 pts of total revenue growth); the 10-Q expects Q4 fuel surcharge revenue to increase y/y.'),
         ('seq_or', '  Q4/26E adjusted operating ratio: Q3→Q4 sequential change (pts; 2016–25 best / average / worst, excl. 2024)', (seq_or_formula('MIN'), seq_or_formula('AVERAGE'), seq_or_formula('MAX')), 'pct',
-         'Live formulas on the Q4 columns of the "Adjusted OR change vs prior quarter" row (2016–23, 2025): min −4.7 pts (2020), average −0.4 pts, max +2.6 pts (2025). 2024 excluded (Q3-24 line-sale gains).'),
+         'Live formulas on the Q4 columns of the "Adjusted OR change vs prior quarter" row (2016–23, 2025): min −2.6 pts (2018), average +0.4 pts, max +2.0 pts (2025). 2024 excluded (Q3-24 line-sale gains inside the base).'),
     ],
     'points': [
         ('pt_dep', '  Q4/26E depreciation ($m)', 366.0, 'm', 'Q3-26 $363m; rising with the asset base (+$3m a quarter in 2026).'),
