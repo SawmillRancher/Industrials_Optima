@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -14,18 +14,18 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 |---|---|
 | Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
-| Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
+| Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate), FDX (packages/day × yield × days) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
-| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
+| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM, FDX (spin plus a change of year end: two bases) |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
-| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
+| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week), FDX (May → December change in 2026) |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
 | Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
@@ -404,6 +404,44 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [calibration] When the company gives planning assumptions only, use them as point estimates and info rows rather than forcing a revenue/EBITDA solve.
   - [bridges] For LT targets set on an old base year, freeze the base "as first published" in the scenario table and note that the definitions have since changed.
   - [BS/CF] Follow the company's equity mechanics for buybacks (retire vs treasury; APIC-first then retained earnings) so equity ties.
+
+### FDX — FedEx Corporation (MLM template via WWD kit; US GAAP / USD m / fiscal year ended 31-May to FY2026, calendar year from 1-Jun-2026)
+- **Coverage & basis:** two bases side by side, never mixed in one growth rate (CIK 1048911).
+  - Legacy: FY2006–12 annual and Q1 FY13–Q4 FY26 quarterly, fiscal years ended 31 May with FedEx Freight consolidated, as originally reported from 81 releases.
+  - Calendar: Q1/24–Q3/26, 2024 and 2025, continuing operations with the new Express U.S. Domestic / Express International segments, from the recast exhibits of 21-Jul-2026 and 28-Oct-2026 and the 28-Oct-2026 release.
+  - Cause: on 1-Jun-2026 FedEx spun off FedEx Freight (19.9% retained) and moved its year end to 31 December. Calendar quarters cannot be rebuilt from fiscal quarters without estimating.
+  - Not recast in the legacy columns: FY2015 mark-to-market pension accounting (adopted in Q4, so FY15 quarters ≠ year), ASU 2017-07 (FY2019), ASC 842 (FY2020).
+  - Calendar cash flow exists only for nine months (not recast for discontinued operations); it sits in the Q3 columns with comments. Calendar balance sheets exist only at Dec-24, Dec-25 and Sep-26.
+- **Operating build:** packages by service: average daily volume × revenue per package × operating days for six services (U.S. priority, deferred, ground; international priority, economy, domestic), with a "statistics tie" ratio ≈ 1.00. Freight and other revenue grow by input. Segment adjusted operating income = revenue × adjusted margin; corporate is a separate adjusted loss. The legacy columns reuse the same service rows where the releases printed them (U.S. overnight = priority; FedEx Ground volume definitions changed three times; label comments say so). Legacy segments and LTL statistics are memo rows with Σ checks.
+- **Bridges & definitions:**
+  - Operating income → adjusted operating income and income from continuing operations → adjusted EPS follow the company tables, which exist from Q4 FY12 annually and from Q2 FY16 for most quarters; other periods are adjusted = GAAP, flagged "n/p".
+  - Tables before FY2018 run top-down (non-GAAP − charges = GAAP) and before Q4 FY16 have no tax column. The extraction picks the table whose GAAP side ties to the period's operating income, net income and EPS, then converts to an additive convention.
+  - Mark-to-market pension adjustments sit in operating income for FY2015–18 and below it from FY2019, so they move from the operating bridge to a non-operating line.
+  - Adjusted EBITDA is a model definition (operating income + D&A + operating items); the credit-agreement "adjusted EBITDA" is not disclosed.
+  - EPS checks carry ±$0.10: FedEx uses the two-class method and prints shares in whole millions.
+- **Data quirks & corrections:**
+  - The Q3 FY15 release prints the nine-month FX effect on cash as +104; the statement's arithmetic and the 10-Q give (104) (corrected, documented).
+  - The Q4 FY16 release printed no balance sheet (10-K used). The FY2023 10-K shows $33m more cash and operating cash flow than the release, and the FY2025 10-K $36m less total assets; the XBRL cross-check found both, and the 10-K wins.
+  - The recast exhibits print no share count: diluted shares = net income ÷ diluted EPS, flagged per cell.
+  - The 28-Oct-2026 release folds current debt and current lease liabilities into "accrued and other liabilities" (split from the 10-Q note) and restructuring costs into "Other, net".
+  - Parser quirks: "($ | 895" is a negative; labels wrap across lines; footnote digits trail labels.
+- **Deals & special blocks:** FedEx Supply Chain was sold to CMA CGM on 1-Oct-2026 for $1.4bn. Its revenue is undisclosed (flagged 50% share of corporate revenue stripped from Q4/26E). The model books proceeds − $264m net assets held for sale as a Q4/26E operating gain and adjusts it out; the company's outlook table lists no gain, so model GAAP EPS sits above the GAAP guidance and the gap is shown. The retained FedEx Freight stake ($3.25bn at fair value) is assumed sold at carrying value in 2027E. The 37% InPost consortium stake ($2.5bn, equity method) is held at cost.
+- **Calibration & scenarios:** calendar-2026 guidance from the 28-Oct-2026 release (on EDGAR): revenue "~12%" and adjusted EPS $18.00–18.60. A uniform volume Δ across all six package services solves revenue; a uniform segment-margin Δ solves adjusted EPS through tax and non-operating income. "~12%" is a point, so High / Low are ±0.5 pt model bounds, labelled. The "2029 financial targets" named in the filings are not quantified in any EDGAR exhibit and are not used.
+- **Balance sheet, cash & capital:**
+  - $2.7bn of the $8.0bn cash at 30-Sep-2026 is IEEPA tariff refunds held for customers. It is carried as a payable, excluded from net debt, assumed paid out in 2027, and excluded from the DCF working-capital line.
+  - Net debt = debt − cash − FedEx Freight stake + tariff refunds held. Operating leases (~$15bn) stay rent-as-opex.
+  - Buybacks plug to net debt / adjusted EBITDA of 1.25x / 1.0x / 0.75x (no published target; assumption). Working-capital ratios are on revenue (no cost of goods sold) at December levels.
+  - Debt maturities come from a 10-K table by old fiscal year; each bucket is mapped to the same-numbered calendar year (flagged).
+- **Valuation:** $300, provided by the user (20-Nov-2026); SEC reference $293.07 (September 2026 average repurchase price, 10-Q Part II Item 2). Calendar 2026E is the DCF base year (year end six weeks after valuation); InPost is deducted from EV at carrying value. P/E 15x Base, 17x Bull, 12x Bear.
+- **Reusable lessons:**
+  - [basis] When a spin-off and a change of year end coincide, the issuer's recast is the only source for the new basis. Carry two bases side by side with separate column blocks and `prior` links that never cross; don't re-cut old quarters.
+  - [extraction] For long histories with changing labels, capture every table row as `[group, label, value]` and map to model keys in `normalize.py`. The sub-heading above a row is what separates a volume from a yield with the same label.
+  - [bridges] Select a reconciliation table by whether its GAAP side ties to the period's own operating income, net income and EPS. This is robust to garbled headings and to top-down vs bottom-up table layouts.
+  - [sources] Run the XBRL first-filed cross-check on annual cash, total assets and operating cash flow: it finds releases that differ from the 10-K (and release typos that the statement's own arithmetic proves).
+  - [BS/CF] Cash held for customers (refunds in transit) is a payable, not liquidity: exclude it from net debt and from the DCF working-capital line.
+  - [calibration] When guidance is a single point ("~12%"), use it as Mid and label the High / Low bounds as model bounds, not company ranges.
+  - [QA] A total row guarded by `ISNUMBER(<row that depends on the total>)` is a circular reference in the forecast columns even though LibreOffice still returns a value; `cyc.py` catches it. Give totals a separate unguarded forecast formula.
+  - [QA] Label only zero-checks "Check: …". A ratio that should read 1.00 trips `inspect_model.py`; name it "Statistics tie: …".
 
 ### CHRW — C.H. Robinson Worldwide (MLM template + RXO PF deal tab, US GAAP / USD / Dec FY)
 - **Coverage & basis:** FY2006–12 annual, quarterly Q1/13–Q2/26; Q3–Q4/26E, 2026E, 2027E–30E. Each period is taken as originally reported in its own 8-K Ex. 99.1. Segments (NAST / GF / Robinson Fresh / All Other) start in Q4/16 and are recast to 2014 from the FY2016 10-K and the Jan-2017 Ex. 99.3. Robinson Fresh was folded into All Other in 2019, and the current-basis row = Robinson Fresh + legacy All Other (memo rows, 2014–18). The headline profit line was renamed over time: "gross profits" (to 2008), then "net revenues" (2009–18), then AGP (2019+). GAAP gross profit is presented only from Q1/23 (with 2022 comparatives).

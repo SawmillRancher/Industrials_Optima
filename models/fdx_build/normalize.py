@@ -116,6 +116,9 @@ def do_express(p, rows, fec=False):
     """FedEx Express (to FY2024) / Federal Express (FY2025-26) / Express U.S. Domestic + International segment tables."""
     def stat(key, lab, grp): put(p, key, find(rows, lab, grp))
     stat('adv_pri', r'^(total )?u\.s\. (overnight package|priority)$|^total u\.s\. overnight$', G_ADV)
+    if x_(p, 'adv_pri') is None:                      # releases to FY2012 print box and envelope without a total: sum (noted in the model)
+        bx, en = find(rows, r'^u\.s\. overnight box', G_ADV), find(rows, r'^u\.s\. overnight envelope', G_ADV)
+        if bx is not None and en is not None: put(p, 'adv_pri', bx + en); put(p, 'adv_pri_sum', 1)
     stat('adv_def', r'^u\.s\. deferred', G_ADV)
     stat('adv_gc', r'ground commercial', G_ADV); stat('adv_ghd', r'home delivery', G_ADV)
     stat('adv_us', r'total u\.s\. domestic', G_ADV)
@@ -132,12 +135,13 @@ def do_express(p, rows, fec=False):
     stat('ylb_us', r'^u\.s\.( freight)?$', G_YLB); stat('ylb_ip', r'^international priority', G_YLB)
     stat('ylb_ie', r'^international (economy|airfreight)', G_YLB); stat('ylb_tot', r'^composite freight yield', G_YLB)
     put(p, 'days', find(rows, r'^operating (weekdays|days)', None))
-    # revenue by service
-    R = r'package|revenue'
-    put(p, 'r_pri', find(rows, r'^(total u\.s\. overnight|u\.s\. priority)$', None))
-    put(p, 'r_def', find(rows, r'^u\.s\. deferred$', None)); put(p, 'r_gnd', find(rows, r'^u\.s\. ground$', None))
-    put(p, 'r_ip', find(rows, r'^international priority$', None)); put(p, 'r_ie', find(rows, r'^international economy$', None))
-    put(p, 'r_id', find(rows, r'^international domestic$', None))
+    # revenue by service: only the package-revenue rows of the segment income statement (above 'Total package revenue')
+    cut = [i for i, (g, l, v) in enumerate(rows) if re.search(r'^total package revenue', l.lower())]
+    fin = rows[:cut[0]] if cut else []
+    put(p, 'r_pri', find(fin, r'^(total u\.s\. overnight|u\.s\. priority)$', None))
+    put(p, 'r_def', find(fin, r'^u\.s\. deferred$', None)); put(p, 'r_gnd', find(fin, r'^u\.s\. ground$', None))
+    put(p, 'r_ip', find(fin, r'^international priority$', None)); put(p, 'r_ie', find(fin, r'^international economy$', None))
+    put(p, 'r_id', find(fin, r'^international domestic$', None))
 
 def do_usd(p, rows):
     do_express(p, rows)
@@ -358,7 +362,7 @@ def do_recon(p, blocks):
         if abs(pre) < 0.51 and abs(tax_i) > 0.51: nlab.append(f'{l} (tax item) {-tax_i:,.0f}')
     for c in OCATS:
         put(p, f'oa_{c}', tot[c]); put(p, f'oa_{c}_lab', '; '.join(labs[c]))
-    put(p, 'oa_nonop', nonop); put(p, 'oa_nonop_lab', '; '.join(nlab)); put(p, 'oa_tax', taxeff)
+    put(p, 'oa_nonop', nonop); put(p, 'oa_nonop_lab', '; '.join(nlab)); put(p, 'oa_tax', taxeff); put(p, 'e_tax_in', -taxeff)
     put(p, 'adj_oi_pub', adj[0]); put(p, 'adj_ni_pub', adj[-2]); put(p, 'adj_eps_pub', adj[-1])
     if n == 5: put(p, 'adj_tax_pub', adj[2])
     put(p, 'adj_basis', 'published'); put(p, 'adj_head', head[-70:])
@@ -388,7 +392,7 @@ def legacy_xbrl(p, fy, q):
     V = xbrl.value
     if q is None:
         put(p, 'sbc', V('ShareBasedCompensation', fy, 'FY') or V('AllocatedShareBasedCompensationExpense', fy, 'FY'))
-        put(p, 'dps', V('CommonStockDividendsPerShareDeclared', fy, 'FY'))
+        put(p, 'dps', V('CommonStockDividendsPerShareDeclared', fy, 'FY') or MAN.get('dps_legacy', {}).get(str(fy)))
         put(p, 'sh_b', V('WeightedAverageNumberOfSharesOutstandingBasic', fy, 'FY')); put(p, 'eps_b', V('EarningsPerShareBasic', fy, 'FY'))
     else:
         put(p, 'sbc', V('AllocatedShareBasedCompensationExpense', fy, 'Q', q))
