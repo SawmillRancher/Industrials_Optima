@@ -1,0 +1,128 @@
+{
+ "corrections": [
+  {
+   "periods": [
+    "Q2-21"
+   ],
+   "set": {
+    "is": {
+     "int": 66.0,
+     "loss_debt": 23.0
+    }
+   },
+   "note": "Q2-21 release showed interest expense of $89m including a $23m loss on debt redemption; the company presents the loss on its own line from the Q4-21 release (Q1-22 release panel: interest expense, net $66m; loss on debt redemption $23m). Split applied so that quarters sum to FY2021 ($259m / $146m).",
+   "source": "https://www.sec.gov/Archives/edgar/data/4281/000115752322000538/a52705038ex99_1.htm"
+  },
+  {
+   "periods": [
+    "Q4-20",
+    "2020"
+   ],
+   "set": {
+    "bs": {
+     "dta": 272.0,
+     "ta": 11443.0,
+     "teq": 3577.0,
+     "tle": 11443.0
+    }
+   },
+   "note": "31-Dec-2020 balance sheet per the 2020 Form 10-K (filed 16-Feb-2021): deferred income taxes $272m, total assets $11,443m, total equity $3,577m; the Q4-20 release (3-Feb-2021) showed $275m / $11,446m / $3,580m. Where the release and the 10-K differ, the 10-K wins.",
+   "source": "https://www.sec.gov/Archives/edgar/data/4281/000000428121000049/arnc-20201231.htm"
+  }
+ ],
+ "guidance_fy26": {
+  "src": "Q3 2026 release (8-K Item 2.02 Ex. 99.1, 29-Oct-2026): FY2026 guidance increased; Q4 2026 guidance; FY2027 revenue ~$11.5bn (~+12% y/y)",
+  "url": "https://www.sec.gov/Archives/edgar/data/4281/000110465926119857/tm2628456d1_ex99-1.htm",
+  "rev": [
+   10310.0,
+   10300.0,
+   10290.0
+  ],
+  "adj_ebitda": [
+   3335.0,
+   3330.0,
+   3325.0
+  ],
+  "adj_eps": [
+   5.51,
+   5.5,
+   5.49
+  ],
+  "fcf": [
+   2050.0,
+   2000.0,
+   1950.0
+  ],
+  "q4_rev": [
+   2760.0,
+   2750.0,
+   2740.0
+  ],
+  "q4_adj_ebitda": [
+   905.0,
+   900.0,
+   895.0
+  ],
+  "q4_adj_eps": [
+   1.51,
+   1.5,
+   1.49
+  ],
+  "rev_2027": 11500.0,
+  "note": "All guidance used in the model is from the 8-K Ex. 99.1 release on EDGAR. No guidance from outside EDGAR (conference-call remarks, investor-relations site, sell-side) is used; any such figure would have to be marked unverified."
+ },
+ "deals": {
+  "cam": "Consolidated Aerospace Manufacturing, LLC (CAM), bought from Stanley Black & Decker; closed 6-Apr-2026; cash price ~$1,812m net of $1m cash (Q3-26 10-Q Note C). Announcement 8-K 22-Dec-2025: FY2026 revenue ~$485-495m, adjusted EBITDA margin above 20% before synergies, ~13x FY2026 adjusted EBITDA after synergies and tax benefit. In Fastening Systems from Q2-26.",
+  "brunner": "Brunner Manufacturing Co. Inc. (fasteners, Wisconsin); acquired 6-Feb-2026 for ~$120m net of $2m cash (Q3-26 10-Q Note C). In Fastening Systems from February 2026.",
+  "savannah": "Sale of the disk forging facility in Savannah, Georgia (Engineered Structures) completed 31-Mar-2026 for $230m (~$225m received in Q1-26); gain $93m in Restructuring and other credits; net assets ~$92m incl. ~$41m goodwill (Q3-26 10-Q Note C).",
+  "acq_sales": "Organic-revenue reconciliation (releases): acquisitions contributed $135m to Fastening Systems sales in Q3-26; the Savannah facility had $34m of Engineered Structures sales in Q3-25.",
+  "urls": [
+   "https://www.sec.gov/Archives/edgar/data/4281/000110465925123518/tm2534069d1_ex99-1.htm",
+   "https://www.sec.gov/Archives/edgar/data/4281/000000428126000036/hwm-20260930.htm"
+  ]
+ },
+ "ppa": {
+  "Q2-26": {
+   "names": "CAM (6-Apr-26) + Brunner (6-Feb-26), preliminary",
+   "cons": 1929.0,
+   "ca": 242.0,
+   "ppe": 204.0,
+   "intang": 425.0,
+   "gw": 1096.0,
+   "onca": 49.0,
+   "cl": 64.0,
+   "debt": 0.0,
+   "ncl": 23.0
+  }
+ },
+ "ppa_note": "Q3-26 10-Q Note C, preliminary combined allocation for CAM and Brunner: receivables $83m, inventories $159m, PP&E $204m, other noncurrent assets $49m, intangibles $425m; payables $40m, accrued compensation $14m, other current liabilities $10m, other noncurrent liabilities $23m; net assets $833m; goodwill $1,096m; cash paid $1,929m net of cash acquired (cash-flow statement). Shown in the Q2-26 column (CAM closing quarter; Brunner closed in Q1-26).",
+ "amort": {
+  "src": "FY2025 Form 10-K (intangibles note): amortization expense $32m (2025), $33m (2024), $35m (2023); expected ~$30-36m a year 2026-2030 excluding acquisitions. CAM / Brunner intangibles $425m (preliminary; useful lives not disclosed in the 10-Q).",
+  "base": 33.0,
+  "cam_assumed_life": 15
+ },
+ "debt": {
+  "at_2026_09_30": "30-Sep-2026 (Q3-26 10-Q Note O): 6.750% Bonds 2028 $300m; 3.750% Notes 2028 $400m; 3.000% Notes 2029 $700m; 3.900% Notes 2029 $300m; 4.850% Notes 2031 $500m; 4.550% Notes 2032 $500m; 4.750% Notes 2036 $500m; 5.950% Notes 2037 $625m; 4.750% Iowa Finance Authority Loan 2042 $250m; commercial paper $390m (4.223%); other, net $(22)m; total $4,443m.",
+  "events": "3-Mar-2026: $400m 3.750% Notes 2028, $300m 3.900% Notes 2029 and $500m 4.750% Notes 2036 issued (net proceeds $1,193m) for the CAM acquisition. 22-May-2026: JPY term loan (¥29,702m, ~$186m) prepaid. Commercial paper program $1,000m; $1,000m five-year revolver (to Feb-2031) and $600m 364-day revolver, both undrawn. $250m receivables securitization (off balance sheet) unchanged.",
+  "maturities": {
+   "2028": 700.0,
+   "2029": 1000.0,
+   "2031": 500.0,
+   "2032": 500.0,
+   "2036": 500.0,
+   "2037": 625.0,
+   "2042": 250.0
+  }
+ },
+ "buyback": "Q3-26: $500m repurchased at an average $264.77 (1.9m shares); $1.1bn year to date to 28-Oct-2026 at an average $250.72. 28-Oct-2026: Board added $5bn to the program; $5.397bn authorized (Q3-26 release). Repurchased shares are retired.",
+ "dividend": "Quarterly common dividend $0.14 from Q3-26 (declared 27-Jul-2026, +17% from $0.12). $3.75 preferred stock redeemed in Q4-25.",
+ "price": {
+  "px": 220.0,
+  "date": "2026-11-20",
+  "src": "Share price provided by the user on 20-Nov-2026.",
+  "sec_ref": "Latest SEC-filed price for reference: average price paid for shares repurchased in September 2026 $251.49 (Q3-26 10-Q Part II Item 2; quarter average $264.77)."
+ },
+ "employees": {
+  "2025": 25430
+ }
+}

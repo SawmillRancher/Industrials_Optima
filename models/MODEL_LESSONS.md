@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -12,14 +12,14 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 
 | Situation | Read |
 |---|---|
-| Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
+| Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW, HWM |
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
 | Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
-| Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
-| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
-| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
+| Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO, HWM (CAM, inside guidance) |
+| Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM, HWM (parent after spin) |
+| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO, HWM (segment measure) |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
@@ -165,6 +165,31 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [calibration] For EPS guidance, back-solve the required adjusted EBIT through tax and interest, then solve the margin Δ.
   - [valuation] When FY end ≈ valuation date, roll the DCF: that FY is the base year and net debt is taken at its end.
   - [BS/CF] Add a revolver-headroom memo row so the minimum-cash plug can't silently exceed the commitment.
+
+### HWM — Howmet Aerospace (MLM template via WWD kit; US GAAP / USD m / Dec FY)
+- **Coverage & basis:** FY2019 annual, Q1/20–Q3/26 quarterly, Q4/26E, 2027E–30E. One CIK (4281) covers Alcoa Inc., Arconic Inc. and Howmet, but history starts with the post-separation company: Arconic Corporation was spun off on 1-Apr-2020 and earlier filings describe a group twice the size. FY2019 and Q1/20 are recast continuing-operations comparatives (P&L and segments only). The balance sheet starts at 30-Jun-2020. Q1/20 and FY2020 cash flow still include Arconic Corporation, which the company never segregated. Template columns shifted −41.
+- **Operating build:** four segments, third-party sales × Segment Adjusted EBITDA margin, less a derived adjusted corporate expense (Σ segments − consolidated Adjusted EBITDA; the reported "Corporate expense" also carries corporate D&A and special items). Segment Adjusted EBITDA became the measure in Q1-22: 2021 uses the company recast, and 2019–20 = segment operating profit + segment D&A, an identity proven on every 2021 period. The Q1-26 realignment recast FY2024 and the 2025 quarters; the model takes the recast for 2025 (all four quarters) and keeps FY2024 as reported with memo rows. End markets (10-Q / 10-K note) are a memo block; "gas turbines" for 2025 quarters comes from the 2026 comparatives.
+- **Bridges & definitions:** operating income → adjusted operating income → Adjusted EBITDA (company). Adjusted operating income was not published Q1/22–Q2/23 and Adjusted EBITDA is missing from several 2019–21 schedules, so operating special items = whichever published measure exists − GAAP. To 2025 "Adjusted EBITDA" meant the figure before special items and "Adjusted EBITDA excluding special items" was the headline; the 2026 releases shortened the label. Q2/20 has $6m of special items inside D&A. The tax line of the EPS bridge is derived from published adjusted net income; company labels sit in cell comments. EBITDA from net income is a model definition that ties to the company bridge.
+- **Data quirks & corrections:**
+  - Releases are in whole USD millions, so statement totals are entered as published and arithmetic checks allow ±2.
+  - Q2/21 interest expense ($89m) included a $23m debt-redemption loss that the company later showed separately; split applied.
+  - The 31-Dec-2020 balance sheet differs between release and 10-K by $3m (deferred taxes); the 10-K is used.
+  - H1-20 cash flow was reclassified in Q3-20 (payables vs capex); the revised comparative is used so the 2020 quarters are on one basis.
+  - FY2019–20 full-year statements print continuing and discontinued EPS but no total.
+  - check_data runs 924 checks, 190 of them against XBRL.
+- **Deals & special blocks:** CAM ($1,812m, 6-Apr-2026) and Brunner ($120m, Feb-2026) in Fastening Systems; Savannah disk forging sold 31-Mar-2026 ($93m gain inside restructuring). All three are in actuals and inside guidance, so there is no separate deal block: the combined preliminary PPA sits in the Q2/26 column, and Q4/26E growth uses the Q3/26 y/y rate because Q3 and Q4 share the same perimeter. The M&A lever defaults to nil.
+- **Calibration & scenarios:** guidance comes only from the SEC-filed Q3-26 release. Revenue Δ solves FY26 sales to $10.29–10.31bn; margin Δ solves Adjusted EBITDA to $3.325–3.335bn. Adjusted EPS, free cash flow, Q4 revenue and the FY2027 ~$11.5bn outlook are information rows. Base lands on $5.50 adjusted EPS (guided $5.50) with a margin Δ of zero, which confirms the point estimates. The Base 2027E segment growth is set against the $11.5bn outlook.
+- **Balance sheet, cash & capital:** notes ladder (2028 $700m, 2029 $1.0bn, 2031+), commercial paper to a $500m minimum cash with a headroom memo vs the $1.0bn program, and extra notes issued by input so the paper stays inside it. Buybacks plug to 1.25x / 1.0x / 0.75x net debt / Adjusted EBITDA from 2027E ($5.4bn authorization). Working-capital days are year-end 2025 levels on annualised Q4 sales, and 2026E balances are sized on Q4/26E × 4 because CAM joined mid-year. Pension liabilities are held flat.
+- **Valuation:** $220.00, per the user (20-Nov-2026); the latest SEC-filed price ($251.49, September 2026 repurchases) is quoted for reference. NOPAT is on full-cost adjusted EBIT with total D&A added back, since Howmet adjusts out neither amortization nor stock-based compensation. Net debt is taken at the end of 2026E and a flag row sets the 2026E UFCF to zero. Charts start in 2020, the first year with a balance sheet, so they carry no `#N/A`.
+- **Reusable lessons:**
+  - [basis] When the spin-off completes on the first day of a quarter, the prior quarter's own filings are still pre-spin: take that quarter and the prior year from the next year's comparatives, and start the balance sheet one quarter later.
+  - [basis] When a new segment measure is recast for only some periods, find the identity behind the recast (here operating profit + D&A), prove it on every recast period, then apply it to the rest and flag those cells as derived.
+  - [extraction] Choose reconciliation-table columns by value (the column whose anchor row equals the period's own reported figure) when header layouts drift between releases.
+  - [extraction] If a cash-flow classification was revised mid-year, take the earlier year-to-date periods from the revised comparatives, or the derived quarters mix two bases.
+  - [bridges] When the company publishes two overlapping adjusted measures in different periods, derive the special items from whichever exists and check both wherever both are published.
+  - [calibration] With a deal closed mid-year and inside guidance, seed the remaining quarter from the latest quarter's y/y rate (same perimeter) rather than the year-to-date rate.
+  - [QA] For issuers reporting whole millions, enter subtotals as published and give arithmetic check rows a stated ±2 tolerance instead of recomputing totals.
+  - [valuation] Implement the "don't double-count the current year" rule as a visible flag cell, and start the charts at the first year with a balance sheet to avoid intentional `#N/A`.
 
 ### HII — Huntington Ingalls Industries (DSV template, US GAAP as reported / USD millions / FY Dec)
 - **Coverage & basis:** 2015–1H26 from 10-K/10-Q XBRL and 8-K Ex. 99.1 (CIK 0001501585). FY2015–16 are as originally reported; FY2017+ are as recast for ASU 2017-07 in the 2018 10-K (non-service pension moved below OI). Technical Solutions was formed Dec-2016 (renamed Mission Technologies 2022). Q1–Q3/15 stay on the original "Other" basis; Q4/15 and FY2015 are recast. Q4 = FY − 9M. Restricted cash is included from FY2019. Unbilled receivables are separate from FY2017 (ASC 606).
