@@ -1,8 +1,8 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, CACI). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
@@ -275,7 +275,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -289,6 +289,9 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Recast Q4 = FY recast − 9M recast; quarters that were never recast stay blank. [LECO]
   - Each derivation is noted in the cell comment.
 - **Narrative-only KPIs** (rounded y/y % in release text) need a quote-level source note per period and a stated rounding convention. [CHRW]
+- **Inline-XBRL filings:** unwrap inline tags (`span`, `ix:*`) before converting HTML to text, or every tagged number lands on its own line and note text cannot be searched. [CACI]
+- **A release can print a label without its amount** (blank cells). Derive the line from the subtotal, comment the cell and keep the subtotal check; cross-check against the 10-Q. [CACI]
+- **Organic growth stated only in text:** acquired revenue = revenue − prior-year revenue × (1 + stated organic growth); quote the sentence in the cell comment. [CACI, KRMN]
 - **Segment adjusting items published only for some periods** can be allocated from footnotes that name the segment, with each cell commented and tied to the published FY totals. [DHR]
 
 ### 5.2 Basis
@@ -296,6 +299,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Partial standard recasts** (e.g. ASC 606 recast only at total revenue for an earlier year) get a memo row for that year rather than mixing bases in the main line. [RBA]
 - **Disc-ops recast published only in totals:** scale minor opex lines to the restated totals, with SG&A as the plug, and comment the cells. [STE]
 - **After a spin:** start the BS at the first post-spin balance sheet even if the P&L uses earlier recast comparatives, and fill earlier y/y with company-reported change % memos. Spin-cos put carve-out (Form 10) years in the main columns, with the former parent's segment history as a flagged memo under the parent's CIK. [XPO, ESAB]
+- **A category carved out of two existing ones** (so no old line stays comparable): carry a "not split on the current basis" total for earlier periods, start the new lines at the first recast period and keep the legacy split as memo. [CACI]
+- **Measures first published with prior-year comparatives** fill the comparative periods from that later release, with a cell comment; periods before stay blank. [CACI, CHRW]
 - **Half-year reporters:** carry quarterly revenue as "1st / 2nd quarter of the half" memo rows inside the half-year columns, with a Σ check. [RMS, BC]
 - **Two builds of one company:** diff their dated facts (split dates, deconsolidation quarter, label cut-overs) and resolve each from the filing. [LECO]
 
@@ -331,6 +336,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - When a published adjusted figure is later restated, record both values in the definition-row comment and say which one the check uses.
 
   [RBA, LOAR, VMC, TDY]
+- **Company bridge on a different basis than the income statement** (net interest only, net income attributable): add an explicit basis-difference line rather than changing statement lines. [CACI, XPO]
 - **Rebuild a company measure exactly as published,** even if it isn't tax-effected or excludes SBC. Add a tax-effected memo variant if useful. [KRMN, TDY, VMC, MLM]
 - **Adjust only for items the company itself quantified,** and list the items it named but didn't adjust. Keep model items and company items distinguishable within a row via per-period comments, and use a labelled plug row only for definitional drift or overlapping company measures in published periods. [ODFL, BC, HEI, CHRW, UBER]
 - **Store each period's company adjusting-item wording and amounts as a comment** on the total-items cell, so the category rows can stay few without losing the audit trail. [WAB]
@@ -396,6 +402,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 
   [DHR, TMO, CSGP, ONON, CLH, WAB, XPO, CPRT, RBA, KRMN]
 - **Don't double-count the current year:** when valuation net debt is taken at the current fiscal year end, exclude that year's UFCF. When the FY ended just before the valuation date, make it the base year. [BWXT, CW, WWD, BC, HEI]
+- **Mid-year valuation date:** take net debt at the current fiscal year end and switch that year's UFCF off with a visible inclusion flag row in the DCF. [CACI, BWXT]
 - **EV bridge items:**
   - Add legacy debt-like items (asbestos net of insurance) and redeemable NCI.
   - Carry equity stakes and retained divestiture stakes at carrying value outside invested capital.

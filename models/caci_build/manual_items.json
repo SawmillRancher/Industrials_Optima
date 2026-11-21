@@ -1,0 +1,46 @@
+{
+ "_note": "Facts that are not machine-extracted, each with its SEC EDGAR source. USD millions unless stated.",
+ "guidance_fy27": {
+  "source": "Q1 FY27 earnings release, Form 8-K Ex. 99.1, 21-Oct-2026 (https://www.sec.gov/Archives/edgar/data/16058/000162828026066740/fy27-q1caci20261021ex991.htm)",
+  "revenue": [10700.0, 10900.0], "adj_ni": [740.0, 760.0], "adj_eps": [33.18, 34.08], "diluted_shares": 22.3, "fcf_at_least": 900.0,
+  "net_income": [579.0, 599.0], "intangible_amortization": 215.0, "tax_effect_of_amortization": -54.0, "assumed_statutory_rate": 0.253,
+  "cfo": 1015.0, "capex": 115.0,
+  "prior": {"date": "5-Aug-2026 (Q4 FY26 release)", "revenue": [10650.0, 10850.0], "adj_ni": [735.0, 755.0], "adj_eps": [32.96, 33.86], "fcf_at_least": 900.0}
+ },
+ "amortization_annual": {
+  "source": "Form 10-K intangible-assets note: FY2006 10-K ($20,629 thousand); FY2008 10-K ($31.8m, $25.7m for FY2008, FY2007); FY2010 10-K ($37.2m, $32.1m for FY2010, FY2009); FY2011+ XBRL AmortizationOfIntangibleAssets as first filed",
+  "2006": 20.629, "2007": 25.7, "2008": 31.8, "2009": 32.1, "2010": 37.2
+ },
+ "amort_sched": {
+  "source": "FY2026 Form 10-K, Note 5 (estimated annual amortization of intangible assets held at 30-Jun-2026)",
+  "2027": 216.608, "2028": 205.944, "2029": 197.106, "2030": 185.454, "2031": 168.19, "thereafter": 1099.689
+ },
+ "debt": {
+  "source": "Q1 FY27 Form 10-Q debt note (30-Sep-2026) and FY2026 Form 10-K Note 11 (maturities at 30-Jun-2026); 8-Ks of 9-Mar-2026 (Term Loan B-2) and 12-Mar-2026 (2033 Notes-2)",
+  "at_2026_09_30": {"revolver": 605.0, "term_loan": 1226.563, "term_loan_b": 736.875, "term_loan_b2": 796.0, "notes_2033": 1500.0, "principal": 4864.438, "unamortized": -28.375},
+  "rates_2026_09_30": {"revolver": 0.0499, "term_loan": 0.0540, "term_loan_b": 0.0565, "term_loan_b2": 0.0565, "notes_2033": 0.06375},
+  "maturities_fy": {"2027": 46.75, "2028": 62.375, "2029": 78.0, "2030": 78.0, "2031": 1706.75, "thereafter": 2959.25},
+  "facility": "USD 3,250m credit facility: USD 2,000m revolver + USD 1,250m term loan, both due Nov-2030; Term Loan B due Oct-2031; Term Loan B-2 (USD 800m) due Mar-2033; 6.375% senior notes due Jun-2033 (USD 1,500m)",
+  "swaps": "Floating-to-fixed interest-rate swaps, notional USD 1,500m at 30-Jun-2026"
+ },
+ "buyback": {"source": "Q1 FY27 Form 10-Q: USD 187.3m remained available under the 2023 Repurchase Program at 30-Sep-2026", "remaining": 187.3},
+ "arka": {
+  "source": "FY2026 Form 10-K Note 4; 8-Ks of 22-Dec-2025 and 9-Mar-2026",
+  "closed": "2026-03-09", "consideration_net_of_cash": 2642.666, "headline_price": 2600.0,
+  "ppa": {"cons": 2642.666, "ar": 103.068, "oca": 25.49, "gw": 1462.926, "intang": 1145.0, "ppe": 149.412, "rou": 24.846, "onca": 0.436,
+          "ap": 15.061, "accr": 11.531, "ocl": 136.841, "def_tax": 85.12, "lease": 19.959},
+  "intangibles": "Customer relationships USD 660m (13.5 years); developed technology USD 485m (20.9 years); weighted 16.6 years",
+  "post_acq_fy26": "ARKA and Datalynx combined post-acquisition revenues USD 166.8m and net income USD 17.4m in FY2026 (incl. USD 26.0m intangible amortization); acquisition-related costs USD 22.5m in indirect costs",
+  "tax": "USD 1,722.1m of goodwill and intangibles deductible; expected tax benefit with a present value of USD 225m (release 22-Dec-2025)"
+ },
+ "acquisitions": {
+  "source": "Form 10-K acquisitions notes",
+  "fy2025": "three acquisitions (incl. Azure Summit Technology and Applied Insight, both closed Oct-2024), aggregate consideration USD 1,681.9m; goodwill USD 850.5m, intangibles USD 740.4m",
+  "fy2024": "three acquisitions, USD 108.6m", "fy2026": "ARKA (9-Mar-2026, USD 2,642.7m) and Datalynx (17-Feb-2026, USD 10.7m)"
+ },
+ "organic_overrides": {
+  "_note": "Narrative organic growth (release text); regex results reviewed against the quotes. Overrides: sign / period corrections.",
+  "Q3-22": -2.0, "Q4-23": null
+ },
+ "price": {"px": 625.0, "source": "Share price provided by the user on 20-Nov-2026 (not an SEC-filed price); update to market"}
+}

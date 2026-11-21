@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -13,10 +13,10 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Situation | Read |
 |---|---|
 | Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
-| Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
+| Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER, CACI |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
-| Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
-| Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
+| Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB, CACI |
+| Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP, CACI |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
 | Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
@@ -25,7 +25,7 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
-| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
+| Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), CACI (Jun), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
 | Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
 | Pension (CAS / FAS, non-service income) | HII, CW |
@@ -165,6 +165,24 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [calibration] For EPS guidance, back-solve the required adjusted EBIT through tax and interest, then solve the margin Δ.
   - [valuation] When FY end ≈ valuation date, roll the DCF: that FY is the base year and net debt is taken at its end.
   - [BS/CF] Add a revolver-headroom memo row so the minimum-cash plug can't silently exceed the commitment.
+
+### CACI — CACI International (MLM template via WWD / STE kits; US GAAP / USD / FY ends 30-Jun)
+- **Coverage & basis:** FY2006–12 annual, Q1/13–Q1/27 quarterly, Q2–Q4/27E, FY28E–31E (default window; template columns + 5, switch at CK2). As originally reported from 81 earnings releases (CIK 16058); no splits, no share classes. Exceptions, each with a cell comment: customer types were redefined in Q1 FY26 (Intelligence Community split out of both DoD and Federal civilian), so FY2025 uses the FY2026 comparatives and earlier periods sit in a "not split on the current basis" line with the legacy split as memo; measures first published with comparatives (current-definition adjusted net income, free cash flow, Technology / Expertise, contract awards) take those comparatives.
+- **Operating build:** one business in practice (Domestic ~97%), so revenue = prior-year revenue × (1 + organic growth) + acquired revenue on the company definition (acquired until the first anniversary). The organic reconciliation table stopped after FY2013; from FY2020 organic growth is narrative only, so acquired revenue = revenue − prior-year revenue × (1 + stated organic growth), with the quote in the cell comment. Customer types are a mix output with one balancing line. Backlog roll-forward with a derived adjustments line; book-to-bill 1.0x for forecast quarters.
+- **Bridges & definitions:** EBITDA is the company measure, with flags for "pro forma" (FY2011–12), "adjusted" (FY2013, Q2 FY16–Q3 FY23) and the FY2020 change that added depreciation inside direct costs. The published bridge starts from net income attributable and adds back net interest only, so an explicit basis-difference line carries NCI and the non-interest items in "interest expense and other, net". Adjusted net income has two definitions (FY2009–Q2 FY18: + SBC + D&A + financing costs + non-cash interest; from Q3 FY20: + intangible amortization) with a gap in between (adjusted = GAAP, flagged) and a current-definition memo series (ETR bounded 15–40% where the company rate is unpublished). Adjusted EBITA (EBITDA − depreciation) is a labelled model measure for NOPAT.
+- **Data quirks & corrections:** the Q2 FY22 release printed the borrowing and FX cash-flow lines without amounts; they are derived from the financing subtotal and the net change in cash. The Q4 FY16 release applied ASU 2016-09 to the whole year (Σ quarters ≠ FY by $1.0m). The first-filed XBRL goodwill for 30-Jun-2016 repeats the FY2015 value, so the 10-K balance sheet is used. Quarterly intangible amortization is not published before Q3 FY20 (rows left blank). Inline-XBRL 10-Ks needed inline tags unwrapped before text conversion.
+- **Deals & special blocks:** ARKA ($2.64bn, closed 9-Mar-2026, seller private so no standalone financials): PPA from the 10-K with a zero check; remaining inorganic revenue in Q2–Q3/27E = Q1/27 derived acquired revenue × share of the quarter before the anniversary (67/90 days in Q3). Future M&A lever calibrated on the ARKA PPA (intangibles 43%, PP&E 5%).
+- **Calibration & scenarios:** revenue Δ on organic growth to FY27 revenue ($10.7–10.9bn); EBITDA-margin Δ solved in closed form to adjusted net income ($740–760m, guided directly) through the tax rate, depreciation, amortization and interest. Adjusted EPS, GAAP net income and free cash flow (≥ $900m; model $870m) are information rows. Only EDGAR-filed guidance is used.
+- **Balance sheet, cash & capital:** term loans amortize as scheduled; the FY2031 revolver / term-loan maturity is assumed refinanced (flagged); revolver plugs to $200m minimum cash with a headroom memo; buybacks plug to a leverage target from 2028E (assumption: 2.5x / 2.0x / 1.5x, no published target). No dividend. Free cash flow follows the company definition (CFO excluding MARPA − capex).
+- **Valuation:** $625.00, user-provided (20-Nov-2026). DCF: NOPAT on adjusted EBITA with a depreciation-only add-back; net debt at 30-Jun-2027E with the FY2027E cash flow switched off by an inclusion flag row; the tax shield on ARKA's deductible goodwill is noted as upside, not modelled.
+- **Reusable lessons:**
+  - [build] When the organic-growth table disappears but the release still states organic growth, derive acquired revenue from it, quote the sentence in the cell comment and check the rebuilt growth against the published figure.
+  - [basis] When a new category is carved out of two old ones (IC from DoD and Federal civilian), no old line stays comparable: carry a "not split on the current basis" total, start the new lines at the first recast period and keep the legacy split as memo.
+  - [bridges] If the company's EBITDA bridge uses a different interest or net-income basis than the income statement, add an explicit basis-difference line instead of altering the statement lines.
+  - [extraction] A release can print a line label without its amount; derive it from the subtotal, say so in the cell comment, and keep the subtotal check.
+  - [calibration] When adjusted net income is guided directly, solve the margin to it rather than to EPS; keep EPS as an information row against the guided share count.
+  - [valuation] With a mid-year valuation date, take net debt at the current fiscal year end and zero that year's UFCF with a visible inclusion flag row.
+  - [tooling] Unwrap inline tags (span, ix:*) before HTML → text, or inline-XBRL facts split every sentence across lines.
 
 ### HII — Huntington Ingalls Industries (DSV template, US GAAP as reported / USD millions / FY Dec)
 - **Coverage & basis:** 2015–1H26 from 10-K/10-Q XBRL and 8-K Ex. 99.1 (CIK 0001501585). FY2015–16 are as originally reported; FY2017+ are as recast for ASU 2017-07 in the 2018 10-K (non-service pension moved below OI). Technical Solutions was formed Dec-2016 (renamed Mission Technologies 2022). Q1–Q3/15 stay on the original "Other" basis; Q4/15 and FY2015 are recast. Q4 = FY − 9M. Restricted cash is included from FY2019. Unbilled receivables are separate from FY2017 (ASC 606).
