@@ -68,10 +68,11 @@ def html_tables(html):
                 cur['hdr'].append(' | '.join(cells)); continue
             if len(cells) >= 2 and numeric and not lab_is_num:
                 cur['rows'].append((cells[0], [v for v in vals if v is not None] if all(v is None or isinstance(v, float) for v in vals) else numeric))
+                cur.setdefault('raw', []).append(cells[1:])
             elif not cur['rows']:
                 cur['hdr'].append(' | '.join(cells))
             else:
-                cur['rows'].append((' | '.join(cells), []))
+                cur['rows'].append((' | '.join(cells), [])); cur.setdefault('raw', []).append([])
         out.extend(x for x in tabs if x['rows'])
     return out
 
@@ -178,9 +179,14 @@ def market_tables(html):
     prev_cols, prev_pat = None, None
     for t in html_tables(html):
         groups = {}
-        for lab, vals in t['rows']:
+        raws = t.get('raw', [[] for _ in t['rows']])
+        for (lab, vals), raw in zip(t['rows'], raws):
             g = _group(lab)
-            if g and vals: groups.setdefault(g, vals)
+            if g and vals:
+                # value cells only: percent-change cells ("12%", "(1%)", "—" as a nil change) are dropped position by position
+                vv = [pnum(c) for c in raw if '%' not in c and c.strip() not in ('—', '–', '-', '--', '―')]
+                vv = [v for v in vv if v is not None]
+                groups.setdefault(g, vv or vals)
         if not ({'coal', 'im', 'total'} <= set(groups)): continue
         h = ' | '.join(t['hdr']); hl = h.lower()
         if 'tons in thousands' in hl or 'utility' in ' '.join(l.lower() for l, _ in t['rows']): continue

@@ -1,4 +1,4 @@
-"""Build WWD_Model.xlsx from the MLM template (same layout, formatting and process as the prior models)."""
+"""Build NSC_Model.xlsx from the MLM template (same layout, formatting and process as the prior models)."""
 import sys, copy, os, json
 from openpyxl.styles import Font
 from fw import *
@@ -6,102 +6,96 @@ import fw
 from spec import build_spec, scen_layout, SCEN_ROWS, SC
 from spec2 import build_spec2
 
-OUT = os.path.join(os.path.dirname(BASE), 'WWD_Model.xlsx')
-G26 = MAN['guidance_fy26']
+OUT = os.path.join(os.path.dirname(BASE), 'NSC_Model.xlsx')
+LRP = MAN['lrp']
 
 # ====================================================================== inputs (V0)
 def wc_inputs():
     q = DATA['2025']['x']
-    rev, cogs = q['rev'], q['cogs']
-    return {'dso': round(q['bs_ar'] / rev * 365), 'dio': round(q['bs_inv'] / cogs * 365), 'dpo': round(q['bs_ap'] / cogs * 365),
-            'ocl': round(q['bs_ocl'] / rev, 3)}
+    rev = q['rev']; cash_opex = q['opex'] - q['dep'] - (q['merger'] + q['restr'] + q['eoi'] + q['loss_disp'])
+    return {'dso': round(q['bs_ar'] / rev * 365), 'dms': round(q['bs_ms'] / cash_opex * 365), 'dpo': round(q['bs_ap'] / cash_opex * 365),
+            'taxp': round(q['bs_taxes'] / rev, 3), 'oclp': round(q['bs_ocl'] / rev, 3)}
 WC = wc_inputs()
-WC['note'] = (f'Forecast inputs at fiscal-year-end (30-Sep-2025) levels on FY2025 net sales / cost of goods sold (DSO {WC["dso"]}d, inventory {WC["dio"]}d, '
-              f'payables {WC["dpo"]}d, other current liabilities {WC["ocl"]:.1%} of sales); year ends are compared with year ends.')
-AM = MAN['amort_sched']
+WC['note'] = (f'Forecast inputs at year-end 2025 levels on 2025 revenues / cash operating expenses (DSO {WC["dso"]}d, materials & supplies {WC["dms"]}d, payables {WC["dpo"]}d, '
+              f'taxes {WC["taxp"]:.1%} and other current liabilities {WC["oclp"]:.1%} of revenues — the latter includes the $609m current Eastern Ohio incident liability at 31-Dec-2025); '
+              'year ends are compared with year ends.')
+lrp_years = LRP['years']
+LRPD = {'rev': {y: v * 1000 for y, v in zip(lrp_years, LRP['revenue_bn'])}, 'oi': {y: v * 1000 for y, v in zip(lrp_years, LRP['adj_oi_bn'])},
+        'ebitda': {y: v * 1000 for y, v in zip(lrp_years, LRP['adj_ebitda_bn'])}, 'capex': {y: v * 1000 for y, v in zip(lrp_years, LRP['capex_bn'])},
+        'eps': dict(zip(lrp_years, LRP['adj_eps'])), 'note': LRP['_note']}
+LRPD['or'] = {y: round(1 - LRPD['oi'][y] / LRPD['rev'][y], 4) for y in lrp_years}
+
+def seq_or_formula(fn):
+    """Q3→Q4 change in the adjusted operating ratio, 2016–2025 excluding 2024 (Q3/24 adjusted OR carried $380m of railway line-sale gains)."""
+    return lambda: f'={fn}(' + ','.join(f'{QC[(y, 4)].c}{R["or_seq"]}' for y in range(2016, 2026) if y != 2024) + ')'
 
 V0 = {
-    'out_hdr': 'FY26 guidance — Q3 FY26 release (29-Jul-2026)',
-    'out_note': ('Sales growth +20–23% (unchanged), adjusted EPS $9.30–9.50 (raised from $9.15–9.45), FCF $300–350m, capex ~$290m, ~61.5m shares, adjusted tax rate ~22.5%; '
-                 'Aerospace sales +21–23% at ~23.5% segment margin; Industrial sales +19–21% at ~19%.'),
+    'out_hdr': 'Q4/26E anchors — no numeric company outlook on EDGAR (calls only); 9M-26 / Q3-26 trends + scenario Δ; OR seasonality',
+    'out_note': ('NSC files no revenue / operating-ratio / EPS guidance (its Q3-26 10-Q gives only 2026 property additions ≈ $2.1bn and says Q4 fuel expense and fuel surcharge revenue '
+                 'will rise y/y on current fuel prices). The long-range plan in the Union Pacific merger proxy (Oct-2025) is shown as information rows, not used as an anchor.'),
     'outlook': [
-        ('out_g', '  FY26 net sales growth', tuple(G26['sales_growth']), 'pct', 'Guided +20–23%. Drives the Q4/26E sales calibration.'),
-        ('out_eps', '  FY26 adjusted EPS ($)', tuple(G26['adj_eps']), 'ps', 'Guided $9.30–9.50. Drives the Q4/26E segment-margin calibration.'),
-        ('out_ag', '  FY26 Aerospace sales growth — memo', tuple(G26['aero_growth']), 'pct', 'Guided +21–23% (information row; compare the model).'),
-        ('out_ig', '  FY26 Industrial sales growth — memo', tuple(G26['ind_growth']), 'pct', 'Guided +19–21% (information row).'),
-        ('out_fcf', '  FY26 free cash flow ($m) — memo', tuple(G26['fcf']), 'm', 'Guided $300–350m (information row).'),
-        ('bb26', '  Q4/26E share repurchases ($m)', (300.0, 200.0, 100.0), 'm', '9M FY26 $553.4m ($198m in Q3); $1,286m left on the $1.8bn 2026 Authorization at 30-Jun-2026.'),
+        ('q4_vol_d', '  Q4/26E units y/y: Δ vs the 9M-26 y/y trend (pts, all groups)', (0.010, 0.0, -0.015), 'pct',
+         'Base = 9M-26 y/y units growth by group (merchandise +1.8%, intermodal +1.3%, coal +4.7%); Bull +1pt, Bear −1.5pts (Q3-26: +3% total; tighter trucking market per the release).'),
+        ('q4_rpu_d', '  Q4/26E revenue per unit y/y: Δ vs the Q3-26 y/y trend (pts, all groups)', (0.010, 0.0, -0.010), 'pct',
+         'Base = Q3-26 y/y revenue-per-unit growth by group (merchandise +8%, intermodal +18%, coal +9%, of which fuel surcharge ≈ 8 pts of total revenue growth); the 10-Q expects Q4 fuel surcharge revenue to increase y/y.'),
+        ('seq_or', '  Q4/26E adjusted operating ratio: Q3→Q4 sequential change (pts; 2016–25 best / average / worst, excl. 2024)', (seq_or_formula('MIN'), seq_or_formula('AVERAGE'), seq_or_formula('MAX')), 'pct',
+         'Live formulas on the Q4 columns of the "Adjusted OR change vs prior quarter" row (2016–23, 2025): min −4.7 pts (2020), average −0.4 pts, max +2.6 pts (2025). 2024 excluded (Q3-24 line-sale gains).'),
     ],
     'points': [
-        ('pt_int', '  Q4/26E interest expense ($m)', 15.5, 'm1', 'Not guided; Q3 $14.8m; full quarter of the $250m term loan and the revolver (~$1.35bn debt at ~4.6%).'),
-        ('pt_intinc', '  Q4/26E interest income ($m)', 0.6, 'm1', 'Q3 $0.6m.'),
-        ('pt_othinc', '  Q4/26E other income, net ($m)', 20.0, 'm1', '9M FY26 $60.3m (~$20m a quarter; no divestiture gains).'),
-        ('pt_amort', '  Q4/26E amortization of intangibles ($m)', AM['2026_rem'], 'm1', 'Q3 FY26 10-Q schedule: $8.4m remaining in FY26.'),
-        ('pt_dep', '  Q4/26E depreciation ($m)', 23.0, 'm1', 'Q3 $22.5m; rising with capex.'),
-        ('pt_etr', '  Q4/26E tax rate (GAAP & adjusted)', 0.24, 'pct', 'FY26 adjusted rate guided ~22.5%; 9M FY26 adjusted 21.9% → Q4 ~24% (Q3 24.2%).'),
-        ('pt_capex', '  FY26 capital expenditures ($m)', G26['capex'], 'm1', 'Guided ~$290m (9M $156.3m); Spartanburg, SC campus.'),
-        ('pt_restr', '  Q4/26E restructuring charges ($m)', 6.0, 'm1', 'China OH wind-down complete; servo-valve transition (~$15m total) and the start of the Santa Clarita plan (8-K 21-Sep-2026).'),
-        ('pt_am', '  FY26 Aerospace segment margin guidance', G26['aero_margin'], 'pct', 'Guided ~23.5% (information row).'),
-        ('pt_im', '  FY26 Industrial segment margin guidance', G26['ind_margin'], 'pct', 'Guided ~19% (information row).'),
+        ('pt_dep', '  Q4/26E depreciation ($m)', 366.0, 'm', 'Q3-26 $363m; rising with the asset base (+$3m a quarter in 2026).'),
+        ('pt_othinc', '  Q4/26E other income – net ($m)', 30.0, 'm', '9M-26 $97m (~$32m a quarter); Q3-26 $30m.'),
+        ('pt_int', '  Q4/26E interest expense on debt ($m)', 192.0, 'm', 'Q3-26 $193m; no new issuance (Merger Agreement debt restrictions), $649m current maturities.'),
+        ('pt_etr', '  Q4/26E effective tax rate', 0.233, 'pct', '9M-26 effective rate 23.3% ($621m / $2,661m); 2025 21.6% (incl. discrete benefits).'),
+        ('pt_merger', '  Q4/26E merger-related expenses ($m)', 45.0, 'm', '9M-26 $145m ($52m / $51m / $42m by quarter): retention agreements, advisors, legal.'),
+        ('pt_eoi', '  Q4/26E Eastern Ohio incident expense, net of recoveries ($m)', 20.0, 'm', '9M-26 $53m ($10m / $15m / $28m); recoveries largely exhausted ($7m in 9M-26).'),
+        ('pt_sbc', '  Q4/26E share-based compensation ($m)', 16.0, 'm', '2025 $63m; 9M-26 per XBRL cash-flow statement.'),
+        ('pt_capex', '  2026E property additions ($m)', MAN['guidance']['capex_2026'], 'm', MAN['guidance']['capex_src']),
     ],
-    'lev': (1.75, 1.25, 0.75),
-    'lev_note': ('Net debt $867m at 30-Jun-26 ≈ 1.0x adjusted EBITDA (FY2021–25 0.5–1.1x); company "EBITDA leverage" (total debt / TTM EBITDA) 1.6x. Target = leverage up to which surplus cash is returned '
-                 'via buybacks ($1.8bn three-year authorization to Nov-2028); below it free cash flow repays the revolver. Bull = more buybacks (higher target).'),
+    'lev': (2.75, 2.50, 2.25),
+    'lev_note': ('Net debt $15.0bn at 30-Sep-2026 ≈ 2.7x adjusted EBITDA (2025 2.75x; 2019 ~2.3x). Debt-to-total-capitalization 49.8% (company metric). Target = maximum net debt / adjusted EBITDA '
+                 'up to which surplus cash is returned via buybacks once the merger restriction lapses (model: from 2028E, standalone case); below it, cash accumulates / repays commercial paper. Bull = more buybacks.'),
     'blocks': [
-        ('AERO_COEM', 'AERO_COEM (Commercial OEM y/y)', 0.04, -0.06, [0.14, 0.11, 0.09, 0.07, 0.06],
-         '9M FY26 +29% (airframer rate increases after the FY25 Boeing work stoppage / inventory normalisation); 737 / A320 / 787 / A350 ramps, A350 spoiler actuation from Spartanburg (2027).', 'pct', False),
-        ('AERO_CSERV', 'AERO_CSERV (Commercial services y/y)', 0.03, -0.06, [0.09, 0.08, 0.07, 0.06, 0.06],
-         '9M FY26 +36% (FY25 +29%, partly advance purchases); high utilisation of legacy fleets, price; normalising toward high-single digits.', 'pct', False),
-        ('AERO_DOEM', 'AERO_DOEM (Defense OEM y/y)', 0.03, -0.04, [0.07, 0.06, 0.05, 0.05, 0.05], '9M FY26 +7% (FY25 +38%: smart-defense / guided-weapons demand, price).', 'pct', False),
-        ('AERO_DSERV', 'AERO_DSERV (Defense services y/y)', 0.02, -0.04, [0.05, 0.05, 0.04, 0.04, 0.04], '9M FY26 +9%; FY25 −2% (mix).', 'pct', False),
-        ('IND_PG', 'IND_PG (Power generation y/y)', 0.04, -0.06, [0.12, 0.10, 0.08, 0.06, 0.05],
-         '9M FY26 +11%; FY25 +10%: gas turbines and reciprocating gensets (data-centre and grid demand).', 'pct', False),
-        ('IND_TRANS', 'IND_TRANS (Transportation y/y)', 0.04, -0.08, [0.00, 0.04, 0.04, 0.03, 0.03],
-         '9M FY26 +42% (marine, rail, China OH last-time buys); China OH wound down by end of FY26 → flat FY27.', 'pct', False),
-        ('IND_OG', 'IND_OG (Oil and gas y/y)', 0.03, -0.06, [0.04, 0.04, 0.03, 0.03, 0.03], '9M FY26 +18%; FY25 +14%: gas compression / midstream.', 'pct', False),
-        ('AERO_M', 'AERO_M (Aerospace segment margin)', 0.01, -0.02, [0.240, 0.245, 0.250, 0.253, 0.255],
-         'FY26 guided ~23.5% (FY25 21.9%, FY19 peak 20.7%); price and volume leverage vs Spartanburg start-up costs (2027).', 'pct', False),
-        ('IND_M', 'IND_M (Industrial segment margin)', 0.01, -0.03, [0.190, 0.192, 0.195, 0.197, 0.200],
-         'FY26 guided ~19% (FY25 14.6%, FY24 17.7%); China OH exit accretive; cyclical downside (FY18 6.2%).', 'pct', False),
-        ('MNA', 'M&A_spend (bolt-on acquisitions, $m)', 100.0, -100.0, [100.0, 100.0, 100.0, 100.0, 100.0],
-         'Woodward spent $40m (Safran EMA, FY25) and $121m (Valve Research, FY26) on bolt-ons besides L\'Orange ($771m, FY18). Base $100m p.a. (assumption).', 'm', True),
+        ('MER_VOL', 'MER_VOL (Merchandise units y/y)', 0.010, -0.020, [0.020, 0.020, 0.020, 0.015, 0.015],
+         '9M-26 +1.8% (chemicals +9%, metals +1%, agriculture flat, automotive −2%); 2015–25 CAGR −1%. Base +2% / +1.5% on industrial-production-led growth and truck conversion (assumption).', 'pct', False),
+        ('MER_RPU', 'MER_RPU (Merchandise revenue per unit y/y)', 0.010, -0.020, [0.030, 0.030, 0.030, 0.030, 0.030],
+         '9M-26 +5% (fuel surcharge + pricing); 2015–25 CAGR +3%. Base +3%: core pricing above rail inflation, flat fuel surcharge (assumption).', 'pct', False),
+        ('IM_VOL', 'IM_VOL (Intermodal units y/y)', 0.015, -0.030, [0.030, 0.030, 0.025, 0.025, 0.020],
+         '9M-26 +1.3% (domestic +7%, international −7% on East Coast port congestion); 2015–25 CAGR +1%. Base +3% → +2% on truck conversion (assumption).', 'pct', False),
+        ('IM_RPU', 'IM_RPU (Intermodal revenue per unit y/y)', 0.010, -0.020, [0.020, 0.025, 0.025, 0.025, 0.025],
+         '9M-26 +12% (fuel surcharge; Q3-26 +18%); 2015–25 CAGR +2%. Base +2–2.5%: pricing, flat fuel (assumption).', 'pct', False),
+        ('COAL_VOL', 'COAL_VOL (Coal units y/y)', 0.020, -0.030, [-0.030, -0.030, -0.030, -0.030, -0.030],
+         '9M-26 +4.7% (export +11%, utility +4% on gas prices / restocking); 2015–25 CAGR −4%. Base −3% p.a.: secular utility decline, export volatility (assumption).', 'pct', False),
+        ('COAL_RPU', 'COAL_RPU (Coal revenue per unit y/y)', 0.020, -0.030, [0.000, 0.010, 0.010, 0.010, 0.010],
+         '9M-26 +1% (fuel surcharge offset by lower export pricing); 2015–25 CAGR +3% (2022–23 export spike). Base flat then +1% (assumption).', 'pct', False),
+        ('OR', 'OR (Adjusted operating ratio, 2027E+)', -0.010, 0.015, [0.635, 0.625, 0.615, 0.605, 0.600],
+         'Adjusted OR: 2025 65.0%, 9M-26 ≈ 66.4% (fuel +3 pts); 2019 best 64.9% (GAAP). Long-range plan (merger proxy) implied 61.8% (2027) → 58.7% (2030). Base 63.5% → 60.0% (assumption: productivity, fuel normalising); Bull −1pt, Bear +1.5pts.', 'pct', False),
+        ('FUEL', 'FUEL (Fuel % of revenues, 2027E+)', 0.000, 0.000, [0.100, 0.095, 0.095, 0.095, 0.095],
+         '2025 7.7%, 9M-26 10.8% (higher diesel; ~95% of revenue carries fuel surcharges, so the surcharge sits in revenue per unit). Base 10% → 9.5% (pass-through, no scenario Δ).', 'pct', False),
     ],
-    'corp_pct': -0.035,
-    'dep_pct': {2027: 0.023, 2028: 0.025, 2029: 0.026, 2030: 0.026, 2031: 0.026},
-    'sga_pct': {2027: 0.093, 2028: 0.092, 2029: 0.091, 2030: 0.090, 2031: 0.090},
-    'rd_pct': 0.041, 'sbc_pct': 0.0085, 'etr': 0.225, 'othinc': 80.0,
-    'capex_pct': {2027: 0.050, 2028: 0.035, 2029: 0.032, 2030: 0.030, 2031: 0.030},
-    'dps_q': 0.32, 'dps_g': 0.10, 'def_q4': 0.0, 'def_ae': -20.0, 'eq_q4': 10.0, 'eq_ae': 60.0, 'iss_q4': 0.10, 'iss_ae': 0.40, 'dil': 1.7,
-    'ae_restr': {2027: 30.0, 2028: 15.0, 2029: 0.0, 2030: 0.0, 2031: 0.0},
-    'amort_sched': {2027: AM['2027'], 2028: AM['2028'], 2029: AM['2029'], 2030: AM['2030'], 2031: 30.0},
-    'amort_note': AM['src'] + ' FY27 $32.5m, FY28 $32.1m, FY29 $31.2m, FY30 $31.2m; FY31 $30.0m assumed ($245.6m thereafter).',
-    'dv_proc': {2027: 180.0, 2028: 0.0, 2029: 0.0, 2030: 0.0, 2031: 0.0},
-    'dv_nav': {2027: 16.364, 2028: 0.0, 2029: 0.0, 2030: 0.0, 2031: 0.0},
-    'iss_notes': {2026: 450.0, 2027: 85.0, 2028: 90.289, 2029: 225.0, 2030: 225.0, 2031: 300.421},
-    'repay': {2026: 46.903, 2027: 85.0, 2028: 90.289, 2029: 225.0, 2030: 225.0, 2031: 300.421},
-    'mat': {2026: 85.0, 2027: 90.289, 2028: 225.0, 2029: 225.0, 2030: 300.421, 2031: 0.0},
-    'repay_note': ('Sep-2026 Series M (EUR; $46.9m at 30-Sep-25 FX); May-2027 Series Q $85m; Sep-2028 Series N (EUR; $90.3m); FY2029 Series R $75m + U $150m; FY2030 S $75m + V $150m; '
-                   'FY2031 term loan $250m (May-2031) + Series O (EUR; $50.4m). EUR notes at 30-Sep-2025 FX (assumption). 2027E+ maturities assumed refinanced with new notes (input row above).'),
-    'min_cash': 300.0,
-    'r_notes': {2027: 0.046, 2028: 0.046, 2029: 0.047, 2030: 0.048, 2031: 0.049},
-    'r_notes_note': ('Weighted coupon ~4.6% after the $450m U/V/W issue (5.34–5.64%), term loan (SOFR + 0.875–1.75%), USD notes 4.35–4.61% and EUR notes 1.31–1.57%; '
-                     'drifting up as low-coupon EUR notes mature.'),
-    'wc': WC,
+    'etr': 0.235, 'sbc_pct': 0.005, 'dps_q': 1.35, 'dps_g': 0.05, 'deftax_pct': 0.25,
+    'gains_ae': -100.0, 'gains_q4': -10.0, 'oth_ae': -150.0, 'oth_q4': -60.0, 'props_ae': 150.0, 'props_q4': 40.0, 'inv_ae': -100.0, 'stock_ae': 0.0,
+    'iss_q4': 0.05, 'iss_ae': 0.3, 'dil': 0.6, 'bb_cap': 3500.0,
+    'capex_pct': {2027: 0.170, 2028: 0.165, 2029: 0.160, 2030: 0.160, 2031: 0.160},
+    'dep_rate': 0.039, 'refi': 1.0,
+    'mat': {2026: 607.0, 2027: 625.0, 2028: 602.0, 2029: 611.0, 2030: 600.0, 2031: 600.0},
+    'repay_note': ('FY2025 10-K Note 11 maturities: 2026 $607m, 2027 $625m, 2028 $602m, 2029 $611m, 2030 $600m, 2031 and later $14,042m (2031E $600m assumed). '
+                   '9M-26 repayments $618m (incl. the 2026 maturity). 2027E+ maturities refinanced per the refinancing % (assumption).'),
+    'repay_q4': 0.0, 'min_cash': 1000.0,
+    'r_notes': {y: 0.0465 for y in range(2027, 2032)},
+    'r_notes_note': 'Weighted-average coupons 4.19–5.22% (10-K Note 11); 2025 interest $792m on ~$17.1bn ≈ 4.6%; May-2025 notes 5.10%.',
+    'inv_yield': 0.025, 'othinc_oth': 30.0,
+    'merger_ae': {2027: 100.0, 2028: 0.0, 2029: 0.0, 2030: 0.0, 2031: 0.0},
+    'eoi_ae': {2027: 40.0, 2028: 30.0, 2029: 20.0, 2030: 10.0, 2031: 0.0},
+    'wc': WC, 'lrp': LRPD,
     'px': MAN['price']['px'],
-    'px_note': ('VALUATION — share price input $382.17 (weighted average price paid for shares repurchased in June 2026, Q3 FY26 10-Q Part II Item 2 — the latest '
-                'share price in an SEC filing; ~$23bn market cap); update to market'),
-    'mna_note': 'Scenario lever M&A_spend (Base $100m p.a. of bolt-ons). Funded from cash / revolver (debt schedule).',
-    'rev_guid_note': 'Company FY26 net sales growth guidance +20–23% (raised 29-Apr-2026, unchanged 29-Jul-2026). Drives the sales calibration.',
-    'eps_guid_note': 'Company FY26 adjusted EPS guidance $9.30–9.50 (raised 29-Jul-2026). Drives the segment-margin calibration.',
+    'px_note': ('VALUATION — share price input $332.09 (price of shares withheld for taxes on RSU vestings on 24-Oct-2026, Forms 4 filed 26-Oct-2026 — the latest share price in an SEC filing; '
+                '~$75bn market cap); update to market. Union Pacific consideration: 1.0 UNP share + $88.82 cash (UNP $300.62 on 10-Nov-2026 per UNP Forms 4).'),
 }
 
 # ====================================================================== compute engine
 def hist_value(row, col):
     kw = row.kw; path = kw.get('data')
     if not path: return None
-    if kw.get('ppa'):
-        v = MAN['ppa'].get(pkey(col), {}).get(path.split('_', 1)[1])
-        return v if kw.get('textdata') else num(v)
     v = xget(pkey(col), path)
     return v if kw.get('textdata') else num(v)
 
@@ -122,7 +116,7 @@ def compute(row, col):
                 return kw[key](), False
         return None, False
     if k == 'QE':
-        if row.spec2: return None, False
+        if row.spec2 and 'qe' not in kw and 'qe_in' not in kw: return None, False
         if 'qe_in' in kw:
             v = kw['qe_in']; return (v[col.q] if isinstance(v, dict) else v), True
         key = first(kw, ('qe', 'fc', 'all'))
@@ -136,18 +130,22 @@ def compute(row, col):
         return (kw[key](), False) if key else (None, False)
     if k == 'AE':
         if 'ae_in' in kw:
-            v = kw['ae_in']; return (v[col.year] if isinstance(v, dict) else v), True
+            v = kw['ae_in']
+            if isinstance(v, dict):
+                if col.year not in v: return None, False
+                return v[col.year], True
+            return v, True
         key = first(kw, ('ae', 'fc', 'all'))
         return (kw[key](), False) if key else (None, False)
     return None, False
 
 # ====================================================================== writers
-CAGR_G = {'is_rev', 'g_rev', 'aero_rev', 'ind_rev', 'aero_coem', 'aero_cserv', 'aero_doem', 'aero_dserv', 'ind_pg', 'ind_trans', 'ind_og', 'mx_com', 'mx_def',
-          'o_adj', 'g_adj', 'r_adj', 'r_ebitda', 'is_ebit', 'd_dda', 'e_adjni', 'e_eps', 'cf_cfo', 'fcf', 'bs_ta', 'bs_teq', 'sh_dil', 'is_gp', 'is_sga',
-          'd_amort', 'd_dep', 'aero_oi', 'ind_oi', 'is_ni', 'eps_dil', 'dps'}
-CAGR_A = {'aero_m', 'ind_m', 'g_adjm', 'o_adj_m', 'r_adj_m', 'is_gm', 'is_ebit_m', 'r_ebit_m', 'gm_rev', 'gm_aero', 'gm_ind', 'gm_gm', 'gm_ebitda_m',
-          'gm_op_m', 'gm_net_m', 'gm_sga', 'gm_rd', 'gm_adjop_m', 'fcf_m', 'fcf_conv', 'capex_pct', 'ra_roic', 'rn_ronta', 'roe', 'lv_x',
-          'd_sga', 'd_dep_pct', 'd_sbc_pct', 'wc_nwc_p', 'is_etr', 'e_rate', 'fcf_eb', 'corp_pct', 'aero_aft', 'mx_com_p', 'mx_def_p'}
+CAGR_G = {'is_rev', 'g_rev', 'g_units', 'g_rpu', 'merch_units', 'merch_rpu', 'merch_rev', 'im_units', 'im_rpu', 'im_rev', 'coal_units', 'coal_rpu', 'coal_rev',
+          'o_adj', 'r_adj', 'r_ebit', 'is_oi', 'is_dep', 'e_adjni', 'e_eps', 'cf_cfo', 'fcf', 'bs_ta', 'bs_teq', 'sh_dil', 'is_comp', 'is_fuel', 'is_ni', 'eps_dil', 'dps',
+          'is_rev_merch', 'is_rev_im', 'is_rev_coal', 'bs_ppe', 'cf_capex'}
+CAGR_A = {'or_gaap', 'or_adj', 'o_adj_m', 'r_adj_m', 'r_ebit_m', 'is_or', 'gm_rev', 'gm_units', 'gm_rpu', 'gm_or', 'gm_aor', 'gm_ebitda_m', 'gm_op_m', 'gm_net_m', 'gm_comp', 'gm_fuel',
+          'gm_adjop_m', 'fcf_m', 'fcf_conv', 'capex_pct', 'ra_roic', 'rn_ronta', 'roe', 'lv_x', 'c_comp', 'c_psr', 'c_fuel', 'c_dep', 'c_mat', 'd_sbc_pct', 'wc_nwc_p', 'is_etr',
+          'e_rate', 'fcf_eb', 'merch_mix', 'im_mix', 'coal_mix', 'fsc_p', 'im_dom_p', 'payout', 'hr_d2c'}
 A = {y: ANN[y].c for y in ANN}
 
 def style_cagr(ws, r, on):
@@ -159,7 +157,8 @@ def write_row(ws, row):
     r = row.r; arch = ARCH[row.arch]
     clone_row_style(ws, arch, r)
     ws.cell(r, 2).value = row.label or None
-    if row.kw.get('note'): ws[f'{NOTE}{r}'] = row.kw['note']
+    if row.kw.get('note'):
+        nt = row.kw['note']; ws[f'{NOTE}{r}'] = ('→ ' + nt[2:]) if nt.startswith('= ') else nt
     style_cagr(ws, r, row.key in CAGR_G or row.key in CAGR_A)
     if row.arch in ('section', 'block', 'blank', 'sub') and not row.kw.get('data'):
         return
@@ -177,7 +176,7 @@ def write_row(ws, row):
             lk = row.kw.get('labkey')
             if lk and col.kind in HISTK and isinstance(v, (int, float)) and abs(v) > 1e-9:
                 t = xget(pkey(col), lk)
-                if t: comment(cell, f'Company items ({pkey(col)}): {t}', 380, 110)
+                if t: comment(cell, f'{pkey(col)}: {t}', 420, 120)
         elif row.arch == 'growth' and col.kind in HISTK:
             set_color(cell, GRAY)
         else:
@@ -188,63 +187,81 @@ def write_row(ws, row):
         ws[f'{CAGR[0]}{r}'] = f'=IFERROR(({A[2031]}{r}/{A[2026]}{r})^(1/5)-1,"n/m")'
         ws[f'{CAGR[1]}{r}'] = f'=IFERROR(({A[2025]}{r}/{A[2020]}{r})^(1/5)-1,"n/m")'
         ws[f'{CAGR[2]}{r}'] = f'=IFERROR(({A[2025]}{r}/{A[2015]}{r})^(1/10)-1,"n/m")'
-        ws[f'{CAGR[3]}{r}'] = f'=IFERROR(({A[2025]}{r}/{A[2011]}{r})^(1/14)-1,"n/m")'
+        ws[f'{CAGR[3]}{r}'] = f'=IFERROR(({A[2025]}{r}/{A[2006]}{r})^(1/19)-1,"n/m")'
         for c in CAGR: ws[f'{c}{r}'].number_format = '0%;\\(0%\\);"n/m"'
     elif row.key in CAGR_A:
         ws[f'{CAGR[0]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2027, 2032))}),"n/m")'
         ws[f'{CAGR[1]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2021, 2026))}),"n/m")'
         ws[f'{CAGR[2]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2016, 2026))}),"n/m")'
-        ws[f'{CAGR[3]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2011, 2026))}),"n/m")'
+        ws[f'{CAGR[3]}{r}'] = f'=IFERROR(AVERAGE({",".join(f"{A[y]}{r}" for y in range(2006, 2026))}),"n/m")'
         for c in CAGR: ws[f'{c}{r}'].number_format = NF['pct']
     t = LABEL_SOURCES.get(row.key)
     if t: comment(ws.cell(r, 2), t)
 
-REL = 'Source: Woodward earnings releases (Form 8-K Item 2.02, Ex. 99.1) — '
+REL = 'Source: Norfolk Southern earnings releases (Form 8-K Item 2.02; financial statements exhibit / Ex. 99.2 "Quarterly Financial Data") — '
 LABEL_SOURCES = {
-    'aero_coem': ('Source: Woodward Forms 10-Q / 10-K, revenue note "Disaggregation of revenue" (sales by primary market, from FY2019; Q4 = fiscal year (10-K) − nine months (Q3 10-Q)). '
-                  'Commercial / defense "aftermarket" renamed "services" in FY2025.'),
-    'ind_pg': ('Source: Forms 10-Q / 10-K revenue note. Power generation / transportation / oil & gas introduced in the FY2023 10-K: FY2021–22 annual from the FY2023 10-K, FY2023 quarters from '
-               'the FY2024 10-Q comparatives (latest filing presenting the period); FY2023+ as reported. FY2021–22 quarters on the legacy basis only (memo rows).'),
-    'aero_oi': REL + 'segment net sales and earnings schedule (as originally reported; FY2018 restated in the FY2019 release for the pension-cost reclassification — memo row).',
-    'ns_gaap': REL + 'segment schedule ("Nonsegment expenses"); FY2018+ adjusting items from the "Reconciliation of Net Earnings to Adjusted Net Earnings" tables.',
-    'is_rev': REL + 'condensed consolidated statements of earnings, as originally reported (FY2016 and FY2018 cost-line reclassifications in the following year\'s release are not recast).',
-    'd_dda': REL + 'Reconciliation of Net Earnings to EBITDA (depreciation expense; amortization of intangible assets).',
-    'o_pub': REL + 'Reconciliation of Net Earnings to EBIT and Adjusted EBIT (published from Q2 FY2018).',
-    'e_pub': REL + 'Reconciliation of Net Earnings / EPS to Adjusted Net Earnings / Adjusted EPS (published from Q2 FY2018).',
-    'r_gebit_pub': REL + 'Reconciliation of Net Earnings to EBIT and EBITDA (published throughout).',
-    'cf_ni': ('Source: release condensed cash-flow statements (year to date; discrete quarters derived, Q4 = FY − 9M); D&A from the EBITDA reconciliation; '
-              'share-based compensation and deferred income taxes from the 10-K / 10-Q (XBRL, as first filed).'),
-    'bs_cash': REL + 'condensed consolidated balance sheets (period ends); shares outstanding = shares issued − treasury shares (XBRL).',
-    'ppa_cons': 'Source: FY2018 10-K Note 4 (L\'Orange, preliminary); Q3 FY26 10-Q Note 10 (Safran electro-mechanical actuation, Jul-2025; Valve Research, Apr-2026).',
-    'sh_basic': REL + 'statements of earnings (weighted average shares). No stock splits since the 3-for-1 split of Feb-2008.',
-    'ds_total': 'Source: release balance sheets; FY2025 10-K Note 15 and Q3 FY26 10-Q Note 15 (debt); 8-Ks of 28-May-2026 (revolver, term loan) and 21-Aug-2026 (Series U/V/W notes).',
-    'dv_hdr': 'Source: Q3 FY26 10-Q Note 10 (pilot controls held for sale; ONTIC agreement 15-Apr-2026); 8-K 21-Sep-2026 (Santa Clarita, Item 2.05).',
+    'merch_units': ('Source: Forms 10-Q / 10-K, MD&A "Railway Operating Revenues" tables (revenues, units and average revenue per unit by market group). Q4 = year (10-K) − nine months (Q3 10-Q); '
+                    'Q4 revenue per unit derived as revenue ÷ units. Units = carloads (intermodal: containers and trailers).'),
+    'merch_rev': REL + 'consolidated statements of income, railway operating revenues by commodity group ("General merchandise" to 2012), as originally reported.',
+    'ms_u_agr': 'Source: 10-Q / 10-K MD&A market-group tables. Group definitions changed: five groups to 2018 (Chemicals; Agriculture/consumer products/government; Metals and construction; Automotive; Paper, clay and forest products); '
+                '2019: Chemicals, Agriculture products, Metals and construction, Automotive, Forest and consumer; from 2020 four groups (Agriculture, forest and consumer products; Chemicals; Metals and construction; Automotive). Each basis as published, not restated.',
+    'im_dom': 'Source: 10-Q / 10-K MD&A "Intermodal units by market" (domestic / international), where published.',
+    'coal_t_utility': 'Source: 10-Q / 10-K MD&A "Coal tonnage by market" (utility, export, domestic metallurgical, industrial).',
+    'fsc': 'Source: 10-Q / 10-K MD&A narrative ("fuel surcharge revenue totaled $x million…"); only periods where the sentence was parsed; Q4 not derived.',
+    'is_rev': REL + 'consolidated statements of income, as originally reported in each period\'s release (FY2006–12 from the fourth-quarter releases; quarters from Q1-13).',
+    'is_comp': ('Source: release statements of income. Expense classifications since 2008: compensation & benefits; purchased services & rents; fuel; depreciation; materials & other. '
+                'FY2006–07 were presented in seven lines (materials, services & rents; Conrail rents & services; diesel fuel; casualties & other claims; other) — the model uses the FY2008 10-K recast into the five classifications (totals unchanged).'),
+    'is_merger': REL + 'separate income-statement lines: "Merger-related expenses" (from Q3-25), "Restructuring and other charges" (2024+), "Eastern Ohio incident" (2023+), "Loss on asset disposal" (2020).',
+    'is_ni_pub': REL + 'consolidated statements of income (net income, diluted EPS, weighted-average diluted shares). Shares in thousands in the 2006–07 releases, converted to millions.',
+    'o_pub': 'Source: press releases (Form 8-K Ex. 99.1), "Reconciliation of Non-GAAP Financial Measures" tables, published only in periods with special items (Q4/FY2017; Q1/FY2020; 2023–26 quarters).',
+    'e_pub': 'Source: press-release non-GAAP reconciliations (adjusted diluted EPS), published only in periods with special items.',
+    'sp_other': 'Source: Q3-20 release note 1 ($99m equity-method investment impairment in purchased services & rents); Q4-24 release note 1 (railway line-sale gains $433m in materials & other: Q3 $380m, Q4 $53m); '
+                'Q4-17 reconciliation (−$151m tax-reform effect in operating expenses). manual_items.json.',
+    'e_nonop': 'Source: 2024 release notes "Shareholder Advisory Costs" (other income – net: Q1 $21m, Q2 $29m, Q3 $1m, Q4 $8m; FY $59m). manual_items.json.',
+    'e_disc': 'Source: Q4-17 reconciliation (remeasurement of net deferred tax liabilities, $3,482m benefit); Q4-24 release note 6 ($27m deferred-tax reduction from a subsidiary restructuring, Q1-24).',
+    'cf_ni': REL + 'consolidated statements of cash flows (year to date; discrete quarters derived, Q4 = FY − 9M). Share-based compensation from XBRL (AllocatedShareBasedCompensationExpense).',
+    'bs_cash': REL + 'consolidated balance sheets (period ends). 2006: cash, cash equivalents and short-term investments were one line; split using the cash-flow ending cash (derived). Shares outstanding from the common-stock caption.',
+    'ds_total': 'Source: FY2025 10-K Note 11 (debt maturities, facilities); Q3-26 10-Q Notes 1 and 10 (merger restrictions, finance lease).',
+    'sec_mg': 'Source: Form 8-K 29-Jul-2025 (Merger Agreement, Item 1.01); DEFM14A 1-Oct-2025; 8-K 17-Nov-2025 (shareholder vote); 8-K 19-Dec-2025 (STB application); Q3-26 10-Q Note 1.',
+    'dps': 'Source: XBRL (CommonStockDividendsPerShareDeclared); 2007 onward.',
+    'lrp_rev': 'Source: DEFM14A (1-Oct-2025), "Certain Norfolk Southern Unaudited Prospective Financial Information" — Norfolk Southern management unaudited projections, 2025E–2030E. Not guidance.',
 }
 CELL_COMMENTS = {}
 def comments_setup():
-    a18 = A[2018]
-    CELL_COMMENTS['aero_oi'] = {a18: 'FY2018 as originally reported ($301.8m). Restated to $308.6m in the FY2019 release (pension-cost reclassification, ASU 2017-07) — see memo row.'}
-    CELL_COMMENTS['ind_oi'] = {a18: 'FY2018 as originally reported ($47.9m); restated to $49.9m in the FY2019 release (ASU 2017-07). Includes L\'Orange purchase-accounting charges (adjusted out).'}
-    CELL_COMMENTS['is_cogs'] = {A[2016]: 'FY2016 as originally reported; the FY2017 release shows $1,484.0m (cost of goods sold) / $174.0m (SG&A) after a reclassification.',
-                                A[2023]: 'FY2023 total from the Q4 FY23 release; Σ quarters as first reported differs by $1.4m (COGS ↔ R&D reclassification within the year).'}
-    CELL_COMMENTS['ind_pg'] = {A[2021]: 'Recast basis from the FY2023 10-K (prior-year comparatives).', A[2022]: 'Recast basis from the FY2023 10-K.'}
+    a06, a07, a17 = A[2006], A[2007], A[2017]
+    rc06 = ('FY2006 expense classifications per the FY2008 10-K recast (compensation & benefits $2,637m; purchased services & rents $1,578m; fuel $1,095m; depreciation $738m; materials & other $802m). '
+            'As originally reported (seven lines): compensation & benefits 2,637; materials, services & rents 1,895; Conrail rents & services 126; depreciation 738; diesel fuel 977; casualties & other claims 220; other 257.')
+    rc07 = ('FY2007 expense classifications per the FY2008 10-K recast. As originally reported (seven lines): compensation & benefits 2,552; materials, services & rents 1,853; Conrail rents & services 102; '
+            'depreciation 775; diesel fuel 1,062; casualties & other claims 208; other 295 (FY2007 fourth-quarter release).')
+    CELL_COMMENTS['is_comp'] = {a06: rc06, a07: rc07}
+    CELL_COMMENTS['is_opex'] = {a17: 'FY2017 as originally reported ($6,965m). The 2018 releases restated 2017 to $7,029m (ASU 2017-07: non-service pension benefit moved from operating expenses to other income – net; '
+                                     'income from railway operations $3,586m → $3,522m). The model keeps the original; 2018 y/y is therefore ~1 pt flattered on the operating ratio.'}
+    CELL_COMMENTS['bs_cash'] = {a06: 'Balance sheet printed "Cash, cash equivalents and short-term investments" $918m; cash $527m per the cash-flow statement, short-term investments $391m derived.'}
+    CELL_COMMENTS['sh_basic'] = {a06: 'Release shares in thousands (405,988 basic / 414,700 diluted) converted to millions.'}
 
 DEFS = {}
 def defs_setup():
     q = lambda y, n: QC[(y, n)].c
     DEFS['o_def'] = {
-        'C': ('FY2011–17: no adjusted measures published (EBIT / EBITDA / FCF only) — adjusted = GAAP EBIT; segments Aerospace / Energy (Energy renamed Industrial in FY2016)',
-              'Woodward\'s releases in FY2011–17 reconcile net earnings to EBIT and EBITDA but publish no adjusted EBIT or EPS (FY2016 special charges of $16m were discussed in the text only).'),
-        A[2018]: ('FY2018+: adjusted EBIT / EBITDA / EPS published (from Q2 FY2018): restructuring, L\'Orange acquisition & purchase accounting, Duarte move, US tax reform',
-                  'Q2 FY2018 release onward; FY2018 annual from the Q4 FY2018 release.'),
-        A[2020]: ('FY2020: gains on property / business sales, cross-currency swap gain, Hexcel merger costs and COVID restructuring adjusted out', None),
-        q(2022, 1): ('FY2022+: business development, non-recurring matters, product rationalization, inventory / collections charges adjusted out', None),
-        q(2026, 1): ('FY2026: restructuring (China OH wind-down, servo-valve transition) only', None),
+        'C': ('2006–Q3/17: no adjusted measures published — adjusted = GAAP (NSC publishes reconciliations only when special items occur)', None),
+        q(2017, 4): ('Q4/FY2017: tax-reform effects adjusted (−$151m in operating expenses; $3,482m deferred-tax remeasurement benefit)', 'Press release 24-Jan-2018, "Reconciliation of Non-GAAP Financial Measures".'),
+        q(2018, 1): ('2018–19: no special items — adjusted = GAAP', None),
+        q(2020, 1): ('2020: loss on asset disposal (Q1 locomotive rationalization $385m) and Q3 equity-investment impairment ($99m) adjusted out; 2021–22 adjusted = GAAP', None),
+        q(2023, 1): ('2023+: Eastern Ohio incident costs net of insurance recoveries adjusted out ("adjusted income from railway operations / operating ratio / diluted EPS")', None),
+        q(2024, 1): ('2024: + restructuring and other charges, railway line-sale gains (Q3 $380m, Q4 $53m), shareholder advisory costs (EPS) and a deferred-tax adjustment (EPS)', None),
+        q(2025, 3): ('Q3/25+: + merger-related expenses (Union Pacific)', None),
     }
     DEFS['e_def'] = {
-        'C': ('FY2011–17: no adjusted EPS published — adjusted = GAAP diluted EPS (flag)', None),
-        A[2018]: ('FY2018+: adjusted EPS = GAAP diluted EPS + items net of tax (company definition); FY2018–19 incl. US tax-reform transition impact', None),
-        q(2025, 1): ('FY2025: product rationalization gains and German corporate tax-rate change adjusted out', None),
+        'C': ('2006–Q3/17: no adjusted EPS published — adjusted = GAAP diluted EPS (flag)', None),
+        q(2017, 4): ('Q4/FY2017: adjusted EPS excludes the $3,482m deferred-tax remeasurement and the $151m operating-expense effect of tax reform', None),
+        q(2020, 1): ('2020: adjusted EPS excludes the locomotive charge ($385m; $1.11/share Q1) and investment impairment ($99m; FY $1.41/share total)', None),
+        q(2023, 1): ('2023+: items tax-effected "based on the applicable tax rates to which the non-GAAP adjustments related" (company wording)', None),
+        q(2024, 1): ('2024: + shareholder advisory costs (other income – net) and the $27m deferred-tax adjustment (Q1); railway line-sale gains removed', None),
+    }
+    DEFS['ms_def'] = {
+        'C': ('2006–18: five market groups — Chemicals; Agriculture / consumer products / government; Metals & construction; Automotive; Paper, clay & forest products', None),
+        q(2019, 1): ('2019: five groups — Chemicals; Agriculture products; Metals & construction; Automotive; Forest & consumer (2018 comparatives recast in the 2019 filings; not applied)', None),
+        q(2020, 1): ('2020+: four groups — Agriculture, forest & consumer products; Chemicals; Metals & construction; Automotive', None),
     }
 def write_defs(ws, row):
     for c, (txt, cm) in DEFS[row.key].items():
@@ -254,6 +271,7 @@ def write_defs(ws, row):
 
 def write_scen(ws):
     srcrow = {'hdr': 9, 'out_hdr': 11, 'pt_hdr': 15, 'out': 12, 'pt': 16, 'lev': 28, 'blk': 30, 'yr': 31}
+    def val(v): return v() if callable(v) else v
     for spec_ in SCEN_ROWS:
         r, kind = spec_[0], spec_[1]
         for ci in range(CI(SL), CI(SNOTE) + 1):
@@ -266,11 +284,12 @@ def write_scen(ws):
             _, _, lab, hi, mid, lo, note, nf = spec_
             ws[f'{SL}{r}'] = lab
             for col, v in zip([SBULL, SBASE, SBEAR], [hi, mid, lo]):
-                ws[f'{col}{r}'] = v; ws[f'{col}{r}'].number_format = NF[nf]; set_color(ws[f'{col}{r}'], BLUE)
+                v = val(v); ws[f'{col}{r}'] = v; ws[f'{col}{r}'].number_format = NF[nf]
+                set_color(ws[f'{col}{r}'], BLACK if isinstance(v, str) and v.startswith('=') else BLUE)
             ws[f'{SNOTE}{r}'] = note
         elif kind == 'pt':
-            _, _, lab, _, val, _, note, nf = spec_
-            ws[f'{SL}{r}'] = lab; ws[f'{SBASE}{r}'] = val; ws[f'{SBASE}{r}'].number_format = NF[nf]; set_color(ws[f'{SBASE}{r}'], BLUE); ws[f'{SNOTE}{r}'] = note
+            _, _, lab, _, v, _, note, nf = spec_
+            ws[f'{SL}{r}'] = lab; ws[f'{SBASE}{r}'] = val(v); ws[f'{SBASE}{r}'].number_format = NF[nf]; set_color(ws[f'{SBASE}{r}'], BLUE); ws[f'{SNOTE}{r}'] = note
         elif kind == 'lev':
             _, _, lab, a, b, c_, note = spec_
             ws[f'{SL}{r}'] = lab
@@ -296,24 +315,25 @@ def write_header(ws):
         clone_row_style(ws, r, r, 2, CI(LASTC))
     ws[f'{NOTE}1'] = 'SCENARIO SWITCH ▼ (Bull / Base / Bear) — drives all scenario-linked forecast drivers'
     ws[f'{NOTE}2'] = 'Base'
-    comment(ws[f'{NOTE}2'], 'Scenario toggle. Choose Bull / Base / Bear. Drives: FY26 sales-growth and adjusted-EPS guidance end-points (high / mid / low), '
-            'Q4/26E buybacks, 2027E–2031E primary-market sales growth, segment margins, M&A spend and the leverage target for 2027E+ buybacks '
+    comment(ws[f'{NOTE}2'], 'Scenario toggle. Choose Bull / Base / Bear. Drives: the Q4/26E volume and revenue-per-unit Δs and the operating-ratio seasonality anchor (best / average / worst), '
+            '2027E–2031E units and revenue-per-unit growth by commodity group, the adjusted operating-ratio lever and the leverage ceiling for 2028E+ buybacks '
             f'(scenario table {SL}:{SNOTE}).')
     from openpyxl.worksheet.datavalidation import DataValidation
     dv = DataValidation(type='list', formula1='"Bull,Base,Bear"', allow_blank=False); ws.add_data_validation(dv); dv.add(f'{NOTE}2')
-    ws['B2'] = 'Woodward, Inc. (NASDAQ: WWD) — 3-Statement Financial Model'
-    ws['B3'] = ('US GAAP as reported · USD millions (per-share data in USD; shares in millions) · Fiscal years ended 30 September (2026 = Oct-2025 – Sep-2026) · '
-                'Source: Woodward Forms 10-K / 10-Q, Form 8-K earnings releases (Ex. 99.1) and deal / financing 8-Ks, SEC EDGAR (CIK 108312); XBRL company facts; '
-                'investor-relations releases at woodward.com are the same documents as filed on EDGAR')
-    ws['B4'] = ('Basis notes: as originally reported (FY2016 and FY2018 reclassifications not recast; FY2018 restated segment earnings in memo rows). Segments: Aerospace, Industrial '
-                '(Energy to FY2015). Acquisitions: L\'Orange Jun-18, Safran EMA Jul-25, Valve Research Apr-26; divestitures: renewable power systems May-20, product lines FY25, '
-                'pilot controls (ONTIC, pending FY27). Q4/26E calibrated to FY26 sales-growth and adjusted-EPS guidance (29-Jul-2026).')
+    ws['B2'] = 'Norfolk Southern Corporation (NYSE: NSC) — 3-Statement Financial Model'
+    ws['B3'] = ('US GAAP as reported · USD millions (per-share data in USD; shares in millions; units in thousands; revenue per unit in USD) · Calendar fiscal year · '
+                'Source: Norfolk Southern Forms 10-K / 10-Q, Form 8-K earnings releases (financial statements exhibits / Ex. 99.1–99.2) and merger filings (8-K 29-Jul-2025, DEFM14A 1-Oct-2025), '
+                'SEC EDGAR CIK 0000702165; XBRL company facts; investor-relations releases at norfolksouthern.com are the same documents as filed on EDGAR')
+    ws['B4'] = ('Basis notes: as originally reported. FY2006–07 expense classifications per the FY2008 10-K recast (five lines); 2017 not restated for ASU 2017-07 (memo in cell comment). One reportable segment '
+                '(railway operations); revenues by commodity group (merchandise / intermodal / coal) with market-group memo rows on each published basis. Adjusted measures only where NSC published them '
+                '(2017 tax reform; 2020 impairments; 2023+ Eastern Ohio incident; 2024 line sales / restructuring; 2025+ merger costs). Pending acquisition by Union Pacific (1.0 UNP share + $88.82 cash; '
+                'STB review; expected "by early 2027"): operating forecast is standalone; buybacks suspended; merger block values the consideration. Q4/26E anchored on 9M-26 trends and OR seasonality (no guidance on EDGAR).')
     ws[f'{CAGR[0]}5'] = 'Forecast'
     for c in CAGR[1:]: ws[f'{c}5'] = 'Historical'
     ws['B6'] = '(USDm)'
     for col in COLS: ws[f'{col.c}6'] = col.label
     ws[f'{NOTE}6'] = 'Modelling Notes'
-    for c, a, b in zip(CAGR, ['5Y CAGR', '5Y CAGR', '10Y CAGR', '14Y CAGR'], ["26-'31", "20-'25", "15-'25", "11-'25"]):
+    for c, a, b in zip(CAGR, ['5Y CAGR', '5Y CAGR', '10Y CAGR', '19Y CAGR'], ["26-'31", "20-'25", "15-'25", "06-'25"]):
         ws[f'{c}6'] = a; ws[f'{c}7'] = b
 
 def set_columns(ws):
@@ -378,7 +398,7 @@ def scenario_snapshots():
     import other_sheets as osh
     snaps = {}
     for scen in ('Bull', 'Bear'):
-        p = os.path.join(BASE, f'WWD_{scen}.xlsx')
+        p = os.path.join(BASE, f'NSC_{scen}.xlsx')
         wb = openpyxl.load_workbook(OUT); wb['Model'][f'{NOTE}2'] = scen; wb.save(p)
         res = recalc(p); print(scen, res.get('status'), res.get('total_errors'))
         v = openpyxl.load_workbook(p, data_only=True)['Bull-Base-Bear']
@@ -393,7 +413,7 @@ def scenario_snapshots():
 NS = 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'
 def inject_values(src_xlsx, recalc_xlsx):
     """Store cached formula results (from a LibreOffice-recalculated copy) in the openpyxl file, so the workbook reads correctly in any
-    viewer; fullCalcOnLoad stays set so Excel recalculates on open. Same approach as the LECO / ESAB finishing step."""
+    viewer; fullCalcOnLoad stays set so Excel recalculates on open."""
     import zipfile, shutil, openpyxl
     from lxml import etree
     wbv = openpyxl.load_workbook(recalc_xlsx, data_only=True)
@@ -436,7 +456,7 @@ def inject_values(src_xlsx, recalc_xlsx):
 
 def store_values():
     import shutil
-    p = os.path.join(BASE, 'WWD_recalc.xlsx')
+    p = os.path.join(BASE, 'NSC_recalc.xlsx')
     shutil.copy(OUT, p)
     res = recalc(p); print('recalc', res.get('status'), res.get('total_errors'))
     inject_values(OUT, p)

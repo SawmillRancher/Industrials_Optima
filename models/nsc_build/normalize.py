@@ -109,6 +109,24 @@ def do_pl(p):
         put(p, 'adj_items_eps_lab', '; '.join(f"{it['label'].strip()} {it['value']:+.2f}" for it in eps_items))
         put(p, 'adj_src', ng.get('source'))
     put(p, 'adj_published', 1 if ng else 0)
+    # company-identified items inside regular lines (manual_items.json: adjusting_items_manual)
+    AM = MAN.get('adjusting_items_manual', {})
+    m = dict(AM.get(p, {}))
+    for extra in (f'{p}_GAIN',):
+        for k2, v2 in AM.get(extra, {}).items():
+            if k2 != 'label': m[k2] = m.get(k2, 0.0) + v2 if isinstance(v2, (int, float)) else v2
+            else: m['label'] = (m.get('label', '') + ' ' + v2).strip()
+    other = N(m.get('IMPAIR')) + N(m.get('TAXD_OPEX')) + N(m.get('GAIN'))
+    put(p, 'sp_other', other); put(p, 'sp_nonop', N(m.get('ADVIS'))); put(p, 'sp_taxd', N(m.get('TAXD_TAX')))
+    x = DATA[p]['x']
+    if x.get('adj_oi_pub') is None and x.get('adj_opex_pub') is not None:
+        put(p, 'adj_oi_pub', round(x['rev'] - x['adj_opex_pub'], 6)); put(p, 'adj_oi_derived', 'revenues - published adjusted railway operating expenses')
+    if x.get('adj_oi_pub') is not None:
+        put(p, 'sp_resid', round(x['adj_oi_pub'] - x['oi'] - (N(x.get('merger')) + N(x.get('restr')) + N(x.get('eoi')) + N(x.get('loss_disp')) + other), 6))
+    else: put(p, 'sp_resid', 0.0)
+    if m.get('label'):
+        put(p, 'sp_other_lab' if other else 'sp_nonop_lab', m['label'])
+        if other and m.get('ADVIS'): put(p, 'sp_nonop_lab', m['label'])
     # XBRL extras
     x = r.get('x') or {}
     put(p, 'dps', x.get('dps_q')); put(p, 'sh_out_xb', x.get('sh_out')); put(p, 'oi_xb', x.get('oi_xb')); put(p, 'ni_xb', x.get('ni_xb'))
@@ -182,6 +200,7 @@ def do_bs(p):
     so = b.get('shares_out') or (r.get('x') or {}).get('sh_out')
     put(p, 'bs_shares', so)
     put(p, 'debt_tot', N(b.get('std')) + N(b.get('cmltd')) + b['ltd'])
+    put(p, 'debt_lt_c', N(b.get('cmltd')) + b['ltd'])
 
 def run():
     load()
