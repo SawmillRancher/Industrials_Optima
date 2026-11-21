@@ -9,7 +9,7 @@ When asked to build a new model (or rebuild or update one), follow `models/MODEL
 - **Read it in full first.** Use its master checklist (section 3) as the task list and report progress by phase.
 - **Similar companies:** read the `models/MODEL_LESSONS.md` entries for the most similar models (same industry, reporting basis, deal situation or history shape) and apply their reusable lessons.
 - **Template:** start from `models/templates/MLM_Model.xlsx`, the current MLM template. Don't use an older template unless asked.
-- **Reference kit:** copy the build kit closest to the company as your starting scripts. All models and kits are in `models/`, indexed in `models/README.md`. The most complete kits are STE, DHR, ONON, LOAR and WWD.
+- **Reference kit:** copy the build kit closest to the company as your starting scripts. All models and kits are in `models/`, indexed in `models/README.md`. The most complete kits are STE, DHR, ONON, LOAR, WWD and LHX.
 - **Kit docs:** write the kit README from `models/templates/NEW_MODEL_README_TEMPLATE.md` and the extraction schema from `models/templates/EXTRACTION_SCHEMA_TEMPLATE.md`.
 - **Sources:** SEC EDGAR only (send a User-Agent; stay under 5 requests/s). Investor-relations sites and SEDAR are blocked; the 8-K Ex. 99.1 releases are the same documents. Never estimate a historical number.
 - **Share price:** if the user didn't give one, ask. Otherwise use the latest SEC-filed price (10-Q average repurchase price, or a Form 4 transaction / withholding price), cite the form and date, and flag it "update to market".

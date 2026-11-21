@@ -1,15 +1,15 @@
 # Three-statement model build playbook
 
-The standard process for building a new company model from scratch. It folds in everything learned across the 33 models built
+The standard process for building a new company model from scratch. It folds in everything learned across the 34 models built
 so far (TFI, Copart ×2, R&Y, HII, RBA, TDY, KRMN, MLM, VMC, RMS, CLH, WAB, XPO, CHRW, ODFL, SAIA, BC, WCN, HEI, LOAR, ONON,
-CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD). Section 5 holds the rules consolidated from every build.
+CSGP, DHR, TMO, CTAS, STE, UBER, LECO ×2, BWXT, CW, ESAB, WWD, LHX). Section 5 holds the rules consolidated from every build.
 
 Use it with:
 - **Template workbook:** [`templates/MLM_Model.xlsx`](templates/MLM_Model.xlsx), the current MLM template (6-Oct-2026 version: reworked DCF, Bull-Base-Bear buyback rows).
 - **Fill-in docs:** [`templates/NEW_MODEL_README_TEMPLATE.md`](templates/NEW_MODEL_README_TEMPLATE.md) and [`templates/EXTRACTION_SCHEMA_TEMPLATE.md`](templates/EXTRACTION_SCHEMA_TEMPLATE.md).
 - **QA tools:** [`tools/inspect_model.py`](tools/inspect_model.py) (formula errors and non-zero check rows), [`tools/cyc.py`](tools/cyc.py) (circular references) and [`tools/residue_scan.py`](tools/residue_scan.py) (leftover template-company text in values and comments).
 - **Per-model lessons:** [`MODEL_LESSONS.md`](MODEL_LESSONS.md) records each model's specific nuances (basis, bridges, data quirks, deals, calibration, valuation) and reusable rules. Read the entries for the most similar companies before you start.
-- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`) and WWD (`wwd_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
+- **Reference builds** (all in `models/`, indexed in [`README.md`](README.md)): STE (`ste_build`), DHR (`dhr_build`), ONON (`onon_build`), LOAR (`loar_build`), WWD (`wwd_build`) and LHX (`lhx_build`) are the most complete build kits. Copy the closest one and adapt it; don't start from a blank script.
 
 ---
 
@@ -255,6 +255,8 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 | Half-year reporters | RMS, BC | H1 / H2 / FY columns (H2 = FY − H1); quarterly revenue memo |
 | Recent IPO | LOAR, ONON, KRMN | Annual columns from the prospectus; P&L-only years flagged; BS / CF start when available |
 | Non-December fiscal year | STE (Mar), CTAS (May), HEI (Oct) | Column labels by fiscal year; DCF discount dates moved to FY ends |
+| Fiscal year-end change / merger of equals | LHX | Transition period as its own column with its quarters; no prior-year links across the break; ratio rows blank (not annualised); XBRL matched on dates |
+| Subsidiary preferred / mezzanine equity | LHX, RBA | Deemed or preferred dividends below net income; mezzanine and derivative liabilities deducted in the EV bridge and counted in invested capital |
 | Pending / new acquisition | DHR, MLM, CTAS, ESAB, CSGP, UBER, CHRW | Separate block, PPA, financing, synergies, closing-date toggle; deal tab for large deals |
 | Dual-class / splits | ONON, HEI, CTAS, ODFL | Class-equivalent shares; split-adjust by source filing date |
 | Private company | R&Y | Compilation statements; implied CF from BS changes; LBO tab |
@@ -275,7 +277,7 @@ Build each section with history as blue inputs, forecast as formulas, and a chec
 
 ---
 
-## 5. Lessons from all 33 builds
+## 5. Lessons from all 34 builds
 
 These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`](MODEL_LESSONS.md). Each was found independently in one or more builds; the models that taught it are in brackets. They extend the checklist in section 3, and where the two disagree, this section wins.
 
@@ -297,6 +299,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Disc-ops recast published only in totals:** scale minor opex lines to the restated totals, with SG&A as the plug, and comment the cells. [STE]
 - **After a spin:** start the BS at the first post-spin balance sheet even if the P&L uses earlier recast comparatives, and fill earlier y/y with company-reported change % memos. Spin-cos put carve-out (Form 10) years in the main columns, with the former parent's segment history as a flagged memo under the parent's CIK. [XPO, ESAB]
 - **Half-year reporters:** carry quarterly revenue as "1st / 2nd quarter of the half" memo rows inside the half-year columns, with a Σ check. [RMS, BC]
+- **Fiscal year-end change:** give the transition period its own column with its quarters grouped under it, leave prior-year links empty where periods are not comparable, and blank ratio rows rather than annualising. Use a company recast only for the periods it covers. [LHX]
 - **Two builds of one company:** diff their dated facts (split dates, deconsolidation quarter, label cut-overs) and resolve each from the filing. [LECO]
 
 ### 5.3 Operating build
@@ -324,7 +327,8 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
   - Gross up after-tax-only items at the statutory rate in force each year.
 
   [TDY, VMC, STE, LECO, WWD, HEI, BC, CPRT]
-- **When the company stops publishing a measure,** flag "not published from <period>" (or "adjusted = GAAP") in the definition row. Keep a labelled model rebuild held constant across periods, and default forecast adjusting items to nil. [CPRT, HII, CLH]
+- **When the company stops publishing a measure,** flag "not published from <period>" (or "adjusted = GAAP") in the definition row. Keep a labelled model rebuild held constant across periods, and default forecast adjusting items to nil. If guidance moves to GAAP EPS, calibrate to GAAP EPS. [CPRT, HII, CLH, LHX]
+- **Only a total after-tax adjustment published:** with pre-tax $ items and one per-share total, the tax effect is the balance to the published figure; flag it as derived. [LHX]
 - **Retroactive redefinitions:**
   - Periods a later release recomputed take the new definition; periods never republished stay on the old one, flagged.
   - Fill a partially restated add-back using the tax rate implied by the restated periods.
@@ -386,6 +390,7 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 - **Leverage ratios use LTM EBITDA** (carried in the quarter columns), not annualised 1H. [VMC, HEI]
 - **Working-capital ratios** come from fiscal-year-end balances, not annualised quarters. [STE, CTAS]
 - **Use the company's own capex / FCF definition** when it is guided, so guided and modelled figures are comparable. [RBA, HII]
+- **Non-cash revenue reductions** (amortization of a customer / program investment asset booked against revenue) must be added back in the cash flow, or the balance sheet drifts by that amount each year. [LHX]
 - **Reconcile BS cash vs CF ending cash with a memo line** when definitions differ (overdraft, restricted cash, disc-ops cash). [ONON, CSGP, DHR]
 
 ### 5.7 Valuation
@@ -404,10 +409,12 @@ These rules were consolidated from the per-model entries in [`MODEL_LESSONS.md`]
 
   [ESAB, BWXT, HEI, UBER]
 - **Deal tabs** show accretion both vs the standalone with buybacks and on the company's comparison basis, and solve for the synergies or margin needed to meet the stated accretion. [CHRW]
+- **Subsidiary preferred stock in mezzanine equity** (and bifurcated derivative liabilities) is deducted in the EV bridge and included in invested capital. [LHX]
 - **Historical average share prices** come from 10-K Item 5 only where disclosed; leave later years blank. [HII]
 
 ### 5.8 QA
 - **Template residue is the most common defect.** At least 10 builds shipped MLM text in Bull-Base-Bear N26 / P40 comments or DCF rationale, and TFI kept Moog comments. `tools/residue_scan.py` is a hard gate. [CLH, WAB, SAIA, ODFL, WCN, LOAR, ONON, LECO, ESAB, STE, CTAS, UBER, TFI, CPRT]
 - **Check also:** foreign row numbers and switch-cell addresses in comments, the wrong currency symbol on non-USD models, and modelling-note dates that contradict the definition flags. [ONON, DHR]
 - **Check tolerances** are set by period when the issuer changes rounding units, and stated in the label. [STE, TMO, CSGP, ONON, DHR]
+- **Commit early.** Push the kit and the extracted data as soon as `check_data.py` ties; parallel extraction agents can be cut off by usage limits (resume them rather than restarting). [LHX]
 - **Private-company implied CF:** related-party balances are financing; explain the sign of implied capex; leave first-year ratios n/a when there is no opening BS. [R&Y]

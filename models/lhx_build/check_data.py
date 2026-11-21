@@ -28,8 +28,8 @@ for p in normalize.periods():
     if cur:
         segrev = v['sr_sms'] + v['sr_csd'] + v['sr_ms'] + v['sr_inter']; segoi = v['so_sms'] + v['so_csd'] + v['so_ms']
     else:
-        segrev = sum(n(v.get(f'lr_{k}')) for k in ('rf', 'ins', 'gcs', 'cn', 'cs', 'sis', 'es', 'ims', 'sas', 'avs', 'ar')) + n(v.get('lr_elim'))
-        segoi = sum(n(v.get(f'lo_{k}')) for k in ('rf', 'ins', 'gcs', 'cn', 'cs', 'sis', 'es', 'ims', 'sas', 'avs', 'ar'))
+        segrev = sum(n(v.get(f'lr_{k}')) for k in ('rf', 'ins', 'gcs', 'ex', 'cn', 'cs', 'sis', 'es', 'ims', 'sas', 'avs', 'ar')) + n(v.get('lr_elim'))
+        segoi = sum(n(v.get(f'lo_{k}')) for k in ('rf', 'ins', 'gcs', 'ex', 'cn', 'cs', 'sis', 'es', 'ims', 'sas', 'avs', 'ar'))
     chk(f'{p} segment revenue', segrev + n(v.get('sr_other')), v['rev'])
     chk(f'{p} segment OI - corporate', segoi - sum(n(v.get(f'c_{c}')) for c in CORP), v['oi'])
     if not cur: chk(f'{p} segment OI published', segoi, v.get('seg_oi_pub'))

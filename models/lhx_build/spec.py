@@ -34,7 +34,7 @@ def tol(a, b, t=0.6, nd=0, blank='""'):
 SEG = [('sms', 'Space & Mission Systems', 'SMS'), ('csd', 'Communications & Spectrum Dominance', 'CSD'), ('ms', 'Missile Solutions', 'MS')]
 SEGK = [s for s, _, _ in SEG]
 # legacy segment structures (as originally reported), memo rows: code, label
-LEG = [('rf', 'RF Communications (Harris, to FY2015)'), ('ins', 'Integrated Network Solutions (Harris, to FY2015)'), ('gcs', 'Government Communications Systems (Harris, to FY2015)'),
+LEG = [('rf', 'RF Communications (Harris, to FY2015)'), ('ins', 'Integrated Network Solutions (Harris, to FY2015)'), ('gcs', 'Government Communications Systems (Harris, to FY2015)'), ('ex', 'Exelis (Harris FY2015: one month from 29-May-2015)'),
        ('cn', 'Critical Networks (Harris, FY2016)'), ('cs', 'Communication Systems (Harris FY2016–19; L3Harris 2H19–2025)'), ('sis', 'Space and Intelligence Systems (Harris, FY2016–19)'),
        ('es', 'Electronic Systems (Harris, FY2016–19)'), ('ims', 'Integrated Mission Systems (2H19–2025)'), ('sas', 'Space & Airborne Systems (2H19–2025)'),
        ('avs', 'Aviation Systems (2H19–2021)'), ('ar', 'Aerojet Rocketdyne (from 28-Jul-2023 to 2025)')]
@@ -244,7 +244,8 @@ def build_spec(V0):
     # ------------------------------------------------------------------ cost drivers
     S('d_hdr', 'Cost drivers, D&A & adjusting items', 'block', note='COST DRIVERS — inputs that drive forecast cost lines (Q4/26E: point estimates; 2027E+: % of revenue or schedules)')
     S('d_dda', '  Depreciation & amortization (total; cash-flow statement)', 'line', 'm', data='cf_da', flow=True,
-      fc=lambda: f'={V("d_dep")}+{V("d_amort")}', note='Cash-flow statement line (year to date; discrete quarters derived). Forecast = depreciation & other amortization + acquisition-related amortization.')
+      fc=lambda: f'={V("d_dep")}+{V("d_amort")}-{V("seg_other")}',
+      note='Cash-flow statement line (year to date; discrete quarters derived). Forecast = depreciation & other amortization + acquisition-related amortization + program investment asset amortization (booked as a reduction of revenue).')
     S('d_amort', '  Amortization of acquisition-related intangibles', 'line', 'm', flow=True, all=lambda: f'=IF(ISNUMBER({V("c_amort")}),{V("c_amort")},"")')
     S('d_amort_sch', '  Amortization schedule — acquisition-related intangibles held (10-K, input)', 'driver', 'm', ae_in=V0['amort_sched'], note=V0['amort_note'])
     S('d_dep', '  Depreciation & other amortization (total D&A − acquisition-related amortization)', 'line', 'm', flow=True,
@@ -323,8 +324,9 @@ def build_spec(V0):
       note='Net income available to common shareholders ÷ weighted diluted shares (±$0.01 vs reported; the company\'s year-to-date share weighting differs slightly from the average of the quarters).')
     S('eps_dil_g', '  EPS – diluted y/y %', 'growth', 'pct', all=growth('eps_dil'))
     S('eps_pub', '  Memo: EPS – diluted as reported ($)', 'eps_memo', 'ps', data='eps_d')
-    S('eps_chk', '  Check: model vs reported diluted EPS (should be 0.00; ±0.02 rounding)', 'check', 'ps',
-      hist=lambda: f'=IF(AND(ISNUMBER({V("eps_pub")}),ISNUMBER({V("eps_dil")})),IF(ABS({V("eps_dil")}-{V("eps_pub")})<=0.0201,0,ROUND({V("eps_dil")}-{V("eps_pub")},2)),"n/p")')
+    S('eps_chk', '  Check: model vs reported diluted EPS (should be 0.00; ±0.02 rounding, ±0.035 FY2013–19 two-class method)', 'check', 'ps',
+      hist=lambda: f'=IF(AND(ISNUMBER({V("eps_pub")}),ISNUMBER({V("eps_dil")})),IF(ABS({V("eps_dil")}-{V("eps_pub")})<={0.0351 if (CTX.col.q is None and isinstance(CTX.col.year, int) and CTX.col.year < 2020) else 0.0201},0,ROUND({V("eps_dil")}-{V("eps_pub")},2)),"n/p")',
+      note='Tolerance ±0.02 (±0.035 in the Harris years FY2013–19: EPS under the two-class method with participating securities).')
     S('eps_cont', '  EPS – diluted from continuing operations ($; model)', 'eps_memo', 'ps',
       all=lambda: f'=IF(ISNUMBER({V("sh_dil")}),IFERROR(({V("is_cont")}-N({V("is_nci")})-N({V("is_pref")}))/{V("sh_dil")},""),"")')
     S('eps_cont_pub', '  Memo: EPS – diluted from continuing operations as reported ($)', 'eps_memo', 'ps', data='eps_cont')

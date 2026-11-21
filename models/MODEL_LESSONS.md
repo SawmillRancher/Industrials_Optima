@@ -1,6 +1,6 @@
 # Model lessons: per-model nuances
 
-This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 33 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
+This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). The playbook gives the standard process. This file records what each of the 34 models built so far had to handle that the standard doesn't cover: basis choices, bridge definitions, data quirks, deal blocks, calibration tricks and valuation choices, plus the reusable rule behind each one. The general rules drawn from these entries are in section 5 of the playbook.
 
 **How to use it:** before you build, find the two or three models most like the new company in the finder below and read their entries in full. Each entry links its lessons to playbook phases through the tags [sources] [extraction] [basis] [build] [bridges] [calibration] [BS/CF] [valuation] [QA] [tooling].
 
@@ -15,20 +15,21 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
 | Multi-segment US GAAP industrial with organic / acquisition / FX growth | DHR, TMO, STE, LECO, ESAB, WWD, CW |
 | Single reportable segment (build by end market or revenue stream) | KRMN, LOAR, RBA, UBER |
 | Volume × price unit economics | MLM, VMC (tons × ASP), ODFL, SAIA (tons × rev/cwt), XPO, CHRW (shipments × AGP), RBA (GTV × take rate), UBER (gross bookings × take rate) |
-| Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB |
+| Backlog, book-to-bill and government contracts | BWXT, HII, CW, WAB, LHX |
 | Serial acquirer (M&A lever, acquired vs organic) | HEI, LOAR, TDY, WCN, CSGP |
 | Large pending or just-closed deal | DHR (Masimo, StatLab), CTAS (UniFirst), CHRW (RXO pro forma tab), MLM (LNA), CSGP (Zonda), UBER (Delivery Hero), ESAB (Eddyfi), TMO |
 | Spin-offs, discontinued operations, recast history | DHR, STE, BWXT, XPO, ESAB (spin-co carve-out), MLM |
-| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO |
+| Adjusted-measure definition changed over time | TDY, LOAR, RBA, MLM, VMC, CPRT, LECO, LHX |
 | Company publishes no non-GAAP measures or no guidance | ODFL, HEI, BC, RMS, DHR (EBITDA), STE (EBITDA) |
 | Operating-ratio guidance (trucking / LTL) | SAIA, ODFL, XPO, TFII |
 | IFRS, non-USD, or not an SEC registrant | ONON (CHF, 20-F), RMS (EUR, AMF filings), BC (EUR), TFII (40-F) |
 | Half-year reporter | RMS, BC |
 | Recent IPO (short history from the prospectus) | LOAR, ONON, KRMN |
 | Non-December fiscal year / 52–53-week years | STE (Mar), CTAS (May), HEI (Oct), WWD (Sep), CPRT (Jul), TDY (52/53-week) |
+| Fiscal year-end change (transition period) or merger of equals | LHX |
 | Net-cash balance sheet | RMS, CPRT, ODFL |
-| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes) |
-| Pension (CAS / FAS, non-service income) | HII, CW |
+| Convertibles, mandatory preferred, two-class EPS, dual-class shares | ESAB, BWXT (convertibles / MCPS), RBA (participating preferred), ONON, HEI (share classes), LHX (subsidiary preferred in mezzanine equity) |
+| Pension (CAS / FAS, non-service income) | HII, CW, LHX |
 | Private company, LBO | R&Y |
 
 ---
@@ -165,6 +166,30 @@ This is the companion to [`MODEL_BUILD_PLAYBOOK.md`](MODEL_BUILD_PLAYBOOK.md). T
   - [calibration] For EPS guidance, back-solve the required adjusted EBIT through tax and interest, then solve the margin Δ.
   - [valuation] When FY end ≈ valuation date, roll the DCF: that FY is the base year and net debt is taken at its end.
   - [BS/CF] Add a revolver-headroom memo row so the minimum-cash plug can't silently exceed the commitment.
+
+### LHX — L3Harris Technologies (MLM template via WWD kit; US GAAP / USD m / FY ends Friday nearest 31-Dec since 2020; Harris June fiscal years before)
+- **Coverage & basis:** FY2013–FY2019 annual (Harris Corporation, June year-ends), the six-month transition period to 3-Jan-2020 (Q3/19, Q4/19 and a "2H19 TP" column from the 10-KT), then Q1/20–Q3/26 quarterly; Q4/26E, 2027E–31E. As originally reported (CIK 202058, the same registrant throughout: Harris was the legal and accounting acquirer of L3 on 29-Jun-2019). 2020 and the transition period have no comparable prior-year column; pro forma "combined" comparatives in the 2019–20 releases are not used. FY2024 has 53 weeks and the 2025 quarters 12 / 13 / 14 / 13 weeks. Template columns shifted −31.
+- **Operating build:** three segments from Q1-26 (Space & Mission Systems, Communications & Spectrum Dominance, Missile Solutions) × segment margin, less unallocated corporate items = operating income. The company recast only 2025 by quarter (Q3-26 earnings appendix) and FY2024 for the year (Q4-25 Table 9); those periods use the recast, and everything earlier carries the total of the structure in force with eleven legacy segments as memo rows. Backlog roll-forward with a derived adjustments line; book-to-bill lever.
+- **Bridges & definitions:**
+  - Segment operating income changed meaning four times: Harris basis; including FAS pension income with a "Pension adjustment" line (FY2019–21); CAS basis with an unallocated FAS/CAS adjustment (2022–25); excluding all unallocated items (2026).
+  - Adjusted EBIT was published FY2019–2021 only and includes non-operating pension income; the model's adjusted operating income (EBITA) ties to it through a memo row.
+  - Company EBITDA appears only in the Q3-26 earnings appendix (FY2023+); adjusted EBITDA is a model definition that excludes non-cash pension income.
+  - Non-GAAP EPS: Harris excluded deal costs but not amortization; L3Harris added back amortization from Q3-19 to Q4-24, dropped the add-back from Q1-25 (2024 recast $13.10 → $9.70; the model keeps $13.10) and stopped publishing non-GAAP EPS in Q1-26 (GAAP EPS guidance). From Q1-26 the model rebuilds the FY2025 definition.
+  - Bridges are published per share, so $m = per share × diluted shares with a rounding line; where only a total after-tax adjustment is printed, the tax effect is the balance to the published figure.
+- **Data quirks & corrections:** operating income is not printed on the income statement in most periods to 2023 (computed, and tied to segments + unallocated items). Non-service pension income is split out of a combined non-operating line; Q4 = FY − 9M where the Q4 release doesn't split it. Harris-era EPS uses the two-class method (±0.035). Later filings reclassified quarterly cost of revenue / G&A, so Σ quarters ≠ year by $14–52m in four years (documented, not forced). The earliest XBRL `Revenues` fact for FY2013 is a component line.
+- **Deals & special blocks:** $1bn Department of War investment in the Missile Solutions subsidiary (17-Apr-2026): redeemable convertible preferred in mezzanine equity accreting to $1,422m by Apr-2031 through deemed dividends (deducted from net income to common), bifurcated conversion-feature and warrant liabilities, and a $386m program investment asset amortized against revenue. The planned Qualified IPO is not modelled (no terms filed). Space Technology (60%) sold 3-Aug-2026 with a 40% equity-method stake retained. PPAs for Tactical Data Links and Aerojet Rocketdyne.
+- **Calibration & scenarios:** segment revenues from their own guidance end-points, closed to consolidated revenue ($23.5–23.7bn) with one uniform Δ. Margin Δ solved to **GAAP** diluted EPS ($12.25–12.35), back-solving required operating income through the deemed dividend, tax, pension income and interest. Q4 working capital solved to the $3.6bn cash-from-operations guide, with contract assets as the plug. Qualitative margin guidance ("mid 10%", "low 16%") is read as a number and labelled an interpretation. The "2028 Financial Framework" is not on EDGAR and is not used.
+- **Balance sheet, cash & capital:** non-service FAS pension income is non-cash: reversed in CFO at 93% and accreted to the net pension asset. Short-term investments count as cash in net debt. $1bn of 2029 / 2032 notes (Nov-2026) pre-fund the Dec-2026 / Jan-2027 maturities; commercial paper plugs to $1bn minimum cash. Buybacks plug to 1.75x / 1.5x / 1.25x net debt / adjusted EBITDA (no published target: assumption).
+- **Valuation:** $255, per the user (20-Nov-2026). 2026E is the DCF base year and 2027E–31E explicit, with net debt at the 2026E year end. NOPAT on EBITA less cash integration / transaction costs; pension income excluded and the pension asset not added. EV deducts the subsidiary preferred (mezzanine + derivative liabilities).
+- **Reusable lessons:**
+  - [basis] When the fiscal year-end changes, give the transition period its own column (with its quarters grouped under it), leave prior-year links empty where periods are not comparable, and blank the ratio rows rather than annualising.
+  - [tooling] Match XBRL facts on period end date and duration, not fiscal-year labels, when the calendar changed; take the earliest-filed fact across alternative revenue tags.
+  - [basis] Use a company recast only for the periods it covers (2025 quarters, FY2024 annual); carry the in-force segment total elsewhere and keep every legacy structure as memo rows.
+  - [bridges] When the company moves its guidance to GAAP EPS and stops publishing non-GAAP EPS, calibrate to GAAP EPS and keep the last definition as a labelled model rebuild.
+  - [bridges] If only a total after-tax per-share adjustment is published with pre-tax $ items, derive the tax effect as the balance and flag it.
+  - [BS/CF] A non-cash reduction of revenue (program investment asset amortization) must be added back in the cash flow, or the balance sheet drifts by exactly that amount each year.
+  - [valuation] Subsidiary preferred stock in mezzanine equity (and its bifurcated derivative liabilities) is deducted in the EV bridge and included in invested capital; deemed dividends come off net income to common.
+  - [tooling] Commit the kit and extracted data as soon as they tie; parallel extraction agents can be cut off by usage limits and resumed from their transcripts.
 
 ### HII — Huntington Ingalls Industries (DSV template, US GAAP as reported / USD millions / FY Dec)
 - **Coverage & basis:** 2015–1H26 from 10-K/10-Q XBRL and 8-K Ex. 99.1 (CIK 0001501585). FY2015–16 are as originally reported; FY2017+ are as recast for ASU 2017-07 in the 2018 10-K (non-service pension moved below OI). Technical Solutions was formed Dec-2016 (renamed Mission Technologies 2022). Q1–Q3/15 stay on the original "Other" basis; Q4/15 and FY2015 are recast. Q4 = FY − 9M. Restricted cash is included from FY2019. Unbilled receivables are separate from FY2017 (ASC 606).

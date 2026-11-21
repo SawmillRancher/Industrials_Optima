@@ -57,7 +57,7 @@ def corp_cat(lab):
     if 'transaction' in l or 'acquisition' in l or 'divestiture' in l: return 'acq'
     return 'other'
 
-LEGMAP = [('rf communications', 'rf'), ('integrated network', 'ins'), ('government communications', 'gcs'), ('critical networks', 'cn'),
+LEGMAP = [('rf communications', 'rf'), ('integrated network', 'ins'), ('government communications', 'gcs'), ('critical networks', 'cn'), ('exelis', 'ex'),
           ('communication systems', 'cs'), ('space and intelligence', 'sis'), ('electronic systems', 'es'), ('integrated mission', 'ims'),
           ('space and airborne', 'sas'), ('space & airborne', 'sas'), ('aviation systems', 'avs'), ('aerojet', 'ar')]
 CURMAP = [('space & mission', 'sms'), ('space and mission', 'sms'), ('spectrum dominance', 'csd'), ('missile solutions', 'ms')]

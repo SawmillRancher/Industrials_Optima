@@ -223,6 +223,7 @@ def build_spec2(V0):
       all=lambda: (f'=IFERROR({V("is_int")}*{ann()}/AVERAGE({V("ds_total")},{(CTX.col.prevq if CTX.col.q else CTX.col.prior)}{R["ds_total"]}),"")'
                    if (CTX.col.prevq if CTX.col.q else CTX.col.prior) else None))
     def ltm():
+        if CTX.col.tp and not CTX.col.q: return None
         if not CTX.col.q: return f'={V("r_adj")}'
         cs = _ltm_cols(CTX.col)
         if not cs: return None
